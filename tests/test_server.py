@@ -39,14 +39,26 @@ class TestServerAPI(unittest.TestCase):
         cls.process.wait()
 
     def test_api_status(self):
-        """测试 /api/status 接口"""
+        """测试 /api/status 接口契约验证"""
         try:
             with urllib.request.urlopen("http://localhost:8000/api/status") as response:
                 data = json.loads(response.read().decode())
                 self.assertEqual(data["status"], "ok")
+                self.assertIn("payload", data)
+                self.assertIn("message", data)
                 self.assertIn("entities", data["payload"])
         except Exception as e:
             self.fail(f"API Request failed: {e}")
+
+    def test_api_invalid_endpoint(self):
+        """测试未知 API 接口契约返回"""
+        try:
+            with urllib.request.urlopen("http://localhost:8000/api/invalid") as response:
+                data = json.loads(response.read().decode())
+                self.assertEqual(data["status"], "error")
+                self.assertEqual(data["message"], "Invalid endpoint")
+        except Exception as e:
+            self.fail(f"Invalid Endpoint Request failed: {e}")
 
     def test_static_serve(self):
         """测试静态资源加载"""

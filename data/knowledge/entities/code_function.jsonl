@@ -54,3 +54,8 @@
 {"id": "func_tearDownClass", "type": "code_function", "name": "tearDownClass", "desc": "Python Function"}
 {"id": "func_test_api_status", "type": "code_function", "name": "test_api_status", "desc": "测试 /api/status 接口"}
 {"id": "func_test_static_serve", "type": "code_function", "name": "test_static_serve", "desc": "测试静态资源加载"}
+{"id": "func_test_api_invalid_endpoint", "type": "code_function", "name": "test_api_invalid_endpoint", "desc": "测试未知 API 接口契约返回"}
+{"id": "func_setup_logger", "type": "code_function", "name": "setup_logger", "desc": "Sets up a logger with a standard stream handler and a JSON formatter."}
+{"id": "func_format", "type": "code_function", "name": "format", "desc": "Python Function"}
+{"id": "func_log_event", "type": "code_function", "name": "log_event", "desc": "Python Function"}
+{"id": "func_vacuum", "type": "code_function", "name": "vacuum", "desc": "[Refinement] Purge orphans and compact memory space."}

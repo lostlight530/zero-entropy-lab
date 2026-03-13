@@ -17,8 +17,18 @@ jobs:
       contents: write
 
     steps:
+    - name: Cleanup conflicting untracked files
+      run: |
+        rm -f data/inputs/.harvester_state.json
+        rm -f data/inputs/archive/2026/03/ModelEngine-Group_nexent_v1.8.0.2.md
+        rm -f data/memories/MISSION_ACTIVE.md
+        # Just in case, remove anything generated in previous runs before checkout
+        rm -rf data/inputs/archive/* || true
+
     - name: Checkout Reality
       uses: actions/checkout@v4
+      with:
+        clean: true
 
     - name: Set up Python 3.10
       uses: actions/setup-python@v4
@@ -36,6 +46,12 @@ jobs:
 
     - name: 🧬 Run Evolution Cycle (Strategy)
       run: python src/kernel/nexus.py evolve
+
+    - name: Sync Data Artifacts and Pull
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git pull --rebase -X theirs origin main || true
 
     - name: 💾 Commit New Memories
       uses: stefanzweifel/git-auto-commit-action@v5

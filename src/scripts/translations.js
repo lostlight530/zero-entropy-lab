@@ -3,11 +3,11 @@ export default {
         meta: { title: "零熵实验室 | Zero-Entropy Lab" },
         nav: { home: "主页", achievements: "亮点", ecosystem: "生态", projects: "矩阵", philosophy: "哲学" },
         hero: { 
-            role: "绝对零依赖工程师", 
-            tagline: "静默构建协议优先系统", 
+            role: "绝对零依赖工程师",
+            tagline: "静默构建协议优先系统",
             description: "专注于边缘 AI、Agent 架构及可复用的硬件逻辑层。",
-            primaryCta: "进入生态", 
-            secondaryCta: "探索矩阵" 
+            primaryCta: "进入生态",
+            secondaryCta: "探索矩阵"
         },
         stats: {
             items: [
@@ -21,11 +21,12 @@ export default {
             title: "系统演进 (Evolution)",
             summary: "除了项目，我们构建智能轨迹。",
             googleBadges: "15 枚 Google 徽章",
-            awards: "行业认可",
+            awards: "开源节点注入 (Open Source Nodes)",
             awardList: [
-                "2025 年度开发者大奖提名",
-                "谷歌云认证架构师 (Vertex AI)",
-                "边缘计算最佳实践贡献者"
+                "Nexent 架构级讨论与思潮引入",
+                "Astron Agent 协议层探索贡献",
+                "Dify 生态技术纯度提取",
+                "MindSpore 社区潜行布道者"
             ]
         },
         ecosystem: {
@@ -59,11 +60,11 @@ export default {
         meta: { title: "Zero-Entropy Lab | lostlight" },
         nav: { home: "Home", achievements: "Highlights", ecosystem: "Ecosystem", projects: "Projects", philosophy: "Philosophy" },
         hero: { 
-            role: "Absolute Zero-Dependency Engineer", 
-            tagline: "Building protocol-first systems", 
+            role: "Absolute Zero-Dependency Engineer",
+            tagline: "Building protocol-first systems",
             description: "Focused on Edge AI, agent architecture, and reusable bare-metal logic layers.",
-            primaryCta: "The Ecosystem", 
-            secondaryCta: "Explore Matrix" 
+            primaryCta: "The Ecosystem",
+            secondaryCta: "Explore Matrix"
         },
         stats: {
             items: [
@@ -77,11 +78,12 @@ export default {
             title: "System Evolution",
             summary: "Beyond mere projects, we build intelligence trajectories.",
             googleBadges: "15 Google Badges",
-            awards: "Recognition",
+            awards: "Open Source Nodes Injected",
             awardList: [
-                "2025 Developer of the Year Nominee",
-                "Google Cloud Certified (Vertex AI)",
-                "Edge Computing Best Practice Contributor"
+                "Nexent Architectural Discourse",
+                "Astron Agent Protocol Exploration",
+                "Dify Ecosystem Purity Extraction",
+                "MindSpore Community Stealth Evangelist"
             ]
         },
         ecosystem: {
