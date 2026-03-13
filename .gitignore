@@ -1,0 +1,46 @@
+# Zero-Entropy Lab | Git Ignore
+
+# Logs & Data (Allow knowledge & memories for workflow endurance)
+data/*
+!data/knowledge/
+!data/memories/
+!data/*.db
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+env/
+venv/
+
+# OS/IDEs
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project Temporary
+docs/brain/inputs/
+docs/brain/knowledge/
+docs/brain/intelligence/
+docs/brain/memories/
+src/kernel/__pycache__/
+src/kernel/inputs/
+src/kernel/knowledge/
+src/kernel/intelligence/
+src/kernel/memories/
+src/kernel/*.db
+src/kernel/*.jsonl
+src/kernel/*.harvester_state.json
+
+# Build Artifacts
+node_modules/
+dist/
+build/
+out/
+.cache
+.env
