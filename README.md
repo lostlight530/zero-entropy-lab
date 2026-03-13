@@ -1,14 +1,14 @@
-# 🧠 NEXUS CORE: A Zero-Dependency Experiment
+# 🧠 NEXUS CORE: The Vanilla Singularity
 
-> "A minimalist approach to building AI and agent systems, focusing on native protocols rather than complex dependency trees."
+> "While the world is addicted to building tottering Towers of Babel with `npm install` and `pip install`, we choose to connect directly to the truth of cyberspace using bare-metal protocols."
 >
-> —— *lostlight*
+> —— *The Architect (lostlight)*
 
-⚠️ STATUS: **ZERO-DEPENDENCY ATTAINED**
+⚠️ STATUS: **ABSOLUTE ZERO-DEPENDENCY ATTAINED**
 
-## 📜 Project Philosophy
+## 📜 The Constitution
 
-This laboratory operates under the **Zero-Entropy** philosophy. We aim for no third-party dependencies, minimal bloat, and lightweight native engineering.
+This laboratory operates under the **Zero-Entropy Constitution**. No third-party dependencies, no bloat, only raw engineering.
 
 ## 🏗️ Architecture Matrix
 
@@ -41,7 +41,7 @@ python tests.py
 
 ## 🧬 Why Zero-Entropy?
 
-Because restraint in design often leads to clearer architecture. In this repository, we prioritize data structure, minimal memory footprint, and cold-start efficiency.
+Because restraint is the ultimate form of violence. In this repository, we let actual data, memory footprint, and zero cold-start efficiency do the talking.
 
 ---
-© 2026 Zero-Entropy Lab | A minimalist approach to Edge AI.
+© 2026 Zero-Entropy Lab | Built for the Edge, Built for the Future.
