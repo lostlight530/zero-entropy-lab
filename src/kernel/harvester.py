@@ -5,6 +5,13 @@ import datetime
 import re
 from pathlib import Path
 
+try:
+    from logger import logger
+except ImportError:
+    import sys, os
+    sys.path.append(os.path.dirname(__file__))
+    from logger import logger
+
 class Harvester:
     def __init__(self, project_root=None):
         # Default to the root of the repo (parent of src/kernel)
@@ -55,11 +62,11 @@ class Harvester:
         return tags
 
     def fetch_github_data(self):
-        print("[Harvester] Scanning frequencies...")
+        logger.info("[Harvester] Scanning frequencies...")
         new_files = []
 
         for repo, endpoints in self.targets.items():
-            print(f"   Target: {repo}...")
+            logger.info(f"   Target: {repo}...")
             url = f"https://api.github.com/repos/{repo}/releases/latest"
 
             try:
@@ -73,7 +80,7 @@ class Harvester:
                     # Deduplication check
                     last_tag = self.state.get(repo, {}).get('last_tag')
                     if tag != last_tag:
-                        print(f"   🔥 Signal: {tag}")
+                        logger.info(f"   🔥 Signal: {tag}")
 
                         # Analyze
                         analysis_tags = self._analyze_content(body)
@@ -97,8 +104,8 @@ class Harvester:
                         self.state[repo] = {'last_tag': tag, 'updated_at': timestamp}
                         new_files.append(str(filepath))
             except Exception as e:
-                # Silently fail on network issues to keep moving
-                pass
+                # Log but do not crash
+                logger.warning(f"Failed to fetch data for {repo}: {e}")
 
         self._save_state()
         return new_files
