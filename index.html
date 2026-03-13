@@ -138,6 +138,21 @@
         </div>
     </footer>
 
+    <!-- Nexus Anime Terminal -->
+    <div id="nexus-terminal">
+        <div class="terminal-header">
+            <div><span class="status-dot"></span><span id="term-title">NEXUS-CHAN.exe [ONLINE]</span></div>
+            <div style="font-size: 0.7rem; color: var(--text-secondary);">v1.0.0</div>
+        </div>
+        <div class="terminal-body" id="term-body">
+            <!-- Output goes here -->
+        </div>
+        <div class="terminal-input-wrapper">
+            <span class="terminal-prompt">~/nexus&gt;</span>
+            <input type="text" id="term-input" class="terminal-input" placeholder="Type /help to interact..." autocomplete="off" spellcheck="false" />
+        </div>
+    </div>
+
     <script type="module">
         import translations from './src/scripts/translations.js';
 
@@ -325,6 +340,131 @@
 
         initParticles();
         animate();
+
+        // --- Terminal Logic ---
+        const termBody = document.getElementById('term-body');
+        const termInput = document.getElementById('term-input');
+
+        // Initial Anime SVG Avatar & Greeting
+        // Hand-coded Zero-Dependency SVG for "Nexus-chan"
+        const avatarSvg = `
+        <div class="terminal-avatar-container">
+            <svg class="anime-avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Glowing Grid Background -->
+                <circle cx="50" cy="50" r="45" fill="none" stroke="var(--cyber-cyan)" stroke-width="1" opacity="0.2" stroke-dasharray="2 4"/>
+                <circle cx="50" cy="50" r="40" fill="none" stroke="var(--cyber-pink)" stroke-width="0.5" opacity="0.3"/>
+
+                <!-- Anime Girl Silhouette (Cyber-Maid) -->
+                <path d="M 35 80 Q 50 85 65 80 L 70 100 L 30 100 Z" fill="rgba(0, 240, 255, 0.1)" stroke="var(--cyber-cyan)" stroke-width="1"/>
+                <path d="M 40 50 Q 50 65 60 50 L 55 80 Q 50 85 45 80 Z" fill="rgba(255, 42, 133, 0.1)" stroke="var(--cyber-pink)" stroke-width="1.5"/>
+                <!-- Head/Hair -->
+                <path d="M 30 45 C 25 20, 75 20, 70 45 C 65 55, 35 55, 30 45 Z" fill="none" stroke="var(--cyber-cyan)" stroke-width="2"/>
+                <path d="M 35 30 L 20 50 L 30 45" fill="none" stroke="var(--cyber-pink)" stroke-width="1.5"/>
+                <path d="M 65 30 L 80 50 L 70 45" fill="none" stroke="var(--cyber-pink)" stroke-width="1.5"/>
+                <!-- Visor / Eyes -->
+                <rect x="40" y="42" width="20" height="6" rx="3" fill="var(--cyber-cyan)" opacity="0.8" />
+                <line x1="25" y1="45" x2="40" y2="45" stroke="var(--cyber-cyan)" stroke-width="1"/>
+                <line x1="60" y1="45" x2="75" y2="45" stroke="var(--cyber-cyan)" stroke-width="1"/>
+            </svg>
+        </div>
+        `;
+        termBody.innerHTML += avatarSvg;
+
+        function printLine(text, type = 'sys') {
+            const line = document.createElement('div');
+            line.className = `terminal-line ${type}`;
+            termBody.appendChild(line);
+
+            if (type === 'nexus') {
+                // Typewriter effect
+                let i = 0;
+                line.textContent = "Nexus: ";
+                const interval = setInterval(() => {
+                    if (i < text.length) {
+                        line.textContent += text.charAt(i);
+                        i++;
+                        termBody.scrollTop = termBody.scrollHeight;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 30);
+            } else {
+                line.textContent = text;
+                termBody.scrollTop = termBody.scrollHeight;
+            }
+        }
+
+        // Initial Startup Sequence
+        setTimeout(() => printLine(`[SYS] Holographic display initialized.`, 'sys'), 500);
+        setTimeout(() => {
+            fetch('/api/status')
+                .then(res => res.json())
+                .then(data => {
+                    if(data.status === 'ok') {
+                        printLine(`Master, I'm online. Holding ${data.payload.entities || 0} entities and ${data.payload.relations || 0} synapses. Awaiting commands...`, 'nexus');
+                    } else {
+                        printLine(`Offline mode. Cortex API unreachable.`, 'nexus');
+                    }
+                })
+                .catch(() => {
+                    printLine(`Running in static layout mode. The Cortex is currently sleeping.`, 'nexus');
+                });
+        }, 1200);
+
+        termInput.addEventListener('keydown', async (e) => {
+            if (e.key === 'Enter') {
+                const cmd = termInput.value.trim();
+                if (!cmd) return;
+
+                printLine(`~/nexus> ${cmd}`, 'user');
+                termInput.value = '';
+
+                if (cmd === '/help') {
+                    printLine(`Available commands:\n/search [query] - Search my memories\n/status - Check my vitals\n/clear - Purge terminal output`, 'nexus');
+                    return;
+                }
+
+                if (cmd === '/clear') {
+                    termBody.innerHTML = '';
+                    return;
+                }
+
+                if (cmd.startsWith('/search ')) {
+                    const q = cmd.replace('/search ', '');
+                    try {
+                        const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`);
+                        const data = await res.json();
+                        if(data.status === 'ok' && data.payload.length > 0) {
+                            let reply = `I found ${data.payload.length} memory fragments for "${q}":\n`;
+                            data.payload.slice(0, 3).forEach(item => {
+                                reply += `- [${item.id}] ${item.name}\n`;
+                            });
+                            printLine(reply, 'nexus');
+                        } else {
+                            printLine(`Sorry Master, my synapses drew a blank on "${q}".`, 'nexus');
+                        }
+                    } catch (err) {
+                        printLine(`Ah... static interference! Can't reach the Cortex.`, 'nexus');
+                    }
+                    return;
+                }
+
+                if (cmd === '/status') {
+                     try {
+                        const res = await fetch('/api/status');
+                        const data = await res.json();
+                        if(data.status === 'ok') {
+                            printLine(`Vitals: ${data.payload.entities} entities, ${data.payload.relations} relations. Density: ${data.payload.density.toFixed(2)}. I'm feeling healthy!`, 'nexus');
+                        }
+                    } catch (err) {
+                        printLine(`Vitals unknown. Cortex API is offline.`, 'nexus');
+                    }
+                    return;
+                }
+
+                printLine(`Unknown command. Type /help if you are lost.`, 'nexus');
+            }
+        });
     </script>
 </body>
 </html>
