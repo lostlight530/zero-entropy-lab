@@ -5,6 +5,13 @@ import datetime
 from pathlib import Path
 from typing import List, Dict
 
+try:
+    from logger import logger
+except ImportError:
+    import sys, os
+    sys.path.append(os.path.dirname(__file__))
+    from logger import logger
+
 class Cortex:
     def __init__(self, db_path=None, project_root=None):
         # Default to the root of the repo (parent of src/kernel)
@@ -82,7 +89,7 @@ class Cortex:
             with open(filepath, 'a', encoding='utf-8') as f:
                 f.write(json.dumps(data, ensure_ascii=False) + "\n")
         except Exception as e:
-            print(f"⚠️ Failed to write text memory: {e}")
+            logger.error(f"⚠️ Failed to write text memory: {e}", exc_info=True)
 
     def search(self, query: str, limit: int = 10) -> List[Dict]:
         """Synaptic Search: Combines Full-Text + 1-Hop Graph Association"""
