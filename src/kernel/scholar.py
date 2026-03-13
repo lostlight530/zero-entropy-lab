@@ -8,8 +8,12 @@ from pathlib import Path
 # Try to connect to the Mind
 try:
     from cortex import Cortex
+    from logger import logger
 except ImportError:
-    pass
+    import sys, os
+    sys.path.append(os.path.dirname(__file__))
+    from cortex import Cortex
+    from logger import logger
 
 class Scholar:
     def __init__(self, project_root=None):
@@ -50,7 +54,7 @@ class Scholar:
 
     def ingest_repository(self, root_path):
         """[Omniscience Protocol] Deep scan of the codebase."""
-        print(f"🧠 Scholar starting deep scan of: {root_path}")
+        logger.info(f"🧠 Scholar starting deep scan of: {root_path}")
         root = Path(root_path)
         count = 0
 
@@ -66,9 +70,9 @@ class Scholar:
                     self._digest_file(root, filepath)
                     count += 1
                 except Exception as e:
-                    print(f"   ⚠️ Failed to digest {file}: {e}")
+                    logger.error(f"   ⚠️ Failed to digest {file}: {e}", exc_info=True)
 
-        print(f"✅ Ingestion Complete. {count} files mapped into Cortex.")
+        logger.info(f"✅ Ingestion Complete. {count} files mapped into Cortex.")
 
     def _digest_file(self, root, filepath):
         rel_path = filepath.relative_to(root)
@@ -116,8 +120,8 @@ class Scholar:
                     desc = ast.get_docstring(node) or "Python Function"
                     self.cortex.add_entity(func_id, "code_function", node.name, desc[:100], save_to_disk=True)
                     self.cortex.connect_entities(file_id, "defines", func_id, save_to_disk=True)
-        except Exception:
-            pass
+        except Exception as e:
+            logger.error(f"Error analyzing python ast for {filepath}: {e}", exc_info=True)
 
     def _analyze_markdown_structure(self, filepath, file_id):
         """Extract headers as knowledge nodes."""
@@ -133,8 +137,8 @@ class Scholar:
                             concept_id = f"concept_{safe_title}"[:60]
                             self.cortex.add_entity(concept_id, "concept", title, f"Section in {filepath.name}", save_to_disk=True)
                             self.cortex.connect_entities(file_id, "documents", concept_id, save_to_disk=True)
-        except Exception:
-            pass
+        except Exception as e:
+            logger.error(f"Error analyzing markdown structure for {filepath}: {e}", exc_info=True)
 
     def learn(self, input_file):
         """Legacy single file learning (kept for compatibility)"""

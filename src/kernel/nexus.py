@@ -8,6 +8,9 @@ import socketserver
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs
 
+from dataclasses import dataclass, asdict
+from typing import Any, Optional
+
 # Lazy Imports
 try:
     from cortex import Cortex
@@ -15,6 +18,7 @@ try:
     from evolution import Evolver
     from scholar import Scholar
     from reason import ReasoningEngine # <--- The Frontal Lobe
+    from logger import logger
 except ImportError:
     # Handle direct root execution or path issues
     sys.path.append(os.path.dirname(__file__))
@@ -23,6 +27,13 @@ except ImportError:
     from evolution import Evolver
     from scholar import Scholar
     from reason import ReasoningEngine
+    from logger import logger
+
+@dataclass
+class APIResponse:
+    status: str
+    payload: Any = None
+    message: Optional[str] = None
 
 class NexusHandler(http.server.SimpleHTTPRequestHandler):
     """Native API & Static File Router"""
@@ -52,34 +63,30 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
 
-        response = {"status": "ok", "payload": {}}
+        response_obj = APIResponse(status="ok", payload={})
 
         try:
+            logger.info(f"API Request: {path} with query: {query}")
             if path == "/api/status":
-                response["payload"] = self.cortex.get_stats()
+                response_obj.payload = self.cortex.get_stats()
             elif path == "/api/search":
                 q = params.get('q', [''])[0]
-                # The user provided a partial and syntactically incorrect snippet.
-                # The original line was: response["payload"] = self.cortex.search(q)
-                # The user's snippet was: req = urllib.request.Request(url, headers={"User-Agent": "Nexus-Cortex"}) payload"] = self.cortex.search(q)
-                # To make it syntactically correct and faithful to the original intent of searching,
-                # while incorporating the user's partial change, we'll keep the search logic.
-                # The `req = urllib.request.Request(...)` line is not directly applicable here
-                # as `url` is undefined and it doesn't fit the local search context.
-                # Therefore, we retain the functional search call.
-                response["payload"] = self.cortex.search(q)
+                response_obj.payload = self.cortex.search(q)
             elif path == "/api/journal":
                 cursor = self.cortex.conn.cursor()
                 cursor.execute("SELECT datetime(timestamp, 'unixepoch') as ts, event, details FROM journal ORDER BY timestamp DESC LIMIT 20")
-                response["payload"] = [dict(row) for row in cursor.fetchall()]
+                response_obj.payload = [dict(row) for row in cursor.fetchall()]
             else:
-                response["status"] = "error"
-                response["message"] = "Invalid endpoint"
+                response_obj.status = "error"
+                response_obj.message = "Invalid endpoint"
+                logger.warning(f"API Invalid Endpoint Hit: {path}")
         except Exception as e:
-            response["status"] = "error"
-            response["message"] = str(e)
+            logger.error(f"API Exception at {path}", exc_info=True)
+            response_obj.status = "error"
+            response_obj.message = str(e)
 
-        self.wfile.write(json.dumps(response).encode('utf-8'))
+        # Enforce contract
+        self.wfile.write(json.dumps(asdict(response_obj)).encode('utf-8'))
 
 def main():
     parser = argparse.ArgumentParser(description="NEXUS CORE: Zero-Entropy Intelligence")
@@ -127,18 +134,18 @@ def main():
 
     if args.command == 'serve':
         PORT = 8000
-        print(f"🚀 NEXUS CORE: Launching Portal at http://localhost:{PORT}")
-        print(f"📍 Serving Root: {Path(__file__).parent.parent.parent}")
+        logger.info(f"🚀 NEXUS CORE: Launching Portal at http://localhost:{PORT}")
+        logger.info(f"📍 Serving Root: {Path(__file__).parent.parent.parent}")
         
         # Use a closure to pass base_path/project_root if needed, but NexusHandler handles it now
         with socketserver.TCPServer(("", PORT), NexusHandler) as httpd:
             try:
                 httpd.serve_forever()
             except KeyboardInterrupt:
-                print("\n🛑 Server stopped.")
+                logger.info("\n🛑 Server stopped.")
 
     elif args.command == 'clean':
-        print("🧹 Cleaning environment...")
+        logger.info("🧹 Cleaning environment...")
         c = Cortex()
         c.vacuum()
         
@@ -150,17 +157,17 @@ def main():
             for f in files:
                 if f.startswith("test_cortex.db") or f.endswith(".pyc"):
                     os.remove(Path(root)/f)
-        print("✨ Environment purified.")
+        logger.info("✨ Environment purified.")
 
     elif args.command == 'ponder':
         r = ReasoningEngine()
         insights = r.ponder()
-        print("\n🧠 **DEEP THOUGHTS REPORT**")
+        logger.info("\n🧠 **DEEP THOUGHTS REPORT**")
         if not insights:
-            print("   (Mind is quiet.)")
+            logger.info("   (Mind is quiet.)")
         else:
             for i in insights:
-                print(f"   {i}")
+                logger.info(f"   {i}")
 
     elif args.command == 'ingest':
         s = Scholar()
@@ -169,10 +176,10 @@ def main():
     elif args.command == 'status':
         c = Cortex()
         stats = c.get_stats()
-        print(f"🧠 NEXUS STATUS: {stats['entities']} Nodes | {stats['relations']} Edges")
+        logger.info(f"🧠 NEXUS STATUS: {stats['entities']} Nodes | {stats['relations']} Edges")
 
     elif args.command == 'rebuild':
-        print("🧠 Initiating Cortex Reconstruction Protocol...")
+        logger.info("🧠 Initiating Cortex Reconstruction Protocol...")
         c = Cortex()
         knowledge_dir = c.knowledge_path
         count = 0
@@ -189,7 +196,7 @@ def main():
                                 else:
                                     c.add_entity(data.get('id'), data.get('type', 'concept'), data.get('name'), data.get('desc',''), save_to_disk=False)
                                 count += 1
-        print(f"✨ Reconstruction Complete.{count} memories restored.")
+        logger.info(f"✨ Reconstruction Complete.{count} memories restored.")
 
     elif args.command == 'evolve':
         h = Harvester()
@@ -197,7 +204,7 @@ def main():
         e = Evolver()
         e.run_daily_cycle()
         # Auto-clean after evolution
-        print("🧹 Running scheduled purification...")
+        logger.info("🧹 Running scheduled purification...")
         c = Cortex()
         c.vacuum()
         for root, dirs, files in os.walk(c.project_root):
@@ -214,13 +221,13 @@ def main():
 
     elif args.command == 'learn':
         s = Scholar()
-        print(f"🎓 Record: {s.learn(args.file)}")
+        logger.info(f"🎓 Record: {s.learn(args.file)}")
 
     elif args.command == 'search':
         c = Cortex()
         for r in c.search(args.query):
             icon = "🔗" if r.get('distance', 0) > 0 else "🎯"
-            print(f" {icon} [{r['weight']:.2f}] {r['name']} ({r['id']})")
+            logger.info(f" {icon} [{r['weight']:.2f}] {r['name']} ({r['id']})")
 
     elif args.command == 'visualize':
         c = Cortex()
