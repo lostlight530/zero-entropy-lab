@@ -11,7 +11,7 @@ export default {
         },
         stats: {
             items: [
-                { value: "4+", label: "生态渗透" },
+                { value: "15", label: "Google 徽章" },
                 { value: "0", label: "冗余依赖" },
                 { value: "<1s", label: "冷启动" },
                 { value: "∞", label: "可扩展性" }
@@ -20,8 +20,8 @@ export default {
         achievements: {
             title: "系统演进 (Evolution)",
             summary: "除了项目，我们构建智能轨迹。",
-            googleBadges: "开源节点注入 (Open Source Nodes)",
-            awards: "生态渗透",
+            googleBadges: "15 枚 Google 徽章",
+            awards: "开源节点注入 (Open Source Nodes)",
             awardList: [
                 "Nexent 架构级讨论与思潮引入",
                 "Astron Agent 协议层探索贡献",
@@ -68,7 +68,7 @@ export default {
         },
         stats: {
             items: [
-                { value: "4+", label: "Ecosystem Injections" },
+                { value: "15", label: "Google Badges" },
                 { value: "0", label: "Dependencies" },
                 { value: "<1s", label: "Cold Start" },
                 { value: "∞", label: "Scalability" }
@@ -77,8 +77,8 @@ export default {
         achievements: {
             title: "System Evolution",
             summary: "Beyond mere projects, we build intelligence trajectories.",
-            googleBadges: "Open Source Nodes Injected",
-            awards: "Ecosystem Infiltration",
+            googleBadges: "15 Google Badges",
+            awards: "Open Source Nodes Injected",
             awardList: [
                 "Nexent Architectural Discourse",
                 "Astron Agent Protocol Exploration",
