@@ -12,19 +12,6 @@
     <!-- Background Canvas for Neural Mesh -->
     <canvas id="neuralCanvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -10; pointer-events: none; opacity: 0.6;"></canvas>
 
-    <!-- Panorama Hologram Layer (The Cyber-Maid) -->
-    <div id="hologram-maid-container">
-        <!--
-          User Action Required:
-          Place a transparent PNG/WebP of the anime maid at src/assets/nexus-chan.webp
-          or replace this src with a URL.
-        -->
-        <img id="hologram-maid" src="./src/assets/nexus-chan.webp" alt="Nexus-chan Hologram" onerror="this.style.display='none'; document.getElementById('hologram-fallback').style.display='block';">
-        <div id="hologram-fallback" style="display:none; color: var(--cyber-pink); text-align: center; border: 2px dashed var(--cyber-pink); padding: 2rem; border-radius: 1rem; backdrop-filter: blur(10px);">
-            [ AWAITING AVATAR UPLOAD ]<br><br>Please place a transparent image at:<br><code>src/assets/nexus-chan.webp</code><br>to initialize the cyber-maid.
-        </div>
-    </div>
-
     <!-- Navigation -->
     <nav class="glass">
         <div class="max-w-7xl nav-container">
@@ -151,21 +138,18 @@
         </div>
     </footer>
 
-    <!-- Right-Side Cockpit: HUD & Terminal -->
-    <div id="nexus-cockpit">
-        <!-- Terminal Module -->
-        <div id="nexus-terminal">
-            <div class="terminal-header">
-                <div><span class="status-dot"></span><span id="term-title">NEXUS-CHAN.exe [ONLINE]</span></div>
-                <div style="font-size: 0.7rem; color: var(--text-secondary);">v1.0.0</div>
-            </div>
-            <div class="terminal-body" id="term-body">
-                <!-- Output goes here -->
-            </div>
-            <div class="terminal-input-wrapper">
-                <span class="terminal-prompt">~/nexus&gt;</span>
-                <input type="text" id="term-input" class="terminal-input" placeholder="Type /help to interact..." autocomplete="off" spellcheck="false" />
-            </div>
+    <!-- Nexus Anime Terminal -->
+    <div id="nexus-terminal">
+        <div class="terminal-header">
+            <div><span class="status-dot"></span><span id="term-title">NEXUS-CHAN.exe [ONLINE]</span></div>
+            <div style="font-size: 0.7rem; color: var(--text-secondary);">v1.0.0</div>
+        </div>
+        <div class="terminal-body" id="term-body">
+            <!-- Output goes here -->
+        </div>
+        <div class="terminal-input-wrapper">
+            <span class="terminal-prompt">~/nexus&gt;</span>
+            <input type="text" id="term-input" class="terminal-input" placeholder="Type /help to interact..." autocomplete="off" spellcheck="false" />
         </div>
     </div>
 
