@@ -37,6 +37,9 @@ jobs:
     - name: 🧬 Run Evolution Cycle (Strategy)
       run: python src/kernel/nexus.py evolve
 
+    - name: Pull before push
+      run: git pull --rebase --autostash origin main
+
     - name: 💾 Commit New Memories
       uses: stefanzweifel/git-auto-commit-action@v5
       with:

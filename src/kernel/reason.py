@@ -3,8 +3,12 @@ import datetime
 from pathlib import Path
 try:
     from cortex import Cortex
+    from logger import logger
 except ImportError:
-    pass
+    import sys, os
+    sys.path.append(os.path.dirname(__file__))
+    from cortex import Cortex
+    from logger import logger
 
 class ReasoningEngine:
     def __init__(self, project_root=None):
@@ -20,9 +24,10 @@ class ReasoningEngine:
         """Cognitive Loop: Structural Analysis, Self-Reflection & Curiosity"""
         # [防御性检查] 大脑物理文件缺失时的优雅降级
         if not self.cortex or not self.db_path.exists():
+            logger.warning("Cortex DB not found during ponder.")
             return ["❌ **Critical**: Cortex DB not found. Cannot think without memory."]
 
-        print("🤔 NEXUS is pondering (Active Inference)...")
+        logger.info("🤔 NEXUS is pondering (Active Inference)...")
         insights = []
 
         try:
@@ -67,6 +72,7 @@ class ReasoningEngine:
                 insights.append("🎯 **Self-Driven Goal**: My current knowledge graph is dense. I should focus on harvesting new external paradigms.")
 
         except Exception as e:
+             logger.error("Cognitive Error during pondering", exc_info=True)
              insights.append(f"⚠️ **Cognitive Error**: A disruption occurred during pondering: {e}")
 
         return insights
@@ -106,5 +112,6 @@ class ReasoningEngine:
     def _query(self, sql):
         try:
             return self.cortex.conn.cursor().execute(sql).fetchall()
-        except Exception:
+        except Exception as e:
+            logger.error(f"Error executing reasoning query: {sql}", exc_info=True)
             return []
