@@ -3,11 +3,11 @@ export default {
         meta: { title: "零熵实验室 | Zero-Entropy Lab" },
         nav: { home: "主页", achievements: "亮点", ecosystem: "生态", projects: "矩阵", philosophy: "哲学" },
         hero: { 
-            role: "绝对零依赖工程师", 
-            tagline: "静默构建协议优先系统", 
+            role: "绝对零依赖工程师",
+            tagline: "静默构建协议优先系统",
             description: "专注于边缘 AI、Agent 架构及可复用的硬件逻辑层。",
-            primaryCta: "进入生态", 
-            secondaryCta: "探索矩阵" 
+            primaryCta: "进入生态",
+            secondaryCta: "探索矩阵"
         },
         stats: {
             items: [
@@ -60,11 +60,11 @@ export default {
         meta: { title: "Zero-Entropy Lab | lostlight" },
         nav: { home: "Home", achievements: "Highlights", ecosystem: "Ecosystem", projects: "Projects", philosophy: "Philosophy" },
         hero: { 
-            role: "Absolute Zero-Dependency Engineer", 
-            tagline: "Building protocol-first systems", 
+            role: "Absolute Zero-Dependency Engineer",
+            tagline: "Building protocol-first systems",
             description: "Focused on Edge AI, agent architecture, and reusable bare-metal logic layers.",
-            primaryCta: "The Ecosystem", 
-            secondaryCta: "Explore Matrix" 
+            primaryCta: "The Ecosystem",
+            secondaryCta: "Explore Matrix"
         },
         stats: {
             items: [
