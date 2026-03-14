@@ -191,3 +191,4 @@
 {"src": "file_src_kernel_harvester_py", "relation": "defines", "dst": "func__save_state", "desc": ""}
 {"src": "file_src_kernel_harvester_py", "relation": "defines", "dst": "func__analyze_content", "desc": ""}
 {"src": "file_src_kernel_harvester_py", "relation": "defines", "dst": "func_fetch_github_data", "desc": ""}
+{"src": "id-base", "relation": "defines", "dst": "id-leaf", "desc": "Hierarchical link"}
