@@ -85,8 +85,13 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
             response_obj.status = "error"
             response_obj.message = str(e)
 
-        # Enforce contract
-        self.wfile.write(json.dumps(asdict(response_obj)).encode('utf-8'))
+        # Enforce contract strictly, fallback if serialization fails
+        try:
+            self.wfile.write(json.dumps(asdict(response_obj)).encode('utf-8'))
+        except Exception as e:
+            logger.error(f"API Serialization Exception at {path}", exc_info=True)
+            fallback = {"status": "error", "message": "Serialization failure", "payload": {}}
+            self.wfile.write(json.dumps(fallback).encode('utf-8'))
 
 def main():
     parser = argparse.ArgumentParser(description="NEXUS CORE: Zero-Entropy Intelligence")
