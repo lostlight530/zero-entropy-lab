@@ -216,7 +216,8 @@ class Cortex:
             e_count = cursor.execute('SELECT count(*) FROM entities').fetchone()[0]
             r_count = cursor.execute('SELECT count(*) FROM relations').fetchone()[0]
             avg_weight = cursor.execute('SELECT avg(weight) FROM entities').fetchone()[0] or 0
-        except:
+        except Exception as e:
+            logger.error(f"Failed to fetch stats: {e}", exc_info=True)
             return {'entities': 0, 'relations': 0, 'density': 0}
         return {'entities': e_count, 'relations': r_count, 'density': avg_weight}
 

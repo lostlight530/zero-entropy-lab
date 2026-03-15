@@ -39,13 +39,19 @@ class Harvester:
 
     def _load_state(self):
         if self.state_file.exists():
-            with open(self.state_file, 'r') as f:
-                return json.load(f)
+            try:
+                with open(self.state_file, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            except Exception as e:
+                logger.error(f"Failed to load harvester state: {e}", exc_info=True)
         return {}
 
     def _save_state(self):
-        with open(self.state_file, 'w') as f:
-            json.dump(self.state, f, indent=2)
+        try:
+            with open(self.state_file, 'w', encoding='utf-8') as f:
+                json.dump(self.state, f, indent=2, ensure_ascii=False)
+        except Exception as e:
+            logger.error(f"Failed to save harvester state: {e}", exc_info=True)
 
     def _analyze_content(self, text):
         """Architect's Filters: Semantic Tagging"""

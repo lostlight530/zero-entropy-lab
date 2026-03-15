@@ -105,8 +105,8 @@ class Evolver:
                 match = re.search(r'> \*\*Analysis\*\*: (.*)', content)
                 if match:
                     return match.group(1).strip()
-        except:
-            pass
+        except Exception as e:
+            logging.warning(f"Failed to analyze file {filepath}: {e}", exc_info=True)
         return ""
 
     def _generate_mission(self, stats, orphans, new_inputs, intuitions):
