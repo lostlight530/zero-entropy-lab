@@ -11,4 +11,3 @@
 {"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
 {"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
 {"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
-{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
