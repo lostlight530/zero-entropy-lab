@@ -197,3 +197,4 @@
 {"src": "file_src_kernel_nlp_py", "relation": "defines", "dst": "class_CognitiveReranker", "desc": ""}
 {"src": "file_src_kernel_nlp_py", "relation": "defines", "dst": "func_cosine_similarity", "desc": ""}
 {"src": "file_src_kernel_nlp_py", "relation": "defines", "dst": "func_rerank_and_fuse", "desc": ""}
+{"src": "id-base", "relation": "defines", "dst": "id-leaf", "desc": "Hierarchical link"}

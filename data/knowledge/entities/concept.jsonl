@@ -32,3 +32,5 @@
 {"id": "id-leaf", "type": "concept", "name": "Leaf Node", "desc": "Branch of thought"}
 {"id": "id-base", "type": "concept", "name": "Base Node", "desc": "Root of truth"}
 {"id": "id-leaf", "type": "concept", "name": "Leaf Node", "desc": "Branch of thought"}
+{"id": "id-base", "type": "concept", "name": "Base Node", "desc": "Root of truth"}
+{"id": "id-leaf", "type": "concept", "name": "Leaf Node", "desc": "Branch of thought"}
