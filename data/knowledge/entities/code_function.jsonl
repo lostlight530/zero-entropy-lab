@@ -59,3 +59,5 @@
 {"id": "func_format", "type": "code_function", "name": "format", "desc": "Python Function"}
 {"id": "func_log_event", "type": "code_function", "name": "log_event", "desc": "Python Function"}
 {"id": "func_vacuum", "type": "code_function", "name": "vacuum", "desc": "[Refinement] Purge orphans and compact memory space."}
+{"id": "func_cosine_similarity", "type": "code_function", "name": "cosine_similarity", "desc": "Calculates cosine similarity between two strings using Counter.\nFast enough for small candidate pool"}
+{"id": "func_rerank_and_fuse", "type": "code_function", "name": "rerank_and_fuse", "desc": "Fuses FTS5 BM25 score, biological weight, and Cosine Similarity."}

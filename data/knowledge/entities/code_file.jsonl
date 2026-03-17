@@ -49,3 +49,4 @@
 {"id": "file_src_kernel_harvester_py", "type": "code_file", "name": "harvester.py", "desc": "Source file at: src/kernel/harvester.py"}
 {"id": "file_src_scripts_translations_js", "type": "code_file", "name": "translations.js", "desc": "Source file at: src/scripts/translations.js"}
 {"id": "file_src_styles_main_css", "type": "code_file", "name": "main.css", "desc": "Source file at: src/styles/main.css"}
+{"id": "file_src_kernel_nlp_py", "type": "code_file", "name": "nlp.py", "desc": "Source file at: src/kernel/nlp.py"}
