@@ -3,26 +3,35 @@ import sys
 import os
 import sqlite3
 import json
+import shutil
 from pathlib import Path
-
-# Fix paths for test imports
-sys.path.append(str(Path(__file__).parent.parent / "src" / "kernel"))
-from cortex import Cortex
 
 class TestCortex(unittest.TestCase):
     def setUp(self):
+        # Allow use from runner or standalone
+        try:
+            from cortex import Cortex
+        except ImportError:
+            sys.path.append(str(Path(__file__).parent.parent / "src" / "kernel"))
+            from cortex import Cortex
+
         self.project_root = Path(__file__).parent.parent
-        self.test_db = self.project_root / "data" / "test_cortex.db"
-        # Ensure data folder exists
-        self.test_db.parent.mkdir(parents=True, exist_ok=True)
-        self.cortex = Cortex(self.test_db)
+        self.test_dir = self.project_root / "data" / "test_run"
+        self.test_db = self.test_dir / "test_cortex.db"
+
+        # Isolate test data from production knowledge
+        if self.test_dir.exists():
+            shutil.rmtree(self.test_dir)
+        self.test_dir.mkdir(parents=True, exist_ok=True)
+
+        self.cortex = Cortex(db_path=self.test_db, project_root=self.test_dir)
 
     def tearDown(self):
         if hasattr(self, 'cortex'):
             self.cortex.conn.close()
-        if self.test_db.exists():
+        if self.test_dir.exists():
             try:
-                os.remove(self.test_db)
+                shutil.rmtree(self.test_dir)
             except: pass
 
     def test_knowledge_graph(self):
@@ -41,4 +50,8 @@ class TestCortex(unittest.TestCase):
 
 if __name__ == "__main__":
     print("⚔️ NEXUS PROVING GROUND: Cortex Unit Tests")
+
+    # Standalone path fix
+    sys.path.append(str(Path(__file__).parent.parent / "src" / "kernel"))
+
     unittest.main()
