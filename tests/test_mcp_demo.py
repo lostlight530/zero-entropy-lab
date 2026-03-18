@@ -14,9 +14,6 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent / "src" / "kernel"))
 
 # Mock cortex, factory, and other dependencies to avoid initialization side effects
-orig_cortex = sys.modules.get("cortex")
-orig_factory = sys.modules.get("factory")
-
 mock_cortex_mod = MagicMock()
 sys.modules["cortex"] = mock_cortex_mod
 mock_factory_mod = MagicMock()
@@ -27,13 +24,6 @@ mock_cortex_mod.Cortex = MagicMock()
 mock_factory_mod.KnowledgeFactory = MagicMock()
 
 from mcp_demo import validate_category, ALLOWED_CATEGORIES
-
-# Restore sys.modules to prevent test pollution
-if orig_cortex: sys.modules["cortex"] = orig_cortex
-else: del sys.modules["cortex"]
-
-if orig_factory: sys.modules["factory"] = orig_factory
-else: del sys.modules["factory"]
 
 class TestMCPDemo(unittest.TestCase):
     def test_validate_category_success(self):
