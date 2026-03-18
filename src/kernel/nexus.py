@@ -187,7 +187,11 @@ def main():
         logger.info("🧠 Initiating Cortex Reconstruction Protocol...")
         c = Cortex()
         knowledge_dir = c.knowledge_path
+        entities_to_add = []
+        relations_to_add = []
+        BATCH_THRESHOLD = 1000
         count = 0
+
         if knowledge_dir.exists():
             for root, _, files in os.walk(knowledge_dir):
                 for file in files:
@@ -195,12 +199,30 @@ def main():
                         with open(Path(root)/file, 'r', encoding='utf-8') as f:
                             for line in f:
                                 if not line.strip(): continue
-                                data = json.loads(line)
-                                if 'src' in data:
-                                    c.connect_entities(data['src'], data.get('relation', 'connected'), data['dst'], data.get('desc',''), save_to_disk=False)
-                                else:
-                                    c.add_entity(data.get('id'), data.get('type', 'concept'), data.get('name'), data.get('desc',''), save_to_disk=False)
-                                count += 1
+                                try:
+                                    data = json.loads(line)
+                                    if 'src' in data:
+                                        relations_to_add.append(data)
+                                    else:
+                                        entities_to_add.append(data)
+                                    count += 1
+                                except json.JSONDecodeError:
+                                    continue
+
+                                # Flush batches to prevent OOM
+                                if len(entities_to_add) >= BATCH_THRESHOLD:
+                                    c.add_entities_batch(entities_to_add, save_to_disk=False)
+                                    entities_to_add = []
+                                if len(relations_to_add) >= BATCH_THRESHOLD:
+                                    c.connect_entities_batch(relations_to_add, save_to_disk=False)
+                                    relations_to_add = []
+
+        # Final flush
+        if entities_to_add:
+            c.add_entities_batch(entities_to_add, save_to_disk=False)
+        if relations_to_add:
+            c.connect_entities_batch(relations_to_add, save_to_disk=False)
+
         logger.info(f"✨ Reconstruction Complete.{count} memories restored.")
 
     elif args.command == 'evolve':
