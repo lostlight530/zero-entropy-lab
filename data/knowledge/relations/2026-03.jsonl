@@ -88,9 +88,6 @@
 {"src": "file_src\\kernel\\scholar_py", "relation": "defines", "dst": "func__analyze_markdown_structure", "desc": ""}
 {"src": "file_src\\kernel\\scholar_py", "relation": "defines", "dst": "func_learn", "desc": ""}
 {"src": "file_src\\kernel\\test_mcp_py", "relation": "defines", "dst": "func_test_mcp_server", "desc": ""}
-{"src": "id-base", "relation": "defines", "dst": "id-leaf", "desc": "Hierarchical link"}
-{"src": "id-base", "relation": "defines", "dst": "id-leaf", "desc": "Hierarchical link"}
-{"src": "id-base", "relation": "defines", "dst": "id-leaf", "desc": "Hierarchical link"}
 {"src": "file_tests\\run_tests_py", "relation": "defines", "dst": "func_run_all", "desc": ""}
 {"src": "file_tests\\test_cortex_py", "relation": "defines", "dst": "class_TestCortex", "desc": ""}
 {"src": "file_tests\\test_cortex_py", "relation": "defines", "dst": "func_setUp", "desc": ""}
@@ -101,7 +98,6 @@
 {"src": "file_tests\\test_server_py", "relation": "defines", "dst": "func_tearDownClass", "desc": ""}
 {"src": "file_tests\\test_server_py", "relation": "defines", "dst": "func_test_api_status", "desc": ""}
 {"src": "file_tests\\test_server_py", "relation": "defines", "dst": "func_test_static_serve", "desc": ""}
-{"src": "id-base", "relation": "defines", "dst": "id-leaf", "desc": "Hierarchical link"}
 {"src": "file_tests_run_tests_py", "relation": "defines", "dst": "func_run_all", "desc": ""}
 {"src": "file_tests_test_cortex_py", "relation": "defines", "dst": "class_TestCortex", "desc": ""}
 {"src": "file_tests_test_cortex_py", "relation": "defines", "dst": "func_setUp", "desc": ""}
@@ -191,8 +187,6 @@
 {"src": "file_src_kernel_harvester_py", "relation": "defines", "dst": "func__save_state", "desc": ""}
 {"src": "file_src_kernel_harvester_py", "relation": "defines", "dst": "func__analyze_content", "desc": ""}
 {"src": "file_src_kernel_harvester_py", "relation": "defines", "dst": "func_fetch_github_data", "desc": ""}
-{"src": "id-base", "relation": "defines", "dst": "id-leaf", "desc": "Hierarchical link"}
-{"src": "id-base", "relation": "defines", "dst": "id-leaf", "desc": "Hierarchical link"}
 {"src": "file_src_kernel_nlp_py", "relation": "defines", "dst": "class_CognitiveReranker", "desc": ""}
 {"src": "file_src_kernel_nlp_py", "relation": "defines", "dst": "func_cosine_similarity", "desc": ""}
 {"src": "file_src_kernel_nlp_py", "relation": "defines", "dst": "func_rerank_and_fuse", "desc": ""}
