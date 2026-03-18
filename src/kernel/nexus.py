@@ -37,6 +37,12 @@ class APIResponse:
 
 class NexusHandler(http.server.SimpleHTTPRequestHandler):
     """Native API & Static File Router"""
+    ALLOWED_ORIGINS = [
+        "http://localhost:8000",
+        "http://127.0.0.1:8000",
+        "http://localhost:3000", # Common dev port
+    ]
+
     def __init__(self, *args, **kwargs):
         self.kernel_path = Path(__file__).parent.resolve()
         # src/kernel/nexus.py -> parents[2] is root
@@ -58,9 +64,15 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
 
     def handle_api(self, path, query):
         params = parse_qs(query)
+        origin = self.headers.get('Origin')
+
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
-        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Vary', 'Origin')
+
+        if origin in self.ALLOWED_ORIGINS:
+            self.send_header('Access-Control-Allow-Origin', origin)
+
         self.end_headers()
 
         response_obj = APIResponse(status="ok", payload={})

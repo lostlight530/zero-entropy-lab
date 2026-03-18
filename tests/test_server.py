@@ -69,6 +69,29 @@ class TestServerAPI(unittest.TestCase):
         except Exception as e:
             self.fail(f"Static Serve failed: {e}")
 
+    def test_cors_policy(self):
+        """验证 CORS 策略安全性"""
+        # 1. 验证允许的 Origin
+        req_allowed = urllib.request.Request(
+            "http://localhost:8000/api/status",
+            headers={"Origin": "http://localhost:8000"}
+        )
+        with urllib.request.urlopen(req_allowed) as response:
+            self.assertEqual(response.getheader('Access-Control-Allow-Origin'), "http://localhost:8000")
+            self.assertEqual(response.getheader('Vary'), "Origin")
+
+        # 2. 验证禁止的 Origin
+        req_forbidden = urllib.request.Request(
+            "http://localhost:8000/api/status",
+            headers={"Origin": "http://evil.com"}
+        )
+        with urllib.request.urlopen(req_forbidden) as response:
+            self.assertIsNone(response.getheader('Access-Control-Allow-Origin'))
+
+        # 3. 验证无 Origin 时不返回 CORS 头
+        with urllib.request.urlopen("http://localhost:8000/api/status") as response:
+            self.assertIsNone(response.getheader('Access-Control-Allow-Origin'))
+
 if __name__ == "__main__":
     import sys, os
     print("⚔️ NEXUS PROVING GROUND: API Integration Tests")
