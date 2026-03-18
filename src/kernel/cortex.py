@@ -92,45 +92,75 @@ class Cortex:
             logger.error(f"⚠️ Failed to write text memory: {e}", exc_info=True)
 
     def search(self, query: str, limit: int = 10) -> List[Dict]:
-        """Synaptic Search: Combines Full-Text + 1-Hop Graph Association"""
+        """Synaptic Search: Zero-Entropy 2-Stage Retrieval (FTS5 BM25 + Python Reranking)"""
+        # Delay import to avoid circular dependencies if nlp imports cortex later
+        try:
+            from nlp import CognitiveReranker
+        except ImportError:
+            # Fallback if executing outside standard paths
+            import sys, os
+            sys.path.append(os.path.dirname(__file__))
+            from nlp import CognitiveReranker
+
         cursor = self.conn.cursor()
         safe_query = "".join(c for c in query if c.isalnum() or c.isspace())
         if not safe_query.strip(): return []
         fts_query = " ".join([f"{token}*" for token in safe_query.split()])
 
-        # 1. Direct Match (FTS5)
+        # STEP 1: Coarse-Grained Retrieval via FTS5 BM25
+        # Fetch a wider candidate pool (e.g., 50) for the reranker.
+        # Columns in fts: id(0), name(1), desc(2). We heavily weight the name.
         sql_direct = '''
-            SELECT e.id, e.name, e.desc, e.weight, 0 as distance
+            SELECT e.id, e.name, e.desc, e.weight, 0 as distance,
+                   bm25(entities_fts, 0.0, 10.0, 1.0) as fts_score
             FROM entities_fts f
             JOIN entities e ON f.id = e.id
             WHERE entities_fts MATCH ?
-            ORDER BY f.rank * (1.0 / e.weight)
-            LIMIT ?
+            ORDER BY fts_score ASC
+            LIMIT 50
         '''
-        cursor.execute(sql_direct, (fts_query, limit))
+        cursor.execute(sql_direct, (fts_query,))
         direct_results = [dict(row) for row in cursor.fetchall()]
 
-        if not direct_results: return []
+        # STEP 2: Associative Expansion (Graph 1-hop)
+        # We bring in highly weighted neighbors to enrich the candidate pool.
+        assoc_results = []
+        if direct_results:
+            direct_ids = [r['id'] for r in direct_results[:10]] # Expand only top 10 to avoid noise
+            placeholders = ','.join(['?'] * len(direct_ids))
 
-        # 2. Associative Expansion (Graph)
-        direct_ids = [r['id'] for r in direct_results]
-        placeholders = ','.join(['?'] * len(direct_ids))
+            sql_assoc = f'''
+                SELECT e.id, e.name, e.desc, e.weight, 1 as distance,
+                       0.0 as fts_score
+                FROM relations r
+                JOIN entities e ON (r.target = e.id OR r.source = e.id)
+                WHERE (r.source IN ({placeholders}) OR r.target IN ({placeholders}))
+                AND e.id NOT IN ({placeholders})
+                AND e.weight > 1.1
+                ORDER BY e.weight DESC
+                LIMIT 20
+            '''
+            params = direct_ids + direct_ids + direct_ids
+            cursor.execute(sql_assoc, params)
+            assoc_results = [dict(row) for row in cursor.fetchall()]
 
-        sql_assoc = f'''
-            SELECT e.id, e.name, e.desc, e.weight, 1 as distance
-            FROM relations r
-            JOIN entities e ON (r.target = e.id OR r.source = e.id)
-            WHERE (r.source IN ({placeholders}) OR r.target IN ({placeholders}))
-            AND e.id NOT IN ({placeholders})
-            AND e.weight > 1.1
-            ORDER BY e.weight DESC
-            LIMIT 3
-        '''
-        params = direct_ids + direct_ids + direct_ids
-        cursor.execute(sql_assoc, params)
-        assoc_results = [dict(row) for row in cursor.fetchall()]
+        # Combine candidates and remove duplicates
+        all_candidates = []
+        seen_ids = set()
+        for r in direct_results + assoc_results:
+            if r['id'] not in seen_ids:
+                seen_ids.add(r['id'])
+                all_candidates.append(r)
 
-        return direct_results + assoc_results
+        if not all_candidates:
+            return []
+
+        # STEP 3: The Reranking Layer (Pure Python)
+        final_results = CognitiveReranker.rerank_and_fuse(safe_query, all_candidates)
+
+        # Format the output to ensure the 'distance' and 'weight' remain intuitive for the frontend
+        # and limit to the requested amount.
+        return final_results[:limit]
 
     def add_entity(self, id, type_slug, name, desc, save_to_disk=True):
         cursor = self.conn.cursor()
