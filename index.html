@@ -375,30 +375,7 @@
         const termBody = document.getElementById('term-body');
         const termInput = document.getElementById('term-input');
 
-        // Initial Anime SVG Avatar & Greeting
-        // Hand-coded Zero-Dependency SVG for "Nexus-chan"
-        const avatarSvg = `
-        <div class="terminal-avatar-container">
-            <svg class="anime-avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <!-- Glowing Grid Background -->
-                <circle cx="50" cy="50" r="45" fill="none" stroke="var(--cyber-cyan)" stroke-width="1" opacity="0.2" stroke-dasharray="2 4"/>
-                <circle cx="50" cy="50" r="40" fill="none" stroke="var(--cyber-pink)" stroke-width="0.5" opacity="0.3"/>
-
-                <!-- Anime Girl Silhouette (Cyber-Maid) -->
-                <path d="M 35 80 Q 50 85 65 80 L 70 100 L 30 100 Z" fill="rgba(0, 240, 255, 0.1)" stroke="var(--cyber-cyan)" stroke-width="1"/>
-                <path d="M 40 50 Q 50 65 60 50 L 55 80 Q 50 85 45 80 Z" fill="rgba(255, 42, 133, 0.1)" stroke="var(--cyber-pink)" stroke-width="1.5"/>
-                <!-- Head/Hair -->
-                <path d="M 30 45 C 25 20, 75 20, 70 45 C 65 55, 35 55, 30 45 Z" fill="none" stroke="var(--cyber-cyan)" stroke-width="2"/>
-                <path d="M 35 30 L 20 50 L 30 45" fill="none" stroke="var(--cyber-pink)" stroke-width="1.5"/>
-                <path d="M 65 30 L 80 50 L 70 45" fill="none" stroke="var(--cyber-pink)" stroke-width="1.5"/>
-                <!-- Visor / Eyes -->
-                <rect x="40" y="42" width="20" height="6" rx="3" fill="var(--cyber-cyan)" opacity="0.8" />
-                <line x1="25" y1="45" x2="40" y2="45" stroke="var(--cyber-cyan)" stroke-width="1"/>
-                <line x1="60" y1="45" x2="75" y2="45" stroke="var(--cyber-cyan)" stroke-width="1"/>
-            </svg>
-        </div>
-        `;
-        termBody.innerHTML += avatarSvg;
+        // Initial Startup Sequence & Greeting
 
         function printLine(text, type = 'sys') {
             const line = document.createElement('div');
