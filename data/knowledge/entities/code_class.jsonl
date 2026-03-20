@@ -81,3 +81,17 @@
 {"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
 {"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
 {"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
