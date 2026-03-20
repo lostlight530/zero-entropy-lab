@@ -1,16 +1,23 @@
-import unittest
 import sys
 from pathlib import Path
+import os
+import subprocess
 
 def run_all():
     print("🧬 NEXUS: Running Foundation Verification...")
-    loader = unittest.TestLoader()
-    suite = loader.discover(str(Path(__file__).parent), pattern='test_*.py')
     
-    runner = unittest.TextTestRunner(verbosity=2)
-    result = runner.run(suite)
+    # Run tests in separate processes to isolate mocking side effects
+    test_files = [f for f in os.listdir("tests") if f.startswith("test_") and f.endswith(".py")]
     
-    sys.exit(not result.wasSuccessful())
+    all_passed = True
+    for t_file in test_files:
+        module_name = f"tests.{t_file[:-3]}"
+        print(f"\n--- Running {module_name} ---")
+        result = subprocess.run([sys.executable, "-m", "unittest", module_name], cwd=os.getcwd())
+        if result.returncode != 0:
+            all_passed = False
+
+    sys.exit(0 if all_passed else 1)
 
 if __name__ == "__main__":
     run_all()

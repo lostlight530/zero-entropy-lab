@@ -163,43 +163,88 @@ class Cortex:
         return final_results[:limit]
 
     def add_entity(self, id, type_slug, name, desc, save_to_disk=True):
+        self.add_entities_batch([{"id": id, "type": type_slug, "name": name, "desc": desc}], save_to_disk=save_to_disk)
+
+    def add_entities_batch(self, entities: List[Dict], save_to_disk=True):
         cursor = self.conn.cursor()
         now = time.time()
-        w = 2.0 if id in self.CORE_WHITELIST else 1.0
 
-        try:
-            cursor.execute('INSERT INTO entities VALUES (?, ?, ?, ?, ?, ?)',
-                          (id, type_slug, name, desc, w, now))
-            cursor.execute('INSERT INTO entities_fts VALUES (?, ?, ?)', (id, name, desc))
-            self.conn.commit()
+        # Process in chunks of 500 to keep transaction size manageable
+        CHUNK_SIZE = 500
+        for i in range(0, len(entities), CHUNK_SIZE):
+            chunk = entities[i:i + CHUNK_SIZE]
+            entity_data = []
+            fts_data = []
 
-            # [Dual-Write Control] Only sync to text if requested (True by default)
+            for e in chunk:
+                eid = e.get('id')
+                etype = e.get('type', 'concept')
+                ename = e.get('name')
+                edesc = e.get('desc', '')
+                w = 2.0 if eid in self.CORE_WHITELIST else 1.0
+                entity_data.append((eid, etype, ename, edesc, w, now))
+                fts_data.append((eid, ename, edesc))
+
+            try:
+                # Use a subtransaction for the chunk
+                cursor.execute("SAVEPOINT chunk_insert")
+                cursor.executemany('INSERT INTO entities VALUES (?, ?, ?, ?, ?, ?)', entity_data)
+                cursor.executemany('INSERT INTO entities_fts VALUES (?, ?, ?)', fts_data)
+                cursor.execute("RELEASE SAVEPOINT chunk_insert")
+                self.conn.commit()
+            except sqlite3.IntegrityError:
+                cursor.execute("ROLLBACK TO SAVEPOINT chunk_insert")
+                # Individual fallback for the chunk to handle existing entities
+                for e in chunk:
+                    try:
+                        w = 2.0 if e['id'] in self.CORE_WHITELIST else 1.0
+                        cursor.execute('INSERT INTO entities VALUES (?, ?, ?, ?, ?, ?)',
+                                     (e['id'], e.get('type','concept'), e.get('name'), e.get('desc',''), w, now))
+                        cursor.execute('INSERT INTO entities_fts VALUES (?, ?, ?)', (e['id'], e.get('name'), e.get('desc','')))
+                        self.conn.commit()
+                    except sqlite3.IntegrityError:
+                        self.activate_memory(e['id'])
+
             if save_to_disk:
-                self._log_to_jsonl("entities", type_slug, {
-                    "id": id, "type": type_slug, "name": name, "desc": desc
-                })
-
-        except sqlite3.IntegrityError:
-            self.activate_memory(id)
+                for e in chunk:
+                    self._log_to_jsonl("entities", e.get('type', 'concept'), e)
 
     def connect_entities(self, source, relation, target, desc="", save_to_disk=True):
+        self.connect_entities_batch([{"src": source, "relation": relation, "dst": target, "desc": desc}], save_to_disk=save_to_disk)
+
+    def connect_entities_batch(self, relations: List[Dict], save_to_disk=True):
         cursor = self.conn.cursor()
-        try:
-            cursor.execute('INSERT INTO relations VALUES (?, ?, ?, 1.0)',
-                          (source, relation, target))
-            self.conn.commit()
-            self.activate_memory(source, 0.1)
-            self.activate_memory(target, 0.1)
+        CHUNK_SIZE = 400 # Max params per query is 999 in many sqlite builds, 400 relations * 2 entities = 800 params
 
-            # [Dual-Write Control]
-            if save_to_disk:
-                month_str = datetime.datetime.now().strftime("%Y-%m")
-                self._log_to_jsonl("relations", month_str, {
-                    "src": source, "relation": relation, "dst": target, "desc": desc
-                })
+        for i in range(0, len(relations), CHUNK_SIZE):
+            chunk = relations[i:i + CHUNK_SIZE]
+            rel_data = [(r['src'], r.get('relation', 'connected'), r['dst'], 1.0) for r in chunk]
 
-        except sqlite3.IntegrityError:
-            pass
+            try:
+                cursor.executemany('INSERT OR IGNORE INTO relations VALUES (?, ?, ?, ?)', rel_data)
+                self.conn.commit()
+
+                # Batch activation with frequency awareness to match original logic
+                now = time.time()
+                activation_counts = {}
+                for r in chunk:
+                    activation_counts[r['src']] = activation_counts.get(r['src'], 0) + 0.1
+                    activation_counts[r['dst']] = activation_counts.get(r['dst'], 0) + 0.1
+
+                # Perform individual updates for frequency (still faster than individual commits)
+                # Alternatively, we could do complex SQL, but individual updates in a single transaction are fine.
+                for eid, boost in activation_counts.items():
+                    cursor.execute('UPDATE entities SET weight = weight + ?, last_activated = ? WHERE id = ?',
+                                 (boost, now, eid))
+                self.conn.commit()
+
+                if save_to_disk:
+                    month_str = datetime.datetime.now().strftime("%Y-%m")
+                    for r in chunk:
+                        self._log_to_jsonl("relations", month_str, r)
+            except Exception as e:
+                logger.error(f"Batch connection failed: {e}")
+                self.conn.rollback()
 
     def activate_memory(self, id, boost=0.1):
         cursor = self.conn.cursor()
