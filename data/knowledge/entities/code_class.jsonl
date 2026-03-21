@@ -81,7 +81,6 @@
 {"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
 {"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
 {"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
-{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
 {"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
 {"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
 {"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
@@ -96,6 +95,3 @@
 {"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
 {"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
 {"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
-{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
-{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
-{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}

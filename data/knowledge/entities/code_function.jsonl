@@ -438,11 +438,6 @@
 {"id": "func__save_state", "type": "code_function", "name": "_save_state", "desc": "Python Function"}
 {"id": "func__analyze_content", "type": "code_function", "name": "_analyze_content", "desc": "Architect's Filters: Semantic Tagging"}
 {"id": "func_fetch_github_data", "type": "code_function", "name": "fetch_github_data", "desc": "Python Function"}
-{"id": "func_setUpClass", "type": "code_function", "name": "setUpClass", "desc": "Python Function"}
-{"id": "func_tearDownClass", "type": "code_function", "name": "tearDownClass", "desc": "Python Function"}
-{"id": "func_test_mcp_tools_discovery", "type": "code_function", "name": "test_mcp_tools_discovery", "desc": "Python Function"}
-{"id": "func_test_mcp_invoke_success", "type": "code_function", "name": "test_mcp_invoke_success", "desc": "Python Function"}
-{"id": "func_test_mcp_invoke_missing_tool", "type": "code_function", "name": "test_mcp_invoke_missing_tool", "desc": "Python Function"}
 {"id": "func_run_all", "type": "code_function", "name": "run_all", "desc": "Python Function"}
 {"id": "func_test_validate_category_success", "type": "code_function", "name": "test_validate_category_success", "desc": "验证有效类别不会抛出异常"}
 {"id": "func_test_validate_category_failure", "type": "code_function", "name": "test_validate_category_failure", "desc": "验证无效类别会抛出 ValueError"}
@@ -460,7 +455,6 @@
 {"id": "func_main", "type": "code_function", "name": "main", "desc": "Python Function"}
 {"id": "func___init__", "type": "code_function", "name": "__init__", "desc": "Python Function"}
 {"id": "func_do_GET", "type": "code_function", "name": "do_GET", "desc": "Python Function"}
-{"id": "func_do_POST", "type": "code_function", "name": "do_POST", "desc": "Python Function"}
 {"id": "func_handle_api", "type": "code_function", "name": "handle_api", "desc": "Python Function"}
 {"id": "func___init__", "type": "code_function", "name": "__init__", "desc": "Python Function"}
 {"id": "func_add_entity", "type": "code_function", "name": "add_entity", "desc": "Adds a new entity to the knowledge graph.\n向知识图谱添加新实体。"}
@@ -520,10 +514,3 @@
 {"id": "func__save_state", "type": "code_function", "name": "_save_state", "desc": "Python Function"}
 {"id": "func__analyze_content", "type": "code_function", "name": "_analyze_content", "desc": "Architect's Filters: Semantic Tagging"}
 {"id": "func_fetch_github_data", "type": "code_function", "name": "fetch_github_data", "desc": "Python Function"}
-{"id": "func_get_mcp_tool_schema", "type": "code_function", "name": "get_mcp_tool_schema", "desc": "核心魔法：利用 Python 原生 inspect 和 typing 提取方法签名，纯手工拼接 JSON Schema。"}
-{"id": "func_execute", "type": "code_function", "name": "execute", "desc": "子类必须实现此方法。\n返回值必须是可以被 json.dumps 序列化的字典。"}
-{"id": "func___init__", "type": "code_function", "name": "__init__", "desc": "Python Function"}
-{"id": "func_register", "type": "code_function", "name": "register", "desc": "Python Function"}
-{"id": "func_get_all_schemas", "type": "code_function", "name": "get_all_schemas", "desc": "Python Function"}
-{"id": "func_invoke", "type": "code_function", "name": "invoke", "desc": "Python Function"}
-{"id": "func_execute", "type": "code_function", "name": "execute", "desc": "Execute a search query against the Cortex database.\n\nArgs:\n    query (str): The term or concept to s"}
