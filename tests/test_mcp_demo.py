@@ -55,3 +55,6 @@ class TestMCPDemo(unittest.TestCase):
 if __name__ == "__main__":
     print("⚔️ NEXUS PROVING GROUND: MCP Demo Unit Tests")
     unittest.main()
+
+if "cortex" in sys.modules and hasattr(sys.modules["cortex"], "MagicMock"):
+    del sys.modules["cortex"]

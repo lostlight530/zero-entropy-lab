@@ -19,6 +19,7 @@ try:
     from scholar import Scholar
     from reason import ReasoningEngine # <--- The Frontal Lobe
     from logger import logger
+    from mcp import registry as mcp_registry
 except ImportError:
     # Handle direct root execution or path issues
     sys.path.append(os.path.dirname(__file__))
@@ -28,6 +29,7 @@ except ImportError:
     from scholar import Scholar
     from reason import ReasoningEngine
     from logger import logger
+    from mcp import registry as mcp_registry
 
 @dataclass
 class APIResponse:
@@ -49,14 +51,26 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
         path = parsed_url.path
 
         if path.startswith("/api/"):
-            self.handle_api(path, parsed_url.query)
+            self.handle_api(path, parsed_url.query, method="GET")
         else:
             # Shift directory to project root for static serving
             # This is slightly risky in a multi-threaded server but okay for our native lab
             os.chdir(self.project_root)
             super().do_GET()
 
-    def handle_api(self, path, query):
+    def do_POST(self):
+        parsed_url = urlparse(self.path)
+        path = parsed_url.path
+
+        if path.startswith("/api/"):
+            # Handle POST data
+            content_length = int(self.headers.get('Content-Length', 0))
+            post_data = self.rfile.read(content_length) if content_length > 0 else b''
+            self.handle_api(path, parsed_url.query, method="POST", body=post_data)
+        else:
+            self.send_error(405, "Method Not Allowed")
+
+    def handle_api(self, path, query, method="GET", body=b''):
         params = parse_qs(query)
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
@@ -66,20 +80,47 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
         response_obj = APIResponse(status="ok", payload={})
 
         try:
-            logger.info(f"API Request: {path} with query: {query}")
-            if path == "/api/status":
-                response_obj.payload = self.cortex.get_stats()
-            elif path == "/api/search":
-                q = params.get('q', [''])[0]
-                response_obj.payload = self.cortex.search(q)
-            elif path == "/api/journal":
-                cursor = self.cortex.conn.cursor()
-                cursor.execute("SELECT datetime(timestamp, 'unixepoch') as ts, event, details FROM journal ORDER BY timestamp DESC LIMIT 20")
-                response_obj.payload = [dict(row) for row in cursor.fetchall()]
-            else:
-                response_obj.status = "error"
-                response_obj.message = "Invalid endpoint"
-                logger.warning(f"API Invalid Endpoint Hit: {path}")
+            logger.info(f"API {method} Request: {path} with query: {query}")
+
+            if method == "GET":
+                if path == "/api/status":
+                    response_obj.payload = self.cortex.get_stats()
+                elif path == "/api/search":
+                    q = params.get('q', [''])[0]
+                    response_obj.payload = self.cortex.search(q)
+                elif path == "/api/journal":
+                    cursor = self.cortex.conn.cursor()
+                    cursor.execute("SELECT datetime(timestamp, 'unixepoch') as ts, event, details FROM journal ORDER BY timestamp DESC LIMIT 20")
+                    response_obj.payload = [dict(row) for row in cursor.fetchall()]
+                # --- MCP Protocol Endpoints ---
+                elif path == "/api/mcp/tools":
+                    # Returns List of JSON Schemas for all registered skills
+                    schemas = mcp_registry.get_all_schemas()
+                    response_obj.payload = {"tools": schemas}
+                else:
+                    response_obj.status = "error"
+                    response_obj.message = "Invalid endpoint"
+                    logger.warning(f"API Invalid Endpoint Hit: {path}")
+
+            elif method == "POST":
+                if path == "/api/mcp/invoke":
+                    if not body:
+                        raise ValueError("Empty request body")
+                    payload = json.loads(body.decode('utf-8'))
+                    name = payload.get("name")
+                    arguments = payload.get("arguments", {})
+
+                    if not name:
+                        raise ValueError("Missing 'name' parameter in MCP invoke request")
+
+                    logger.info(f"MCP Invoking Skill: {name} with args: {arguments}")
+                    result = mcp_registry.invoke(name, arguments)
+                    response_obj.payload = result
+                else:
+                    response_obj.status = "error"
+                    response_obj.message = "Invalid POST endpoint"
+                    logger.warning(f"API Invalid POST Endpoint Hit: {path}")
+
         except Exception as e:
             logger.error(f"API Exception at {path}", exc_info=True)
             response_obj.status = "error"

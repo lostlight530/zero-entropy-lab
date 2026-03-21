@@ -174,7 +174,7 @@ nav {
 #nexus-terminal {
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
+  left: 2rem;
   width: 400px;
   max-width: calc(100vw - 4rem);
   height: 350px;
@@ -293,7 +293,7 @@ nav {
   .nav-links { display: none; }
   #nexus-terminal {
     bottom: 1rem;
-    right: 1rem;
+    left: 1rem;
     width: calc(100vw - 2rem);
     height: 300px;
   }
