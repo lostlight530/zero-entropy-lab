@@ -3,6 +3,9 @@ from pathlib import Path
 import os
 import subprocess
 
+# Initialize kernel imports for all tests
+sys.path.append(str(Path(__file__).parent.parent / "src" / "kernel"))
+
 def run_all():
     print("🧬 NEXUS: Running Foundation Verification...")
     
