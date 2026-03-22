@@ -1235,3 +1235,95 @@
 {"id": "func_execute", "type": "code_function", "name": "execute", "desc": "Execute a search query against the Cortex database.\n\nArgs:\n    query (str): The term or concept to s"}
 {"id": "func_execute", "type": "code_function", "name": "execute", "desc": "Execute an addition of an entity to the Cortex database.\n\nArgs:\n    id (str): Unique identifier for "}
 {"id": "func_execute", "type": "code_function", "name": "execute", "desc": "Execute the creation of a relation between nodes.\n\nArgs:\n    source_id (str): ID of the source entit"}
+{"id": "func_setUpClass", "type": "code_function", "name": "setUpClass", "desc": "Python Function"}
+{"id": "func_tearDownClass", "type": "code_function", "name": "tearDownClass", "desc": "Python Function"}
+{"id": "func_test_mcp_tools_discovery", "type": "code_function", "name": "test_mcp_tools_discovery", "desc": "Python Function"}
+{"id": "func_test_mcp_invoke_success", "type": "code_function", "name": "test_mcp_invoke_success", "desc": "Python Function"}
+{"id": "func_test_mcp_invoke_missing_tool", "type": "code_function", "name": "test_mcp_invoke_missing_tool", "desc": "Python Function"}
+{"id": "func_run_all", "type": "code_function", "name": "run_all", "desc": "Python Function"}
+{"id": "func_test_validate_category_success", "type": "code_function", "name": "test_validate_category_success", "desc": "验证有效类别不会抛出异常"}
+{"id": "func_test_validate_category_failure", "type": "code_function", "name": "test_validate_category_failure", "desc": "验证无效类别会抛出 ValueError"}
+{"id": "func_test_validate_category_edge_cases", "type": "code_function", "name": "test_validate_category_edge_cases", "desc": "验证边缘情况（空字符串、空格、大小写等）"}
+{"id": "func_setUp", "type": "code_function", "name": "setUp", "desc": "Python Function"}
+{"id": "func_tearDown", "type": "code_function", "name": "tearDown", "desc": "Python Function"}
+{"id": "func_test_knowledge_graph", "type": "code_function", "name": "test_knowledge_graph", "desc": "测试知识图谱的基本读写与联想"}
+{"id": "func_setUpClass", "type": "code_function", "name": "setUpClass", "desc": "启动后台服务器进程进行集成测试"}
+{"id": "func_tearDownClass", "type": "code_function", "name": "tearDownClass", "desc": "Python Function"}
+{"id": "func_test_api_status", "type": "code_function", "name": "test_api_status", "desc": "测试 /api/status 接口契约验证"}
+{"id": "func_test_api_invalid_endpoint", "type": "code_function", "name": "test_api_invalid_endpoint", "desc": "测试未知 API 接口契约返回"}
+{"id": "func_test_static_serve", "type": "code_function", "name": "test_static_serve", "desc": "测试静态资源加载"}
+{"id": "func_setup_logger", "type": "code_function", "name": "setup_logger", "desc": "Sets up a logger with a standard stream handler and a JSON formatter."}
+{"id": "func_format", "type": "code_function", "name": "format", "desc": "Python Function"}
+{"id": "func_main", "type": "code_function", "name": "main", "desc": "Python Function"}
+{"id": "func___init__", "type": "code_function", "name": "__init__", "desc": "Python Function"}
+{"id": "func__check_auth", "type": "code_function", "name": "_check_auth", "desc": "Python Function"}
+{"id": "func_do_GET", "type": "code_function", "name": "do_GET", "desc": "Python Function"}
+{"id": "func_do_POST", "type": "code_function", "name": "do_POST", "desc": "Python Function"}
+{"id": "func_handle_api", "type": "code_function", "name": "handle_api", "desc": "Python Function"}
+{"id": "func___init__", "type": "code_function", "name": "__init__", "desc": "Python Function"}
+{"id": "func_add_entity", "type": "code_function", "name": "add_entity", "desc": "Adds a new entity to the knowledge graph.\n向知识图谱添加新实体。"}
+{"id": "func_touch_entity", "type": "code_function", "name": "touch_entity", "desc": "Legacy touch. Now routes to activate_memory."}
+{"id": "func_activate_memory", "type": "code_function", "name": "activate_memory", "desc": "Neural Upgrade: Activates a memory, increasing its weight and updating the timestamp.\n神经升级：激活记忆，增加权重"}
+{"id": "func_add_relation", "type": "code_function", "name": "add_relation", "desc": "Adds a new relation to the knowledge graph."}
+{"id": "func__append_line", "type": "code_function", "name": "_append_line", "desc": "Python Function"}
+{"id": "func_test_mcp_server", "type": "code_function", "name": "test_mcp_server", "desc": "Python Function"}
+{"id": "func___init__", "type": "code_function", "name": "__init__", "desc": "Python Function"}
+{"id": "func_ponder", "type": "code_function", "name": "ponder", "desc": "Cognitive Loop: Structural Analysis, Self-Reflection & Curiosity"}
+{"id": "func__self_reflect", "type": "code_function", "name": "_self_reflect", "desc": "Generate a diary-like self summary based on graph metrics."}
+{"id": "func__generate_curiosity", "type": "code_function", "name": "_generate_curiosity", "desc": "Find nodes with exactly 1 edge (Superficial Knowledge)"}
+{"id": "func__query", "type": "code_function", "name": "_query", "desc": "Python Function"}
+{"id": "func_cosine_similarity", "type": "code_function", "name": "cosine_similarity", "desc": "Calculates cosine similarity between two strings using Counter.\nFast enough for small candidate pool"}
+{"id": "func_rerank_and_fuse", "type": "code_function", "name": "rerank_and_fuse", "desc": "Fuses FTS5 BM25 score, biological weight, and Cosine Similarity."}
+{"id": "func___init__", "type": "code_function", "name": "__init__", "desc": "Python Function"}
+{"id": "func_handle_request", "type": "code_function", "name": "handle_request", "desc": "Handles JSON-RPC 2.0 requests."}
+{"id": "func_run", "type": "code_function", "name": "run", "desc": "Main loop reading from Stdin."}
+{"id": "func___init__", "type": "code_function", "name": "__init__", "desc": "Python Function"}
+{"id": "func__load_config", "type": "code_function", "name": "_load_config", "desc": "Python Function"}
+{"id": "func_ingest_repository", "type": "code_function", "name": "ingest_repository", "desc": "[Omniscience Protocol] Deep scan of the codebase."}
+{"id": "func__digest_file", "type": "code_function", "name": "_digest_file", "desc": "Python Function"}
+{"id": "func__analyze_python_ast", "type": "code_function", "name": "_analyze_python_ast", "desc": "Use Python's native AST to understand code structure."}
+{"id": "func__analyze_markdown_structure", "type": "code_function", "name": "_analyze_markdown_structure", "desc": "Extract headers as knowledge nodes."}
+{"id": "func_learn", "type": "code_function", "name": "learn", "desc": "Legacy single file learning (kept for compatibility)"}
+{"id": "func___init__", "type": "code_function", "name": "__init__", "desc": "Python Function"}
+{"id": "func__init_db", "type": "code_function", "name": "_init_db", "desc": "Python Function"}
+{"id": "func__log_to_jsonl", "type": "code_function", "name": "_log_to_jsonl", "desc": "Append knowledge to the immutable text ledger."}
+{"id": "func_search", "type": "code_function", "name": "search", "desc": "Synaptic Search: Zero-Entropy 2-Stage Retrieval (FTS5 BM25 + Python Reranking)"}
+{"id": "func_add_entity", "type": "code_function", "name": "add_entity", "desc": "Python Function"}
+{"id": "func_add_entities_batch", "type": "code_function", "name": "add_entities_batch", "desc": "Python Function"}
+{"id": "func_connect_entities", "type": "code_function", "name": "connect_entities", "desc": "Python Function"}
+{"id": "func_connect_entities_batch", "type": "code_function", "name": "connect_entities_batch", "desc": "Python Function"}
+{"id": "func_activate_memory", "type": "code_function", "name": "activate_memory", "desc": "Python Function"}
+{"id": "func_decay_memories", "type": "code_function", "name": "decay_memories", "desc": "Biological Decay with Sovereignty Protection"}
+{"id": "func_get_orphans", "type": "code_function", "name": "get_orphans", "desc": "Python Function"}
+{"id": "func_get_stats", "type": "code_function", "name": "get_stats", "desc": "Python Function"}
+{"id": "func_log_event", "type": "code_function", "name": "log_event", "desc": "Python Function"}
+{"id": "func_vacuum", "type": "code_function", "name": "vacuum", "desc": "[Refinement] Purge orphans and compact memory space."}
+{"id": "func___init__", "type": "code_function", "name": "__init__", "desc": "Python Function"}
+{"id": "func_run_daily_cycle", "type": "code_function", "name": "run_daily_cycle", "desc": "Python Function"}
+{"id": "func__incubate_ideas", "type": "code_function", "name": "_incubate_ideas", "desc": "Python Function"}
+{"id": "func__generate_cognitive_report", "type": "code_function", "name": "_generate_cognitive_report", "desc": "Python Function"}
+{"id": "func__scan_inputs", "type": "code_function", "name": "_scan_inputs", "desc": "Python Function"}
+{"id": "func__archive_inputs", "type": "code_function", "name": "_archive_inputs", "desc": "Python Function"}
+{"id": "func__analyze_file_content", "type": "code_function", "name": "_analyze_file_content", "desc": "Extract tags from Harvester's analysis block in the MD file."}
+{"id": "func__generate_mission", "type": "code_function", "name": "_generate_mission", "desc": "Python Function"}
+{"id": "func_validate_id", "type": "code_function", "name": "validate_id", "desc": "Enforces strict ID format to prevent path traversal.\n强制执行严格的 ID 格式以防止路径遍历。"}
+{"id": "func_validate_category", "type": "code_function", "name": "validate_category", "desc": "Enforces category whitelist to prevent arbitrary file writes.\n强制执行类别白名单以防止任意文件写入。"}
+{"id": "func_get_entropy_stats", "type": "code_function", "name": "get_entropy_stats", "desc": "Returns the current entropy report of the knowledge graph.\n返回知识图谱的当前熵值报告。"}
+{"id": "func_get_entropy_report", "type": "code_function", "name": "get_entropy_report", "desc": "Triggers an immediate analysis of the knowledge graph.\n触发对知识图谱的即时分析。"}
+{"id": "func_get_current_time", "type": "code_function", "name": "get_current_time", "desc": "Returns the current time in the specified timezone (default: UTC).\nFormat: ISO 8601 (YYYY-MM-DDTHH:M"}
+{"id": "func_add_entity", "type": "code_function", "name": "add_entity", "desc": "Safely adds a new entity to the knowledge graph.\nStrictly Append-Only: Fails if ID already exists.\n安"}
+{"id": "func_connect_entities", "type": "code_function", "name": "connect_entities", "desc": "Connects two existing entities.\nFails if either entity does not exist.\n连接两个现有实体。如果任一实体不存在则失败。"}
+{"id": "func___init__", "type": "code_function", "name": "__init__", "desc": "Python Function"}
+{"id": "func__load_state", "type": "code_function", "name": "_load_state", "desc": "Python Function"}
+{"id": "func__save_state", "type": "code_function", "name": "_save_state", "desc": "Python Function"}
+{"id": "func__analyze_content", "type": "code_function", "name": "_analyze_content", "desc": "Architect's Filters: Semantic Tagging"}
+{"id": "func_fetch_github_data", "type": "code_function", "name": "fetch_github_data", "desc": "Python Function"}
+{"id": "func_get_mcp_tool_schema", "type": "code_function", "name": "get_mcp_tool_schema", "desc": "核心魔法：利用 Python 原生 inspect 和 typing 提取方法签名，纯手工拼接 JSON Schema。"}
+{"id": "func_execute", "type": "code_function", "name": "execute", "desc": "子类必须实现此方法。\n返回值必须是可以被 json.dumps 序列化的字典。"}
+{"id": "func___init__", "type": "code_function", "name": "__init__", "desc": "Python Function"}
+{"id": "func_register", "type": "code_function", "name": "register", "desc": "Python Function"}
+{"id": "func_get_all_schemas", "type": "code_function", "name": "get_all_schemas", "desc": "Python Function"}
+{"id": "func_invoke", "type": "code_function", "name": "invoke", "desc": "Python Function"}
+{"id": "func_execute", "type": "code_function", "name": "execute", "desc": "Execute a search query against the Cortex database.\n\nArgs:\n    query (str): The term or concept to s"}
+{"id": "func_execute", "type": "code_function", "name": "execute", "desc": "Execute an addition of an entity to the Cortex database.\n\nArgs:\n    id (str): Unique identifier for "}
+{"id": "func_execute", "type": "code_function", "name": "execute", "desc": "Execute the creation of a relation between nodes.\n\nArgs:\n    source_id (str): ID of the source entit"}
