@@ -170,3 +170,62 @@ class CortexSearchSkill(BaseSkill):
 
 # Automatically register the bullseye skill
 registry.register(CortexSearchSkill)
+
+class CortexMemorizeSkill(BaseSkill):
+    """
+    Memorize a new core concept or entity into the Nexus Cortex graph database.
+    """
+    name = "cortex_memorize"
+    description = "Memorize a new core concept or entity into the Nexus Cortex graph database."
+
+    def execute(self, id: str, name: str, desc: str, type_slug: str = "concept") -> Dict[str, Any]:
+        """
+        Execute an addition of an entity to the Cortex database.
+
+        Args:
+            id (str): Unique identifier for the entity (e.g., 'concept_singularity').
+            name (str): Human-readable name of the entity.
+            desc (str): Detailed description or definition.
+            type_slug (str, optional): Type categorization. Defaults to "concept".
+
+        Returns:
+            Dict[str, Any]: Confirmation of insertion.
+        """
+        cortex = Cortex()
+        try:
+            cortex.add_entity(id=id, type_slug=type_slug, name=name, desc=desc, save_to_disk=True)
+            return {"status": "success", "message": f"Memorized entity '{name}' ({id})."}
+        except Exception as e:
+            return {"status": "error", "message": str(e)}
+
+registry.register(CortexMemorizeSkill)
+
+
+class CortexSynapseSkill(BaseSkill):
+    """
+    Create a synaptic connection (relation) between two existing entities in the Nexus Cortex.
+    """
+    name = "cortex_synapse"
+    description = "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."
+
+    def execute(self, source_id: str, relation: str, target_id: str, desc: str = "") -> Dict[str, Any]:
+        """
+        Execute the creation of a relation between nodes.
+
+        Args:
+            source_id (str): ID of the source entity.
+            relation (str): The verb or type of relation (e.g., 'depends_on', 'defines').
+            target_id (str): ID of the target entity.
+            desc (str, optional): Optional description of the synapse.
+
+        Returns:
+            Dict[str, Any]: Confirmation of connection.
+        """
+        cortex = Cortex()
+        try:
+            cortex.connect_entities(source=source_id, relation=relation, target=target_id, desc=desc, save_to_disk=True)
+            return {"status": "success", "message": f"Connected '{source_id}' --[{relation}]--> '{target_id}'."}
+        except Exception as e:
+            return {"status": "error", "message": str(e)}
+
+registry.register(CortexSynapseSkill)

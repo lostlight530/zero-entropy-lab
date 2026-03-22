@@ -106,13 +106,33 @@ class Scholar:
                 # Classes
                 if isinstance(node, ast.ClassDef):
                     class_id = f"class_{node.name}"
+
+                    # Detect Decorators (e.g. @dataclass)
+                    is_dataclass = False
+                    for decorator in node.decorator_list:
+                        if isinstance(decorator, ast.Name) and decorator.id == "dataclass":
+                            is_dataclass = True
+                        elif isinstance(decorator, ast.Call) and isinstance(decorator.func, ast.Name) and decorator.func.id == "dataclass":
+                            is_dataclass = True
+
                     desc = ast.get_docstring(node) or "Python Class"
+                    if is_dataclass:
+                        desc = f"[DataClass] {desc}"
+
                     self.cortex.add_entity(class_id, "code_class", node.name, desc[:100], save_to_disk=True)
                     self.cortex.connect_entities(file_id, "defines", class_id, save_to_disk=True)
+
+                    if is_dataclass:
+                        self.cortex.activate_memory(class_id, boost=0.5)
+
                     # Inheritance
                     for base in node.bases:
                         if isinstance(base, ast.Name):
                             self.cortex.connect_entities(class_id, "inherits_from", f"class_{base.id}", save_to_disk=True)
+                        elif isinstance(base, ast.Attribute):
+                            # e.g., inherits from http.server.SimpleHTTPRequestHandler
+                            parent_name = f"{base.value.id}.{base.attr}" if isinstance(base.value, ast.Name) else base.attr
+                            self.cortex.connect_entities(class_id, "inherits_from", f"class_{parent_name}", save_to_disk=True)
 
                 # Functions
                 elif isinstance(node, ast.FunctionDef):

@@ -44,7 +44,33 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
         # src/kernel/nexus.py -> parents[2] is root
         self.project_root = Path(__file__).resolve().parents[2]
         self.cortex = Cortex()
+
+        # Load API Config
+        self.api_key = os.environ.get("NEXUS_API_KEY")
+        self.allowed_origins = ["http://localhost:8000", "http://127.0.0.1:8000"]
+
+        config_path = self.project_root / "data" / "brain_config.json"
+        if config_path.exists():
+            try:
+                with open(config_path, "r", encoding="utf-8") as f:
+                    config = json.load(f)
+                    if "api_key" in config:
+                        self.api_key = config["api_key"]
+                    if "allowed_origins" in config:
+                        self.allowed_origins = config["allowed_origins"]
+            except Exception as e:
+                logger.warning(f"Failed to load brain_config.json for auth: {e}")
+
         super().__init__(*args, **kwargs)
+
+    def _check_auth(self) -> bool:
+        if not self.api_key:
+            return True # Open if no key configured
+        auth_header = self.headers.get("Authorization")
+        if not auth_header or not auth_header.startswith("Bearer "):
+            return False
+        token = auth_header.split(" ")[1]
+        return token == self.api_key
 
     def do_GET(self):
         parsed_url = urlparse(self.path)
@@ -71,10 +97,24 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
             self.send_error(405, "Method Not Allowed")
 
     def handle_api(self, path, query, method="GET", body=b''):
+        # Authenticate all API routes
+        if not self._check_auth():
+            self.send_response(401)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps({"status": "error", "message": "Unauthorized"}).encode('utf-8'))
+            return
+
         params = parse_qs(query)
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
-        self.send_header('Access-Control-Allow-Origin', '*')
+
+        # CORS Handling
+        origin = self.headers.get('Origin')
+        if origin and (origin in self.allowed_origins or '*' in self.allowed_origins):
+            self.send_header('Access-Control-Allow-Origin', origin)
+        self.send_header('Vary', 'Origin')
+
         self.end_headers()
 
         response_obj = APIResponse(status="ok", payload={})
