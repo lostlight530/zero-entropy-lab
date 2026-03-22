@@ -1,5 +1,5 @@
 # 🛡️ NEXUS CORTEX: Architect's Daily Brief
-> **Date**: 2026-03-22 | **Entropy**: 13.9021
+> **Date**: 2026-03-22 | **Entropy**: 16.1826
 
 ## 🚨 昨夜今晨 (System Health)
 - **Status**: 🟢 **ONLINE**
@@ -12,8 +12,8 @@
 - [ ] Block 2 hours.
 
 ## 🔍 待处理熵值 (Entropy Targets)
-- **index.html** (file_index_html): Weight 6.57
-- **LICENSE** (file_LICENSE): Weight 6.57
-- **nexus-life-cycle.yml** (file__github_workflows_nexus-life-cycle_yml): Weight 6.57
-- **deploy.yml** (file__github_workflows_deploy_yml): Weight 6.57
-- **custom.md** (file__github_ISSUE_TEMPLATE_custom_md): Weight 6.57
+- **index.html** (file_index_html): Weight 7.58
+- **LICENSE** (file_LICENSE): Weight 7.58
+- **nexus-life-cycle.yml** (file__github_workflows_nexus-life-cycle_yml): Weight 7.58
+- **deploy.yml** (file__github_workflows_deploy_yml): Weight 7.58
+- **custom.md** (file__github_ISSUE_TEMPLATE_custom_md): Weight 7.58
