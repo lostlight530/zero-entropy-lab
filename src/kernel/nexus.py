@@ -40,52 +40,48 @@ class APIResponse:
     payload: Any = None
     message: Optional[str] = None
 
-# 1. 无锁的智能体蜂群并发网关 (Lock-free Agent Swarm Concurrent Gateway)
+# 并发服务基类 (Concurrent Gateway Configuration)
 class ThreadedNexusServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
-    """原生零依赖多线程承载，支持多个大模型 Agent 同时接入 MCP 协议 (Native zero-dependency multithreading support for multiple concurrent LLM Agents via MCP)"""
+    """原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"""
     daemon_threads = True
     allow_reuse_address = True
 
-# 2. 事件驱动的潜意识流 (Event-Driven Subconscious Stream)
+# 事件驱动后台队列 (Event-Driven Background Task Stream)
 consciousness_stream = queue.Queue()
 
 class SubconsciousThread(threading.Thread):
     """
-    系统的后台潜意识引擎。(The background subconscious engine of the system.)
-    当 API 端口长时间没有大模型调用时，系统会自动进入 '做梦' 状态，开始进行碎片整理与图谱演算。
-    (When the API port is idle for a long time, the system enters a 'dreaming' state to defragment and calculate graph associations.)
+    后台数据处理线程。(Background data processing engine.)
+    在 API 闲置时，处理图谱索引关联。(Handles graph indexing and association generation during API idle periods.)
     """
     def __init__(self):
         super().__init__(daemon=True)
         self.is_dreaming = False
 
     def run(self):
-        logger.info("🧠 Subconscious Thread Activated. Waiting for quiet cycles...")
+        logger.info("Background processing thread activated. Waiting for idle cycles...")
         while True:
             try:
-                # 监听前台神经刺激。如果 60 秒内没有任何 API 请求，抛出 Empty 异常进入梦境。
-                # (Listen for foreground neural stimuli. If no API request within 60s, throw Empty exception and enter dream state.)
+                # 监听前台事件中断。闲置 60 秒后触发后台运算。(Listen for foreground events. Trigger background task after 60s idle.)
                 event = consciousness_stream.get(timeout=60.0)
-                # 如果收到刺激，打断梦境，让出 CPU 给前台 API
-                # (If stimulus received, interrupt the dream and yield CPU to foreground API)
                 if self.is_dreaming:
-                    logger.info("⚡ External Stimulus detected. Waking up from dream.")
+                    logger.info("Foreground request detected. Pausing background tasks.")
                     self.is_dreaming = False
             except queue.Empty:
                 if not self.is_dreaming:
                     self.is_dreaming = True
-                    logger.info("🌙 Entering REM Sleep. Background associative reasoning started...")
+                    logger.info("System idle. Starting background graph associative reasoning...")
                     try:
-                        # 延迟加载，防止循环依赖 (Lazy load to prevent circular dependency)
+                        # 延迟加载防止循环依赖 (Lazy load to prevent circular dependencies)
                         from reason import ReasoningEngine
                         engine = ReasoningEngine()
                         insights = engine.ponder()
                         if insights:
-                            logger.info(f"✨ Epiphany during sleep: Extracted {len(insights)} latent insights.")
+                            logger.info(f"Graph associations generated: Processed {len(insights)} insights.")
                     except Exception as e:
-                        logger.error(f"Dream interrupted by cognitive fault: {e}")
+                        logger.error(f"Background task interrupted by error: {e}")
 
-# 3. 拦截请求并注入潜意识 (Intercept requests and inject into subconscious)
+# HTTP 拦截处理器 (HTTP Request Handler)
 class NexusHandler(http.server.SimpleHTTPRequestHandler):
     """Native API & Static File Router"""
     def __init__(self, *args, **kwargs):
@@ -146,8 +142,8 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
             self.send_error(405, "Method Not Allowed")
 
     def handle_api(self, path, query, method="GET", body=b''):
-        # 每次收到大模型的 MCP 请求，就向潜意识队列发送一个电信号，重置休眠倒计时
-        # (Inject an electrical signal into the subconscious queue on every MCP request to reset sleep timer)
+        # 触发队列中断电信号以重置后台定时器
+        # (Inject event into queue to reset background idle timer)
         consciousness_stream.put("STIMULUS")
 
         # Authenticate all API routes
@@ -273,14 +269,14 @@ def main():
 
     if args.command == 'serve':
         PORT = 8000
-        logger.info(f"🚀 NEXUS CORE V2: Launching Swarm Portal at http://localhost:{PORT}")
+        logger.info(f"🚀 NEXUS CORE V2: Launching Service at http://localhost:{PORT}")
         logger.info(f"📍 Serving Root: {Path(__file__).parent.parent.parent}")
         
-        # 唤醒后台潜意识 (Wake up the background subconscious)
+        # 启动后台事件监听线程 (Start background event listener thread)
         subconscious = SubconsciousThread()
         subconscious.start()
 
-        # 挂载多线程并发网关 (Mount the multithreaded concurrent gateway)
+        # 挂载多线程 HTTP 网关 (Mount multithreaded HTTP gateway)
         with ThreadedNexusServer(("", PORT), NexusHandler) as httpd:
             try:
                 httpd.serve_forever()

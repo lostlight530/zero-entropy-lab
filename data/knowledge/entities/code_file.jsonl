@@ -392,6 +392,9 @@
 {"id": "file_tests_test_mcp_demo_py", "type": "code_file", "name": "test_mcp_demo.py", "desc": "Source file at: tests/test_mcp_demo.py"}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 {"id": "file_SECURITY_md", "type": "code_file", "name": "SECURITY.md", "desc": "Source file at: SECURITY.md"}
 {"id": "file_index_html", "type": "code_file", "name": "index.html", "desc": "Source file at: index.html"}
 {"id": "file_README_md", "type": "code_file", "name": "README.md", "desc": "Source file at: README.md"}
@@ -520,6 +523,7 @@
 {"id": "file_src_assets_background_png", "type": "code_file", "name": "background.png", "desc": "Source file at: src/assets/background.png"}
 {"id": "file_src_scripts_translations_js", "type": "code_file", "name": "translations.js", "desc": "Source file at: src/scripts/translations.js"}
 {"id": "file_src_styles_main_css", "type": "code_file", "name": "main.css", "desc": "Source file at: src/styles/main.css"}
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 6e293a8 (refactor: sync and finalize Nexus Core V2 Singularity state)
@@ -626,3 +630,5 @@
 {"id": "file_src_assets_background_png", "type": "code_file", "name": "background.png", "desc": "Source file at: src/assets/background.png"}
 {"id": "file_src_scripts_translations_js", "type": "code_file", "name": "translations.js", "desc": "Source file at: src/scripts/translations.js"}
 {"id": "file_src_styles_main_css", "type": "code_file", "name": "main.css", "desc": "Source file at: src/styles/main.css"}
+=======
+>>>>>>> origin/main

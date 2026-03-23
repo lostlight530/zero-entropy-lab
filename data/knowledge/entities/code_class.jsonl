@@ -186,6 +186,7 @@
 {"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
 {"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 {"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
 {"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
 {"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
@@ -214,6 +215,8 @@
 {"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
 {"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 {"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
 {"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
 {"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
@@ -274,6 +277,7 @@
 {"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
 {"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
 {"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
+<<<<<<< HEAD
 =======
 {"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
 {"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
@@ -289,12 +293,15 @@
 <<<<<<< HEAD
 >>>>>>> a9bc0f2 (refactor: upgrade to Nexus Core V2 Singularity with immune system and threaded gateway)
 =======
+=======
+>>>>>>> origin/main
 {"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
 {"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
 {"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
 {"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
 {"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
 {"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+<<<<<<< HEAD
 {"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生零依赖多线程承载，支持多个大模型 Agent 同时接入 MCP 协议 (Native zero-dependency multithreading support for multiple con"}
 {"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "系统的后台潜意识引擎。(The background subconscious engine of the system.)\n当 API 端口长时间没有大模型调用时，系统会自动进入 '做梦' 状态，开"}
 {"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
@@ -322,6 +329,8 @@
 {"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
 {"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生零依赖多线程承载，支持多个大模型 Agent 同时接入 MCP 协议 (Native zero-dependency multithreading support for multiple con"}
 {"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "系统的后台潜意识引擎。(The background subconscious engine of the system.)\n当 API 端口长时间没有大模型调用时，系统会自动进入 '做梦' 状态，开"}
+=======
+>>>>>>> origin/main
 {"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
 {"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
 {"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}

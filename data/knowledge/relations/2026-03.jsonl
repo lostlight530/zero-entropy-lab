@@ -1497,6 +1497,9 @@
 {"src": "file_README_md", "relation": "documents", "dst": "concept_verification_tests", "desc": ""}
 {"src": "file_README_md", "relation": "documents", "dst": "concept_why_zeroentropy", "desc": ""}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 {"src": "file_tests_test_mcp_zero_py", "relation": "defines", "dst": "class_TestMCPZeroProtocol", "desc": ""}
 {"src": "class_TestMCPZeroProtocol", "relation": "inherits_from", "dst": "class_unittest.TestCase", "desc": ""}
 {"src": "file_tests_test_mcp_zero_py", "relation": "defines", "dst": "func_setUpClass", "desc": ""}
@@ -1587,8 +1590,11 @@
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func_get_stats", "desc": ""}
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func_log_event", "desc": ""}
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func_vacuum", "desc": ""}
+<<<<<<< HEAD
 =======
 >>>>>>> a9bc0f2 (refactor: upgrade to Nexus Core V2 Singularity with immune system and threaded gateway)
+=======
+>>>>>>> origin/main
 {"src": "file_src_kernel_evolution_py", "relation": "defines", "dst": "class_Evolver", "desc": ""}
 {"src": "file_src_kernel_evolution_py", "relation": "defines", "dst": "func___init__", "desc": ""}
 {"src": "file_src_kernel_evolution_py", "relation": "defines", "dst": "func_run_daily_cycle", "desc": ""}
@@ -1599,6 +1605,9 @@
 {"src": "file_src_kernel_evolution_py", "relation": "defines", "dst": "func__analyze_file_content", "desc": ""}
 {"src": "file_src_kernel_evolution_py", "relation": "defines", "dst": "func__generate_mission", "desc": ""}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 {"src": "file_src_kernel_mcp_demo_py", "relation": "defines", "dst": "func_validate_id", "desc": ""}
 {"src": "file_src_kernel_mcp_demo_py", "relation": "defines", "dst": "func_validate_category", "desc": ""}
 {"src": "file_src_kernel_mcp_demo_py", "relation": "defines", "dst": "func_get_entropy_stats", "desc": ""}
@@ -1612,6 +1621,7 @@
 {"src": "file_src_kernel_harvester_py", "relation": "defines", "dst": "func__save_state", "desc": ""}
 {"src": "file_src_kernel_harvester_py", "relation": "defines", "dst": "func__analyze_content", "desc": ""}
 {"src": "file_src_kernel_harvester_py", "relation": "defines", "dst": "func_fetch_github_data", "desc": ""}
+<<<<<<< HEAD
 =======
 {"src": "file_src_kernel_logger_py", "relation": "defines", "dst": "class_JsonFormatter", "desc": ""}
 {"src": "class_JsonFormatter", "relation": "inherits_from", "dst": "class_logging.Formatter", "desc": ""}
@@ -1634,6 +1644,8 @@
 {"src": "file_src_kernel_reason_py", "relation": "defines", "dst": "func__generate_curiosity", "desc": ""}
 {"src": "file_src_kernel_reason_py", "relation": "defines", "dst": "func__query", "desc": ""}
 >>>>>>> a9bc0f2 (refactor: upgrade to Nexus Core V2 Singularity with immune system and threaded gateway)
+=======
+>>>>>>> origin/main
 {"src": "file_src_kernel_mcp_py", "relation": "defines", "dst": "class_BaseSkill", "desc": ""}
 {"src": "class_BaseSkill", "relation": "inherits_from", "dst": "class_ABC", "desc": ""}
 {"src": "file_src_kernel_mcp_py", "relation": "defines", "dst": "class_MCPRegistry", "desc": ""}
@@ -1653,6 +1665,9 @@
 {"src": "file_src_kernel_mcp_py", "relation": "defines", "dst": "func_execute", "desc": ""}
 {"src": "file_src_kernel_mcp_py", "relation": "defines", "dst": "func_execute", "desc": ""}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 {"src": "file_SECURITY_md", "relation": "documents", "dst": "concept_security_policy", "desc": ""}
 {"src": "file_SECURITY_md", "relation": "documents", "dst": "concept_supported_versions", "desc": ""}
 {"src": "file_SECURITY_md", "relation": "documents", "dst": "concept_reporting_a_vulnerability", "desc": ""}
@@ -1739,6 +1754,7 @@
 {"src": "file_src_kernel_scholar_py", "relation": "defines", "dst": "func__analyze_python_ast", "desc": ""}
 {"src": "file_src_kernel_scholar_py", "relation": "defines", "dst": "func__analyze_markdown_structure", "desc": ""}
 {"src": "file_src_kernel_scholar_py", "relation": "defines", "dst": "func_learn", "desc": ""}
+<<<<<<< HEAD
 =======
 {"src": "file_src_kernel_test_mcp_py", "relation": "defines", "dst": "func_test_mcp_server", "desc": ""}
 {"src": "file_src_kernel_harvester_py", "relation": "defines", "dst": "class_Harvester", "desc": ""}
@@ -1903,6 +1919,8 @@
 {"src": "file_src_kernel_scholar_py", "relation": "defines", "dst": "func__analyze_markdown_structure", "desc": ""}
 {"src": "file_src_kernel_scholar_py", "relation": "defines", "dst": "func_learn", "desc": ""}
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "class_Cortex", "desc": ""}
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func___init__", "desc": ""}
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func__init_db", "desc": ""}
@@ -1994,8 +2012,11 @@
 {"src": "file_tests_test_server_py", "relation": "defines", "dst": "func_test_api_status", "desc": ""}
 {"src": "file_tests_test_server_py", "relation": "defines", "dst": "func_test_api_invalid_endpoint", "desc": ""}
 {"src": "file_tests_test_server_py", "relation": "defines", "dst": "func_test_static_serve", "desc": ""}
+<<<<<<< HEAD
 =======
 >>>>>>> a9bc0f2 (refactor: upgrade to Nexus Core V2 Singularity with immune system and threaded gateway)
+=======
+>>>>>>> origin/main
 {"src": "file__specify_memory_constitution_md", "relation": "documents", "dst": "concept_zeroentropy_lab__constitution", "desc": ""}
 {"src": "file__specify_memory_constitution_md", "relation": "documents", "dst": "concept_0_核心愿景_vision", "desc": ""}
 {"src": "file__specify_memory_constitution_md", "relation": "documents", "dst": "concept_1_物理架构_topological_rules", "desc": ""}
@@ -2005,6 +2026,9 @@
 {"src": "file__specify_memory_constitution_md", "relation": "documents", "dst": "concept_23_公开透明_public_transparency", "desc": ""}
 {"src": "file__specify_memory_constitution_md", "relation": "documents", "dst": "concept_3_协作准则_collaboration", "desc": ""}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 {"src": "file_src_kernel_logger_py", "relation": "defines", "dst": "class_JsonFormatter", "desc": ""}
 {"src": "class_JsonFormatter", "relation": "inherits_from", "dst": "class_logging.Formatter", "desc": ""}
 {"src": "file_src_kernel_logger_py", "relation": "defines", "dst": "func_setup_logger", "desc": ""}
@@ -2102,6 +2126,7 @@
 {"src": "file_src_kernel_mcp_py", "relation": "defines", "dst": "func_execute", "desc": ""}
 {"src": "file_src_kernel_mcp_py", "relation": "defines", "dst": "func_execute", "desc": ""}
 {"src": "file_src_kernel_mcp_py", "relation": "defines", "dst": "func_execute", "desc": ""}
+<<<<<<< HEAD
 =======
 {"src": "file_tests_test_cortex_py", "relation": "defines", "dst": "class_TestCortex", "desc": ""}
 {"src": "class_TestCortex", "relation": "inherits_from", "dst": "class_unittest.TestCase", "desc": ""}
@@ -2144,6 +2169,19 @@
 {"src": "file_README_md", "relation": "documents", "dst": "concept_触发深度代码摄取_run_sensory_ingest", "desc": ""}
 {"src": "file_README_md", "relation": "documents", "dst": "concept_验证系统完备性_verification_tests", "desc": ""}
 {"src": "file_README_md", "relation": "documents", "dst": "concept_工程哲学_why_zeroentropy", "desc": ""}
+=======
+{"src": "file_SECURITY_md", "relation": "documents", "dst": "concept_security_policy", "desc": ""}
+{"src": "file_SECURITY_md", "relation": "documents", "dst": "concept_supported_versions", "desc": ""}
+{"src": "file_SECURITY_md", "relation": "documents", "dst": "concept_reporting_a_vulnerability", "desc": ""}
+{"src": "file_README_md", "relation": "documents", "dst": "concept_nexus_core_the_vanilla_singularity", "desc": ""}
+{"src": "file_README_md", "relation": "documents", "dst": "concept_the_constitution", "desc": ""}
+{"src": "file_README_md", "relation": "documents", "dst": "concept_architecture_matrix", "desc": ""}
+{"src": "file_README_md", "relation": "documents", "dst": "concept_execution_commands", "desc": ""}
+{"src": "file_README_md", "relation": "documents", "dst": "concept_launch_laboratory_web_portal", "desc": ""}
+{"src": "file_README_md", "relation": "documents", "dst": "concept_run_sensory_ingest_scan_codebase", "desc": ""}
+{"src": "file_README_md", "relation": "documents", "dst": "concept_verification_tests", "desc": ""}
+{"src": "file_README_md", "relation": "documents", "dst": "concept_why_zeroentropy", "desc": ""}
+>>>>>>> origin/main
 {"src": "file_tests_test_mcp_zero_py", "relation": "defines", "dst": "class_TestMCPZeroProtocol", "desc": ""}
 {"src": "class_TestMCPZeroProtocol", "relation": "inherits_from", "dst": "class_unittest.TestCase", "desc": ""}
 {"src": "file_tests_test_mcp_zero_py", "relation": "defines", "dst": "func_setUpClass", "desc": ""}
@@ -2182,17 +2220,23 @@
 {"src": "file_src_kernel_logger_py", "relation": "defines", "dst": "func_setup_logger", "desc": ""}
 {"src": "file_src_kernel_logger_py", "relation": "defines", "dst": "func_format", "desc": ""}
 {"src": "file_src_kernel_nexus_py", "relation": "defines", "dst": "class_APIResponse", "desc": ""}
+<<<<<<< HEAD
 {"src": "file_src_kernel_nexus_py", "relation": "defines", "dst": "class_ThreadedNexusServer", "desc": ""}
 {"src": "class_ThreadedNexusServer", "relation": "inherits_from", "dst": "class_socketserver.ThreadingMixIn", "desc": ""}
 {"src": "class_ThreadedNexusServer", "relation": "inherits_from", "dst": "class_socketserver.TCPServer", "desc": ""}
 {"src": "file_src_kernel_nexus_py", "relation": "defines", "dst": "class_SubconsciousThread", "desc": ""}
 {"src": "class_SubconsciousThread", "relation": "inherits_from", "dst": "class_threading.Thread", "desc": ""}
+=======
+>>>>>>> origin/main
 {"src": "file_src_kernel_nexus_py", "relation": "defines", "dst": "class_NexusHandler", "desc": ""}
 {"src": "class_NexusHandler", "relation": "inherits_from", "dst": "class_SimpleHTTPRequestHandler", "desc": ""}
 {"src": "file_src_kernel_nexus_py", "relation": "defines", "dst": "func_main", "desc": ""}
 {"src": "file_src_kernel_nexus_py", "relation": "defines", "dst": "func___init__", "desc": ""}
+<<<<<<< HEAD
 {"src": "file_src_kernel_nexus_py", "relation": "defines", "dst": "func_run", "desc": ""}
 {"src": "file_src_kernel_nexus_py", "relation": "defines", "dst": "func___init__", "desc": ""}
+=======
+>>>>>>> origin/main
 {"src": "file_src_kernel_nexus_py", "relation": "defines", "dst": "func__check_auth", "desc": ""}
 {"src": "file_src_kernel_nexus_py", "relation": "defines", "dst": "func_do_GET", "desc": ""}
 {"src": "file_src_kernel_nexus_py", "relation": "defines", "dst": "func_do_POST", "desc": ""}
@@ -2232,6 +2276,7 @@
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func__log_to_jsonl", "desc": ""}
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func_search", "desc": ""}
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func_add_entity", "desc": ""}
+<<<<<<< HEAD
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func__sign_memory", "desc": ""}
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func_verify_memory", "desc": ""}
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func_deep_synapse_scan", "desc": ""}
@@ -2390,6 +2435,8 @@
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func__sign_memory", "desc": ""}
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func_verify_memory", "desc": ""}
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func_deep_synapse_scan", "desc": ""}
+=======
+>>>>>>> origin/main
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func_add_entities_batch", "desc": ""}
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func_connect_entities", "desc": ""}
 {"src": "file_src_kernel_cortex_py", "relation": "defines", "dst": "func_connect_entities_batch", "desc": ""}
