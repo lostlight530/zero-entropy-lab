@@ -2,6 +2,9 @@ import sqlite3
 import json
 import time
 import datetime
+import hashlib
+import hmac
+import os
 from pathlib import Path
 from typing import List, Dict
 
@@ -32,10 +35,16 @@ class Cortex:
         (self.knowledge_path / "entities").mkdir(parents=True, exist_ok=True)
         (self.knowledge_path / "relations").mkdir(parents=True, exist_ok=True)
 
-        self.conn = sqlite3.connect(self.db_path)
-        self.conn.row_factory = sqlite3.Row
+        # 🛡️ [零熵防线] 记忆主权密钥 (数字免疫系统)
+        # 在物理隔离环境中，防止第三方进程或恶意脚本直接篡改 sqlite 数据库
+        self.secret_key = os.environ.get("NEXUS_SECRET_KEY", "absolute-zero-entropy-override").encode('utf-8')
 
-        # [Core Axioms] The Memory Whitelist
+        self.conn = sqlite3.connect(self.db_path, check_same_thread=False, timeout=15.0)
+        self.conn.row_factory = sqlite3.Row
+        # 开启 WAL 模式，配合多线程并发读写
+        self.conn.execute('PRAGMA journal_mode=WAL')
+
+        # [核心公理] 记忆白名单 (Core Axioms Memory Whitelist)
         # These concepts are "Axioms" - they define the system's identity.
         # They are immune to biological decay.
         self.CORE_WHITELIST = {
@@ -47,6 +56,7 @@ class Cortex:
 
     def _init_db(self):
         cursor = self.conn.cursor()
+        # 新增 signature 字段，用于 HMAC 防篡改校验
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS entities (
                 id TEXT PRIMARY KEY,
@@ -54,9 +64,16 @@ class Cortex:
                 name TEXT,
                 desc TEXT,
                 weight REAL DEFAULT 1.0,
-                last_activated REAL
+                last_activated REAL,
+                signature TEXT
             )
         ''')
+        # 自动 ALTER 兼容老版本数据库
+        try:
+            cursor.execute("ALTER TABLE entities ADD COLUMN signature TEXT")
+        except sqlite3.OperationalError:
+            pass # 字段已存在
+
         cursor.execute('''
             CREATE VIRTUAL TABLE IF NOT EXISTS entities_fts USING fts5(id, name, desc)
         ''')
@@ -165,6 +182,55 @@ class Cortex:
     def add_entity(self, id, type_slug, name, desc, save_to_disk=True):
         self.add_entities_batch([{"id": id, "type": type_slug, "name": name, "desc": desc}], save_to_disk=save_to_disk)
 
+    def _sign_memory(self, eid, etype, ename, edesc) -> str:
+        """生成不可伪造的 HMAC 记忆签名 (Generates an unforgeable HMAC memory signature)"""
+        # Ensure ename and edesc are strings to avoid encoding errors
+        ename_str = str(ename) if ename is not None else ""
+        edesc_str = str(edesc) if edesc is not None else ""
+        payload = f"{eid}|{etype}|{ename_str}|{edesc_str}".encode('utf-8')
+        return hmac.new(self.secret_key, payload, hashlib.sha256).hexdigest()
+
+    def verify_memory(self, eid: str) -> bool:
+        """免疫排异反应：检查记忆是否被底层物理篡改 (Immune rejection: Check if memory has been tampered with at the physical layer)"""
+        cursor = self.conn.cursor()
+        row = cursor.execute('SELECT type, name, desc, signature FROM entities WHERE id = ?', (eid,)).fetchone()
+        if not row: return False
+
+        # Backward compatibility for old records without signature
+        if row['signature'] is None:
+            return True
+
+        expected_sig = self._sign_memory(eid, row['type'], row['name'], row['desc'])
+        if not hmac.compare_digest(expected_sig, row['signature']):
+            logger.error(f"⚠️ [免疫警报] 节点 {eid} 物理签名不匹配！已被隔离。")
+            return False
+        return True
+
+    def deep_synapse_scan(self, start_id: str, max_depth: int = 3) -> List[Dict]:
+        """🧠 [核武器] 递归 CTE 深度图谱联想 (Recursive CTE Deep Graph Association)"""
+        sql = '''
+            WITH RECURSIVE
+              synaptic_path(id, path_weight, depth) AS (
+                -- 潜意识起点 (Subconscious starting point)
+                SELECT target, weight, 1 FROM relations WHERE source = ?
+                UNION ALL
+                -- N-Hop 深度辐射 (N-Hop deep radiation)
+                SELECT r.target, s.path_weight * r.weight, s.depth + 1
+                FROM relations r
+                JOIN synaptic_path s ON r.source = s.id
+                WHERE s.depth < ?
+              )
+            SELECT e.id, e.name, e.desc, MAX(sp.path_weight) as resonance, MIN(sp.depth) as depth
+            FROM synaptic_path sp
+            JOIN entities e ON sp.id = e.id
+            GROUP BY e.id
+            ORDER BY resonance DESC
+            LIMIT 15
+        '''
+        cursor = self.conn.cursor()
+        cursor.execute(sql, (start_id, max_depth))
+        return [dict(row) for row in cursor.fetchall()]
+
     def add_entities_batch(self, entities: List[Dict], save_to_disk=True):
         cursor = self.conn.cursor()
         now = time.time()
@@ -182,13 +248,16 @@ class Cortex:
                 ename = e.get('name')
                 edesc = e.get('desc', '')
                 w = 2.0 if eid in self.CORE_WHITELIST else 1.0
-                entity_data.append((eid, etype, ename, edesc, w, now))
+
+                # 写入时自动进行密码学签名
+                signature = self._sign_memory(eid, etype, ename, edesc)
+                entity_data.append((eid, etype, ename, edesc, w, now, signature))
                 fts_data.append((eid, ename, edesc))
 
             try:
                 # Use a subtransaction for the chunk
                 cursor.execute("SAVEPOINT chunk_insert")
-                cursor.executemany('INSERT INTO entities VALUES (?, ?, ?, ?, ?, ?)', entity_data)
+                cursor.executemany('INSERT INTO entities VALUES (?, ?, ?, ?, ?, ?, ?)', entity_data)
                 cursor.executemany('INSERT INTO entities_fts VALUES (?, ?, ?)', fts_data)
                 cursor.execute("RELEASE SAVEPOINT chunk_insert")
                 self.conn.commit()
@@ -198,8 +267,9 @@ class Cortex:
                 for e in chunk:
                     try:
                         w = 2.0 if e['id'] in self.CORE_WHITELIST else 1.0
-                        cursor.execute('INSERT INTO entities VALUES (?, ?, ?, ?, ?, ?)',
-                                     (e['id'], e.get('type','concept'), e.get('name'), e.get('desc',''), w, now))
+                        sig = self._sign_memory(e['id'], e.get('type','concept'), e.get('name'), e.get('desc',''))
+                        cursor.execute('INSERT INTO entities VALUES (?, ?, ?, ?, ?, ?, ?)',
+                                     (e['id'], e.get('type','concept'), e.get('name'), e.get('desc',''), w, now, sig))
                         cursor.execute('INSERT INTO entities_fts VALUES (?, ?, ?)', (e['id'], e.get('name'), e.get('desc','')))
                         self.conn.commit()
                     except sqlite3.IntegrityError:
