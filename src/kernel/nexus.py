@@ -5,6 +5,9 @@ import shutil
 import json
 import http.server
 import socketserver
+import threading
+import queue
+import time
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs
 
@@ -37,6 +40,48 @@ class APIResponse:
     payload: Any = None
     message: Optional[str] = None
 
+# 并发服务基类 (Concurrent Gateway Configuration)
+class ThreadedNexusServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
+    """原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"""
+    daemon_threads = True
+    allow_reuse_address = True
+
+# 事件驱动后台队列 (Event-Driven Background Task Stream)
+consciousness_stream = queue.Queue()
+
+class SubconsciousThread(threading.Thread):
+    """
+    后台数据处理线程。(Background data processing engine.)
+    在 API 闲置时，处理图谱索引关联。(Handles graph indexing and association generation during API idle periods.)
+    """
+    def __init__(self):
+        super().__init__(daemon=True)
+        self.is_dreaming = False
+
+    def run(self):
+        logger.info("Background processing thread activated. Waiting for idle cycles...")
+        while True:
+            try:
+                # 监听前台事件中断。闲置 60 秒后触发后台运算。(Listen for foreground events. Trigger background task after 60s idle.)
+                event = consciousness_stream.get(timeout=60.0)
+                if self.is_dreaming:
+                    logger.info("Foreground request detected. Pausing background tasks.")
+                    self.is_dreaming = False
+            except queue.Empty:
+                if not self.is_dreaming:
+                    self.is_dreaming = True
+                    logger.info("System idle. Starting background graph associative reasoning...")
+                    try:
+                        # 延迟加载防止循环依赖 (Lazy load to prevent circular dependencies)
+                        from reason import ReasoningEngine
+                        engine = ReasoningEngine()
+                        insights = engine.ponder()
+                        if insights:
+                            logger.info(f"Graph associations generated: Processed {len(insights)} insights.")
+                    except Exception as e:
+                        logger.error(f"Background task interrupted by error: {e}")
+
+# HTTP 拦截处理器 (HTTP Request Handler)
 class NexusHandler(http.server.SimpleHTTPRequestHandler):
     """Native API & Static File Router"""
     def __init__(self, *args, **kwargs):
@@ -97,6 +142,10 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
             self.send_error(405, "Method Not Allowed")
 
     def handle_api(self, path, query, method="GET", body=b''):
+        # 触发队列中断电信号以重置后台定时器
+        # (Inject event into queue to reset background idle timer)
+        consciousness_stream.put("STIMULUS")
+
         # Authenticate all API routes
         if not self._check_auth():
             self.send_response(401)
@@ -220,15 +269,19 @@ def main():
 
     if args.command == 'serve':
         PORT = 8000
-        logger.info(f"🚀 NEXUS CORE: Launching Portal at http://localhost:{PORT}")
+        logger.info(f"🚀 NEXUS CORE V2: Launching Service at http://localhost:{PORT}")
         logger.info(f"📍 Serving Root: {Path(__file__).parent.parent.parent}")
         
-        # Use a closure to pass base_path/project_root if needed, but NexusHandler handles it now
-        with socketserver.TCPServer(("", PORT), NexusHandler) as httpd:
+        # 启动后台事件监听线程 (Start background event listener thread)
+        subconscious = SubconsciousThread()
+        subconscious.start()
+
+        # 挂载多线程 HTTP 网关 (Mount multithreaded HTTP gateway)
+        with ThreadedNexusServer(("", PORT), NexusHandler) as httpd:
             try:
                 httpd.serve_forever()
             except KeyboardInterrupt:
-                logger.info("\n🛑 Server stopped.")
+                logger.info("\n🛑 System Halting...")
 
     elif args.command == 'clean':
         logger.info("🧹 Cleaning environment...")
