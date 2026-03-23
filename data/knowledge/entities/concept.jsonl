@@ -319,3 +319,22 @@
 {"id": "concept_22_极简工程_fundamentalist_engineering", "type": "concept", "name": "2.2 极简工程 (Fundamentalist Engineering)", "desc": "Section in constitution.md"}
 {"id": "concept_23_公开透明_public_transparency", "type": "concept", "name": "2.3 公开透明 (Public Transparency)", "desc": "Section in constitution.md"}
 {"id": "concept_3_协作准则_collaboration", "type": "concept", "name": "3. 协作准则 (Collaboration)", "desc": "Section in constitution.md"}
+{"id": "concept_security_policy", "type": "concept", "name": "Security Policy", "desc": "Section in SECURITY.md"}
+{"id": "concept_supported_versions", "type": "concept", "name": "Supported Versions", "desc": "Section in SECURITY.md"}
+{"id": "concept_reporting_a_vulnerability", "type": "concept", "name": "Reporting a Vulnerability", "desc": "Section in SECURITY.md"}
+{"id": "concept_nexus_core_singularity", "type": "concept", "name": "🧠 NEXUS CORE: Singularity", "desc": "Section in README.md"}
+{"id": "concept_宪章_the_constitution", "type": "concept", "name": "📜 宪章 (The Constitution)", "desc": "Section in README.md"}
+{"id": "concept_架构矩阵_architecture_matrix", "type": "concept", "name": "🏗️ 架构矩阵 (Architecture Matrix)", "desc": "Section in README.md"}
+{"id": "concept_启动指引_execution_commands", "type": "concept", "name": "🚀 启动指引 (Execution Commands)", "desc": "Section in README.md"}
+{"id": "concept_激活实验终端_launch_laboratory_web_portal", "type": "concept", "name": "激活实验终端 (Launch Laboratory Web Portal)", "desc": "Section in README.md"}
+{"id": "concept_触发深度代码摄取_run_sensory_ingest", "type": "concept", "name": "触发深度代码摄取 (Run Sensory Ingest)", "desc": "Section in README.md"}
+{"id": "concept_验证系统完备性_verification_tests", "type": "concept", "name": "验证系统完备性 (Verification Tests)", "desc": "Section in README.md"}
+{"id": "concept_工程哲学_why_zeroentropy", "type": "concept", "name": "🧬 工程哲学 (Why Zero-Entropy?)", "desc": "Section in README.md"}
+{"id": "concept_zeroentropy_lab__constitution", "type": "concept", "name": "Zero-Entropy Lab | Constitution", "desc": "Section in constitution.md"}
+{"id": "concept_0_核心愿景_vision", "type": "concept", "name": "0. 核心愿景 (Vision)", "desc": "Section in constitution.md"}
+{"id": "concept_1_物理架构_topological_rules", "type": "concept", "name": "1. 物理架构 (Topological Rules)", "desc": "Section in constitution.md"}
+{"id": "concept_2_绝对法则_the_laws", "type": "concept", "name": "2. 绝对法则 (The Laws)", "desc": "Section in constitution.md"}
+{"id": "concept_21_零外部依赖_absolute_zerodependency", "type": "concept", "name": "2.1 零外部依赖 (Absolute Zero-Dependency)", "desc": "Section in constitution.md"}
+{"id": "concept_22_极简工程_fundamentalist_engineering", "type": "concept", "name": "2.2 极简工程 (Fundamentalist Engineering)", "desc": "Section in constitution.md"}
+{"id": "concept_23_公开透明_public_transparency", "type": "concept", "name": "2.3 公开透明 (Public Transparency)", "desc": "Section in constitution.md"}
+{"id": "concept_3_协作准则_collaboration", "type": "concept", "name": "3. 协作准则 (Collaboration)", "desc": "Section in constitution.md"}
