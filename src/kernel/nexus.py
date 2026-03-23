@@ -146,10 +146,13 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
             self.send_error(405, "Method Not Allowed")
 
     def handle_api(self, path, query, method="GET", body=b''):
+<<<<<<< HEAD
         # 每次收到大模型的 MCP 请求，就向潜意识队列发送一个电信号，重置休眠倒计时
         # (Inject an electrical signal into the subconscious queue on every MCP request to reset sleep timer)
         consciousness_stream.put("STIMULUS")
 
+=======
+>>>>>>> origin/main
         # Authenticate all API routes
         if not self._check_auth():
             self.send_response(401)
