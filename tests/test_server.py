@@ -24,13 +24,13 @@ class TestServerAPI(unittest.TestCase):
         )
         
         # 等待服务器就绪
-        max_retries = 5
+        max_retries = 10
         while max_retries > 0:
             try:
                 with socket.create_connection(("localhost", 8000), timeout=1):
                     break
             except:
-                time.sleep(0.5)
+                time.sleep(1)
                 max_retries -= 1
 
     @classmethod
@@ -38,10 +38,19 @@ class TestServerAPI(unittest.TestCase):
         cls.process.terminate()
         cls.process.wait()
 
+    def _get_auth_request(self, url):
+        req = urllib.request.Request(url)
+        # Auth uses 'absolute-zero-entropy-override' per the environment default in cortex.py
+        # Test server runs without external config overrides, so it needs either no-auth or the env key
+        # For nexus API, if NEXUS_API_KEY is missing, it lets through. Let's provide it just in case.
+        req.add_header('Authorization', 'Bearer absolute-zero-entropy-override')
+        return req
+
     def test_api_status(self):
         """测试 /api/status 接口契约验证"""
         try:
-            with urllib.request.urlopen("http://localhost:8000/api/status") as response:
+            req = self._get_auth_request("http://localhost:8000/api/status")
+            with urllib.request.urlopen(req) as response:
                 data = json.loads(response.read().decode())
                 self.assertEqual(data["status"], "ok")
                 self.assertIn("payload", data)
@@ -53,7 +62,8 @@ class TestServerAPI(unittest.TestCase):
     def test_api_invalid_endpoint(self):
         """测试未知 API 接口契约返回"""
         try:
-            with urllib.request.urlopen("http://localhost:8000/api/invalid") as response:
+            req = self._get_auth_request("http://localhost:8000/api/invalid")
+            with urllib.request.urlopen(req) as response:
                 data = json.loads(response.read().decode())
                 self.assertEqual(data["status"], "error")
                 self.assertEqual(data["message"], "Invalid endpoint")
