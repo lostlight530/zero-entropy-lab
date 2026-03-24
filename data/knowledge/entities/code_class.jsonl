@@ -353,3 +353,25 @@
 {"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
 {"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
 {"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
