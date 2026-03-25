@@ -76,8 +76,13 @@ class Harvester:
             url = f"https://api.github.com/repos/{repo}/releases/latest"
 
             try:
-                # Use a real user agent to avoid rate limits
-                req = urllib.request.Request(url, headers={"User-Agent": "Nexus-Cortex"})
+                # 增加 Github 凭证注入以防御 403 频率限制 (Add GitHub token injection to prevent 403 rate limits)
+                headers = {"User-Agent": "Nexus-Cortex"}
+                github_token = os.environ.get("GITHUB_TOKEN")
+                if github_token:
+                    headers["Authorization"] = f"Bearer {github_token}"
+
+                req = urllib.request.Request(url, headers=headers)
                 with urllib.request.urlopen(req) as response:
                     data = json.loads(response.read().decode())
                     tag = data.get('tag_name', 'unknown')

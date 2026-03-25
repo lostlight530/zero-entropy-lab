@@ -1,5 +1,8 @@
 import time
 import datetime
+import urllib.request
+import urllib.parse
+import json
 from pathlib import Path
 try:
     from cortex import Cortex
@@ -64,10 +67,11 @@ class ReasoningEngine:
             for b in bridges:
                 insights.append(f"Inference: Discovered implicit path: '{b[0]}' -> '{b[1]}' via '{b[2]}'.")
 
-            # 4. 低频节点检索 (Low Frequency Node Detection)
+            # 4. 低频节点检索与外部元数据补充 (Low Frequency Node Detection and External Enrichment)
             sparse_nodes = self._find_sparse_nodes()
             if sparse_nodes:
-                insights.append(f"Task Suggestion: Insufficient data for {', '.join(sparse_nodes)}. Further ingestion required.")
+                insights.append(f"Data Deficiency: Sparse nodes detected: {', '.join(sparse_nodes)}. Initiating external data enrichment protocol.")
+                self._enrich_nodes_from_network(sparse_nodes)
             else:
                 insights.append("Task Suggestion: Graph density is optimal. Focus on new external data sources.")
 
@@ -76,6 +80,34 @@ class ReasoningEngine:
              insights.append(f"Analysis Error: A disruption occurred: {e}")
 
         return insights
+
+    def _enrich_nodes_from_network(self, nodes):
+        """外部元数据补充协议 (External Metadata Enrichment Protocol)
+        自动通过开放 API 检索概念释义以补全图谱孤点。(Automatically retrieve concept definitions via open APIs to enrich isolated graph nodes.)
+        """
+        for node_name in nodes:
+            # 过滤明显的代码文件名或路径，只查纯概念词汇 (Filter out obvious code files or paths)
+            clean_name = node_name.replace("'", "")
+            if "." in clean_name or "/" in clean_name or "_" in clean_name:
+                continue
+
+            try:
+                url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{urllib.parse.quote(clean_name)}"
+                req = urllib.request.Request(url, headers={"User-Agent": "Nexus-Cortex-Enrichment/1.0"})
+                with urllib.request.urlopen(req, timeout=5) as response:
+                    data = json.loads(response.read().decode())
+                    extract = data.get("extract")
+                    if extract:
+                        concept_id = f"concept_{clean_name.lower().replace(' ', '_')}"
+                        # 记录补充实体并建立依赖 (Record enriched entity and establish dependency)
+                        self.cortex.add_entity(id=concept_id, type_slug="concept", name=clean_name, desc=extract, save_to_disk=True)
+                        logger.info(f"Metadata Enrichment Success: Retrieved definition for '{clean_name}'.")
+            except urllib.error.HTTPError as e:
+                # 404 忽略，表示百科无此词条 (Ignore 404 Not Found)
+                if e.code != 404:
+                    logger.warning(f"Metadata Enrichment Failed for '{clean_name}': HTTP {e.code}")
+            except Exception as e:
+                logger.warning(f"Metadata Enrichment Failed for '{clean_name}': {e}")
 
     def _generate_status(self, stats):
         """生成系统度量报告 (Generates a system metrics report based on graph stats)"""
