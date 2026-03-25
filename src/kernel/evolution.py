@@ -29,45 +29,45 @@ class Evolver:
         self.cortex = Cortex()
 
     def run_daily_cycle(self):
-        logging.info("Starting Scheduled Data Processing Cycle...")
+        logging.info("Starting Daily Evolution Cycle...")
 
-        # 1. 数据权重衰退计算 (Data weight decay calculation)
+        # 1. Sleep: Metabolize & Decay
         self.cortex.decay_memories()
 
-        # 2. 批处理后台分析 (Batch process background analysis)
-        insights = self._process_background_analysis()
+        # 2. Dream: Incubate Intuitions & Epistemic Curiosity
+        intuitions = self._incubate_ideas()
 
-        # 3. 扫描外部输入源 (Scan external inputs)
+        # 3. Orient: Scan Inputs
         new_inputs = self._scan_inputs()
 
-        # 4. 生成系统状态简报 (Generate system status report)
+        # 4. Wake: Generate Strategic Brief
         stats = self.cortex.get_stats()
         orphans = self.cortex.get_orphans()
-        self._generate_mission(stats, orphans, new_inputs, insights)
+        self._generate_mission(stats, orphans, new_inputs, intuitions)
 
-        # 5. 归档处理完成的数据 (Archive processed inputs)
+        # 5. Archive processed inputs
         self._archive_inputs()
 
         logging.info("Cycle Complete.")
 
-    def _process_background_analysis(self):
+    def _incubate_ideas(self):
         try:
             r = ReasoningEngine(self.project_root)
             insights = r.ponder()
-            if insights and "Error:" not in insights[0]:
-                self._generate_analysis_report(insights)
+            if insights and "❌ **Critical**" not in insights[0]:
+                self._generate_cognitive_report(insights)
             return insights
         except Exception as e:
-            logging.error(f"Failed to process analysis: {e}")
+            logging.error(f"Failed to ponder: {e}")
             return []
 
-    def _generate_analysis_report(self, insights):
+    def _generate_cognitive_report(self, insights):
         now_utc = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
         date_prefix = datetime.datetime.now().strftime("%Y%m%d")
-        filename = self.memories_path / f"{date_prefix}-analysis-report.md"
+        filename = self.memories_path / f"{date_prefix}-cognitive-report.md"
 
         content = [
-            f"# 📊 系统分析报告 (System Analysis Report)",
+            f"# 🧠 NEXUS CORTEX: Cognitive Report",
             f"> **Date**: {now_utc} (UTC)",
             f""
         ]
@@ -110,12 +110,12 @@ class Evolver:
         return ""
 
     def _generate_mission(self, stats, orphans, new_inputs, intuitions):
-        # 分类数据源 (Categorize Data Sources)
+        # Categorize Intel
         categories = {
-            "架构情报 (Architecture)": [],
-            "生态动态 (Ecosystem)": [],
-            "边缘端算力 (Edge AI)": [],
-            "常规记录 (General)": []
+            "🧠 架构情报 (Architecture)": [],
+            "⚔️ 竞品雷达 (Competitors)": [],
+            "📦 边缘战备 (Edge AI)": [],
+            "ℹ️ 其他动态 (General)": []
         }
 
         arch_triggers = ['nexent', 'astron', 'mcp', 'agent', 'protocol']
@@ -128,22 +128,22 @@ class Evolver:
             entry = f"- **{f.name}**\n  - > **Analysis**: {tags}" if tags else f"- **{f.name}**"
 
             if any(t in fname for t in arch_triggers):
-                categories["架构情报 (Architecture)"].append(entry)
+                categories["🧠 架构情报 (Architecture)"].append(entry)
             elif any(t in fname for t in comp_triggers):
-                categories["生态动态 (Ecosystem)"].append(entry)
+                categories["⚔️ 竞品雷达 (Competitors)"].append(entry)
             elif any(t in fname for t in edge_triggers):
-                categories["边缘端算力 (Edge AI)"].append(entry)
+                categories["📦 边缘战备 (Edge AI)"].append(entry)
             else:
-                categories["常规记录 (General)"].append(entry)
+                categories["ℹ️ 其他动态 (General)"].append(entry)
 
-        # 生成简报内容 (Generate Brief Content)
+        # Generate Content
         now = datetime.datetime.now().strftime("%Y-%m-%d")
         content = [
-            f"# 🛡️ 架构与生态简报 (Architecture & Ecosystem Brief)",
-            f"> **Date**: {now} | **Density**: {stats['density']:.4f}",
+            f"# 🛡️ NEXUS CORTEX: Architect's Daily Brief",
+            f"> **Date**: {now} | **Entropy**: {stats['density']:.4f}",
             f"",
-            f"## 系统状态 (System Health)",
-            f"- **Status**: ONLINE",
+            f"## 🚨 昨夜今晨 (System Health)",
+            f"- **Status**: 🟢 **ONLINE**",
             ""
         ]
 
@@ -156,26 +156,26 @@ class Evolver:
                 content.append("")
 
         if not has_intel:
-            content.append("## 无外部数据流入 (No significant external data movements)\n")
+            content.append("## 🌌 虚空监视 (Void Watch)\n> No significant ecosystem movements.\n")
 
-        # 核心任务推荐 (Core Task Suggestion)
+        # Smart Deep Work Suggestion
         suggestion = "System Optimization"
-        if categories["架构情报 (Architecture)"]:
-            suggestion = "Review Architecture Updates"
-        elif categories["边缘端算力 (Edge AI)"]:
-            suggestion = "Evaluate Edge Inference Frameworks"
-        elif categories["生态动态 (Ecosystem)"]:
-            suggestion = "Analyze Ecosystem Repositories"
+        if categories["🧠 架构情报 (Architecture)"]:
+            suggestion = "Review Architecture PRs & Protocol Specs"
+        elif categories["📦 边缘战备 (Edge AI)"]:
+            suggestion = "Edge Inference Benchmarking (vLLM/LiteRT)"
+        elif categories["⚔️ 竞品雷达 (Competitors)"]:
+            suggestion = "Strategic Analysis of Competitor Updates"
 
-        content.append(f"## 高优先级任务推荐 (High Priority Task)\n> **Focus**: {suggestion}\n")
+        content.append(f"## 📅 深度工作建议 (Deep Work)\n> **Focus**: {suggestion}\n- [ ] Block 2 hours.")
 
         if orphans:
-            content.append("\n## 待处理孤岛节点 (Pending Isolated Nodes)")
+            content.append("\n## 🔍 待处理熵值 (Entropy Targets)")
             for o in orphans:
                 content.append(f"- **{o['name']}** ({o['id']}): Weight {o['weight']:.2f}")
 
-        # 写入文件 (Write to file)
-        filename = self.memories_path / "SYSTEM_BRIEF.md"
+        # Write to file
+        filename = self.memories_path / "MISSION_ACTIVE.md"
         with open(filename, "w", encoding="utf-8") as f:
             f.write("\n".join(content))
 
