@@ -1,5 +1,8 @@
 import time
 import datetime
+import urllib.request
+import urllib.parse
+import json
 from pathlib import Path
 try:
     from cortex import Cortex
@@ -21,23 +24,23 @@ class ReasoningEngine:
         self.cortex = Cortex()
 
     def ponder(self):
-        """Cognitive Loop: Structural Analysis, Self-Reflection & Curiosity"""
-        # [防御性检查] 大脑物理文件缺失时的优雅降级
+        """后台分析任务 (Background Analysis Task)"""
+        # [检查依赖] 数据库验证 (Dependency check)
         if not self.cortex or not self.db_path.exists():
-            logger.warning("Cortex DB not found during ponder.")
-            return ["❌ **Critical**: Cortex DB not found. Cannot think without memory."]
+            logger.warning("Cortex DB not found. Skipping analysis.")
+            return ["Error: Cortex DB not found. Cannot perform analysis."]
 
-        logger.info("🤔 NEXUS is pondering (Active Inference)...")
+        logger.info("Executing background graph analysis...")
         insights = []
 
         try:
-            # 0. 提取全局状态
+            # 0. 获取状态 (Retrieve stats)
             stats = self.cortex.get_stats()
 
-            # 1. 自我总结 (Self-Reflection)
-            insights.append(self._self_reflect(stats))
+            # 1. 状态报告 (Status Report)
+            insights.append(self._generate_status(stats))
 
-            # 2. 结构分析 (Orphans & Cycles)
+            # 2. 拓扑异常检测 (Topology Exception Detection)
             orphans = self._query('''
                 SELECT e.name FROM entities e
                 LEFT JOIN relations r1 ON e.id = r1.source
@@ -45,7 +48,7 @@ class ReasoningEngine:
                 WHERE r1.source IS NULL AND r2.target IS NULL LIMIT 3
             ''')
             if orphans:
-                insights.append(f"⚠️ **Isolation Risk**: {len(orphans)} concepts are floating without context (e.g., '{orphans[0][0]}'). I need to connect them.")
+                insights.append(f"Topology Warning: {len(orphans)} isolated nodes detected (e.g., '{orphans[0][0]}'). Relation mapping recommended.")
 
             cycles = self._query('''
                 SELECT r1.source, r1.target FROM relations r1
@@ -53,47 +56,83 @@ class ReasoningEngine:
                 WHERE r1.source < r1.target LIMIT 2
             ''')
             if cycles:
-                insights.append(f"🔄 **Cognitive Loop**: Detected reciprocal dependency between '{cycles[0][0]}' and '{cycles[0][1]}'.")
+                insights.append(f"Graph Cycle: Detected circular dependency between '{cycles[0][0]}' and '{cycles[0][1]}'.")
 
-            # 3. 隐性知识推演 (Transitive Inference)
+            # 3. 关联推导 (Association Inference)
             bridges = self._query('''
                 SELECT r1.source, r2.target, r1.target FROM relations r1
                 JOIN relations r2 ON r1.target = r2.source
                 WHERE r1.relation = 'defines' AND r2.relation = 'inherits_from' LIMIT 2
             ''')
             for b in bridges:
-                insights.append(f"💡 **Epiphany**: I deduce that '{b[0]}' implicitly relies on '{b[1]}' via '{b[2]}'.")
+                insights.append(f"Inference: Discovered implicit path: '{b[0]}' -> '{b[1]}' via '{b[2]}'.")
 
-            # 4. 自我驱动与好奇心引擎 (Epistemic Curiosity)
-            curiosity_targets = self._generate_curiosity()
-            if curiosity_targets:
-                insights.append(f"🎯 **Self-Driven Goal**: My knowledge about {', '.join(curiosity_targets)} is highly superficial (only 1 connection). I must prioritize researching them tomorrow.")
+            # 4. 低频节点检索与外部元数据补充 (Low Frequency Node Detection and External Enrichment)
+            sparse_nodes = self._find_sparse_nodes()
+            if sparse_nodes:
+                insights.append(f"Data Deficiency: Sparse nodes detected: {', '.join(sparse_nodes)}. Initiating external data enrichment protocol.")
+                self._enrich_nodes_from_network(sparse_nodes)
             else:
-                insights.append("🎯 **Self-Driven Goal**: My current knowledge graph is dense. I should focus on harvesting new external paradigms.")
+                insights.append("Task Suggestion: Graph density is optimal. Focus on new external data sources.")
 
         except Exception as e:
-             logger.error("Cognitive Error during pondering", exc_info=True)
-             insights.append(f"⚠️ **Cognitive Error**: A disruption occurred during pondering: {e}")
+             logger.error("Error during background analysis", exc_info=True)
+             insights.append(f"Analysis Error: A disruption occurred: {e}")
 
         return insights
 
-    def _self_reflect(self, stats):
-        """Generate a diary-like self summary based on graph metrics."""
+    def _enrich_nodes_from_network(self, nodes):
+        """外部元数据补充协议 (External Metadata Enrichment Protocol)
+        自动通过开放 API 检索概念释义以补全图谱孤点。(Automatically retrieve concept definitions via open APIs to enrich isolated graph nodes.)
+        """
+        # 数据源白名单防御 (Data source whitelist defense)
+        # 仅允许从受信域名获取数据，防止 SSRF 和数据污染 (Only allow requests to trusted domains to prevent SSRF and data pollution)
+        ALLOWED_ENRICHMENT_DOMAINS = ["en.wikipedia.org"]
+
+        for node_name in nodes:
+            # 过滤明显的代码文件名或路径，只查纯概念词汇 (Filter out obvious code files or paths)
+            clean_name = node_name.replace("'", "")
+            if "." in clean_name or "/" in clean_name or "_" in clean_name:
+                continue
+
+            try:
+                # 构建请求 URL 并校验域名 (Construct and validate request URL)
+                domain = ALLOWED_ENRICHMENT_DOMAINS[0]
+                url = f"https://{domain}/api/rest_v1/page/summary/{urllib.parse.quote(clean_name)}"
+
+                req = urllib.request.Request(url, headers={"User-Agent": "Nexus-Cortex-Enrichment/1.0"})
+                with urllib.request.urlopen(req, timeout=5) as response:
+                    data = json.loads(response.read().decode())
+                    extract = data.get("extract")
+                    if extract:
+                        concept_id = f"concept_{clean_name.lower().replace(' ', '_')}"
+                        # 记录补充实体并建立依赖 (Record enriched entity and establish dependency)
+                        self.cortex.add_entity(id=concept_id, type_slug="concept", name=clean_name, desc=extract, save_to_disk=True)
+                        logger.info(f"Metadata Enrichment Success: Retrieved definition for '{clean_name}'.")
+            except urllib.error.HTTPError as e:
+                # 404 忽略，表示百科无此词条 (Ignore 404 Not Found)
+                if e.code != 404:
+                    logger.warning(f"Metadata Enrichment Failed for '{clean_name}': HTTP {e.code}")
+            except Exception as e:
+                logger.warning(f"Metadata Enrichment Failed for '{clean_name}': {e}")
+
+    def _generate_status(self, stats):
+        """生成系统度量报告 (Generates a system metrics report based on graph stats)"""
         nodes = stats.get('entities', 0)
         edges = stats.get('relations', 0)
         density = stats.get('density', 0)
 
-        summary = f"🧘 **Self-Reflection**: My cortex currently holds {nodes} entities and {edges} synapses. "
+        summary = f"System Status: Cortex holds {nodes} entities and {edges} edges. "
         if density < 1.0:
-            summary += f"With a density of {density:.2f}, my worldview is still fragmented. I am absorbing facts faster than I can connect them."
+            summary += f"Density ({density:.2f}) indicates fragmented data state."
         elif density < 1.5:
-            summary += f"With a density of {density:.2f}, my logical web is forming nicely. I am starting to see the 'Big Picture'."
+            summary += f"Density ({density:.2f}) indicates moderate logical connections."
         else:
-            summary += f"With a high density of {density:.2f}, my understanding is highly cohesive and robust."
+            summary += f"Density ({density:.2f}) indicates high cohesiveness."
         return summary
 
-    def _generate_curiosity(self):
-        """Find nodes with exactly 1 edge (Superficial Knowledge)"""
+    def _find_sparse_nodes(self):
+        """低频节点检索 (Find nodes with exactly 1 connection)"""
         sql = '''
             SELECT e.name
             FROM entities e

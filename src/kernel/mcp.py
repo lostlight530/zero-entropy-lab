@@ -6,8 +6,8 @@ from abc import ABC, abstractmethod
 
 class BaseSkill(ABC):
     """
-    零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).
-    任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转换为标准的 JSON Schema。
+    基础服务协议类 (Base MCP Protocol Skill).
+    自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execute signature to generate standard JSON Schema.)
     """
     name: str = ""
     description: str = ""
@@ -15,7 +15,7 @@ class BaseSkill(ABC):
     @classmethod
     def get_mcp_tool_schema(cls) -> Dict[str, Any]:
         """
-        核心魔法：利用 Python 原生 inspect 和 typing 提取方法签名，纯手工拼接 JSON Schema。
+        元数据反射提取 (Metadata reflection and schema generation).
         """
         # Ensure name is provided, fallback to class name
         tool_name = cls.name or cls.__name__
@@ -88,7 +88,8 @@ class BaseSkill(ABC):
 
 class MCPRegistry:
     """
-    极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。
+    轻量级协议注册中心 (Lightweight Protocol Registry).
+    扫描并实例化可用服务接口。(Scans and instantiates available service interfaces.)
     """
     def __init__(self):
         self._skills: Dict[str, Type[BaseSkill]] = {}
@@ -168,19 +169,20 @@ class CortexSearchSkill(BaseSkill):
         # Strip internal fields or return raw dictionaries
         return {"results": limited_results}
 
-# Automatically register the bullseye skill
+# 注册图谱检索接口 (Register graph search interface)
 registry.register(CortexSearchSkill)
 
 class CortexMemorizeSkill(BaseSkill):
     """
-    Memorize a new core concept or entity into the Nexus Cortex graph database.
+    图谱实体写入接口 (Graph Entity Insertion Interface).
+    将新实体写入至底层数据存储。(Inserts a new entity into the underlying data store.)
     """
     name = "cortex_memorize"
-    description = "Memorize a new core concept or entity into the Nexus Cortex graph database."
+    description = "Insert a new entity into the data store."
 
     def execute(self, id: str, name: str, desc: str, type_slug: str = "concept") -> Dict[str, Any]:
         """
-        Execute an addition of an entity to the Cortex database.
+        数据写入执行 (Execute data insertion).
 
         Args:
             id (str): Unique identifier for the entity (e.g., 'concept_singularity').
@@ -203,14 +205,15 @@ registry.register(CortexMemorizeSkill)
 
 class CortexSynapseSkill(BaseSkill):
     """
-    Create a synaptic connection (relation) between two existing entities in the Nexus Cortex.
+    图谱边创建接口 (Graph Edge Creation Interface).
+    在现有实体间建立关联。(Creates a relation between two existing entities.)
     """
     name = "cortex_synapse"
-    description = "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."
+    description = "Create a relation between two existing entities in the graph."
 
     def execute(self, source_id: str, relation: str, target_id: str, desc: str = "") -> Dict[str, Any]:
         """
-        Execute the creation of a relation between nodes.
+        连线执行 (Execute relation mapping).
 
         Args:
             source_id (str): ID of the source entity.
@@ -229,3 +232,52 @@ class CortexSynapseSkill(BaseSkill):
             return {"status": "error", "message": str(e)}
 
 registry.register(CortexSynapseSkill)
+
+class CortexEnrichSkill(BaseSkill):
+    """
+    外部元数据补充协议 (External Metadata Enrichment Interface).
+    通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via network and records them to the graph.)
+    """
+    name = "cortex_enrich"
+    description = "Fetch concept definitions from trusted external sources and memorize them."
+
+    def execute(self, concept_name: str) -> Dict[str, Any]:
+        """
+        元数据补充执行 (Execute metadata enrichment).
+
+        Args:
+            concept_name (str): The concept to search and memorize (e.g., 'Artificial Intelligence').
+
+        Returns:
+            Dict[str, Any]: Enrichment result and retrieved data.
+        """
+        import urllib.request
+        import urllib.parse
+        from logger import logger
+
+        # 校验域名防范 SSRF (Validate domain to prevent SSRF)
+        ALLOWED_ENRICHMENT_DOMAINS = ["en.wikipedia.org"]
+
+        clean_name = concept_name.replace("'", "")
+        try:
+            domain = ALLOWED_ENRICHMENT_DOMAINS[0]
+            url = f"https://{domain}/api/rest_v1/page/summary/{urllib.parse.quote(clean_name)}"
+
+            req = urllib.request.Request(url, headers={"User-Agent": "Nexus-Cortex-Enrichment/1.0"})
+            with urllib.request.urlopen(req, timeout=5) as response:
+                data = json.loads(response.read().decode())
+                extract = data.get("extract")
+                if extract:
+                    concept_id = f"concept_{clean_name.lower().replace(' ', '_')}"
+
+                    cortex = Cortex()
+                    cortex.add_entity(id=concept_id, type_slug="concept", name=clean_name, desc=extract, save_to_disk=True)
+                    return {"status": "success", "message": f"Enriched metadata for '{clean_name}'.", "data": extract}
+                else:
+                    return {"status": "error", "message": f"No extract found for '{clean_name}'."}
+        except urllib.error.HTTPError as e:
+            return {"status": "error", "message": f"HTTP Error: {e.code}"}
+        except Exception as e:
+            return {"status": "error", "message": str(e)}
+
+registry.register(CortexEnrichSkill)
