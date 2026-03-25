@@ -40,6 +40,35 @@ class APIResponse:
     payload: Any = None
     message: Optional[str] = None
 
+class TokenBucket:
+    """
+    自适应免疫盾墙 (Adaptive Immune Shield: Native Token Bucket Rate Limiter)
+    防御极端高频并发 (Defends against extreme high-frequency concurrency).
+    """
+    def __init__(self, capacity: int, fill_rate: float):
+        self.capacity = capacity
+        self.fill_rate = fill_rate
+        self.tokens = capacity
+        self.last_fill = time.time()
+        self.lock = threading.Lock()
+
+    def consume(self, amount: int = 1) -> bool:
+        with self.lock:
+            now = time.time()
+            # 随时间自动恢复令牌 (Auto-regenerate tokens over time)
+            self.tokens = min(self.capacity, self.tokens + (now - self.last_fill) * self.fill_rate)
+            self.last_fill = now
+            if self.tokens >= amount:
+                self.tokens -= amount
+                return True
+            return False
+
+# 全局自适应免疫盾墙配置 (Global Immune Shield Configuration)
+# 针对重型 MCP 写接口：令牌池50，每秒恢复2个 (For heavy MCP writes)
+mcp_bucket = TokenBucket(capacity=50, fill_rate=2)
+# 针对轻量级查询与前端接口：令牌池500，每秒恢复50个 (For light UI queries)
+api_bucket = TokenBucket(capacity=500, fill_rate=50)
+
 # 并发服务基类 (Concurrent Gateway Configuration)
 class ThreadedNexusServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
     """原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"""
@@ -153,6 +182,20 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
             self.send_error(405, "Method Not Allowed")
 
     def handle_api(self, path, query, method="GET", body=b''):
+        # 免疫拦截协议 (Immune Interception Protocol)
+        # 根据请求特征分配不同的限流桶 (Route to different rate-limit buckets)
+        bucket = mcp_bucket if path.startswith("/api/mcp/") and method == "POST" else api_bucket
+        if not bucket.consume():
+            self.send_response(429)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            logger.warning(f"🛡️ Rate limit exceeded for {path}. Immune system activated.")
+            self.wfile.write(json.dumps({
+                "status": "error",
+                "message": "Too Many Requests. System immune shield engaged."
+            }).encode('utf-8'))
+            return
+
         # 触发队列中断电信号以重置后台定时器
         # (Inject event into queue to reset background idle timer)
         consciousness_stream.put("STIMULUS")
@@ -192,6 +235,46 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
                     cursor = self.cortex.conn.cursor()
                     cursor.execute("SELECT datetime(timestamp, 'unixepoch') as ts, event, details FROM journal ORDER BY timestamp DESC LIMIT 20")
                     response_obj.payload = [dict(row) for row in cursor.fetchall()]
+                elif path == "/api/graph":
+                    # 前端 Canvas 力导向图专属轻量级端点 (Endpoint for Frontend Canvas Graph)
+                    # 动态递归提取节点和关联供力导向图渲染 (Extract nodes/edges dynamically)
+                    # 按照架构设计，直接复用底层的 CTE 递归查询 (Use native CTE deep scan)
+
+                    # 为了获得更宏观的拓扑，我们寻找权重最高的核心节点作为起点 (Find the absolute core node)
+                    cursor = self.cortex.conn.cursor()
+                    core_node = cursor.execute("SELECT id FROM entities ORDER BY weight DESC LIMIT 1").fetchone()
+
+                    nodes_data = []
+                    links_data = []
+
+                    if core_node:
+                        # 扫描 N-Hop 拓扑 (Scan N-Hop topology)
+                        scanned_nodes = self.cortex.deep_synapse_scan(start_id=core_node['id'], max_depth=3)
+                        # 为了画图丰富，不仅获取中心节点的 15 个关联，再宽泛检索一些权重高的 (Supplement with high weight)
+                        high_weight_nodes = cursor.execute("SELECT id, name, weight FROM entities WHERE weight > 0.5 ORDER BY weight DESC LIMIT 100").fetchall()
+
+                        seen_ids = set()
+                        for r in scanned_nodes:
+                            seen_ids.add(r['id'])
+                            nodes_data.append({"id": r['id'], "name": r['name'], "weight": r.get('resonance', 1.0)})
+
+                        for r in high_weight_nodes:
+                            if r['id'] not in seen_ids:
+                                seen_ids.add(r['id'])
+                                nodes_data.append({"id": r['id'], "name": r['name'], "weight": r['weight']})
+
+                        if nodes_data:
+                            placeholders = ','.join(['?'] * len(nodes_data))
+                            node_ids = [n["id"] for n in nodes_data]
+                            sql = f"""
+                                SELECT source, target, weight FROM relations
+                                WHERE source IN ({placeholders}) AND target IN ({placeholders})
+                                LIMIT 300
+                            """
+                            links = cursor.execute(sql, node_ids + node_ids).fetchall()
+                            links_data = [{"source": r["source"], "target": r["target"], "value": r["weight"]} for r in links]
+
+                    response_obj.payload = {"nodes": nodes_data, "links": links_data}
                 # --- MCP Protocol Endpoints ---
                 elif path == "/api/mcp/tools":
                     # Returns List of JSON Schemas for all registered skills

@@ -95,18 +95,62 @@ class Cortex:
         ''')
         self.conn.commit()
 
+    def _get_last_hash(self, filepath: Path) -> str:
+        """
+        O(1) 读取不可篡改账本的最后一条哈希记录 (O(1) Retrieval of the last hash in the ledger)
+        利用文件指针反向寻找，避免大文件全量加载进内存。
+        """
+        if not filepath.exists() or filepath.stat().st_size == 0:
+            return "NEXUS_GENESIS_0000"
+
+        try:
+            with open(filepath, 'rb') as f:
+                f.seek(0, os.SEEK_END)
+                # 极客指针漂移：反向寻找最后一行换行符
+                pos = f.tell() - 2
+                while pos > 0:
+                    f.seek(pos)
+                    if f.read(1) == b'\n':
+                        break
+                    pos -= 1
+
+                # 如果我们退到了文件开头还没有找到换行符，说明只有一行数据
+                if pos == 0:
+                    f.seek(0)
+
+                last_line = f.readline().decode('utf-8').strip()
+                if not last_line:
+                    return "NEXUS_GENESIS_0000"
+                return json.loads(last_line).get("hash", "NEXUS_GENESIS_0000")
+        except Exception as e:
+            logger.error(f"Failed to read last hash from {filepath}: {e}")
+            return "NEXUS_GENESIS_0000"
+
     def _log_to_jsonl(self, category, filename, data):
-        """Append knowledge to the immutable text ledger."""
+        """Append knowledge to the cryptographic Merkle Chain text ledger."""
         # Sanitize filename to prevent directory traversal or invalid chars
         safe_filename = "".join([c for c in filename if c.isalnum() or c in ('-','_')])
         if not safe_filename: safe_filename = "misc"
 
         filepath = self.knowledge_path / category / f"{safe_filename}.jsonl"
         try:
+            # 1. 获取上一行的 Hash (Get previous hash)
+            prev_hash = self._get_last_hash(filepath)
+
+            # 2. 生成当前记录的不可篡改哈希 (Generate tamper-proof hash for current record)
+            # 为了保证哈希一致性，对数据进行稳定排序的 JSON 序列化
+            data_str = json.dumps(data, sort_keys=True, ensure_ascii=False)
+            current_hash = hashlib.sha256(f"{prev_hash}{data_str}".encode('utf-8')).hexdigest()
+
+            # 3. 附加密码学证明 (Append cryptographic proofs)
+            data['hash'] = current_hash
+            data['prev_hash'] = prev_hash
+
+            # 4. 追加写入 (Append write)
             with open(filepath, 'a', encoding='utf-8') as f:
                 f.write(json.dumps(data, ensure_ascii=False) + "\n")
         except Exception as e:
-            logger.error(f"⚠️ Failed to write text memory: {e}", exc_info=True)
+            logger.error(f"⚠️ Failed to write cryptographic text memory: {e}", exc_info=True)
 
     def search(self, query: str, limit: int = 10) -> List[Dict]:
         """Synaptic Search: Zero-Entropy 2-Stage Retrieval (FTS5 BM25 + Python Reranking)"""
