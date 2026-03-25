@@ -5,6 +5,9 @@ import shutil
 import json
 import http.server
 import socketserver
+import threading
+import queue
+import time
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs
 
@@ -37,6 +40,48 @@ class APIResponse:
     payload: Any = None
     message: Optional[str] = None
 
+# 并发服务基类 (Concurrent Gateway Configuration)
+class ThreadedNexusServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
+    """原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"""
+    daemon_threads = True
+    allow_reuse_address = True
+
+# 事件驱动后台队列 (Event-Driven Background Task Stream)
+consciousness_stream = queue.Queue()
+
+class SubconsciousThread(threading.Thread):
+    """
+    后台数据处理线程。(Background data processing engine.)
+    在 API 闲置时，处理图谱索引关联。(Handles graph indexing and association generation during API idle periods.)
+    """
+    def __init__(self):
+        super().__init__(daemon=True)
+        self.is_dreaming = False
+
+    def run(self):
+        logger.info("Background processing thread activated. Waiting for idle cycles...")
+        while True:
+            try:
+                # 监听前台事件中断。闲置 60 秒后触发后台运算。(Listen for foreground events. Trigger background task after 60s idle.)
+                event = consciousness_stream.get(timeout=60.0)
+                if self.is_dreaming:
+                    logger.info("Foreground request detected. Pausing background tasks.")
+                    self.is_dreaming = False
+            except queue.Empty:
+                if not self.is_dreaming:
+                    self.is_dreaming = True
+                    logger.info("System idle. Starting background graph associative reasoning...")
+                    try:
+                        # 延迟加载防止循环依赖 (Lazy load to prevent circular dependencies)
+                        from reason import ReasoningEngine
+                        engine = ReasoningEngine()
+                        insights = engine.ponder()
+                        if insights:
+                            logger.info(f"Graph associations generated: Processed {len(insights)} insights.")
+                    except Exception as e:
+                        logger.error(f"Background task interrupted by error: {e}")
+
+# HTTP 拦截处理器 (HTTP Request Handler)
 class NexusHandler(http.server.SimpleHTTPRequestHandler):
     """Native API & Static File Router"""
     def __init__(self, *args, **kwargs):
@@ -44,7 +89,33 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
         # src/kernel/nexus.py -> parents[2] is root
         self.project_root = Path(__file__).resolve().parents[2]
         self.cortex = Cortex()
+
+        # Load API Config
+        self.api_key = os.environ.get("NEXUS_API_KEY")
+        self.allowed_origins = ["http://localhost:8000", "http://127.0.0.1:8000"]
+
+        config_path = self.project_root / "data" / "brain_config.json"
+        if config_path.exists():
+            try:
+                with open(config_path, "r", encoding="utf-8") as f:
+                    config = json.load(f)
+                    if "api_key" in config:
+                        self.api_key = config["api_key"]
+                    if "allowed_origins" in config:
+                        self.allowed_origins = config["allowed_origins"]
+            except Exception as e:
+                logger.warning(f"Failed to load brain_config.json for auth: {e}")
+
         super().__init__(*args, **kwargs)
+
+    def _check_auth(self) -> bool:
+        if not self.api_key:
+            return True # Open if no key configured
+        auth_header = self.headers.get("Authorization")
+        if not auth_header or not auth_header.startswith("Bearer "):
+            return False
+        token = auth_header.split(" ")[1]
+        return token == self.api_key
 
     def do_GET(self):
         parsed_url = urlparse(self.path)
@@ -71,10 +142,28 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
             self.send_error(405, "Method Not Allowed")
 
     def handle_api(self, path, query, method="GET", body=b''):
+        # 触发队列中断电信号以重置后台定时器
+        # (Inject event into queue to reset background idle timer)
+        consciousness_stream.put("STIMULUS")
+
+        # Authenticate all API routes
+        if not self._check_auth():
+            self.send_response(401)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps({"status": "error", "message": "Unauthorized"}).encode('utf-8'))
+            return
+
         params = parse_qs(query)
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
-        self.send_header('Access-Control-Allow-Origin', '*')
+
+        # CORS Handling
+        origin = self.headers.get('Origin')
+        if origin and (origin in self.allowed_origins or '*' in self.allowed_origins):
+            self.send_header('Access-Control-Allow-Origin', origin)
+        self.send_header('Vary', 'Origin')
+
         self.end_headers()
 
         response_obj = APIResponse(status="ok", payload={})
@@ -180,15 +269,19 @@ def main():
 
     if args.command == 'serve':
         PORT = 8000
-        logger.info(f"🚀 NEXUS CORE: Launching Portal at http://localhost:{PORT}")
+        logger.info(f"🚀 NEXUS CORE V2: Launching Service at http://localhost:{PORT}")
         logger.info(f"📍 Serving Root: {Path(__file__).parent.parent.parent}")
         
-        # Use a closure to pass base_path/project_root if needed, but NexusHandler handles it now
-        with socketserver.TCPServer(("", PORT), NexusHandler) as httpd:
+        # 启动后台事件监听线程 (Start background event listener thread)
+        subconscious = SubconsciousThread()
+        subconscious.start()
+
+        # 挂载多线程 HTTP 网关 (Mount multithreaded HTTP gateway)
+        with ThreadedNexusServer(("", PORT), NexusHandler) as httpd:
             try:
                 httpd.serve_forever()
             except KeyboardInterrupt:
-                logger.info("\n🛑 Server stopped.")
+                logger.info("\n🛑 System Halting...")
 
     elif args.command == 'clean':
         logger.info("🧹 Cleaning environment...")

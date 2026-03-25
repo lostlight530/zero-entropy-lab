@@ -40,36 +40,27 @@ class CognitiveReranker:
         if not candidates:
             return []
 
-        # 1. Normalize FTS scores (BM25 is negative, closer to negative infinity is better, but usually bounded).
-        # We need to invert it so higher is better for fusion.
+        # 1. 归一化提取 (Normalize FTS Scores)
+        # BM25 is negative, closer to negative infinity is better. Invert for fusion.
         fts_scores = [c.get('fts_score', 0.0) for c in candidates]
         min_fts = min(fts_scores) if fts_scores else 0.0
 
-        for c in candidates:
-            # FTS5 returns negative values for matches. 0.0 means it came from Graph 1-hop, not FTS.
-            raw_fts = c.get('fts_score', 0.0)
+        # Memory-efficient generator expression for fused scoring
+        def _score_generator():
+            for c in candidates:
+                raw_fts = c.get('fts_score', 0.0)
+                norm_fts = abs(raw_fts) / abs(min_fts) if raw_fts < 0 and min_fts < 0 else 0.0
+                c['norm_fts'] = norm_fts
 
-            # Normalize FTS: if min_fts is negative, we shift it to positive.
-            # We want smaller negative numbers (larger absolute value) to be higher scores.
-            norm_fts = 0.0
-            if raw_fts < 0:
-                # E.g., raw is -10, min is -20. absolute value of raw is 10.
-                norm_fts = abs(raw_fts) / abs(min_fts) if min_fts < 0 else 0.0
+                # 2. 语义共鸣计算 (Semantic Resonance)
+                doc_text = f"{c.get('name', '')} {c.get('desc', '')}"
+                c['resonance'] = CognitiveReranker.cosine_similarity(query, doc_text)
 
-            c['norm_fts'] = norm_fts
+                # 3. 混合标量融合 (Fuse Scores)
+                weight_factor = min(c.get('weight', 1.0) / 10.0, 1.0)
+                c['final_score'] = (c['norm_fts'] * 0.4) + (weight_factor * 0.3) + (c['resonance'] * 0.3)
+                yield c
 
-            # 2. Calculate Semantic Resonance (Cosine Similarity)
-            # We combine name and desc to represent the document
-            doc_text = f"{c.get('name', '')} {c.get('desc', '')}"
-            c['resonance'] = CognitiveReranker.cosine_similarity(query, doc_text)
-
-            # 3. Fuse Scores
-            # Formula: 40% FTS + 30% Biological Weight + 30% Resonance
-            # We add a slight bump for Graph nodes (distance == 1) if they have high weight, but FTS should dominate.
-            weight_factor = min(c.get('weight', 1.0) / 10.0, 1.0) # Cap weight influence
-
-            c['final_score'] = (c['norm_fts'] * 0.4) + (weight_factor * 0.3) + (c['resonance'] * 0.3)
-
-        # Sort descending by the final composite score
-        reranked = sorted(candidates, key=lambda x: x['final_score'], reverse=True)
+        # Materialize and sort the generator
+        reranked = sorted(_score_generator(), key=lambda x: x['final_score'], reverse=True)
         return reranked
