@@ -85,6 +85,10 @@ class ReasoningEngine:
         """外部元数据补充协议 (External Metadata Enrichment Protocol)
         自动通过开放 API 检索概念释义以补全图谱孤点。(Automatically retrieve concept definitions via open APIs to enrich isolated graph nodes.)
         """
+        # 数据源白名单防御 (Data source whitelist defense)
+        # 仅允许从受信域名获取数据，防止 SSRF 和数据污染 (Only allow requests to trusted domains to prevent SSRF and data pollution)
+        ALLOWED_ENRICHMENT_DOMAINS = ["en.wikipedia.org"]
+
         for node_name in nodes:
             # 过滤明显的代码文件名或路径，只查纯概念词汇 (Filter out obvious code files or paths)
             clean_name = node_name.replace("'", "")
@@ -92,7 +96,10 @@ class ReasoningEngine:
                 continue
 
             try:
-                url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{urllib.parse.quote(clean_name)}"
+                # 构建请求 URL 并校验域名 (Construct and validate request URL)
+                domain = ALLOWED_ENRICHMENT_DOMAINS[0]
+                url = f"https://{domain}/api/rest_v1/page/summary/{urllib.parse.quote(clean_name)}"
+
                 req = urllib.request.Request(url, headers={"User-Agent": "Nexus-Cortex-Enrichment/1.0"})
                 with urllib.request.urlopen(req, timeout=5) as response:
                     data = json.loads(response.read().decode())

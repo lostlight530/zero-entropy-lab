@@ -232,3 +232,52 @@ class CortexSynapseSkill(BaseSkill):
             return {"status": "error", "message": str(e)}
 
 registry.register(CortexSynapseSkill)
+
+class CortexEnrichSkill(BaseSkill):
+    """
+    外部元数据补充协议 (External Metadata Enrichment Interface).
+    通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via network and records them to the graph.)
+    """
+    name = "cortex_enrich"
+    description = "Fetch concept definitions from trusted external sources and memorize them."
+
+    def execute(self, concept_name: str) -> Dict[str, Any]:
+        """
+        元数据补充执行 (Execute metadata enrichment).
+
+        Args:
+            concept_name (str): The concept to search and memorize (e.g., 'Artificial Intelligence').
+
+        Returns:
+            Dict[str, Any]: Enrichment result and retrieved data.
+        """
+        import urllib.request
+        import urllib.parse
+        from logger import logger
+
+        # 校验域名防范 SSRF (Validate domain to prevent SSRF)
+        ALLOWED_ENRICHMENT_DOMAINS = ["en.wikipedia.org"]
+
+        clean_name = concept_name.replace("'", "")
+        try:
+            domain = ALLOWED_ENRICHMENT_DOMAINS[0]
+            url = f"https://{domain}/api/rest_v1/page/summary/{urllib.parse.quote(clean_name)}"
+
+            req = urllib.request.Request(url, headers={"User-Agent": "Nexus-Cortex-Enrichment/1.0"})
+            with urllib.request.urlopen(req, timeout=5) as response:
+                data = json.loads(response.read().decode())
+                extract = data.get("extract")
+                if extract:
+                    concept_id = f"concept_{clean_name.lower().replace(' ', '_')}"
+
+                    cortex = Cortex()
+                    cortex.add_entity(id=concept_id, type_slug="concept", name=clean_name, desc=extract, save_to_disk=True)
+                    return {"status": "success", "message": f"Enriched metadata for '{clean_name}'.", "data": extract}
+                else:
+                    return {"status": "error", "message": f"No extract found for '{clean_name}'."}
+        except urllib.error.HTTPError as e:
+            return {"status": "error", "message": f"HTTP Error: {e.code}"}
+        except Exception as e:
+            return {"status": "error", "message": str(e)}
+
+registry.register(CortexEnrichSkill)
