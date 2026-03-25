@@ -295,81 +295,160 @@
 
         updateContent();
 
-        // --- Neural Canvas Animation (Vanilla JS) ---
+        // --- Neural Canvas Animation (Vanilla Force-Directed Graph) ---
         const canvas = document.getElementById('neuralCanvas');
         const ctx = canvas.getContext('2d');
         let width = canvas.width = window.innerWidth;
         let height = canvas.height = window.innerHeight;
 
-        let particles = [];
-        const particleCount = Math.min(Math.floor(window.innerWidth / 15), 100);
-
-        // Google Colors + White
         const colors = ['#4285F4', '#EA4335', '#FBBC05', '#34A853', '#ffffff'];
 
-        class Particle {
-            constructor() {
-                this.x = Math.random() * width;
-                this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * 0.8;
-                this.vy = (Math.random() - 0.5) * 0.8;
-                this.radius = Math.random() * 2 + 1;
-                this.color = colors[Math.floor(Math.random() * colors.length)];
-            }
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-                if (this.x < 0 || this.x > width) this.vx = -this.vx;
-                if (this.y < 0 || this.y > height) this.vy = -this.vy;
-            }
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = this.color;
-                ctx.fill();
+        let nodes = [];
+        let links = [];
+
+        async function fetchGraphData() {
+            try {
+                const res = await fetch('/api/graph');
+                const data = await res.json();
+                if (data.status === 'ok') {
+                    const payloadNodes = data.payload.nodes || [];
+                    const payloadLinks = data.payload.links || [];
+
+                    // 初始化节点位置与属性 (Init node physics and properties)
+                    const nodeMap = {};
+                    nodes = payloadNodes.map((n, i) => {
+                        const maxW = Math.max(...payloadNodes.map(x => x.weight || 1));
+                        const r = Math.max((n.weight / maxW) * 8, 2);
+                        const nodeObj = {
+                            id: n.id,
+                            name: n.name,
+                            weight: n.weight,
+                            radius: r,
+                            x: Math.random() * width,
+                            y: Math.random() * height,
+                            vx: 0,
+                            vy: 0,
+                            color: colors[i % colors.length]
+                        };
+                        nodeMap[n.id] = nodeObj;
+                        return nodeObj;
+                    });
+
+                    // 构建物理连线关系 (Map links to node objects)
+                    links = payloadLinks
+                        .filter(l => nodeMap[l.source] && nodeMap[l.target])
+                        .map(l => ({
+                            source: nodeMap[l.source],
+                            target: nodeMap[l.target],
+                            value: l.value || 1
+                        }));
+
+                    requestAnimationFrame(applyPhysics);
+                }
+            } catch (e) {
+                console.warn('Cortex Offline. Visual cortex disconnected.', e);
             }
         }
 
-        function initParticles() {
-            particles = [];
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle());
-            }
-        }
-
-        function animate() {
+        // 纯原生力导向物理引擎 (Pure Vanilla Physics Engine)
+        function applyPhysics() {
             ctx.clearRect(0, 0, width, height);
 
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
+            // 阻尼、斥力系数、弹簧长度、弹簧系数 (Physics Constants)
+            const damping = 0.85;
+            const kRepel = 2000;
+            const springLen = 80;
+            const kSpring = 0.02;
 
-                for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-
-                    if (dist < 120) {
-                        ctx.beginPath();
-                        ctx.strokeStyle = `rgba(255, 255, 255, ${1 - dist / 120})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.stroke();
+            // 1. 斥力计算 (Coulomb Repulsion)
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const dx = nodes[i].x - nodes[j].x;
+                    const dy = nodes[i].y - nodes[j].y;
+                    let dist = Math.sqrt(dx*dx + dy*dy) || 1;
+                    if (dist < 300) {
+                        const force = kRepel / (dist * dist);
+                        const fx = (dx / dist) * force;
+                        const fy = (dy / dist) * force;
+                        nodes[i].vx += fx;
+                        nodes[i].vy += fy;
+                        nodes[j].vx -= fx;
+                        nodes[j].vy -= fy;
                     }
                 }
             }
-            requestAnimationFrame(animate);
+
+            // 2. 引力计算 (Hooke's Spring)
+            for (let i = 0; i < links.length; i++) {
+                const link = links[i];
+                const dx = link.target.x - link.source.x;
+                const dy = link.target.y - link.source.y;
+                const dist = Math.sqrt(dx*dx + dy*dy) || 1;
+
+                const force = (dist - springLen) * kSpring;
+                const fx = (dx / dist) * force;
+                const fy = (dy / dist) * force;
+
+                link.source.vx += fx;
+                link.source.vy += fy;
+                link.target.vx -= fx;
+                link.target.vy -= fy;
+            }
+
+            // 3. 向心力 (Centripetal Force to keep nodes on screen)
+            const cx = width / 2;
+            const cy = height / 2;
+            for (let i = 0; i < nodes.length; i++) {
+                nodes[i].vx += (cx - nodes[i].x) * 0.005;
+                nodes[i].vy += (cy - nodes[i].y) * 0.005;
+            }
+
+            // 4. 更新坐标并绘制连线 (Update Pos & Draw Links)
+            ctx.lineWidth = 0.5;
+            for (let i = 0; i < links.length; i++) {
+                const link = links[i];
+                ctx.beginPath();
+                ctx.strokeStyle = `rgba(255, 255, 255, 0.15)`;
+                ctx.moveTo(link.source.x, link.source.y);
+                ctx.lineTo(link.target.x, link.target.y);
+                ctx.stroke();
+            }
+
+            // 5. 绘制节点 (Draw Nodes)
+            for (let i = 0; i < nodes.length; i++) {
+                const n = nodes[i];
+                n.vx *= damping;
+                n.vy *= damping;
+                n.x += n.vx;
+                n.y += n.vy;
+
+                // 边界约束 (Bounds checking)
+                n.x = Math.max(n.radius, Math.min(width - n.radius, n.x));
+                n.y = Math.max(n.radius, Math.min(height - n.radius, n.y));
+
+                ctx.beginPath();
+                ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
+                ctx.fillStyle = n.color;
+                ctx.fill();
+
+                // 绘制核心节点标签 (Draw labels for heavy nodes)
+                if (n.radius > 5) {
+                    ctx.fillStyle = "rgba(255, 255, 255, 0.7)";
+                    ctx.font = "10px monospace";
+                    ctx.fillText(n.name, n.x + n.radius + 3, n.y + 3);
+                }
+            }
+
+            requestAnimationFrame(applyPhysics);
         }
 
         window.addEventListener('resize', () => {
             width = canvas.width = window.innerWidth;
             height = canvas.height = window.innerHeight;
-            initParticles();
         });
 
-        initParticles();
-        animate();
+        // 启动视网膜 (Ignite the Retina)
+        fetchGraphData();
 
         // --- Terminal Logic ---
         const termBody = document.getElementById('term-body');

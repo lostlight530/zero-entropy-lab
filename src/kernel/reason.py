@@ -75,6 +75,11 @@ class ReasoningEngine:
             else:
                 insights.append("Task Suggestion: Graph density is optimal. Focus on new external data sources.")
 
+            # 5. 拓扑认知觉醒：纯 Python PageRank 中心度计算 (Emergence: Pure Python PageRank)
+            pagerank_insights = self._awaken_pagerank()
+            if pagerank_insights:
+                insights.extend(pagerank_insights)
+
         except Exception as e:
              logger.error("Error during background analysis", exc_info=True)
              insights.append(f"Analysis Error: A disruption occurred: {e}")
@@ -147,6 +152,80 @@ class ReasoningEngine:
         '''
         results = self._query(sql)
         return [f"'{row[0]}'" for row in results] if results else []
+
+    def _awaken_pagerank(self):
+        """
+        纯 Python 零依赖 PageRank (Zero-Dependency Pure Python PageRank).
+        通过 15 次阻尼迭代计算图谱中所有节点的中心度，自动反写到 SQLite 的 weight 字段。
+        (Computes graph centrality via 15 damped iterations and writes back to SQLite weight.)
+        """
+        try:
+            # 获取所有关系 (Fetch all relations)
+            relations = self._query('SELECT source, target FROM relations')
+            if not relations:
+                return []
+
+            out_links = {}
+            in_links = {}
+            all_nodes = set()
+
+            for source, target in relations:
+                all_nodes.add(source)
+                all_nodes.add(target)
+                if source not in out_links:
+                    out_links[source] = []
+                out_links[source].append(target)
+
+                if target not in in_links:
+                    in_links[target] = []
+                in_links[target].append(source)
+
+            # 初始化 (Initialization)
+            N = len(all_nodes)
+            if N == 0:
+                return []
+
+            ranks = {node: 1.0 for node in all_nodes}
+            damping_factor = 0.85
+            iterations = 15
+
+            # 纯 Python 阻尼迭代 (Pure Python Damped Iteration)
+            for _ in range(iterations):
+                new_ranks = {}
+                for node in all_nodes:
+                    rank_sum = 0.0
+                    for in_node in in_links.get(node, []):
+                        # 如果没有出链，避免除以0 (Avoid division by zero)
+                        out_degree = len(out_links.get(in_node, []))
+                        if out_degree > 0:
+                            rank_sum += ranks[in_node] / out_degree
+                    new_ranks[node] = (1.0 - damping_factor) + damping_factor * rank_sum
+                ranks = new_ranks
+
+            # 更新回数据库 (Write back to database)
+            cursor = self.cortex.conn.cursor()
+            cursor.execute("SAVEPOINT pagerank_update")
+
+            # 找到 Top 3 用于日志 (Find top 3 for logging)
+            top_nodes = sorted(ranks.items(), key=lambda x: x[1], reverse=True)[:3]
+
+            for node, weight in ranks.items():
+                # 为了防止权重过大爆炸，或者冲刷掉原本的长期记忆，我们采取融合策略
+                # (Fuse PageRank with existing weight to prevent explosion)
+                cursor.execute('UPDATE entities SET weight = weight * 0.5 + ? WHERE id = ?', (weight, node))
+
+            self.cortex.conn.commit()
+
+            top_names = []
+            for node_id, w in top_nodes:
+                name_row = self._query(f"SELECT name FROM entities WHERE id = '{node_id}'")
+                name = name_row[0][0] if name_row else node_id
+                top_names.append(f"'{name}' ({w:.2f})")
+
+            return [f"Emergence: PageRank completed. Top core concepts discovered: {', '.join(top_names)}."]
+        except Exception as e:
+            logger.error(f"Error during PageRank calculation: {e}", exc_info=True)
+            return [f"Emergence Error: PageRank failed: {e}"]
 
     def _query(self, sql):
         try:
