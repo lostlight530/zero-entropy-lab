@@ -26,8 +26,8 @@ class Harvester:
         self.state_file = self.inputs_path / ".harvester_state.json"
         self.state = self._load_state()
 
-        # [Architect's Watchlist]
-        self.targets = {
+        # 情报数据源 (Data Sources)
+        self.data_sources = {
             "ModelEngine-Group/nexent": ["tags"],
             "iflytek/astron-agent": ["tags"],
             "langgenius/dify": ["tags"],
@@ -53,8 +53,8 @@ class Harvester:
         except Exception as e:
             logger.error(f"Failed to save harvester state: {e}", exc_info=True)
 
-    def _analyze_content(self, text):
-        """Architect's Filters: Semantic Tagging"""
+    def _extract_tags(self, text):
+        """内容标签提取 (Content Tag Extraction)"""
         tags = []
         # Edge AI
         if re.search(r'(?i)(onnx|gguf|litert|android|ios|arm|npu|quantiz)', text):
@@ -71,8 +71,8 @@ class Harvester:
         logger.info("[Harvester] Scanning frequencies...")
         new_files = []
 
-        for repo, endpoints in self.targets.items():
-            logger.info(f"   Target: {repo}...")
+        for repo, endpoints in self.data_sources.items():
+            logger.info(f"   Scanning Source: {repo}...")
             url = f"https://api.github.com/repos/{repo}/releases/latest"
 
             try:
@@ -86,10 +86,10 @@ class Harvester:
                     # Deduplication check
                     last_tag = self.state.get(repo, {}).get('last_tag')
                     if tag != last_tag:
-                        logger.info(f"   🔥 Signal: {tag}")
+                        logger.info(f"   => New Data Detected: {tag}")
 
-                        # Analyze
-                        analysis_tags = self._analyze_content(body)
+                        # Extract tags
+                        analysis_tags = self._extract_tags(body)
                         header_tags = " ".join(analysis_tags)
 
                         # Write Report
