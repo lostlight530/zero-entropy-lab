@@ -1,24 +1,685 @@
-{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class", "hash": "a66dd5f612239fe67132f7f7a9c933219a63ec0211e82aefbdc4437624c95fa0", "prev_hash": "NEXUS_GENESIS_0000"}
-{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende", "hash": "3fa5f43672154e900e15704614fba5661b5f5c39d08ff1525c04931df8ac5078", "prev_hash": "a66dd5f612239fe67132f7f7a9c933219a63ec0211e82aefbdc4437624c95fa0"}
-{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C", "hash": "43981a7b1df7195fe56cb4c6b6682105a93aae53964c80b81091b92413ffcea0", "prev_hash": "3fa5f43672154e900e15704614fba5661b5f5c39d08ff1525c04931df8ac5078"}
-{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class", "hash": "c6638d85ae7b0de36164548ad2ac264a968ef1beb781bdd15a868f8073249bdc", "prev_hash": "43981a7b1df7195fe56cb4c6b6682105a93aae53964c80b81091b92413ffcea0"}
-{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class", "hash": "5cab30a53cfb7be3cb8a9c6d0ea958a2679b7d882fa2908ade0d7cd604bbaf07", "prev_hash": "c6638d85ae7b0de36164548ad2ac264a968ef1beb781bdd15a868f8073249bdc"}
-{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "基础服务协议类 (Base MCP Protocol Skill).\n自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execu", "hash": "f7955501a865dcb1ef07c06c5b809b080cebf72a0fb4d64cd479ba0042e56307", "prev_hash": "5cab30a53cfb7be3cb8a9c6d0ea958a2679b7d882fa2908ade0d7cd604bbaf07"}
-{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "轻量级协议注册中心 (Lightweight Protocol Registry).\n扫描并实例化可用服务接口。(Scans and instantiates available service in", "hash": "9dc3cd4931007b4846e99813c3e134dd8408caa996e22f61cc98cb23ddae6815", "prev_hash": "f7955501a865dcb1ef07c06c5b809b080cebf72a0fb4d64cd479ba0042e56307"}
-{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti", "hash": "755b2badba6bf1abcf11d871ae1ccbcb591a81c59a8d83fb3563ee9dab65c4c3", "prev_hash": "9dc3cd4931007b4846e99813c3e134dd8408caa996e22f61cc98cb23ddae6815"}
-{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "图谱实体写入接口 (Graph Entity Insertion Interface).\n将新实体写入至底层数据存储。(Inserts a new entity into the underlying", "hash": "04d6e4306886b8ffdb68b9fb69a5ee8f532eefd37d26218e3ca9fdd4b5cd5556", "prev_hash": "755b2badba6bf1abcf11d871ae1ccbcb591a81c59a8d83fb3563ee9dab65c4c3"}
-{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "图谱边创建接口 (Graph Edge Creation Interface).\n在现有实体间建立关联。(Creates a relation between two existing entitie", "hash": "57a9d54f062834721a050782def175819d3d1a2e547dc0081d09080bd3e42b72", "prev_hash": "04d6e4306886b8ffdb68b9fb69a5ee8f532eefd37d26218e3ca9fdd4b5cd5556"}
-{"id": "class_CortexEnrichSkill", "type": "code_class", "name": "CortexEnrichSkill", "desc": "外部元数据补充协议 (External Metadata Enrichment Interface).\n通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via", "hash": "653af4df0db4c03c49f46b92403ba81e93590ffd3043b8d96ef281e5d8d79cbe", "prev_hash": "57a9d54f062834721a050782def175819d3d1a2e547dc0081d09080bd3e42b72"}
-{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class", "hash": "c40945da05ddfaf42b3d1f9e04337a2b27f31b1b595b87d839bf0448c06659ae", "prev_hash": "653af4df0db4c03c49f46b92403ba81e93590ffd3043b8d96ef281e5d8d79cbe"}
-{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class", "hash": "92a529f1fd8e3071dc5c91ca801dbdbd106ac0da21da97309f7e8158acdde9ec", "prev_hash": "c40945da05ddfaf42b3d1f9e04337a2b27f31b1b595b87d839bf0448c06659ae"}
-{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class", "hash": "5a1b3a821f5b742a717dbb2e69055c4251b4645808f13dad58227025bee38cc9", "prev_hash": "92a529f1fd8e3071dc5c91ca801dbdbd106ac0da21da97309f7e8158acdde9ec"}
-{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class", "hash": "3d5a37ffc2a7cec660ee25199fbb4f6ea8668f069a027ac5c4c0f424bb0b914f", "prev_hash": "5a1b3a821f5b742a717dbb2e69055c4251b4645808f13dad58227025bee38cc9"}
-{"id": "class_TokenBucket", "type": "code_class", "name": "TokenBucket", "desc": "自适应免疫盾墙 (Adaptive Immune Shield: Native Token Bucket Rate Limiter)\n防御极端高频并发 (Defends against extreme", "hash": "4ac1eb3069a9f7b2180748113b70939ed8028710cb1c7ef338a8101e9e447d5c", "prev_hash": "3d5a37ffc2a7cec660ee25199fbb4f6ea8668f069a027ac5c4c0f424bb0b914f"}
-{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)", "hash": "06c61f07b84f40dc37cebf7e0cf2d8e5aa0116f4f4f263697223b0348afd54fc", "prev_hash": "4ac1eb3069a9f7b2180748113b70939ed8028710cb1c7ef338a8101e9e447d5c"}
-{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa", "hash": "4cc3e4328cb70b4513e74de4ed3ce3acf92b7782d2a1f43a2e5467fc54bf0442", "prev_hash": "06c61f07b84f40dc37cebf7e0cf2d8e5aa0116f4f4f263697223b0348afd54fc"}
-{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router", "hash": "60cc7a798523efb27f504aecd4eb04ecf00e479c4832242d6d4451cfedda2e21", "prev_hash": "4cc3e4328cb70b4513e74de4ed3ce3acf92b7782d2a1f43a2e5467fc54bf0442"}
-{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class", "hash": "eb5cf9ed36b273f008d555d68bb3d9f39e18ca87a81e4ce936d03851afb6c349", "prev_hash": "60cc7a798523efb27f504aecd4eb04ecf00e479c4832242d6d4451cfedda2e21"}
-{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class", "hash": "5a8c1ee9f8519bb9268da6c66bc894457743895636d2083dbf8e796e2f447a34", "prev_hash": "eb5cf9ed36b273f008d555d68bb3d9f39e18ca87a81e4ce936d03851afb6c349"}
-{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class", "hash": "c34fd7eb8cd07c15a582c96eef26ddd75ff42285f566db64a83c73bd90b4d88f", "prev_hash": "5a8c1ee9f8519bb9268da6c66bc894457743895636d2083dbf8e796e2f447a34"}
-{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class", "hash": "b8d1d5e4bbcdf6a8dbe5529e914825bb5b7bee60385b739c5360c6197e7a6d7d", "prev_hash": "c34fd7eb8cd07c15a582c96eef26ddd75ff42285f566db64a83c73bd90b4d88f"}
-{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class", "hash": "1a500bd66f4a2db5735e133e9d0933b03542773100614ff77d5a125629340fd3", "prev_hash": "b8d1d5e4bbcdf6a8dbe5529e914825bb5b7bee60385b739c5360c6197e7a6d7d"}
+{"id": "class_TestZeroEntropy", "type": "code_class", "name": "TestZeroEntropy", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "零熵 MCP 协议层的基础技能类 (Zero-Entropy MCP Skill Base).\n任何继承此类的子类，都将自动被 MCP Registry 发现，并将其 `execute` 方法的签名转"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "极简的 Tool Registry，负责扫描并实例化系统中的可用 Skills。"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "Memorize a new core concept or entity into the Nexus Cortex graph database."}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "Create a synaptic connection (relation) between two existing entities in the Nexus Cortex."}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "基础服务协议类 (Base MCP Protocol Skill).\n自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execu"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "轻量级协议注册中心 (Lightweight Protocol Registry).\n扫描并实例化可用服务接口。(Scans and instantiates available service in"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "图谱实体写入接口 (Graph Entity Insertion Interface).\n将新实体写入至底层数据存储。(Inserts a new entity into the underlying"}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "图谱边创建接口 (Graph Edge Creation Interface).\n在现有实体间建立关联。(Creates a relation between two existing entitie"}
+{"id": "class_CortexEnrichSkill", "type": "code_class", "name": "CortexEnrichSkill", "desc": "外部元数据补充协议 (External Metadata Enrichment Interface).\n通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "基础服务协议类 (Base MCP Protocol Skill).\n自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execu"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "轻量级协议注册中心 (Lightweight Protocol Registry).\n扫描并实例化可用服务接口。(Scans and instantiates available service in"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "图谱实体写入接口 (Graph Entity Insertion Interface).\n将新实体写入至底层数据存储。(Inserts a new entity into the underlying"}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "图谱边创建接口 (Graph Edge Creation Interface).\n在现有实体间建立关联。(Creates a relation between two existing entitie"}
+{"id": "class_CortexEnrichSkill", "type": "code_class", "name": "CortexEnrichSkill", "desc": "外部元数据补充协议 (External Metadata Enrichment Interface).\n通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class", "hash": "a5fefd2e55086b2e6ece8cb5b4225e4fc77ef39e11b81cbc7c249b4d61d8eafc", "prev_hash": "NEXUS_GENESIS_0000"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class", "hash": "56397222b95bf94786612383ceabd1137683c1a1f7f6d54ab6a67c77bb86318f", "prev_hash": "a5fefd2e55086b2e6ece8cb5b4225e4fc77ef39e11b81cbc7c249b4d61d8eafc"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class", "hash": "c786c14a70a368373e738e231709a47f5d65035a385ffb494fd8c0c87b92b56b", "prev_hash": "56397222b95bf94786612383ceabd1137683c1a1f7f6d54ab6a67c77bb86318f"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class", "hash": "3510d5a5dd9ff1cc3ffb0700e4f3b8b3dec3632ee203fb3193cd7940e8478eec", "prev_hash": "c786c14a70a368373e738e231709a47f5d65035a385ffb494fd8c0c87b92b56b"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende", "hash": "d8c18b8d0359f1e31e9e9f42dfc71bf82865004d3c6045eef9ccfacd1a5d7a27", "prev_hash": "3510d5a5dd9ff1cc3ffb0700e4f3b8b3dec3632ee203fb3193cd7940e8478eec"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class", "hash": "333d7450c45f254e38b7481ae343d57d13f5d75b62cf33a287eda4afcd396c4f", "prev_hash": "d8c18b8d0359f1e31e9e9f42dfc71bf82865004d3c6045eef9ccfacd1a5d7a27"}
+{"id": "class_TokenBucket", "type": "code_class", "name": "TokenBucket", "desc": "自适应免疫盾墙 (Adaptive Immune Shield: Native Token Bucket Rate Limiter)\n防御极端高频并发 (Defends against extreme", "hash": "5d724c33c90c2f9e1a48c1b1087a36f616736d65a99bb699cfd5c8354d72b78c", "prev_hash": "333d7450c45f254e38b7481ae343d57d13f5d75b62cf33a287eda4afcd396c4f"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)", "hash": "e87f27609e69957ad1140bf22152c8ade860e4a689717062fa6917f8ee19b545", "prev_hash": "5d724c33c90c2f9e1a48c1b1087a36f616736d65a99bb699cfd5c8354d72b78c"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa", "hash": "a15eddfef9e8f40d7c93a97933cb1ca5487b082c4ec4bf407db168610b462242", "prev_hash": "e87f27609e69957ad1140bf22152c8ade860e4a689717062fa6917f8ee19b545"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router", "hash": "9507c1861ed492001b8210b1d6e92c397ed3e5bcdcecda86bb637af1be664159", "prev_hash": "a15eddfef9e8f40d7c93a97933cb1ca5487b082c4ec4bf407db168610b462242"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class", "hash": "e3a3f1883d1d48204a0e4da51614e3f420c662253b131d4d7a2c82b464199497", "prev_hash": "9507c1861ed492001b8210b1d6e92c397ed3e5bcdcecda86bb637af1be664159"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class", "hash": "b7de47051a87fdead61a770fe5127c030b9418e8cd897edb3726cbece50fbbbe", "prev_hash": "e3a3f1883d1d48204a0e4da51614e3f420c662253b131d4d7a2c82b464199497"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C", "hash": "081db2ea6398862e4b82d9a5796ff9b0615cf1d0923d6d4cb16aed92e373f296", "prev_hash": "b7de47051a87fdead61a770fe5127c030b9418e8cd897edb3726cbece50fbbbe"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class", "hash": "c90785d23f41d2ce746c9e53a2ce7408a8ce8b817a67002dfa446dd2ce363eda", "prev_hash": "081db2ea6398862e4b82d9a5796ff9b0615cf1d0923d6d4cb16aed92e373f296"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class", "hash": "aadedc05c315b55cc7897792c0570010477a92a697bbf4da3e4d2eaead7532ff", "prev_hash": "c90785d23f41d2ce746c9e53a2ce7408a8ce8b817a67002dfa446dd2ce363eda"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class", "hash": "22b55467756077b3d32c20d6cd5af680569e66b91cef60443383367654f95241", "prev_hash": "aadedc05c315b55cc7897792c0570010477a92a697bbf4da3e4d2eaead7532ff"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class", "hash": "924577b0baa1bbe10b965c21cd977bb72404649bd232455960ff7982161e9737", "prev_hash": "22b55467756077b3d32c20d6cd5af680569e66b91cef60443383367654f95241"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class", "hash": "5141373cbdfe9d80d4d3d2084298304c3a9ab15da30575681057e0b5b1b9bdb9", "prev_hash": "924577b0baa1bbe10b965c21cd977bb72404649bd232455960ff7982161e9737"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "基础服务协议类 (Base MCP Protocol Skill).\n自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execu", "hash": "82e62edaf48be6e0d925333448eef5d978d10b62c75c90c97a42ef904198a937", "prev_hash": "5141373cbdfe9d80d4d3d2084298304c3a9ab15da30575681057e0b5b1b9bdb9"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "轻量级协议注册中心 (Lightweight Protocol Registry).\n扫描并实例化可用服务接口。(Scans and instantiates available service in", "hash": "25e13ff5fcb6f45d4c38afaae1e24ab7511d25803b9d9a74187f118f7b4418e2", "prev_hash": "82e62edaf48be6e0d925333448eef5d978d10b62c75c90c97a42ef904198a937"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti", "hash": "0c7522d035f2123c0f57b9caf2c6bae94f1aa761db6dde7c5d8cc1e6f37671e4", "prev_hash": "25e13ff5fcb6f45d4c38afaae1e24ab7511d25803b9d9a74187f118f7b4418e2"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "图谱实体写入接口 (Graph Entity Insertion Interface).\n将新实体写入至底层数据存储。(Inserts a new entity into the underlying", "hash": "688cb1c8c219b92f89118d3881b9ce4fc6ae5c474f830f19c19d8c447340504e", "prev_hash": "0c7522d035f2123c0f57b9caf2c6bae94f1aa761db6dde7c5d8cc1e6f37671e4"}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "图谱边创建接口 (Graph Edge Creation Interface).\n在现有实体间建立关联。(Creates a relation between two existing entitie", "hash": "f0c3cc0c8e7939d0bf57a6048280d77e151c2845a680e49b54c07bdd1fd0cbfb", "prev_hash": "688cb1c8c219b92f89118d3881b9ce4fc6ae5c474f830f19c19d8c447340504e"}
+{"id": "class_CortexEnrichSkill", "type": "code_class", "name": "CortexEnrichSkill", "desc": "外部元数据补充协议 (External Metadata Enrichment Interface).\n通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via", "hash": "23f043a695e588ed702dc12ea4e24ae210d5e967057833a5bc76df3ede1f80d8", "prev_hash": "f0c3cc0c8e7939d0bf57a6048280d77e151c2845a680e49b54c07bdd1fd0cbfb"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class", "hash": "6a3f147f9efb85e2dac82083fd7b64ec2927aec46790e2273a6e3aa0a5af2e1f", "prev_hash": "23f043a695e588ed702dc12ea4e24ae210d5e967057833a5bc76df3ede1f80d8"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class", "hash": "f2cc2cbfbd8f5b68039f9de8557fe124c1ae4eeb545a64ba830140b0caf06ddf", "prev_hash": "6a3f147f9efb85e2dac82083fd7b64ec2927aec46790e2273a6e3aa0a5af2e1f"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class", "hash": "0a8b049ab22d4a529e20fc7d669fe1f02bebae1a0fc365d0f4b2c7bdead4fac1", "prev_hash": "f2cc2cbfbd8f5b68039f9de8557fe124c1ae4eeb545a64ba830140b0caf06ddf"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class", "hash": "5a2ddb730715fbe9700604bab6bb2093a142cc290fd0c144daea0eebf8424485", "prev_hash": "0a8b049ab22d4a529e20fc7d669fe1f02bebae1a0fc365d0f4b2c7bdead4fac1"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende", "hash": "9eb5fae60ef9040c05549389f384e2ad2f9449de27cbbbb8c0d758bf64f6b6d4", "prev_hash": "5a2ddb730715fbe9700604bab6bb2093a142cc290fd0c144daea0eebf8424485"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class", "hash": "b1d6284426af78ba266945ed8904338b04cd4e0b51a36a3cbc16de302b826342", "prev_hash": "9eb5fae60ef9040c05549389f384e2ad2f9449de27cbbbb8c0d758bf64f6b6d4"}
+{"id": "class_TokenBucket", "type": "code_class", "name": "TokenBucket", "desc": "自适应免疫盾墙 (Adaptive Immune Shield: Native Token Bucket Rate Limiter)\n防御极端高频并发 (Defends against extreme", "hash": "a0ec818322cf4bef4979a23b7f2dff97995f81f2a45f37c9563b17c2ef36141d", "prev_hash": "b1d6284426af78ba266945ed8904338b04cd4e0b51a36a3cbc16de302b826342"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)", "hash": "ba7ae3e0ae11dd9a83e9db00002a3b24fcb3b2aa7fa7305156df6a31b2679e56", "prev_hash": "a0ec818322cf4bef4979a23b7f2dff97995f81f2a45f37c9563b17c2ef36141d"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa", "hash": "7b563ecf8785977c6193be41e3c167f0fecf85d3ba1fc619d956cab10b5e300f", "prev_hash": "ba7ae3e0ae11dd9a83e9db00002a3b24fcb3b2aa7fa7305156df6a31b2679e56"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router", "hash": "199268538c4bcc3d4f852a52c34530572be0e173c665e96ddaa1467009db5020", "prev_hash": "7b563ecf8785977c6193be41e3c167f0fecf85d3ba1fc619d956cab10b5e300f"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class", "hash": "2a122b73a8a077ae57390056eb62dfff41465ea8473e29373a903029cdba02da", "prev_hash": "199268538c4bcc3d4f852a52c34530572be0e173c665e96ddaa1467009db5020"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class", "hash": "e844fd10bc5b967856944cbcbc5651b3ae78a852ca12feae35985aa263e3f22b", "prev_hash": "2a122b73a8a077ae57390056eb62dfff41465ea8473e29373a903029cdba02da"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C", "hash": "d9681e6cb0e74b6208669f6bf983845bcf91cb3c23ce6f836bd61e8d3ed5551e", "prev_hash": "e844fd10bc5b967856944cbcbc5651b3ae78a852ca12feae35985aa263e3f22b"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class", "hash": "34761a97332e6036788b19fb004eaf613b06adb8a089241aebadec20b2e23655", "prev_hash": "d9681e6cb0e74b6208669f6bf983845bcf91cb3c23ce6f836bd61e8d3ed5551e"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class", "hash": "38f59c7a5244b68601e5eb2628b6d2a7860248a6f5c0ae35837609b4a4c2bbcf", "prev_hash": "34761a97332e6036788b19fb004eaf613b06adb8a089241aebadec20b2e23655"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class", "hash": "06fbbd51d808efc639a18d2677eb33745bb1ebe7e8f04a31e5e5dc8982927150", "prev_hash": "38f59c7a5244b68601e5eb2628b6d2a7860248a6f5c0ae35837609b4a4c2bbcf"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class", "hash": "7c5d3ee3174e8fc63a472594148274e1130a8c2e170881c8aba597476b57b7cb", "prev_hash": "06fbbd51d808efc639a18d2677eb33745bb1ebe7e8f04a31e5e5dc8982927150"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class", "hash": "2ebce5ae4cbcc1863f8149273a9a23a95a270337599a31803fb01fed2bb2b9a1", "prev_hash": "7c5d3ee3174e8fc63a472594148274e1130a8c2e170881c8aba597476b57b7cb"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "基础服务协议类 (Base MCP Protocol Skill).\n自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execu", "hash": "2f8be91c4a9a22c36224428a904aaef153e759ac2185e12f31b7ad9b06fe1b24", "prev_hash": "2ebce5ae4cbcc1863f8149273a9a23a95a270337599a31803fb01fed2bb2b9a1"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "轻量级协议注册中心 (Lightweight Protocol Registry).\n扫描并实例化可用服务接口。(Scans and instantiates available service in", "hash": "6d5432f0912c64f79a1f4b66749a198944d73b16f9697ac3a0e3d20c2bcc8138", "prev_hash": "2f8be91c4a9a22c36224428a904aaef153e759ac2185e12f31b7ad9b06fe1b24"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti", "hash": "2de51c6bd4ab48dbd69d9a5d51d96afdbd1385c42195596f99439b8f4ca796a6", "prev_hash": "6d5432f0912c64f79a1f4b66749a198944d73b16f9697ac3a0e3d20c2bcc8138"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "图谱实体写入接口 (Graph Entity Insertion Interface).\n将新实体写入至底层数据存储。(Inserts a new entity into the underlying", "hash": "384f6f038338d07e67c26ddd47e21a1fc2798bd51fc115b7835a4402e7d5b646", "prev_hash": "2de51c6bd4ab48dbd69d9a5d51d96afdbd1385c42195596f99439b8f4ca796a6"}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "图谱边创建接口 (Graph Edge Creation Interface).\n在现有实体间建立关联。(Creates a relation between two existing entitie", "hash": "908d9c0b587dc2ded07644dc237e3a9bf2807dae084efdf897c67566141ce065", "prev_hash": "384f6f038338d07e67c26ddd47e21a1fc2798bd51fc115b7835a4402e7d5b646"}
+{"id": "class_CortexEnrichSkill", "type": "code_class", "name": "CortexEnrichSkill", "desc": "外部元数据补充协议 (External Metadata Enrichment Interface).\n通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via", "hash": "705b7f2bed5e12beb084b679b24976db95427bad9e4c0e9de56d290776b121d2", "prev_hash": "908d9c0b587dc2ded07644dc237e3a9bf2807dae084efdf897c67566141ce065"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class", "hash": "211cc9961057c70d4e3282d5506f61f248a1267fa2d2eed2ffb1df5408312624", "prev_hash": "705b7f2bed5e12beb084b679b24976db95427bad9e4c0e9de56d290776b121d2"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class", "hash": "577ec9686f7c08747e2a1f7ae47c68e6c9226424ed0908327b48668b504abb14", "prev_hash": "211cc9961057c70d4e3282d5506f61f248a1267fa2d2eed2ffb1df5408312624"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class", "hash": "31342b910e72b053dc961da7359368b2f2bc9b4f45006e83e49f709ceac83009", "prev_hash": "577ec9686f7c08747e2a1f7ae47c68e6c9226424ed0908327b48668b504abb14"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class", "hash": "3117ed6fb89ab6ca4a43c5181c3c8e3603ce70df8595b041beb620eebcce51a1", "prev_hash": "31342b910e72b053dc961da7359368b2f2bc9b4f45006e83e49f709ceac83009"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende", "hash": "5f6389a346fb488094a15bf294881003ecb1ceb8a97721fcb20101102877a7dc", "prev_hash": "3117ed6fb89ab6ca4a43c5181c3c8e3603ce70df8595b041beb620eebcce51a1"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class", "hash": "1690c7dc5daaa1026ea2cac967f7c0530de5da1b0e7120523bc25d50620bd149", "prev_hash": "5f6389a346fb488094a15bf294881003ecb1ceb8a97721fcb20101102877a7dc"}
+{"id": "class_TokenBucket", "type": "code_class", "name": "TokenBucket", "desc": "自适应免疫盾墙 (Adaptive Immune Shield: Native Token Bucket Rate Limiter)\n防御极端高频并发 (Defends against extreme", "hash": "58f0deedb601e5e75b71675cff57cc45a365e7bed3acaf5cd5a8cc7ba3196fec", "prev_hash": "1690c7dc5daaa1026ea2cac967f7c0530de5da1b0e7120523bc25d50620bd149"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)", "hash": "37f48b0b96c43110dac4e36f72fda1949029761d617b8bd6688572a190db6ba5", "prev_hash": "58f0deedb601e5e75b71675cff57cc45a365e7bed3acaf5cd5a8cc7ba3196fec"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa", "hash": "91d127ab009b69538bdf8b5d978c90aac3db0310a62c767e84333ca4efeeba2a", "prev_hash": "37f48b0b96c43110dac4e36f72fda1949029761d617b8bd6688572a190db6ba5"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router", "hash": "eaaf8891d2be402d592d3c699252ff8516b3ca45237469d28fa01ba0b638b75e", "prev_hash": "91d127ab009b69538bdf8b5d978c90aac3db0310a62c767e84333ca4efeeba2a"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class", "hash": "6eb313cc4b4b9aa0ab135def530dd22e5411cd6c4fbd02f0084ef018ab561d2f", "prev_hash": "eaaf8891d2be402d592d3c699252ff8516b3ca45237469d28fa01ba0b638b75e"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class", "hash": "aef9b24e1bc7d20be40635a3817395f3d91715172a5fd468cd9d84dd047631a9", "prev_hash": "6eb313cc4b4b9aa0ab135def530dd22e5411cd6c4fbd02f0084ef018ab561d2f"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C", "hash": "c9dc005ee6e98d7919e11ddda976e254a470c142e46536feca45152e09a8f3dd", "prev_hash": "aef9b24e1bc7d20be40635a3817395f3d91715172a5fd468cd9d84dd047631a9"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class", "hash": "f985f7dfb7b014227042864021904e5b4af4173751e2f86bf4e03586f2d4e599", "prev_hash": "c9dc005ee6e98d7919e11ddda976e254a470c142e46536feca45152e09a8f3dd"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class", "hash": "5c57c81c34e8cc305f04aede0d45b58b7fb5aa1cb6aa895f1e14fba0d453c878", "prev_hash": "f985f7dfb7b014227042864021904e5b4af4173751e2f86bf4e03586f2d4e599"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class", "hash": "a6c811d08612d0e40cfccc9984030ce78346dfe64892ef3e4acc0156fb97509b", "prev_hash": "5c57c81c34e8cc305f04aede0d45b58b7fb5aa1cb6aa895f1e14fba0d453c878"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class", "hash": "4d665bb733ae5afe841be10acb8a2b58707a2d96383c528379ffdb0329583912", "prev_hash": "a6c811d08612d0e40cfccc9984030ce78346dfe64892ef3e4acc0156fb97509b"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class", "hash": "4d6f3d8143d44dfa4325f6a5e942e55d8df320dbf5fccb327696803603422067", "prev_hash": "4d665bb733ae5afe841be10acb8a2b58707a2d96383c528379ffdb0329583912"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "基础服务协议类 (Base MCP Protocol Skill).\n自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execu", "hash": "f986ac08d882d9a15c48dacbe32905ee5530fe871969d629a7c7b8fe9852070d", "prev_hash": "4d6f3d8143d44dfa4325f6a5e942e55d8df320dbf5fccb327696803603422067"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "轻量级协议注册中心 (Lightweight Protocol Registry).\n扫描并实例化可用服务接口。(Scans and instantiates available service in", "hash": "4f7ae1efa5f0716f0ac8fded55b6f9f18e15a955a81b30a51b2a9534798b077e", "prev_hash": "f986ac08d882d9a15c48dacbe32905ee5530fe871969d629a7c7b8fe9852070d"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti", "hash": "5989d77611a827d80c14ebdb97c3b383882218d98dd8299754c6e2b3ee9460fa", "prev_hash": "4f7ae1efa5f0716f0ac8fded55b6f9f18e15a955a81b30a51b2a9534798b077e"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "图谱实体写入接口 (Graph Entity Insertion Interface).\n将新实体写入至底层数据存储。(Inserts a new entity into the underlying", "hash": "aa1e40119e229364d7d4177e1f1703da319f9fe7599138bf24c5b7a759c4bb5b", "prev_hash": "5989d77611a827d80c14ebdb97c3b383882218d98dd8299754c6e2b3ee9460fa"}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "图谱边创建接口 (Graph Edge Creation Interface).\n在现有实体间建立关联。(Creates a relation between two existing entitie", "hash": "93f175b3817edd26901ef94647d46eaa890b134945726134bebec038fe615d8f", "prev_hash": "aa1e40119e229364d7d4177e1f1703da319f9fe7599138bf24c5b7a759c4bb5b"}
+{"id": "class_CortexEnrichSkill", "type": "code_class", "name": "CortexEnrichSkill", "desc": "外部元数据补充协议 (External Metadata Enrichment Interface).\n通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via", "hash": "60cffd1371a85f013a99b82388f4fbe95d2ebee7ae77cd6fed58bbe4c2233047", "prev_hash": "93f175b3817edd26901ef94647d46eaa890b134945726134bebec038fe615d8f"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class", "hash": "3bf68ad8952e8f6143e484536c5aac8780f07c92b3f461c680d8f7f117a41947", "prev_hash": "60cffd1371a85f013a99b82388f4fbe95d2ebee7ae77cd6fed58bbe4c2233047"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class", "hash": "3e5e110c33f2b22b907eb579b48b7b052825af94da8a1c81b85a3848a38a1554", "prev_hash": "3bf68ad8952e8f6143e484536c5aac8780f07c92b3f461c680d8f7f117a41947"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class", "hash": "64c0f080fdf74d69c275f30767f8a721a1854d4dbc5229408f3d05445f0baac0", "prev_hash": "3e5e110c33f2b22b907eb579b48b7b052825af94da8a1c81b85a3848a38a1554"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class", "hash": "27c706829dcaaa14a6f41db662b265d7ffe17de0d0038ad2d94a24ccff4bdf7a", "prev_hash": "64c0f080fdf74d69c275f30767f8a721a1854d4dbc5229408f3d05445f0baac0"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende", "hash": "c5563b3aa5e6af19f4bffd271dc3a9515e5363d902f0500e1ca3087d6b7bec90", "prev_hash": "27c706829dcaaa14a6f41db662b265d7ffe17de0d0038ad2d94a24ccff4bdf7a"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class", "hash": "6d77719550e8465f39b91cf28cb609721a7a632d79a103db1a2334b1a60fbfe0", "prev_hash": "c5563b3aa5e6af19f4bffd271dc3a9515e5363d902f0500e1ca3087d6b7bec90"}
+{"id": "class_TokenBucket", "type": "code_class", "name": "TokenBucket", "desc": "自适应免疫盾墙 (Adaptive Immune Shield: Native Token Bucket Rate Limiter)\n防御极端高频并发 (Defends against extreme", "hash": "e9c987c24922ca85e5aafe32e1d5d3ba5d175ad08a36b44e9a610c190edf28df", "prev_hash": "6d77719550e8465f39b91cf28cb609721a7a632d79a103db1a2334b1a60fbfe0"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)", "hash": "57288193ad30805e21e481ddab2900ccddd3793c548964693be69051c6dbf28b", "prev_hash": "e9c987c24922ca85e5aafe32e1d5d3ba5d175ad08a36b44e9a610c190edf28df"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa", "hash": "688f45c84edb3d356615a3a8eb54f2925439af65c89a2ace7bd18609931f7ed4", "prev_hash": "57288193ad30805e21e481ddab2900ccddd3793c548964693be69051c6dbf28b"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router", "hash": "e548c51ebd8ceac7f277f90825060bdee752f3a45cdec0668a21f788ee667798", "prev_hash": "688f45c84edb3d356615a3a8eb54f2925439af65c89a2ace7bd18609931f7ed4"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class", "hash": "6085a751ca131956c896c4e3f00d5bc3f965e5f822a0240c6dc64e27fab8aecd", "prev_hash": "e548c51ebd8ceac7f277f90825060bdee752f3a45cdec0668a21f788ee667798"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class", "hash": "4c29fbc28840b933d672b842553463be42096e4bfd975b86daa27af1f37d5bc1", "prev_hash": "6085a751ca131956c896c4e3f00d5bc3f965e5f822a0240c6dc64e27fab8aecd"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C", "hash": "60e8258fdcd2efb57334a55f80036ec00e0818e40799ff1d1ce7db3124ee61ab", "prev_hash": "4c29fbc28840b933d672b842553463be42096e4bfd975b86daa27af1f37d5bc1"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class", "hash": "13fe4d373e6f33d693aba4e531534199d2e04429c0f8850621af47f125999864", "prev_hash": "60e8258fdcd2efb57334a55f80036ec00e0818e40799ff1d1ce7db3124ee61ab"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class", "hash": "4d3edfb7b1d6303ce2b0e4d071329571dcbed8b1ba9c8760cf96a2dcaa12e14e", "prev_hash": "13fe4d373e6f33d693aba4e531534199d2e04429c0f8850621af47f125999864"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class", "hash": "f5569d284a10a3187cc128578fdd7486298e3b72757771ac6b7d51c0e32bb78e", "prev_hash": "4d3edfb7b1d6303ce2b0e4d071329571dcbed8b1ba9c8760cf96a2dcaa12e14e"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class", "hash": "3f4fdfc3d0c452666f253e95fe2cdfb5d63d7405e88ce2b3b05b24ac3c5747a7", "prev_hash": "f5569d284a10a3187cc128578fdd7486298e3b72757771ac6b7d51c0e32bb78e"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class", "hash": "f48d298106e58b3ca55947dd9a87f83b6af8bd08667bfb6f40e710829dc1eaeb", "prev_hash": "3f4fdfc3d0c452666f253e95fe2cdfb5d63d7405e88ce2b3b05b24ac3c5747a7"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "基础服务协议类 (Base MCP Protocol Skill).\n自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execu", "hash": "6d77f95f02737c95a9b5a7bf3d56c019fcca752e0f08b444d1d5e4277c424b25", "prev_hash": "f48d298106e58b3ca55947dd9a87f83b6af8bd08667bfb6f40e710829dc1eaeb"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "轻量级协议注册中心 (Lightweight Protocol Registry).\n扫描并实例化可用服务接口。(Scans and instantiates available service in", "hash": "6d04733baccd40d26ce67225ebe5c9f196776b9b8430ddc1c2d9450f8044f2cd", "prev_hash": "6d77f95f02737c95a9b5a7bf3d56c019fcca752e0f08b444d1d5e4277c424b25"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti", "hash": "4e3151d2ff9dd0779fb24cb47a22d1b582d28e123660d9da631576670a68d2d6", "prev_hash": "6d04733baccd40d26ce67225ebe5c9f196776b9b8430ddc1c2d9450f8044f2cd"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "图谱实体写入接口 (Graph Entity Insertion Interface).\n将新实体写入至底层数据存储。(Inserts a new entity into the underlying", "hash": "303d5bca408257b8c2b6ac0476df65a79d656c89f14cdca1c0e9bf919a459b0a", "prev_hash": "4e3151d2ff9dd0779fb24cb47a22d1b582d28e123660d9da631576670a68d2d6"}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "图谱边创建接口 (Graph Edge Creation Interface).\n在现有实体间建立关联。(Creates a relation between two existing entitie", "hash": "48b29f8a192f8a08cdd8d9231c476550574575821537e551afedee0039eb1a83", "prev_hash": "303d5bca408257b8c2b6ac0476df65a79d656c89f14cdca1c0e9bf919a459b0a"}
+{"id": "class_CortexEnrichSkill", "type": "code_class", "name": "CortexEnrichSkill", "desc": "外部元数据补充协议 (External Metadata Enrichment Interface).\n通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via", "hash": "b9b364bbe0fa6e85d44d07ed48214d5e58a81b9e0b2cc790b7dcc7028dd6a8e2", "prev_hash": "48b29f8a192f8a08cdd8d9231c476550574575821537e551afedee0039eb1a83"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class", "hash": "0797bee6d118e760ad5f6896376b2e7006c3924ef327af8c1e60a77fa366e7aa", "prev_hash": "b9b364bbe0fa6e85d44d07ed48214d5e58a81b9e0b2cc790b7dcc7028dd6a8e2"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende", "hash": "f916e08260cfdd1feccae3bba7f234c9f7152c9a7993e2c2d8340df01445f0bf", "prev_hash": "0797bee6d118e760ad5f6896376b2e7006c3924ef327af8c1e60a77fa366e7aa"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C", "hash": "18f6e03d1d02ed786794b1556e98e9f66bf95149994a46d2b95c0baab3154819", "prev_hash": "f916e08260cfdd1feccae3bba7f234c9f7152c9a7993e2c2d8340df01445f0bf"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class", "hash": "dc622eab042bf0acfd6efbae7a0ccd5bff4a935876c7229791f03366b966c274", "prev_hash": "18f6e03d1d02ed786794b1556e98e9f66bf95149994a46d2b95c0baab3154819"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class", "hash": "0cae527d3597ffa85ad8e23f250ff0a735116c967f106ea1291cd461b70eb1fc", "prev_hash": "dc622eab042bf0acfd6efbae7a0ccd5bff4a935876c7229791f03366b966c274"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "基础服务协议类 (Base MCP Protocol Skill).\n自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execu", "hash": "9d4ebe0f28fc2ab7f2787b57001a4c92ef3d28a76b19b779cd31070dc9d9993a", "prev_hash": "0cae527d3597ffa85ad8e23f250ff0a735116c967f106ea1291cd461b70eb1fc"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "轻量级协议注册中心 (Lightweight Protocol Registry).\n扫描并实例化可用服务接口。(Scans and instantiates available service in", "hash": "190695f52a7f570361cd3840589a2562620a6666cb02e137e524750f610c0972", "prev_hash": "9d4ebe0f28fc2ab7f2787b57001a4c92ef3d28a76b19b779cd31070dc9d9993a"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti", "hash": "9843594eb8288771dfdd686d4336ba1556ea5fa8b12fefef9db1cfc90270b4d4", "prev_hash": "190695f52a7f570361cd3840589a2562620a6666cb02e137e524750f610c0972"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "图谱实体写入接口 (Graph Entity Insertion Interface).\n将新实体写入至底层数据存储。(Inserts a new entity into the underlying", "hash": "65a66eea67733c0e9fcc5f7d50b7ee525a39805d6e1aef13f148c291acf19c51", "prev_hash": "9843594eb8288771dfdd686d4336ba1556ea5fa8b12fefef9db1cfc90270b4d4"}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "图谱边创建接口 (Graph Edge Creation Interface).\n在现有实体间建立关联。(Creates a relation between two existing entitie", "hash": "41c1a2210c1b7b0c2a31fae3341898382fcf5711082983819ea59b7b5910b34b", "prev_hash": "65a66eea67733c0e9fcc5f7d50b7ee525a39805d6e1aef13f148c291acf19c51"}
+{"id": "class_CortexEnrichSkill", "type": "code_class", "name": "CortexEnrichSkill", "desc": "外部元数据补充协议 (External Metadata Enrichment Interface).\n通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via", "hash": "487ac802c4f5d89a9599028897debf98fa20899cd001325bed46e174243df123", "prev_hash": "41c1a2210c1b7b0c2a31fae3341898382fcf5711082983819ea59b7b5910b34b"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class", "hash": "75155853198f6616a60a2eaf9616c23f25ab7dd75c441c26e91ca229001b0730", "prev_hash": "487ac802c4f5d89a9599028897debf98fa20899cd001325bed46e174243df123"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class", "hash": "137a82bf8a12a6c895cbb736d2c1de7269fd8c30eb98e50372d42943d3bb678c", "prev_hash": "75155853198f6616a60a2eaf9616c23f25ab7dd75c441c26e91ca229001b0730"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class", "hash": "1b182e21150bfe0ece123d596da09376d30c2c52e4f5c53c36d232b369079cb7", "prev_hash": "137a82bf8a12a6c895cbb736d2c1de7269fd8c30eb98e50372d42943d3bb678c"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class", "hash": "d33e16599fb0de63cc8100948464a002d9c67dc3f4f4414f069b95d5e8cd3032", "prev_hash": "1b182e21150bfe0ece123d596da09376d30c2c52e4f5c53c36d232b369079cb7"}
+{"id": "class_TokenBucket", "type": "code_class", "name": "TokenBucket", "desc": "自适应免疫盾墙 (Adaptive Immune Shield: Native Token Bucket Rate Limiter)\n防御极端高频并发 (Defends against extreme", "hash": "62c6c98dad53f792df6b6d7141fd78a2232f7528a8b0810de2acf17beef97bbc", "prev_hash": "d33e16599fb0de63cc8100948464a002d9c67dc3f4f4414f069b95d5e8cd3032"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)", "hash": "5ce38c09f13a5a13eba3268053d0068972a0944124c9a66c4b0af006d152f6c7", "prev_hash": "62c6c98dad53f792df6b6d7141fd78a2232f7528a8b0810de2acf17beef97bbc"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa", "hash": "a6f24b2b6c54e3ccb7be6c4f3484ec920711e6db870e7afe003aac66bd1b5453", "prev_hash": "5ce38c09f13a5a13eba3268053d0068972a0944124c9a66c4b0af006d152f6c7"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router", "hash": "995b985c67ad62aff73728dbbf035d9663ca8c68150e6a155c8f876b70ee7f16", "prev_hash": "a6f24b2b6c54e3ccb7be6c4f3484ec920711e6db870e7afe003aac66bd1b5453"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class", "hash": "9337fda7d0bdbc7e454ad6681f484d6b16b9c9ccac224b7188f7a0b20fa5d07c", "prev_hash": "995b985c67ad62aff73728dbbf035d9663ca8c68150e6a155c8f876b70ee7f16"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class", "hash": "d0918eda5bf6c00da71b888b9b1b4fd20d5a01588ae7493c06f99d83238c52fe", "prev_hash": "9337fda7d0bdbc7e454ad6681f484d6b16b9c9ccac224b7188f7a0b20fa5d07c"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class", "hash": "9faf2deaad95fe93f68cb13f566a39a72fa635867ed53fa2128704848800f0d7", "prev_hash": "d0918eda5bf6c00da71b888b9b1b4fd20d5a01588ae7493c06f99d83238c52fe"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class", "hash": "a3bf13e9e8cc7edf2f15d9922aa8843af613c85e1b39d36297be8adc5d147d49", "prev_hash": "9faf2deaad95fe93f68cb13f566a39a72fa635867ed53fa2128704848800f0d7"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class", "hash": "9d9a2192c97b6b820ba71655104a1b3cc272c9e03feb7ef65219c212c871bf1d", "prev_hash": "a3bf13e9e8cc7edf2f15d9922aa8843af613c85e1b39d36297be8adc5d147d49"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class", "hash": "8bd96c7392503238352c57662f7d2f29d16a19d6fca4a7b01238b292b37968a2", "prev_hash": "9d9a2192c97b6b820ba71655104a1b3cc272c9e03feb7ef65219c212c871bf1d"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende", "hash": "b2e785c1f647d0355160de1c67836b0cbdd6cf9894919c68f9516a681c001854", "prev_hash": "8bd96c7392503238352c57662f7d2f29d16a19d6fca4a7b01238b292b37968a2"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C", "hash": "02d1d4a4209f1ba5459af4d760e288539af4c37798237be5ff2631a5f6c1f59f", "prev_hash": "b2e785c1f647d0355160de1c67836b0cbdd6cf9894919c68f9516a681c001854"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class", "hash": "0f3245d0abee05f9cc5093ca5c3a5ab8e2f16e22c83d88dcdf8929ab7e32034e", "prev_hash": "02d1d4a4209f1ba5459af4d760e288539af4c37798237be5ff2631a5f6c1f59f"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class", "hash": "a4fc1ddee6db6185600db5a17ebf7278fe54d55925c13c0f0aa1c737ddb98f4d", "prev_hash": "0f3245d0abee05f9cc5093ca5c3a5ab8e2f16e22c83d88dcdf8929ab7e32034e"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "基础服务协议类 (Base MCP Protocol Skill).\n自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execu", "hash": "454d4201a87417138f43720156121cb4d8ac1a3235bad23c229cb486dbbd54d9", "prev_hash": "a4fc1ddee6db6185600db5a17ebf7278fe54d55925c13c0f0aa1c737ddb98f4d"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "轻量级协议注册中心 (Lightweight Protocol Registry).\n扫描并实例化可用服务接口。(Scans and instantiates available service in", "hash": "cb4bfae2de2a3333450262192650a2db8cdaedb8b1111a6d044d4b46c0976149", "prev_hash": "454d4201a87417138f43720156121cb4d8ac1a3235bad23c229cb486dbbd54d9"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti", "hash": "46da58fc176692c9f4c7a1f586b0f9108442522de81f589801b41c3b4029c9df", "prev_hash": "cb4bfae2de2a3333450262192650a2db8cdaedb8b1111a6d044d4b46c0976149"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "图谱实体写入接口 (Graph Entity Insertion Interface).\n将新实体写入至底层数据存储。(Inserts a new entity into the underlying", "hash": "163fcd0f928b3a6074d12152dcba78566f3d5c0b12e3cf76a0ee897587b1e110", "prev_hash": "46da58fc176692c9f4c7a1f586b0f9108442522de81f589801b41c3b4029c9df"}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "图谱边创建接口 (Graph Edge Creation Interface).\n在现有实体间建立关联。(Creates a relation between two existing entitie", "hash": "116aa8f634844bb8964dd9bcf872d10301a0092db999a85024c583c3213513ca", "prev_hash": "163fcd0f928b3a6074d12152dcba78566f3d5c0b12e3cf76a0ee897587b1e110"}
+{"id": "class_CortexEnrichSkill", "type": "code_class", "name": "CortexEnrichSkill", "desc": "外部元数据补充协议 (External Metadata Enrichment Interface).\n通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via", "hash": "919423830942edbfcd4ccfe27c184ea57b2650300a97bd70175b20c486e2b981", "prev_hash": "116aa8f634844bb8964dd9bcf872d10301a0092db999a85024c583c3213513ca"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class", "hash": "aa9543f3d04b2e5a2fb5ffef59e8c8ca658e4d616e750615a6278c229f69407e", "prev_hash": "919423830942edbfcd4ccfe27c184ea57b2650300a97bd70175b20c486e2b981"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class", "hash": "9868ec0c9fb34681c87e80ec95df16908d1998fad82e217159ff3017352bea1e", "prev_hash": "aa9543f3d04b2e5a2fb5ffef59e8c8ca658e4d616e750615a6278c229f69407e"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class", "hash": "373f3c815671a95a8c9b593292b9d172f15d421bee076f0e15708cb684ef2440", "prev_hash": "9868ec0c9fb34681c87e80ec95df16908d1998fad82e217159ff3017352bea1e"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class", "hash": "8d20184f4620bea64808ffcbfe6a67b7925e149b58922053db18a13fbb30e4ef", "prev_hash": "373f3c815671a95a8c9b593292b9d172f15d421bee076f0e15708cb684ef2440"}
+{"id": "class_TokenBucket", "type": "code_class", "name": "TokenBucket", "desc": "自适应免疫盾墙 (Adaptive Immune Shield: Native Token Bucket Rate Limiter)\n防御极端高频并发 (Defends against extreme", "hash": "aec40722d863df5bbf84b4b9fbb38b470954527853b3e3163f3587e819186dd2", "prev_hash": "8d20184f4620bea64808ffcbfe6a67b7925e149b58922053db18a13fbb30e4ef"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)", "hash": "005ff2b2c7718dab84571a2abbd076ffc1200b22f3f7461cdc566cdb899371b6", "prev_hash": "aec40722d863df5bbf84b4b9fbb38b470954527853b3e3163f3587e819186dd2"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa", "hash": "be5b0d510b32cbd6f55e9c25b4104f9b0f004d506fc6049359ac613594dc425a", "prev_hash": "005ff2b2c7718dab84571a2abbd076ffc1200b22f3f7461cdc566cdb899371b6"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router", "hash": "b290aeea7b5b263b8674a97b05f8a160f5498d1d0de7917c2cc24425b3ae0dc9", "prev_hash": "be5b0d510b32cbd6f55e9c25b4104f9b0f004d506fc6049359ac613594dc425a"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class", "hash": "42d0f2c3341733a7e4cada1d4a925eb8b58d065b7bf4ec86c3ecc212f7c2a9d0", "prev_hash": "b290aeea7b5b263b8674a97b05f8a160f5498d1d0de7917c2cc24425b3ae0dc9"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class", "hash": "cfdc0f2a0fa5dcac3ccce17f326e0e21aa7995e77e4264df43e071c1b2885d62", "prev_hash": "42d0f2c3341733a7e4cada1d4a925eb8b58d065b7bf4ec86c3ecc212f7c2a9d0"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class", "hash": "05a4c7d885a18ba70516c74189e7ee3f0aa4bf97e40a6f707cff9549605e220c", "prev_hash": "cfdc0f2a0fa5dcac3ccce17f326e0e21aa7995e77e4264df43e071c1b2885d62"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class", "hash": "42b7c893973ace89becc5c82678aaedbcf252e3dff56d716ef20f96abd25ce81", "prev_hash": "05a4c7d885a18ba70516c74189e7ee3f0aa4bf97e40a6f707cff9549605e220c"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class", "hash": "b5e659b60038a753970822e28adbdbb78dbd665e8a3b3e2e7d71a8f7f8ea9768", "prev_hash": "42b7c893973ace89becc5c82678aaedbcf252e3dff56d716ef20f96abd25ce81"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class", "hash": "9b081e8f5130f4b71e91c12ca49507655ce4b8be7d49174c5415bc76503cce4d", "prev_hash": "b5e659b60038a753970822e28adbdbb78dbd665e8a3b3e2e7d71a8f7f8ea9768"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende", "hash": "337475d068846bfe62d20df86bad16caa2f6efe0fda571017844aa0a0fa161d4", "prev_hash": "9b081e8f5130f4b71e91c12ca49507655ce4b8be7d49174c5415bc76503cce4d"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C", "hash": "2c7e4c82e1e3afa7ba85626a1a9ae0eb5a3007de381e404a6f0532989d72b7e3", "prev_hash": "337475d068846bfe62d20df86bad16caa2f6efe0fda571017844aa0a0fa161d4"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class", "hash": "4ae1f6305aaaa08d53824dda3fb9f1b2ffff47cbf21a61f068110e52d39ed3e5", "prev_hash": "2c7e4c82e1e3afa7ba85626a1a9ae0eb5a3007de381e404a6f0532989d72b7e3"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class", "hash": "7d86fefbc930feaab7c45c802e8675cf37a43b5e11e7260c99c1ddd9b2142762", "prev_hash": "4ae1f6305aaaa08d53824dda3fb9f1b2ffff47cbf21a61f068110e52d39ed3e5"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "基础服务协议类 (Base MCP Protocol Skill).\n自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execu", "hash": "62eb0b8c5d6eeb36aae2ad7f726320fd6130c3216f5af3b43666be899863d52e", "prev_hash": "7d86fefbc930feaab7c45c802e8675cf37a43b5e11e7260c99c1ddd9b2142762"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "轻量级协议注册中心 (Lightweight Protocol Registry).\n扫描并实例化可用服务接口。(Scans and instantiates available service in", "hash": "7f2b1bc3138ac43f3a859bae94b3fc231c008253eadfc867620e4487ac142f8d", "prev_hash": "62eb0b8c5d6eeb36aae2ad7f726320fd6130c3216f5af3b43666be899863d52e"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti", "hash": "d42910348e05e05138f182f78a44ec4143013bf17b39794e113cf8196f6a512c", "prev_hash": "7f2b1bc3138ac43f3a859bae94b3fc231c008253eadfc867620e4487ac142f8d"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "图谱实体写入接口 (Graph Entity Insertion Interface).\n将新实体写入至底层数据存储。(Inserts a new entity into the underlying", "hash": "964a7e969d853dd6e02e4f5826bff150c4db55ebbad30e168a52c664683cc1d7", "prev_hash": "d42910348e05e05138f182f78a44ec4143013bf17b39794e113cf8196f6a512c"}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "图谱边创建接口 (Graph Edge Creation Interface).\n在现有实体间建立关联。(Creates a relation between two existing entitie", "hash": "eed220565e13ce7c88b4ffeacc3cbf023a74051be2489752243f31b04592bc30", "prev_hash": "964a7e969d853dd6e02e4f5826bff150c4db55ebbad30e168a52c664683cc1d7"}
+{"id": "class_CortexEnrichSkill", "type": "code_class", "name": "CortexEnrichSkill", "desc": "外部元数据补充协议 (External Metadata Enrichment Interface).\n通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via", "hash": "91d6fabef18ec7cc79bbeae8449957396937f5706793a29a3efe533e96e9293c", "prev_hash": "eed220565e13ce7c88b4ffeacc3cbf023a74051be2489752243f31b04592bc30"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class", "hash": "a7ee87f7019921a44cdceeff2f156d50cf98deee3f941ddf0eb62f341bf3def9", "prev_hash": "91d6fabef18ec7cc79bbeae8449957396937f5706793a29a3efe533e96e9293c"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class", "hash": "eb125f232e25181b5fc06a560089e5a5ee5ad68b1c180eef84c72fe11154726d", "prev_hash": "a7ee87f7019921a44cdceeff2f156d50cf98deee3f941ddf0eb62f341bf3def9"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class", "hash": "4246fd4982074e9e64911f418e60e31e604f4dfb501bd89ac3d7cebe3074f48a", "prev_hash": "eb125f232e25181b5fc06a560089e5a5ee5ad68b1c180eef84c72fe11154726d"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class", "hash": "458ebf08c1a3fe274f965934e616b65eaf59df2e76da63584da97ebea060a352", "prev_hash": "4246fd4982074e9e64911f418e60e31e604f4dfb501bd89ac3d7cebe3074f48a"}
+{"id": "class_TokenBucket", "type": "code_class", "name": "TokenBucket", "desc": "自适应免疫盾墙 (Adaptive Immune Shield: Native Token Bucket Rate Limiter)\n防御极端高频并发 (Defends against extreme", "hash": "5d7fa591d35a94f08237ad8b1e77624607198192a94eb80d25846ed4fb83f742", "prev_hash": "458ebf08c1a3fe274f965934e616b65eaf59df2e76da63584da97ebea060a352"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)", "hash": "67a3449edebb1f83218f9ffb1cb74ab8674b7dba29a59017f98a4f2dddb48d56", "prev_hash": "5d7fa591d35a94f08237ad8b1e77624607198192a94eb80d25846ed4fb83f742"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa", "hash": "414e98cd334a6e14a590d19622bd20817d4a17ee79a408d642b26ded0a8c2253", "prev_hash": "67a3449edebb1f83218f9ffb1cb74ab8674b7dba29a59017f98a4f2dddb48d56"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router", "hash": "4329c169ae558b294193bc02ae0e98c8126b456f76c821db80cd38371b1d368c", "prev_hash": "414e98cd334a6e14a590d19622bd20817d4a17ee79a408d642b26ded0a8c2253"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class", "hash": "3a18ae0009727036b5e1f6cf80a8e24258e384104b633a637359aabb501cecc3", "prev_hash": "4329c169ae558b294193bc02ae0e98c8126b456f76c821db80cd38371b1d368c"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class", "hash": "ce6319c3b8440b4ab6b698ce2a60b1aa41a8a0c5d8c2e758e2c7ffe0d74294da", "prev_hash": "3a18ae0009727036b5e1f6cf80a8e24258e384104b633a637359aabb501cecc3"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class", "hash": "bdbf937c828ec6144309aa22683010abd2fc92201d6c6402c57336957ab2f335", "prev_hash": "ce6319c3b8440b4ab6b698ce2a60b1aa41a8a0c5d8c2e758e2c7ffe0d74294da"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class", "hash": "f2175b039b71f749ddea35d68d04517e7224ce8f8248bea5e9fc629ddddec420", "prev_hash": "bdbf937c828ec6144309aa22683010abd2fc92201d6c6402c57336957ab2f335"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class", "hash": "f4c90bac1490717022feff05b6702f972e497aa949e0637d42095f0a06c9d4d5", "prev_hash": "f2175b039b71f749ddea35d68d04517e7224ce8f8248bea5e9fc629ddddec420"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class", "hash": "4f4ff6bc8ec42d1d18440790e58b5c5e442f571185c9192dc2c7e31b533cbacc", "prev_hash": "f4c90bac1490717022feff05b6702f972e497aa949e0637d42095f0a06c9d4d5"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende", "hash": "4663528956db2a1825dd85fa3c8a3f0715dfccfdfe56acf4303eeab088a2f2e3", "prev_hash": "4f4ff6bc8ec42d1d18440790e58b5c5e442f571185c9192dc2c7e31b533cbacc"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C", "hash": "db3272e05e8bcd96ebf75631d00df669b524ea3d1d5e2f95df672062632b8acf", "prev_hash": "4663528956db2a1825dd85fa3c8a3f0715dfccfdfe56acf4303eeab088a2f2e3"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class", "hash": "4257f9b9be4604d7394e735823eca57b085ca7651281264573c5c9db5c59e304", "prev_hash": "db3272e05e8bcd96ebf75631d00df669b524ea3d1d5e2f95df672062632b8acf"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class", "hash": "19bdc6ea2cd358eea212a51ceceb976cf3134fb0d93efba331d4df466844b4bb", "prev_hash": "4257f9b9be4604d7394e735823eca57b085ca7651281264573c5c9db5c59e304"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "基础服务协议类 (Base MCP Protocol Skill).\n自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execu", "hash": "8edbc1bb60088f029b30fd28ca618f9f25b286c048e00bf49ca863abf65621db", "prev_hash": "19bdc6ea2cd358eea212a51ceceb976cf3134fb0d93efba331d4df466844b4bb"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "轻量级协议注册中心 (Lightweight Protocol Registry).\n扫描并实例化可用服务接口。(Scans and instantiates available service in", "hash": "112a5564cb11340b0f3b88797b1716b60728dff8270dbe10886c3a6324db50b4", "prev_hash": "8edbc1bb60088f029b30fd28ca618f9f25b286c048e00bf49ca863abf65621db"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti", "hash": "a7717efbf7814ca31f2faf842bed268be1a96284ae1ddb55147f363aaeb7f573", "prev_hash": "112a5564cb11340b0f3b88797b1716b60728dff8270dbe10886c3a6324db50b4"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "图谱实体写入接口 (Graph Entity Insertion Interface).\n将新实体写入至底层数据存储。(Inserts a new entity into the underlying", "hash": "ac6bb0b86d75e0a227d749789a8df67aac57bd0ae9fc99117b0c0b263a3b4b25", "prev_hash": "a7717efbf7814ca31f2faf842bed268be1a96284ae1ddb55147f363aaeb7f573"}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "图谱边创建接口 (Graph Edge Creation Interface).\n在现有实体间建立关联。(Creates a relation between two existing entitie", "hash": "fffc475d8be11c5322f38ce458f8259fa9ff3161ba6746bbf801e0480b5970ec", "prev_hash": "ac6bb0b86d75e0a227d749789a8df67aac57bd0ae9fc99117b0c0b263a3b4b25"}
+{"id": "class_CortexEnrichSkill", "type": "code_class", "name": "CortexEnrichSkill", "desc": "外部元数据补充协议 (External Metadata Enrichment Interface).\n通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via", "hash": "beade2b488649fabfdc83f562b163cd3287d3f6ece8f87d15be9cc76f1f8b187", "prev_hash": "fffc475d8be11c5322f38ce458f8259fa9ff3161ba6746bbf801e0480b5970ec"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class", "hash": "8498f776d8bed5bb3ab14b22d4692cfe6673edbe31566fe1a87ae8b581732f29", "prev_hash": "beade2b488649fabfdc83f562b163cd3287d3f6ece8f87d15be9cc76f1f8b187"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class", "hash": "e96a00144dd363087d5f249e68d14ddd3d1924565e8ec41c8deb3f7cec786ba8", "prev_hash": "8498f776d8bed5bb3ab14b22d4692cfe6673edbe31566fe1a87ae8b581732f29"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class", "hash": "2430f777ca4d638756a79b3ef08f6646f43b5701fba649b453089bf0bef8f177", "prev_hash": "e96a00144dd363087d5f249e68d14ddd3d1924565e8ec41c8deb3f7cec786ba8"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class", "hash": "ddcc6032111f5c32dad6f67cd6457f15aa70a69e3004a276d7a1657a7c9b84ab", "prev_hash": "2430f777ca4d638756a79b3ef08f6646f43b5701fba649b453089bf0bef8f177"}
+{"id": "class_TokenBucket", "type": "code_class", "name": "TokenBucket", "desc": "自适应免疫盾墙 (Adaptive Immune Shield: Native Token Bucket Rate Limiter)\n防御极端高频并发 (Defends against extreme", "hash": "f107e799d29d47681ee0f66762a5f14091f1f46179f966dbb4f6707e995f0a90", "prev_hash": "ddcc6032111f5c32dad6f67cd6457f15aa70a69e3004a276d7a1657a7c9b84ab"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)", "hash": "f157009b53dd61ef82a10d9b3311eccd4b2e42ab05a9eb919bc83ee3034c3b54", "prev_hash": "f107e799d29d47681ee0f66762a5f14091f1f46179f966dbb4f6707e995f0a90"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa", "hash": "039fe89c7e2ceb7d0c9892cfec1a383ff3a357b4fd212264a829b822e637fc1e", "prev_hash": "f157009b53dd61ef82a10d9b3311eccd4b2e42ab05a9eb919bc83ee3034c3b54"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router", "hash": "9f043cf5ef1bbd4dadf982f23240677d2676ab3c333ae4e0aad7e6b16d1396a4", "prev_hash": "039fe89c7e2ceb7d0c9892cfec1a383ff3a357b4fd212264a829b822e637fc1e"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class", "hash": "57873b229f55f5c83146b71f03f04945a8d495cf69ede50ab164a2a756fd55ae", "prev_hash": "9f043cf5ef1bbd4dadf982f23240677d2676ab3c333ae4e0aad7e6b16d1396a4"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class", "hash": "2ad47f08334deee912f074815f772ad7d656aed8f547a4df9cb2b6c928c8fb18", "prev_hash": "57873b229f55f5c83146b71f03f04945a8d495cf69ede50ab164a2a756fd55ae"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class", "hash": "498e7a9c9f824484617169b8e897bc5973bd1decef94630f580f39f9e4e08c87", "prev_hash": "2ad47f08334deee912f074815f772ad7d656aed8f547a4df9cb2b6c928c8fb18"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class", "hash": "627b238c0a20acb89f6a925f50ae7b9ce60f3371a885d5bb0f77928301251d26", "prev_hash": "498e7a9c9f824484617169b8e897bc5973bd1decef94630f580f39f9e4e08c87"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class", "hash": "6e1601188caaaecae38a70ccaf08c49f7074a5a5b12723b7680ff0608131f1c5", "prev_hash": "627b238c0a20acb89f6a925f50ae7b9ce60f3371a885d5bb0f77928301251d26"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class", "hash": "382937ce65fbeeed3a175cb556320e0a48bf2e861dadbc0911aa033492f35b23", "prev_hash": "6e1601188caaaecae38a70ccaf08c49f7074a5a5b12723b7680ff0608131f1c5"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende", "hash": "cc1d7f9e6c1e722257ed7bd4b10df1fa6c2bdc54289092a5e97d95b303f3f19d", "prev_hash": "382937ce65fbeeed3a175cb556320e0a48bf2e861dadbc0911aa033492f35b23"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C", "hash": "f9f0292838f5a54d66d6dcaf955622ebafc11ddd419995fe43528c3d463b3d00", "prev_hash": "cc1d7f9e6c1e722257ed7bd4b10df1fa6c2bdc54289092a5e97d95b303f3f19d"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class", "hash": "e11cbd08246f117de4c12aa6d8db94da1a2219dc729f2ae153e49cf004491b20", "prev_hash": "f9f0292838f5a54d66d6dcaf955622ebafc11ddd419995fe43528c3d463b3d00"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class", "hash": "e8a26d269cda74a9bbf26cdd7a6f307584d2e631d5365b41fe3413c19eba5c30", "prev_hash": "e11cbd08246f117de4c12aa6d8db94da1a2219dc729f2ae153e49cf004491b20"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "基础服务协议类 (Base MCP Protocol Skill).\n自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execu", "hash": "69db7c098e4316ea337a1940d979db72f0ec6ef7226352796e288bfe45d2d1bb", "prev_hash": "e8a26d269cda74a9bbf26cdd7a6f307584d2e631d5365b41fe3413c19eba5c30"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "轻量级协议注册中心 (Lightweight Protocol Registry).\n扫描并实例化可用服务接口。(Scans and instantiates available service in", "hash": "a17ce787f43862a965dbddd67c63c7f7fb4cd1592128e2cb240e62d7d48c922e", "prev_hash": "69db7c098e4316ea337a1940d979db72f0ec6ef7226352796e288bfe45d2d1bb"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti", "hash": "bac9e63c47b5d5f2bd24bdcebef5c2bcfdd90e4767c4c25b51b136623a4d2171", "prev_hash": "a17ce787f43862a965dbddd67c63c7f7fb4cd1592128e2cb240e62d7d48c922e"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "图谱实体写入接口 (Graph Entity Insertion Interface).\n将新实体写入至底层数据存储。(Inserts a new entity into the underlying", "hash": "a7c07aabe0393197e9e68ef66f3758da327c81ff1b35b9602b251bbbfa2b0ddc", "prev_hash": "bac9e63c47b5d5f2bd24bdcebef5c2bcfdd90e4767c4c25b51b136623a4d2171"}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "图谱边创建接口 (Graph Edge Creation Interface).\n在现有实体间建立关联。(Creates a relation between two existing entitie", "hash": "efbfb678f32ba15711f09a9748810e7665965a3de55d35b4a2da2514c8252297", "prev_hash": "a7c07aabe0393197e9e68ef66f3758da327c81ff1b35b9602b251bbbfa2b0ddc"}
+{"id": "class_CortexEnrichSkill", "type": "code_class", "name": "CortexEnrichSkill", "desc": "外部元数据补充协议 (External Metadata Enrichment Interface).\n通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via", "hash": "7c2ad6848e4ffa7092f8b4612cc504791392f0f49fbb0d5928a6367f3c582900", "prev_hash": "efbfb678f32ba15711f09a9748810e7665965a3de55d35b4a2da2514c8252297"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class", "hash": "5020dac5af51c7b490b22d2745d506bdc42d65afcd046818bba9b7d6f0d7cb9a", "prev_hash": "7c2ad6848e4ffa7092f8b4612cc504791392f0f49fbb0d5928a6367f3c582900"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class", "hash": "a7fa4fce48205c7253d042ce9b5182edc8a4e5e21a32444e8c64ad3031b1517b", "prev_hash": "5020dac5af51c7b490b22d2745d506bdc42d65afcd046818bba9b7d6f0d7cb9a"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class", "hash": "ca6671e0a4b5085ea1f0d86ee22235710889b16902c273e36d89a19ab65dcfd3", "prev_hash": "a7fa4fce48205c7253d042ce9b5182edc8a4e5e21a32444e8c64ad3031b1517b"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class", "hash": "929462b4b0dde8218a9355b2e230e2c330e67bb4a6625b097fe7943c0babd157", "prev_hash": "ca6671e0a4b5085ea1f0d86ee22235710889b16902c273e36d89a19ab65dcfd3"}
+{"id": "class_TokenBucket", "type": "code_class", "name": "TokenBucket", "desc": "自适应免疫盾墙 (Adaptive Immune Shield: Native Token Bucket Rate Limiter)\n防御极端高频并发 (Defends against extreme", "hash": "54e75fe90d2fb5a76c123d45fd5a65d5e8f1764eb94d99317daeeb6caf631a8f", "prev_hash": "929462b4b0dde8218a9355b2e230e2c330e67bb4a6625b097fe7943c0babd157"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)", "hash": "8714037e448cdc9d752139340fc6435a530195e01d7eaf875bffed4c5c5772e8", "prev_hash": "54e75fe90d2fb5a76c123d45fd5a65d5e8f1764eb94d99317daeeb6caf631a8f"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa", "hash": "3b628dc018cf488a595da14d38d342651a0be1026110cbaeca1319fce598e917", "prev_hash": "8714037e448cdc9d752139340fc6435a530195e01d7eaf875bffed4c5c5772e8"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router", "hash": "e261ed5dff50bb7cdcc4d14dbd36bff45c00c9d2b7bd3867a7256a6d3322cd12", "prev_hash": "3b628dc018cf488a595da14d38d342651a0be1026110cbaeca1319fce598e917"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class", "hash": "1f26eba7f28f4b8418bf92d2ff0b45e49d03e331e05c435d8def9a65b38d6b53", "prev_hash": "e261ed5dff50bb7cdcc4d14dbd36bff45c00c9d2b7bd3867a7256a6d3322cd12"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class", "hash": "7aafb2d5ee323fbd5b333f42d3abe4636f985005b64a8c1e3f5662d6f7193d5c", "prev_hash": "1f26eba7f28f4b8418bf92d2ff0b45e49d03e331e05c435d8def9a65b38d6b53"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class", "hash": "e76d3d1e863bac615efe8dd11ee6602bf94eec9ac35addeab13bfcbb0eec7334", "prev_hash": "7aafb2d5ee323fbd5b333f42d3abe4636f985005b64a8c1e3f5662d6f7193d5c"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class", "hash": "b0ce0c98c42cb1875914c83b0d75534146ba03fa0df96e3705e87c9344906e9f", "prev_hash": "e76d3d1e863bac615efe8dd11ee6602bf94eec9ac35addeab13bfcbb0eec7334"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class", "hash": "eb3df5d3567f15b061f7eba2a20c1881f1635630e6b349bb387ea9ecf1ab0cb2", "prev_hash": "b0ce0c98c42cb1875914c83b0d75534146ba03fa0df96e3705e87c9344906e9f"}
+{"id": "class_Evolver", "type": "code_class", "name": "Evolver", "desc": "Python Class", "hash": "ee46690afce6995e0ec4c2a68768b6c68934613fd95ba23e6881f2d3600bd193", "prev_hash": "eb3df5d3567f15b061f7eba2a20c1881f1635630e6b349bb387ea9ecf1ab0cb2"}
+{"id": "class_JsonFormatter", "type": "code_class", "name": "JsonFormatter", "desc": "JSON formatter for structured logging.\nEnsure observability and determinism without external depende", "hash": "bf3f43d5a4e0ab71243749a575095ea6155f0b38ef6a2b9e03e49aded0a456c3", "prev_hash": "ee46690afce6995e0ec4c2a68768b6c68934613fd95ba23e6881f2d3600bd193"}
+{"id": "class_CognitiveReranker", "type": "code_class", "name": "CognitiveReranker", "desc": "Zero-Entropy 2-Stage Retrieval Reranker.\nPure Python standard library implementation of TF-IDF and C", "hash": "89a9e99c931217f177efb6575dde181f71b6cf8c292d0630a248e04b50197bdd", "prev_hash": "bf3f43d5a4e0ab71243749a575095ea6155f0b38ef6a2b9e03e49aded0a456c3"}
+{"id": "class_KnowledgeFactory", "type": "code_class", "name": "KnowledgeFactory", "desc": "Python Class", "hash": "3d1df21b2f62113b920237e0ba78ff2572f927f879d5ee97addb6840c5ca17ab", "prev_hash": "89a9e99c931217f177efb6575dde181f71b6cf8c292d0630a248e04b50197bdd"}
+{"id": "class_ReasoningEngine", "type": "code_class", "name": "ReasoningEngine", "desc": "Python Class", "hash": "a253e811856c2a2f2b2d690f9b987795f27ac11febab51b6ebc929f23e4606d9", "prev_hash": "3d1df21b2f62113b920237e0ba78ff2572f927f879d5ee97addb6840c5ca17ab"}
+{"id": "class_BaseSkill", "type": "code_class", "name": "BaseSkill", "desc": "基础服务协议类 (Base MCP Protocol Skill).\n自动提取 execute 方法签名以生成标准 JSON Schema。 (Automatically extracts execu", "hash": "0ba516f8061cf9644861510522b960edd566d958904df1363d69a2124b202262", "prev_hash": "a253e811856c2a2f2b2d690f9b987795f27ac11febab51b6ebc929f23e4606d9"}
+{"id": "class_MCPRegistry", "type": "code_class", "name": "MCPRegistry", "desc": "轻量级协议注册中心 (Lightweight Protocol Registry).\n扫描并实例化可用服务接口。(Scans and instantiates available service in", "hash": "9554be34bb4faa787f5b633046774f402f5d5e8f461c4e0a92bdf43cdf5560fb", "prev_hash": "0ba516f8061cf9644861510522b960edd566d958904df1363d69a2124b202262"}
+{"id": "class_CortexSearchSkill", "type": "code_class", "name": "CortexSearchSkill", "desc": "Search the stateful knowledge graph using Synaptic Associative Search.\nThis exposes the core cogniti", "hash": "4e32b6498252ef16539f76163478a6847405bb377be73a28b0385b5ca0ef2cab", "prev_hash": "9554be34bb4faa787f5b633046774f402f5d5e8f461c4e0a92bdf43cdf5560fb"}
+{"id": "class_CortexMemorizeSkill", "type": "code_class", "name": "CortexMemorizeSkill", "desc": "图谱实体写入接口 (Graph Entity Insertion Interface).\n将新实体写入至底层数据存储。(Inserts a new entity into the underlying", "hash": "3ad4d3a66cf5278fa777d6050d737dde9089defed127c7f53f844791ea2ba57e", "prev_hash": "4e32b6498252ef16539f76163478a6847405bb377be73a28b0385b5ca0ef2cab"}
+{"id": "class_CortexSynapseSkill", "type": "code_class", "name": "CortexSynapseSkill", "desc": "图谱边创建接口 (Graph Edge Creation Interface).\n在现有实体间建立关联。(Creates a relation between two existing entitie", "hash": "bb1d9123fd32269c74699fdc0a4131b1d5d4cf3a62c7550bbccdebdc688be662", "prev_hash": "3ad4d3a66cf5278fa777d6050d737dde9089defed127c7f53f844791ea2ba57e"}
+{"id": "class_CortexEnrichSkill", "type": "code_class", "name": "CortexEnrichSkill", "desc": "外部元数据补充协议 (External Metadata Enrichment Interface).\n通过网络检索未知概念并记录至图谱。(Retrieves unknown concepts via", "hash": "96253bda0442c1caa0f3082f25248e3624e45b9b4dfb1d8580b9d100fb809659", "prev_hash": "bb1d9123fd32269c74699fdc0a4131b1d5d4cf3a62c7550bbccdebdc688be662"}
+{"id": "class_Harvester", "type": "code_class", "name": "Harvester", "desc": "Python Class", "hash": "fbb1c78527a9d2f5314ad217fde7df2fdf568e7bd610426243faf2243195a73c", "prev_hash": "96253bda0442c1caa0f3082f25248e3624e45b9b4dfb1d8580b9d100fb809659"}
+{"id": "class_Cortex", "type": "code_class", "name": "Cortex", "desc": "Python Class", "hash": "c9bf9ae07591fc34a272e96d51df09b5a3673374411f54954a7d5dbcc4dffe21", "prev_hash": "fbb1c78527a9d2f5314ad217fde7df2fdf568e7bd610426243faf2243195a73c"}
+{"id": "class_MCPServer", "type": "code_class", "name": "MCPServer", "desc": "Python Class", "hash": "a482f426b6e558d35ef1b3b69f5d12f64cc71f27ec00c4a5fe384264245a5b68", "prev_hash": "c9bf9ae07591fc34a272e96d51df09b5a3673374411f54954a7d5dbcc4dffe21"}
+{"id": "class_APIResponse", "type": "code_class", "name": "APIResponse", "desc": "[DataClass] Python Class", "hash": "d7e5d258c635dcce6d08af4939cc9be0fa0a3c87590068e8ba1da3205fbbb178", "prev_hash": "a482f426b6e558d35ef1b3b69f5d12f64cc71f27ec00c4a5fe384264245a5b68"}
+{"id": "class_TokenBucket", "type": "code_class", "name": "TokenBucket", "desc": "自适应免疫盾墙 (Adaptive Immune Shield: Native Token Bucket Rate Limiter)\n防御极端高频并发 (Defends against extreme", "hash": "8485b342941893b4d09739d4ff2a346bfa18e23ddf0ba4236f01004f69f5989d", "prev_hash": "d7e5d258c635dcce6d08af4939cc9be0fa0a3c87590068e8ba1da3205fbbb178"}
+{"id": "class_ThreadedNexusServer", "type": "code_class", "name": "ThreadedNexusServer", "desc": "原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)", "hash": "f8a5757364db6b34cd22ec8bacb5f87a5cca38e4681ebce04d2e3f6a191b987a", "prev_hash": "8485b342941893b4d09739d4ff2a346bfa18e23ddf0ba4236f01004f69f5989d"}
+{"id": "class_SubconsciousThread", "type": "code_class", "name": "SubconsciousThread", "desc": "后台数据处理线程。(Background data processing engine.)\n在 API 闲置时，处理图谱索引关联。(Handles graph indexing and associa", "hash": "aa19d6437b8eb2eff67e9372d5f2a92e4b68e81458d2c9210f59917e968e7859", "prev_hash": "f8a5757364db6b34cd22ec8bacb5f87a5cca38e4681ebce04d2e3f6a191b987a"}
+{"id": "class_NexusHandler", "type": "code_class", "name": "NexusHandler", "desc": "Native API & Static File Router", "hash": "1e464eb0ed17e53582182d7b02e41d225c790cd152ee47cca886ffaec9081e97", "prev_hash": "aa19d6437b8eb2eff67e9372d5f2a92e4b68e81458d2c9210f59917e968e7859"}
+{"id": "class_Scholar", "type": "code_class", "name": "Scholar", "desc": "Python Class", "hash": "17a97be8fe11a369ca53985078914ad0b45cf9ce8fb2451e190329cfa136e332", "prev_hash": "1e464eb0ed17e53582182d7b02e41d225c790cd152ee47cca886ffaec9081e97"}
+{"id": "class_TestCortex", "type": "code_class", "name": "TestCortex", "desc": "Python Class", "hash": "4c7ac800d2043589913c85e66f646b28c07587123dfd58b880c28fc3d5e4fb9c", "prev_hash": "17a97be8fe11a369ca53985078914ad0b45cf9ce8fb2451e190329cfa136e332"}
+{"id": "class_TestMCPZeroProtocol", "type": "code_class", "name": "TestMCPZeroProtocol", "desc": "Python Class", "hash": "dd94f536fb6abd876ead1312aa1a253d346ae848c3956c9a62519d3390a233b4", "prev_hash": "4c7ac800d2043589913c85e66f646b28c07587123dfd58b880c28fc3d5e4fb9c"}
+{"id": "class_TestServerAPI", "type": "code_class", "name": "TestServerAPI", "desc": "Python Class", "hash": "2f954a32d82b136ebba76b931dd363617dde7b5492f42c97dfdd214fada0874f", "prev_hash": "dd94f536fb6abd876ead1312aa1a253d346ae848c3956c9a62519d3390a233b4"}
+{"id": "class_TestMCPDemo", "type": "code_class", "name": "TestMCPDemo", "desc": "Python Class", "hash": "b94ab33abe297375eae71d63e2c51c0f30485fba870cd0735524f80dc0cd6f7c", "prev_hash": "2f954a32d82b136ebba76b931dd363617dde7b5492f42c97dfdd214fada0874f"}
