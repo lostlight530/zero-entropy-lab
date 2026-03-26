@@ -110,10 +110,41 @@ class MCPRegistry:
 
         skill_instance = self._skills[name]()
         try:
-            # We assume kwargs match the execute signature.
-            # In a robust system we might want to strictly validate arguments against the schema here,
-            # but we trust the LLM/Agent to follow the schema we provided.
-            result = skill_instance.execute(**arguments)
+            # Dynamic Reflection & Type Coercion Armor (Defends against LLM hallucinations)
+            sig = inspect.signature(skill_instance.execute)
+            coerced_args = {}
+            for param_name, param in sig.parameters.items():
+                if param_name == "self":
+                    continue
+
+                val = arguments.get(param_name, param.default)
+                if val is inspect.Parameter.empty:
+                    raise ValueError(f"Missing required parameter: {param_name}")
+
+                # Coerce Type safely
+                if val is not None and param.annotation != inspect.Parameter.empty:
+                    base_type = param.annotation
+                    origin = typing.get_origin(param.annotation)
+                    args = typing.get_args(param.annotation)
+
+                    if origin is typing.Union and type(None) in args:
+                        base_type = next(a for a in args if a is not type(None))
+
+                    try:
+                        if base_type == int:
+                            val = int(val)
+                        elif base_type == float:
+                            val = float(val)
+                        elif base_type == bool and isinstance(val, str):
+                            val = val.lower() in ('true', '1', 'yes')
+                        # list and dict are assumed correctly parsed from json by the http layer
+                    except (ValueError, TypeError):
+                        type_name = getattr(base_type, '__name__', str(base_type))
+                        raise ValueError(f"Type mismatch for parameter '{param_name}': expected {type_name}, got {type(val).__name__}")
+
+                coerced_args[param_name] = val
+
+            result = skill_instance.execute(**coerced_args)
             return {
                 "content": [{"type": "text", "text": json.dumps(result, ensure_ascii=False)}]
             }
