@@ -137,7 +137,10 @@ class ReasoningEngine:
         return summary
 
     def _find_sparse_nodes(self):
-        """低频节点检索 (Find nodes with exactly 1 connection)"""
+        """低频节点检索 (Find nodes with exactly 1 connection)
+        Filter out specific internal code structure references so we don't try to query Wikipedia
+        for 'APIResponse' or other programmatic nodes.
+        """
         sql = '''
             SELECT e.name
             FROM entities e
@@ -146,6 +149,7 @@ class ReasoningEngine:
                 UNION ALL
                 SELECT target AS id FROM relations
             ) r ON e.id = r.id
+            WHERE e.type NOT IN ('code_file', 'code_class', 'code_function')
             GROUP BY e.id
             HAVING COUNT(r.id) = 1
             LIMIT 3
