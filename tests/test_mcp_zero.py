@@ -30,6 +30,9 @@ PORT = 8011
 class TestMCPZeroProtocol(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        # Ensure socket can be reused to avoid port collisions in tests
+        socketserver.TCPServer.allow_reuse_address = True
+
         # We start the server in a separate thread.
         cls.server = socketserver.TCPServer(("", PORT), NexusHandler)
         cls.server_thread = threading.Thread(target=cls.server.serve_forever)
