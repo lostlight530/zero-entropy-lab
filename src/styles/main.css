@@ -170,26 +170,87 @@ nav {
   margin-top: 4rem;
 }
 
-/* --- Anime Cyber-Maid Terminal --- */
-#nexus-terminal {
-  position: fixed;
-  bottom: 2rem;
-  left: 2rem;
-  width: 400px;
-  max-width: calc(100vw - 4rem);
-  height: 350px;
+/* --- Anime Cyber-Maid Terminal (Inline Integration) --- */
+.nexus-domain {
+  display: flex;
+  height: 500px;
   background: rgba(10, 15, 25, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 240, 255, 0.3);
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 240, 255, 0.15), inset 0 0 15px rgba(255, 42, 133, 0.1);
+  border: 1px solid rgba(255, 42, 133, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255, 42, 133, 0.15), inset 0 0 20px rgba(0, 240, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+  font-family: var(--font-mono);
+}
+
+.nexus-avatar-zone {
+  flex: 0 0 40%;
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 42, 133, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  border-right: 1px solid rgba(255, 42, 133, 0.2);
   display: flex;
   flex-direction: column;
-  z-index: 100;
+  justify-content: flex-end;
+  align-items: center;
   overflow: hidden;
-  font-family: var(--font-mono);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nexus-avatar-zone::before {
+  content: "NEXUS-CHAN // AWAKENED";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 0.7rem;
+  color: var(--cyber-pink);
+  letter-spacing: 0.2em;
+  opacity: 0.7;
+}
+
+.nexus-avatar-zone::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,240,255,0.03) 2px, rgba(0,240,255,0.03) 4px);
+  pointer-events: none;
+}
+
+.nexus-creator-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.65rem;
+  color: var(--cyber-cyan);
+  background: rgba(0, 240, 255, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  text-decoration: none;
+  z-index: 10;
+  transition: all 0.2s;
+}
+.nexus-creator-tag:hover {
+  background: var(--cyber-cyan);
+  color: #000;
+  box-shadow: 0 0 10px var(--cyber-cyan);
+}
+
+.nexus-avatar-img {
+  width: 140%;
+  height: auto;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 15px rgba(255, 42, 133, 0.3));
+  animation: breathe 4s ease-in-out infinite, glitch 8s infinite;
+  transform-origin: bottom center;
+  margin-bottom: -20px;
+}
+
+#nexus-terminal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
 }
 
 .terminal-header {
@@ -289,12 +350,60 @@ nav {
   100% { transform: scale(1); opacity: 1; }
 }
 
+@keyframes breathe {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.02) translateY(-5px); }
+}
+
+@keyframes glitch {
+  0%, 96%, 100% { filter: drop-shadow(0 0 15px rgba(255, 42, 133, 0.3)) hue-rotate(0deg); transform: translateX(0); }
+  97% { filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.8)) hue-rotate(90deg); transform: translateX(-2px); }
+  98% { filter: drop-shadow(0 0 15px rgba(255, 42, 133, 0.3)) hue-rotate(0deg); transform: translateX(2px); }
+  99% { filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.8)) hue-rotate(-90deg); transform: translateX(-1px); }
+}
+
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+.glitch-text::before, .glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0.8;
+}
+.glitch-text::before {
+  color: var(--cyber-cyan);
+  z-index: -1;
+  animation: glitch-anim-1 3s infinite linear alternate-reverse;
+}
+.glitch-text::after {
+  color: var(--cyber-pink);
+  z-index: -2;
+  animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0% { clip: rect(20px, 9999px, 15px, 0); transform: translate(-2px, 1px); }
+  20% { clip: rect(60px, 9999px, 50px, 0); transform: translate(2px, -1px); }
+  40% { clip: rect(10px, 9999px, 30px, 0); transform: translate(-2px, -2px); }
+  60% { clip: rect(80px, 9999px, 20px, 0); transform: translate(2px, 2px); }
+  80% { clip: rect(30px, 9999px, 70px, 0); transform: translate(-1px, -1px); }
+  100% { clip: rect(50px, 9999px, 40px, 0); transform: translate(1px, 1px); }
+}
+@keyframes glitch-anim-2 {
+  0% { clip: rect(10px, 9999px, 80px, 0); transform: translate(2px, -1px); }
+  20% { clip: rect(40px, 9999px, 20px, 0); transform: translate(-2px, 1px); }
+  40% { clip: rect(70px, 9999px, 50px, 0); transform: translate(2px, 2px); }
+  60% { clip: rect(20px, 9999px, 90px, 0); transform: translate(-2px, -2px); }
+  80% { clip: rect(90px, 9999px, 10px, 0); transform: translate(1px, 1px); }
+  100% { clip: rect(30px, 9999px, 60px, 0); transform: translate(-1px, -1px); }
+}
+
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  #nexus-terminal {
-    bottom: 1rem;
-    left: 1rem;
-    width: calc(100vw - 2rem);
-    height: 300px;
-  }
+  .nexus-domain { flex-direction: column; height: auto; }
+  .nexus-avatar-zone { height: 200px; }
+  #nexus-terminal { height: 300px; }
 }

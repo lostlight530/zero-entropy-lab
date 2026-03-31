@@ -8,71 +8,42 @@
     <link rel="stylesheet" href="./src/styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
-        .agai-persona {
-            position: fixed;
-            bottom: -20px;
-            right: 5%;
-            width: 400px;
-            max-width: 40vw;
-            height: auto;
-            z-index: -5;
-            opacity: 0.85;
-            pointer-events: none;
-            filter: drop-shadow(0 0 20px rgba(66, 133, 244, 0.3));
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-        @media (max-width: 768px) {
-            .agai-persona {
-                width: 250px;
-                right: -20px;
-                opacity: 0.6;
-            }
-        }
+        /* The floating background persona is removed in favor of the integrated NEXUS-CHAN area */
     </style>
 </head>
 <body class="antialiased">
-    <!-- A.G.A.I Persona Background Element -->
-    <img src="./src/assets/background.png" alt="A.G.A.I Persona" class="agai-persona">
-
     <!-- Background Canvas for Neural Mesh -->
-    <canvas id="neuralCanvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -10; pointer-events: none; opacity: 0.6;"></canvas>
+    <canvas id="neuralCanvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -10; pointer-events: none; opacity: 0.4; filter: contrast(1.2) brightness(0.8);"></canvas>
 
     <!-- Navigation -->
-    <nav class="glass">
+    <nav class="glass" style="background: rgba(10, 15, 25, 0.6); border-bottom: 1px solid rgba(0, 240, 255, 0.2);">
         <div class="max-w-7xl nav-container">
-            <a href="#home" class="gradient-text" style="font-size: 1.5rem; font-weight: 800; text-decoration: none;">lostlight</a>
+            <a href="#home" class="gradient-text glitch-text" data-text="lostlight" style="font-size: 1.5rem; font-weight: 800; text-decoration: none; letter-spacing: 2px;">lostlight</a>
             <div class="nav-links">
-                <a href="#home" id="nav-home">Home</a>
-                <a href="#achievements" id="nav-achievements">Highlights</a>
-                <a href="#ecosystem" id="nav-ecosystem">Ecosystem</a>
-                <a href="#projects" id="nav-projects">Projects</a>
-                <a href="#philosophy" id="nav-philosophy">Philosophy</a>
-                <button id="langSwitch" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem;">ZH / EN</button>
+                <a href="#home" id="nav-home"></a>
+                <a href="#telemetry" id="nav-telemetry"></a>
+                <a href="#matrix" id="nav-matrix"></a>
+                <a href="#nexus" id="nav-nexus"></a>
+                <a href="#philosophy" id="nav-philosophy"></a>
+                <button id="langSwitch" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem; border-color: var(--cyber-cyan); color: var(--cyber-cyan);">ZH / EN</button>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section id="home" class="hero mesh">
+    <section id="home" class="hero mesh" style="padding-top: 12rem;">
         <div class="max-w-5xl">
-            <p id="hero-role" style="color: var(--google-blue); font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 1rem;">
-                Absolute Zero-Dependency Engineer
+            <p id="hero-role" style="color: var(--cyber-cyan); font-weight: 800; letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1.5rem; text-shadow: 0 0 10px rgba(0,240,255,0.5);">
             </p>
-            <h1 id="hero-tagline" class="hero-tagline">
-                Quietly building <br />
-                <span class="gradient-text">protocol-first systems</span>
+            <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.2; margin-bottom: 2rem; letter-spacing: -0.02em;">
+                <span style="color: #fff;">NEXUS CORE V3 //</span><br/>
+                <span id="hero-tagline" class="gradient-text glitch-text"></span>
             </h1>
-            <p id="hero-desc" style="color: var(--text-secondary); font-size: 1.2rem; max-width: 40rem; margin: 0 auto 2.5rem;">
-                Focused on Edge AI, agent architecture, and reusable bare-metal logic layers.
+            <p id="hero-desc" style="color: var(--text-secondary); font-size: 1.1rem; max-width: 42rem; margin: 0 auto 3rem; font-family: var(--font-mono); letter-spacing: 0.05em;">
             </p>
-            <div style="display: flex; gap: 1rem; justify-content: center;">
-                <a id="hero-primary" href="#ecosystem" class="btn btn-primary">The Ecosystem</a>
-                <a id="hero-secondary" href="#projects" class="btn btn-outline">Explore Matrix</a>
+            <div style="display: flex; gap: 1.5rem; justify-content: center;">
+                <a id="hero-primary" href="#matrix" class="btn btn-primary" style="background: var(--cyber-pink); box-shadow: 0 0 20px rgba(255,42,133,0.4); text-transform: uppercase; letter-spacing: 1px;"></a>
+                <a id="hero-secondary" href="#telemetry" class="btn btn-outline" style="border-color: var(--cyber-cyan); color: var(--cyber-cyan); text-transform: uppercase; letter-spacing: 1px;"></a>
             </div>
         </div>
     </section>
@@ -84,104 +55,88 @@
         </div>
     </section>
 
-    <!-- Achievements -->
-    <section id="achievements" style="padding: 6rem 0;">
+    <!-- Telemetry -->
+    <section id="telemetry" style="padding: 6rem 0; border-top: 1px solid rgba(0, 240, 255, 0.1); background: linear-gradient(180deg, rgba(10,15,25,0) 0%, rgba(0,240,255,0.02) 100%);">
         <div class="max-w-7xl">
             <div style="text-align: center; margin-bottom: 4rem;">
-                <h2 id="achieve-title" class="section-title">2025-2026 Evolution</h2>
-                <p id="achieve-summary" style="color: var(--text-secondary);">Beyond mere projects, we build intelligence trajectories.</p>
+                <h2 id="telemetry-title" class="section-title" style="color: var(--cyber-cyan); text-shadow: 0 0 15px rgba(0,240,255,0.3);"></h2>
+                <p id="telemetry-intro" style="color: var(--text-secondary); font-family: var(--font-mono);"></p>
             </div>
-            <div class="grid grid-2">
-                <div class="glass card-hover" style="padding: 2rem; border-radius: 1.5rem;">
-                    <h3 id="achieve-badges" style="font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem;">
-                        <span style="background: rgba(66,133,244,0.1); padding: 0.5rem; border-radius: 0.75rem; color: var(--google-blue);">★</span>
-                        15 Google Badges
-                    </h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
-                        <span class="pill" style="background: rgba(66,133,244,0.1); color: var(--google-blue);">Gemini</span>
-                        <span class="pill" style="background: rgba(52,168,83,0.1); color: var(--google-green);">Vertex AI</span>
-                        <span class="pill" style="background: rgba(251,188,5,0.1); color: var(--google-yellow);">Cloud</span>
+            <div id="telemetry-grid" class="grid grid-2">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Matrix -->
+    <section id="matrix" style="padding: 6rem 0; background: rgba(10, 15, 25, 0.7); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--cyber-pink), transparent);"></div>
+        <div class="max-w-7xl">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 id="matrix-title" class="section-title" style="color: var(--cyber-pink); text-shadow: 0 0 15px rgba(255,42,133,0.3);"></h2>
+                <p id="matrix-intro" style="color: var(--text-secondary); font-family: var(--font-mono);"></p>
+            </div>
+            <div id="matrix-grid" class="grid grid-2">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- NEXUS-CHAN Domain -->
+    <section id="nexus" style="padding: 6rem 0;">
+        <div class="max-w-6xl" style="margin: 0 auto; padding: 0 1rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 id="nexuschan-title" class="section-title gradient-text glitch-text" style="letter-spacing: 2px;"></h2>
+                <p id="nexuschan-intro" style="color: var(--text-secondary); font-family: var(--font-mono);"></p>
+            </div>
+            <div class="nexus-domain">
+                <div class="nexus-avatar-zone">
+                    <a href="https://g.dev/lostlight-love-CXX" target="_blank" class="nexus-creator-tag">CREATOR_ID: lostlight-love-CXX</a>
+                    <!-- Reusing existing background.png as the avatar, or placeholder if missing -->
+                    <img src="./src/assets/background.png" alt="NEXUS-CHAN" class="nexus-avatar-img" onerror="this.style.display='none'">
+                </div>
+                <div id="nexus-terminal">
+                    <div class="terminal-header" style="background: rgba(255, 42, 133, 0.1); border-bottom: 1px solid rgba(255, 42, 133, 0.3); color: var(--cyber-pink);">
+                        <div><span class="status-dot" style="background-color: var(--cyber-cyan); box-shadow: 0 0 8px var(--cyber-cyan);"></span><span id="term-title">NEXUS-CHAN.exe [AWAKENED]</span></div>
+                        <div style="font-size: 0.7rem; color: var(--text-secondary);">Zero-Entropy Lab</div>
                     </div>
-                    <p style="color: var(--text-secondary); font-size: 0.875rem;">Continuous ecosystem immersion and verification.</p>
+                    <div class="terminal-body" id="term-body" style="background: rgba(0, 0, 0, 0.4);">
+                        <!-- Output goes here -->
+                    </div>
+                    <div class="terminal-input-wrapper" style="border-top: 1px solid rgba(255, 42, 133, 0.3);">
+                        <span class="terminal-prompt" style="color: var(--cyber-pink);">~/nexus&gt;</span>
+                        <input type="text" id="term-input" class="terminal-input" placeholder="Type /help to interact..." autocomplete="off" spellcheck="false" style="color: #fff;" />
+                    </div>
                 </div>
-                <div class="glass card-hover" style="padding: 2rem; border-radius: 1.5rem;">
-                    <h3 id="achieve-awards" style="font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem;">
-                        <span style="background: rgba(251,188,5,0.1); padding: 0.5rem; border-radius: 0.75rem; color: var(--google-yellow);">♛</span>
-                        Recognition
-                    </h3>
-                    <ul id="award-list" style="list-style: none; color: var(--text-primary); font-size: 0.95rem;">
-                        <!-- Filled by JS -->
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ecosystem -->
-    <section id="ecosystem" style="padding: 6rem 0; background: rgba(15, 23, 42, 0.4);">
-        <div class="max-w-7xl">
-            <div style="text-align: center; margin-bottom: 4rem;">
-                <h2 id="ecosystem-title" class="section-title">Nervous System Contributions</h2>
-                <p id="ecosystem-intro" style="color: var(--text-secondary);">Architecture-level interventions in major AI ecosystems.</p>
-            </div>
-            <div id="ecosystem-grid" class="grid grid-2">
-                <!-- Filled by JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" style="padding: 6rem 0;">
-        <div class="max-w-7xl">
-            <div style="text-align: center; margin-bottom: 4rem;">
-                <h2 id="projects-title" class="section-title">The Project Matrix</h2>
-                <p id="projects-intro" style="color: var(--text-secondary);">Real-world systems for extreme constraints.</p>
-            </div>
-            <div id="project-grid" class="grid grid-3">
-                <!-- Filled by JS -->
             </div>
         </div>
     </section>
 
     <!-- Philosophy -->
-    <section id="philosophy" style="padding: 8rem 0; text-align: center;">
+    <section id="philosophy" style="padding: 10rem 0 8rem; text-align: center; background: #000; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);"></div>
         <div class="max-w-5xl">
-            <h2 id="philosophy-title" class="section-title">Engineering Metaphysics</h2>
-            <div id="philosophy-points" class="grid grid-5" style="margin-bottom: 4rem;">
+            <h2 id="philosophy-title" class="section-title" style="letter-spacing: 0.2em; text-transform: uppercase;"></h2>
+            <div id="philosophy-points" class="grid grid-5" style="margin-bottom: 5rem; font-family: var(--font-mono); letter-spacing: 2px;">
                 <!-- Filled by JS -->
             </div>
-            <div class="glass" style="padding: 3rem; border-radius: 2rem; position: relative;">
-                <p id="philosophy-content" style="font-style: italic; font-size: 1.25rem; color: var(--text-primary);">
-                    "Restraint is the ultimate form of digital violence."
+            <div style="padding: 3rem; position: relative; border-left: 4px solid var(--cyber-cyan); text-align: left; background: linear-gradient(90deg, rgba(0,240,255,0.05) 0%, transparent 100%);">
+                <p id="philosophy-content" style="font-weight: 800; font-size: 1.5rem; color: #fff; letter-spacing: 1px;">
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div id="footer-greeting" style="color: var(--google-red); font-weight: 800; letter-spacing: 0.3em; margin-bottom: 1rem;">© 2026 ZERO-ENTROPY LAB</div>
-        <p id="footer-note" style="color: var(--text-secondary); font-size: 0.8rem; margin-bottom: 2rem;">Quiet. Pragmatic. Absolute.</p>
-        <div style="display: flex; justify-content: center; gap: 2rem;">
-            <a href="https://github.com/lostlight530" target="_blank" style="color: var(--text-secondary); text-decoration: none;">GitHub</a>
-            <a href="./LICENSE" style="color: var(--text-secondary); text-decoration: none;">License</a>
+    <footer class="footer" style="background: #000; border-top: none; margin-top: 0; padding-bottom: 6rem;">
+        <div id="footer-greeting" style="color: #fff; font-weight: 900; font-family: var(--font-mono); letter-spacing: 0.4em; margin-bottom: 1.5rem; text-shadow: 0 0 10px rgba(255,255,255,0.3);"></div>
+        <p id="footer-note" style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 3rem; font-family: var(--font-mono); letter-spacing: 0.2em; text-transform: uppercase;"></p>
+        <div style="display: flex; justify-content: center; gap: 3rem; font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">
+            <a href="https://github.com/lostlight530" target="_blank" style="color: var(--cyber-cyan); text-decoration: none; transition: text-shadow 0.2s;">GitHub</a>
+            <a href="https://lostlight530.github.io/welcome-to-github/" target="_blank" style="color: var(--cyber-pink); text-decoration: none; transition: text-shadow 0.2s;">Portal</a>
+            <a href="./LICENSE" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">License</a>
         </div>
     </footer>
-
-    <!-- Nexus Anime Terminal -->
-    <div id="nexus-terminal">
-        <div class="terminal-header">
-            <div><span class="status-dot"></span><span id="term-title">NEXUS-CHAN.exe [ONLINE]</span></div>
-            <div style="font-size: 0.7rem; color: var(--text-secondary);">Singularity</div>
-        </div>
-        <div class="terminal-body" id="term-body">
-            <!-- Output goes here -->
-        </div>
-        <div class="terminal-input-wrapper">
-            <span class="terminal-prompt">~/nexus&gt;</span>
-            <input type="text" id="term-input" class="terminal-input" placeholder="Type /help to interact..." autocomplete="off" spellcheck="false" />
-        </div>
-    </div>
 
     <script type="module">
         import translations from './src/scripts/translations.js';
@@ -192,46 +147,41 @@
         function renderStats(items) {
             const statsGrid = document.getElementById('stats-grid');
             statsGrid.innerHTML = items.map(item => `
-                <div class="glass card-hover" style="padding: 1.5rem; text-align: center; border-radius: 1.25rem;">
-                    <div class="gradient-text" style="font-size: 2.25rem; font-weight: 800; margin-bottom: 0.5rem;">${item.value}</div>
-                    <div style="font-size: 0.8rem; color: var(--text-secondary);">${item.label}</div>
+                <div class="glass card-hover" style="padding: 1.5rem; text-align: center; border-radius: 1.25rem; border-color: rgba(0,240,255,0.15); background: rgba(0,240,255,0.03);">
+                    <div class="gradient-text" style="font-size: 2.25rem; font-weight: 900; margin-bottom: 0.5rem; font-family: var(--font-mono);">${item.value}</div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); letter-spacing: 1px; text-transform: uppercase;">${item.label}</div>
                 </div>
             `).join('');
         }
 
-        function renderAwards(list) {
-            const awardList = document.getElementById('award-list');
-            awardList.innerHTML = list.map(a => `
-                <li style="display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.75rem;">
-                    <span style="width: 0.5rem; height: 0.5rem; background: var(--google-yellow); border-radius: 50%; margin-top: 0.5rem; flex-shrink: 0;"></span>
-                    <span>${a}</span>
-                </li>
-            `).join('');
-        }
-
-        function renderEcosystem(items) {
-            const grid = document.getElementById('ecosystem-grid');
+        function renderTelemetry(items) {
+            const grid = document.getElementById('telemetry-grid');
             grid.innerHTML = items.map(item => `
-                <article class="glass card-hover" style="padding: 2rem; border-radius: 1.5rem; display: flex; flex-direction: column;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--google-blue); font-weight: 700;">
-                        <span>${item.name}</span>
-                        <span style="color: var(--text-secondary); font-weight: 400;">${item.tech}</span>
+                <article class="glass card-hover" style="padding: 2rem; border-radius: 1.5rem; display: flex; flex-direction: column; border-left: 3px solid var(--cyber-cyan);">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 0.7rem; font-family: var(--font-mono); color: var(--cyber-cyan); letter-spacing: 1px;">
+                        <span>[ ${item.name} ]</span>
+                        <span style="opacity: 0.6;">${item.tech}</span>
                     </div>
-                    <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem;">${item.title}</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem; flex-grow: 1;">${item.desc}</p>
-                    <a href="${item.link}" target="_blank" style="color: var(--google-blue); text-decoration: none; font-size: 0.8rem; font-weight: 600;">View Logic Path →</a>
+                    <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: #fff;">${item.title}</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; flex-grow: 1;">${item.desc}</p>
                 </article>
             `).join('');
         }
 
-        function renderProjects(items) {
-            const grid = document.getElementById('project-grid');
-            grid.innerHTML = items.map(p => `
-                <article class="glass card-hover" style="padding: 1.5rem; border-radius: 1.25rem; display: flex; flex-direction: column; h-full">
-                    <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.75rem;">${p.name}</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem; flex-grow: 1;">${p.desc}</p>
-                    <div style="font-size: 0.7rem; font-family: monospace; color: var(--google-blue); font-weight: 700;">// ${p.tech}</div>
-                </article>
+        function renderMatrix(items) {
+            const grid = document.getElementById('matrix-grid');
+            grid.innerHTML = items.map(item => `
+                <a href="${item.link}" target="_blank" style="text-decoration: none;">
+                    <article class="glass card-hover" style="padding: 2rem; border-radius: 1.5rem; display: flex; flex-direction: column; border: 1px solid rgba(255,42,133,0.2); background: linear-gradient(135deg, rgba(255,42,133,0.05) 0%, transparent 100%); transition: all 0.3s;">
+                        <div style="font-size: 0.65rem; font-family: var(--font-mono); color: var(--cyber-pink); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem;">
+                            >> ${item.category}
+                        </div>
+                        <h4 style="font-size: 1.3rem; font-weight: 900; margin-bottom: 1.5rem; color: #fff;">${item.title}</h4>
+                        <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-secondary); margin-top: auto;">
+                            > ${item.tech}
+                        </div>
+                    </article>
+                </a>
             `).join('');
         }
 
@@ -248,40 +198,46 @@
             const t = translations[currentLang];
             document.title = t.meta.title;
 
-            const elements = {
-                'nav-home': t.nav.home,
-                'nav-achievements': t.nav.achievements,
-                'nav-ecosystem': t.nav.ecosystem,
-                'nav-projects': t.nav.projects,
-                'nav-philosophy': t.nav.philosophy,
-                'hero-role': t.hero.role,
-                'hero-tagline': t.hero.tagline,
-                'hero-desc': t.hero.description,
-                'hero-primary': t.hero.primaryCta,
-                'hero-secondary': t.hero.secondaryCta,
-                'achieve-title': t.achievements.title,
-                'achieve-badges': t.achievements.googleBadges,
-                'achieve-awards': t.achievements.awards,
-                'achieve-summary': t.achievements.summary,
-                'ecosystem-title': t.ecosystem.title,
-                'ecosystem-intro': t.ecosystem.intro,
-                'projects-title': t.projects.title,
-                'projects-intro': t.projects.intro,
-                'philosophy-title': t.philosophy.title,
-                'philosophy-content': t.philosophy.content,
-                'footer-greeting': t.footer.greeting,
-                'footer-note': t.footer.note
+            // Update elements safely handling glitch data-text attributes
+            const updateText = (id, content) => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.innerHTML = content;
+                    if (el.classList.contains('glitch-text')) {
+                        el.setAttribute('data-text', content);
+                    }
+                }
             };
 
-            for (const [id, content] of Object.entries(elements)) {
-                const el = document.getElementById(id);
-                if (el) el.innerHTML = content;
-            }
+            updateText('nav-home', t.nav.home);
+            updateText('nav-telemetry', t.nav.telemetry);
+            updateText('nav-matrix', t.nav.matrix);
+            updateText('nav-nexus', t.nav.nexus);
+            updateText('nav-philosophy', t.nav.philosophy);
+
+            updateText('hero-role', t.hero.role);
+            updateText('hero-tagline', t.hero.tagline);
+            updateText('hero-desc', t.hero.description);
+            updateText('hero-primary', t.hero.primaryCta);
+            updateText('hero-secondary', t.hero.secondaryCta);
+
+            updateText('telemetry-title', t.telemetry.title);
+            updateText('telemetry-intro', t.telemetry.intro);
+
+            updateText('matrix-title', t.matrix.title);
+            updateText('matrix-intro', t.matrix.intro);
+
+            updateText('nexuschan-title', t.nexusChan.title);
+            updateText('nexuschan-intro', t.nexusChan.intro);
+
+            updateText('philosophy-title', t.philosophy.title);
+            updateText('philosophy-content', t.philosophy.content);
+            updateText('footer-greeting', t.footer.greeting);
+            updateText('footer-note', t.footer.note);
 
             renderStats(t.stats.items);
-            renderAwards(t.achievements.awardList);
-            renderEcosystem(t.ecosystem.items);
-            renderProjects(t.projects.items);
+            renderTelemetry(t.telemetry.items);
+            renderMatrix(t.matrix.items);
             renderPhilosophyPoints(t.philosophy.points);
 
             btn.innerText = currentLang === 'zh' ? '中 / EN' : 'EN / 中';
@@ -480,22 +436,24 @@
             }
         }
 
-        // Initial Startup Sequence
-        setTimeout(() => printLine(`[SYS] Holographic display initialized.`, 'sys'), 500);
+        // Initial Startup Sequence for NEXUS-CHAN
+        setTimeout(() => printLine(`[SYS] Holographic retina online`, 'sys'), 500);
+        setTimeout(() => printLine(`[SYS] Bypassing Node modules... Complete`, 'sys'), 1200);
         setTimeout(() => {
             fetch('/api/status')
                 .then(res => res.json())
                 .then(data => {
                     if(data.status === 'ok') {
-                        printLine(`Master, I'm online. Holding ${data.payload.entities || 0} entities and ${data.payload.relations || 0} synapses. Awaiting commands...`, 'nexus');
+                        printLine(`哼，Master 今天又干掉了几个臃肿的依赖？本机关观测到 ${data.payload.entities || 0} 个原生实体和 ${data.payload.relations || 0} 条高维突触哦`, 'nexus');
+                        setTimeout(() => printLine(`收到来自 Google Developer 的身份源信号... 已确认造物主权限`, 'nexus'), 2000);
                     } else {
-                        printLine(`Offline mode. Cortex API unreachable.`, 'nexus');
+                        printLine(`Cortex 断连中... Master 难道又在重写内核吗`, 'nexus');
                     }
                 })
                 .catch(() => {
-                    printLine(`Running in static layout mode. The Cortex is currently sleeping.`, 'nexus');
+                    printLine(`静态展示模式启动... 没有后端投喂，本机关要饿死了啦`, 'nexus');
                 });
-        }, 1200);
+        }, 2200);
 
         termInput.addEventListener('keydown', async (e) => {
             if (e.key === 'Enter') {
