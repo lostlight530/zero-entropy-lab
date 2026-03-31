@@ -58,6 +58,17 @@ class Scholar:
         root = Path(root_path)
         count = 0
 
+        # Create a central project node to avoid orphan files
+        repo_id = "repo_zero_entropy_lab"
+        if self.cortex:
+            self.cortex.add_entity(
+                id=repo_id,
+                type_slug="repository",
+                name="Zero-Entropy Lab",
+                desc="The absolute zero-dependency core repository.",
+                save_to_disk=True
+            )
+
         for dirpath, dirnames, filenames in os.walk(root):
             # Prune ignored directories
             dirnames[:] = [d for d in dirnames if d not in self.ignore_dirs]
@@ -67,7 +78,11 @@ class Scholar:
 
                 filepath = Path(dirpath) / file
                 try:
-                    self._digest_file(root, filepath)
+                    file_id = self._digest_file(root, filepath)
+                    if file_id and self.cortex:
+                        # Map all files to the repository node to eliminate orphans
+                        self.cortex.connect_entities(repo_id, "contains", file_id, save_to_disk=True)
+                        # We don't add "part_of" reverse link because it triggers a "Graph Cycle" warning in reason.py
                     count += 1
                 except Exception as e:
                     logger.error(f"   ⚠️ Failed to digest {file}: {e}", exc_info=True)
@@ -76,7 +91,10 @@ class Scholar:
 
     def _digest_file(self, root, filepath):
         rel_path = filepath.relative_to(root)
-        file_id = f"file_{str(rel_path).replace('/', '_').replace('.', '_')}"
+
+        # Replace Windows backslashes and forward slashes for cross-platform consistency
+        safe_path = str(rel_path).replace('\\', '_').replace('/', '_').replace('.', '_')
+        file_id = f"file_{safe_path}"
 
         # 1. Register File Node
         if self.cortex:
@@ -93,6 +111,9 @@ class Scholar:
             self._analyze_python_ast(filepath, file_id)
         elif filepath.suffix == '.md':
             self._analyze_markdown_structure(filepath, file_id)
+
+        return file_id
+
 
     def _analyze_python_ast(self, filepath, file_id):
         """Use Python's native AST to understand code structure."""

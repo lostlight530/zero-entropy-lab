@@ -24,7 +24,7 @@ class TestServerAPI(unittest.TestCase):
         )
         
         # 等待服务器就绪
-        max_retries = 5
+        max_retries = 10
         while max_retries > 0:
             try:
                 with socket.create_connection(("localhost", 8000), timeout=1):
@@ -32,6 +32,10 @@ class TestServerAPI(unittest.TestCase):
             except:
                 time.sleep(0.5)
                 max_retries -= 1
+
+        if max_retries == 0:
+            cls.process.terminate()
+            raise RuntimeError("Server failed to start in time.")
 
     @classmethod
     def tearDownClass(cls):

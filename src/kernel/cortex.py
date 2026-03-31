@@ -44,6 +44,13 @@ class Cortex:
         # 开启 WAL 以支持并发读写 (Enable WAL for concurrency)
         self.conn.execute('PRAGMA journal_mode=WAL')
 
+        # 零熵演进假说 I & II (Zero-Entropy Evolution Hypotheses I & II):
+        # 开启纯原生内存映射 (mmap) 旁路 Python GIL 和 OS 缺页中断，实现极速 C 层级内存态并发读取
+        # 开启 NORMAL 同步模式缓解高频并发下的 I/O 写锁争用 (SQLITE_BUSY)
+        self.conn.execute('PRAGMA mmap_size=2147483648') # 2GB Memory Mapping
+        self.conn.execute('PRAGMA synchronous=NORMAL')
+        self.conn.execute('PRAGMA temp_store=MEMORY') # 递归深度的临时表直接走内存
+
         # 核心基准实体 (Core Baseline Entities)
         # These concepts are "Axioms" - they define the system's identity.
         # They are immune to biological decay.

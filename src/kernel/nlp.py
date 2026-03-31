@@ -24,10 +24,11 @@ class CognitiveReranker:
         if not intersection:
             return 0.0
 
-        numerator = sum([c_query[x] * c_doc[x] for x in intersection])
+        # Memory-efficient generator expressions instead of list comprehensions
+        numerator = sum(c_query[x] * c_doc[x] for x in intersection)
 
-        sum_query = sum([c_query[x]**2 for x in c_query.keys()])
-        sum_doc = sum([c_doc[x]**2 for x in c_doc.keys()])
+        sum_query = sum(c_query[x]**2 for x in c_query.keys())
+        sum_doc = sum(c_doc[x]**2 for x in c_doc.keys())
         denominator = math.sqrt(sum_query) * math.sqrt(sum_doc)
 
         return float(numerator) / denominator if denominator else 0.0
