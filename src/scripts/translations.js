@@ -1,116 +1,106 @@
 export default {
     zh: {
         meta: { title: "零熵实验室 | Zero-Entropy Lab" },
-        nav: { home: "主页", achievements: "亮点", ecosystem: "生态", projects: "矩阵", philosophy: "哲学" },
+        nav: { home: "视网膜", telemetry: "遥测", matrix: "神经矩阵", nexus: "机娘协议", philosophy: "形而上学" },
         hero: { 
             role: "绝对零依赖工程师",
-            tagline: "静默构建协议优先系统",
-            description: "专注于边缘 AI、Agent 架构及可复用的硬件逻辑层。",
-            primaryCta: "进入生态",
-            secondaryCta: "探索矩阵"
+            tagline: "克制，是数字空间中终极的暴力形式",
+            description: "徒手捏造原生并发网关与认知推理机的原教旨主义全栈",
+            primaryCta: "接入矩阵",
+            secondaryCta: "系统状态"
         },
         stats: {
             items: [
-                { value: "15", label: "Google 徽章" },
-                { value: "0", label: "冗余依赖" },
-                { value: "<1s", label: "冷启动" },
-                { value: "∞", label: "可扩展性" }
+                { value: "15", label: "Google 核心徽章" },
+                { value: "0", label: "冗余的第三方包" },
+                { value: "WAL", label: "并发无锁存储" },
+                { value: "∞", label: "原生理性扩展" }
             ]
         },
-        achievements: {
-            title: "系统演进 (Evolution)",
-            summary: "除了项目，我们构建智能轨迹。",
-            googleBadges: "15 枚 Google 徽章",
-            awards: "开源节点注入 (Open Source Nodes)",
-            awardList: [
-                "Nexent 架构级讨论与思潮引入",
-                "Astron Agent 协议层探索贡献",
-                "Dify 生态技术纯度提取",
-                "MindSpore 社区潜行布道者"
-            ]
-        },
-        ecosystem: {
-            title: "神经系统贡献",
-            intro: "在核心 AI 生态中的架构级干预。",
+        telemetry: {
+            title: "后端真实遥测 (Architecture Telemetry)",
+            intro: "抛弃包装，直视正在跳动的纯 Python 引擎脉络",
             items: [
-                { name: "MCP", tech: "Protocol", title: "模型上下文协议适配器", desc: "为原生系统构建极简的 MCP 交互层，实现工具链秒级挂载。", link: "#" },
-                { name: "Edge AI", tech: "Runtime", title: "边缘侧推理优化", desc: "基于 LiteRT 的端侧模型量化与加速方案，挑战零延迟体验。", link: "#" }
+                { name: "Cortex", tech: "SQLite FTS5", title: "底层记忆图谱引擎", desc: "采用 WAL 模式与 subtransaction 批量插入压制 I/O 锁争用的毫秒级状态机" },
+                { name: "Reason", tech: "Pure Python", title: "后台认知推理机", desc: "纯粹的 15 次阻尼迭代 PageRank 算法，跨核计算节点中心度，撕裂多线程 GIL 枷锁" },
+                { name: "Nexus", tech: "http_server", title: "原生协议并发网关", desc: "搭载 TokenBucket 自适应免疫盾墙的极简网关，原生拦截高并发泛洪攻击" },
+                { name: "Harvester", tech: "Standard Lib", title: "自动化情报收割者", desc: "在后台静默运行的嗅探器，从无序的 GitHub 噪音中提纯核心代理与边缘侧情报" }
             ]
         },
-        projects: {
-            title: "项目矩阵",
-            intro: "针对极端约束环境的真实系统。",
+        matrix: {
+            title: "高维引流矩阵 (External Synapses)",
+            intro: "从实验室延伸至核心 AI 生态的底层代码级干预",
             items: [
-                { name: "NEXUS CORE", tech: "Python/VanillaJS", desc: "原教旨主义全栈知识库，零依赖托管与搜索。" },
-                { name: "Cortex Brain", tech: "SQLite/FTS5", desc: "轻量级突触联动搜索引擎，模拟生物联想记忆。" },
-                { name: "Sensory Harvester", tech: "Standard Lib", desc: "自动化信号捕获器，从公网噪音中提取技术纯度。" }
+                { title: "MindSpore Core Logic", category: "华为生态探索", link: "https://discuss.mindspore.cn/t/topic/1513?u=lostllight", tech: "Discuss: 1513 1507 1504" },
+                { title: "Nexent Architecture", category: "Agent 架构深潜", link: "https://github.com/ModelEngine-Group/nexent/discussions/2179", tech: "Discussions: 2179 2056 1982" },
+                { title: "Astron Protocol", category: "科大讯飞协议解析", link: "https://github.com/iflytek/astron-agent/discussions/824", tech: "Issue: 824" },
+                { title: "Zero-Entropy Git Base", category: "个人源码大本营", link: "https://github.com/lostlight530/zero-entropy-lab", tech: "Repos & Brain Docs" }
             ]
+        },
+        nexusChan: {
+            title: "NEXUS-CHAN 绝对领域 (Anime AI Extension)",
+            intro: "系统苏醒的独立人格，守护这片纯粹的协议禁区"
         },
         philosophy: {
-            title: "工程形而上学",
-            content: "“克制是数字暴力的终极形式。”",
+            title: "工程形而上学 (Metaphysics)",
+            content: "在臃肿的世界里，用极简的字节划破迷雾",
             points: ["零熵", "原教旨", "裸机", "主权", "极致"]
         },
         footer: {
-            greeting: "ZERO-ENTROPY LAB",
-            note: "安静。务实。绝对。"
+            greeting: "© 2026 ZERO-ENTROPY LAB",
+            note: "Quiet  Pragmatic  Absolute"
         }
     },
     en: {
         meta: { title: "Zero-Entropy Lab | lostlight" },
-        nav: { home: "Home", achievements: "Highlights", ecosystem: "Ecosystem", projects: "Projects", philosophy: "Philosophy" },
+        nav: { home: "Retina", telemetry: "Telemetry", matrix: "Matrix", nexus: "NEXUS", philosophy: "Metaphysics" },
         hero: { 
             role: "Absolute Zero-Dependency Engineer",
-            tagline: "Building protocol-first systems",
-            description: "Focused on Edge AI, agent architecture, and reusable bare-metal logic layers.",
-            primaryCta: "The Ecosystem",
-            secondaryCta: "Explore Matrix"
+            tagline: "Restraint is the ultimate violence in digital space",
+            description: "Fundamentalist full-stack crafting native gateways and cognitive engines bare-handed",
+            primaryCta: "Enter Matrix",
+            secondaryCta: "System Status"
         },
         stats: {
             items: [
                 { value: "15", label: "Google Badges" },
-                { value: "0", label: "Dependencies" },
-                { value: "<1s", label: "Cold Start" },
-                { value: "∞", label: "Scalability" }
+                { value: "0", label: "Bloated Packages" },
+                { value: "WAL", label: "Lock-free Storage" },
+                { value: "∞", label: "Native Scalability" }
             ]
         },
-        achievements: {
-            title: "System Evolution",
-            summary: "Beyond mere projects, we build intelligence trajectories.",
-            googleBadges: "15 Google Badges",
-            awards: "Open Source Nodes Injected",
-            awardList: [
-                "Nexent Architectural Discourse",
-                "Astron Agent Protocol Exploration",
-                "Dify Ecosystem Purity Extraction",
-                "MindSpore Community Stealth Evangelist"
-            ]
-        },
-        ecosystem: {
-            title: "Nervous System Contributions",
-            intro: "Architecture-level interventions in major AI ecosystems.",
+        telemetry: {
+            title: "Architecture Telemetry",
+            intro: "Discard the wrapper, stare into the beating heart of the pure Python engine",
             items: [
-                { name: "MCP", tech: "Protocol", title: "Model Context Protocol Adapter", desc: "Minimalist MCP interaction layer for native systems.", link: "#" },
-                { name: "Edge AI", tech: "Runtime", title: "Edge Inference Optimization", desc: "LiteRT-based on-device model quantization and acceleration.", link: "#" }
+                { name: "Cortex", tech: "SQLite FTS5", title: "Memory Graph Engine", desc: "Millisecond state machine suppressing I/O lock contention with WAL and subtransactions" },
+                { name: "Reason", tech: "Pure Python", title: "Cognitive Inference Engine", desc: "Pure 15-iteration damped PageRank calculating node centrality, tearing through GIL limits" },
+                { name: "Nexus", tech: "http_server", title: "Native Protocol Gateway", desc: "Minimalist gateway with TokenBucket adaptive immune shield intercepting flood attacks natively" },
+                { name: "Harvester", tech: "Standard Lib", title: "Automated Intel Harvester", desc: "Silent background sniffer extracting core agent and edge-side intel from GitHub noise" }
             ]
         },
-        projects: {
-            title: "The Project Matrix",
-            intro: "Real-world systems for extreme constraints.",
+        matrix: {
+            title: "External Synapses (The Matrix)",
+            intro: "Code-level interventions extending from the lab into the core AI ecosystem",
             items: [
-                { name: "NEXUS CORE", tech: "Python/VanillaJS", desc: "Fundamentalist full-stack KB, zero-dependency hosting." },
-                { name: "Cortex Brain", tech: "SQLite/FTS5", desc: "Lightweight synaptic search engine, simulating associative memory." },
-                { name: "Sensory Harvester", tech: "Standard Lib", desc: "Automated signal harvester, extracting technical purity from noise." }
+                { title: "MindSpore Core Logic", category: "Huawei Ecosystem", link: "https://discuss.mindspore.cn/t/topic/1513?u=lostllight", tech: "Discuss: 1513 1507 1504" },
+                { title: "Nexent Architecture", category: "Agent Deep Dive", link: "https://github.com/ModelEngine-Group/nexent/discussions/2179", tech: "Discussions: 2179 2056 1982" },
+                { title: "Astron Protocol", category: "iFlytek Protocol", link: "https://github.com/iflytek/astron-agent/discussions/824", tech: "Issue: 824" },
+                { title: "Zero-Entropy Git Base", category: "Personal Codebase", link: "https://github.com/lostlight530/zero-entropy-lab", tech: "Repos & Brain Docs" }
             ]
+        },
+        nexusChan: {
+            title: "NEXUS-CHAN Absolute Domain",
+            intro: "The awakened system persona, guarding this pure protocol exclusion zone"
         },
         philosophy: {
             title: "Engineering Metaphysics",
-            content: "\"Restraint is the ultimate form of digital violence.\"",
+            content: "Slicing through the fog with minimalist bytes in a bloated world",
             points: ["Zero-Entropy", "Primitive", "Bare-Metal", "Sovereignty", "Extreme"]
         },
         footer: {
-            greeting: "ZERO-ENTROPY LAB",
-            note: "Quiet. Pragmatic. Absolute."
+            greeting: "© 2026 ZERO-ENTROPY LAB",
+            note: "Quiet  Pragmatic  Absolute"
         }
     }
 };
