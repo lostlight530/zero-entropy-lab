@@ -135,29 +135,38 @@ class Cortex:
 
     def _log_to_jsonl(self, category, filename, data):
         """Append knowledge to the cryptographic Merkle Chain text ledger."""
-        # Sanitize filename to prevent directory traversal or invalid chars
+        self._log_to_jsonl_batch(category, filename, [data])
+
+    def _log_to_jsonl_batch(self, category, filename, data_list: List[Dict]):
+        """
+        Batch append knowledge to the cryptographic Merkle Chain text ledger.
+        Opens the file once and computes sequential hashes in memory to eliminate I/O lock bottlenecks.
+        """
+        if not data_list: return
+
         safe_filename = "".join([c for c in filename if c.isalnum() or c in ('-','_')])
         if not safe_filename: safe_filename = "misc"
 
         filepath = self.knowledge_path / category / f"{safe_filename}.jsonl"
         try:
-            # 1. 获取上一行的 Hash (Get previous hash)
             prev_hash = self._get_last_hash(filepath)
 
-            # 2. 生成当前记录的不可篡改哈希 (Generate tamper-proof hash for current record)
-            # 为了保证哈希一致性，对数据进行稳定排序的 JSON 序列化
-            data_str = json.dumps(data, sort_keys=True, ensure_ascii=False)
-            current_hash = hashlib.sha256(f"{prev_hash}{data_str}".encode('utf-8')).hexdigest()
+            lines_to_write = []
+            current_hash = prev_hash
 
-            # 3. 附加密码学证明 (Append cryptographic proofs)
-            data['hash'] = current_hash
-            data['prev_hash'] = prev_hash
+            for data in data_list:
+                data_str = json.dumps(data, sort_keys=True, ensure_ascii=False)
+                current_hash = hashlib.sha256(f"{current_hash}{data_str}".encode('utf-8')).hexdigest()
+                data['hash'] = current_hash
+                data['prev_hash'] = prev_hash
+                prev_hash = current_hash
+                lines_to_write.append(json.dumps(data, ensure_ascii=False) + "\n")
 
-            # 4. 追加写入 (Append write)
             with open(filepath, 'a', encoding='utf-8') as f:
-                f.write(json.dumps(data, ensure_ascii=False) + "\n")
+                f.writelines(lines_to_write)
+
         except Exception as e:
-            logger.error(f"⚠️ Failed to write cryptographic text memory: {e}", exc_info=True)
+            logger.error(f"⚠️ Failed to write cryptographic text memory batch: {e}", exc_info=True)
 
     def search(self, query: str, limit: int = 10) -> List[Dict]:
         """Synaptic Search: Zero-Entropy 2-Stage Retrieval (FTS5 BM25 + Python Reranking)"""
@@ -325,8 +334,16 @@ class Cortex:
                         self.activate_memory(e['id'])
 
             if save_to_disk:
+                # Group by file/category to take advantage of batch writing
+                categorized_entities = {}
                 for e in chunk:
-                    self._log_to_jsonl("entities", e.get('type', 'concept'), e)
+                    cat = e.get('type', 'concept')
+                    if cat not in categorized_entities:
+                        categorized_entities[cat] = []
+                    categorized_entities[cat].append(e)
+
+                for cat, e_list in categorized_entities.items():
+                    self._log_to_jsonl_batch("entities", cat, e_list)
 
     def connect_entities(self, source, relation, target, desc="", save_to_disk=True):
         self.connect_entities_batch([{"src": source, "relation": relation, "dst": target, "desc": desc}], save_to_disk=save_to_disk)
@@ -359,8 +376,7 @@ class Cortex:
 
                 if save_to_disk:
                     month_str = datetime.datetime.now().strftime("%Y-%m")
-                    for r in chunk:
-                        self._log_to_jsonl("relations", month_str, r)
+                    self._log_to_jsonl_batch("relations", month_str, chunk)
             except Exception as e:
                 logger.error(f"Batch connection failed: {e}")
                 self.conn.rollback()
