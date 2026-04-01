@@ -1,5 +1,5 @@
 # 🛡️ NEXUS CORTEX: Architect's Daily Brief
-> **Date**: 2026-04-01 | **Entropy**: 4.5488
+> **Date**: 2026-04-01 | **Entropy**: 4.6394
 
 ## 🚨 昨夜今晨 (System Health)
 - **Status**: 🟢 **ONLINE**
@@ -12,8 +12,8 @@
 - [ ] Block 2 hours.
 
 ## 🔍 待处理熵值 (Entropy Targets)
-- **Alpha** (concept_alpha): Weight 22.31
-- **Beta** (concept_beta): Weight 22.31
-- **bug_report.md** (file__github\ISSUE_TEMPLATE\bug_report_md): Weight 1.56
-- **custom.md** (file__github\ISSUE_TEMPLATE\custom_md): Weight 1.56
-- **feature_request.md** (file__github\ISSUE_TEMPLATE\feature_request_md): Weight 1.56
+- **Alpha** (concept_alpha): Weight 22.91
+- **Beta** (concept_beta): Weight 22.91
+- **bug_report.md** (file__github\ISSUE_TEMPLATE\bug_report_md): Weight 1.58
+- **custom.md** (file__github\ISSUE_TEMPLATE\custom_md): Weight 1.58
+- **feature_request.md** (file__github\ISSUE_TEMPLATE\feature_request_md): Weight 1.58
