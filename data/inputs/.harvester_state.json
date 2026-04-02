@@ -4,8 +4,8 @@
     "updated_at": "2026-03-29"
   },
   "iflytek/astron-agent": {
-    "last_tag": "v1.0.3",
-    "updated_at": "2026-03-20"
+    "last_tag": "v1.0.4",
+    "updated_at": "2026-04-02"
   },
   "langgenius/dify": {
     "last_tag": "1.13.3",
@@ -16,8 +16,8 @@
     "updated_at": "2026-03-31"
   },
   "huggingface/transformers": {
-    "last_tag": "v5.4.0",
-    "updated_at": "2026-03-27"
+    "last_tag": "v5.5.0",
+    "updated_at": "2026-04-02"
   },
   "google-ai-edge/mediapipe": {
     "last_tag": "v0.10.33",
