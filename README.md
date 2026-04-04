@@ -16,7 +16,7 @@
 1. **🧠 核心认知图谱 (Cortex - src/kernel/cortex.py)**:
    - 基于 SQLite 和 FTS5 的高性能状态机。
    - (SQLite-driven memory engine featuring WAL concurrency and HMAC entity signatures.)
-2. **🔌 原生协议网关 (Nexus - src/kernel/nexus.py)**:
+2. **🔌 原生协议网关 (Nexus - src/kernel/protocol/nexus.py)**:
    - 搭载无锁内存池（Ring Buffer）和单轨落盘架构，突破 SQLite I/O 锁竞争的极限并发服务器。
    - (Native multithreaded HTTP server leveraging a lock-free Ring Buffer and Single-Writer Queue to eliminate SQLite WAL lock contention.)
 3. **👁️ 视网膜渲染网格 (Portal - index.html)**:
@@ -31,7 +31,8 @@
 ### 激活实验终端 (Launch Laboratory Web Portal)
 
 ```bash
-python src/kernel/nexus.py serve
+export PYTHONPATH=$(pwd)/src/kernel:$(pwd)/src/kernel/protocol:$(pwd)/src/kernel/memory:$(pwd)/src/kernel/cognitive:$(pwd)/src/kernel/sensory:$(pwd)/src/kernel/orchestration
+python src/kernel/protocol/nexus.py serve
 ```
 
 *地址 (Access at): [http://localhost:8000](http://localhost:8000)*

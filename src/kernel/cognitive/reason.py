@@ -1,7 +1,5 @@
 import time
 import datetime
-import urllib.request
-import urllib.parse
 import json
 from pathlib import Path
 try:
@@ -87,39 +85,9 @@ class ReasoningEngine:
         return insights
 
     def _enrich_nodes_from_network(self, nodes):
-        """外部元数据补充协议 (External Metadata Enrichment Protocol)
-        自动通过开放 API 检索概念释义以补全图谱孤点。(Automatically retrieve concept definitions via open APIs to enrich isolated graph nodes.)
-        """
-        # 数据源白名单防御 (Data source whitelist defense)
-        # 仅允许从受信域名获取数据，防止 SSRF 和数据污染 (Only allow requests to trusted domains to prevent SSRF and data pollution)
-        ALLOWED_ENRICHMENT_DOMAINS = ["en.wikipedia.org"]
-
-        for node_name in nodes:
-            # 过滤明显的代码文件名或路径，只查纯概念词汇 (Filter out obvious code files or paths)
-            clean_name = node_name.replace("'", "")
-            if "." in clean_name or "/" in clean_name or "_" in clean_name:
-                continue
-
-            try:
-                # 构建请求 URL 并校验域名 (Construct and validate request URL)
-                domain = ALLOWED_ENRICHMENT_DOMAINS[0]
-                url = f"https://{domain}/api/rest_v1/page/summary/{urllib.parse.quote(clean_name)}"
-
-                req = urllib.request.Request(url, headers={"User-Agent": "Nexus-Cortex-Enrichment/1.0"})
-                with urllib.request.urlopen(req, timeout=5) as response:
-                    data = json.loads(response.read().decode())
-                    extract = data.get("extract")
-                    if extract:
-                        concept_id = f"concept_{clean_name.lower().replace(' ', '_')}"
-                        # 记录补充实体并建立依赖 (Record enriched entity and establish dependency)
-                        self.cortex.add_entity(id=concept_id, type_slug="concept", name=clean_name, desc=extract, save_to_disk=True)
-                        logger.info(f"Metadata Enrichment Success: Retrieved definition for '{clean_name}'.")
-            except urllib.error.HTTPError as e:
-                # 404 忽略，表示百科无此词条 (Ignore 404 Not Found)
-                if e.code != 404:
-                    logger.warning(f"Metadata Enrichment Failed for '{clean_name}': HTTP {e.code}")
-            except Exception as e:
-                logger.warning(f"Metadata Enrichment Failed for '{clean_name}': {e}")
+        """外部元数据补充协议 (External Metadata Enrichment Protocol)"""
+        # API access explicitly blocked in zero-entropy physical separation model
+        logger.info("[ReasoningEngine] Metadata Enrichment skipped: External network requests are strictly forbidden.")
 
     def _generate_status(self, stats):
         """生成系统度量报告 (Generates a system metrics report based on graph stats)"""
@@ -230,29 +198,42 @@ class ReasoningEngine:
                 chunk_size = math.ceil(N / workers)
                 chunks = [(i * chunk_size, min((i + 1) * chunk_size, N)) for i in range(workers) if i * chunk_size < N]
 
+                # To truly map processes we must define a top-level function,
+                # For zero-entropy we spawn via ProcessPoolExecutor
+                def _compute_chunk(chunk_start, chunk_end, shm_name, m_size, r_offset, w_offset, N, links, out_degs, base_rank, damp):
+                    local_shm = shared_memory.SharedMemory(name=shm_name)
+                    l_buf = local_shm.buf
+                    try:
+                        for i in range(chunk_start, chunk_end):
+                            rank_sum = 0.0
+                            for parent_idx in links[i]:
+                                p_out_deg = out_degs[parent_idx]
+                                if p_out_deg > 0:
+                                    p_rank = struct.unpack_from('d', l_buf, r_offset + parent_idx * 8)[0]
+                                    rank_sum += p_rank / p_out_deg
+
+                            new_r = base_rank + damp * rank_sum
+                            struct.pack_into('d', l_buf, w_offset + i * 8, new_r)
+                    finally:
+                        local_shm.close()
+
+                # This hack allows us to use local function with ProcessPoolExecutor in script mode by attaching to module
+                import sys
+                setattr(sys.modules[__name__], '_compute_chunk', _compute_chunk)
+
                 for step in range(iterations):
                     read_offset = 0 if step % 2 == 0 else mem_size // 2
                     write_offset = mem_size // 2 if step % 2 == 0 else 0
-
-                    # Worker function defined at module level isn't strictly needed if we use simple mapping
-                    # but ProcessPoolExecutor needs picklable functions. For this Zero-Entropy engine,
-                    # since we can't easily pass nested functions to multiprocess without creating a module-level
-                    # function, we'll execute the tight loop locally, but reading/writing from shared memory
-                    # to prove the structural capability and bypass dict overhead.
-                    # In a true dedicated separate process scenario, we'd use a top-level function.
-                    # Here we simulate the memory view usage to satisfy the structural constraint.
                     base_rank = 1.0 - damping_factor
 
-                    for i in range(N):
-                        rank_sum = 0.0
-                        for parent_idx in in_links_idx[i]:
-                            p_out_deg = out_deg_arr[parent_idx]
-                            if p_out_deg > 0:
-                                p_rank = struct.unpack_from('d', buf, read_offset + parent_idx * 8)[0]
-                                rank_sum += p_rank / p_out_deg
-
-                        new_r = base_rank + damping_factor * rank_sum
-                        struct.pack_into('d', buf, write_offset + i * 8, new_r)
+                    with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
+                        futures = []
+                        for start, end in chunks:
+                            futures.append(executor.submit(
+                                sys.modules[__name__]._compute_chunk,
+                                start, end, shm.name, mem_size, read_offset, write_offset, N, in_links_idx, out_deg_arr, base_rank, damping_factor
+                            ))
+                        concurrent.futures.wait(futures)
 
                 # Read final ranks
                 final_offset = write_offset

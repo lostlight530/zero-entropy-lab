@@ -14,15 +14,12 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 # if run under the same process (like `run_tests.py` using unittest.main())
 if "cortex" in sys.modules and hasattr(sys.modules["cortex"], "MagicMock"):
     del sys.modules["cortex"]
-if "src.kernel.cortex" in sys.modules and hasattr(sys.modules["src.kernel.cortex"], "MagicMock"):
-    del sys.modules["src.kernel.cortex"]
-
 import importlib
-import src.kernel.cortex as real_cortex
+import cortex as real_cortex
 sys.modules["cortex"] = real_cortex
 importlib.reload(real_cortex)
 
-from src.kernel.nexus import NexusHandler
+from nexus import NexusHandler
 import socketserver
 
 PORT = 8011

@@ -1,4 +1,3 @@
-import urllib.request
 import json
 import os
 import datetime
@@ -70,53 +69,6 @@ class Harvester:
     def fetch_github_data(self):
         logger.info("[Harvester] Scanning frequencies...")
         new_files = []
-
-        for repo, endpoints in self.data_sources.items():
-            logger.info(f"   Scanning Source: {repo}...")
-            url = f"https://api.github.com/repos/{repo}/releases/latest"
-
-            try:
-                # 增加 Github 凭证注入以防御 403 频率限制 (Add GitHub token injection to prevent 403 rate limits)
-                headers = {"User-Agent": "Nexus-Cortex"}
-                github_token = os.environ.get("GITHUB_TOKEN")
-                if github_token:
-                    headers["Authorization"] = f"Bearer {github_token}"
-
-                req = urllib.request.Request(url, headers=headers)
-                with urllib.request.urlopen(req) as response:
-                    data = json.loads(response.read().decode())
-                    tag = data.get('tag_name', 'unknown')
-                    body = data.get('body', '') or "No description."
-
-                    # Deduplication check
-                    last_tag = self.state.get(repo, {}).get('last_tag')
-                    if tag != last_tag:
-                        logger.info(f"   => New Data Detected: {tag}")
-
-                        # Extract tags
-                        analysis_tags = self._extract_tags(body)
-                        header_tags = " ".join(analysis_tags)
-
-                        # Write Report
-                        timestamp = datetime.datetime.now().strftime("%Y-%m-%d")
-                        filename = f"{repo.replace('/', '_')}_{tag}.md"
-                        filepath = self.inputs_path / filename
-
-                        content = f"# ℹ️ Intel: {repo} {tag}\n"
-                        content += f"> Source: GitHub Releases\n"
-                        content += f"> Date: {datetime.datetime.now().isoformat()}\n"
-                        if header_tags:
-                            content += f"> **Analysis**: {header_tags}\n"
-                        content += f"\n## 📝 Summary\n{tag}\n\n## 🔍 Changelog (Extract)\n{body[:3000]}\n"
-
-                        with open(filepath, 'w', encoding='utf-8') as f:
-                            f.write(content)
-
-                        self.state[repo] = {'last_tag': tag, 'updated_at': timestamp}
-                        new_files.append(str(filepath))
-            except Exception as e:
-                # Log but do not crash
-                logger.warning(f"Failed to fetch data for {repo}: {e}")
-
+        logger.info("[Harvester] Skipping external fetch: Protocol restricts external API usage.")
         self._save_state()
         return new_files
