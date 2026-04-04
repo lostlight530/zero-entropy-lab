@@ -224,10 +224,15 @@ class CortexMemorizeSkill(BaseSkill):
         Returns:
             Dict[str, Any]: Confirmation of insertion.
         """
-        cortex = Cortex()
+        # I/O Deception: Push to memory ring buffer instead of directly writing to disk
+        from nexus import ring_buffer_queue, buffer_lock
         try:
-            cortex.add_entity(id=id, type_slug=type_slug, name=name, desc=desc, save_to_disk=True)
-            return {"status": "success", "message": f"Memorized entity '{name}' ({id})."}
+            with buffer_lock:
+                ring_buffer_queue.append({
+                    "type": "entity",
+                    "payload": {"id": id, "type": type_slug, "name": name, "desc": desc}
+                })
+            return {"status": "success", "message": f"Queued entity '{name}' ({id}) for memory flush."}
         except Exception as e:
             return {"status": "error", "message": str(e)}
 
@@ -255,10 +260,15 @@ class CortexSynapseSkill(BaseSkill):
         Returns:
             Dict[str, Any]: Confirmation of connection.
         """
-        cortex = Cortex()
+        # I/O Deception: Push to memory ring buffer instead of directly writing to disk
+        from nexus import ring_buffer_queue, buffer_lock
         try:
-            cortex.connect_entities(source=source_id, relation=relation, target=target_id, desc=desc, save_to_disk=True)
-            return {"status": "success", "message": f"Connected '{source_id}' --[{relation}]--> '{target_id}'."}
+            with buffer_lock:
+                ring_buffer_queue.append({
+                    "type": "relation",
+                    "payload": {"src": source_id, "relation": relation, "dst": target_id, "desc": desc}
+                })
+            return {"status": "success", "message": f"Queued connection '{source_id}' --[{relation}]--> '{target_id}' for memory flush."}
         except Exception as e:
             return {"status": "error", "message": str(e)}
 
