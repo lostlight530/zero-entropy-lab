@@ -24,8 +24,16 @@ try:
     from logger import logger
     from mcp import registry as mcp_registry
 except ImportError:
-    # Handle direct root execution or path issues
-    sys.path.append(os.path.dirname(__file__))
+    # Handle direct root execution or path issues.
+    # Because internal modules expect flat imports (e.g. `from cortex import Cortex`),
+    # we must ensure that all subdirectories of `src/kernel` are added to sys.path
+    kernel_dir = os.path.dirname(os.path.dirname(__file__))
+    if kernel_dir not in sys.path:
+        sys.path.append(kernel_dir)
+    for root, dirs, files in os.walk(kernel_dir):
+        if root not in sys.path:
+            sys.path.append(root)
+
     from cortex import Cortex
     from harvester import Harvester
     from evolution import Evolver
@@ -160,8 +168,8 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
     """Native API & Static File Router"""
     def __init__(self, *args, **kwargs):
         self.kernel_path = Path(__file__).parent.resolve()
-        # src/kernel/nexus.py -> parents[2] is root
-        self.project_root = Path(__file__).resolve().parents[2]
+        # src/kernel/protocol/nexus.py -> parents[3] is root
+        self.project_root = Path(__file__).resolve().parents[3]
         self.cortex = Cortex()
 
         # Load API Config

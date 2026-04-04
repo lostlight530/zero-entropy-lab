@@ -36,16 +36,16 @@ jobs:
         python-version: '3.10'
 
     - name: 🟢 Rebuild Memory (Wake Up)
-      run: python src/kernel/nexus.py rebuild
+      run: python src/kernel/protocol/nexus.py rebuild
 
     - name: 🔍 Ingest Self-Codebase (Omniscience)
-      run: python src/kernel/nexus.py ingest
+      run: python src/kernel/protocol/nexus.py ingest
 
     - name: 🤔 Deep Ponder (Cognition)
-      run: python src/kernel/nexus.py ponder
+      run: python src/kernel/protocol/nexus.py ponder
 
     - name: 🧬 Run Evolution Cycle (Strategy)
-      run: python src/kernel/nexus.py evolve
+      run: python src/kernel/protocol/nexus.py evolve
 
     - name: 🔄 Sync world-line (Autostash)
       run: |
