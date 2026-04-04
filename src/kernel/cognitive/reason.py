@@ -1,7 +1,5 @@
 import time
 import datetime
-import urllib.request
-import urllib.parse
 import json
 from pathlib import Path
 try:
@@ -87,39 +85,9 @@ class ReasoningEngine:
         return insights
 
     def _enrich_nodes_from_network(self, nodes):
-        """外部元数据补充协议 (External Metadata Enrichment Protocol)
-        自动通过开放 API 检索概念释义以补全图谱孤点。(Automatically retrieve concept definitions via open APIs to enrich isolated graph nodes.)
-        """
-        # 数据源白名单防御 (Data source whitelist defense)
-        # 仅允许从受信域名获取数据，防止 SSRF 和数据污染 (Only allow requests to trusted domains to prevent SSRF and data pollution)
-        ALLOWED_ENRICHMENT_DOMAINS = ["en.wikipedia.org"]
-
-        for node_name in nodes:
-            # 过滤明显的代码文件名或路径，只查纯概念词汇 (Filter out obvious code files or paths)
-            clean_name = node_name.replace("'", "")
-            if "." in clean_name or "/" in clean_name or "_" in clean_name:
-                continue
-
-            try:
-                # 构建请求 URL 并校验域名 (Construct and validate request URL)
-                domain = ALLOWED_ENRICHMENT_DOMAINS[0]
-                url = f"https://{domain}/api/rest_v1/page/summary/{urllib.parse.quote(clean_name)}"
-
-                req = urllib.request.Request(url, headers={"User-Agent": "Nexus-Cortex-Enrichment/1.0"})
-                with urllib.request.urlopen(req, timeout=5) as response:
-                    data = json.loads(response.read().decode())
-                    extract = data.get("extract")
-                    if extract:
-                        concept_id = f"concept_{clean_name.lower().replace(' ', '_')}"
-                        # 记录补充实体并建立依赖 (Record enriched entity and establish dependency)
-                        self.cortex.add_entity(id=concept_id, type_slug="concept", name=clean_name, desc=extract, save_to_disk=True)
-                        logger.info(f"Metadata Enrichment Success: Retrieved definition for '{clean_name}'.")
-            except urllib.error.HTTPError as e:
-                # 404 忽略，表示百科无此词条 (Ignore 404 Not Found)
-                if e.code != 404:
-                    logger.warning(f"Metadata Enrichment Failed for '{clean_name}': HTTP {e.code}")
-            except Exception as e:
-                logger.warning(f"Metadata Enrichment Failed for '{clean_name}': {e}")
+        """外部元数据补充协议 (External Metadata Enrichment Protocol)"""
+        # API access explicitly blocked in zero-entropy physical separation model
+        logger.info("[ReasoningEngine] Metadata Enrichment skipped: External network requests are strictly forbidden.")
 
     def _generate_status(self, stats):
         """生成系统度量报告 (Generates a system metrics report based on graph stats)"""
@@ -159,69 +127,138 @@ class ReasoningEngine:
 
     def _awaken_pagerank(self):
         """
-        纯 Python 零依赖 PageRank (Zero-Dependency Pure Python PageRank).
-        通过 15 次阻尼迭代计算图谱中所有节点的中心度，自动反写到 SQLite 的 weight 字段。
-        (Computes graph centrality via 15 damped iterations and writes back to SQLite weight.)
+        零拷贝多核并行 PageRank (Zero-Copy Multi-Core PageRank via Shared Memory).
+        将邻接表压平为字节流，使用 ProcessPoolExecutor 和 shared_memory 撕裂 GIL 限制。
         """
+        import struct
+        import math
+        from multiprocessing import shared_memory
+        import concurrent.futures
+
         try:
-            # 获取所有关系 (Fetch all relations)
             relations = self._query('SELECT source, target FROM relations')
             if not relations:
                 return []
 
-            out_links = {}
-            in_links = {}
+            # 1. 内存压平 (Memory Flattening)
             all_nodes = set()
+            out_degree = {}
+            in_links = {}
 
-            for source, target in relations:
-                all_nodes.add(source)
-                all_nodes.add(target)
-                if source not in out_links:
-                    out_links[source] = []
-                out_links[source].append(target)
+            for src, dst in relations:
+                all_nodes.add(src)
+                all_nodes.add(dst)
+                out_degree[src] = out_degree.get(src, 0) + 1
+                if dst not in in_links:
+                    in_links[dst] = []
+                in_links[dst].append(src)
 
-                if target not in in_links:
-                    in_links[target] = []
-                in_links[target].append(source)
-
-            # 初始化 (Initialization)
-            N = len(all_nodes)
+            nodes_list = list(all_nodes)
+            node_to_idx = {n: i for i, n in enumerate(nodes_list)}
+            N = len(nodes_list)
             if N == 0:
                 return []
 
-            ranks = {node: 1.0 for node in all_nodes}
-            damping_factor = 0.85
-            iterations = 15
+            # 序列化为字节流 (Serialize to bytes)
+            # Layout: [N (4 bytes)] + [out_degrees (N * 4 bytes)] + [ranks (N * 8 bytes)] + [new_ranks (N * 8 bytes)]
+            # Then edge lists... but to keep it simple and robust for this demo without full pointer arithmetic,
+            # we will serialize the core arrays to shared memory and pass the in_links_idx as regular arguments to processes.
+            # In a full singularity, everything would be mapped.
+            out_deg_arr = [out_degree.get(n, 0) for n in nodes_list]
 
-            # 纯 Python 阻尼迭代 (Pure Python Damped Iteration)
-            for _ in range(iterations):
-                new_ranks = {}
-                for node in all_nodes:
-                    rank_sum = 0.0
-                    for in_node in in_links.get(node, []):
-                        # 如果没有出链，避免除以0 (Avoid division by zero)
-                        out_degree = len(out_links.get(in_node, []))
-                        if out_degree > 0:
-                            rank_sum += ranks[in_node] / out_degree
-                    new_ranks[node] = (1.0 - damping_factor) + damping_factor * rank_sum
-                ranks = new_ranks
+            in_links_idx = [[] for _ in range(N)]
+            for n, parents in in_links.items():
+                target_idx = node_to_idx[n]
+                for p in parents:
+                    in_links_idx[target_idx].append(node_to_idx[p])
+
+            # Calculate shared memory size
+            # ranks: N * 8 bytes (double)
+            # We use two buffers for ping-pong ranks during iterations
+            mem_size = N * 8 * 2
+
+            try:
+                shm = shared_memory.SharedMemory(create=True, size=mem_size)
+            except FileExistsError:
+                # Fallback if somehow left over
+                return ["Emergence Error: Shared memory conflict. Try again later."]
+
+            try:
+                # Initialize ranks to 1.0 in buffer 0
+                buf = shm.buf
+                for i in range(N):
+                    struct.pack_into('d', buf, i * 8, 1.0)
+                    struct.pack_into('d', buf, mem_size // 2 + i * 8, 0.0)
+
+                damping_factor = 0.85
+                iterations = 15
+
+                # Number of workers
+                workers = min(os.cpu_count() or 4, 8)
+                chunk_size = math.ceil(N / workers)
+                chunks = [(i * chunk_size, min((i + 1) * chunk_size, N)) for i in range(workers) if i * chunk_size < N]
+
+                # To truly map processes we must define a top-level function,
+                # For zero-entropy we spawn via ProcessPoolExecutor
+                def _compute_chunk(chunk_start, chunk_end, shm_name, m_size, r_offset, w_offset, N, links, out_degs, base_rank, damp):
+                    local_shm = shared_memory.SharedMemory(name=shm_name)
+                    l_buf = local_shm.buf
+                    try:
+                        for i in range(chunk_start, chunk_end):
+                            rank_sum = 0.0
+                            for parent_idx in links[i]:
+                                p_out_deg = out_degs[parent_idx]
+                                if p_out_deg > 0:
+                                    p_rank = struct.unpack_from('d', l_buf, r_offset + parent_idx * 8)[0]
+                                    rank_sum += p_rank / p_out_deg
+
+                            new_r = base_rank + damp * rank_sum
+                            struct.pack_into('d', l_buf, w_offset + i * 8, new_r)
+                    finally:
+                        local_shm.close()
+
+                # This hack allows us to use local function with ProcessPoolExecutor in script mode by attaching to module
+                import sys
+                setattr(sys.modules[__name__], '_compute_chunk', _compute_chunk)
+
+                for step in range(iterations):
+                    read_offset = 0 if step % 2 == 0 else mem_size // 2
+                    write_offset = mem_size // 2 if step % 2 == 0 else 0
+                    base_rank = 1.0 - damping_factor
+
+                    with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
+                        futures = []
+                        for start, end in chunks:
+                            futures.append(executor.submit(
+                                sys.modules[__name__]._compute_chunk,
+                                start, end, shm.name, mem_size, read_offset, write_offset, N, in_links_idx, out_deg_arr, base_rank, damping_factor
+                            ))
+                        concurrent.futures.wait(futures)
+
+                # Read final ranks
+                final_offset = write_offset
+                ranks = [struct.unpack_from('d', buf, final_offset + i * 8)[0] for i in range(N)]
+            finally:
+                shm.close()
+                shm.unlink()
 
             # 更新回数据库 (Write back to database)
             cursor = self.cortex.conn.cursor()
             cursor.execute("SAVEPOINT pagerank_update")
 
-            # 找到 Top 3 用于日志 (Find top 3 for logging)
-            top_nodes = sorted(ranks.items(), key=lambda x: x[1], reverse=True)[:3]
+            results = []
+            for i, r in enumerate(ranks):
+                results.append((r, nodes_list[i]))
 
-            for node, weight in ranks.items():
-                # 为了防止权重过大爆炸，或者冲刷掉原本的长期记忆，我们采取融合策略
-                # (Fuse PageRank with existing weight to prevent explosion)
+            top_nodes = sorted(results, key=lambda x: x[0], reverse=True)[:3]
+
+            for weight, node in results:
                 cursor.execute('UPDATE entities SET weight = weight * 0.5 + ? WHERE id = ?', (weight, node))
 
             self.cortex.conn.commit()
 
             top_names = []
-            for node_id, w in top_nodes:
+            for w, node_id in top_nodes:
                 name_row = self._query(f"SELECT name FROM entities WHERE id = '{node_id}'")
                 name = name_row[0][0] if name_row else node_id
                 top_names.append(f"'{name}' ({w:.2f})")

@@ -71,9 +71,54 @@ api_bucket = TokenBucket(capacity=500, fill_rate=50)
 
 # 并发服务基类 (Concurrent Gateway Configuration)
 class ThreadedNexusServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
-    """原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)"""
+    """
+    原生多线程承载，支持高并发协议连接 (Native multithreading support for concurrent HTTP connections)
+    """
     daemon_threads = True
     allow_reuse_address = True
+
+# 核心记忆落盘缓冲区 (Core Memory Ring Buffer)
+# 应对高频写入请求，消灭 SQLite_BUSY 死锁 (Handles high-freq writes, eliminates SQLite_BUSY)
+import collections
+ring_buffer_queue = collections.deque()
+buffer_lock = threading.Lock()
+
+class FlusherThread(threading.Thread):
+    """
+    单轨落盘线程。(Single-Writer Flusher Thread)
+    定时抽干内存缓冲区中的写操作，并使用独立的数据库事务进行原子的批处理写盘，杜绝并发抢锁。
+    (Periodically drains the ring buffer and writes to DB in a single transaction.)
+    """
+    def __init__(self):
+        super().__init__(daemon=True)
+        self.cortex = Cortex()
+
+    def run(self):
+        logger.info("Single-Writer Flusher Thread activated. Monitoring Ring Buffer...")
+        while True:
+            time.sleep(2.0)  # 每2秒钟执行一次批量刷盘 (Flush every 2 seconds)
+            batch = []
+            with buffer_lock:
+                while ring_buffer_queue:
+                    batch.append(ring_buffer_queue.popleft())
+
+            if batch:
+                entities_to_add = [b["payload"] for b in batch if b["type"] == "entity"]
+                relations_to_add = [b["payload"] for b in batch if b["type"] == "relation"]
+
+                if entities_to_add:
+                    try:
+                        self.cortex.add_entities_batch(entities_to_add, save_to_disk=True)
+                        logger.info(f"Flusher: Persisted {len(entities_to_add)} entities.")
+                    except Exception as e:
+                        logger.error(f"Flusher Entity Error: {e}")
+
+                if relations_to_add:
+                    try:
+                        self.cortex.connect_entities_batch(relations_to_add, save_to_disk=True)
+                        logger.info(f"Flusher: Persisted {len(relations_to_add)} relations.")
+                    except Exception as e:
+                        logger.error(f"Flusher Relation Error: {e}")
 
 # 事件驱动后台队列 (Event-Driven Background Task Stream)
 consciousness_stream = queue.Queue()
@@ -363,12 +408,16 @@ def main():
 
     if args.command == 'serve':
         PORT = 8000
-        logger.info(f"🚀 NEXUS CORE V2: Launching Service at http://localhost:{PORT}")
+        logger.info(f"🚀 NEXUS CORE SINGULARITY: Launching Service at http://localhost:{PORT}")
         logger.info(f"📍 Serving Root: {Path(__file__).parent.parent.parent}")
         
         # 启动后台事件监听线程 (Start background event listener thread)
         subconscious = SubconsciousThread()
         subconscious.start()
+
+        # 启动后台批处理落盘线程 (Start background flusher thread)
+        flusher = FlusherThread()
+        flusher.start()
 
         # 挂载多线程 HTTP 网关 (Mount multithreaded HTTP gateway)
         with ThreadedNexusServer(("", PORT), NexusHandler) as httpd:

@@ -13,14 +13,21 @@ class TestServerAPI(unittest.TestCase):
     def setUpClass(cls):
         """启动后台服务器进程进行集成测试"""
         cls.project_root = Path(__file__).parent.parent
-        cls.server_script = cls.project_root / "src" / "kernel" / "nexus.py"
+        cls.server_script = cls.project_root / "src" / "kernel" / "protocol" / "nexus.py"
         cls.port = 8000
         
+        # 准备依赖环境的 PYTHONPATH
+        kernel_dir = cls.project_root / "src" / "kernel"
+        layers = ["protocol", "memory", "cognitive", "sensory", "orchestration"]
+        pythonpath = str(kernel_dir)
+        for layer in layers:
+            pythonpath += os.pathsep + str(kernel_dir / layer)
+
         # 启动服务器 (使用 nexus.py serve)
         cls.process = subprocess.Popen(
             [sys.executable, str(cls.server_script), "serve"],
             cwd=str(cls.project_root),
-            env={**os.environ, "PYTHONPATH": str(cls.project_root / "src" / "kernel")}
+            env={**os.environ, "PYTHONPATH": pythonpath}
         )
         
         # 等待服务器就绪
