@@ -294,7 +294,6 @@ class CortexEnrichSkill(BaseSkill):
         """
         import urllib.request
         import urllib.parse
-        from logger import logger
 
         # 校验域名防范 SSRF (Validate domain to prevent SSRF)
         ALLOWED_ENRICHMENT_DOMAINS = ["en.wikipedia.org"]
