@@ -184,9 +184,8 @@ class Scholar:
         """Legacy single file learning (kept for compatibility)"""
         input_path = Path(input_file)
         if not input_path.exists(): return None
-        project_root = self.brain_path.parent.parent
         try:
-            self._digest_file(project_root, input_path)
+            self._digest_file(self.project_root, input_path)
             return f"Ingested {input_path.name} into Graph."
         except Exception as e:
             return f"Error: {e}"

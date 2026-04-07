@@ -5,6 +5,7 @@ data/*
 !data/knowledge/
 !data/memories/
 !data/inputs/
+!data/inputs/archive/
 !data/*.db
 *.log
 
