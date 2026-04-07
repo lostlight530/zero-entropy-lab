@@ -1,3 +1,5 @@
+# 核心理念 (Core Philosophy)
+
 # Zero-Entropy Lab | Constitution
 
 ## 0. 核心愿景 (Vision)
