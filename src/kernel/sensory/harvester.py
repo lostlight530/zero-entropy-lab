@@ -67,8 +67,61 @@ class Harvester:
         return tags
 
     def fetch_github_data(self):
+        import urllib.request
         logger.info("[Harvester] Scanning frequencies...")
         new_files = []
-        logger.info("[Harvester] Skipping external fetch: Protocol restricts external API usage.")
+        token = os.environ.get("GITHUB_TOKEN")
+
+        # 零依赖 HTTP 客户端 (Zero-Dependency HTTP Client)
+        for repo, endpoints in self.data_sources.items():
+            for endpoint in endpoints:
+                url = f"https://api.github.com/repos/{repo}/{endpoint}"
+                req = urllib.request.Request(url)
+                req.add_header('User-Agent', 'Nexus-Cortex-Harvester/1.0')
+                if token:
+                    req.add_header('Authorization', f'Bearer {token}')
+
+                try:
+                    with urllib.request.urlopen(req, timeout=10) as response:
+                        if response.status == 200:
+                            data = json.loads(response.read().decode('utf-8'))
+
+                            # 取最新的一条数据 (Get the latest entry)
+                            if data and isinstance(data, list):
+                                latest = data[0]
+                                item_id = str(latest.get('id', latest.get('node_id', 'unknown')))
+
+                                state_key = f"{repo}_{endpoint}"
+                                if self.state.get(state_key) != item_id:
+                                    # 发现新数据 (New data discovered)
+                                    self.state[state_key] = item_id
+
+                                    # 构建 MD 报告 (Generate MD Report)
+                                    name = latest.get('name', 'N/A')
+                                    body = latest.get('body', '') or latest.get('commit', {}).get('message', '')
+                                    html_url = latest.get('html_url', f"https://github.com/{repo}")
+
+                                    tags = self._extract_tags(body)
+                                    tags_str = ", ".join(tags) if tags else "General"
+
+                                    safe_repo = repo.replace("/", "_")
+                                    filename = f"{safe_repo}_{endpoint}_{name.replace(' ', '_')}.md"
+                                    filepath = self.inputs_path / filename
+
+                                    content = f"# Intelligence Report: {repo}\n\n"
+                                    content += f"> **Type**: {endpoint.capitalize()}\n"
+                                    content += f"> **Version/Name**: {name}\n"
+                                    content += f"> **Link**: {html_url}\n"
+                                    content += f"> **Analysis**: {tags_str}\n\n"
+                                    content += f"## Payload\n\n```text\n{body[:1000]}...\n```\n"
+
+                                    with open(filepath, 'w', encoding='utf-8') as f:
+                                        f.write(content)
+
+                                    new_files.append(filepath)
+                                    logger.info(f"[Harvester] New Intel harvested: {filename}")
+                except Exception as e:
+                    logger.warning(f"[Harvester] Failed to fetch {url}: {e}")
+
         self._save_state()
         return new_files
