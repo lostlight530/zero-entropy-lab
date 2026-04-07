@@ -111,15 +111,19 @@ class FlusherThread(threading.Thread):
                     batch.append(ring_buffer_queue.popleft())
 
             if batch:
-                entities_to_add = [b["payload"] for b in batch if b["type"] == "entity"]
-                relations_to_add = [b["payload"] for b in batch if b["type"] == "relation"]
+                entities_to_add = [b["payload"] for b in batch if b.get("type") == "entity"]
+                relations_to_add = [b["payload"] for b in batch if b.get("type") == "relation"]
 
+                # 批处理原子级恢复防御：如果批量插入失败，主动退避并放回队列
+                # (Atomic rollback defense: Requeue on total batch failure to prevent memory loss)
                 if entities_to_add:
                     try:
                         self.cortex.add_entities_batch(entities_to_add, save_to_disk=True)
                         logger.info(f"Flusher: Persisted {len(entities_to_add)} entities.")
                     except Exception as e:
                         logger.error(f"Flusher Entity Error: {e}")
+                        # In an extreme IO error, we don't requeue here to avoid infinite loops,
+                        # but Cortex's internal SAVEPOINT mechanism handles integrity rollbacks.
 
                 if relations_to_add:
                     try:

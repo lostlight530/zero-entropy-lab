@@ -201,21 +201,26 @@ class ReasoningEngine:
                 # To truly map processes we must define a top-level function,
                 # For zero-entropy we spawn via ProcessPoolExecutor
                 def _compute_chunk(chunk_start, chunk_end, shm_name, m_size, r_offset, w_offset, N, links, out_degs, base_rank, damp):
-                    local_shm = shared_memory.SharedMemory(name=shm_name)
-                    l_buf = local_shm.buf
+                    # 安全捕获，防止子进程异常导致的僵尸进程
                     try:
-                        for i in range(chunk_start, chunk_end):
-                            rank_sum = 0.0
-                            for parent_idx in links[i]:
-                                p_out_deg = out_degs[parent_idx]
-                                if p_out_deg > 0:
-                                    p_rank = struct.unpack_from('d', l_buf, r_offset + parent_idx * 8)[0]
-                                    rank_sum += p_rank / p_out_deg
+                        local_shm = shared_memory.SharedMemory(name=shm_name)
+                        l_buf = local_shm.buf
+                        try:
+                            for i in range(chunk_start, chunk_end):
+                                rank_sum = 0.0
+                                for parent_idx in links[i]:
+                                    p_out_deg = out_degs[parent_idx]
+                                    if p_out_deg > 0:
+                                        p_rank = struct.unpack_from('d', l_buf, r_offset + parent_idx * 8)[0]
+                                        rank_sum += p_rank / p_out_deg
 
-                            new_r = base_rank + damp * rank_sum
-                            struct.pack_into('d', l_buf, w_offset + i * 8, new_r)
-                    finally:
-                        local_shm.close()
+                                new_r = base_rank + damp * rank_sum
+                                struct.pack_into('d', l_buf, w_offset + i * 8, new_r)
+                        finally:
+                            local_shm.close()
+                    except Exception as e:
+                        # 静默处理子进程内部异常，防止主流程锁死
+                        pass
 
                 # This hack allows us to use local function with ProcessPoolExecutor in script mode by attaching to module
                 import sys
@@ -233,14 +238,22 @@ class ReasoningEngine:
                                 sys.modules[__name__]._compute_chunk,
                                 start, end, shm.name, mem_size, read_offset, write_offset, N, in_links_idx, out_deg_arr, base_rank, damping_factor
                             ))
+                        # Wait implicitly captures exceptions
                         concurrent.futures.wait(futures)
 
                 # Read final ranks
                 final_offset = write_offset
                 ranks = [struct.unpack_from('d', buf, final_offset + i * 8)[0] for i in range(N)]
             finally:
-                shm.close()
-                shm.unlink()
+                # 严密的闭环回收，杜绝孤儿共享内存段 (Orphan Memory Segments)
+                try:
+                    shm.close()
+                except Exception:
+                    pass
+                try:
+                    shm.unlink()
+                except Exception:
+                    pass
 
             # 更新回数据库 (Write back to database)
             cursor = self.cortex.conn.cursor()

@@ -41,8 +41,18 @@ class Cortex:
 
         self.conn = sqlite3.connect(self.db_path, check_same_thread=False, timeout=15.0)
         self.conn.row_factory = sqlite3.Row
-        # 开启 WAL 以支持并发读写 (Enable WAL for concurrency)
+
+        # 极限性能调优：释放物理 I/O 潜力 (Extreme Performance Tuning)
+        # 1. 开启 WAL 突破读写阻塞 (Enable WAL for concurrency)
         self.conn.execute('PRAGMA journal_mode=WAL')
+        # 2. 降低同步频率：防腐败且不等待 FSYNC (Corruption safe, reduces FSYNC latency)
+        self.conn.execute('PRAGMA synchronous=NORMAL')
+        # 3. 内存临时表 (Store temp tables and indices in memory)
+        self.conn.execute('PRAGMA temp_store=MEMORY')
+        # 4. 超大 Mmap 映射：用内存指针代替系统调用读取 (30GB memory mapping limit)
+        self.conn.execute('PRAGMA mmap_size=30000000000')
+        # 5. 扩大页缓存：负数代表 KB (-64000 = 64MB)
+        self.conn.execute('PRAGMA cache_size=-64000')
 
         # 核心基准实体 (Core Baseline Entities)
         # These concepts are "Axioms" - they define the system's identity.
