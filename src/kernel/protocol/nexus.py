@@ -23,6 +23,7 @@ try:
     from reason import ReasoningEngine # <--- The Frontal Lobe
     from logger import logger
     from mcp import registry as mcp_registry
+    from hive import HiveMind
 except ImportError:
     # Handle direct root execution or path issues.
     # Because internal modules expect flat imports (e.g. `from cortex import Cortex`),
@@ -41,6 +42,7 @@ except ImportError:
     from reason import ReasoningEngine
     from logger import logger
     from mcp import registry as mcp_registry
+    from hive import HiveMind
 
 @dataclass
 class APIResponse:
@@ -100,6 +102,8 @@ class FlusherThread(threading.Thread):
     def __init__(self):
         super().__init__(daemon=True)
         self.cortex = Cortex()
+        # 初始化 HiveMind (Initialize HiveMind for cluster broadcast)
+        self.hive = HiveMind()
 
     def run(self):
         logger.info("Single-Writer Flusher Thread activated. Monitoring Ring Buffer...")
@@ -120,6 +124,8 @@ class FlusherThread(threading.Thread):
                     try:
                         self.cortex.add_entities_batch(entities_to_add, save_to_disk=True)
                         logger.info(f"Flusher: Persisted {len(entities_to_add)} entities.")
+                        # 触发集群广播 (Trigger cluster broadcast)
+                        self.hive.broadcast("entities", entities_to_add)
                     except Exception as e:
                         logger.error(f"Flusher Entity Error: {e}")
                         # In an extreme IO error, we don't requeue here to avoid infinite loops,
@@ -129,6 +135,8 @@ class FlusherThread(threading.Thread):
                     try:
                         self.cortex.connect_entities_batch(relations_to_add, save_to_disk=True)
                         logger.info(f"Flusher: Persisted {len(relations_to_add)} relations.")
+                        # 触发集群广播 (Trigger cluster broadcast)
+                        self.hive.broadcast("relations", relations_to_add)
                     except Exception as e:
                         logger.error(f"Flusher Relation Error: {e}")
 
@@ -423,6 +431,10 @@ def main():
         logger.info(f"🚀 NEXUS CORE SINGULARITY: Launching Service at http://localhost:{PORT}")
         logger.info(f"📍 Serving Root: {Path(__file__).parent.parent.parent}")
         
+        # 启动多播集群监听 (Start Multicast Hive Listener)
+        hive = HiveMind()
+        hive.start_listening()
+
         # 启动后台事件监听线程 (Start background event listener thread)
         subconscious = SubconsciousThread()
         subconscious.start()
