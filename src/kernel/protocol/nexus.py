@@ -184,6 +184,9 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
         self.project_root = Path(__file__).resolve().parents[3]
         self.cortex = Cortex()
 
+        # 【核心修复：强制绑定静态文件根目录，线程安全】
+        kwargs['directory'] = str(self.project_root)
+
         # Load API Config
         self.api_key = os.environ.get("NEXUS_API_KEY")
         self.allowed_origins = ["http://localhost:8000", "http://127.0.0.1:8000"]
@@ -218,9 +221,7 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
         if path.startswith("/api/"):
             self.handle_api(path, parsed_url.query, method="GET")
         else:
-            # Shift directory to project root for static serving
-            # This is slightly risky in a multi-threaded server but okay for our native lab
-            os.chdir(self.project_root)
+            # 【核心修复：彻底删除 os.chdir(self.project_root)】
             super().do_GET()
 
     def do_OPTIONS(self):

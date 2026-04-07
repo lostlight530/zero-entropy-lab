@@ -147,6 +147,13 @@ class Evolver:
             ""
         ]
 
+        # 【核心修复：将夜间推演的 intuitions 按严格格式注入】
+        if intuitions:
+            content.append("## 🧠 夜间潜意识觉醒 (Nightly Cognitive Intuitions)")
+            for insight in intuitions:
+                content.append(f"- {insight}")
+            content.append("")
+
         has_intel = False
         for section, items in categories.items():
             if items:
