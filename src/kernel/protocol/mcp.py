@@ -321,3 +321,33 @@ class CortexEnrichSkill(BaseSkill):
             return {"status": "error", "message": str(e)}
 
 registry.register(CortexEnrichSkill)
+
+class CortexDailyBriefSkill(BaseSkill):
+    """
+    每日行动纲领与潜意识报告读取接口 (Daily Mission & Cognitive Report Interface).
+    外部智能体每天必须调用此接口，获取当前的系统战略焦点和图谱变动。
+    """
+    name = "cortex_daily_brief"
+    description = "Read the daily MISSION_ACTIVE and nightly cognitive report to align your actions."
+
+    def execute(self) -> Dict[str, Any]:
+        from pathlib import Path
+        import time
+
+        project_root = Path(__file__).resolve().parents[3]
+        memories_dir = project_root / "data" / "memories"
+
+        mission_file = memories_dir / "MISSION_ACTIVE.md"
+        date_prefix = time.strftime("%Y%m%d")
+        report_file = memories_dir / f"{date_prefix}-cognitive-report.md"
+
+        mission_content = mission_file.read_text(encoding='utf-8') if mission_file.exists() else "No Active Mission today."
+        report_content = report_file.read_text(encoding='utf-8') if report_file.exists() else "No Nightly Dreams recorded yet."
+
+        return {
+            "status": "success",
+            "mission": mission_content,
+            "subconscious_report": report_content
+        }
+
+registry.register(CortexDailyBriefSkill)
