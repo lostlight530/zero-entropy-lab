@@ -18,7 +18,7 @@ except ImportError:
 class Cortex:
     def __init__(self, db_path=None, project_root=None):
         # Default to the root of the repo (parent of src/kernel)
-        self.project_root = project_root or Path(__file__).resolve().parents[2]
+        self.project_root = project_root or Path(__file__).resolve().parents[3]
         self.kernel_path = self.project_root / "src" / "kernel"
         
         if db_path is None:
