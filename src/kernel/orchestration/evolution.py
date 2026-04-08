@@ -14,8 +14,8 @@ logging.basicConfig(level=logging.INFO, format='[Evolution] %(message)s')
 
 class Evolver:
     def __init__(self, project_root=None):
-        # Default to the root of the repo (parent of src/kernel)
-        self.project_root = project_root or Path(__file__).resolve().parents[2]
+        # Default to the root of the repo (parent of src/kernel/orchestration)
+        self.project_root = project_root or Path(__file__).resolve().parents[3]
         self.kernel_path = self.project_root / "src" / "kernel"
         self.data_path = self.project_root / "data"
         self.memories_path = self.data_path / "memories"
@@ -139,11 +139,13 @@ class Evolver:
         # Generate Content
         now = datetime.datetime.now().strftime("%Y-%m-%d")
         content = [
-            f"# 🛡️ NEXUS CORTEX: Architect's Daily Brief",
+            f"# 每日简报 (Daily Brief)",
             f"> **Date**: {now} | **Entropy**: {stats['density']:.4f}",
             f"",
             f"## 🚨 昨夜今晨 (System Health)",
             f"- **Status**: 🟢 **ONLINE**",
+            f"- **Nodes**: {stats['entities']}",
+            f"- **Edges**: {stats['relations']}",
             ""
         ]
 

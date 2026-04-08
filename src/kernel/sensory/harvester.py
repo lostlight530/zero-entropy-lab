@@ -108,12 +108,12 @@ class Harvester:
                                     filename = f"{safe_repo}_{endpoint}_{name.replace(' ', '_')}.md"
                                     filepath = self.inputs_path / filename
 
-                                    content = f"# Intelligence Report: {repo}\n\n"
+                                    content = f"# 情报报告 (Intelligence Report): {repo}\n\n"
                                     content += f"> **Type**: {endpoint.capitalize()}\n"
                                     content += f"> **Version/Name**: {name}\n"
                                     content += f"> **Link**: {html_url}\n"
                                     content += f"> **Analysis**: {tags_str}\n\n"
-                                    content += f"## Payload\n\n```text\n{body[:1000]}...\n```\n"
+                                    content += f"## 载荷 (Payload)\n\n```text\n{body}\n```\n"
 
                                     with open(filepath, 'w', encoding='utf-8') as f:
                                         f.write(content)

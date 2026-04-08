@@ -17,8 +17,8 @@ except ImportError:
 
 class Scholar:
     def __init__(self, project_root=None):
-        # Default to the root of the repo (parent of src/kernel)
-        self.project_root = project_root or Path(__file__).resolve().parents[2]
+        # Default to the root of the repo (parent of src/kernel/sensory)
+        self.project_root = project_root or Path(__file__).resolve().parents[3]
         self.kernel_path = self.project_root / "src" / "kernel"
         self.data_path = self.project_root / "data"
         self.knowledge_path = self.data_path / "knowledge"

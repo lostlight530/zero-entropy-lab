@@ -1,6 +1,7 @@
 import time
 import datetime
 import json
+import os
 from pathlib import Path
 try:
     from cortex import Cortex
@@ -13,7 +14,7 @@ except ImportError:
 
 class ReasoningEngine:
     def __init__(self, project_root=None):
-        self.project_root = project_root or Path(__file__).resolve().parents[2]
+        self.project_root = project_root or Path(__file__).resolve().parents[3]
         self.kernel_path = self.project_root / "src" / "kernel"
         self.data_path = self.project_root / "data"
         self.db_path = self.data_path / "cortex.db"
