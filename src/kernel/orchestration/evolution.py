@@ -14,8 +14,8 @@ logging.basicConfig(level=logging.INFO, format='[Evolution] %(message)s')
 
 class Evolver:
     def __init__(self, project_root=None):
-        # Default to the root of the repo (parent of src/kernel)
-        self.project_root = project_root or Path(__file__).resolve().parents[2]
+        # Default to the root of the repo (parent of src/kernel/orchestration)
+        self.project_root = project_root or Path(__file__).resolve().parents[3]
         self.kernel_path = self.project_root / "src" / "kernel"
         self.data_path = self.project_root / "data"
         self.memories_path = self.data_path / "memories"
@@ -54,12 +54,12 @@ class Evolver:
         try:
             r = ReasoningEngine(self.project_root)
             insights = r.ponder()
-            if insights and "❌ **Critical**" not in insights[0]:
+            if isinstance(insights, dict) and "error" not in insights:
                 self._generate_cognitive_report(insights)
             return insights
         except Exception as e:
             logging.error(f"Failed to ponder: {e}")
-            return []
+            return {}
 
     def _generate_cognitive_report(self, insights):
         now_utc = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
@@ -68,13 +68,34 @@ class Evolver:
 
         content = [
             f"# 🧠 NEXUS CORTEX: Cognitive Report",
-            f"> **Date**: {now_utc} (UTC)",
+            f"",
+            f"Date: {now_utc} (UTC)",
             f""
         ]
 
-        for insight in insights:
-            # Insight is already formatted in reason.py with emojis
-            content.append(f"- {insight}")
+        # 1. 状态基线 (Baseline)
+        content.append("## 系统状态基线 (System Status Baseline)")
+        for item in insights.get("baseline", []):
+            content.append(item)
+        content.append("")
+
+        # 2. 物理层遥测 (Telemetry)
+        content.append("## 物理层性能遥测 (Physical Telemetry)")
+        for item in insights.get("telemetry", []):
+            content.append(f"* {item}")
+        content.append("")
+
+        # 3. 认知网络扫描 (Scan)
+        content.append("## 认知网络断层扫描 (Cognitive Network Scan)")
+        for item in insights.get("scan", []):
+            content.append(f"* {item}")
+        content.append("")
+
+        # 4. 零熵演化推演 (Evolution)
+        content.append("## 零熵演化推演 (Zero-Entropy Evolution Hypothesis)")
+        for item in insights.get("evolution", []):
+            content.append(item)
+        content.append("")
 
         with open(filename, "w", encoding="utf-8") as f:
             f.write("\n".join(content))
@@ -102,9 +123,14 @@ class Evolver:
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read()
-                match = re.search(r'> \*\*Analysis\*\*: (.*)', content)
+                # Try to extract from the new Zero-Entropy Analysis Matrix format
+                match = re.search(r'\* Dependency Entropy: Detected via Harvest Tags \((.*?)\)', content)
                 if match:
                     return match.group(1).strip()
+                # Fallback for old formats
+                match_old = re.search(r'> \*\*Analysis\*\*: (.*)', content)
+                if match_old:
+                    return match_old.group(1).strip()
         except Exception as e:
             logging.warning(f"Failed to analyze file {filepath}: {e}", exc_info=True)
         return ""
@@ -112,10 +138,10 @@ class Evolver:
     def _generate_mission(self, stats, orphans, new_inputs, intuitions):
         # Categorize Intel
         categories = {
-            "🧠 架构情报 (Architecture)": [],
-            "⚔️ 竞品雷达 (Competitors)": [],
-            "📦 边缘战备 (Edge AI)": [],
-            "ℹ️ 其他动态 (General)": []
+            "架构情报 (Architecture)": [],
+            "竞品雷达 (Competitors)": [],
+            "边缘战备 (Edge AI)": [],
+            "其他动态 (General)": []
         }
 
         arch_triggers = ['nexent', 'astron', 'mcp', 'agent', 'protocol']
@@ -128,28 +154,35 @@ class Evolver:
             entry = f"- **{f.name}**\n  - > **Analysis**: {tags}" if tags else f"- **{f.name}**"
 
             if any(t in fname for t in arch_triggers):
-                categories["🧠 架构情报 (Architecture)"].append(entry)
+                categories["架构情报 (Architecture)"].append(entry)
             elif any(t in fname for t in comp_triggers):
-                categories["⚔️ 竞品雷达 (Competitors)"].append(entry)
+                categories["竞品雷达 (Competitors)"].append(entry)
             elif any(t in fname for t in edge_triggers):
-                categories["📦 边缘战备 (Edge AI)"].append(entry)
+                categories["边缘战备 (Edge AI)"].append(entry)
             else:
-                categories["ℹ️ 其他动态 (General)"].append(entry)
+                categories["其他动态 (General)"].append(entry)
 
         # Generate Content
         now = datetime.datetime.now().strftime("%Y-%m-%d")
         content = [
-            f"# 🛡️ NEXUS CORTEX: Architect's Daily Brief",
+            f"# 每日简报 (Daily Brief)",
             f"> **Date**: {now} | **Entropy**: {stats['density']:.4f}",
             f"",
-            f"## 🚨 昨夜今晨 (System Health)",
-            f"- **Status**: 🟢 **ONLINE**",
+            f"## 系统健康状态 (System Health)",
+            f"- **Status**: ONLINE",
+            f"- **Nodes**: {stats['entities']}",
+            f"- **Edges**: {stats['relations']}",
             ""
         ]
 
         # 【核心修复：将夜间推演的 intuitions 按严格格式注入】
-        if intuitions:
-            content.append("## 🧠 夜间潜意识觉醒 (Nightly Cognitive Intuitions)")
+        if isinstance(intuitions, dict) and "_flat_insights" in intuitions:
+            content.append("## 潜意识觉醒 (Nightly Cognitive Intuitions)")
+            for insight in intuitions["_flat_insights"]:
+                content.append(f"- {insight}")
+            content.append("")
+        elif isinstance(intuitions, list) and intuitions:
+            content.append("## 潜意识觉醒 (Nightly Cognitive Intuitions)")
             for insight in intuitions:
                 content.append(f"- {insight}")
             content.append("")
@@ -163,21 +196,21 @@ class Evolver:
                 content.append("")
 
         if not has_intel:
-            content.append("## 🌌 虚空监视 (Void Watch)\n> No significant ecosystem movements.\n")
+            content.append("## 虚空监视 (Void Watch)\n> No significant ecosystem movements.\n")
 
         # Smart Deep Work Suggestion
         suggestion = "System Optimization"
-        if categories["🧠 架构情报 (Architecture)"]:
+        if categories["架构情报 (Architecture)"]:
             suggestion = "Review Architecture PRs & Protocol Specs"
-        elif categories["📦 边缘战备 (Edge AI)"]:
+        elif categories["边缘战备 (Edge AI)"]:
             suggestion = "Edge Inference Benchmarking (vLLM/LiteRT)"
-        elif categories["⚔️ 竞品雷达 (Competitors)"]:
+        elif categories["竞品雷达 (Competitors)"]:
             suggestion = "Strategic Analysis of Competitor Updates"
 
-        content.append(f"## 📅 深度工作建议 (Deep Work)\n> **Focus**: {suggestion}\n- [ ] Block 2 hours.")
+        content.append(f"## 深度工作建议 (Deep Work)\n> **Focus**: {suggestion}\n- [ ] Block 2 hours.")
 
         if orphans:
-            content.append("\n## 🔍 待处理熵值 (Entropy Targets)")
+            content.append("\n## 待处理熵值 (Entropy Targets)")
             for o in orphans:
                 content.append(f"- **{o['name']}** ({o['id']}): Weight {o['weight']:.2f}")
 

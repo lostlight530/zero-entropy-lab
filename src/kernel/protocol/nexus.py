@@ -141,7 +141,8 @@ class FlusherThread(threading.Thread):
                         logger.error(f"Flusher Relation Error: {e}")
 
 # 事件驱动后台队列 (Event-Driven Background Task Stream)
-consciousness_stream = queue.Queue()
+# 限制为 1 杜绝高并发内存堆积 (Limit maxsize to 1 to prevent memory bloat during high-freq API calls)
+consciousness_stream = queue.Queue(maxsize=1)
 
 class SubconsciousThread(threading.Thread):
     """
@@ -264,7 +265,10 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
 
         # 触发队列中断电信号以重置后台定时器
         # (Inject event into queue to reset background idle timer)
-        consciousness_stream.put("STIMULUS")
+        try:
+            consciousness_stream.put_nowait("STIMULUS")
+        except queue.Full:
+            pass  # Already queued, no need to pile up
 
         # Authenticate all API routes
         if not self._check_auth():
@@ -470,7 +474,13 @@ def main():
         r = ReasoningEngine()
         insights = r.ponder()
         logger.info("\n🧠 **DEEP THOUGHTS REPORT**")
-        if not insights:
+
+        if isinstance(insights, dict) and "error" in insights:
+            logger.error(f"   {insights['error']}")
+        elif isinstance(insights, dict) and "_flat_insights" in insights:
+            for i in insights["_flat_insights"]:
+                logger.info(f"   {i}")
+        elif not insights:
             logger.info("   (Mind is quiet.)")
         else:
             for i in insights:

@@ -13,8 +13,8 @@ except ImportError:
 
 class Harvester:
     def __init__(self, project_root=None):
-        # Default to the root of the repo (parent of src/kernel)
-        self.project_root = project_root or Path(__file__).resolve().parents[2]
+        # Default to the root of the repo (parent of src/kernel/sensory)
+        self.project_root = project_root or Path(__file__).resolve().parents[3]
         self.kernel_path = self.project_root / "src" / "kernel"
         self.data_path = self.project_root / "data"
         self.inputs_path = self.data_path / "inputs"
@@ -104,16 +104,45 @@ class Harvester:
                                     tags = self._extract_tags(body)
                                     tags_str = ", ".join(tags) if tags else "General"
 
-                                    safe_repo = repo.replace("/", "_")
-                                    filename = f"{safe_repo}_{endpoint}_{name.replace(' ', '_')}.md"
+                                    safe_repo = repo.replace("/", "_").lower()
+                                    date_prefix = datetime.datetime.utcnow().strftime("%Y%m%d")
+                                    filename = f"{date_prefix}-{safe_repo}-scan.md"
                                     filepath = self.inputs_path / filename
 
-                                    content = f"# Intelligence Report: {repo}\n\n"
-                                    content += f"> **Type**: {endpoint.capitalize()}\n"
-                                    content += f"> **Version/Name**: {name}\n"
-                                    content += f"> **Link**: {html_url}\n"
-                                    content += f"> **Analysis**: {tags_str}\n\n"
-                                    content += f"## Payload\n\n```text\n{body[:1000]}...\n```\n"
+                                    content = f"# 📡 NEXUS HARVESTER: Intelligence Dossier\n\n"
+                                    content += f"Date: {datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')} (UTC)\n"
+                                    content += f"Target Identity: {repo}\n"
+                                    content += f"Version Asset: {name}\n"
+                                    content += f"Source Link: {html_url}\n\n"
+
+                                    content += f"## 资产物理属性 (Asset Physical Properties)\n"
+                                    content += f"* Repository Type: External Package / Intelligence\n"
+                                    content += f"* Primary Language: N/A\n"
+                                    content += f"* API Rate Limit Status: Bypassed via injected GITHUB_TOKEN header\n\n"
+
+                                    content += f"## 零熵解析矩阵 (Zero-Entropy Analysis Matrix)\n"
+                                    content += f"* Dependency Entropy: Detected via Harvest Tags ({tags_str})\n"
+                                    content += f"* Architecture Conflict: Needs deeper manual triage if integration is attempted\n"
+                                    content += f"* Internal Logic: External Payload Reference only\n\n"
+
+                                    content += f"## 威胁与兼容性评估 (Threat & Compatibility Assessment)\n"
+                                    if "Breaking-Change" in tags:
+                                        content += f"* Direct Code Integration: High Risk due to breaking changes\n"
+                                    else:
+                                        content += f"* Direct Code Integration: Strictly Prohibited (Violates pure standard library constraint)\n"
+                                    content += f"* Hallucination Risk: Requires manual verification of LLM execution paths\n\n"
+
+                                    content += f"## 行动指令 (Action Directives)\n"
+                                    content += f"1. Reject all dependency injections from this repository\n"
+                                    if "Agent-Protocol" in tags:
+                                        content += f"2. Analyze plugin/agent architecture for conceptual integration\n"
+                                    elif "Edge-Ready" in tags:
+                                        content += f"2. Extract edge execution boundaries for potential local deployment\n"
+                                    else:
+                                        content += f"2. Extract core theoretical concepts for zero-entropy refactoring\n"
+                                    content += f"3. Ensure any extracted logic uses pure Python `typing` and `inspect.signature`\n\n"
+
+                                    content += f"## 原始载荷 (Raw Payload)\n\n```text\n{body}\n```\n"
 
                                     with open(filepath, 'w', encoding='utf-8') as f:
                                         f.write(content)
