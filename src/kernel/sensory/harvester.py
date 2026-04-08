@@ -14,10 +14,11 @@ except ImportError:
 class Harvester:
     def __init__(self, project_root=None):
         # Default to the root of the repo (parent of src/kernel)
-        self.project_root = project_root or Path(__file__).resolve().parents[2]
+        self.project_root = project_root or Path(__file__).resolve().parents[3]
         self.kernel_path = self.project_root / "src" / "kernel"
         self.data_path = self.project_root / "data"
-        self.inputs_path = self.data_path / "inputs"
+        # Route to data/inputs/archive explicitly
+        self.inputs_path = self.data_path / "inputs" / "archive"
         
         # Ensure directory structure exists
         self.inputs_path.mkdir(parents=True, exist_ok=True)
@@ -105,15 +106,26 @@ class Harvester:
                                     tags_str = ", ".join(tags) if tags else "General"
 
                                     safe_repo = repo.replace("/", "_")
-                                    filename = f"{safe_repo}_{endpoint}_{name.replace(' ', '_')}.md"
-                                    filepath = self.inputs_path / filename
 
-                                    content = f"# Intelligence Report: {repo}\n\n"
-                                    content += f"> **Type**: {endpoint.capitalize()}\n"
-                                    content += f"> **Version/Name**: {name}\n"
-                                    content += f"> **Link**: {html_url}\n"
-                                    content += f"> **Analysis**: {tags_str}\n\n"
-                                    content += f"## Payload\n\n```text\n{body[:1000]}...\n```\n"
+                                    # Eliminate entropy: Use singularity naming convention instead of version numbers
+                                    # Original: f"{safe_repo}_{endpoint}_{name.replace(' ', '_')}.md"
+                                    filename = f"{safe_repo}-singularity.md"
+
+                                    # Create dated subfolder mirroring cognitive reports behavior
+                                    date_str = datetime.datetime.now().strftime('%Y/%m')
+                                    archive_dir = self.inputs_path / date_str
+                                    archive_dir.mkdir(parents=True, exist_ok=True)
+                                    filepath = archive_dir / filename
+
+                                    content = f"# 情报报告 (Intelligence Report)\n\n"
+                                    content += f"**来源 (Source)**: {repo}\n"
+                                    content += f"**类型 (Type)**: {endpoint.capitalize()}\n"
+                                    content += f"**代号 (Codename)**: Singularity (Originally: {name})\n"
+                                    content += f"**链接 (Link)**: {html_url}\n"
+                                    content += f"**推演 (Analysis)**: {tags_str}\n\n"
+                                    # Ensure meaningful payload is preserved entirely if exists
+                                    actual_payload = body.strip() if body else "NO DIRECT PAYLOAD DETECTED. See remote link."
+                                    content += f"## 载荷 (Payload)\n\n{actual_payload}\n\n"
 
                                     with open(filepath, 'w', encoding='utf-8') as f:
                                         f.write(content)

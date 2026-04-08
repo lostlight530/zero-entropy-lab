@@ -18,7 +18,7 @@ except ImportError:
 class Scholar:
     def __init__(self, project_root=None):
         # Default to the root of the repo (parent of src/kernel)
-        self.project_root = project_root or Path(__file__).resolve().parents[2]
+        self.project_root = project_root or Path(__file__).resolve().parents[3]
         self.kernel_path = self.project_root / "src" / "kernel"
         self.data_path = self.project_root / "data"
         self.knowledge_path = self.data_path / "knowledge"
@@ -184,9 +184,8 @@ class Scholar:
         """Legacy single file learning (kept for compatibility)"""
         input_path = Path(input_file)
         if not input_path.exists(): return None
-        project_root = self.brain_path.parent.parent
         try:
-            self._digest_file(project_root, input_path)
+            self._digest_file(self.project_root, input_path)
             return f"Ingested {input_path.name} into Graph."
         except Exception as e:
             return f"Error: {e}"

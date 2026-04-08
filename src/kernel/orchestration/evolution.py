@@ -15,11 +15,11 @@ logging.basicConfig(level=logging.INFO, format='[Evolution] %(message)s')
 class Evolver:
     def __init__(self, project_root=None):
         # Default to the root of the repo (parent of src/kernel)
-        self.project_root = project_root or Path(__file__).resolve().parents[2]
+        self.project_root = project_root or Path(__file__).resolve().parents[3]
         self.kernel_path = self.project_root / "src" / "kernel"
         self.data_path = self.project_root / "data"
         self.memories_path = self.data_path / "memories"
-        self.inputs_path = self.data_path / "inputs"
+        self.inputs_path = self.data_path / "inputs" / "archive"
 
         # Ensure directory structure exists
         self.data_path.mkdir(parents=True, exist_ok=True)
@@ -67,8 +67,8 @@ class Evolver:
         filename = self.memories_path / f"{date_prefix}-cognitive-report.md"
 
         content = [
-            f"# 🧠 NEXUS CORTEX: Cognitive Report",
-            f"> **Date**: {now_utc} (UTC)",
+            f"# 每日认知报告 (Daily Cognitive Report)",
+            f"**日期 (Date)**: {now_utc} (UTC)",
             f""
         ]
 
@@ -136,50 +136,56 @@ class Evolver:
             else:
                 categories["ℹ️ 其他动态 (General)"].append(entry)
 
-        # Generate Content
+        # Generate Content strictly following "Chinese structure, English content" with zero extra emojis on headers
         now = datetime.datetime.now().strftime("%Y-%m-%d")
         content = [
-            f"# 🛡️ NEXUS CORTEX: Architect's Daily Brief",
-            f"> **Date**: {now} | **Entropy**: {stats['density']:.4f}",
+            f"# 每日简报 (Daily Brief)",
+            f"**日期 (Date)**: {now} | **当前图谱密度 (Graph Density)**: {stats['density']:.4f}",
             f"",
-            f"## 🚨 昨夜今晨 (System Health)",
-            f"- **Status**: 🟢 **ONLINE**",
-            ""
+            f"## 系统状态 (System Health)",
+            f"- **状态 (Status)**: ONLINE",
+            f"- **记忆体状态 (Memory State)**: {stats['entities']} Nodes, {stats['relations']} Edges",
+            f"- **孤儿节点 (Orphan Nodes)**: {len(orphans)} nodes lacking topological connections.",
+            f""
         ]
 
-        # 【核心修复：将夜间推演的 intuitions 按严格格式注入】
         if intuitions:
-            content.append("## 🧠 夜间潜意识觉醒 (Nightly Cognitive Intuitions)")
+            content.append("## 潜意识推演 (Nightly Cognitive Intuitions)")
             for insight in intuitions:
-                content.append(f"- {insight}")
+                # Strip out emojis from insights array if possible
+                clean_insight = insight.replace('🌌', '').replace('🧠', '').replace('🎯', '').replace('🔗', '').strip()
+                content.append(f"- {clean_insight}")
             content.append("")
 
         has_intel = False
         for section, items in categories.items():
             if items:
                 has_intel = True
-                content.append(f"## {section}")
+                # Clean section titles
+                clean_section = section.replace('🧠', '').replace('⚔️', '').replace('📦', '').replace('ℹ️', '').strip()
+                content.append(f"## {clean_section}")
                 content.extend(items)
                 content.append("")
 
         if not has_intel:
-            content.append("## 🌌 虚空监视 (Void Watch)\n> No significant ecosystem movements.\n")
+            content.append("## 虚空监视 (Void Watch)\nNo significant ecosystem movements detected.\n")
 
         # Smart Deep Work Suggestion
-        suggestion = "System Optimization"
+        suggestion = "Core Optimization (Physical Bottlenecks)"
         if categories["🧠 架构情报 (Architecture)"]:
-            suggestion = "Review Architecture PRs & Protocol Specs"
+            suggestion = "Review Architecture PRs & Protocol Sovereignty Specs"
         elif categories["📦 边缘战备 (Edge AI)"]:
-            suggestion = "Edge Inference Benchmarking (vLLM/LiteRT)"
+            suggestion = "Edge Inference Benchmarking (Zero-Dependency Analysis)"
         elif categories["⚔️ 竞品雷达 (Competitors)"]:
-            suggestion = "Strategic Analysis of Competitor Updates"
+            suggestion = "Strategic Zero-Entropy Evolution Planning"
 
-        content.append(f"## 📅 深度工作建议 (Deep Work)\n> **Focus**: {suggestion}\n- [ ] Block 2 hours.")
+        content.append(f"## 战略聚焦 (Strategic Focus)\n**Target**: {suggestion}")
+        content.append(f"- Requirement: Analyze constraints and construct atomic solutions.")
 
         if orphans:
-            content.append("\n## 🔍 待处理熵值 (Entropy Targets)")
+            content.append("\n## 认知优先级 (Cognitive Priorities)")
             for o in orphans:
-                content.append(f"- **{o['name']}** ({o['id']}): Weight {o['weight']:.2f}")
+                content.append(f"- **{o['name']}** ({o['id']}): Activation Weight {o['weight']:.2f}")
 
         # Write to file
         filename = self.memories_path / "MISSION_ACTIVE.md"
