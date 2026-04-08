@@ -175,16 +175,30 @@ class Evolver:
             ""
         ]
 
-        # 【核心修复：将夜间推演的 intuitions 按严格格式注入】
-        if isinstance(intuitions, dict) and "_flat_insights" in intuitions:
+        # 【核心修复：抛弃乱序的 _flat_insights，采用结构化的潜意识反馈】
+        if isinstance(intuitions, dict):
             content.append("## 潜意识觉醒 (Nightly Cognitive Intuitions)")
-            for insight in intuitions["_flat_insights"]:
-                content.append(f"- {insight}")
-            content.append("")
-        elif isinstance(intuitions, list) and intuitions:
-            content.append("## 潜意识觉醒 (Nightly Cognitive Intuitions)")
-            for insight in intuitions:
-                content.append(f"- {insight}")
+
+            if "baseline" in intuitions and intuitions["baseline"]:
+                content.append("### 状态基线")
+                for item in intuitions["baseline"]:
+                    content.append(f"- {item}")
+
+            if "telemetry" in intuitions and intuitions["telemetry"]:
+                content.append("### 物理遥测")
+                for item in intuitions["telemetry"]:
+                    content.append(f"- {item}")
+
+            if "scan" in intuitions and intuitions["scan"]:
+                content.append("### 网络扫描")
+                for item in intuitions["scan"]:
+                    content.append(f"- {item}")
+
+            if "evolution" in intuitions and intuitions["evolution"]:
+                content.append("### 演进策略")
+                for item in intuitions["evolution"]:
+                    content.append(f"- {item}")
+
             content.append("")
 
         has_intel = False

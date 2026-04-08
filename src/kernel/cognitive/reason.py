@@ -31,23 +31,21 @@ class ReasoningEngine:
 
         logger.info("Executing background graph analysis...")
 
+        # 获取真实的数据库物理信息 (Get real physical database info)
+        db_size_mb = 0
+        journal_entries = 0
+        if self.db_path.exists():
+            db_size_mb = self.db_path.stat().st_size / (1024 * 1024)
+            journal_entries_res = self._query('SELECT count(*) FROM journal')
+            if journal_entries_res:
+                journal_entries = journal_entries_res[0][0]
+
         # 结构化认知包 (Structured Cognitive Package)
         cognitive_package = {
             "baseline": [],
-            "telemetry": [
-                "I/O Matrix: SQLite WAL lock contention completely eliminated via lock-free Ring Buffer",
-                "Concurrency: GIL successfully bypassed, Multiprocessing shared memory (mmap) active for PageRank",
-                "Latency Profile: Stage 1 (FTS5 BM25) < 4ms, Stage 2 (TF-IDF/Cosine Generator) stabilized at 11ms"
-            ],
-            "scan": [
-                "Hallucination Vectors: 0% detected, all inferences strictly grounded in cryptographically signed ledger",
-                "Protocol Compliance: MCP HTTP Gateway handling all external Agent requests with native TokenBucket rate limiting (429)"
-            ],
-            "evolution": [
-                "Zero-Entropy execution verified, continue exploring native Python physical limits.",
-                "Scale tests for memory mapping constraints on background workers are recommended."
-            ],
-            # To be compatible with old flat list systems (like the ponder terminal output)
+            "telemetry": [],
+            "scan": [],
+            "evolution": [],
             "_flat_insights": []
         }
 
@@ -60,6 +58,14 @@ class ReasoningEngine:
 
             # 1. 状态基线 (Baseline Formulation)
             cognitive_package["baseline"].append(f"System Status: Cortex holds {nodes} entities and {edges} edges")
+
+            # 物理遥测信息注入 (Physical Telemetry Injection based on real data)
+            cognitive_package["telemetry"].append(f"Storage: Database size is {db_size_mb:.2f} MB")
+            cognitive_package["telemetry"].append(f"Activity: {journal_entries} events recorded in the system journal")
+            if density > 1.5:
+                 cognitive_package["telemetry"].append(f"Graph Density: {density:.2f} (High cohesiveness, strong associative potential)")
+            else:
+                 cognitive_package["telemetry"].append(f"Graph Density: {density:.2f} (Sparse, requires more relations)")
 
             orphans = self._query('''
                 SELECT e.name FROM entities e
@@ -90,8 +96,19 @@ class ReasoningEngine:
                 JOIN relations r2 ON r1.target = r2.source
                 WHERE r1.relation = 'defines' AND r2.relation = 'inherits_from' LIMIT 2
             ''')
-            for b in bridges:
-                cognitive_package["scan"].append(f"Inference: Discovered implicit path: '{b[0]}' -> '{b[1]}' via '{b[2]}'")
+            if bridges:
+                for b in bridges:
+                    cognitive_package["scan"].append(f"Inference: Discovered implicit path: '{b[0]}' -> '{b[1]}' via '{b[2]}'")
+            else:
+                 cognitive_package["scan"].append("No new structural bridges detected in the current cycle.")
+
+            # 进化演推 (Evolution Hypotheses based on real state)
+            if orphan_count > 0:
+                cognitive_package["evolution"].append("Focus on relationship extraction to integrate isolated entities.")
+            if db_size_mb > 50:
+                cognitive_package["evolution"].append("Database size exceeding 50MB, consider implementing aggressive memory decay or vacuum.")
+            if not cognitive_package["evolution"]:
+                 cognitive_package["evolution"].append("Graph structure stable. Proceed with normal knowledge ingestion.")
 
             # 3. 拓扑认知觉醒 (PageRank Telemetry Update)
             pagerank_insights = self._awaken_pagerank()
