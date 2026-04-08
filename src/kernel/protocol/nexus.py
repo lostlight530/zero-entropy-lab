@@ -474,7 +474,13 @@ def main():
         r = ReasoningEngine()
         insights = r.ponder()
         logger.info("\n🧠 **DEEP THOUGHTS REPORT**")
-        if not insights:
+
+        if isinstance(insights, dict) and "error" in insights:
+            logger.error(f"   {insights['error']}")
+        elif isinstance(insights, dict) and "_flat_insights" in insights:
+            for i in insights["_flat_insights"]:
+                logger.info(f"   {i}")
+        elif not insights:
             logger.info("   (Mind is quiet.)")
         else:
             for i in insights:
