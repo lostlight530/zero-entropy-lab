@@ -1,9 +1,9 @@
 # 📡 NEXUS HARVESTER: Intelligence Dossier
 
-Date: 2026-04-08 03:20:10 (UTC)
+Date: 2026-04-08 10:11:19 (UTC)
 Target Identity: microsoft/markitdown
 Version Asset: v0.1.5
-Source Link: https://github.com/microsoft/markitdown
+Source Link: https://github.com/microsoft/markitdown/releases/tag/v0.1.5
 
 ## 资产物理属性 (Asset Physical Properties)
 * Repository Type: External Package / Intelligence
@@ -11,13 +11,13 @@ Source Link: https://github.com/microsoft/markitdown
 * API Rate Limit Status: Bypassed via injected GITHUB_TOKEN header
 
 ## 零熵解析矩阵 (Zero-Entropy Analysis Matrix)
-* Dependency Entropy: Detected via Harvest Tags (General)
-* Architecture Conflict: Needs deeper manual triage if integration is attempted
+* Dependency Entropy: Detected via Harvest Tags (🏷️ Edge-Ready)
+* Architecture Conflict: Low (Conceptual alignment possible)
 * Internal Logic: External Payload Reference only
 
 ## 威胁与兼容性评估 (Threat & Compatibility Assessment)
 * Direct Code Integration: Strictly Prohibited (Violates pure standard library constraint)
-* Hallucination Risk: Requires manual verification of LLM execution paths
+* Hallucination Risk: Moderate (Requires structural parsing)
 
 ## 行动指令 (Action Directives)
 1. Reject all dependency injections from this repository
@@ -27,5 +27,17 @@ Source Link: https://github.com/microsoft/markitdown
 ## 原始载荷 (Raw Payload)
 
 ```text
+## What's Changed
+* Update PDF table extraction to support aligned Markdown by @lesyk in https://github.com/microsoft/markitdown/pull/1499
+* Fix: PDF parsing doesn't support partially numbered lists by @lesyk in https://github.com/microsoft/markitdown/pull/1525
+* Extend table support for wide tables by @lesyk in https://github.com/microsoft/markitdown/pull/1552
+* Add text/markdown to Accept header by @afourney in https://github.com/microsoft/markitdown/pull/1554
+* Remove onnxruntime<=1.20.1 Windows pin by @basnijholt in https://github.com/microsoft/markitdown/pull/1551
+* Bump version for release. by @afourney in https://github.com/microsoft/markitdown/pull/1564
 
+## New Contributors
+* @lesyk made their first contribution in https://github.com/microsoft/markitdown/pull/1499
+* @basnijholt made their first contribution in https://github.com/microsoft/markitdown/pull/1551
+
+**Full Changelog**: https://github.com/microsoft/markitdown/compare/v0.1.4...v0.1.5
 ```

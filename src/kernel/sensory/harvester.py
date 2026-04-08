@@ -26,14 +26,15 @@ class Harvester:
         self.state = self._load_state()
 
         # 情报数据源 (Data Sources)
+        # 切换到 releases 节点以获取包含真实描述体的载荷
         self.data_sources = {
-            "ModelEngine-Group/nexent": ["tags"],
-            "iflytek/astron-agent": ["tags"],
-            "langgenius/dify": ["tags"],
-            "vllm-project/vllm": ["tags"],
-            "huggingface/transformers": ["tags"],
-            "google-ai-edge/mediapipe": ["tags"],
-            "microsoft/markitdown": ["tags"]
+            "ModelEngine-Group/nexent": ["releases"],
+            "iflytek/astron-agent": ["releases"],
+            "langgenius/dify": ["releases"],
+            "vllm-project/vllm": ["releases"],
+            "huggingface/transformers": ["releases"],
+            "google-ai-edge/mediapipe": ["releases"],
+            "microsoft/markitdown": ["releases"]
         }
 
     def _load_state(self):
@@ -104,6 +105,17 @@ class Harvester:
                                     tags = self._extract_tags(body)
                                     tags_str = ", ".join(tags) if tags else "General"
 
+                                    # 动态生成基于真实文本内容的评估 (Dynamic assessment based on actual content)
+                                    arch_conflict = "Low (Conceptual alignment possible)"
+                                    if re.search(r'(?i)(docker|npm|pip|kubernetes|helm|compose)', body):
+                                        arch_conflict = "High (Heavy external dependency footprint detected)"
+                                    elif re.search(r'(?i)(rust|c\+\+|go)', body):
+                                        arch_conflict = "Medium (Foreign language boundaries present)"
+
+                                    hallucination_risk = "Moderate (Requires structural parsing)"
+                                    if "Agent-Protocol" in tags:
+                                        hallucination_risk = "High (Agentic logic often relies on nondeterministic prompts)"
+
                                     safe_repo = repo.replace("/", "_").lower()
                                     date_prefix = datetime.datetime.utcnow().strftime("%Y%m%d")
                                     filename = f"{date_prefix}-{safe_repo}-scan.md"
@@ -122,7 +134,7 @@ class Harvester:
 
                                     content += f"## 零熵解析矩阵 (Zero-Entropy Analysis Matrix)\n"
                                     content += f"* Dependency Entropy: Detected via Harvest Tags ({tags_str})\n"
-                                    content += f"* Architecture Conflict: Needs deeper manual triage if integration is attempted\n"
+                                    content += f"* Architecture Conflict: {arch_conflict}\n"
                                     content += f"* Internal Logic: External Payload Reference only\n\n"
 
                                     content += f"## 威胁与兼容性评估 (Threat & Compatibility Assessment)\n"
@@ -130,7 +142,7 @@ class Harvester:
                                         content += f"* Direct Code Integration: High Risk due to breaking changes\n"
                                     else:
                                         content += f"* Direct Code Integration: Strictly Prohibited (Violates pure standard library constraint)\n"
-                                    content += f"* Hallucination Risk: Requires manual verification of LLM execution paths\n\n"
+                                    content += f"* Hallucination Risk: {hallucination_risk}\n\n"
 
                                     content += f"## 行动指令 (Action Directives)\n"
                                     content += f"1. Reject all dependency injections from this repository\n"
