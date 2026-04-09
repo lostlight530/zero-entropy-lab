@@ -1,9 +1,9 @@
 # 📡 NEXUS HARVESTER: Intelligence Dossier
 
-Date: 2026-04-09 06:17:54 (UTC)
+Date: 2026-04-09 22:30:24 (UTC)
 Target Identity: huggingface/transformers
-Version Asset: Patch release v5.5.1
-Source Link: https://github.com/huggingface/transformers/releases/tag/v5.5.1
+Version Asset: Patch release: v5.5.3
+Source Link: https://github.com/huggingface/transformers/releases/tag/v5.5.3
 
 ## 资产物理属性 (Asset Physical Properties)
 * Repository Type: External Package / Intelligence
@@ -27,10 +27,7 @@ Source Link: https://github.com/huggingface/transformers/releases/tag/v5.5.1
 ## 原始载荷 (Raw Payload)
 
 ```text
-# Patch release v5.5.1
+Small patch release to fix `device_map` support for Gemma4! It contains the following commit:
 
-This patch is very small and focuses on vLLM and Gemma4! 
-
-** Fix export for gemma4 and add Integration tests (#45285) by @Cyrilvallez 
-** Fix vllm cis (#45139) by @ArthurZucker 
+- [gemma4] Fix device map auto (#45347) by @Cyrilvallez 
 ```
