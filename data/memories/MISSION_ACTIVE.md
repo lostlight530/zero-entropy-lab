@@ -1,5 +1,5 @@
 # 每日简报 (Daily Brief)
-> **Date**: 2026-04-12 | **Entropy**: 5.1918
+> **Date**: 2026-04-12 | **Entropy**: 5.2764
 
 ## 系统健康状态 (System Health)
 - **Status**: ONLINE
@@ -9,12 +9,12 @@
 ## 潜意识觉醒 (Nightly Cognitive Intuitions)
 ### 状态基线
 - System Status: Cortex holds 242 entities and 457 edges
-- Density: (10.0945) with fragmentation, 3 isolated nodes detected (e.g., 'bug_report.md')
+- Density: (10.2604) with fragmentation, 3 isolated nodes detected (e.g., 'bug_report.md')
 - Task Suggestion: Relation mapping recommended. Resolve orphans before expanding Harvester sources.
 ### 物理遥测
 - Storage: Database size is 0.22 MB
-- Activity: 41 events recorded in the system journal
-- Graph Density: 10.09 (High cohesiveness, strong associative potential)
+- Activity: 42 events recorded in the system journal
+- Graph Density: 10.26 (High cohesiveness, strong associative potential)
 ### 网络扫描
 - Graph Cycle Warning: Circular dependency between 'file_LICENSE' and 'repo_zero_entropy_lab'
 - Inference: Discovered implicit path: 'file_src\kernel\nexus_py' -> 'class_SimpleHTTPRequestHandler' via 'class_NexusHandler'
@@ -30,8 +30,8 @@
 - [ ] Block 2 hours.
 
 ## 待处理熵值 (Entropy Targets)
-- **Alpha** (concept_alpha): Weight 27.62
-- **Beta** (concept_beta): Weight 27.62
-- **bug_report.md** (file__github\ISSUE_TEMPLATE\bug_report_md): Weight 1.64
-- **custom.md** (file__github\ISSUE_TEMPLATE\custom_md): Weight 1.64
-- **feature_request.md** (file__github\ISSUE_TEMPLATE\feature_request_md): Weight 1.64
+- **Alpha** (concept_alpha): Weight 27.95
+- **Beta** (concept_beta): Weight 27.95
+- **bug_report.md** (file__github\ISSUE_TEMPLATE\bug_report_md): Weight 1.65
+- **custom.md** (file__github\ISSUE_TEMPLATE\custom_md): Weight 1.65
+- **feature_request.md** (file__github\ISSUE_TEMPLATE\feature_request_md): Weight 1.65
