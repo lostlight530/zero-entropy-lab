@@ -6,10 +6,10 @@
   "huggingface/transformers_tags": "MDM6UmVmMTU1MjIwNjQxOnJlZnMvdGFncy92NS41LjA=",
   "google-ai-edge/mediapipe_tags": "MDM6UmVmMTkxODIwMTAwOnJlZnMvdGFncy92MC4xMC4zMw==",
   "microsoft/markitdown_tags": "REF_kwDONO8107ByZWZzL3RhZ3MvdjAuMS41",
-  "ModelEngine-Group/nexent_releases": "307456198",
+  "ModelEngine-Group/nexent_releases": "310629555",
   "iflytek/astron-agent_releases": "310199909",
   "langgenius/dify_releases": "302258183",
-  "vllm-project/vllm_releases": "304922777",
+  "vllm-project/vllm_releases": "310648088",
   "huggingface/transformers_releases": "308458339",
   "google-ai-edge/mediapipe_releases": "300404835",
   "microsoft/markitdown_releases": "288862886"
