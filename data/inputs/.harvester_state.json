@@ -9,8 +9,8 @@
   "ModelEngine-Group/nexent_releases": "310629555",
   "iflytek/astron-agent_releases": "310199909",
   "langgenius/dify_releases": "302258183",
-  "vllm-project/vllm_releases": "310648088",
-  "huggingface/transformers_releases": "312310562",
+  "vllm-project/vllm_releases": "312943348",
+  "huggingface/transformers_releases": "312881249",
   "google-ai-edge/mediapipe_releases": "300404835",
   "microsoft/markitdown_releases": "288862886"
 }
