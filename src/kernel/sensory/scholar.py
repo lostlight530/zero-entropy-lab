@@ -38,7 +38,7 @@ class Scholar:
 
         # Ignored patterns (Noise Filter)
         self.ignore_dirs = {
-            '.git', '__pycache__', 'node_modules', 'data', 'venv', '.idea', '.vscode'
+            '.git', '__pycache__', 'node_modules', 'data', 'venv', '.idea', '.vscode', '.github'
         }
         self.ignore_files = {
             '.DS_Store', 'cortex.db', 'cortex.db-journal', '.gitignore',
