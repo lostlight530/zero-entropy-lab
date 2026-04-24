@@ -3,8 +3,6 @@ import datetime
 import json
 import os
 from pathlib import Path
-import struct
-from multiprocessing import shared_memory
 try:
     from cortex import Cortex
     from logger import logger
@@ -13,31 +11,6 @@ except ImportError:
     sys.path.append(os.path.dirname(__file__))
     from cortex import Cortex
     from logger import logger
-
-def _compute_pagerank_chunk(chunk_start, chunk_end, shm_name, m_size, r_offset, w_offset, N, links, out_degs, base_rank, damp):
-    """
-    Top-level function for PageRank multiprocessing to avoid serialization issues
-    with ProcessPoolExecutor and local functions.
-    """
-    try:
-        local_shm = shared_memory.SharedMemory(name=shm_name)
-        l_buf = local_shm.buf
-        try:
-            for i in range(chunk_start, chunk_end):
-                rank_sum = 0.0
-                for parent_idx in links[i]:
-                    p_out_deg = out_degs[parent_idx]
-                    if p_out_deg > 0:
-                        p_rank = struct.unpack_from('d', l_buf, r_offset + parent_idx * 8)[0]
-                        rank_sum += p_rank / p_out_deg
-
-                new_r = base_rank + damp * rank_sum
-                struct.pack_into('d', l_buf, w_offset + i * 8, new_r)
-        finally:
-            local_shm.close()
-    except Exception as e:
-        logger.error(f"PageRank chunk execution failed: {e}", exc_info=True)
-        raise
 
 class ReasoningEngine:
     def __init__(self, project_root=None):
@@ -84,34 +57,30 @@ class ReasoningEngine:
             density = stats.get('density', 0.0)
 
             # 1. 状态基线 (Baseline Formulation)
-            cognitive_package["baseline"].append(f"ENTITIES_COUNT: {nodes}")
-            cognitive_package["baseline"].append(f"EDGES_COUNT: {edges}")
+            cognitive_package["baseline"].append(f"System Status: Cortex holds {nodes} entities and {edges} edges")
 
             # 物理遥测信息注入 (Physical Telemetry Injection based on real data)
-            cognitive_package["telemetry"].append(f"STORAGE_MB: {db_size_mb:.2f}")
-            cognitive_package["telemetry"].append(f"JOURNAL_EVENTS: {journal_entries}")
+            cognitive_package["telemetry"].append(f"Storage: Database size is {db_size_mb:.2f} MB")
+            cognitive_package["telemetry"].append(f"Activity: {journal_entries} events recorded in the system journal")
             if density > 1.5:
-                 cognitive_package["telemetry"].append(f"GRAPH_DENSITY: {density:.2f} | HIGH_COHESIVENESS")
+                 cognitive_package["telemetry"].append(f"Graph Density: {density:.2f} (High cohesiveness, strong associative potential)")
             else:
-                 cognitive_package["telemetry"].append(f"GRAPH_DENSITY: {density:.2f} | SPARSE")
+                 cognitive_package["telemetry"].append(f"Graph Density: {density:.2f} (Sparse, requires more relations)")
 
-            # Exclude code files/classes from being considered 'orphans' to prevent noise
             orphans = self._query('''
                 SELECT e.name FROM entities e
                 LEFT JOIN relations r1 ON e.id = r1.source
                 LEFT JOIN relations r2 ON e.id = r2.target
-                WHERE r1.source IS NULL AND r2.target IS NULL
-                AND e.type NOT IN ('code_file', 'code_class', 'code_function')
-                LIMIT 3
+                WHERE r1.source IS NULL AND r2.target IS NULL LIMIT 3
             ''')
 
             orphan_count = len(orphans)
             if orphan_count == 0:
-                cognitive_package["baseline"].append(f"TOPOLOGY_STATUS: OPTIMAL | Zero orphan nodes detected")
-                cognitive_package["baseline"].append("TASK_SUGGESTION: Expand Harvester sources")
+                cognitive_package["baseline"].append(f"Density: ({density:.4f}) indicates highly structured graph topology, zero orphan nodes detected")
+                cognitive_package["baseline"].append("Task Suggestion: Graph density is optimal, shift focus from internal optimization to new external data sources via Harvester")
             else:
-                cognitive_package["baseline"].append(f"TOPOLOGY_STATUS: FRAGMENTED | {orphan_count} isolated nodes (e.g., '{orphans[0][0]}')")
-                cognitive_package["baseline"].append("TASK_SUGGESTION: Relation mapping recommended")
+                cognitive_package["baseline"].append(f"Density: ({density:.4f}) with fragmentation, {orphan_count} isolated nodes detected (e.g., '{orphans[0][0]}')")
+                cognitive_package["baseline"].append("Task Suggestion: Relation mapping recommended. Resolve orphans before expanding Harvester sources.")
 
             # 2. 认知扫描注入 (Cognitive Network Scan Injection)
             cycles = self._query('''
@@ -120,7 +89,7 @@ class ReasoningEngine:
                 WHERE r1.source < r1.target LIMIT 2
             ''')
             if cycles:
-                cognitive_package["scan"].append(f"GRAPH_CYCLE_WARNING: Circular dependency between '{cycles[0][0]}' and '{cycles[0][1]}'")
+                cognitive_package["scan"].append(f"Graph Cycle Warning: Circular dependency between '{cycles[0][0]}' and '{cycles[0][1]}'")
 
             bridges = self._query('''
                 SELECT r1.source, r2.target, r1.target FROM relations r1
@@ -129,17 +98,17 @@ class ReasoningEngine:
             ''')
             if bridges:
                 for b in bridges:
-                    cognitive_package["scan"].append(f"IMPLICIT_PATH_DISCOVERED: '{b[0]}' -> '{b[1]}' via '{b[2]}'")
+                    cognitive_package["scan"].append(f"Inference: Discovered implicit path: '{b[0]}' -> '{b[1]}' via '{b[2]}'")
             else:
-                 cognitive_package["scan"].append("STRUCTURAL_BRIDGES: None detected in current cycle")
+                 cognitive_package["scan"].append("No new structural bridges detected in the current cycle.")
 
             # 进化演推 (Evolution Hypotheses based on real state)
             if orphan_count > 0:
-                cognitive_package["evolution"].append("DIRECTIVE: Focus on relationship extraction to integrate isolated entities")
+                cognitive_package["evolution"].append("Focus on relationship extraction to integrate isolated entities.")
             if db_size_mb > 50:
-                cognitive_package["evolution"].append("DIRECTIVE: Database size exceeding 50MB, implement memory decay or vacuum")
+                cognitive_package["evolution"].append("Database size exceeding 50MB, consider implementing aggressive memory decay or vacuum.")
             if not cognitive_package["evolution"]:
-                 cognitive_package["evolution"].append("DIRECTIVE: Graph structure stable. Proceed with normal knowledge ingestion.")
+                 cognitive_package["evolution"].append("Graph structure stable. Proceed with normal knowledge ingestion.")
 
             # 3. 拓扑认知觉醒 (PageRank Telemetry Update)
             pagerank_insights = self._awaken_pagerank()
@@ -271,11 +240,33 @@ class ReasoningEngine:
                 chunk_size = math.ceil(N / workers)
                 chunks = [(i * chunk_size, min((i + 1) * chunk_size, N)) for i in range(workers) if i * chunk_size < N]
 
-                import sys
+                # To truly map processes we must define a top-level function,
+                # For zero-entropy we spawn via ProcessPoolExecutor
+                def _compute_chunk(chunk_start, chunk_end, shm_name, m_size, r_offset, w_offset, N, links, out_degs, base_rank, damp):
+                    # 安全捕获，防止子进程异常导致的僵尸进程
+                    try:
+                        local_shm = shared_memory.SharedMemory(name=shm_name)
+                        l_buf = local_shm.buf
+                        try:
+                            for i in range(chunk_start, chunk_end):
+                                rank_sum = 0.0
+                                for parent_idx in links[i]:
+                                    p_out_deg = out_degs[parent_idx]
+                                    if p_out_deg > 0:
+                                        p_rank = struct.unpack_from('d', l_buf, r_offset + parent_idx * 8)[0]
+                                        rank_sum += p_rank / p_out_deg
 
-                # Assign top level function reference dynamically if not executing at module level
-                if not hasattr(sys.modules[__name__], '_compute_pagerank_chunk'):
-                    setattr(sys.modules[__name__], '_compute_pagerank_chunk', _compute_pagerank_chunk)
+                                new_r = base_rank + damp * rank_sum
+                                struct.pack_into('d', l_buf, w_offset + i * 8, new_r)
+                        finally:
+                            local_shm.close()
+                    except Exception as e:
+                        # 静默处理子进程内部异常，防止主流程锁死
+                        pass
+
+                # This hack allows us to use local function with ProcessPoolExecutor in script mode by attaching to module
+                import sys
+                setattr(sys.modules[__name__], '_compute_chunk', _compute_chunk)
 
                 for step in range(iterations):
                     read_offset = 0 if step % 2 == 0 else mem_size // 2
@@ -286,7 +277,7 @@ class ReasoningEngine:
                         futures = []
                         for start, end in chunks:
                             futures.append(executor.submit(
-                                sys.modules[__name__]._compute_pagerank_chunk,
+                                sys.modules[__name__]._compute_chunk,
                                 start, end, shm.name, mem_size, read_offset, write_offset, N, in_links_idx, out_deg_arr, base_rank, damping_factor
                             ))
                         # Wait implicitly captures exceptions

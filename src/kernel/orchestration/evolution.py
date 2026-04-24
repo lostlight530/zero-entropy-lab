@@ -124,14 +124,10 @@ class Evolver:
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read()
                 # Try to extract from the new Zero-Entropy Analysis Matrix format
-                match = re.search(r'\* DEPENDENCY_ENTROPY:\s*(.*)', content)
+                match = re.search(r'\* Dependency Entropy: Detected via Harvest Tags \((.*?)\)', content)
                 if match:
                     return match.group(1).strip()
-                # Fallback for older format
-                match_old_1 = re.search(r'\* Dependency Entropy: Detected via Harvest Tags \((.*?)\)', content)
-                if match_old_1:
-                    return match_old_1.group(1).strip()
-                # Fallback for oldest formats
+                # Fallback for old formats
                 match_old = re.search(r'> \*\*Analysis\*\*: (.*)', content)
                 if match_old:
                     return match_old.group(1).strip()
@@ -170,12 +166,12 @@ class Evolver:
         now = datetime.datetime.now().strftime("%Y-%m-%d")
         content = [
             f"# 每日简报 (Daily Brief)",
-            f"> DATE: {now} | ENTROPY: {stats['density']:.4f}",
+            f"> **Date**: {now} | **Entropy**: {stats['density']:.4f}",
             f"",
             f"## 系统健康状态 (System Health)",
-            f"* STATUS: ONLINE",
-            f"* NODES_COUNT: {stats['entities']}",
-            f"* EDGES_COUNT: {stats['relations']}",
+            f"- **Status**: ONLINE",
+            f"- **Nodes**: {stats['entities']}",
+            f"- **Edges**: {stats['relations']}",
             ""
         ]
 
@@ -184,24 +180,24 @@ class Evolver:
             content.append("## 潜意识觉醒 (Nightly Cognitive Intuitions)")
 
             if "baseline" in intuitions and intuitions["baseline"]:
-                content.append("### 状态基线 (Baseline)")
+                content.append("### 状态基线")
                 for item in intuitions["baseline"]:
-                    content.append(f"* {item}")
+                    content.append(f"- {item}")
 
             if "telemetry" in intuitions and intuitions["telemetry"]:
-                content.append("### 物理遥测 (Telemetry)")
+                content.append("### 物理遥测")
                 for item in intuitions["telemetry"]:
-                    content.append(f"* {item}")
+                    content.append(f"- {item}")
 
             if "scan" in intuitions and intuitions["scan"]:
-                content.append("### 网络扫描 (Network Scan)")
+                content.append("### 网络扫描")
                 for item in intuitions["scan"]:
-                    content.append(f"* {item}")
+                    content.append(f"- {item}")
 
             if "evolution" in intuitions and intuitions["evolution"]:
-                content.append("### 演进策略 (Evolution Directive)")
+                content.append("### 演进策略")
                 for item in intuitions["evolution"]:
-                    content.append(f"* {item}")
+                    content.append(f"- {item}")
 
             content.append("")
 
@@ -214,23 +210,23 @@ class Evolver:
                 content.append("")
 
         if not has_intel:
-            content.append("## 虚空监视 (Void Watch)\n> STATUS: QUIET | No significant ecosystem movements.\n")
+            content.append("## 虚空监视 (Void Watch)\n> No significant ecosystem movements.\n")
 
         # Smart Deep Work Suggestion
-        suggestion = "SYSTEM_OPTIMIZATION"
+        suggestion = "System Optimization"
         if categories["架构情报 (Architecture)"]:
-            suggestion = "PROTOCOL_REVIEW"
+            suggestion = "Review Architecture PRs & Protocol Specs"
         elif categories["边缘战备 (Edge AI)"]:
-            suggestion = "EDGE_BENCHMARKING"
+            suggestion = "Edge Inference Benchmarking (vLLM/LiteRT)"
         elif categories["竞品雷达 (Competitors)"]:
-            suggestion = "COMPETITIVE_ANALYSIS"
+            suggestion = "Strategic Analysis of Competitor Updates"
 
-        content.append(f"## 深度工作建议 (Deep Work)\n* FOCUS_AREA: {suggestion}\n* TIME_BLOCK: 120m")
+        content.append(f"## 深度工作建议 (Deep Work)\n> **Focus**: {suggestion}\n- [ ] Block 2 hours.")
 
         if orphans:
             content.append("\n## 待处理熵值 (Entropy Targets)")
             for o in orphans:
-                content.append(f"* ORPHAN_NODE: {o['name']} ({o['id']}) | WEIGHT: {o['weight']:.2f}")
+                content.append(f"- **{o['name']}** ({o['id']}): Weight {o['weight']:.2f}")
 
         # Write to file
         filename = self.memories_path / "MISSION_ACTIVE.md"

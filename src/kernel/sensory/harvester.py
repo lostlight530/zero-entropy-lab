@@ -106,15 +106,15 @@ class Harvester:
                                     tags_str = ", ".join(tags) if tags else "General"
 
                                     # 动态生成基于真实文本内容的评估 (Dynamic assessment based on actual content)
-                                    arch_conflict = "LOW | Conceptual alignment possible"
+                                    arch_conflict = "Low (Conceptual alignment possible)"
                                     if re.search(r'(?i)(docker|npm|pip|kubernetes|helm|compose)', body):
-                                        arch_conflict = "HIGH | Heavy external dependency footprint detected"
+                                        arch_conflict = "High (Heavy external dependency footprint detected)"
                                     elif re.search(r'(?i)(rust|c\+\+|go)', body):
-                                        arch_conflict = "MEDIUM | Foreign language boundaries present"
+                                        arch_conflict = "Medium (Foreign language boundaries present)"
 
-                                    hallucination_risk = "MODERATE | Requires structural parsing"
+                                    hallucination_risk = "Moderate (Requires structural parsing)"
                                     if "Agent-Protocol" in tags:
-                                        hallucination_risk = "HIGH | Agentic logic relies on nondeterministic prompts"
+                                        hallucination_risk = "High (Agentic logic often relies on nondeterministic prompts)"
 
                                     safe_repo = repo.replace("/", "_").lower()
                                     date_prefix = datetime.datetime.utcnow().strftime("%Y%m%d")
@@ -122,27 +122,27 @@ class Harvester:
                                     filepath = self.inputs_path / filename
 
                                     content = f"# 📡 NEXUS HARVESTER: Intelligence Dossier\n\n"
-                                    content += f"* DATE: {datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')} (UTC)\n"
-                                    content += f"* TARGET_IDENTITY: {repo}\n"
-                                    content += f"* VERSION_ASSET: {name}\n"
-                                    content += f"* SOURCE_LINK: {html_url}\n\n"
+                                    content += f"Date: {datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')} (UTC)\n"
+                                    content += f"Target Identity: {repo}\n"
+                                    content += f"Version Asset: {name}\n"
+                                    content += f"Source Link: {html_url}\n\n"
 
                                     content += f"## 资产物理属性 (Asset Physical Properties)\n"
-                                    content += f"* REPOSITORY_TYPE: External Package / Intelligence\n"
-                                    content += f"* PRIMARY_LANGUAGE: N/A\n"
-                                    content += f"* API_RATE_LIMIT_STATUS: Bypassed via injected GITHUB_TOKEN header\n\n"
+                                    content += f"* Repository Type: External Package / Intelligence\n"
+                                    content += f"* Primary Language: N/A\n"
+                                    content += f"* API Rate Limit Status: Bypassed via injected GITHUB_TOKEN header\n\n"
 
                                     content += f"## 零熵解析矩阵 (Zero-Entropy Analysis Matrix)\n"
-                                    content += f"* DEPENDENCY_ENTROPY: {tags_str}\n"
-                                    content += f"* ARCHITECTURE_CONFLICT: {arch_conflict}\n"
-                                    content += f"* INTERNAL_LOGIC: External Payload Reference only\n\n"
+                                    content += f"* Dependency Entropy: Detected via Harvest Tags ({tags_str})\n"
+                                    content += f"* Architecture Conflict: {arch_conflict}\n"
+                                    content += f"* Internal Logic: External Payload Reference only\n\n"
 
                                     content += f"## 威胁与兼容性评估 (Threat & Compatibility Assessment)\n"
                                     if "Breaking-Change" in tags:
-                                        content += f"* DIRECT_CODE_INTEGRATION: HIGH_RISK | Breaking changes detected\n"
+                                        content += f"* Direct Code Integration: High Risk due to breaking changes\n"
                                     else:
-                                        content += f"* DIRECT_CODE_INTEGRATION: PROHIBITED | Violates pure standard library constraint\n"
-                                    content += f"* HALLUCINATION_RISK: {hallucination_risk}\n\n"
+                                        content += f"* Direct Code Integration: Strictly Prohibited (Violates pure standard library constraint)\n"
+                                    content += f"* Hallucination Risk: {hallucination_risk}\n\n"
 
                                     content += f"## 行动指令 (Action Directives)\n"
                                     content += f"1. Reject all dependency injections from this repository\n"

@@ -1,16 +1,21 @@
-# 安全协议 (Security Policy)
+# Security Policy
 
-## 支持矩阵 (Supported Versions)
+## Supported Versions
 
-The Zero-Entropy Lab exclusively supports the current master branch
-Historical versions are discarded
+Use this section to tell people about which versions of your project are
+currently being supported with security updates.
 
-| Protocol | Supported          |
-| -------- | ------------------ |
-| v0.x     | :white_check_mark: |
+| Version | Supported          |
+| ------- | ------------------ |
+| 5.1.x   | :white_check_mark: |
+| 5.0.x   | :x:                |
+| 4.0.x   | :white_check_mark: |
+| < 4.0   | :x:                |
 
-## 漏洞报告 (Reporting a Vulnerability)
+## Reporting a Vulnerability
 
-Direct vulnerability disclosures via pull request
-Architectural flaws must be resolved using pure Python 3.10+ standard libraries
-Any submission introducing third-party dependencies will be rejected immediately
+Use this section to tell people how to report a vulnerability.
+
+Tell them where to go, how often they can expect to get an update on a
+reported vulnerability, what to expect if the vulnerability is accepted or
+declined, etc.
