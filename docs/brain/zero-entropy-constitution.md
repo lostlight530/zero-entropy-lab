@@ -4,41 +4,34 @@
 
 ## 0. 核心愿景 (Vision)
 
-Constructing a zero-entropy system
-Absolute zero dependency
-Extreme cold start velocity
-Fundamentalist engineering practice
-Code is law
-Protocol is truth
+构建一个“零熵”系统：绝对零依赖、极致冷启动速度、原教旨主义工程学实践。代码即法律，协议即真理。
 
 ## 1. 物理架构 (Topological Rules)
 
-- **src/kernel/**: Locus of core logic (Cortex Nexus Scholar)
-- **src/scripts/ & src/styles/**: Frontend assets
-- **data/**: Persistent storage where knowledge and memories are version tracked to maintain GitHub Workflow coherence while ephemeral states remain ignored
-- **docs/**: Pure product and architecture manuals devoid of business logic
+- **src/kernel/**：核心逻辑所在地（Cortex, Nexus, Scholar）。
+- **src/scripts/ & src/styles/**：前端资产。
+- **data/**：持久化存储。`data/knowledge/` 与 `data/memories/` 为系统记忆，**允许追踪**以维持 GitHub Workflow 连贯性。其余临时状态禁止追踪。
+- **docs/**：纯粹的产品/架构手册，不包含业务逻辑。
 
 ## 2. 绝对法则 (The Laws)
 
 ### 2.1 零外部依赖 (Absolute Zero-Dependency)
 
-- **Backend**: Strict prohibition of pip install utilizing exclusively Python 3.10+ standard libraries
-- **Frontend**: Strict prohibition of npm install utilizing exclusively Vanilla JS (ESM) HTML5 CSS3 and forbidding any bundling tools like Vite or Webpack
+- **后端**：严格禁止 `pip install`。仅限 Python 3.10+ 标准库。
+- **前端**：严格禁止 `npm install`。仅限 Vanilla JS (ESM), HTML5, CSS3。禁止任何打包/构建工具（如 Vite, Webpack）。
 
 ### 2.2 极简工程 (Fundamentalist Engineering)
 
-- **Cortex**: Direct sqlite3 manipulation with absolute prohibition of ORMs
-- **Nexus**: Native http server routing
+- **Cortex**：直接操作 `sqlite3`。禁止 ORM。
+- **Nexus**：原生 `http.server` 路由。
 
 ### 2.3 公开透明 (Public Transparency)
 
-- Maintain pristine repository state
-- All personal sensitive data historical archaeological residue and ephemeral caches must be eradicated prior to commit
+- 保持仓库纯净。所有个人敏感数据、历史考古残留、临时缓存必须在 Commit 前清除。
 
 ## 3. 协作准则 (Collaboration)
 
-- AI Partners must preserve the low-entropy state of the system
-- Any actions introducing complexity require preliminary review and adherence to the protocol
+- AI 合伙人必须维持系统的低熵状态。任何引入复杂度的行为需先申请 Review。
 
 ---
-© 2026 Zero-Entropy Lab | Bare-Metal Truth
+© 2026 Zero-Entropy Lab | "Bare-Metal Truth."
