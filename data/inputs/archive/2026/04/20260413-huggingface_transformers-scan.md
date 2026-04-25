@@ -2,8 +2,8 @@
 
 Date: 2026-04-13 22:34:10 (UTC)
 Target Identity: huggingface/transformers
-Version Asset: Patch release v5.5.4
-Source Link: https://github.com/huggingface/transformers/releases/tag/v5.5.4
+Version Asset: Patch release v554
+Source Link: https://githubcom/huggingface/transformers/releases/tag/v554
 
 ## 资产物理属性 (Asset Physical Properties)
 * Repository Type: External Package / Intelligence
@@ -20,22 +20,22 @@ Source Link: https://github.com/huggingface/transformers/releases/tag/v5.5.4
 * Hallucination Risk: Moderate (Requires structural parsing)
 
 ## 行动指令 (Action Directives)
-1. Reject all dependency injections from this repository
-2. Extract core theoretical concepts for zero-entropy refactoring
-3. Ensure any extracted logic uses pure Python `typing` and `inspect.signature`
+1 Reject all dependency injections from this repository
+2 Extract core theoretical concepts for zero-entropy refactoring
+3 Ensure any extracted logic uses pure Python `typing` and `inspectsignature`
 
 ## 原始载荷 (Raw Payload)
 
 ```text
-# Patch release v5.5.4
+# Patch release v554
 
 This is mostly some fixes that are good to have asap, mostly for tokenizers;
-** Fix Kimi-K2.5 tokenizer regression and _patch_mistral_regex Attribute… (#45305) by ArthurZucker
+** Fix Kimi-K25 tokenizer regression and _patch_mistral_regex Attribute… (#45305) by ArthurZucker
 
 For training:
 ** Fix #45305 + add regression test GAS (#45349) by florian6973, SunMarc
 ** Fix IndexError with DeepSpeed ZeRO-3 when kernels rotary is active (#…) by ArthurZucker
 
-And for Qwen2.5-VL :
-** Fix Qwen2.5-VL temporal RoPE scaling applied to still images (#45330) by Kash6, zucchini-nlp
+And for Qwen25-VL :
+** Fix Qwen25-VL temporal RoPE scaling applied to still images (#45330) by Kash6, zucchini-nlp
 ```

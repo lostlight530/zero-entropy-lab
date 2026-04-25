@@ -2,8 +2,8 @@
 
 Date: 2026-04-08 10:11:18 (UTC)
 Target Identity: vllm-project/vllm
-Version Asset: v0.19.0
-Source Link: https://github.com/vllm-project/vllm/releases/tag/v0.19.0
+Version Asset: v0190
+Source Link: https://githubcom/vllm-project/vllm/releases/tag/v0190
 
 ## 资产物理属性 (Asset Physical Properties)
 * Repository Type: External Package / Intelligence
@@ -20,117 +20,117 @@ Source Link: https://github.com/vllm-project/vllm/releases/tag/v0.19.0
 * Hallucination Risk: Moderate (Requires structural parsing)
 
 ## 行动指令 (Action Directives)
-1. Reject all dependency injections from this repository
-2. Extract core theoretical concepts for zero-entropy refactoring
-3. Ensure any extracted logic uses pure Python `typing` and `inspect.signature`
+1 Reject all dependency injections from this repository
+2 Extract core theoretical concepts for zero-entropy refactoring
+3 Ensure any extracted logic uses pure Python `typing` and `inspectsignature`
 
 ## 原始载荷 (Raw Payload)
 
 ```text
-# vLLM v0.19.0
+# vLLM v0190
 
 ## Highlights
 This release features 448 commits from 197 contributors (54 new)!
 
-* **Gemma 4 support**: Full Google Gemma 4 architecture support including MoE, multimodal, reasoning, and tool-use capabilities (#38826, #38847). Requires `transformers>=5.5.0`. We recommend using pre-built docker image `vllm/vllm-openai:gemma4` for out of box usage.
-* **Zero-bubble async scheduling + speculative decoding**: Async scheduling now supports speculative decoding with zero-bubble overlap, significantly improving throughput (#32951).
-* **Model Runner V2 maturation**: MRV2 gains piecewise CUDA graphs for pipeline parallelism (#35162), spec decode rejection sampler with greedy/logprobs support (#37238, #37237), multi-modal embeddings for spec decode (#36097), streaming inputs (#37028), and EPLB support (#37488).
-* **ViT Full CUDA Graphs**: Vision encoders (ViT) now support full CUDA graph capture for reduced overhead (#35963).
-* **General CPU KV cache offloading**: A simple yet general CPU KV cache offloading mechanism for V1, with pluggable cache policy and block-level preemption handling (#37160, #37874, #34805, #36642, #37853).
-* **DBO (Dual-Batch Overlap) generalization**: The microbatch optimization (DBO) now works with general models, not just specific architectures (#37926).
-* **NVIDIA B300/GB300 (SM 10.3) support**: Allreduce fusion enabled by default with tuned all-reduce communicator (#37755, #37756).
-* **Transformers v5 compatibility**: Broad compatibility fixes across many models for HuggingFace Transformers v5 (#37681, #38127, #38090, #38247, #38410).
+* **Gemma 4 support**: Full Google Gemma 4 architecture support including MoE, multimodal, reasoning, and tool-use capabilities (#38826, #38847) Requires `transformers>=550` We recommend using pre-built docker image `vllm/vllm-openai:gemma4` for out of box usage
+* **Zero-bubble async scheduling + speculative decoding**: Async scheduling now supports speculative decoding with zero-bubble overlap, significantly improving throughput (#32951)
+* **Model Runner V2 maturation**: MRV2 gains piecewise CUDA graphs for pipeline parallelism (#35162), spec decode rejection sampler with greedy/logprobs support (#37238, #37237), multi-modal embeddings for spec decode (#36097), streaming inputs (#37028), and EPLB support (#37488)
+* **ViT Full CUDA Graphs**: Vision encoders (ViT) now support full CUDA graph capture for reduced overhead (#35963)
+* **General CPU KV cache offloading**: A simple yet general CPU KV cache offloading mechanism for V1, with pluggable cache policy and block-level preemption handling (#37160, #37874, #34805, #36642, #37853)
+* **DBO (Dual-Batch Overlap) generalization**: The microbatch optimization (DBO) now works with general models, not just specific architectures (#37926)
+* **NVIDIA B300/GB300 (SM 103) support**: Allreduce fusion enabled by default with tuned all-reduce communicator (#37755, #37756)
+* **Transformers v5 compatibility**: Broad compatibility fixes across many models for HuggingFace Transformers v5 (#37681, #38127, #38090, #38247, #38410)
 
 ### Model Support
-* New architectures: Gemma 4 (#38826), Cohere ASR (#35809), Cohere Transcribe (#38120), ColQwen3.5 4.5B (#36887), LFM2-ColBERT-350M (#37528), Granite 4.0 1B Speech (#38019), Qwen3-ForcedAligner (#35367).
-* Speculative decoding: Eagle3 for Pixtral (#37182), EagleMistralLarge3 fix (#37232).
-* LoRA expansion: H2OVL tower/connector LoRA (#31696), `--lora-target-modules` to restrict LoRA to specific modules (#34984), `language_model_only` respected (#37375), Mistral3 fix (#36928), Qwen3.5 fix (#36976), out-of-tree ops replacement (#37181).
-* Model fixes: NemotronH MTP + Chunked Prefill (#35447), Qwen3-VL video timestamps (#37439), Qwen3.5 GDN quantized models (#37448), Qwen3Next A_log FP32 (#37810), JAIS ALiBi (#37820), RoBERTa CUDA graph position IDs (#37873), AudioFlamingo3/MusicFlamingo (#37643), Music Flamingo loading (#35535), bge-m3 task selection (#37632), Nemotron Parse loading (#37407), GLM OCR patch merger (#37962), PaddleOCR checkpoint compat (#38232), DeepSeek v3.2 params (#33703), MiniMax NVFP4 weight loading (#37214), gated model HF token (#37920), Parakeet OOM on long audio (#36671).
-* Features: Temporal compression for Nemotron-3-VL videos (#36808), NemotronH Puzzle + MTP (#37803), torch.compile for InternVL vision encoder (#38049), multiple embedding types in single call (#35829).
-* Performance: GLM-4.xv ViT optimization (#37779).
+* New architectures: Gemma 4 (#38826), Cohere ASR (#35809), Cohere Transcribe (#38120), ColQwen35 45B (#36887), LFM2-ColBERT-350M (#37528), Granite 40 1B Speech (#38019), Qwen3-ForcedAligner (#35367)
+* Speculative decoding: Eagle3 for Pixtral (#37182), EagleMistralLarge3 fix (#37232)
+* LoRA expansion: H2OVL tower/connector LoRA (#31696), `--lora-target-modules` to restrict LoRA to specific modules (#34984), `language_model_only` respected (#37375), Mistral3 fix (#36928), Qwen35 fix (#36976), out-of-tree ops replacement (#37181)
+* Model fixes: NemotronH MTP + Chunked Prefill (#35447), Qwen3-VL video timestamps (#37439), Qwen35 GDN quantized models (#37448), Qwen3Next A_log FP32 (#37810), JAIS ALiBi (#37820), RoBERTa CUDA graph position IDs (#37873), AudioFlamingo3/MusicFlamingo (#37643), Music Flamingo loading (#35535), bge-m3 task selection (#37632), Nemotron Parse loading (#37407), GLM OCR patch merger (#37962), PaddleOCR checkpoint compat (#38232), DeepSeek v32 params (#33703), MiniMax NVFP4 weight loading (#37214), gated model HF token (#37920), Parakeet OOM on long audio (#36671)
+* Features: Temporal compression for Nemotron-3-VL videos (#36808), NemotronH Puzzle + MTP (#37803), torchcompile for InternVL vision encoder (#38049), multiple embedding types in single call (#35829)
+* Performance: GLM-4xv ViT optimization (#37779)
 
 ### Engine Core
-* **Zero-bubble async scheduling + speculative decoding** (#32951).
-* **Model Runner V2**: PP CUDA graphs (#35162), spec decode rejection sampler greedy (#37238) + logprobs (#37237), multimodal embeddings for spec decode (#36097), streaming inputs (#37028), configurable acceptance rate (#38045), FP32 draft logits (#37526), FP64 Gumbel noise (#37798), warmup with spec decode (#37812).
-* **ViT Full CUDA Graph** capture (#35963).
-* **General CPU KV cache offloading** with pluggable CachePolicy (#37160, #37874), block-level preemption (#34805), multiple KV groups (#36642), hybrid model support (#37853).
-* **DBO for general models**: Microbatch optimization generalized beyond specific architectures (#37926).
-* **Compilation**: Mega AOT artifact for torch 2.12+ (#37198), lazy graph module to defer recompile (#37609), remove model tag requirement for compile cache (#37345), Triton autotuning disk cache enabled by default (#37188), inductor runtime asserts disabled by default (#37485).
-* **FlexAttention**: Custom mask modification support (#37692).
-* **Attention**: Distinguish short extends vs decodes (#37303), allow qk_nope_head_dim=192 in FlashInfer MLA (#37475), skip sliding window attention layers with FP8 KV cache (#33695).
-* **Scheduling**: Schedule requests based on full input sequence length (#37307).
-* **Spec decode**: Per-draft-model MoE backend via `--speculative-config` (#37880), Eagle3 drafter quant_config propagation (#37280), Eagle3 norm_before_fc propagation (#38111).
-* **Extensibility**: PluggableLayer for CustomQwen2Decoder (#37293), tensor IPC transfer for multimodal data (#32104).
-* **Performance**: Optimize top-k in Triton sampler (#37225), optimize token_embed for pooling models with 1% improvement (#37347), fix slow hasattr in CUDAGraphWrapper (#37425), NFS prefetch auto-enabled with RAM guard (#37673), pybase64 replacement (#37290), optimize swap_states for hybrid models (#34733).
-* **Bugfixes**: Fix gibberish from FP8 MLA KV scale inconsistency (#37054), Mamba state corruption (#37728), deadlock with pause/resume (#37024), FlashInfer MNNVL socket collisions (#36674), multimodal prefix cache key collisions (#36708), DP coordinator ZMQ TOCTOU (#37452), CUDA graph memory double-counting (#37426), pooling non-determinism (#37775), AllReduce Fusion shutdown crash (#36955), FlashInfer allreduce workspace (#37461), async spec decoding with hybrid models (#38556), MLA sparse indexer prefill chunking (#36178), KV offloading + MLA (#37536), async scheduling extra CUDA context (#37449), DP MTP dummy run (#35243), offloading+prefetch for GLM-4.7-FP8 (#37178), max memory for multiple KV-cache groups (#36030).
+* **Zero-bubble async scheduling + speculative decoding** (#32951)
+* **Model Runner V2**: PP CUDA graphs (#35162), spec decode rejection sampler greedy (#37238) + logprobs (#37237), multimodal embeddings for spec decode (#36097), streaming inputs (#37028), configurable acceptance rate (#38045), FP32 draft logits (#37526), FP64 Gumbel noise (#37798), warmup with spec decode (#37812)
+* **ViT Full CUDA Graph** capture (#35963)
+* **General CPU KV cache offloading** with pluggable CachePolicy (#37160, #37874), block-level preemption (#34805), multiple KV groups (#36642), hybrid model support (#37853)
+* **DBO for general models**: Microbatch optimization generalized beyond specific architectures (#37926)
+* **Compilation**: Mega AOT artifact for torch 212+ (#37198), lazy graph module to defer recompile (#37609), remove model tag requirement for compile cache (#37345), Triton autotuning disk cache enabled by default (#37188), inductor runtime asserts disabled by default (#37485)
+* **FlexAttention**: Custom mask modification support (#37692)
+* **Attention**: Distinguish short extends vs decodes (#37303), allow qk_nope_head_dim=192 in FlashInfer MLA (#37475), skip sliding window attention layers with FP8 KV cache (#33695)
+* **Scheduling**: Schedule requests based on full input sequence length (#37307)
+* **Spec decode**: Per-draft-model MoE backend via `--speculative-config` (#37880), Eagle3 drafter quant_config propagation (#37280), Eagle3 norm_before_fc propagation (#38111)
+* **Extensibility**: PluggableLayer for CustomQwen2Decoder (#37293), tensor IPC transfer for multimodal data (#32104)
+* **Performance**: Optimize top-k in Triton sampler (#37225), optimize token_embed for pooling models with 1% improvement (#37347), fix slow hasattr in CUDAGraphWrapper (#37425), NFS prefetch auto-enabled with RAM guard (#37673), pybase64 replacement (#37290), optimize swap_states for hybrid models (#34733)
+* **Bugfixes**: Fix gibberish from FP8 MLA KV scale inconsistency (#37054), Mamba state corruption (#37728), deadlock with pause/resume (#37024), FlashInfer MNNVL socket collisions (#36674), multimodal prefix cache key collisions (#36708), DP coordinator ZMQ TOCTOU (#37452), CUDA graph memory double-counting (#37426), pooling non-determinism (#37775), AllReduce Fusion shutdown crash (#36955), FlashInfer allreduce workspace (#37461), async spec decoding with hybrid models (#38556), MLA sparse indexer prefill chunking (#36178), KV offloading + MLA (#37536), async scheduling extra CUDA context (#37449), DP MTP dummy run (#35243), offloading+prefetch for GLM-47-FP8 (#37178), max memory for multiple KV-cache groups (#36030)
 
 ### Hardware & Performance
 * **NVIDIA**:
-  * B300/GB300 (SM 10.3): Allreduce fusion enabled by default (#37755), tuned all-reduce communicator (#37756).
-  * Blackwell: Optimized SM120 CUTLASS blockwise FP8 GEMM (#37970), fix NVFP4 NaN on desktop Blackwell (#37725), fix DeepGEMM E8M0 accuracy for Qwen3.5 FP8 (#38083), restore FP8 FlashMLA CUDA graph persistent buffers (#35175), DGX Spark fix (#38126).
-  * FlashInfer sparse MLA as default for FP8 KV cache (#37252).
-  * Tuned prefill configs for FP8 FA3 (#36265), tuned Triton MoE config for Qwen3.5 on H200 with 9.9% E2E improvement (#37340), H800 MoE configs (#31201).
-  * GPT-OSS: Router GEMM kernel (#37205), eliminate padding with FlashInfer MXFP4/MXFP8 MoE (#30647), reduce redundant SparseMatrix creation (#37683).
-  * NVFP4 CUTLASS MoE non-gated support (#37320), fuse pack topk in TRTLLM MoE via torch.compile (#37695).
-  * Non-contiguous KV cache in TRTLLM FP8 dequant kernel (#36867), Qwen3 dual stream input projection (#36795).
+  * B300/GB300 (SM 103): Allreduce fusion enabled by default (#37755), tuned all-reduce communicator (#37756)
+  * Blackwell: Optimized SM120 CUTLASS blockwise FP8 GEMM (#37970), fix NVFP4 NaN on desktop Blackwell (#37725), fix DeepGEMM E8M0 accuracy for Qwen35 FP8 (#38083), restore FP8 FlashMLA CUDA graph persistent buffers (#35175), DGX Spark fix (#38126)
+  * FlashInfer sparse MLA as default for FP8 KV cache (#37252)
+  * Tuned prefill configs for FP8 FA3 (#36265), tuned Triton MoE config for Qwen35 on H200 with 99% E2E improvement (#37340), H800 MoE configs (#31201)
+  * GPT-OSS: Router GEMM kernel (#37205), eliminate padding with FlashInfer MXFP4/MXFP8 MoE (#30647), reduce redundant SparseMatrix creation (#37683)
+  * NVFP4 CUTLASS MoE non-gated support (#37320), fuse pack topk in TRTLLM MoE via torchcompile (#37695)
+  * Non-contiguous KV cache in TRTLLM FP8 dequant kernel (#36867), Qwen3 dual stream input projection (#36795)
 * **AMD ROCm**:
-  * ROCm 7.2.1, torch 2.10, triton 3.6 (#38252).
-  * DeepEP as all2all backend (#34692).
-  * Persistent MLA kernel from AITER (#36574), FP8xFP8 attention in AITER (#36927).
-  * AWQ Marlin support (#36505), wvSplitK skinny GEMM for RDNA4/gfx1x (#34709).
-  * Nightly Docker image and wheel releases (#37283).
-  * Bugfixes: Sleep mode memory leak (#37533), hybrid model stride (#37228), qwen3_next crash (#36795).
-* **Intel XPU**: MLA model support (#37143), CompressedTensor W4A8 (#37207), auto-detect XPU build platform (#37634).
-* **TPU**: Async scheduling interface (#36924), Qwen3.5 FP8 weight loading fix (#37348).
-* **CPU**: Enable tcmalloc by default (#37607), graceful degradation without tcmalloc/libiomp (#37561), 48.9% throughput improvement for pooling models (#38139), OpenMP thread fix for torch.compile (#37538), structured output crash fix (#37706), KV cache block zeroing crash fix (#37550), slot mapping kernel (#37987), W4A16 compressed tensors (#38219).
-* **Performance fixes**: FP8 DeepGEMM batch invariance (#37718), Triton autotuning for Qwen3.5 (#37338), TRTLLM NVFP4 routing precision (#36725).
+  * ROCm 721, torch 210, triton 36 (#38252)
+  * DeepEP as all2all backend (#34692)
+  * Persistent MLA kernel from AITER (#36574), FP8xFP8 attention in AITER (#36927)
+  * AWQ Marlin support (#36505), wvSplitK skinny GEMM for RDNA4/gfx1x (#34709)
+  * Nightly Docker image and wheel releases (#37283)
+  * Bugfixes: Sleep mode memory leak (#37533), hybrid model stride (#37228), qwen3_next crash (#36795)
+* **Intel XPU**: MLA model support (#37143), CompressedTensor W4A8 (#37207), auto-detect XPU build platform (#37634)
+* **TPU**: Async scheduling interface (#36924), Qwen35 FP8 weight loading fix (#37348)
+* **CPU**: Enable tcmalloc by default (#37607), graceful degradation without tcmalloc/libiomp (#37561), 489% throughput improvement for pooling models (#38139), OpenMP thread fix for torchcompile (#37538), structured output crash fix (#37706), KV cache block zeroing crash fix (#37550), slot mapping kernel (#37987), W4A16 compressed tensors (#38219)
+* **Performance fixes**: FP8 DeepGEMM batch invariance (#37718), Triton autotuning for Qwen35 (#37338), TRTLLM NVFP4 routing precision (#36725)
 
 ### Large Scale Serving
-* **Disaggregated serving**: PD kv_transfer_params for Anthropic Messages (#37535) and Responses API (#37424), Mooncake heterogeneous TP (#36869), Mamba N-1 prefill for P/D (#37310).
-* **EPLB**: MRV2 support (#37488), improved responsiveness (#36271), EP weight filter fix (#37322).
-* **Elastic EP**: Fix repeated scale up/down cycles (#37131), fix stateless group port races (#36330).
-* **DBO**: Generalized to work with all models (#37926).
-* **Multi-node**: Fix allreduce fusion (#38136).
-* **KV connector**: Plugin-overridable metadata build (#37336).
-* **Constraints**: Cap API servers to 1 with Elastic EP (#37466).
+* **Disaggregated serving**: PD kv_transfer_params for Anthropic Messages (#37535) and Responses API (#37424), Mooncake heterogeneous TP (#36869), Mamba N-1 prefill for P/D (#37310)
+* **EPLB**: MRV2 support (#37488), improved responsiveness (#36271), EP weight filter fix (#37322)
+* **Elastic EP**: Fix repeated scale up/down cycles (#37131), fix stateless group port races (#36330)
+* **DBO**: Generalized to work with all models (#37926)
+* **Multi-node**: Fix allreduce fusion (#38136)
+* **KV connector**: Plugin-overridable metadata build (#37336)
+* **Constraints**: Cap API servers to 1 with Elastic EP (#37466)
 
 ### Quantization
-* **Online MXFP8** quantization for MoE and dense models (#35448).
-* **FP8**: WoQ kernel abstraction (#32929), Marlin FP8 for compressed tensors fix (#38092).
-* **NVFP4**: Rescale weight scales to fix BF16 dequant underflow (#34577), fix Marlin NaN/Inf with float16 (#33972).
-* **QeRL**: Online quantization composed with quantized reloading for RLHF (#38032).
-* **CPU**: W4A16 compressed tensors (#38219).
-* **XPU**: CompressedTensor W4A8 (#37207).
-* **ROCm**: AWQ Marlin support (#36505).
-* **MXFP8 + DeepGEMM**: Fix crash when both are active (#37358).
-* **Removals**: Per-tensor-per-channel FP8 removed (#32700), Sparse24 integration and kernels removed (#36799).
+* **Online MXFP8** quantization for MoE and dense models (#35448)
+* **FP8**: WoQ kernel abstraction (#32929), Marlin FP8 for compressed tensors fix (#38092)
+* **NVFP4**: Rescale weight scales to fix BF16 dequant underflow (#34577), fix Marlin NaN/Inf with float16 (#33972)
+* **QeRL**: Online quantization composed with quantized reloading for RLHF (#38032)
+* **CPU**: W4A16 compressed tensors (#38219)
+* **XPU**: CompressedTensor W4A8 (#37207)
+* **ROCm**: AWQ Marlin support (#36505)
+* **MXFP8 + DeepGEMM**: Fix crash when both are active (#37358)
+* **Removals**: Per-tensor-per-channel FP8 removed (#32700), Sparse24 integration and kernels removed (#36799)
 
 ### API & Frontend
-* **New endpoints**: `/v1/chat/completions/batch` for batched chat completions (#38011).
-* **Features**: Limit thinking tokens (hard limit) (#20859), multiple embedding types in single call (#35829), numpy array embeddings for multimodal (#38119), `--lora-target-modules` (#34984), `-sc` shorthand for `--speculative-config` (#38380).
-* **Tool parsing**: GigaChat 3.1 parser (#36664), Kimi-K2.5 reasoning/tool parser (#37438), Gemma 4 tool parser (#38847), tools passed to parser constructor (#38029), fix Mistral parser (#37209), fix DeepSeek v3.2 streaming (#36056), fix GLM-4.7 parsing (#37386), fix Hermes streaming (#38168), fix OpenAI tool parser IndexError (#37958), fix Anthropic streaming (#37510).
-* **Responses API**: Fix crash with tool_choice=required exceeding max_output_tokens (#37258), fix TTFT recording (#37498), fix Anthropic serving template kwargs (#37899).
-* **Performance**: Offload blocking tokenizer ops to thread pool (#34789).
-* **Deprecations**: `--calculate-kv-scales` (#37201), `score` task (#37537), pooling multi-task support (#37956), `reasoning_content` message field removed (#37480).
-* **Bugfixes**: Embed/classify task routing (#37573), Cohere embed task instruction (#38362), renderer workers restricted to 1 with MM cache (#38418).
-* **UX**: Log once per node by default (#37568), torch profiler with stack enabled (#37571).
+* **New endpoints**: `/v1/chat/completions/batch` for batched chat completions (#38011)
+* **Features**: Limit thinking tokens (hard limit) (#20859), multiple embedding types in single call (#35829), numpy array embeddings for multimodal (#38119), `--lora-target-modules` (#34984), `-sc` shorthand for `--speculative-config` (#38380)
+* **Tool parsing**: GigaChat 31 parser (#36664), Kimi-K25 reasoning/tool parser (#37438), Gemma 4 tool parser (#38847), tools passed to parser constructor (#38029), fix Mistral parser (#37209), fix DeepSeek v32 streaming (#36056), fix GLM-47 parsing (#37386), fix Hermes streaming (#38168), fix OpenAI tool parser IndexError (#37958), fix Anthropic streaming (#37510)
+* **Responses API**: Fix crash with tool_choice=required exceeding max_output_tokens (#37258), fix TTFT recording (#37498), fix Anthropic serving template kwargs (#37899)
+* **Performance**: Offload blocking tokenizer ops to thread pool (#34789)
+* **Deprecations**: `--calculate-kv-scales` (#37201), `score` task (#37537), pooling multi-task support (#37956), `reasoning_content` message field removed (#37480)
+* **Bugfixes**: Embed/classify task routing (#37573), Cohere embed task instruction (#38362), renderer workers restricted to 1 with MM cache (#38418)
+* **UX**: Log once per node by default (#37568), torch profiler with stack enabled (#37571)
 
 ### Security
-* Add `VLLM_MAX_N_SEQUENCES` environment variable to enforce sequence limits (#37952).
-* Enforce frame limit in VideoMediaIO to prevent resource exhaustion (#38636).
+* Add `VLLM_MAX_N_SEQUENCES` environment variable to enforce sequence limits (#37952)
+* Enforce frame limit in VideoMediaIO to prevent resource exhaustion (#38636)
 
 ### Dependencies
-* Transformers v5 compatibility across many models (#37681, #38127, #38247, #38410, #38090).
-* ROCm 7.2.1, torch 2.10, triton 3.6 for ROCm builds (#38252).
-* compressed-tensors bumped to 0.14.0.1 (#36988).
-* Python OpenAI package bumped (#32316).
-* flashinfer-cubin added as default CUDA dependency (#37233).
-* librosa removed from audio dependencies (#37058).
+* Transformers v5 compatibility across many models (#37681, #38127, #38247, #38410, #38090)
+* ROCm 721, torch 210, triton 36 for ROCm builds (#38252)
+* compressed-tensors bumped to 01401 (#36988)
+* Python OpenAI package bumped (#32316)
+* flashinfer-cubin added as default CUDA dependency (#37233)
+* librosa removed from audio dependencies (#37058)
 
 ### V0 Deprecation
-* Deprecate virtual engine (#37195).
-* Deprecate `--disable-frontend-multiprocessing` (#37612).
-* Refactor KV cache from list to element (#37487).
+* Deprecate virtual engine (#37195)
+* Deprecate `--disable-frontend-multiprocessing` (#37612)
+* Refactor KV cache from list to element (#37487)
 
 ### New Contributors
 * @aaab8b made their first contribution in #37533

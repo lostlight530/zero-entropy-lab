@@ -2,8 +2,8 @@
 
 Date: 2026-04-08 10:11:19 (UTC)
 Target Identity: google-ai-edge/mediapipe
-Version Asset: MediaPipe v0.10.33
-Source Link: https://github.com/google-ai-edge/mediapipe/releases/tag/v0.10.33
+Version Asset: MediaPipe v01033
+Source Link: https://githubcom/google-ai-edge/mediapipe/releases/tag/v01033
 
 ## 资产物理属性 (Asset Physical Properties)
 * Repository Type: External Package / Intelligence
@@ -20,9 +20,9 @@ Source Link: https://github.com/google-ai-edge/mediapipe/releases/tag/v0.10.33
 * Hallucination Risk: Moderate (Requires structural parsing)
 
 ## 行动指令 (Action Directives)
-1. Reject all dependency injections from this repository
-2. Extract core theoretical concepts for zero-entropy refactoring
-3. Ensure any extracted logic uses pure Python `typing` and `inspect.signature`
+1 Reject all dependency injections from this repository
+2 Extract core theoretical concepts for zero-entropy refactoring
+3 Ensure any extracted logic uses pure Python `typing` and `inspectsignature`
 
 ## 原始载荷 (Raw Payload)
 
@@ -35,7 +35,7 @@ Source Link: https://github.com/google-ai-edge/mediapipe/releases/tag/v0.10.33
 
 
 ### Framework and core calculator improvements
-- Add Nearest Neighbor interpolation to WarpAffineCalculator.
+- Add Nearest Neighbor interpolation to WarpAffineCalculator
 - Add a Tensor DebugString() function that formats the tensor numpy-style
 - Add a Tensor test util
 - Create a C API for Holistic Landmarker
@@ -47,16 +47,16 @@ Source Link: https://github.com/google-ai-edge/mediapipe/releases/tag/v0.10.33
 - Add support for FULL_RANGE face detection task
 - Ads optional RESET input stream to SpectrogramCalculator
 - Simplify TaskRunner initialization by adding an options object
-- Plumb the host platform and version for all MP Tasks users.
+- Plumb the host platform and version for all MP Tasks users
 - MediaPipe: Add ROI validation in ImageToTensorOpenCvConverter
 
 ### MediaPipe Tasks update
 This section should highlight the changes that are done specifically for any platform and don't propagate to
-other platforms.
+other platforms
 
 
 #### Javascript
-- Add tests for full-range face detector model.
+- Add tests for full-range face detector model
 
 #### Python
 - Re-adding old sources for Holistic Landmarker

@@ -2,8 +2,8 @@
 
 Date: 2026-04-08 10:11:17 (UTC)
 Target Identity: iflytek/astron-agent
-Version Asset: Astron Agent v1.0.4
-Source Link: https://github.com/iflytek/astron-agent/releases/tag/v1.0.4
+Version Asset: Astron Agent v104
+Source Link: https://githubcom/iflytek/astron-agent/releases/tag/v104
 
 ## 资产物理属性 (Asset Physical Properties)
 * Repository Type: External Package / Intelligence
@@ -20,31 +20,31 @@ Source Link: https://github.com/iflytek/astron-agent/releases/tag/v1.0.4
 * Hallucination Risk: Moderate (Requires structural parsing)
 
 ## 行动指令 (Action Directives)
-1. Reject all dependency injections from this repository
-2. Extract core theoretical concepts for zero-entropy refactoring
-3. Ensure any extracted logic uses pure Python `typing` and `inspect.signature`
+1 Reject all dependency injections from this repository
+2 Extract core theoretical concepts for zero-entropy refactoring
+3 Ensure any extracted logic uses pure Python `typing` and `inspectsignature`
 
 ## 原始载荷 (Raw Payload)
 
 ```text
 ## What's Changed
 
-Based on PRs merged into `main` since `v1.0.3`.
+Based on PRs merged into `main` since `v103`
 
 ### New Features
-- feature: Push localization image ([#1128](https://github.com/iflytek/astron-agent/pull/1128))
-- feat: improve MySQL compatibility and streamline model provider configuration ([#1135](https://github.com/iflytek/astron-agent/pull/1135))
+- feature: Push localization image ([#1128](https://githubcom/iflytek/astron-agent/pull/1128))
+- feat: improve MySQL compatibility and streamline model provider configuration ([#1135](https://githubcom/iflytek/astron-agent/pull/1135))
 
 ### Fixes
 - No bug fixes in this release
 
 ### Improvements
-- Bugfix/superteam ([#1055](https://github.com/iflytek/astron-agent/pull/1055))
-- Remove duplicate event entry from README ([#1063](https://github.com/iflytek/astron-agent/pull/1063))
-- Remove duplicate entry for 合肥城市行 ([#1064](https://github.com/iflytek/astron-agent/pull/1064))
-- add workflow trace panel ([#1078](https://github.com/iflytek/astron-agent/pull/1078))
-- Remove duplicate hackathon entry from README ([#1125](https://github.com/iflytek/astron-agent/pull/1125))
-- Update README-zh.md ([#1126](https://github.com/iflytek/astron-agent/pull/1126))
-- docs: add tutorial link to README ([#1127](https://github.com/iflytek/astron-agent/pull/1127))
-- docs: add open source workflows link to Chinese and English READMEs ([#1130](https://github.com/iflytek/astron-agent/pull/1130))
+- Bugfix/superteam ([#1055](https://githubcom/iflytek/astron-agent/pull/1055))
+- Remove duplicate event entry from README ([#1063](https://githubcom/iflytek/astron-agent/pull/1063))
+- Remove duplicate entry for 合肥城市行 ([#1064](https://githubcom/iflytek/astron-agent/pull/1064))
+- add workflow trace panel ([#1078](https://githubcom/iflytek/astron-agent/pull/1078))
+- Remove duplicate hackathon entry from README ([#1125](https://githubcom/iflytek/astron-agent/pull/1125))
+- Update README-zhmd ([#1126](https://githubcom/iflytek/astron-agent/pull/1126))
+- docs: add tutorial link to README ([#1127](https://githubcom/iflytek/astron-agent/pull/1127))
+- docs: add open source workflows link to Chinese and English READMEs ([#1130](https://githubcom/iflytek/astron-agent/pull/1130))
 ```
