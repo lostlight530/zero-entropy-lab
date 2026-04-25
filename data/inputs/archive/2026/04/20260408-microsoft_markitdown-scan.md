@@ -2,8 +2,8 @@
 
 Date: 2026-04-08 10:11:19 (UTC)
 Target Identity: microsoft/markitdown
-Version Asset: v0.1.5
-Source Link: https://github.com/microsoft/markitdown/releases/tag/v0.1.5
+Version Asset: v015
+Source Link: https://githubcom/microsoft/markitdown/releases/tag/v015
 
 ## 资产物理属性 (Asset Physical Properties)
 * Repository Type: External Package / Intelligence
@@ -20,24 +20,24 @@ Source Link: https://github.com/microsoft/markitdown/releases/tag/v0.1.5
 * Hallucination Risk: Moderate (Requires structural parsing)
 
 ## 行动指令 (Action Directives)
-1. Reject all dependency injections from this repository
-2. Extract core theoretical concepts for zero-entropy refactoring
-3. Ensure any extracted logic uses pure Python `typing` and `inspect.signature`
+1 Reject all dependency injections from this repository
+2 Extract core theoretical concepts for zero-entropy refactoring
+3 Ensure any extracted logic uses pure Python `typing` and `inspectsignature`
 
 ## 原始载荷 (Raw Payload)
 
 ```text
 ## What's Changed
-* Update PDF table extraction to support aligned Markdown by @lesyk in https://github.com/microsoft/markitdown/pull/1499
-* Fix: PDF parsing doesn't support partially numbered lists by @lesyk in https://github.com/microsoft/markitdown/pull/1525
-* Extend table support for wide tables by @lesyk in https://github.com/microsoft/markitdown/pull/1552
-* Add text/markdown to Accept header by @afourney in https://github.com/microsoft/markitdown/pull/1554
-* Remove onnxruntime<=1.20.1 Windows pin by @basnijholt in https://github.com/microsoft/markitdown/pull/1551
-* Bump version for release. by @afourney in https://github.com/microsoft/markitdown/pull/1564
+* Update PDF table extraction to support aligned Markdown by @lesyk in https://githubcom/microsoft/markitdown/pull/1499
+* Fix: PDF parsing doesn't support partially numbered lists by @lesyk in https://githubcom/microsoft/markitdown/pull/1525
+* Extend table support for wide tables by @lesyk in https://githubcom/microsoft/markitdown/pull/1552
+* Add text/markdown to Accept header by @afourney in https://githubcom/microsoft/markitdown/pull/1554
+* Remove onnxruntime<=1201 Windows pin by @basnijholt in https://githubcom/microsoft/markitdown/pull/1551
+* Bump version for release by @afourney in https://githubcom/microsoft/markitdown/pull/1564
 
 ## New Contributors
-* @lesyk made their first contribution in https://github.com/microsoft/markitdown/pull/1499
-* @basnijholt made their first contribution in https://github.com/microsoft/markitdown/pull/1551
+* @lesyk made their first contribution in https://githubcom/microsoft/markitdown/pull/1499
+* @basnijholt made their first contribution in https://githubcom/microsoft/markitdown/pull/1551
 
-**Full Changelog**: https://github.com/microsoft/markitdown/compare/v0.1.4...v0.1.5
+**Full Changelog**: https://githubcom/microsoft/markitdown/compare/v014v015
 ```

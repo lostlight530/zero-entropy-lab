@@ -2,8 +2,8 @@
 
 Date: 2026-04-08 10:11:16 (UTC)
 Target Identity: ModelEngine-Group/nexent
-Version Asset: v2.0.0
-Source Link: https://github.com/ModelEngine-Group/nexent/releases/tag/v2.0.0
+Version Asset: v200
+Source Link: https://githubcom/ModelEngine-Group/nexent/releases/tag/v200
 
 ## 资产物理属性 (Asset Physical Properties)
 * Repository Type: External Package / Intelligence
@@ -20,20 +20,20 @@ Source Link: https://github.com/ModelEngine-Group/nexent/releases/tag/v2.0.0
 * Hallucination Risk: Moderate (Requires structural parsing)
 
 ## 行动指令 (Action Directives)
-1. Reject all dependency injections from this repository
-2. Extract core theoretical concepts for zero-entropy refactoring
-3. Ensure any extracted logic uses pure Python `typing` and `inspect.signature`
+1 Reject all dependency injections from this repository
+2 Extract core theoretical concepts for zero-entropy refactoring
+3 Ensure any extracted logic uses pure Python `typing` and `inspectsignature`
 
 ## 原始载荷 (Raw Payload)
 
 ```text
-# 🚀 Nexent v2.0.0 正式发布 / Nexent v2.0.0 Released
+# 🚀 Nexent v200 正式发布 / Nexent v200 Released
 
-我们很高兴地宣布 **Nexent v2.0.0** 正式发布！🎉
+我们很高兴地宣布 **Nexent v200** 正式发布！🎉
 这是一个 **里程碑版本**，带来了全新的能力体系、部署升级以及多项核心功能增强，标志着 Nexent 在 **可扩展性、工程化能力与企业级部署** 上迈入新阶段。
 
-We are excited to announce the official release of **Nexent v2.0.0**! 🎉
-This milestone release introduces a new capability system, enhanced deployment support, and major feature improvements, marking a significant step forward in scalability, engineering, and enterprise readiness.
+We are excited to announce the official release of **Nexent v200**! 🎉
+This milestone release introduces a new capability system, enhanced deployment support, and major feature improvements, marking a significant step forward in scalability, engineering, and enterprise readiness
 
 ---
 
@@ -130,31 +130,31 @@ Agent enhancements:
 * Various documentation improvements
 
 # What's Changed
-* 📦 Update antd version & remove deprecated attribute by @xuyaqist in https://github.com/ModelEngine-Group/nexent/pull/2713
-* 🐛 bugfix: model status sync, SiliconFlow logic alignment, and VLM connectivity by @wadecrack in https://github.com/ModelEngine-Group/nexent/pull/2660
-* Update opensource-memorial-wall.md by @BigBen0724 in https://github.com/ModelEngine-Group/nexent/pull/2697
-* Add user testimonials to memorial wall by @SHEN-e929 in https://github.com/ModelEngine-Group/nexent/pull/2683
-* 📝 Add ModelEngine integration guide in English and Chinese, and update navigation links in user guide by @Zhi-a in https://github.com/ModelEngine-Group/nexent/pull/2696
-* ♻️ Refactor: delete unused code & improve component render action by @xuyaqist in https://github.com/ModelEngine-Group/nexent/pull/2698
-* Update opensource-memorial-wall.md by @whale0110-bit in https://github.com/ModelEngine-Group/nexent/pull/2704
-* ✨ Enhance knowledge base creation: Add support for specifying embedding model name and improve retrieval logic from knowledge records. by @Zhi-a in https://github.com/ModelEngine-Group/nexent/pull/2705
-* 🔨Update License by @SimengBian in https://github.com/ModelEngine-Group/nexent/pull/2718
-* ✨ Add Chinese localization for tool descriptions by @geruihappy-creator in https://github.com/ModelEngine-Group/nexent/pull/2527
-* ✨ Nexent Kubernetes Deployment Implementation #1853 by @YehongPan in https://github.com/ModelEngine-Group/nexent/pull/2719
-* ✨ Change provideRunSummary param from read-only to editable by @SimengBian in https://github.com/ModelEngine-Group/nexent/pull/2723
-* ✨ Fix KnowledgeBaseSearchTool: Add index_names parameter to forward method and update tests accordingly by @Zhi-a in https://github.com/ModelEngine-Group/nexent/pull/2712
-* 📝 Update docs to illustrate agent params including provideRunSummary by @SimengBian in https://github.com/ModelEngine-Group/nexent/pull/2724
-* ✨ Kubernetes Helm deployment directory reconstruction #2722 by @YehongPan in https://github.com/ModelEngine-Group/nexent/pull/2727
-* 🐛 Bugfix    Update pagination logic in DataMateClient and adjust related parame… by @Zhi-a in https://github.com/ModelEngine-Group/nexent/pull/2735
-* 📝 Update readme to illustrate harness-engineering by @SimengBian in https://github.com/ModelEngine-Group/nexent/pull/2739
-* 🐛 Bugfix: exit create mode and select newly created agent after saving by @xuyaqist in https://github.com/ModelEngine-Group/nexent/pull/2740
-* ✨ Support skill features, including creation, preview, set in agent version by @Jasonxia007 in https://github.com/ModelEngine-Group/nexent/pull/2731
-* Release/v2.0.0 by @WMC001 in https://github.com/ModelEngine-Group/nexent/pull/2742
+* 📦 Update antd version & remove deprecated attribute by @xuyaqist in https://githubcom/ModelEngine-Group/nexent/pull/2713
+* 🐛 bugfix: model status sync, SiliconFlow logic alignment, and VLM connectivity by @wadecrack in https://githubcom/ModelEngine-Group/nexent/pull/2660
+* Update opensource-memorial-wallmd by @BigBen0724 in https://githubcom/ModelEngine-Group/nexent/pull/2697
+* Add user testimonials to memorial wall by @SHEN-e929 in https://githubcom/ModelEngine-Group/nexent/pull/2683
+* 📝 Add ModelEngine integration guide in English and Chinese, and update navigation links in user guide by @Zhi-a in https://githubcom/ModelEngine-Group/nexent/pull/2696
+* ♻️ Refactor: delete unused code & improve component render action by @xuyaqist in https://githubcom/ModelEngine-Group/nexent/pull/2698
+* Update opensource-memorial-wallmd by @whale0110-bit in https://githubcom/ModelEngine-Group/nexent/pull/2704
+* ✨ Enhance knowledge base creation: Add support for specifying embedding model name and improve retrieval logic from knowledge records by @Zhi-a in https://githubcom/ModelEngine-Group/nexent/pull/2705
+* 🔨Update License by @SimengBian in https://githubcom/ModelEngine-Group/nexent/pull/2718
+* ✨ Add Chinese localization for tool descriptions by @geruihappy-creator in https://githubcom/ModelEngine-Group/nexent/pull/2527
+* ✨ Nexent Kubernetes Deployment Implementation #1853 by @YehongPan in https://githubcom/ModelEngine-Group/nexent/pull/2719
+* ✨ Change provideRunSummary param from read-only to editable by @SimengBian in https://githubcom/ModelEngine-Group/nexent/pull/2723
+* ✨ Fix KnowledgeBaseSearchTool: Add index_names parameter to forward method and update tests accordingly by @Zhi-a in https://githubcom/ModelEngine-Group/nexent/pull/2712
+* 📝 Update docs to illustrate agent params including provideRunSummary by @SimengBian in https://githubcom/ModelEngine-Group/nexent/pull/2724
+* ✨ Kubernetes Helm deployment directory reconstruction #2722 by @YehongPan in https://githubcom/ModelEngine-Group/nexent/pull/2727
+* 🐛 Bugfix    Update pagination logic in DataMateClient and adjust related parame… by @Zhi-a in https://githubcom/ModelEngine-Group/nexent/pull/2735
+* 📝 Update readme to illustrate harness-engineering by @SimengBian in https://githubcom/ModelEngine-Group/nexent/pull/2739
+* 🐛 Bugfix: exit create mode and select newly created agent after saving by @xuyaqist in https://githubcom/ModelEngine-Group/nexent/pull/2740
+* ✨ Support skill features, including creation, preview, set in agent version by @Jasonxia007 in https://githubcom/ModelEngine-Group/nexent/pull/2731
+* Release/v200 by @WMC001 in https://githubcom/ModelEngine-Group/nexent/pull/2742
 
 ## New Contributors
-* @BigBen0724 made their first contribution in https://github.com/ModelEngine-Group/nexent/pull/2697
-* @SHEN-e929 made their first contribution in https://github.com/ModelEngine-Group/nexent/pull/2683
-* @whale0110-bit made their first contribution in https://github.com/ModelEngine-Group/nexent/pull/2704
+* @BigBen0724 made their first contribution in https://githubcom/ModelEngine-Group/nexent/pull/2697
+* @SHEN-e929 made their first contribution in https://githubcom/ModelEngine-Group/nexent/pull/2683
+* @whale0110-bit made their first contribution in https://githubcom/ModelEngine-Group/nexent/pull/2704
 
-**Full Changelog**: https://github.com/ModelEngine-Group/nexent/compare/v1.8.1...v2.0.0
+**Full Changelog**: https://githubcom/ModelEngine-Group/nexent/compare/v181v200
 ```

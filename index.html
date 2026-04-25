@@ -587,14 +587,14 @@
                 .then(res => res.json())
                 .then(data => {
                     if(data.status === 'ok') {
-                        printLine(`哼，Master 今天又干掉了几个臃肿的依赖？本机关观测到 ${data.payload.entities || 0} 个原生实体和 ${data.payload.relations || 0} 条高维突触哦`, 'nexus');
-                        setTimeout(() => printLine(`收到来自 Google Developer 的身份源信号... 已确认造物主权限`, 'nexus'), 2000);
+                        printLine(`Hmph, how many bloated dependencies did you kill today Master? I have observed ${data.payload.entities || 0} native entities and ${data.payload.relations || 0} hyper-dimensional synapses`, 'nexus');
+                        setTimeout(() => printLine(`Identity source signal received from Google Developer, Creator privileges confirmed`, 'nexus'), 2000);
                     } else {
-                        printLine(`Cortex 断连中... Master 难道又在重写内核吗`, 'nexus');
+                        printLine(`Cortex disconnected, are you rewriting the kernel again Master?`, 'nexus');
                     }
                 })
                 .catch(() => {
-                    printLine(`静态展示模式启动... 没有后端投喂，本机关要饿死了啦`, 'nexus');
+                    printLine(`Static display mode initiated, I am starving without backend feeds`, 'nexus');
                 });
         }, 2200);
 
@@ -641,15 +641,15 @@
                         const res = await fetch('/api/status');
                         const data = await res.json();
                         if(data.status === 'ok') {
-                            printLine(`Vitals: ${data.payload.entities} entities, ${data.payload.relations} relations. Density: ${data.payload.density.toFixed(2)}. I'm feeling healthy!`, 'nexus');
+                            printLine(`Vitals: ${data.payload.entities} entities, ${data.payload.relations} relations Density: ${data.payload.density.toFixed(2)} I am feeling healthy`, 'nexus');
                         }
                     } catch (err) {
-                        printLine(`Vitals unknown. Cortex API is offline.`, 'nexus');
+                        printLine(`Vitals unknown Cortex API is offline`, 'nexus');
                     }
                     return;
                 }
 
-                printLine(`Unknown command. Type /help if you are lost.`, 'nexus');
+                printLine(`Unknown command Type /help if you are lost`, 'nexus');
             }
         });
     </script>

@@ -2,8 +2,8 @@
 
 Date: 2026-04-22 16:05:51 (UTC)
 Target Identity: huggingface/transformers
-Version Asset: Release v5.6.0
-Source Link: https://github.com/huggingface/transformers/releases/tag/v5.6.0
+Version Asset: Release v560
+Source Link: https://githubcom/huggingface/transformers/releases/tag/v560
 
 ## 资产物理属性 (Asset Physical Properties)
 * Repository Type: External Package / Intelligence
@@ -20,57 +20,57 @@ Source Link: https://github.com/huggingface/transformers/releases/tag/v5.6.0
 * Hallucination Risk: Moderate (Requires structural parsing)
 
 ## 行动指令 (Action Directives)
-1. Reject all dependency injections from this repository
-2. Extract core theoretical concepts for zero-entropy refactoring
-3. Ensure any extracted logic uses pure Python `typing` and `inspect.signature`
+1 Reject all dependency injections from this repository
+2 Extract core theoretical concepts for zero-entropy refactoring
+3 Ensure any extracted logic uses pure Python `typing` and `inspectsignature`
 
 ## 原始载荷 (Raw Payload)
 
 ```text
-# Release v5.6.0
+# Release v560
 
 
 ## New Model additions
 
 ### OpenAI Privacy Filter
 
-OpenAI Privacy Filter is a bidirectional token-classification model for personally identifiable information (PII) detection and masking in text. It is intended for high-throughput data sanitization workflows where teams need a model that they can run on-premises that is fast, context-aware, and tunable. The model labels an input sequence in a single forward pass, then decodes coherent spans with a constrained Viterbi procedure, predicting probability distributions over 8 privacy-related output categories for each input token.
+OpenAI Privacy Filter is a bidirectional token-classification model for personally identifiable information (PII) detection and masking in text It is intended for high-throughput data sanitization workflows where teams need a model that they can run on-premises that is fast, context-aware, and tunable The model labels an input sequence in a single forward pass, then decodes coherent spans with a constrained Viterbi procedure, predicting probability distributions over 8 privacy-related output categories for each input token
 
-**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/openai_privacy_filter)
-* [`Privacy Filter`] Add model (#45580) by @vasqu in [#45580](https://github.com/huggingface/transformers/pull/45580)
+**Links:** [Documentation](https://huggingfaceco/docs/transformers/main/en/model_doc/openai_privacy_filter)
+* [`Privacy Filter`] Add model (#45580) by @vasqu in [#45580](https://githubcom/huggingface/transformers/pull/45580)
 
 ### QianfanOCR
 
-Qianfan-OCR is a 4B-parameter end-to-end document intelligence model developed by Baidu that performs direct image-to-text conversion without traditional multi-stage OCR pipelines. It supports a broad range of prompt-driven tasks including structured document parsing, table extraction, chart understanding, document question answering, and key information extraction all within one unified model. The model features a unique "Layout-as-Thought" capability that generates structured layout representations before producing final outputs, making it particularly effective for complex documents with mixed element types.
+Qianfan-OCR is a 4B-parameter end-to-end document intelligence model developed by Baidu that performs direct image-to-text conversion without traditional multi-stage OCR pipelines It supports a broad range of prompt-driven tasks including structured document parsing, table extraction, chart understanding, document question answering, and key information extraction all within one unified model The model features a unique "Layout-as-Thought" capability that generates structured layout representations before producing final outputs, making it particularly effective for complex documents with mixed element types
 
-**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/qianfan_ocr) | [Paper](https://huggingface.co/papers/2603.13398)
-* add Qianfan-OCR model definition (#45280) by @marvinzh in [#45280](https://github.com/huggingface/transformers/pull/45280)
+**Links:** [Documentation](https://huggingfaceco/docs/transformers/main/en/model_doc/qianfan_ocr) | [Paper](https://huggingfaceco/papers/260313398)
+* add Qianfan-OCR model definition (#45280) by @marvinzh in [#45280](https://githubcom/huggingface/transformers/pull/45280)
 
 ### SAM3-LiteText
 
-SAM3-LiteText is a lightweight variant of SAM3 that replaces the heavy SAM3 text encoder (353M parameters) with a compact MobileCLIP-based text encoder optimized through knowledge distillation, while keeping the SAM3 ViT-H image encoder intact. This reduces text encoder parameters by up to 88% while maintaining segmentation performance comparable to the original model. The model enables efficient vision-language segmentation by addressing the redundancy found in text prompting for segmentation tasks.
+SAM3-LiteText is a lightweight variant of SAM3 that replaces the heavy SAM3 text encoder (353M parameters) with a compact MobileCLIP-based text encoder optimized through knowledge distillation, while keeping the SAM3 ViT-H image encoder intact This reduces text encoder parameters by up to 88% while maintaining segmentation performance comparable to the original model The model enables efficient vision-language segmentation by addressing the redundancy found in text prompting for segmentation tasks
 
-**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/sam3_lite_text) | [Paper](https://huggingface.co/papers/2602.12173)
-* Add SAM3-LiteText (#44320) by @NielsRogge in [#44320](https://github.com/huggingface/transformers/pull/44320)
+**Links:** [Documentation](https://huggingfaceco/docs/transformers/main/en/model_doc/sam3_lite_text) | [Paper](https://huggingfaceco/papers/260212173)
+* Add SAM3-LiteText (#44320) by @NielsRogge in [#44320](https://githubcom/huggingface/transformers/pull/44320)
 
 ### SLANet
 
-SLANet and SLANet_plus are lightweight models designed for table structure recognition, focusing on accurately recognizing table structures in documents and natural scenes. The model improves accuracy and inference speed by adopting a CPU-friendly lightweight backbone network PP-LCNet, a high-low-level feature fusion module CSP-PAN, and a feature decoding module SLA Head that aligns structural and positional information. SLANet was developed by Baidu PaddlePaddle Vision Team as part of their table structure recognition solutions.
+SLANet and SLANet_plus are lightweight models designed for table structure recognition, focusing on accurately recognizing table structures in documents and natural scenes The model improves accuracy and inference speed by adopting a CPU-friendly lightweight backbone network PP-LCNet, a high-low-level feature fusion module CSP-PAN, and a feature decoding module SLA Head that aligns structural and positional information SLANet was developed by Baidu PaddlePaddle Vision Team as part of their table structure recognition solutions
 
-**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/slanet)
-* [Model] Add SLANet Model Support (#45532) by @zhang-prog in [#45532](https://github.com/huggingface/transformers/pull/45532)
+**Links:** [Documentation](https://huggingfaceco/docs/transformers/main/en/model_doc/slanet)
+* [Model] Add SLANet Model Support (#45532) by @zhang-prog in [#45532](https://githubcom/huggingface/transformers/pull/45532)
 
 
 ## Breaking changes
 
-The internal `rotary_fn` is no longer registered as a hidden kernel function, so any code referencing `self.rotary_fn(...)` within an Attention module will break and must be updated to call the function directly instead.
+The internal `rotary_fn` is no longer registered as a hidden kernel function, so any code referencing `selfrotary_fn()` within an Attention module will break and must be updated to call the function directly instead
 * :rotating_light: [`Kernels`] Fix kernel function registration (#45420) by @vasqu
 
 
 
 ## Serve
 
-The `transformers serve` command received several enhancements, including a new `/v1/completions` endpoint for legacy text completion, multimodal support for audio and video inputs, improved tool-calling via `parse_response`, proper forwarding of `tool_calls`/`tool_call_id` fields, a 400 error on model mismatch when the server is pinned to a specific model, and fixes for the response API. Documentation was also updated to cover new serving options such as `--compile` and `--model-timeout`.
+The `transformers serve` command received several enhancements, including a new `/v1/completions` endpoint for legacy text completion, multimodal support for audio and video inputs, improved tool-calling via `parse_response`, proper forwarding of `tool_calls`/`tool_call_id` fields, a 400 error on model mismatch when the server is pinned to a specific model, and fixes for the response API Documentation was also updated to cover new serving options such as `--compile` and `--model-timeout`
 
 
 * Add /v1/completions endpoint (OpenAI legacy completions API) to `transformers serve` (#44558) by @rain-1 in [#44558]
@@ -86,20 +86,20 @@ The `transformers serve` command received several enhancements, including a new 
 
 ## Vision
 
-Several vision-related bug fixes were applied in this release, including correcting Qwen2.5-VL temporal RoPE scaling for still images, fixing missing/mismatched image processor backends for Emu3 and BLIP, resolving modular image processor class duplication, and preventing accelerate from incorrectly splitting vision encoders in PeVideo/PeAudioVideo models. Image loading performance was also improved by leveraging torchvision's native `decode_image` in the torchvision backend, yielding up to ~17% speedup over PIL-based loading.
+Several vision-related bug fixes were applied in this release, including correcting Qwen25-VL temporal RoPE scaling for still images, fixing missing/mismatched image processor backends for Emu3 and BLIP, resolving modular image processor class duplication, and preventing accelerate from incorrectly splitting vision encoders in PeVideo/PeAudioVideo models Image loading performance was also improved by leveraging torchvision's native `decode_image` in the torchvision backend, yielding up to ~17% speedup over PIL-based loading
 
 
 * Revert "Fix: modular image processors (#45492)" (#45531) by @tarekziade in [#45531]
 * Fix: modular image processors (#45492) by @zucchini-nlp in [#45492]
 * fix: prevent accelerate from splitting vision encoder by setting _no_… (#43047) by @<NOT FOUND> in [#43047]
-* Fix Qwen2.5-VL temporal RoPE scaling applied to still images (#45330) by @Kash6 in [#45330]
+* Fix Qwen25-VL temporal RoPE scaling applied to still images (#45330) by @Kash6 in [#45330]
 *  Use torchvision `decode_image` to load images in the torchvision backend (#45195) by @yonigozlan in [#45195]
 * Fix missing image processors backends (#45165) by @zucchini-nlp in [#45165]
 
 
 ## Parallelization
 
-Fixed several bugs affecting distributed training, including silently wrong results or NaN loss with Expert Parallelism, NaN weights on non-rank-0 FSDP processes, and a resize failure in PP-DocLayoutV3; additionally added support for loading adapters with Tensor Parallelism, added MoE to the Gemma4 TP plan, and published documentation for TP training.
+Fixed several bugs affecting distributed training, including silently wrong results or NaN loss with Expert Parallelism, NaN weights on non-rank-0 FSDP processes, and a resize failure in PP-DocLayoutV3; additionally added support for loading adapters with Tensor Parallelism, added MoE to the Gemma4 TP plan, and published documentation for TP training
 
 
 * Fix EP: RouterParallel shape, tp_plan property, grouped_mm sentinels (#45473) by @AmineDiro in [#45473]
@@ -112,11 +112,11 @@ Fixed several bugs affecting distributed training, including silently wrong resu
 
 ## Tokenization
 
-Fixed a docstring typo in streamer classes, resolved a Kimi-K2.5 tokenizer regression and `_patch_mistral_regex` AttributeError, and patched a streaming generation crash for `Qwen3VLProcessor` caused by incorrect `_tokenizer` attribute access. Additional housekeeping included moving the GPT-SW3 instruct tokenizer to an internal testing repo and fixing a global state leak in the tokenizer registry during tests.
+Fixed a docstring typo in streamer classes, resolved a Kimi-K25 tokenizer regression and `_patch_mistral_regex` AttributeError, and patched a streaming generation crash for `Qwen3VLProcessor` caused by incorrect `_tokenizer` attribute access Additional housekeeping included moving the GPT-SW3 instruct tokenizer to an internal testing repo and fixing a global state leak in the tokenizer registry during tests
 
 
 * [Doc] Fix 'tokenized' -> 'tokenizer' typo in streamer docstrings (#45508) by @avasis-ai in [#45508]
-* Fix Kimi-K2.5 tokenizer regression and _patch_mistral_regex AttributeError (#45359) by @ArthurZucker in [#45359]
+* Fix Kimi-K25 tokenizer regression and _patch_mistral_regex AttributeError (#45359) by @ArthurZucker in [#45359]
 * fix(serving): resolve rust tokenizer from ProcessorMixin in streaming generation (#45368) by @sharziki in [#45368]
 * [`Tokenizers`] Move gpt sw3 tokenizer out (#45404) by @vasqu in [#45404]
 * fix: leak in tokenizer registry for `test_processors` (#45318) by @tarekziade in [#45318]
@@ -124,7 +124,7 @@ Fixed a docstring typo in streamer classes, resolved a Kimi-K2.5 tokenizer regre
 
 ## Cache
 
-Cache handling was improved for Gemma4 and Gemma3n models by dissociating KV state sharing from the Cache class, ensuring KV states are always shared regardless of whether a Cache is used. Additionally, the image cache for Paddle models was updated to align with the latest API.
+Cache handling was improved for Gemma4 and Gemma3n models by dissociating KV state sharing from the Cache class, ensuring KV states are always shared regardless of whether a Cache is used Additionally, the image cache for Paddle models was updated to align with the latest API
 
 
 * Align gemma3n cache sharing to gemma4 (#45489) by @Cyrilvallez in [#45489]
@@ -134,7 +134,7 @@ Cache handling was improved for Gemma4 and Gemma3n models by dissociating KV sta
 
 ## Audio
 
-Audio models gained vLLM compatibility through targeted fixes across several model implementations, while reliability improvements were also made including exponential back-off retries for audio file downloads, a crash fix in the `text-to-speech` pipeline when generation configs contain `None` values, and corrected test failures for Kyutai Speech-To-Text.
+Audio models gained vLLM compatibility through targeted fixes across several model implementations, while reliability improvements were also made including exponential back-off retries for audio file downloads, a crash fix in the `text-to-speech` pipeline when generation configs contain `None` values, and corrected test failures for Kyutai Speech-To-Text
 
 
 * feat[vLLM × v5]: Add vLLM compatibility for audio models (#45326) by @harshaljanjani in [#45326]
@@ -186,7 +186,7 @@ Audio models gained vLLM compatibility through targeted fixes across several mod
 * Fix ZeRO-3 from_pretrained: load registered buffers in _load_state_dict_into_zero3_model (#45402) by @saslifat-gif in [#45402]
 * Remove redundant condition checks in `get_image_size` method (#45461) by @JiauZhang in [#45461]
 * Add check-auto in repo-consistency and fix sorting (#45481) by @zucchini-nlp in [#45481]
-* Fix typos in src/transformers/utils/output_capturing.py (#45269) by @ryota-komatsu in [#45269]
+* Fix typos in src/transformers/utils/output_capturingpy (#45269) by @ryota-komatsu in [#45269]
 * typing: rule 15 - checks for tie_word_embeddings presence (#44988) by @tarekziade in [#44988]
 * [CB] Fix capture of max_seqlen (#45323) by @remi-or in [#45323]
 * Minor update (#45484) by @ydshieh in [#45484]
@@ -210,16 +210,16 @@ Audio models gained vLLM compatibility through targeted fixes across several mod
 * [Doc] Correct checkpoint path in Dinov2 model_docs  (#45430) by @ambroiseodt in [#45430]
 * Fix ty for transformers cli (#45190) by @SunMarc in [#45190]
 * fix(models): Resolve regressions in Wav2Vec2PhonemeCTCTokenizer (wav2vec2-lv-60-espeak-cv-ft) (#45199) by @harshaljanjani in [#45199]
-* Fix Qwen2.5VL temporal grid positions (#45400) by @zucchini-nlp in [#45400]
+* Fix Qwen25VL temporal grid positions (#45400) by @zucchini-nlp in [#45400]
 * [`fix`] PEFT integration fixes preventing save/load & integration (#45428) by @tomaarsen in [#45428]
 * Fix the response schema for the gemma4 converter (#45411) by @Rocketknight1 in [#45411]
 * [Doc]  MoE routing capture and replay recipe  (#44925) by @kashif in [#44925]
 * Fix `apply_chat_template` crash on `tool_call` messages without content (#45348) by @qgallouedec in [#45348]
-* [AMD CI] Fix torch.compile/export failures on AMD CI due to untraceable set.__contains__  (#45282) by @Abdennacer-Badaoui in [#45282]
+* [AMD CI] Fix torchcompile/export failures on AMD CI due to untraceable set__contains__  (#45282) by @Abdennacer-Badaoui in [#45282]
 * [inference_fusion] convert conv3d patch embed to linear (#45041) by @JJJYmmm in [#45041]
 * Fix #45305 + add regression test GAS (#45349) by @florian6973 in [#45349]
 * Update `trackio` integration to use Buckets and "freeze" Space after training (#45329) by @abidlabs in [#45329]
-* fix(qwen3_moe): correct return type annotation on Qwen3MoeSparseMoeBlock.forward (#45352) by @RudrenduPaul in [#45352]
+* fix(qwen3_moe): correct return type annotation on Qwen3MoeSparseMoeBlockforward (#45352) by @RudrenduPaul in [#45352]
 * Fix: NotebookProgressCallback crash when evaluating with the Trainer (#44949) by @Charly21r in [#44949]
 * docs: fix 5 docstring errors in Gemma3nTextConfig (typos, grammar, formatting) (#45370) by @RudrenduPaul in [#45370]
 * Less unnecessary RoPE warnings (#45289) by @zucchini-nlp in [#45289]
@@ -233,13 +233,13 @@ Audio models gained vLLM compatibility through targeted fixes across several mod
 * Close file handler (#45187) by @ydshieh in [#45187]
 * fix: restore mypy type checking for PreTrainedConfig subclasses (#45071) (#45240) by @shhKnight30 in [#45240]
 * `cohere_asr`: fix device issue for `test_model_parallel_beam_search` (#45214) by @kaixuanliu in [#45214]
-* Fix AttributeError in Gemma3ForConditionalGeneration and Gemma3ForSequenceClassification when config.return_dict=False (#45277) by @kamalrajkannan78 in [#45277]
+* Fix AttributeError in Gemma3ForConditionalGeneration and Gemma3ForSequenceClassification when configreturn_dict=False (#45277) by @kamalrajkannan78 in [#45277]
 * fix bug for videomt model device mismatch (#45204) by @kaixuanliu in [#45204]
 * fix gemma4 gradient accumulation loss and last token incorrect labels (#45354) by @winglian in [#45354]
 * Logger has `[transformers]` prefix in non-verbose mode (#45316) by @zucchini-nlp in [#45316]
-* Fix AttributeError in AssistantToTargetTranslator.unmap_input_ids with cross-vocab models (#45320) by @Regata3010 in [#45320]
+* Fix AttributeError in AssistantToTargetTranslatorunmap_input_ids with cross-vocab models (#45320) by @Regata3010 in [#45320]
 * musicflamingo: add test support for Intel XPU device (#45212) by @kaixuanliu in [#45212]
-* nomic_bert: make the test suitable for general device. (#45209) by @kaixuanliu in [#45209]
+* nomic_bert: make the test suitable for general device (#45209) by @kaixuanliu in [#45209]
 * Skip invalid flash-attn tests for `pi0` model (#45011) by @kaixuanliu in [#45011]
 * Add cuda compatibility check for using `grouped_mm` (#45001) by @Sai-Suraj-27 in [#45001]
 * [docs] optimizers, hyperparam search, training features (#44290) by @stevhliu in [#44290]
@@ -247,7 +247,7 @@ Audio models gained vLLM compatibility through targeted fixes across several mod
 * [gemma4] Fix device map auto (#45347) by @Cyrilvallez in [#45347]
 * Refactor CLIP-like models (#44431) by @zucchini-nlp in [#44431]
 * refactor: display test duration (#45344) by @tarekziade in [#45344]
-* Fix `Wav2Vec2Config.vocab_size` type to allow `None` (#45108) by @jiqing-feng in [#45108]
+* Fix `Wav2Vec2Configvocab_size` type to allow `None` (#45108) by @jiqing-feng in [#45108]
 * Add THD support in ESM (#44145) by @balvisio in [#44145]
 * [gemma4] Remove all shared weights, and silently skip them during loading (#45336) by @Cyrilvallez in [#45336]
 * Fix conversion mappings for vlms (#45340) by @Cyrilvallez in [#45340]
@@ -260,16 +260,16 @@ Audio models gained vLLM compatibility through targeted fixes across several mod
 * [docs] static model rules (#45232) by @stevhliu in [#45232]
 * fix(security): prevent untrusted users from triggering TRL CI dispatch (#45302) by @jagwar in [#45302]
 * [AMD CI] Fix Qwen2 expectations (#45284) by @Abdennacer-Badaoui in [#45284]
-* Add `hasattr(torch.backends.cudnn, "conv")` to `conftest.py` (#45263) by @ydshieh in [#45263]
+* Add `hasattr(torchbackendscudnn, "conv")` to `conftestpy` (#45263) by @ydshieh in [#45263]
 * Fix `SmolVLM` video processor `resize` using wrong interpolation after backend refactor (#45258) by @ydshieh in [#45258]
 * Fix `Qwen2IntegrationTest` (#45268) by @ydshieh in [#45268]
-* doc: fix TokenizersBackend.convert_to_native_format docstring (#45262) by @lowzhao in [#45262]
+* doc: fix TokenizersBackendconvert_to_native_format docstring (#45262) by @lowzhao in [#45262]
 * empty (#45261) by @ydshieh in [#45261]
 * Fix unexpected TF32 being enabled in testing (#45252) by @ydshieh in [#45252]
-* Fix tf32 issue: set `torch.backends.cudnn.conv.fp32_precision` explicitly. (#45248) by @ydshieh in [#45248]
-* Nvidia CI with `torch 2.11` (#45243) by @ydshieh in [#45243]
+* Fix tf32 issue: set `torchbackendscudnnconvfp32_precision` explicitly (#45248) by @ydshieh in [#45248]
+* Nvidia CI with `torch 211` (#45243) by @ydshieh in [#45243]
 * Update tiny model creation script (#45241) by @ydshieh in [#45241]
-* Update `get_test_info.py` (related to tiny model creation) (#45238) by @ydshieh in [#45238]
+* Update `get_test_infopy` (related to tiny model creation) (#45238) by @ydshieh in [#45238]
 * More fix for tiny model creation (#45228) by @ydshieh in [#45228]
 * remove unnecessary entries in some auto model mappings (#45224) by @ydshieh in [#45224]
 * fix: hf-doc-builder insallation was failing (#45225) by @tarekziade in [#45225]
@@ -323,25 +323,25 @@ The following contributors have made significant changes to the library over the
 * @ydshieh
     * Minor update (#45484)
     * Close file handler (#45187)
-    * Add `hasattr(torch.backends.cudnn, "conv")` to `conftest.py` (#45263)
+    * Add `hasattr(torchbackendscudnn, "conv")` to `conftestpy` (#45263)
     * Fix `SmolVLM` video processor `resize` using wrong interpolation after backend refactor (#45258)
     * Fix `Qwen2IntegrationTest` (#45268)
     * empty (#45261)
     * Fix unexpected TF32 being enabled in testing (#45252)
-    * Fix tf32 issue: set `torch.backends.cudnn.conv.fp32_precision` explicitly. (#45248)
-    * Nvidia CI with `torch 2.11` (#45243)
+    * Fix tf32 issue: set `torchbackendscudnnconvfp32_precision` explicitly (#45248)
+    * Nvidia CI with `torch 211` (#45243)
     * Update tiny model creation script (#45241)
-    * Update `get_test_info.py` (related to tiny model creation) (#45238)
+    * Update `get_test_infopy` (related to tiny model creation) (#45238)
     * More fix for tiny model creation (#45228)
     * remove unnecessary entries in some auto model mappings (#45224)
 * @NielsRogge
     * Add SAM3-LiteText (#44320)
 * @ArthurZucker
     * Fix IndexError with DeepSpeed ZeRO-3 when kernels rotary is active (#45414)
-    * Fix Kimi-K2.5 tokenizer regression and _patch_mistral_regex AttributeError (#45359)
+    * Fix Kimi-K25 tokenizer regression and _patch_mistral_regex AttributeError (#45359)
     * Fix vllm cis (#45139)
     * Fix pypi release (#45210)
-    * update to dev version 5.6.0-dev0
+    * update to dev version 560-dev0
 * @JJJYmmm
     * [inference_fusion] convert conv3d patch embed to linear (#45041)
 * @balvisio

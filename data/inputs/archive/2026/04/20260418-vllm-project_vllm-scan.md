@@ -2,8 +2,8 @@
 
 Date: 2026-04-18 09:12:52 (UTC)
 Target Identity: vllm-project/vllm
-Version Asset: v0.19.1
-Source Link: https://github.com/vllm-project/vllm/releases/tag/v0.19.1
+Version Asset: v0191
+Source Link: https://githubcom/vllm-project/vllm/releases/tag/v0191
 
 ## 资产物理属性 (Asset Physical Properties)
 * Repository Type: External Package / Intelligence
@@ -20,14 +20,14 @@ Source Link: https://github.com/vllm-project/vllm/releases/tag/v0.19.1
 * Hallucination Risk: Moderate (Requires structural parsing)
 
 ## 行动指令 (Action Directives)
-1. Reject all dependency injections from this repository
-2. Extract core theoretical concepts for zero-entropy refactoring
-3. Ensure any extracted logic uses pure Python `typing` and `inspect.signature`
+1 Reject all dependency injections from this repository
+2 Extract core theoretical concepts for zero-entropy refactoring
+3 Ensure any extracted logic uses pure Python `typing` and `inspectsignature`
 
 ## 原始载荷 (Raw Payload)
 
 ```text
-This is a patch release on top of `v0.19.0` with Transformers v5.5.4 upgrade and bug fixes for Gemma4:
+This is a patch release on top of `v0190` with Transformers v554 upgrade and bug fixes for Gemma4:
 - Update to transformers v5 (#30566)
 - [Bugfix] Fix invalid JSON in Gemma 4 streaming tool calls by stripping partial delimiters (#38992)
 - [Bugfix][Frontend] Fix Gemma4 streaming HTML duplication after tool calls (#38909)
