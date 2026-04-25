@@ -166,6 +166,17 @@ class Scholar:
     def _analyze_markdown_structure(self, filepath, file_id):
         """Extract headers as knowledge nodes."""
         if not self.cortex: return
+
+        # Determine specific concept type based on file location
+        concept_type = "concept"
+        rel_path_str = str(filepath).replace('\\', '/')
+        if "docs/brain" in rel_path_str:
+            concept_type = "architecture_concept"
+        elif filepath.name.lower() == "readme.md":
+            concept_type = "core_concept"
+        else:
+            concept_type = "doc_section"
+
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 for line in f:
@@ -174,8 +185,8 @@ class Scholar:
                         title = match.group(2).strip()
                         safe_title = "".join([c for c in title if c.isalnum() or c == ' ']).strip().replace(' ', '_').lower()
                         if safe_title:
-                            concept_id = f"concept_{safe_title}"[:60]
-                            self.cortex.add_entity(concept_id, "concept", title, f"Section in {filepath.name}", save_to_disk=True)
+                            concept_id = f"{concept_type}_{safe_title}"[:60]
+                            self.cortex.add_entity(concept_id, concept_type, title, f"Section in {filepath.name}", save_to_disk=True)
                             self.cortex.connect_entities(file_id, "documents", concept_id, save_to_disk=True)
         except Exception as e:
             logger.error(f"Error analyzing markdown structure for {filepath}: {e}", exc_info=True)
