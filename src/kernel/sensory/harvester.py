@@ -34,7 +34,10 @@ class Harvester:
             "vllm-project/vllm": ["releases"],
             "huggingface/transformers": ["releases"],
             "google-ai-edge/mediapipe": ["releases"],
-            "microsoft/markitdown": ["releases"]
+            "microsoft/markitdown": ["releases"],
+            "langchain-ai/langchain": ["releases"],
+            "ollama/ollama": ["releases"],
+            "openai/openai-python": ["releases"]
         }
 
     def _load_state(self):
@@ -161,6 +164,12 @@ class Harvester:
 
                                     new_files.append(filepath)
                                     logger.info(f"[Harvester] New Intel harvested: {filename}")
+                except urllib.error.HTTPError as e:
+                    if e.code in [403, 429]:
+                        logger.warning(f"[Harvester] Defensive retreat: Rate limit hit on {url}")
+                        break
+                    else:
+                        logger.warning(f"[Harvester] Failed to fetch {url}: {e}")
                 except Exception as e:
                     logger.warning(f"[Harvester] Failed to fetch {url}: {e}")
 
