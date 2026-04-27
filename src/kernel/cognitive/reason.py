@@ -57,21 +57,29 @@ class ReasoningEngine:
             density = stats.get('density', 0.0)
 
             # 1. 状态基线 (Baseline Formulation)
-            cognitive_package["baseline"].append(f"System Status: Cortex holds {nodes} entities and {edges} edges")
+            # Use upper-cased machine/human-readable Key-Value formats
+            cognitive_package["baseline"].append(f"STATUS: ONLINE")
+            cognitive_package["baseline"].append(f"NODES: {nodes}")
+            cognitive_package["baseline"].append(f"EDGES: {edges}")
 
             # 物理遥测信息注入 (Physical Telemetry Injection based on real data)
-            cognitive_package["telemetry"].append(f"Storage: Database size is {db_size_mb:.2f} MB")
-            cognitive_package["telemetry"].append(f"Activity: {journal_entries} events recorded in the system journal")
+            # Use upper-cased machine/human-readable Key-Value formats to follow constraint:
+            # "AI analysis logic must use dynamic structured dictionaries, never hardcoded static metric strings."
+            # "The output content of these reports must strictly use upper-cased machine/human-readable Key-Value formats (e.g., STORAGE_MB: 0.22, STATUS: ONLINE)"
+            cognitive_package["telemetry"].append(f"STORAGE_MB: {db_size_mb:.2f}")
+            cognitive_package["telemetry"].append(f"JOURNAL_ROWS: {journal_entries}")
             if density > 1.5:
-                 cognitive_package["telemetry"].append(f"Graph Density: {density:.2f} (High cohesiveness, strong associative potential)")
+                 cognitive_package["telemetry"].append(f"GRAPH_DENSITY: {density:.2f} (HIGH COHESIVENESS)")
             else:
-                 cognitive_package["telemetry"].append(f"Graph Density: {density:.2f} (Sparse, requires more relations)")
+                 cognitive_package["telemetry"].append(f"GRAPH_DENSITY: {density:.2f} (SPARSE)")
 
             orphans = self._query('''
                 SELECT e.name FROM entities e
                 LEFT JOIN relations r1 ON e.id = r1.source
                 LEFT JOIN relations r2 ON e.id = r2.target
-                WHERE r1.source IS NULL AND r2.target IS NULL LIMIT 3
+                WHERE r1.source IS NULL AND r2.target IS NULL
+                AND e.type NOT IN ('code_file', 'code_class', 'code_function')
+                LIMIT 3
             ''')
 
             orphan_count = len(orphans)

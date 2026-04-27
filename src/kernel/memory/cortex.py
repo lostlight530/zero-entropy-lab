@@ -400,6 +400,7 @@ class Cortex:
             LEFT JOIN relations r1 ON e.id = r1.source
             LEFT JOIN relations r2 ON e.id = r2.target
             WHERE r1.source IS NULL AND r2.target IS NULL
+            AND e.type NOT IN ('code_file', 'code_class', 'code_function')
             AND e.weight > 0.5
             ORDER BY e.weight DESC
             LIMIT ?
