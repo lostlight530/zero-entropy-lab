@@ -12,6 +12,34 @@ except ImportError:
     from cortex import Cortex
     from logger import logger
 
+import struct
+from multiprocessing import shared_memory
+
+def _compute_pagerank_chunk(chunk_start, chunk_end, shm_name, m_size, r_offset, w_offset, N, links, out_degs, base_rank, damp):
+    """
+    Top-level function for PageRank computation to avoid ProcessPoolExecutor pickling issues.
+    """
+    # 安全捕获，防止子进程异常导致的僵尸进程
+    try:
+        local_shm = shared_memory.SharedMemory(name=shm_name)
+        l_buf = local_shm.buf
+        try:
+            for i in range(chunk_start, chunk_end):
+                rank_sum = 0.0
+                for parent_idx in links[i]:
+                    p_out_deg = out_degs[parent_idx]
+                    if p_out_deg > 0:
+                        p_rank = struct.unpack_from('d', l_buf, r_offset + parent_idx * 8)[0]
+                        rank_sum += p_rank / p_out_deg
+
+                new_r = base_rank + damp * rank_sum
+                struct.pack_into('d', l_buf, w_offset + i * 8, new_r)
+        finally:
+            local_shm.close()
+    except Exception as e:
+        # 静默处理子进程内部异常，防止主流程锁死
+        pass
+
 class ReasoningEngine:
     def __init__(self, project_root=None):
         self.project_root = project_root or Path(__file__).resolve().parents[3]
@@ -248,34 +276,6 @@ class ReasoningEngine:
                 chunk_size = math.ceil(N / workers)
                 chunks = [(i * chunk_size, min((i + 1) * chunk_size, N)) for i in range(workers) if i * chunk_size < N]
 
-                # To truly map processes we must define a top-level function,
-                # For zero-entropy we spawn via ProcessPoolExecutor
-                def _compute_chunk(chunk_start, chunk_end, shm_name, m_size, r_offset, w_offset, N, links, out_degs, base_rank, damp):
-                    # 安全捕获，防止子进程异常导致的僵尸进程
-                    try:
-                        local_shm = shared_memory.SharedMemory(name=shm_name)
-                        l_buf = local_shm.buf
-                        try:
-                            for i in range(chunk_start, chunk_end):
-                                rank_sum = 0.0
-                                for parent_idx in links[i]:
-                                    p_out_deg = out_degs[parent_idx]
-                                    if p_out_deg > 0:
-                                        p_rank = struct.unpack_from('d', l_buf, r_offset + parent_idx * 8)[0]
-                                        rank_sum += p_rank / p_out_deg
-
-                                new_r = base_rank + damp * rank_sum
-                                struct.pack_into('d', l_buf, w_offset + i * 8, new_r)
-                        finally:
-                            local_shm.close()
-                    except Exception as e:
-                        # 静默处理子进程内部异常，防止主流程锁死
-                        pass
-
-                # This hack allows us to use local function with ProcessPoolExecutor in script mode by attaching to module
-                import sys
-                setattr(sys.modules[__name__], '_compute_chunk', _compute_chunk)
-
                 for step in range(iterations):
                     read_offset = 0 if step % 2 == 0 else mem_size // 2
                     write_offset = mem_size // 2 if step % 2 == 0 else 0
@@ -285,7 +285,7 @@ class ReasoningEngine:
                         futures = []
                         for start, end in chunks:
                             futures.append(executor.submit(
-                                sys.modules[__name__]._compute_chunk,
+                                _compute_pagerank_chunk,
                                 start, end, shm.name, mem_size, read_offset, write_offset, N, in_links_idx, out_deg_arr, base_rank, damping_factor
                             ))
                         # Wait implicitly captures exceptions
