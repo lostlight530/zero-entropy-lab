@@ -131,21 +131,22 @@ class Harvester:
                                     content += f"Source Link: {html_url}\n\n"
 
                                     content += f"## 资产物理属性 (Asset Physical Properties)\n"
-                                    content += f"* Repository Type: External Package / Intelligence\n"
-                                    content += f"* Primary Language: N/A\n"
-                                    content += f"* API Rate Limit Status: Bypassed via injected GITHUB_TOKEN header\n\n"
+                                    content += f"REPOSITORY_TYPE: EXTERNAL_PACKAGE_INTELLIGENCE\n"
+                                    content += f"PRIMARY_LANGUAGE: N/A\n"
+                                    content += f"API_RATE_LIMIT_STATUS: BYPASSED_VIA_TOKEN\n\n"
 
                                     content += f"## 零熵解析矩阵 (Zero-Entropy Analysis Matrix)\n"
                                     content += f"* Dependency Entropy: Detected via Harvest Tags ({tags_str})\n"
-                                    content += f"* Architecture Conflict: {arch_conflict}\n"
-                                    content += f"* Internal Logic: External Payload Reference only\n\n"
+                                    content += f"DEPENDENCY_ENTROPY: {tags_str.upper().replace(' ', '_')}\n"
+                                    content += f"ARCHITECTURE_CONFLICT: {arch_conflict.split(' ')[0].upper()}\n"
+                                    content += f"INTERNAL_LOGIC: EXTERNAL_PAYLOAD_REFERENCE_ONLY\n\n"
 
                                     content += f"## 威胁与兼容性评估 (Threat & Compatibility Assessment)\n"
                                     if "Breaking-Change" in tags:
-                                        content += f"* Direct Code Integration: High Risk due to breaking changes\n"
+                                        content += f"DIRECT_CODE_INTEGRATION: HIGH_RISK\n"
                                     else:
-                                        content += f"* Direct Code Integration: Strictly Prohibited (Violates pure standard library constraint)\n"
-                                    content += f"* Hallucination Risk: {hallucination_risk}\n\n"
+                                        content += f"DIRECT_CODE_INTEGRATION: STRICTLY_PROHIBITED\n"
+                                    content += f"HALLUCINATION_RISK: {hallucination_risk.split(' ')[0].upper()}\n\n"
 
                                     content += f"## 行动指令 (Action Directives)\n"
                                     content += f"1. Reject all dependency injections from this repository\n"
@@ -167,6 +168,7 @@ class Harvester:
                 except urllib.error.HTTPError as e:
                     if e.code in [403, 429]:
                         logger.warning(f"[Harvester] Defensive retreat: Rate limit hit on {url}")
+                        # Defensive retreat: gracefully break the internal fetch loop on rate limit
                         break
                     else:
                         logger.warning(f"[Harvester] Failed to fetch {url}: {e}")

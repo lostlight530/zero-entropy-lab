@@ -229,7 +229,7 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
         """处理 CORS 预检请求 (Handle CORS Preflight Requests)"""
         self.send_response(204)
         origin = self.headers.get('Origin')
-        if origin and (origin in self.allowed_origins or '*' in self.allowed_origins):
+        if origin and origin in self.allowed_origins:
             self.send_header('Access-Control-Allow-Origin', origin)
         self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
         self.send_header('Access-Control-Allow-Headers', 'Authorization, Content-Type')
@@ -284,7 +284,7 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
 
         # CORS Handling
         origin = self.headers.get('Origin')
-        if origin and (origin in self.allowed_origins or '*' in self.allowed_origins):
+        if origin and origin in self.allowed_origins:
             self.send_header('Access-Control-Allow-Origin', origin)
         self.send_header('Vary', 'Origin')
 

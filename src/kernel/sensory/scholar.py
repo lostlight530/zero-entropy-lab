@@ -92,8 +92,9 @@ class Scholar:
     def _digest_file(self, root, filepath):
         rel_path = filepath.relative_to(root)
 
-        # Replace Windows backslashes and forward slashes for cross-platform consistency
-        safe_path = str(rel_path).replace('\\', '_').replace('/', '_').replace('.', '_')
+        # Ensure consistent Unix-style forward slashes for path representation and IDs
+        rel_path_str = str(rel_path).replace('\\', '/')
+        safe_path = rel_path_str.replace('/', '_').replace('.', '_')
         file_id = f"file_{safe_path}"
 
         # 1. Register File Node
@@ -102,7 +103,7 @@ class Scholar:
                 id=file_id,
                 type_slug="code_file",
                 name=filepath.name,
-                desc=f"Source file at: {rel_path}",
+                desc=f"Source file at: {rel_path_str}",
                 save_to_disk=True
             )
 
