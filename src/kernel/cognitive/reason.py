@@ -112,11 +112,11 @@ class ReasoningEngine:
 
             orphan_count = len(orphans)
             if orphan_count == 0:
-                cognitive_package["baseline"].append(f"Density: ({density:.4f}) indicates highly structured graph topology, zero orphan nodes detected")
-                cognitive_package["baseline"].append("Task Suggestion: Graph density is optimal, shift focus from internal optimization to new external data sources via Harvester")
+                cognitive_package["baseline"].append(f"TOPOLOGY: HIGHLY_STRUCTURED_ZERO_ORPHANS")
+                cognitive_package["baseline"].append("TASK_SUGGESTION: SHIFT_FOCUS_TO_EXTERNAL_HARVESTER")
             else:
-                cognitive_package["baseline"].append(f"Density: ({density:.4f}) with fragmentation, {orphan_count} isolated nodes detected (e.g., '{orphans[0][0]}')")
-                cognitive_package["baseline"].append("Task Suggestion: Relation mapping recommended. Resolve orphans before expanding Harvester sources.")
+                cognitive_package["baseline"].append(f"TOPOLOGY: FRAGMENTED_{orphan_count}_ORPHANS")
+                cognitive_package["baseline"].append("TASK_SUGGESTION: RELATION_MAPPING_RECOMMENDED")
 
             # 2. 认知扫描注入 (Cognitive Network Scan Injection)
             cycles = self._query('''
@@ -125,7 +125,7 @@ class ReasoningEngine:
                 WHERE r1.source < r1.target LIMIT 2
             ''')
             if cycles:
-                cognitive_package["scan"].append(f"Graph Cycle Warning: Circular dependency between '{cycles[0][0]}' and '{cycles[0][1]}'")
+                cognitive_package["scan"].append(f"CYCLE_WARNING: {cycles[0][0]}_AND_{cycles[0][1]}")
 
             bridges = self._query('''
                 SELECT r1.source, r2.target, r1.target FROM relations r1
@@ -134,17 +134,17 @@ class ReasoningEngine:
             ''')
             if bridges:
                 for b in bridges:
-                    cognitive_package["scan"].append(f"Inference: Discovered implicit path: '{b[0]}' -> '{b[1]}' via '{b[2]}'")
+                    cognitive_package["scan"].append(f"IMPLICIT_PATH_DISCOVERED: {b[0]}_TO_{b[1]}_VIA_{b[2]}")
             else:
-                 cognitive_package["scan"].append("No new structural bridges detected in the current cycle.")
+                 cognitive_package["scan"].append("STRUCTURAL_BRIDGES: NONE_DETECTED")
 
             # 进化演推 (Evolution Hypotheses based on real state)
             if orphan_count > 0:
-                cognitive_package["evolution"].append("Focus on relationship extraction to integrate isolated entities.")
+                cognitive_package["evolution"].append("STRATEGY: INTEGRATE_ISOLATED_ENTITIES")
             if db_size_mb > 50:
-                cognitive_package["evolution"].append("Database size exceeding 50MB, consider implementing aggressive memory decay or vacuum.")
+                cognitive_package["evolution"].append("STRATEGY: AGGRESSIVE_MEMORY_DECAY_REQUIRED")
             if not cognitive_package["evolution"]:
-                 cognitive_package["evolution"].append("Graph structure stable. Proceed with normal knowledge ingestion.")
+                 cognitive_package["evolution"].append("STRATEGY: PROCEED_NORMAL_INGESTION")
 
             # 3. 拓扑认知觉醒 (PageRank Telemetry Update)
             pagerank_insights = self._awaken_pagerank()
