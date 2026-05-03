@@ -13,7 +13,7 @@
   "huggingface/transformers_releases": "314741520",
   "google-ai-edge/mediapipe_releases": "314747935",
   "microsoft/markitdown_releases": "288862886",
-  "langchain-ai/langchain_releases": "316496100",
+  "langchain-ai/langchain_releases": "316895406",
   "ollama/ollama_releases": "316795929",
   "openai/openai-python_releases": "314629247"
 }
