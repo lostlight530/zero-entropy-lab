@@ -9,11 +9,11 @@
   "ModelEngine-Group/nexent_releases": "315699104",
   "iflytek/astron-agent_releases": "315664497",
   "langgenius/dify_releases": "314986233",
-  "vllm-project/vllm_releases": "312943348",
+  "vllm-project/vllm_releases": "316580679",
   "huggingface/transformers_releases": "314741520",
   "google-ai-edge/mediapipe_releases": "314747935",
   "microsoft/markitdown_releases": "288862886",
   "langchain-ai/langchain_releases": "316496100",
-  "ollama/ollama_releases": "314810836",
+  "ollama/ollama_releases": "316795929",
   "openai/openai-python_releases": "314629247"
 }
