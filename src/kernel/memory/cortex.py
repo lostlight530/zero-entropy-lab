@@ -427,8 +427,15 @@ class Cortex:
     def vacuum(self):
         """[Refinement] Purge orphans and compact memory space."""
         cursor = self.conn.cursor()
-        # 1. Clear dead files referencing missing data
+        # 1. Clear orphaned relations where source or target entity is missing
+        cursor.execute('''
+            DELETE FROM relations
+            WHERE source NOT IN (SELECT id FROM entities)
+               OR target NOT IN (SELECT id FROM entities)
+        ''')
+        self.conn.commit()
+
         # 2. Vacuum SQLite
         cursor.execute('VACUUM')
         self.conn.commit()
-        self.log_event("VACUUM", "Deep memory compaction completed.")
+        logger.info("🧹 Cortex memory optimized (orphaned relations purged, VACUUM complete)")
