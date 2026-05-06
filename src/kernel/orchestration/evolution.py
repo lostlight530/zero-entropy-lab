@@ -82,13 +82,13 @@ class Evolver:
         # 2. 物理层遥测 (Telemetry)
         content.append("## 物理层性能遥测 (Physical Telemetry)")
         for item in insights.get("telemetry", []):
-            content.append(f"* {item}")
+            content.append(item)
         content.append("")
 
         # 3. 认知网络扫描 (Scan)
         content.append("## 认知网络断层扫描 (Cognitive Network Scan)")
         for item in insights.get("scan", []):
-            content.append(f"* {item}")
+            content.append(item)
         content.append("")
 
         # 4. 零熵演化推演 (Evolution)
@@ -166,12 +166,13 @@ class Evolver:
         now = datetime.datetime.now().strftime("%Y-%m-%d")
         content = [
             f"# 每日简报 (Daily Brief)",
-            f"> **Date**: {now} | **Entropy**: {stats['density']:.4f}",
+            f"DATE: {now}",
+            f"ENTROPY: {stats['density']:.4f}",
             f"",
             f"## 系统健康状态 (System Health)",
-            f"- **Status**: ONLINE",
-            f"- **Nodes**: {stats['entities']}",
-            f"- **Edges**: {stats['relations']}",
+            f"STATUS: ONLINE",
+            f"NODES: {stats['entities']}",
+            f"EDGES: {stats['relations']}",
             ""
         ]
 
@@ -182,22 +183,22 @@ class Evolver:
             if "baseline" in intuitions and intuitions["baseline"]:
                 content.append("### 状态基线")
                 for item in intuitions["baseline"]:
-                    content.append(f"- {item}")
+                    content.append(item)
 
             if "telemetry" in intuitions and intuitions["telemetry"]:
                 content.append("### 物理遥测")
                 for item in intuitions["telemetry"]:
-                    content.append(f"- {item}")
+                    content.append(item)
 
             if "scan" in intuitions and intuitions["scan"]:
                 content.append("### 网络扫描")
                 for item in intuitions["scan"]:
-                    content.append(f"- {item}")
+                    content.append(item)
 
             if "evolution" in intuitions and intuitions["evolution"]:
                 content.append("### 演进策略")
                 for item in intuitions["evolution"]:
-                    content.append(f"- {item}")
+                    content.append(item)
 
             content.append("")
 
@@ -210,7 +211,7 @@ class Evolver:
                 content.append("")
 
         if not has_intel:
-            content.append("## 虚空监视 (Void Watch)\n> No significant ecosystem movements.\n")
+            content.append("## 虚空监视 (Void Watch)\nECOSYSTEM_MOVEMENTS: NONE\n")
 
         # Smart Deep Work Suggestion
         suggestion = "System Optimization"
@@ -221,12 +222,12 @@ class Evolver:
         elif categories["竞品雷达 (Competitors)"]:
             suggestion = "Strategic Analysis of Competitor Updates"
 
-        content.append(f"## 深度工作建议 (Deep Work)\n> **Focus**: {suggestion}\n- [ ] Block 2 hours.")
+        content.append(f"## 深度工作建议 (Deep Work)\nFOCUS: {suggestion.upper().replace(' ', '_')}\nBLOCK_HOURS: 2")
 
         if orphans:
             content.append("\n## 待处理熵值 (Entropy Targets)")
             for o in orphans:
-                content.append(f"- **{o['name']}** ({o['id']}): Weight {o['weight']:.2f}")
+                content.append(f"TARGET_NAME: {o['name']} | TARGET_ID: {o['id']} | WEIGHT: {o['weight']:.2f}")
 
         # Write to file
         filename = self.memories_path / "MISSION_ACTIVE.md"
