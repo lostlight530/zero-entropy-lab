@@ -538,14 +538,14 @@ def main():
         logger.info(f"✨ Reconstruction Complete.{count} memories restored.")
 
     elif args.command == 'evolve':
+        # Auto-clean before evolution
+        logger.info("🧹 Running scheduled purification...")
+        c = Cortex()
+        c.vacuum()
         h = Harvester()
         h.fetch_github_data()
         e = Evolver()
         e.run_daily_cycle()
-        # Auto-clean after evolution
-        logger.info("🧹 Running scheduled purification...")
-        c = Cortex()
-        c.vacuum()
         for root, dirs, files in os.walk(c.project_root):
             for d in dirs:
                 if d in ["__pycache__", ".pytest_cache"]:
