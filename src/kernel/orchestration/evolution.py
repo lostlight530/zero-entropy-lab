@@ -151,7 +151,7 @@ class Evolver:
         for f in new_inputs:
             fname = f.name.lower()
             tags = self._analyze_file_content(f)
-            entry = f"- **{f.name}**\n  - > **Analysis**: {tags}" if tags else f"- **{f.name}**"
+            entry = f"FILE: {f.name}\nANALYSIS: {tags}" if tags else f"FILE: {f.name}"
 
             if any(t in fname for t in arch_triggers):
                 categories["架构情报 (Architecture)"].append(entry)

@@ -149,14 +149,14 @@ class Harvester:
                                     content += f"HALLUCINATION_RISK: {hallucination_risk.split(' ')[0].upper()}\n\n"
 
                                     content += f"## 行动指令 (Action Directives)\n"
-                                    content += f"1. Reject all dependency injections from this repository\n"
+                                    content += f"DIRECTIVE_1: REJECT_ALL_DEPENDENCY_INJECTIONS_FROM_THIS_REPOSITORY\n"
                                     if "Agent-Protocol" in tags:
-                                        content += f"2. Analyze plugin/agent architecture for conceptual integration\n"
+                                        content += f"DIRECTIVE_2: ANALYZE_PLUGIN_AGENT_ARCHITECTURE_FOR_CONCEPTUAL_INTEGRATION\n"
                                     elif "Edge-Ready" in tags:
-                                        content += f"2. Extract edge execution boundaries for potential local deployment\n"
+                                        content += f"DIRECTIVE_2: EXTRACT_EDGE_EXECUTION_BOUNDARIES_FOR_POTENTIAL_LOCAL_DEPLOYMENT\n"
                                     else:
-                                        content += f"2. Extract core theoretical concepts for zero-entropy refactoring\n"
-                                    content += f"3. Ensure any extracted logic uses pure Python `typing` and `inspect.signature`\n\n"
+                                        content += f"DIRECTIVE_2: EXTRACT_CORE_THEORETICAL_CONCEPTS_FOR_ZERO_ENTROPY_REFACTORING\n"
+                                    content += f"DIRECTIVE_3: ENSURE_ANY_EXTRACTED_LOGIC_USES_PURE_PYTHON_TYPING_AND_INSPECT_SIGNATURE\n\n"
 
                                     content += f"## 原始载荷 (Raw Payload)\n\n```text\n{body}\n```\n"
 

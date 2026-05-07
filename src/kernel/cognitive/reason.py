@@ -150,6 +150,7 @@ class ReasoningEngine:
             pagerank_insights = self._awaken_pagerank()
             if pagerank_insights:
                 # Add PageRank results to flat insights for terminal compatibility
+                cognitive_package["scan"].extend(pagerank_insights)
                 cognitive_package["_flat_insights"].extend(pagerank_insights)
 
             # Populate _flat_insights for backward compatibility
@@ -326,10 +327,10 @@ class ReasoningEngine:
                 name = name_row[0][0] if name_row else node_id
                 top_names.append(f"'{name}' ({w:.2f})")
 
-            return [f"Emergence: PageRank completed. Top core concepts discovered: {', '.join(top_names)}."]
+            return [f"PAGERANK_EMERGENCE: TOP_CONCEPTS_DISCOVERED: {', '.join(top_names)}"]
         except Exception as e:
             logger.error(f"Error during PageRank calculation: {e}", exc_info=True)
-            return [f"Emergence Error: PageRank failed: {e}"]
+            return [f"PAGERANK_EMERGENCE: ERROR_CALCULATING_PAGERANK: {e}"]
 
     def _query(self, sql):
         try:
