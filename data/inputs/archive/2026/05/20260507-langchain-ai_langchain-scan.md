@@ -1,0 +1,35 @@
+# 📡 NEXUS HARVESTER: Intelligence Dossier
+
+Date: 2026-05-07 22:50:46 (UTC)
+Target Identity: langchain-ai/langchain
+Version Asset: langchain==0.3.30
+Source Link: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D0.3.30
+
+## 资产物理属性 (Asset Physical Properties)
+REPOSITORY_TYPE: EXTERNAL_PACKAGE_INTELLIGENCE
+PRIMARY_LANGUAGE: N/A
+API_RATE_LIMIT_STATUS: BYPASSED_VIA_TOKEN
+
+## 零熵解析矩阵 (Zero-Entropy Analysis Matrix)
+* Dependency Entropy: Detected via Harvest Tags (General)
+DEPENDENCY_ENTROPY: GENERAL
+ARCHITECTURE_CONFLICT: LOW
+INTERNAL_LOGIC: EXTERNAL_PAYLOAD_REFERENCE_ONLY
+
+## 威胁与兼容性评估 (Threat & Compatibility Assessment)
+DIRECT_CODE_INTEGRATION: STRICTLY_PROHIBITED
+HALLUCINATION_RISK: MODERATE
+
+## 行动指令 (Action Directives)
+DIRECTIVE_1: REJECT_ALL_DEPENDENCY_INJECTIONS_FROM_THIS_REPOSITORY
+DIRECTIVE_2: EXTRACT_CORE_THEORETICAL_CONCEPTS_FOR_ZERO_ENTROPY_REFACTORING
+DIRECTIVE_3: ENSURE_ANY_EXTRACTED_LOGIC_USES_PURE_PYTHON_TYPING_AND_INSPECT_SIGNATURE
+
+## 原始载荷 (Raw Payload)
+
+```text
+Changes since langchain==0.3.29
+
+release(langchain): release 0.3.30 (#37241)
+chore(langchain): backport loads/dumps harden to v0.3 and deprecate hub (#37239)
+```
