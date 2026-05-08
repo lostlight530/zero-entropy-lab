@@ -136,7 +136,6 @@ class Harvester:
                                     content += f"API_RATE_LIMIT_STATUS: BYPASSED_VIA_TOKEN\n\n"
 
                                     content += f"## 零熵解析矩阵 (Zero-Entropy Analysis Matrix)\n"
-                                    content += f"* Dependency Entropy: Detected via Harvest Tags ({tags_str})\n"
                                     content += f"DEPENDENCY_ENTROPY: {tags_str.upper().replace(' ', '_')}\n"
                                     content += f"ARCHITECTURE_CONFLICT: {arch_conflict.split(' ')[0].upper()}\n"
                                     content += f"INTERNAL_LOGIC: EXTERNAL_PAYLOAD_REFERENCE_ONLY\n\n"
