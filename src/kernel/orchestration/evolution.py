@@ -124,7 +124,7 @@ class Evolver:
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read()
                 # Try to extract from the new Zero-Entropy Analysis Matrix format
-                match = re.search(r'\* Dependency Entropy: Detected via Harvest Tags \((.*?)\)', content)
+                match = re.search(r'DEPENDENCY_ENTROPY:\s*(.*)', content)
                 if match:
                     return match.group(1).strip()
                 # Fallback for old formats
