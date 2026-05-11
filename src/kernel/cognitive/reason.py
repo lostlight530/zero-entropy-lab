@@ -159,7 +159,7 @@ class ReasoningEngine:
 
         except Exception as e:
              logger.error("Error during background analysis", exc_info=True)
-             cognitive_package["error"] = f"Analysis Error: A disruption occurred: {e}"
+             cognitive_package["error"] = f"ANALYSIS_ERROR: A disruption occurred: {e}"
 
         return cognitive_package
 
@@ -174,13 +174,13 @@ class ReasoningEngine:
         edges = stats.get('relations', 0)
         density = stats.get('density', 0)
 
-        summary = f"System Status: Cortex holds {nodes} entities and {edges} edges. "
+        summary = f"SYSTEM_STATUS: ONLINE\nNODES: {nodes}\nEDGES: {edges}\n"
         if density < 1.0:
-            summary += f"Density ({density:.2f}) indicates fragmented data state."
+            summary += f"DENSITY: {density:.2f} (FRAGMENTED)"
         elif density < 1.5:
-            summary += f"Density ({density:.2f}) indicates moderate logical connections."
+            summary += f"DENSITY: {density:.2f} (MODERATE_CONNECTIONS)"
         else:
-            summary += f"Density ({density:.2f}) indicates high cohesiveness."
+            summary += f"DENSITY: {density:.2f} (HIGH_COHESIVENESS)"
         return summary
 
     def _find_sparse_nodes(self):
@@ -260,7 +260,7 @@ class ReasoningEngine:
                 shm = shared_memory.SharedMemory(create=True, size=mem_size)
             except FileExistsError:
                 # Fallback if somehow left over
-                return ["Emergence Error: Shared memory conflict. Try again later."]
+                return ["EMERGENCE_ERROR: Shared memory conflict. Try again later."]
 
             try:
                 # Initialize ranks to 1.0 in buffer 0
