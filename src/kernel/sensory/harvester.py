@@ -125,10 +125,10 @@ class Harvester:
                                     filepath = self.inputs_path / filename
 
                                     content = f"# 📡 NEXUS HARVESTER: Intelligence Dossier\n\n"
-                                    content += f"Date: {datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')} (UTC)\n"
-                                    content += f"Target Identity: {repo}\n"
-                                    content += f"Version Asset: {name}\n"
-                                    content += f"Source Link: {html_url}\n\n"
+                                    content += f"DATE: {datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')} (UTC)\n"
+                                    content += f"TARGET_IDENTITY: {repo}\n"
+                                    content += f"VERSION_ASSET: {name}\n"
+                                    content += f"SOURCE_LINK: {html_url}\n\n"
 
                                     content += f"## 资产物理属性 (Asset Physical Properties)\n"
                                     content += f"REPOSITORY_TYPE: EXTERNAL_PACKAGE_INTELLIGENCE\n"

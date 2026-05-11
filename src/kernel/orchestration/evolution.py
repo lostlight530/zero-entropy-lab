@@ -69,7 +69,7 @@ class Evolver:
         content = [
             f"# 🧠 NEXUS CORTEX: Cognitive Report",
             f"",
-            f"Date: {now_utc} (UTC)",
+            f"DATE: {now_utc} (UTC)",
             f""
         ]
 
