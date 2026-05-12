@@ -12,6 +12,8 @@ class TestServerAPI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """启动后台服务器进程进行集成测试"""
+        import socketserver
+        socketserver.TCPServer.allow_reuse_address = True
         cls.project_root = Path(__file__).parent.parent
         cls.server_script = cls.project_root / "src" / "kernel" / "protocol" / "nexus.py"
         cls.port = 8000
