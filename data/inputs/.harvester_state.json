@@ -10,10 +10,10 @@
   "iflytek/astron-agent_releases": "315664497",
   "langgenius/dify_releases": "321018473",
   "vllm-project/vllm_releases": "319885695",
-  "huggingface/transformers_releases": "317925914",
+  "huggingface/transformers_releases": "321564124",
   "google-ai-edge/mediapipe_releases": "314747935",
   "microsoft/markitdown_releases": "288862886",
   "langchain-ai/langchain_releases": "321213591",
-  "ollama/ollama_releases": "320784974",
+  "ollama/ollama_releases": "318756375",
   "openai/openai-python_releases": "319081890"
 }
