@@ -222,12 +222,13 @@ class Evolver:
         elif categories["竞品雷达 (Competitors)"]:
             suggestion = "Strategic Analysis of Competitor Updates"
 
-        content.append(f"## 深度工作建议 (Deep Work)\nFOCUS: {suggestion.upper().replace(' ', '_')}\nBLOCK_HOURS: 2")
+        suggestion_formatted = suggestion.upper().replace(' ', '_').replace('(', '').replace(')', '').replace('/', '_')
+        content.append(f"## 深度工作建议 (Deep Work)\nFOCUS: {suggestion_formatted}\nBLOCK_HOURS: 2")
 
         if orphans:
             content.append("\n## 待处理熵值 (Entropy Targets)")
             for o in orphans:
-                content.append(f"TARGET_NAME: {o['name']} | TARGET_ID: {o['id']} | WEIGHT: {o['weight']:.2f}")
+                content.append(f"TARGET_NAME: {o['name']}\nTARGET_ID: {o['id']}\nWEIGHT: {o['weight']:.2f}")
 
         # Write to file
         filename = self.memories_path / "MISSION_ACTIVE.md"

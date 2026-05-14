@@ -61,13 +61,13 @@ class Harvester:
         tags = []
         # Edge AI
         if re.search(r'(?i)(onnx|gguf|litert|android|ios|arm|npu|quantiz)', text):
-            tags.append("🏷️ Edge-Ready")
+            tags.append("EDGE_READY")
         # Breaking Changes
         if re.search(r'(?i)(breaking|deprecated|removed|migration)', text):
-            tags.append("⚠️ Breaking-Change")
+            tags.append("BREAKING_CHANGE")
         # Agent Protocol
         if re.search(r'(?i)(mcp|plugin|workflow|skill|orchestrat|hitl)', text):
-            tags.append("🔗 Agent-Protocol")
+            tags.append("AGENT_PROTOCOL")
         return tags
 
     def fetch_github_data(self):
@@ -106,18 +106,18 @@ class Harvester:
                                     html_url = latest.get('html_url', f"https://github.com/{repo}")
 
                                     tags = self._extract_tags(body)
-                                    tags_str = ", ".join(tags) if tags else "General"
+                                    tags_str = "_".join(tags) if tags else "GENERAL"
 
                                     # 动态生成基于真实文本内容的评估 (Dynamic assessment based on actual content)
-                                    arch_conflict = "Low (Conceptual alignment possible)"
+                                    arch_conflict = "LOW"
                                     if re.search(r'(?i)(docker|npm|pip|kubernetes|helm|compose)', body):
-                                        arch_conflict = "High (Heavy external dependency footprint detected)"
+                                        arch_conflict = "HIGH"
                                     elif re.search(r'(?i)(rust|c\+\+|go)', body):
-                                        arch_conflict = "Medium (Foreign language boundaries present)"
+                                        arch_conflict = "MEDIUM"
 
-                                    hallucination_risk = "Moderate (Requires structural parsing)"
-                                    if "Agent-Protocol" in tags:
-                                        hallucination_risk = "High (Agentic logic often relies on nondeterministic prompts)"
+                                    hallucination_risk = "MODERATE"
+                                    if "AGENT_PROTOCOL" in tags:
+                                        hallucination_risk = "HIGH"
 
                                     safe_repo = repo.replace("/", "_").lower()
                                     date_prefix = datetime.datetime.utcnow().strftime("%Y%m%d")
@@ -149,9 +149,9 @@ class Harvester:
 
                                     content += f"## 行动指令 (Action Directives)\n"
                                     content += f"DIRECTIVE_1: REJECT_ALL_DEPENDENCY_INJECTIONS_FROM_THIS_REPOSITORY\n"
-                                    if "Agent-Protocol" in tags:
+                                    if "AGENT_PROTOCOL" in tags:
                                         content += f"DIRECTIVE_2: ANALYZE_PLUGIN_AGENT_ARCHITECTURE_FOR_CONCEPTUAL_INTEGRATION\n"
-                                    elif "Edge-Ready" in tags:
+                                    elif "EDGE_READY" in tags:
                                         content += f"DIRECTIVE_2: EXTRACT_EDGE_EXECUTION_BOUNDARIES_FOR_POTENTIAL_LOCAL_DEPLOYMENT\n"
                                     else:
                                         content += f"DIRECTIVE_2: EXTRACT_CORE_THEORETICAL_CONCEPTS_FOR_ZERO_ENTROPY_REFACTORING\n"

@@ -97,9 +97,9 @@ class ReasoningEngine:
             cognitive_package["telemetry"].append(f"STORAGE_MB: {db_size_mb:.2f}")
             cognitive_package["telemetry"].append(f"JOURNAL_ROWS: {journal_entries}")
             if density > 1.5:
-                 cognitive_package["telemetry"].append(f"GRAPH_DENSITY: {density:.2f} (HIGH COHESIVENESS)")
+                 cognitive_package["telemetry"].append(f"GRAPH_DENSITY: {density:.2f}_HIGH_COHESIVENESS")
             else:
-                 cognitive_package["telemetry"].append(f"GRAPH_DENSITY: {density:.2f} (SPARSE)")
+                 cognitive_package["telemetry"].append(f"GRAPH_DENSITY: {density:.2f}_SPARSE")
 
             orphans = self._query('''
                 SELECT e.name FROM entities e
@@ -159,7 +159,7 @@ class ReasoningEngine:
 
         except Exception as e:
              logger.error("Error during background analysis", exc_info=True)
-             cognitive_package["error"] = f"ANALYSIS_ERROR: A disruption occurred: {e}"
+             cognitive_package["error"] = f"ANALYSIS_ERROR: A_DISRUPTION_OCCURRED"
 
         return cognitive_package
 
@@ -176,11 +176,11 @@ class ReasoningEngine:
 
         summary = f"SYSTEM_STATUS: ONLINE\nNODES: {nodes}\nEDGES: {edges}\n"
         if density < 1.0:
-            summary += f"DENSITY: {density:.2f} (FRAGMENTED)"
+            summary += f"DENSITY: {density:.2f}_FRAGMENTED"
         elif density < 1.5:
-            summary += f"DENSITY: {density:.2f} (MODERATE_CONNECTIONS)"
+            summary += f"DENSITY: {density:.2f}_MODERATE_CONNECTIONS"
         else:
-            summary += f"DENSITY: {density:.2f} (HIGH_COHESIVENESS)"
+            summary += f"DENSITY: {density:.2f}_HIGH_COHESIVENESS"
         return summary
 
     def _find_sparse_nodes(self):
@@ -325,12 +325,12 @@ class ReasoningEngine:
             for w, node_id in top_nodes:
                 name_row = self._query(f"SELECT name FROM entities WHERE id = '{node_id}'")
                 name = name_row[0][0] if name_row else node_id
-                top_names.append(f"'{name}' ({w:.2f})")
+                top_names.append(f"{name}_{w:.2f}")
 
-            return [f"PAGERANK_EMERGENCE: TOP_CONCEPTS_DISCOVERED: {', '.join(top_names)}"]
+            return [f"PAGERANK_EMERGENCE: TOP_CONCEPTS_DISCOVERED_{'_'.join(top_names)}"]
         except Exception as e:
             logger.error(f"Error during PageRank calculation: {e}", exc_info=True)
-            return [f"PAGERANK_EMERGENCE: ERROR_CALCULATING_PAGERANK: {e}"]
+            return [f"PAGERANK_EMERGENCE: ERROR_CALCULATING_PAGERANK"]
 
     def _query(self, sql):
         try:
