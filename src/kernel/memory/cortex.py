@@ -439,3 +439,17 @@ class Cortex:
         cursor.execute('VACUUM')
         self.conn.commit()
         logger.info("🧹 Cortex memory optimized (orphaned relations purged, VACUUM complete)")
+
+    def close(self):
+        """Explicitly close the database connection."""
+        if self.conn:
+            try:
+                self.conn.close()
+            except Exception as e:
+                pass
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.close()
