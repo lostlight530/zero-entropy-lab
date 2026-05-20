@@ -124,7 +124,7 @@ class Harvester:
                                     filename = f"{date_prefix}-{safe_repo}-scan.md"
                                     filepath = self.inputs_path / filename
 
-                                    content = f"# 📡 NEXUS HARVESTER: Intelligence Dossier\n\n"
+                                    content = f"# NEXUS HARVESTER: Intelligence Dossier\n\n"
                                     content += f"DATE: {datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')} (UTC)\n"
                                     content += f"TARGET_IDENTITY: {repo}\n"
                                     content += f"VERSION_ASSET: {name}\n"

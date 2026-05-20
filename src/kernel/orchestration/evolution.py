@@ -67,7 +67,7 @@ class Evolver:
         filename = self.memories_path / f"{date_prefix}-cognitive-report.md"
 
         content = [
-            f"# 🧠 NEXUS CORTEX: Cognitive Report",
+            f"# NEXUS CORTEX: Cognitive Report",
             f"",
             f"DATE: {now_utc} (UTC)",
             f""
