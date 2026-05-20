@@ -122,7 +122,12 @@ class ReasoningEngine:
             cycles = self._query('''
                 SELECT r1.source, r1.target FROM relations r1
                 JOIN relations r2 ON r1.source = r2.target AND r1.target = r2.source
-                WHERE r1.source < r1.target LIMIT 2
+                JOIN entities e1 ON r1.source = e1.id
+                JOIN entities e2 ON r1.target = e2.id
+                WHERE r1.source < r1.target
+                AND e1.type NOT IN ('code_file', 'code_class', 'code_function')
+                AND e2.type NOT IN ('code_file', 'code_class', 'code_function')
+                LIMIT 2
             ''')
             if cycles:
                 cognitive_package["scan"].append(f"CYCLE_WARNING: {cycles[0][0]}_AND_{cycles[0][1]}")
@@ -130,7 +135,14 @@ class ReasoningEngine:
             bridges = self._query('''
                 SELECT r1.source, r2.target, r1.target FROM relations r1
                 JOIN relations r2 ON r1.target = r2.source
-                WHERE r1.relation = 'defines' AND r2.relation = 'inherits_from' LIMIT 2
+                JOIN entities e1 ON r1.source = e1.id
+                JOIN entities e2 ON r2.target = e2.id
+                JOIN entities e3 ON r1.target = e3.id
+                WHERE r1.relation = 'defines' AND r2.relation = 'inherits_from'
+                AND e1.type NOT IN ('code_file', 'code_class', 'code_function')
+                AND e2.type NOT IN ('code_file', 'code_class', 'code_function')
+                AND e3.type NOT IN ('code_file', 'code_class', 'code_function')
+                LIMIT 2
             ''')
             if bridges:
                 for b in bridges:
@@ -215,7 +227,14 @@ class ReasoningEngine:
         import concurrent.futures
 
         try:
-            relations = self._query('SELECT source, target FROM relations')
+            relations = self._query('''
+                SELECT r.source, r.target
+                FROM relations r
+                JOIN entities e1 ON r.source = e1.id
+                JOIN entities e2 ON r.target = e2.id
+                WHERE e1.type NOT IN ('code_file', 'code_class', 'code_function')
+                  AND e2.type NOT IN ('code_file', 'code_class', 'code_function')
+            ''')
             if not relations:
                 return []
 

@@ -187,6 +187,7 @@ class Cortex:
             FROM entities_fts f
             JOIN entities e ON f.id = e.id
             WHERE entities_fts MATCH ?
+              AND e.type NOT IN ('code_file', 'code_class', 'code_function')
             ORDER BY fts_score ASC
             LIMIT 50
         '''
@@ -207,6 +208,7 @@ class Cortex:
                 JOIN entities e ON (r.target = e.id OR r.source = e.id)
                 WHERE (r.source IN ({placeholders}) OR r.target IN ({placeholders}))
                 AND e.id NOT IN ({placeholders})
+                AND e.type NOT IN ('code_file', 'code_class', 'code_function')
                 AND e.weight > 1.1
                 ORDER BY e.weight DESC
                 LIMIT 20
@@ -275,6 +277,7 @@ class Cortex:
             SELECT e.id, e.name, e.desc, MAX(sp.path_weight) as resonance, MIN(sp.depth) as depth
             FROM synaptic_path sp
             JOIN entities e ON sp.id = e.id
+            WHERE e.type NOT IN ('code_file', 'code_class', 'code_function')
             GROUP BY e.id
             ORDER BY resonance DESC
             LIMIT 15
@@ -411,9 +414,15 @@ class Cortex:
     def get_stats(self):
         cursor = self.conn.cursor()
         try:
-            e_count = cursor.execute('SELECT count(*) FROM entities').fetchone()[0]
-            r_count = cursor.execute('SELECT count(*) FROM relations').fetchone()[0]
-            avg_weight = cursor.execute('SELECT avg(weight) FROM entities').fetchone()[0] or 0
+            e_count = cursor.execute("SELECT count(*) FROM entities WHERE type NOT IN ('code_file', 'code_class', 'code_function')").fetchone()[0]
+            r_count = cursor.execute('''
+                SELECT count(*) FROM relations r
+                JOIN entities e1 ON r.source = e1.id
+                JOIN entities e2 ON r.target = e2.id
+                WHERE e1.type NOT IN ('code_file', 'code_class', 'code_function')
+                  AND e2.type NOT IN ('code_file', 'code_class', 'code_function')
+            ''').fetchone()[0]
+            avg_weight = cursor.execute("SELECT avg(weight) FROM entities WHERE type NOT IN ('code_file', 'code_class', 'code_function')").fetchone()[0] or 0
         except Exception as e:
             logger.error(f"Failed to fetch stats: {e}", exc_info=True)
             return {'entities': 0, 'relations': 0, 'density': 0}
