@@ -1,9 +1,9 @@
 # NEXUS HARVESTER: Intelligence Dossier
 
-DATE: 2026-05-21 12:50:35 (UTC)
+DATE: 2026-05-21 22:20:20 (UTC)
 TARGET_IDENTITY: langchain-ai/langchain
-VERSION_ASSET: langchain-fireworks==1.4.1
-SOURCE_LINK: https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.1
+VERSION_ASSET: langchain-tests==1.1.9
+SOURCE_LINK: https://github.com/langchain-ai/langchain/releases/tag/langchain-tests%3D%3D1.1.9
 
 ## 资产物理属性 (Asset Physical Properties)
 REPOSITORY_TYPE: EXTERNAL_PACKAGE_INTELLIGENCE
@@ -27,9 +27,11 @@ DIRECTIVE_3: ENSURE_ANY_EXTRACTED_LOGIC_USES_PURE_PYTHON_TYPING_AND_INSPECT_SIGN
 ## 原始载荷 (Raw Payload)
 
 ```text
-Changes since langchain-fireworks==1.4.0
+Changes since langchain-tests==1.1.8
 
-release(fireworks): 1.4.1 (#37603)
-fix(fireworks): retry on bare `APIConnectionError`, default `max_retries=2` (#37602)
-test(fireworks): stabilize integration tests with rate limiting and retries (#37590)
+release(standard-tests): 1.1.9 (#37609)
+test(standard-tests): allow extra content blocks in streaming assertions (#37592)
+chore: bump idna from 3.11 to 3.15 in /libs/standard-tests (#37536)
+chore: bump the minor-and-patch group across 3 directories with 15 updates (#37515)
+ci(infra): harden Dependabot version-bound preservation (#37510)
 ```
