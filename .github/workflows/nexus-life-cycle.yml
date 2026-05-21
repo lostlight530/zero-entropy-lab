@@ -47,6 +47,9 @@ jobs:
     - name: 🧬 Run Evolution Cycle (Strategy)
       run: python src/kernel/protocol/nexus.py evolve
 
+    - name: 🧪 Verification (Tests)
+      run: python tests/run_tests.py
+
     - name: 🔄 Sync world-line (Autostash)
       run: |
         git config --global user.name "github-actions[bot]"
