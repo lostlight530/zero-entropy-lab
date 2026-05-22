@@ -407,3 +407,57 @@ nav {
   .nexus-avatar-zone { height: 200px; }
   #nexus-terminal { height: 300px; }
 }
+
+/* Dashboard Specific Styles */
+.dashboard-container {
+    height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.dashboard-panel {
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.dashboard-panel:hover {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transform: translateY(-2px);
+}
+
+.panel-header {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--cyber-cyan);
+    border-radius: 3px;
+}
+
+#matrix .custom-scrollbar::-webkit-scrollbar-thumb,
+#nexus .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--cyber-pink);
+}
+
+/* Blinking Indicator */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.blinking {
+    animation: blink 2s infinite;
+}
