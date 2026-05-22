@@ -38,6 +38,8 @@ body {
 
 /* Utilities */
 .max-w-7xl { max-width: 80rem; margin: 0 auto; padding: 0 2rem; }
+.w-full { width: 100%; }
+.h-full { height: 100%; }
 .max-w-5xl { max-width: 64rem; margin: 0 auto; padding: 0 2rem; }
 .max-w-3xl { max-width: 48rem; margin: 0 auto; }
 
@@ -402,6 +404,8 @@ nav {
 }
 
 @media (max-width: 768px) {
+  .dashboard-grid { grid-template-columns: 1fr !important; }
+  .grid-4 { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
   .nav-links { display: none; }
   .nexus-domain { flex-direction: column; height: auto; }
   .nexus-avatar-zone { height: 200px; }
