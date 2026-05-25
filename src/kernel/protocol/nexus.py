@@ -186,7 +186,8 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
         self.cortex = Cortex()
 
         # 【核心修复：强制绑定静态文件根目录，线程安全】
-        kwargs['directory'] = str(self.project_root)
+        if 'directory' not in kwargs:
+            kwargs['directory'] = str(self.project_root)
 
         # Load API Config
         self.api_key = os.environ.get("NEXUS_API_KEY")

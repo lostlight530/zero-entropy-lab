@@ -8,7 +8,8 @@ try:
     from logger import logger
 except ImportError:
     import sys, os
-    sys.path.append(os.path.dirname(__file__))
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'memory')))
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
     from cortex import Cortex
     from logger import logger
 
@@ -64,9 +65,12 @@ class ReasoningEngine:
         journal_entries = 0
         if self.db_path.exists():
             db_size_mb = self.db_path.stat().st_size / (1024 * 1024)
-            journal_entries_res = self._query('SELECT count(*) FROM journal')
-            if journal_entries_res:
-                journal_entries = journal_entries_res[0][0]
+            try:
+                journal_entries_res = self._query('SELECT count(*) FROM journal')
+                if journal_entries_res and isinstance(journal_entries_res, list) and len(journal_entries_res) > 0:
+                    journal_entries = journal_entries_res[0][0]
+            except Exception:
+                pass
 
         # 结构化认知包 (Structured Cognitive Package)
         cognitive_package = {
