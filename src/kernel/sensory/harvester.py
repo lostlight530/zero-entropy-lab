@@ -169,6 +169,9 @@ class Harvester:
                         logger.warning(f"[Harvester] Defensive retreat: Rate limit hit on {url}")
                         # Defensive retreat: gracefully break the internal fetch loop on rate limit
                         break
+                    elif e.code == 404:
+                        logger.debug(f"[Harvester] Endpoint not found (404), skipping: {url}")
+                        continue
                     else:
                         logger.warning(f"[Harvester] Failed to fetch {url}: {e}")
                 except Exception as e:
