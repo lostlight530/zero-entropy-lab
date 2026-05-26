@@ -12,8 +12,8 @@
   "vllm-project/vllm_releases": "322898436",
   "huggingface/transformers_releases": "325991366",
   "google-ai-edge/mediapipe_releases": "314747935",
-  "microsoft/markitdown_releases": "288862886",
-  "langchain-ai/langchain_releases": "327178052",
+  "microsoft/markitdown_releases": "329757297",
+  "langchain-ai/langchain_releases": "329606172",
   "ollama/ollama_releases": "318756375",
   "openai/openai-python_releases": "327302145"
 }
