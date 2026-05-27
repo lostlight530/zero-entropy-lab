@@ -1,6 +1,6 @@
 # 每日简报 (Daily Brief)
-DATE: 2026-05-26
-ENTROPY: 234.9458
+DATE: 2026-05-27
+ENTROPY: 241.4934
 
 ## 系统健康状态 (System Health)
 STATUS: ONLINE
@@ -17,18 +17,14 @@ TASK_SUGGESTION: SHIFT_FOCUS_TO_EXTERNAL_HARVESTER
 ### 物理遥测
 STORAGE_MB: 0.18
 JOURNAL_ROWS: 39
-GRAPH_DENSITY: 234.95_HIGH_COHESIVENESS
+GRAPH_DENSITY: 241.49_HIGH_COHESIVENESS
 ### 网络扫描
 STRUCTURAL_BRIDGES: NONE_DETECTED
 ### 演进策略
 STRATEGY: PROCEED_NORMAL_INGESTION
 
 ## 竞品雷达 (Competitors)
-FILE: 20260526-langchain-ai_langchain-scan.md
-ANALYSIS: GENERAL
-
-## 其他动态 (General)
-FILE: 20260526-microsoft_markitdown-scan.md
+FILE: 20260527-langchain-ai_langchain-scan.md
 ANALYSIS: GENERAL
 
 ## 深度工作建议 (Deep Work)

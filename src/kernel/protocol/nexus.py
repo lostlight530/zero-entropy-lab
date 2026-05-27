@@ -313,7 +313,7 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
 
                     # 为了获得更宏观的拓扑，我们寻找权重最高的核心节点作为起点 (Find the absolute core node)
                     cursor = self.cortex.conn.cursor()
-                    core_node = cursor.execute("SELECT id FROM entities ORDER BY weight DESC LIMIT 1").fetchone()
+                    core_node = cursor.execute("SELECT id FROM entities WHERE type NOT IN ('code_file', 'code_class', 'code_function') ORDER BY weight DESC LIMIT 1").fetchone()
 
                     nodes_data = []
                     links_data = []
@@ -322,7 +322,7 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
                         # 扫描 N-Hop 拓扑 (Scan N-Hop topology)
                         scanned_nodes = self.cortex.deep_synapse_scan(start_id=core_node['id'], max_depth=3)
                         # 为了画图丰富，不仅获取中心节点的 15 个关联，再宽泛检索一些权重高的 (Supplement with high weight)
-                        high_weight_nodes = cursor.execute("SELECT id, name, weight FROM entities WHERE weight > 0.5 ORDER BY weight DESC LIMIT 100").fetchall()
+                        high_weight_nodes = cursor.execute("SELECT id, name, weight FROM entities WHERE weight > 0.5 AND type NOT IN ('code_file', 'code_class', 'code_function') ORDER BY weight DESC LIMIT 100").fetchall()
 
                         seen_ids = set()
                         for r in scanned_nodes:
