@@ -1,9 +1,9 @@
 # NEXUS HARVESTER: Intelligence Dossier
 
-DATE: 2026-05-27 13:01:20 (UTC)
+DATE: 2026-05-27 23:07:47 (UTC)
 TARGET_IDENTITY: langchain-ai/langchain
-VERSION_ASSET: langchain-perplexity==1.3.0
-SOURCE_LINK: https://github.com/langchain-ai/langchain/releases/tag/langchain-perplexity%3D%3D1.3.0
+VERSION_ASSET: langchain-perplexity==1.3.1
+SOURCE_LINK: https://github.com/langchain-ai/langchain/releases/tag/langchain-perplexity%3D%3D1.3.1
 
 ## 资产物理属性 (Asset Physical Properties)
 REPOSITORY_TYPE: EXTERNAL_PACKAGE_INTELLIGENCE
@@ -27,16 +27,8 @@ DIRECTIVE_3: ENSURE_ANY_EXTRACTED_LOGIC_USES_PURE_PYTHON_TYPING_AND_INSPECT_SIGN
 ## 原始载荷 (Raw Payload)
 
 ```text
-Changes since langchain-perplexity==1.2.0
+Changes since langchain-perplexity==1.3.0
 
-release(perplexity): 1.3.0 (#37707)
-feat(perplexity): `use_responses_api` flag on `ChatPerplexity` (#37359)
-chore(infra): bump `langchain-tests` floor to 1.1.9 (#37610)
-chore: bump langsmith from 0.8.4 to 0.8.5 in /libs/partners/perplexity (#37545)
-chore: bump idna from 3.10 to 3.15 in /libs/partners/perplexity (#37544)
-ci(infra): harden Dependabot version-bound preservation (#37510)
-chore: bump langsmith from 0.8.0 to 0.8.4 in /libs/partners/perplexity (#37413)
-chore: bump langsmith from 0.7.31 to 0.8.0 in /libs/partners/perplexity (#37396)
-chore: bump urllib3 from 2.6.3 to 2.7.0 in /libs/partners/perplexity (#37336)
-chore: bump langchain-core from 1.3.2 to 1.3.3 in /libs/partners/perplexity (#37262)
+release(perplexity): 1.3.1 (#37720)
+chore(perplexity): bump `perplexityai` to 0.34.1 (#37710)
 ```
