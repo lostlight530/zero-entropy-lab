@@ -17,6 +17,11 @@ class TestServerAPI(unittest.TestCase):
         cls.project_root = Path(__file__).parent.parent
         cls.server_script = cls.project_root / "src" / "kernel" / "protocol" / "nexus.py"
         cls.port = 8000
+        try:
+            subprocess.run(['kill', '-9', subprocess.check_output(['lsof', '-t', '-i', ':8000']).decode().strip()], stderr=subprocess.DEVNULL)
+        except Exception:
+            pass
+
         
         # 准备依赖环境的 PYTHONPATH
         kernel_dir = cls.project_root / "src" / "kernel"
