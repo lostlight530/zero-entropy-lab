@@ -181,22 +181,22 @@ class Evolver:
             content.append("## 潜意识觉醒 (Nightly Cognitive Intuitions)")
 
             if "baseline" in intuitions and intuitions["baseline"]:
-                content.append("### 状态基线")
+                content.append("BASELINE_METRICS: ACTIVE")
                 for item in intuitions["baseline"]:
                     content.append(item)
 
             if "telemetry" in intuitions and intuitions["telemetry"]:
-                content.append("### 物理遥测")
+                content.append("PHYSICAL_TELEMETRY: ACTIVE")
                 for item in intuitions["telemetry"]:
                     content.append(item)
 
             if "scan" in intuitions and intuitions["scan"]:
-                content.append("### 网络扫描")
+                content.append("NETWORK_SCAN: ACTIVE")
                 for item in intuitions["scan"]:
                     content.append(item)
 
             if "evolution" in intuitions and intuitions["evolution"]:
-                content.append("### 演进策略")
+                content.append("EVOLUTION_STRATEGY: ACTIVE")
                 for item in intuitions["evolution"]:
                     content.append(item)
 

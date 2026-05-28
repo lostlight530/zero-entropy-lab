@@ -1,60 +1,64 @@
+# 贡献指南 (CONTRIBUTING)
 
----
+## 1 基本原则 (Fundamental Principles)
 
-# CONTRIBUTING
+This repository follows five engineering philosophies
+1 Stability outweighs chaos
+2 Protocol outweighs feature stacking
+3 Bug first patch later
+4 Zero promotion let code speak
+5 Append-only auditable trajectory
 
-## 1 基本原则  
-本仓库遵循五条工程哲学  
-1 稳定大于混沌  
-2 协议大于功能堆叠  
-3 先有 bug 再有 patch  
-4 零推广 靠代码说话  
-5 append only 可审计轨迹  
+All contributions must adhere to these principles
 
-所有贡献需符合以上原则
+## 2 贡献方式 (Contribution Methods)
 
-## 2 贡献方式  
-### 2 1 Issue  
-欢迎提交 bug 报告 改进建议 架构讨论  
-请提供最小复现或明确上下文  
-所有讨论默认进入可审计轨迹  
+### 2_1 议题 (Issue)
 
-### 2 2 Pull Request  
-PR 需满足  
-单一职责  
-可测试 可复用 可维护  
-不引入不必要依赖  
-不破坏协议边界  
-说明清晰 只写 What 和 Why  
+Welcome to submit bug reports improvement suggestions and architecture discussions
+Please provide minimum reproduction or clear context
+All discussions default to entering the auditable trajectory
 
-评估标准  
-是否提升稳定性  
-是否降低复杂度  
-是否增强协议清晰度  
-是否符合零依赖原则  
+### 2_2 拉取请求 (Pull Request)
 
-## 3 代码规范  
-遵循项目现有风格  
-文件命名清晰 可搜索  
-避免聪明代码 保持可维护性  
-新增逻辑需可审计  
+PRs must satisfy
+Single responsibility
+Testable reusable maintainable
+Introduce no unnecessary dependencies
+Do not break protocol boundaries
+Clear description focusing only on What and Why
 
-## 4 不接受的贡献  
-功能堆叠 炫技式实现  
-无必要依赖  
-破坏协议边界或稳定性  
-与仓库定位无关内容  
-纯 cosmetic PR  
+Evaluation criteria
+Does it improve stability
+Does it reduce complexity
+Does it enhance protocol clarity
+Does it conform to the zero-dependency principle
 
-## 5 行为准则  
-本仓库遵循 GitHub 默认 Contributor Covenant  
-讨论需保持专业 克制 聚焦问题  
+## 3 代码规范 (Code Conventions)
 
-## 6 许可  
-提交贡献即表示同意以仓库当前 LICENSE 发布  
+Follow existing project style
+Clear searchable file naming
+Avoid clever code maintain readability
+New logic must be auditable
 
-## 7 贡献者署名  
-尊重贡献者署名权  
-达到一定贡献量后统一添加  
+## 4 不接受的贡献 (Unacceptable Contributions)
 
----
+Feature stacking and show-off implementations
+Unnecessary dependencies
+Breaking protocol boundaries or stability
+Content unrelated to repository positioning
+Purely cosmetic PRs
+
+## 5 行为准则 (Code of Conduct)
+
+This repository follows the default Contributor Covenant
+Discussions must remain professional restrained and focused on issues
+
+## 6 许可 (License)
+
+Submitting contributions means agreeing to release under the current LICENSE
+
+## 7 贡献者署名 (Contributor Attribution)
+
+Respect contributor attribution rights
+Will be added collectively after reaching a certain contribution threshold
