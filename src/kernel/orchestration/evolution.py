@@ -1,9 +1,18 @@
 import os
+import sys
 import shutil
 import datetime
 import logging
 import re
 from pathlib import Path
+
+# Fix cross-module imports by dynamically appending kernel domains
+kernel_root = Path(__file__).resolve().parents[1]
+sys.path.append(str(kernel_root))
+sys.path.append(str(kernel_root / "memory"))
+sys.path.append(str(kernel_root / "cognitive"))
+sys.path.append(str(kernel_root / "sensory"))
+
 from cortex import Cortex
 try:
     from reason import ReasoningEngine
