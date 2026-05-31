@@ -360,7 +360,10 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
                 if path == "/api/mcp/invoke":
                     if not body:
                         raise ValueError("Empty request body")
-                    payload = json.loads(body.decode('utf-8'))
+                    try:
+                        payload = json.loads(body.decode('utf-8'))
+                    except json.JSONDecodeError:
+                        raise ValueError("Invalid JSON in request body")
                     name = payload.get("name")
                     arguments = payload.get("arguments", {})
 

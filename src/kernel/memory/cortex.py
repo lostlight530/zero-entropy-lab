@@ -131,7 +131,10 @@ class Cortex:
                 last_line = f.readline().decode('utf-8').strip()
                 if not last_line:
                     return "NEXUS_GENESIS_0000"
-                return json.loads(last_line).get("hash", "NEXUS_GENESIS_0000")
+                try:
+                    return json.loads(last_line).get("hash", "NEXUS_GENESIS_0000")
+                except json.JSONDecodeError:
+                    return "NEXUS_GENESIS_0000"
         except Exception as e:
             logger.error(f"Failed to read last hash from {filepath}: {e}")
             return "NEXUS_GENESIS_0000"

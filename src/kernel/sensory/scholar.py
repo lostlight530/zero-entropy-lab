@@ -48,8 +48,11 @@ class Scholar:
     def _load_config(self):
         if self.config_path.exists():
             try:
-                with open(self.config_path, 'r', encoding='utf-8') as f: return json.load(f)
-            except: pass
+                with open(self.config_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    return data if isinstance(data, dict) else {}
+            except Exception:
+                pass
         return {"philosophy": "Zero-Entropy"}
 
     def ingest_repository(self, root_path):

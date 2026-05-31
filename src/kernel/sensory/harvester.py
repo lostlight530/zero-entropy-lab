@@ -88,7 +88,14 @@ class Harvester:
                 try:
                     with urllib.request.urlopen(req, timeout=10) as response:
                         if response.status == 200:
-                            data = json.loads(response.read().decode('utf-8'))
+                            try:
+                                data = json.loads(response.read().decode('utf-8'))
+                                if not isinstance(data, list):
+                                    logger.warning(f"Expected list from GitHub API for {endpoint}, got {type(data)}.")
+                                    data = data.get('items', []) if isinstance(data, dict) else []
+                            except json.JSONDecodeError:
+                                logger.error(f"Failed to parse JSON from GitHub API for {endpoint}")
+                                data = []
 
                             # 取最新的一条数据 (Get the latest entry)
                             if data and isinstance(data, list):
