@@ -84,26 +84,34 @@ class Evolver:
 
         # 1. 状态基线 (Baseline)
         content.append("## 系统状态基线 (System Status Baseline)")
-        for item in insights.get("baseline", []):
-            content.append(item)
+        baseline_items = insights.get("baseline", [])
+        if isinstance(baseline_items, list):
+            for item in baseline_items:
+                content.append(str(item))
         content.append("")
 
         # 2. 物理层遥测 (Telemetry)
         content.append("## 物理层性能遥测 (Physical Telemetry)")
-        for item in insights.get("telemetry", []):
-            content.append(item)
+        telemetry_items = insights.get("telemetry", [])
+        if isinstance(telemetry_items, list):
+            for item in telemetry_items:
+                content.append(str(item))
         content.append("")
 
         # 3. 认知网络扫描 (Scan)
         content.append("## 认知网络断层扫描 (Cognitive Network Scan)")
-        for item in insights.get("scan", []):
-            content.append(item)
+        scan_items = insights.get("scan", [])
+        if isinstance(scan_items, list):
+            for item in scan_items:
+                content.append(str(item))
         content.append("")
 
         # 4. 零熵演化推演 (Evolution)
         content.append("## 零熵演化推演 (Zero-Entropy Evolution Hypothesis)")
-        for item in insights.get("evolution", []):
-            content.append(item)
+        evo_items = insights.get("evolution", [])
+        if isinstance(evo_items, list):
+            for item in evo_items:
+                content.append(str(item))
         content.append("")
 
         with open(filename, "w", encoding="utf-8") as f:

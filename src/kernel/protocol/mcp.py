@@ -305,7 +305,11 @@ class CortexEnrichSkill(BaseSkill):
 
             req = urllib.request.Request(url, headers={"User-Agent": "Nexus-Cortex-Enrichment/1.0"})
             with urllib.request.urlopen(req, timeout=5) as response:
-                data = json.loads(response.read().decode())
+                try:
+                    data = json.loads(response.read().decode())
+                except json.JSONDecodeError:
+                    return f"Failed to enrich: Invalid JSON from Wikipedia for '{name}'"
+
                 extract = data.get("extract")
                 if extract:
                     concept_id = f"concept_{clean_name.lower().replace(' ', '_')}"
