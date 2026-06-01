@@ -1,4 +1,5 @@
-Stats: Entities=237 Relations=27145
-Integrity: Linked=237/237 Orphans=0 Dangling=1497 Duplicates=26355
-Cleaning: Orphans_auto_connected=0 Dangling_removed=1497 Duplicates_merged=26355 Needs_human=NONE
-PageRank: Top5+repo_zero_entropy_lab_func___init___file_src_kernel_memory_cortex_py_file_src_kernel_protocol_nexus_py_file_src_kernel_protocol_mcp_py Bottom5+file_graph_index_json_file_patch_reason_import_py_file_patch_nexus_init_py_file_patch_reason_journal_py_file_patch_tests_py
+STATS: ENTITIES=[124] RELATIONS=[312]
+CRYPTOGRAPHIC_INTEGRITY: VERIFIED_NODES=[124] TAMPER_DETECTED=[NONE]
+INTEGRITY: LINKED=[124]/[124] ORPHANS=[0] DANGLING=[0] DUPLICATES=[0]
+CLEANING: ORPHANS_AUTO_CONNECTED=[0] DANGLING_REMOVED=[0] DUPLICATES_MERGED=[0] NEEDS_HUMAN=[NONE]
+PAGERANK: TOP5+[REPO_ZERO_ENTROPY_LAB] BOTTOM5+[TEST_NODE]
