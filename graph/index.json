@@ -1,0 +1,2976 @@
+{
+  "nodes": [
+    {
+      "id": "class_JsonFormatter",
+      "type": "code_class",
+      "name": "JsonFormatter",
+      "weight": 502.47595433395793
+    },
+    {
+      "id": "class_KnowledgeFactory",
+      "type": "code_class",
+      "name": "KnowledgeFactory",
+      "weight": 335.0810296194669
+    },
+    {
+      "id": "class_BaseSkill",
+      "type": "code_class",
+      "name": "BaseSkill",
+      "weight": 1339.4505779063634
+    },
+    {
+      "id": "class_MCPRegistry",
+      "type": "code_class",
+      "name": "MCPRegistry",
+      "weight": 335.08102961946696
+    },
+    {
+      "id": "class_CortexSearchSkill",
+      "type": "code_class",
+      "name": "CortexSearchSkill",
+      "weight": 502.4759543339583
+    },
+    {
+      "id": "class_CortexMemorizeSkill",
+      "type": "code_class",
+      "name": "CortexMemorizeSkill",
+      "weight": 502.47595433395793
+    },
+    {
+      "id": "class_CortexSynapseSkill",
+      "type": "code_class",
+      "name": "CortexSynapseSkill",
+      "weight": 502.4759543339583
+    },
+    {
+      "id": "class_CortexEnrichSkill",
+      "type": "code_class",
+      "name": "CortexEnrichSkill",
+      "weight": 502.47595433395804
+    },
+    {
+      "id": "class_CortexDailyBriefSkill",
+      "type": "code_class",
+      "name": "CortexDailyBriefSkill",
+      "weight": 502.47595433395804
+    },
+    {
+      "id": "class_HiveMind",
+      "type": "code_class",
+      "name": "HiveMind",
+      "weight": 335.0810296194667
+    },
+    {
+      "id": "class_MCPServer",
+      "type": "code_class",
+      "name": "MCPServer",
+      "weight": 335.0810296194666
+    },
+    {
+      "id": "class_APIResponse",
+      "type": "code_class",
+      "name": "APIResponse",
+      "weight": 341.50746094221773
+    },
+    {
+      "id": "class_TokenBucket",
+      "type": "code_class",
+      "name": "TokenBucket",
+      "weight": 335.081029619466
+    },
+    {
+      "id": "class_ThreadedNexusServer",
+      "type": "code_class",
+      "name": "ThreadedNexusServer",
+      "weight": 669.8708790484679
+    },
+    {
+      "id": "class_FlusherThread",
+      "type": "code_class",
+      "name": "FlusherThread",
+      "weight": 502.47595433395844
+    },
+    {
+      "id": "class_SubconsciousThread",
+      "type": "code_class",
+      "name": "SubconsciousThread",
+      "weight": 502.4759543339578
+    },
+    {
+      "id": "class_NexusHandler",
+      "type": "code_class",
+      "name": "NexusHandler",
+      "weight": 502.47595433395793
+    },
+    {
+      "id": "class_Harvester",
+      "type": "code_class",
+      "name": "Harvester",
+      "weight": 335.08102961946673
+    },
+    {
+      "id": "class_Scholar",
+      "type": "code_class",
+      "name": "Scholar",
+      "weight": 335.0810296194667
+    },
+    {
+      "id": "class_CognitiveReranker",
+      "type": "code_class",
+      "name": "CognitiveReranker",
+      "weight": 335.0810296194671
+    },
+    {
+      "id": "class_ReasoningEngine",
+      "type": "code_class",
+      "name": "ReasoningEngine",
+      "weight": 335.0810296194668
+    },
+    {
+      "id": "class_Cortex",
+      "type": "code_class",
+      "name": "Cortex",
+      "weight": 335.0810296194666
+    },
+    {
+      "id": "class_Evolver",
+      "type": "code_class",
+      "name": "Evolver",
+      "weight": 335.0810296194674
+    },
+    {
+      "id": "class_TestCortex",
+      "type": "code_class",
+      "name": "TestCortex",
+      "weight": 502.47595433395804
+    },
+    {
+      "id": "class_TestMCPZeroProtocol",
+      "type": "code_class",
+      "name": "TestMCPZeroProtocol",
+      "weight": 502.47595433395804
+    },
+    {
+      "id": "class_TestServerAPI",
+      "type": "code_class",
+      "name": "TestServerAPI",
+      "weight": 502.47595433395793
+    },
+    {
+      "id": "class_TestMCPDemo",
+      "type": "code_class",
+      "name": "TestMCPDemo",
+      "weight": 279.1733232704738
+    },
+    {
+      "id": "class_TestSingularityLoad",
+      "type": "code_class",
+      "name": "TestSingularityLoad",
+      "weight": 502.4759543339576
+    },
+    {
+      "id": "repo_zero_entropy_lab",
+      "type": "repository",
+      "name": "Zero-Entropy Lab",
+      "weight": 5843.143215487055
+    },
+    {
+      "id": "architecture_concept_\u6838\u5fc3\u7406\u5ff5_core_philosophy",
+      "type": "architecture_concept",
+      "name": "\u6838\u5fc3\u7406\u5ff5 (Core Philosophy)",
+      "weight": 335.08102961946764
+    },
+    {
+      "id": "architecture_concept_zeroentropy_lab__constitution",
+      "type": "architecture_concept",
+      "name": "Zero-Entropy Lab | Constitution",
+      "weight": 335.08102961946764
+    },
+    {
+      "id": "architecture_concept_0_\u6838\u5fc3\u613f\u666f_vision",
+      "type": "architecture_concept",
+      "name": "0. \u6838\u5fc3\u613f\u666f (Vision)",
+      "weight": 335.0810296194677
+    },
+    {
+      "id": "architecture_concept_1_\u7269\u7406\u67b6\u6784_topological_rules",
+      "type": "architecture_concept",
+      "name": "1. \u7269\u7406\u67b6\u6784 (Topological Rules)",
+      "weight": 335.0810296194678
+    },
+    {
+      "id": "architecture_concept_2_\u7edd\u5bf9\u6cd5\u5219_the_laws",
+      "type": "architecture_concept",
+      "name": "2. \u7edd\u5bf9\u6cd5\u5219 (The Laws)",
+      "weight": 335.08102961946787
+    },
+    {
+      "id": "architecture_concept_21_\u96f6\u5916\u90e8\u4f9d\u8d56_absolute_zerodependency",
+      "type": "architecture_concept",
+      "name": "2.1 \u96f6\u5916\u90e8\u4f9d\u8d56 (Absolute Zero-Dependency)",
+      "weight": 335.08102961946804
+    },
+    {
+      "id": "architecture_concept_22_\u6781\u7b80\u5de5\u7a0b_fundamentalist_engineering",
+      "type": "architecture_concept",
+      "name": "2.2 \u6781\u7b80\u5de5\u7a0b (Fundamentalist Engineering)",
+      "weight": 335.08102961946804
+    },
+    {
+      "id": "architecture_concept_23_\u516c\u5f00\u900f\u660e_public_transparency",
+      "type": "architecture_concept",
+      "name": "2.3 \u516c\u5f00\u900f\u660e (Public Transparency)",
+      "weight": 335.08102961946804
+    },
+    {
+      "id": "architecture_concept_3_\u534f\u4f5c\u51c6\u5219_collaboration",
+      "type": "architecture_concept",
+      "name": "3. \u534f\u4f5c\u51c6\u5219 (Collaboration)",
+      "weight": 335.08102961946804
+    },
+    {
+      "id": "func_setup_logger",
+      "type": "code_function",
+      "name": "setup_logger",
+      "weight": 335.0810296194669
+    },
+    {
+      "id": "func_format",
+      "type": "code_function",
+      "name": "format",
+      "weight": 335.08102961946696
+    },
+    {
+      "id": "func___init__",
+      "type": "code_function",
+      "name": "__init__",
+      "weight": 4352.559222767519
+    },
+    {
+      "id": "func_add_entity",
+      "type": "code_function",
+      "name": "add_entity",
+      "weight": 855.7923077685135
+    },
+    {
+      "id": "func_touch_entity",
+      "type": "code_function",
+      "name": "touch_entity",
+      "weight": 335.0810296194667
+    },
+    {
+      "id": "func_activate_memory",
+      "type": "code_function",
+      "name": "activate_memory",
+      "weight": 669.8708790484873
+    },
+    {
+      "id": "func_add_relation",
+      "type": "code_function",
+      "name": "add_relation",
+      "weight": 335.0810296194666
+    },
+    {
+      "id": "func__append_line",
+      "type": "code_function",
+      "name": "_append_line",
+      "weight": 335.08102961946673
+    },
+    {
+      "id": "func_test_mcp_server",
+      "type": "code_function",
+      "name": "test_mcp_server",
+      "weight": 186.2126089104663
+    },
+    {
+      "id": "func_validate_id",
+      "type": "code_function",
+      "name": "validate_id",
+      "weight": 186.2126089104663
+    },
+    {
+      "id": "func_validate_category",
+      "type": "code_function",
+      "name": "validate_category",
+      "weight": 186.2126089104662
+    },
+    {
+      "id": "func_get_entropy_stats",
+      "type": "code_function",
+      "name": "get_entropy_stats",
+      "weight": 186.2126089104662
+    },
+    {
+      "id": "func_get_entropy_report",
+      "type": "code_function",
+      "name": "get_entropy_report",
+      "weight": 186.2126089104662
+    },
+    {
+      "id": "func_get_current_time",
+      "type": "code_function",
+      "name": "get_current_time",
+      "weight": 186.21260891046623
+    },
+    {
+      "id": "func_connect_entities",
+      "type": "code_function",
+      "name": "connect_entities",
+      "weight": 521.0024583394944
+    },
+    {
+      "id": "func_get_mcp_tool_schema",
+      "type": "code_function",
+      "name": "get_mcp_tool_schema",
+      "weight": 335.081029619467
+    },
+    {
+      "id": "func_execute",
+      "type": "code_function",
+      "name": "execute",
+      "weight": 2009.0302767637022
+    },
+    {
+      "id": "func_register",
+      "type": "code_function",
+      "name": "register",
+      "weight": 335.0810296194667
+    },
+    {
+      "id": "func_get_all_schemas",
+      "type": "code_function",
+      "name": "get_all_schemas",
+      "weight": 335.0810296194667
+    },
+    {
+      "id": "func_invoke",
+      "type": "code_function",
+      "name": "invoke",
+      "weight": 335.0810296194667
+    },
+    {
+      "id": "func_start_listening",
+      "type": "code_function",
+      "name": "start_listening",
+      "weight": 335.0810296194663
+    },
+    {
+      "id": "func__listen_loop",
+      "type": "code_function",
+      "name": "_listen_loop",
+      "weight": 335.08102961946634
+    },
+    {
+      "id": "func__process_hive_signal",
+      "type": "code_function",
+      "name": "_process_hive_signal",
+      "weight": 335.08102961946634
+    },
+    {
+      "id": "func_broadcast",
+      "type": "code_function",
+      "name": "broadcast",
+      "weight": 335.08102961946634
+    },
+    {
+      "id": "func_stop",
+      "type": "code_function",
+      "name": "stop",
+      "weight": 335.08102961946656
+    },
+    {
+      "id": "func_handle_request",
+      "type": "code_function",
+      "name": "handle_request",
+      "weight": 335.0810296194664
+    },
+    {
+      "id": "func_run",
+      "type": "code_function",
+      "name": "run",
+      "weight": 1004.6607284775096
+    },
+    {
+      "id": "func_main",
+      "type": "code_function",
+      "name": "main",
+      "weight": 335.0810296194666
+    },
+    {
+      "id": "func_consume",
+      "type": "code_function",
+      "name": "consume",
+      "weight": 335.08102961946645
+    },
+    {
+      "id": "func__check_auth",
+      "type": "code_function",
+      "name": "_check_auth",
+      "weight": 335.0810296194664
+    },
+    {
+      "id": "func_do_GET",
+      "type": "code_function",
+      "name": "do_GET",
+      "weight": 335.0810296194664
+    },
+    {
+      "id": "func_do_OPTIONS",
+      "type": "code_function",
+      "name": "do_OPTIONS",
+      "weight": 335.0810296194664
+    },
+    {
+      "id": "func_do_POST",
+      "type": "code_function",
+      "name": "do_POST",
+      "weight": 335.08102961946656
+    },
+    {
+      "id": "func_handle_api",
+      "type": "code_function",
+      "name": "handle_api",
+      "weight": 335.08102961946656
+    },
+    {
+      "id": "func__load_state",
+      "type": "code_function",
+      "name": "_load_state",
+      "weight": 335.08102961946673
+    },
+    {
+      "id": "func__save_state",
+      "type": "code_function",
+      "name": "_save_state",
+      "weight": 335.0810296194669
+    },
+    {
+      "id": "func__extract_tags",
+      "type": "code_function",
+      "name": "_extract_tags",
+      "weight": 335.0810296194669
+    },
+    {
+      "id": "func_fetch_github_data",
+      "type": "code_function",
+      "name": "fetch_github_data",
+      "weight": 335.0810296194669
+    },
+    {
+      "id": "func__load_config",
+      "type": "code_function",
+      "name": "_load_config",
+      "weight": 335.0810296194666
+    },
+    {
+      "id": "func_ingest_repository",
+      "type": "code_function",
+      "name": "ingest_repository",
+      "weight": 335.0810296194666
+    },
+    {
+      "id": "func__digest_file",
+      "type": "code_function",
+      "name": "_digest_file",
+      "weight": 335.0810296194665
+    },
+    {
+      "id": "func__analyze_python_ast",
+      "type": "code_function",
+      "name": "_analyze_python_ast",
+      "weight": 335.0810296194663
+    },
+    {
+      "id": "func__analyze_markdown_structure",
+      "type": "code_function",
+      "name": "_analyze_markdown_structure",
+      "weight": 335.0810296194665
+    },
+    {
+      "id": "func_learn",
+      "type": "code_function",
+      "name": "learn",
+      "weight": 335.0810296194665
+    },
+    {
+      "id": "func_cosine_similarity",
+      "type": "code_function",
+      "name": "cosine_similarity",
+      "weight": 335.0810296194671
+    },
+    {
+      "id": "func_rerank_and_fuse",
+      "type": "code_function",
+      "name": "rerank_and_fuse",
+      "weight": 335.0810296194671
+    },
+    {
+      "id": "func_ponder",
+      "type": "code_function",
+      "name": "ponder",
+      "weight": 335.08102961946685
+    },
+    {
+      "id": "func__enrich_nodes_from_network",
+      "type": "code_function",
+      "name": "_enrich_nodes_from_network",
+      "weight": 335.08102961946685
+    },
+    {
+      "id": "func__generate_status",
+      "type": "code_function",
+      "name": "_generate_status",
+      "weight": 335.08102961946673
+    },
+    {
+      "id": "func__find_sparse_nodes",
+      "type": "code_function",
+      "name": "_find_sparse_nodes",
+      "weight": 335.0810296194667
+    },
+    {
+      "id": "func__awaken_pagerank",
+      "type": "code_function",
+      "name": "_awaken_pagerank",
+      "weight": 335.08102961946656
+    },
+    {
+      "id": "func__query",
+      "type": "code_function",
+      "name": "_query",
+      "weight": 335.0810296194665
+    },
+    {
+      "id": "func__compute_chunk",
+      "type": "code_function",
+      "name": "_compute_chunk",
+      "weight": 41.91538065017766
+    },
+    {
+      "id": "func__init_db",
+      "type": "code_function",
+      "name": "_init_db",
+      "weight": 335.08102961946656
+    },
+    {
+      "id": "func__get_last_hash",
+      "type": "code_function",
+      "name": "_get_last_hash",
+      "weight": 335.08102961946656
+    },
+    {
+      "id": "func__log_to_jsonl",
+      "type": "code_function",
+      "name": "_log_to_jsonl",
+      "weight": 335.0810296194664
+    },
+    {
+      "id": "func_search",
+      "type": "code_function",
+      "name": "search",
+      "weight": 335.0810296194662
+    },
+    {
+      "id": "func__sign_memory",
+      "type": "code_function",
+      "name": "_sign_memory",
+      "weight": 335.0810296194662
+    },
+    {
+      "id": "func_verify_memory",
+      "type": "code_function",
+      "name": "verify_memory",
+      "weight": 335.0810296194662
+    },
+    {
+      "id": "func_deep_synapse_scan",
+      "type": "code_function",
+      "name": "deep_synapse_scan",
+      "weight": 335.0810296194664
+    },
+    {
+      "id": "func_add_entities_batch",
+      "type": "code_function",
+      "name": "add_entities_batch",
+      "weight": 335.0810296194665
+    },
+    {
+      "id": "func_connect_entities_batch",
+      "type": "code_function",
+      "name": "connect_entities_batch",
+      "weight": 335.0810296194664
+    },
+    {
+      "id": "func_decay_memories",
+      "type": "code_function",
+      "name": "decay_memories",
+      "weight": 335.0810296194663
+    },
+    {
+      "id": "func_get_orphans",
+      "type": "code_function",
+      "name": "get_orphans",
+      "weight": 335.08102961946616
+    },
+    {
+      "id": "func_get_stats",
+      "type": "code_function",
+      "name": "get_stats",
+      "weight": 335.08102961946616
+    },
+    {
+      "id": "func_log_event",
+      "type": "code_function",
+      "name": "log_event",
+      "weight": 335.08102961946616
+    },
+    {
+      "id": "func_vacuum",
+      "type": "code_function",
+      "name": "vacuum",
+      "weight": 335.0810296194662
+    },
+    {
+      "id": "func_run_daily_cycle",
+      "type": "code_function",
+      "name": "run_daily_cycle",
+      "weight": 335.08102961946713
+    },
+    {
+      "id": "func__incubate_ideas",
+      "type": "code_function",
+      "name": "_incubate_ideas",
+      "weight": 335.08102961946713
+    },
+    {
+      "id": "func__generate_cognitive_report",
+      "type": "code_function",
+      "name": "_generate_cognitive_report",
+      "weight": 335.08102961946713
+    },
+    {
+      "id": "func__scan_inputs",
+      "type": "code_function",
+      "name": "_scan_inputs",
+      "weight": 335.08102961946696
+    },
+    {
+      "id": "func__archive_inputs",
+      "type": "code_function",
+      "name": "_archive_inputs",
+      "weight": 335.08102961946696
+    },
+    {
+      "id": "func__analyze_file_content",
+      "type": "code_function",
+      "name": "_analyze_file_content",
+      "weight": 335.08102961946685
+    },
+    {
+      "id": "func__generate_mission",
+      "type": "code_function",
+      "name": "_generate_mission",
+      "weight": 335.0810296194668
+    },
+    {
+      "id": "func_setUp",
+      "type": "code_function",
+      "name": "setUp",
+      "weight": 669.8708790484905
+    },
+    {
+      "id": "func_tearDown",
+      "type": "code_function",
+      "name": "tearDown",
+      "weight": 335.0810296194668
+    },
+    {
+      "id": "func_test_knowledge_graph",
+      "type": "code_function",
+      "name": "test_knowledge_graph",
+      "weight": 335.0810296194668
+    },
+    {
+      "id": "func_setUpClass",
+      "type": "code_function",
+      "name": "setUpClass",
+      "weight": 669.8708790484907
+    },
+    {
+      "id": "func_tearDownClass",
+      "type": "code_function",
+      "name": "tearDownClass",
+      "weight": 669.8708790484909
+    },
+    {
+      "id": "func_test_mcp_tools_discovery",
+      "type": "code_function",
+      "name": "test_mcp_tools_discovery",
+      "weight": 335.0810296194667
+    },
+    {
+      "id": "func_test_mcp_invoke_success",
+      "type": "code_function",
+      "name": "test_mcp_invoke_success",
+      "weight": 335.08102961946673
+    },
+    {
+      "id": "func_test_mcp_invoke_missing_tool",
+      "type": "code_function",
+      "name": "test_mcp_invoke_missing_tool",
+      "weight": 335.0810296194668
+    },
+    {
+      "id": "func_test_api_status",
+      "type": "code_function",
+      "name": "test_api_status",
+      "weight": 335.081029619467
+    },
+    {
+      "id": "func_test_api_invalid_endpoint",
+      "type": "code_function",
+      "name": "test_api_invalid_endpoint",
+      "weight": 335.08102961946696
+    },
+    {
+      "id": "func_test_static_serve",
+      "type": "code_function",
+      "name": "test_static_serve",
+      "weight": 335.08102961946696
+    },
+    {
+      "id": "func_run_all",
+      "type": "code_function",
+      "name": "run_all",
+      "weight": 335.0810296194669
+    },
+    {
+      "id": "func_test_validate_category_success",
+      "type": "code_function",
+      "name": "test_validate_category_success",
+      "weight": 186.2126089104662
+    },
+    {
+      "id": "func_test_validate_category_failure",
+      "type": "code_function",
+      "name": "test_validate_category_failure",
+      "weight": 186.2126089104662
+    },
+    {
+      "id": "func_test_validate_category_edge_cases",
+      "type": "code_function",
+      "name": "test_validate_category_edge_cases",
+      "weight": 186.21260891046617
+    },
+    {
+      "id": "func_test_concurrent_writes",
+      "type": "code_function",
+      "name": "test_concurrent_writes",
+      "weight": 335.0810296194672
+    },
+    {
+      "id": "func_write_task",
+      "type": "code_function",
+      "name": "write_task",
+      "weight": 335.081029619467
+    },
+    {
+      "id": "func__compute_pagerank_chunk",
+      "type": "code_function",
+      "name": "_compute_pagerank_chunk",
+      "weight": 293.4568291597602
+    },
+    {
+      "id": "func_close",
+      "type": "code_function",
+      "name": "close",
+      "weight": 149.1596008994526
+    },
+    {
+      "id": "func___enter__",
+      "type": "code_function",
+      "name": "__enter__",
+      "weight": 149.15960089945258
+    },
+    {
+      "id": "func___exit__",
+      "type": "code_function",
+      "name": "__exit__",
+      "weight": 149.15960089945258
+    },
+    {
+      "id": "core_concept_nexus_core_singularity",
+      "type": "core_concept",
+      "name": "\ud83e\udde0 NEXUS CORE: Singularity",
+      "weight": 335.0810296194664
+    },
+    {
+      "id": "core_concept_\u5baa\u7ae0_the_constitution",
+      "type": "core_concept",
+      "name": "\ud83d\udcdc \u5baa\u7ae0 (The Constitution)",
+      "weight": 335.0810296194664
+    },
+    {
+      "id": "core_concept_\u67b6\u6784\u77e9\u9635_architecture_matrix",
+      "type": "core_concept",
+      "name": "\ud83c\udfd7\ufe0f \u67b6\u6784\u77e9\u9635 (Architecture Matrix)",
+      "weight": 335.08102961946645
+    },
+    {
+      "id": "core_concept_\u542f\u52a8\u6307\u5f15_execution_commands",
+      "type": "core_concept",
+      "name": "\ud83d\ude80 \u542f\u52a8\u6307\u5f15 (Execution Commands)",
+      "weight": 335.08102961946645
+    },
+    {
+      "id": "core_concept_\u6fc0\u6d3b\u5b9e\u9a8c\u7ec8\u7aef_launch_laboratory_web_portal",
+      "type": "core_concept",
+      "name": "\u6fc0\u6d3b\u5b9e\u9a8c\u7ec8\u7aef (Launch Laboratory Web Portal)",
+      "weight": 335.0810296194665
+    },
+    {
+      "id": "core_concept_\u9a8c\u8bc1\u7cfb\u7edf\u5b8c\u5907\u6027_verification_tests",
+      "type": "core_concept",
+      "name": "\u9a8c\u8bc1\u7cfb\u7edf\u5b8c\u5907\u6027 (Verification Tests)",
+      "weight": 335.08102961946656
+    },
+    {
+      "id": "core_concept_\u5de5\u7a0b\u54f2\u5b66_why_zeroentropy",
+      "type": "core_concept",
+      "name": "\ud83e\uddec \u5de5\u7a0b\u54f2\u5b66 (Why Zero-Entropy?)",
+      "weight": 335.08102961946656
+    },
+    {
+      "id": "file_LICENSE",
+      "type": "code_file",
+      "name": "LICENSE",
+      "weight": 336.46850296812374
+    },
+    {
+      "id": "file_SECURITY_md",
+      "type": "code_file",
+      "name": "SECURITY.md",
+      "weight": 838.653277111588
+    },
+    {
+      "id": "file_index_html",
+      "type": "code_file",
+      "name": "index.html",
+      "weight": 336.4685029681239
+    },
+    {
+      "id": "file_README_md",
+      "type": "code_file",
+      "name": "README.md",
+      "weight": 1508.2329759694178
+    },
+    {
+      "id": "file_src_scripts_translations_js",
+      "type": "code_file",
+      "name": "translations.js",
+      "weight": 336.46850296812477
+    },
+    {
+      "id": "file_src_styles_main_css",
+      "type": "code_file",
+      "name": "main.css",
+      "weight": 336.46850296812477
+    },
+    {
+      "id": "file_src_kernel_logger_py",
+      "type": "code_file",
+      "name": "logger.py",
+      "weight": 838.6532771115883
+    },
+    {
+      "id": "file_src_kernel_factory_py",
+      "type": "code_file",
+      "name": "factory.py",
+      "weight": 1508.232975969418
+    },
+    {
+      "id": "file_src_kernel___init___py",
+      "type": "code_file",
+      "name": "__init__.py",
+      "weight": 336.46850296812397
+    },
+    {
+      "id": "file_src_kernel_test_mcp_py",
+      "type": "code_file",
+      "name": "test_mcp.py",
+      "weight": 280.5607966191311
+    },
+    {
+      "id": "file_src_kernel_mcp_demo_py",
+      "type": "code_file",
+      "name": "mcp_demo.py",
+      "weight": 838.3250827791405
+    },
+    {
+      "id": "file_src_kernel_protocol_mcp_py",
+      "type": "code_file",
+      "name": "mcp.py",
+      "weight": 3349.577147828857
+    },
+    {
+      "id": "file_src_kernel_protocol___init___py",
+      "type": "code_file",
+      "name": "__init__.py",
+      "weight": 336.4685029681241
+    },
+    {
+      "id": "file_src_kernel_protocol_hive_py",
+      "type": "code_file",
+      "name": "hive.py",
+      "weight": 1508.2329759694178
+    },
+    {
+      "id": "file_src_kernel_protocol_nexus_mcp_py",
+      "type": "code_file",
+      "name": "nexus_mcp.py",
+      "weight": 1006.048201826104
+    },
+    {
+      "id": "file_src_kernel_protocol_nexus_py",
+      "type": "code_file",
+      "name": "nexus.py",
+      "weight": 3516.972072543255
+    },
+    {
+      "id": "file_src_kernel_sensory___init___py",
+      "type": "code_file",
+      "name": "__init__.py",
+      "weight": 336.4685029681236
+    },
+    {
+      "id": "file_src_kernel_sensory_harvester_py",
+      "type": "code_file",
+      "name": "harvester.py",
+      "weight": 1340.8380512550223
+    },
+    {
+      "id": "file_src_kernel_sensory_scholar_py",
+      "type": "code_file",
+      "name": "scholar.py",
+      "weight": 1675.6279006839216
+    },
+    {
+      "id": "file_src_kernel_cognitive_nlp_py",
+      "type": "code_file",
+      "name": "nlp.py",
+      "weight": 838.6532771115872
+    },
+    {
+      "id": "file_src_kernel_cognitive_reason_py",
+      "type": "code_file",
+      "name": "reason.py",
+      "weight": 1843.02282539841
+    },
+    {
+      "id": "file_src_kernel_cognitive___init___py",
+      "type": "code_file",
+      "name": "__init__.py",
+      "weight": 336.4685029681238
+    },
+    {
+      "id": "file_src_kernel_memory___init___py",
+      "type": "code_file",
+      "name": "__init__.py",
+      "weight": 336.4685029681241
+    },
+    {
+      "id": "file_src_kernel_memory_cortex_py",
+      "type": "code_file",
+      "name": "cortex.py",
+      "weight": 3740.2747036067226
+    },
+    {
+      "id": "file_src_kernel_orchestration_evolution_py",
+      "type": "code_file",
+      "name": "evolution.py",
+      "weight": 1843.02282539841
+    },
+    {
+      "id": "file_src_kernel_orchestration___init___py",
+      "type": "code_file",
+      "name": "__init__.py",
+      "weight": 336.4685029681245
+    },
+    {
+      "id": "file_src_assets_background_png",
+      "type": "code_file",
+      "name": "background.png",
+      "weight": 336.4685029681243
+    },
+    {
+      "id": "file_docs_brain_zero-entropy-constitution_md",
+      "type": "code_file",
+      "name": "zero-entropy-constitution.md",
+      "weight": 1843.02282539841
+    },
+    {
+      "id": "file_tests_test_cortex_py",
+      "type": "code_file",
+      "name": "test_cortex.py",
+      "weight": 1006.048201826104
+    },
+    {
+      "id": "file_tests_test_mcp_zero_py",
+      "type": "code_file",
+      "name": "test_mcp_zero.py",
+      "weight": 1340.8380512550189
+    },
+    {
+      "id": "file_tests_test_server_py",
+      "type": "code_file",
+      "name": "test_server.py",
+      "weight": 1340.8380512550227
+    },
+    {
+      "id": "file_tests_run_tests_py",
+      "type": "code_file",
+      "name": "run_tests.py",
+      "weight": 503.8634276826149
+    },
+    {
+      "id": "file_tests_test_mcp_demo_py",
+      "type": "code_file",
+      "name": "test_mcp_demo.py",
+      "weight": 559.442939699142
+    },
+    {
+      "id": "file_tests_test_singularity_load_py",
+      "type": "code_file",
+      "name": "test_singularity_load.py",
+      "weight": 1006.048201826104
+    },
+    {
+      "id": "file_CONTRIBUTING_md",
+      "type": "code_file",
+      "name": "CONTRIBUTING.md",
+      "weight": 860.2023440766279
+    },
+    {
+      "id": "file_CODE_OF_CONDUCT_md",
+      "type": "code_file",
+      "name": "CODE_OF_CONDUCT.md",
+      "weight": 1003.5208713909723
+    },
+    {
+      "id": "file_patch_harvester_py",
+      "type": "code_file",
+      "name": "patch_harvester.py",
+      "weight": 5.841073585103116
+    },
+    {
+      "id": "file_patch_reason_import_py",
+      "type": "code_file",
+      "name": "patch_reason_import.py",
+      "weight": 3.0661268877897356
+    },
+    {
+      "id": "file_patch_nexus_init_py",
+      "type": "code_file",
+      "name": "patch_nexus_init.py",
+      "weight": 3.0661268877897356
+    },
+    {
+      "id": "file_patch_reason_journal_py",
+      "type": "code_file",
+      "name": "patch_reason_journal.py",
+      "weight": 3.0661268877897356
+    },
+    {
+      "id": "file_patch_tests_py",
+      "type": "code_file",
+      "name": "patch_tests.py",
+      "weight": 3.0661268877897356
+    },
+    {
+      "id": "file_patch_evolution_py",
+      "type": "code_file",
+      "name": "patch_evolution.py",
+      "weight": 3.0661268877897356
+    },
+    {
+      "id": "file_patch_cortex_py",
+      "type": "code_file",
+      "name": "patch_cortex.py",
+      "weight": 3.0661268877897356
+    },
+    {
+      "id": "file_patch_reason_py",
+      "type": "code_file",
+      "name": "patch_reason.py",
+      "weight": 3.0661268877897356
+    },
+    {
+      "id": "file_patch_nexus_py",
+      "type": "code_file",
+      "name": "patch_nexus.py",
+      "weight": 3.0661268877897356
+    },
+    {
+      "id": "file_patch_scholar_py",
+      "type": "code_file",
+      "name": "patch_scholar.py",
+      "weight": 3.0661268877897356
+    },
+    {
+      "id": "doc_section_security_policy",
+      "type": "doc_section",
+      "name": "Security Policy",
+      "weight": 14.165913677043271
+    },
+    {
+      "id": "doc_section_supported_versions",
+      "type": "doc_section",
+      "name": "Supported Versions",
+      "weight": 14.165913677043271
+    },
+    {
+      "id": "doc_section_reporting_a_vulnerability",
+      "type": "doc_section",
+      "name": "Reporting a Vulnerability",
+      "weight": 14.165913677043271
+    },
+    {
+      "id": "doc_section_\u5b89\u5168\u7b56\u7565_security_policy",
+      "type": "doc_section",
+      "name": "\u5b89\u5168\u7b56\u7565 (Security Policy)",
+      "weight": 321.2062961328982
+    },
+    {
+      "id": "doc_section_\u652f\u6301\u7248\u672c_supported_versions",
+      "type": "doc_section",
+      "name": "\u652f\u6301\u7248\u672c (Supported Versions)",
+      "weight": 321.2062961328981
+    },
+    {
+      "id": "doc_section_\u62a5\u544a\u6f0f\u6d1e_reporting_a_vulnerability",
+      "type": "doc_section",
+      "name": "\u62a5\u544a\u6f0f\u6d1e (Reporting a Vulnerability)",
+      "weight": 321.2062961328981
+    },
+    {
+      "id": "doc_section_contributing",
+      "type": "doc_section",
+      "name": "CONTRIBUTING",
+      "weight": 102.9642079910701
+    },
+    {
+      "id": "doc_section_1_\u57fa\u672c\u539f\u5219",
+      "type": "doc_section",
+      "name": "1 \u57fa\u672c\u539f\u5219",
+      "weight": 102.9642079910701
+    },
+    {
+      "id": "doc_section_2_\u8d21\u732e\u65b9\u5f0f",
+      "type": "doc_section",
+      "name": "2 \u8d21\u732e\u65b9\u5f0f",
+      "weight": 102.9642079910701
+    },
+    {
+      "id": "doc_section_2_1_issue",
+      "type": "doc_section",
+      "name": "2 1 Issue",
+      "weight": 102.9642079910701
+    },
+    {
+      "id": "doc_section_2_2_pull_request",
+      "type": "doc_section",
+      "name": "2 2 Pull Request",
+      "weight": 102.9642079910701
+    },
+    {
+      "id": "doc_section_3_\u4ee3\u7801\u89c4\u8303",
+      "type": "doc_section",
+      "name": "3 \u4ee3\u7801\u89c4\u8303",
+      "weight": 102.9642079910701
+    },
+    {
+      "id": "doc_section_4_\u4e0d\u63a5\u53d7\u7684\u8d21\u732e",
+      "type": "doc_section",
+      "name": "4 \u4e0d\u63a5\u53d7\u7684\u8d21\u732e",
+      "weight": 102.9642079910701
+    },
+    {
+      "id": "doc_section_5_\u884c\u4e3a\u51c6\u5219",
+      "type": "doc_section",
+      "name": "5 \u884c\u4e3a\u51c6\u5219",
+      "weight": 102.96420799107007
+    },
+    {
+      "id": "doc_section_6_\u8bb8\u53ef",
+      "type": "doc_section",
+      "name": "6 \u8bb8\u53ef",
+      "weight": 102.96420799107007
+    },
+    {
+      "id": "doc_section_7_\u8d21\u732e\u8005\u7f72\u540d",
+      "type": "doc_section",
+      "name": "7 \u8d21\u732e\u8005\u7f72\u540d",
+      "weight": 102.96420799107007
+    },
+    {
+      "id": "doc_section_contributor_covenant_code_of_conduct",
+      "type": "doc_section",
+      "name": "Contributor Covenant Code of Conduct",
+      "weight": 102.9642079910701
+    },
+    {
+      "id": "doc_section_our_pledge",
+      "type": "doc_section",
+      "name": "Our Pledge",
+      "weight": 102.9642079910701
+    },
+    {
+      "id": "doc_section_our_standards",
+      "type": "doc_section",
+      "name": "Our Standards",
+      "weight": 102.96420799107003
+    },
+    {
+      "id": "doc_section_enforcement_responsibilities",
+      "type": "doc_section",
+      "name": "Enforcement Responsibilities",
+      "weight": 102.96420799107003
+    },
+    {
+      "id": "doc_section_scope",
+      "type": "doc_section",
+      "name": "Scope",
+      "weight": 102.96420799107001
+    },
+    {
+      "id": "doc_section_enforcement",
+      "type": "doc_section",
+      "name": "Enforcement",
+      "weight": 102.96420799107001
+    },
+    {
+      "id": "doc_section_enforcement_guidelines",
+      "type": "doc_section",
+      "name": "Enforcement Guidelines",
+      "weight": 102.96420799107001
+    },
+    {
+      "id": "doc_section_1_correction",
+      "type": "doc_section",
+      "name": "1. Correction",
+      "weight": 102.96420799107001
+    },
+    {
+      "id": "doc_section_2_warning",
+      "type": "doc_section",
+      "name": "2. Warning",
+      "weight": 102.96420799107
+    },
+    {
+      "id": "doc_section_3_temporary_ban",
+      "type": "doc_section",
+      "name": "3. Temporary Ban",
+      "weight": 102.96420799107
+    },
+    {
+      "id": "doc_section_4_permanent_ban",
+      "type": "doc_section",
+      "name": "4. Permanent Ban",
+      "weight": 102.96420799107007
+    },
+    {
+      "id": "doc_section_attribution",
+      "type": "doc_section",
+      "name": "Attribution",
+      "weight": 102.96420799107007
+    },
+    {
+      "id": "doc_section_\u8d21\u732e\u6307\u5357_contributing",
+      "type": "doc_section",
+      "name": "\u8d21\u732e\u6307\u5357 (CONTRIBUTING)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_1_\u57fa\u672c\u539f\u5219_fundamental_principles",
+      "type": "doc_section",
+      "name": "1 \u57fa\u672c\u539f\u5219 (Fundamental Principles)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_2_\u8d21\u732e\u65b9\u5f0f_contribution_methods",
+      "type": "doc_section",
+      "name": "2 \u8d21\u732e\u65b9\u5f0f (Contribution Methods)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_21_\u8bae\u9898_issue",
+      "type": "doc_section",
+      "name": "2_1 \u8bae\u9898 (Issue)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_22_\u62c9\u53d6\u8bf7\u6c42_pull_request",
+      "type": "doc_section",
+      "name": "2_2 \u62c9\u53d6\u8bf7\u6c42 (Pull Request)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_3_\u4ee3\u7801\u89c4\u8303_code_conventions",
+      "type": "doc_section",
+      "name": "3 \u4ee3\u7801\u89c4\u8303 (Code Conventions)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_4_\u4e0d\u63a5\u53d7\u7684\u8d21\u732e_unacceptable_contributions",
+      "type": "doc_section",
+      "name": "4 \u4e0d\u63a5\u53d7\u7684\u8d21\u732e (Unacceptable Contributions)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_5_\u884c\u4e3a\u51c6\u5219_code_of_conduct",
+      "type": "doc_section",
+      "name": "5 \u884c\u4e3a\u51c6\u5219 (Code of Conduct)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_6_\u8bb8\u53ef_license",
+      "type": "doc_section",
+      "name": "6 \u8bb8\u53ef (License)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_7_\u8d21\u732e\u8005\u7f72\u540d_contributor_attribution",
+      "type": "doc_section",
+      "name": "7 \u8d21\u732e\u8005\u7f72\u540d (Contributor Attribution)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_\u884c\u4e3a\u51c6\u5219_code_of_conduct",
+      "type": "doc_section",
+      "name": "\u884c\u4e3a\u51c6\u5219 (Code of Conduct)",
+      "weight": 40.90432634973789
+    },
+    {
+      "id": "doc_section_\u627f\u8bfa_our_pledge",
+      "type": "doc_section",
+      "name": "\u627f\u8bfa (Our Pledge)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_\u6807\u51c6_our_standards",
+      "type": "doc_section",
+      "name": "\u6807\u51c6 (Our Standards)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_\u8d23\u4efb_enforcement_responsibilities",
+      "type": "doc_section",
+      "name": "\u8d23\u4efb (Enforcement Responsibilities)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_\u8303\u56f4_scope",
+      "type": "doc_section",
+      "name": "\u8303\u56f4 (Scope)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_\u6267\u884c_enforcement",
+      "type": "doc_section",
+      "name": "\u6267\u884c (Enforcement)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_\u6307\u5357_enforcement_guidelines",
+      "type": "doc_section",
+      "name": "\u6307\u5357 (Enforcement Guidelines)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_1_\u7ea0\u6b63_correction",
+      "type": "doc_section",
+      "name": "1 \u7ea0\u6b63 (Correction)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_2_\u8b66\u544a_warning",
+      "type": "doc_section",
+      "name": "2 \u8b66\u544a (Warning)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_3_\u6682\u65f6\u7981\u8a00_temporary_ban",
+      "type": "doc_section",
+      "name": "3 \u6682\u65f6\u7981\u8a00 (Temporary Ban)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_4_\u6c38\u4e45\u7981\u8a00_permanent_ban",
+      "type": "doc_section",
+      "name": "4 \u6c38\u4e45\u7981\u8a00 (Permanent Ban)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "doc_section_\u5f52\u5c5e_attribution",
+      "type": "doc_section",
+      "name": "\u5f52\u5c5e (Attribution)",
+      "weight": 40.904326349737914
+    },
+    {
+      "id": "file_graph_index_json",
+      "type": "code_file",
+      "name": "index.json",
+      "weight": 1.235
+    }
+  ],
+  "edges": [
+    {
+      "source": "file_README_md",
+      "relation": "documents",
+      "target": "core_concept_nexus_core_singularity",
+      "weight": 1.0
+    },
+    {
+      "source": "file_README_md",
+      "relation": "documents",
+      "target": "core_concept_\u5baa\u7ae0_the_constitution",
+      "weight": 1.0
+    },
+    {
+      "source": "file_README_md",
+      "relation": "documents",
+      "target": "core_concept_\u67b6\u6784\u77e9\u9635_architecture_matrix",
+      "weight": 1.0
+    },
+    {
+      "source": "file_README_md",
+      "relation": "documents",
+      "target": "core_concept_\u542f\u52a8\u6307\u5f15_execution_commands",
+      "weight": 1.0
+    },
+    {
+      "source": "file_README_md",
+      "relation": "documents",
+      "target": "core_concept_\u6fc0\u6d3b\u5b9e\u9a8c\u7ec8\u7aef_launch_laboratory_web_portal",
+      "weight": 1.0
+    },
+    {
+      "source": "file_README_md",
+      "relation": "documents",
+      "target": "core_concept_\u9a8c\u8bc1\u7cfb\u7edf\u5b8c\u5907\u6027_verification_tests",
+      "weight": 1.0
+    },
+    {
+      "source": "file_README_md",
+      "relation": "documents",
+      "target": "core_concept_\u5de5\u7a0b\u54f2\u5b66_why_zeroentropy",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_README_md",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_index_html",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_LICENSE",
+      "weight": 1.0
+    },
+    {
+      "source": "file_SECURITY_md",
+      "relation": "documents",
+      "target": "doc_section_\u5b89\u5168\u7b56\u7565_security_policy",
+      "weight": 1.0
+    },
+    {
+      "source": "file_SECURITY_md",
+      "relation": "documents",
+      "target": "doc_section_\u652f\u6301\u7248\u672c_supported_versions",
+      "weight": 1.0
+    },
+    {
+      "source": "file_SECURITY_md",
+      "relation": "documents",
+      "target": "doc_section_\u62a5\u544a\u6f0f\u6d1e_reporting_a_vulnerability",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_SECURITY_md",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_assets_background_png",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_test_mcp_py",
+      "relation": "defines",
+      "target": "func_test_mcp_server",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_test_mcp_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_factory_py",
+      "relation": "defines",
+      "target": "class_KnowledgeFactory",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_factory_py",
+      "relation": "defines",
+      "target": "func___init__",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_factory_py",
+      "relation": "defines",
+      "target": "func_add_entity",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_factory_py",
+      "relation": "defines",
+      "target": "func_touch_entity",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_factory_py",
+      "relation": "defines",
+      "target": "func_activate_memory",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_factory_py",
+      "relation": "defines",
+      "target": "func_add_relation",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_factory_py",
+      "relation": "defines",
+      "target": "func__append_line",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_factory_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_mcp_demo_py",
+      "relation": "defines",
+      "target": "func_validate_id",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_mcp_demo_py",
+      "relation": "defines",
+      "target": "func_validate_category",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_mcp_demo_py",
+      "relation": "defines",
+      "target": "func_get_entropy_stats",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_mcp_demo_py",
+      "relation": "defines",
+      "target": "func_get_entropy_report",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_mcp_demo_py",
+      "relation": "defines",
+      "target": "func_get_current_time",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_mcp_demo_py",
+      "relation": "defines",
+      "target": "func_add_entity",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_mcp_demo_py",
+      "relation": "defines",
+      "target": "func_connect_entities",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_mcp_demo_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel___init___py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_logger_py",
+      "relation": "defines",
+      "target": "class_JsonFormatter",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_logger_py",
+      "relation": "defines",
+      "target": "func_setup_logger",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_logger_py",
+      "relation": "defines",
+      "target": "func_format",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_logger_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_mcp_py",
+      "relation": "defines",
+      "target": "class_BaseSkill",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_mcp_py",
+      "relation": "defines",
+      "target": "class_MCPRegistry",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_mcp_py",
+      "relation": "defines",
+      "target": "class_CortexSearchSkill",
+      "weight": 1.0
+    },
+    {
+      "source": "class_CortexSearchSkill",
+      "relation": "inherits_from",
+      "target": "class_BaseSkill",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_mcp_py",
+      "relation": "defines",
+      "target": "class_CortexMemorizeSkill",
+      "weight": 1.0
+    },
+    {
+      "source": "class_CortexMemorizeSkill",
+      "relation": "inherits_from",
+      "target": "class_BaseSkill",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_mcp_py",
+      "relation": "defines",
+      "target": "class_CortexSynapseSkill",
+      "weight": 1.0
+    },
+    {
+      "source": "class_CortexSynapseSkill",
+      "relation": "inherits_from",
+      "target": "class_BaseSkill",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_mcp_py",
+      "relation": "defines",
+      "target": "class_CortexEnrichSkill",
+      "weight": 1.0
+    },
+    {
+      "source": "class_CortexEnrichSkill",
+      "relation": "inherits_from",
+      "target": "class_BaseSkill",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_mcp_py",
+      "relation": "defines",
+      "target": "class_CortexDailyBriefSkill",
+      "weight": 1.0
+    },
+    {
+      "source": "class_CortexDailyBriefSkill",
+      "relation": "inherits_from",
+      "target": "class_BaseSkill",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_mcp_py",
+      "relation": "defines",
+      "target": "func_get_mcp_tool_schema",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_mcp_py",
+      "relation": "defines",
+      "target": "func_execute",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_mcp_py",
+      "relation": "defines",
+      "target": "func___init__",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_mcp_py",
+      "relation": "defines",
+      "target": "func_register",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_mcp_py",
+      "relation": "defines",
+      "target": "func_get_all_schemas",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_mcp_py",
+      "relation": "defines",
+      "target": "func_invoke",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_protocol_mcp_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_hive_py",
+      "relation": "defines",
+      "target": "class_HiveMind",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_hive_py",
+      "relation": "defines",
+      "target": "func___init__",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_hive_py",
+      "relation": "defines",
+      "target": "func_start_listening",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_hive_py",
+      "relation": "defines",
+      "target": "func__listen_loop",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_hive_py",
+      "relation": "defines",
+      "target": "func__process_hive_signal",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_hive_py",
+      "relation": "defines",
+      "target": "func_broadcast",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_hive_py",
+      "relation": "defines",
+      "target": "func_stop",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_protocol_hive_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_mcp_py",
+      "relation": "defines",
+      "target": "class_MCPServer",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_mcp_py",
+      "relation": "defines",
+      "target": "func___init__",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_mcp_py",
+      "relation": "defines",
+      "target": "func_handle_request",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_mcp_py",
+      "relation": "defines",
+      "target": "func_run",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_protocol_nexus_mcp_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "class_APIResponse",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "class_TokenBucket",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "class_ThreadedNexusServer",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "class_FlusherThread",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "class_SubconsciousThread",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "class_NexusHandler",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "func_main",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "func___init__",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "func_consume",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "func_run",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "func__check_auth",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "func_do_GET",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "func_do_OPTIONS",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "func_do_POST",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_protocol_nexus_py",
+      "relation": "defines",
+      "target": "func_handle_api",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_protocol_nexus_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_protocol___init___py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_cognitive_reason_py",
+      "relation": "defines",
+      "target": "func__compute_pagerank_chunk",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_cognitive_reason_py",
+      "relation": "defines",
+      "target": "class_ReasoningEngine",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_cognitive_reason_py",
+      "relation": "defines",
+      "target": "func___init__",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_cognitive_reason_py",
+      "relation": "defines",
+      "target": "func_ponder",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_cognitive_reason_py",
+      "relation": "defines",
+      "target": "func__enrich_nodes_from_network",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_cognitive_reason_py",
+      "relation": "defines",
+      "target": "func__generate_status",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_cognitive_reason_py",
+      "relation": "defines",
+      "target": "func__find_sparse_nodes",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_cognitive_reason_py",
+      "relation": "defines",
+      "target": "func__awaken_pagerank",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_cognitive_reason_py",
+      "relation": "defines",
+      "target": "func__query",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_cognitive_reason_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_cognitive_nlp_py",
+      "relation": "defines",
+      "target": "class_CognitiveReranker",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_cognitive_nlp_py",
+      "relation": "defines",
+      "target": "func_cosine_similarity",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_cognitive_nlp_py",
+      "relation": "defines",
+      "target": "func_rerank_and_fuse",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_cognitive_nlp_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_cognitive___init___py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_harvester_py",
+      "relation": "defines",
+      "target": "class_Harvester",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_harvester_py",
+      "relation": "defines",
+      "target": "func___init__",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_harvester_py",
+      "relation": "defines",
+      "target": "func__load_state",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_harvester_py",
+      "relation": "defines",
+      "target": "func__save_state",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_harvester_py",
+      "relation": "defines",
+      "target": "func__extract_tags",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_harvester_py",
+      "relation": "defines",
+      "target": "func_fetch_github_data",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_sensory_harvester_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_scholar_py",
+      "relation": "defines",
+      "target": "class_Scholar",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_scholar_py",
+      "relation": "defines",
+      "target": "func___init__",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_scholar_py",
+      "relation": "defines",
+      "target": "func__load_config",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_scholar_py",
+      "relation": "defines",
+      "target": "func_ingest_repository",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_scholar_py",
+      "relation": "defines",
+      "target": "func__digest_file",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_scholar_py",
+      "relation": "defines",
+      "target": "func__analyze_python_ast",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_scholar_py",
+      "relation": "defines",
+      "target": "func__analyze_markdown_structure",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_sensory_scholar_py",
+      "relation": "defines",
+      "target": "func_learn",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_sensory_scholar_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_sensory___init___py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_orchestration_evolution_py",
+      "relation": "defines",
+      "target": "class_Evolver",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_orchestration_evolution_py",
+      "relation": "defines",
+      "target": "func___init__",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_orchestration_evolution_py",
+      "relation": "defines",
+      "target": "func_run_daily_cycle",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_orchestration_evolution_py",
+      "relation": "defines",
+      "target": "func__incubate_ideas",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_orchestration_evolution_py",
+      "relation": "defines",
+      "target": "func__generate_cognitive_report",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_orchestration_evolution_py",
+      "relation": "defines",
+      "target": "func__scan_inputs",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_orchestration_evolution_py",
+      "relation": "defines",
+      "target": "func__archive_inputs",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_orchestration_evolution_py",
+      "relation": "defines",
+      "target": "func__analyze_file_content",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_orchestration_evolution_py",
+      "relation": "defines",
+      "target": "func__generate_mission",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_orchestration_evolution_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_orchestration___init___py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "class_Cortex",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func___init__",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func__init_db",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func__get_last_hash",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func__log_to_jsonl",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_search",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_add_entity",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func__sign_memory",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_verify_memory",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_deep_synapse_scan",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_add_entities_batch",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_connect_entities",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_connect_entities_batch",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_activate_memory",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_decay_memories",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_get_orphans",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_get_stats",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_log_event",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_vacuum",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_memory_cortex_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_kernel_memory___init___py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_scripts_translations_js",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_src_styles_main_css",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_mcp_demo_py",
+      "relation": "defines",
+      "target": "class_TestMCPDemo",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_mcp_demo_py",
+      "relation": "defines",
+      "target": "func_test_validate_category_success",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_mcp_demo_py",
+      "relation": "defines",
+      "target": "func_test_validate_category_failure",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_mcp_demo_py",
+      "relation": "defines",
+      "target": "func_test_validate_category_edge_cases",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_tests_test_mcp_demo_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_cortex_py",
+      "relation": "defines",
+      "target": "class_TestCortex",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_cortex_py",
+      "relation": "defines",
+      "target": "func_setUp",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_cortex_py",
+      "relation": "defines",
+      "target": "func_tearDown",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_cortex_py",
+      "relation": "defines",
+      "target": "func_test_knowledge_graph",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_tests_test_cortex_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_run_tests_py",
+      "relation": "defines",
+      "target": "func_run_all",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_tests_run_tests_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_mcp_zero_py",
+      "relation": "defines",
+      "target": "class_TestMCPZeroProtocol",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_mcp_zero_py",
+      "relation": "defines",
+      "target": "func_setUpClass",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_mcp_zero_py",
+      "relation": "defines",
+      "target": "func_tearDownClass",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_mcp_zero_py",
+      "relation": "defines",
+      "target": "func_test_mcp_tools_discovery",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_mcp_zero_py",
+      "relation": "defines",
+      "target": "func_test_mcp_invoke_success",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_mcp_zero_py",
+      "relation": "defines",
+      "target": "func_test_mcp_invoke_missing_tool",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_tests_test_mcp_zero_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_singularity_load_py",
+      "relation": "defines",
+      "target": "class_TestSingularityLoad",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_singularity_load_py",
+      "relation": "defines",
+      "target": "func_setUp",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_singularity_load_py",
+      "relation": "defines",
+      "target": "func_test_concurrent_writes",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_singularity_load_py",
+      "relation": "defines",
+      "target": "func_write_task",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_tests_test_singularity_load_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_server_py",
+      "relation": "defines",
+      "target": "class_TestServerAPI",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_server_py",
+      "relation": "defines",
+      "target": "func_setUpClass",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_server_py",
+      "relation": "defines",
+      "target": "func_tearDownClass",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_server_py",
+      "relation": "defines",
+      "target": "func_test_api_status",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_server_py",
+      "relation": "defines",
+      "target": "func_test_api_invalid_endpoint",
+      "weight": 1.0
+    },
+    {
+      "source": "file_tests_test_server_py",
+      "relation": "defines",
+      "target": "func_test_static_serve",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_tests_test_server_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_docs_brain_zero-entropy-constitution_md",
+      "relation": "documents",
+      "target": "architecture_concept_\u6838\u5fc3\u7406\u5ff5_core_philosophy",
+      "weight": 1.0
+    },
+    {
+      "source": "file_docs_brain_zero-entropy-constitution_md",
+      "relation": "documents",
+      "target": "architecture_concept_zeroentropy_lab__constitution",
+      "weight": 1.0
+    },
+    {
+      "source": "file_docs_brain_zero-entropy-constitution_md",
+      "relation": "documents",
+      "target": "architecture_concept_0_\u6838\u5fc3\u613f\u666f_vision",
+      "weight": 1.0
+    },
+    {
+      "source": "file_docs_brain_zero-entropy-constitution_md",
+      "relation": "documents",
+      "target": "architecture_concept_1_\u7269\u7406\u67b6\u6784_topological_rules",
+      "weight": 1.0
+    },
+    {
+      "source": "file_docs_brain_zero-entropy-constitution_md",
+      "relation": "documents",
+      "target": "architecture_concept_2_\u7edd\u5bf9\u6cd5\u5219_the_laws",
+      "weight": 1.0
+    },
+    {
+      "source": "file_docs_brain_zero-entropy-constitution_md",
+      "relation": "documents",
+      "target": "architecture_concept_21_\u96f6\u5916\u90e8\u4f9d\u8d56_absolute_zerodependency",
+      "weight": 1.0
+    },
+    {
+      "source": "file_docs_brain_zero-entropy-constitution_md",
+      "relation": "documents",
+      "target": "architecture_concept_22_\u6781\u7b80\u5de5\u7a0b_fundamentalist_engineering",
+      "weight": 1.0
+    },
+    {
+      "source": "file_docs_brain_zero-entropy-constitution_md",
+      "relation": "documents",
+      "target": "architecture_concept_23_\u516c\u5f00\u900f\u660e_public_transparency",
+      "weight": 1.0
+    },
+    {
+      "source": "file_docs_brain_zero-entropy-constitution_md",
+      "relation": "documents",
+      "target": "architecture_concept_3_\u534f\u4f5c\u51c6\u5219_collaboration",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_docs_brain_zero-entropy-constitution_md",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func_close",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func___enter__",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_memory_cortex_py",
+      "relation": "defines",
+      "target": "func___exit__",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_contributing",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_1_\u57fa\u672c\u539f\u5219",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_2_\u8d21\u732e\u65b9\u5f0f",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_2_1_issue",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_2_2_pull_request",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_3_\u4ee3\u7801\u89c4\u8303",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_4_\u4e0d\u63a5\u53d7\u7684\u8d21\u732e",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_5_\u884c\u4e3a\u51c6\u5219",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_6_\u8bb8\u53ef",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_7_\u8d21\u732e\u8005\u7f72\u540d",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_CONTRIBUTING_md",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_contributor_covenant_code_of_conduct",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_our_pledge",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_our_standards",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_enforcement_responsibilities",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_scope",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_enforcement",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_enforcement_guidelines",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_1_correction",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_2_warning",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_3_temporary_ban",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_4_permanent_ban",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_attribution",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_CODE_OF_CONDUCT_md",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_patch_harvester_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_patch_reason_import_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_patch_nexus_init_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_patch_reason_journal_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_patch_tests_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_patch_evolution_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_patch_cortex_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_\u8d21\u732e\u6307\u5357_contributing",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_1_\u57fa\u672c\u539f\u5219_fundamental_principles",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_2_\u8d21\u732e\u65b9\u5f0f_contribution_methods",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_21_\u8bae\u9898_issue",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_22_\u62c9\u53d6\u8bf7\u6c42_pull_request",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_3_\u4ee3\u7801\u89c4\u8303_code_conventions",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_4_\u4e0d\u63a5\u53d7\u7684\u8d21\u732e_unacceptable_contributions",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_5_\u884c\u4e3a\u51c6\u5219_code_of_conduct",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_6_\u8bb8\u53ef_license",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CONTRIBUTING_md",
+      "relation": "documents",
+      "target": "doc_section_7_\u8d21\u732e\u8005\u7f72\u540d_contributor_attribution",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_\u884c\u4e3a\u51c6\u5219_code_of_conduct",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_\u627f\u8bfa_our_pledge",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_\u6807\u51c6_our_standards",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_\u8d23\u4efb_enforcement_responsibilities",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_\u8303\u56f4_scope",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_\u6267\u884c_enforcement",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_\u6307\u5357_enforcement_guidelines",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_1_\u7ea0\u6b63_correction",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_2_\u8b66\u544a_warning",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_3_\u6682\u65f6\u7981\u8a00_temporary_ban",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_4_\u6c38\u4e45\u7981\u8a00_permanent_ban",
+      "weight": 1.0
+    },
+    {
+      "source": "file_CODE_OF_CONDUCT_md",
+      "relation": "documents",
+      "target": "doc_section_\u5f52\u5c5e_attribution",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_patch_reason_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_patch_nexus_py",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_patch_scholar_py",
+      "weight": 1.0
+    },
+    {
+      "source": "file_SECURITY_md",
+      "relation": "documents",
+      "target": "doc_section_security_policy",
+      "weight": 1.0
+    },
+    {
+      "source": "file_SECURITY_md",
+      "relation": "documents",
+      "target": "doc_section_supported_versions",
+      "weight": 1.0
+    },
+    {
+      "source": "file_SECURITY_md",
+      "relation": "documents",
+      "target": "doc_section_reporting_a_vulnerability",
+      "weight": 1.0
+    },
+    {
+      "source": "file_src_kernel_cognitive_reason_py",
+      "relation": "defines",
+      "target": "func__compute_chunk",
+      "weight": 1.0
+    },
+    {
+      "source": "repo_zero_entropy_lab",
+      "relation": "contains",
+      "target": "file_graph_index_json",
+      "weight": 1.0
+    }
+  ]
+}
