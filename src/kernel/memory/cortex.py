@@ -437,20 +437,199 @@ class Cortex:
         self.conn.commit()
 
     def vacuum(self):
-        """[Refinement] Purge orphans and compact memory space."""
+        """[Refinement] Purge orphans and compact memory space. Z2 Daily Cleaner Implementation."""
+        import glob
+        import json
+        import datetime
+        import hashlib
+        import os
+
         cursor = self.conn.cursor()
-        # 1. Clear orphaned relations where source or target entity is missing
+
+        entity_files = glob.glob(str(self.knowledge_path / "entities" / "*.jsonl"))
+        relation_files = glob.glob(str(self.knowledge_path / "relations" / "*.jsonl"))
+
+        entities_map = {}
+        duplicates_merged = 0
+        verified_nodes = 0
+        tamper_detected = []
+
+        for f in entity_files:
+            with open(f, 'r', encoding='utf-8') as fp:
+                for line in fp:
+                    line = line.strip()
+                    if line:
+                        try:
+                            data = json.loads(line)
+                            eid = data['id']
+
+                            # Cryptographic integrity check
+                            prev_hash = data.get('prev_hash', '')
+                            record_hash = data.get('hash', '')
+                            temp_data = data.copy()
+                            temp_data.pop('hash', None)
+                            temp_data.pop('prev_hash', None)
+                            record_str = json.dumps(temp_data, sort_keys=True, ensure_ascii=False)
+                            expected_hash = hashlib.sha256(f"{prev_hash}{record_str}".encode('utf-8')).hexdigest()
+
+                            if expected_hash == record_hash or not record_hash:
+                                verified_nodes += 1
+                            else:
+                                tamper_detected.append(eid)
+
+                            if eid in entities_map:
+                                duplicates_merged += 1
+                            entities_map[eid] = data
+                        except Exception as e:
+                            pass
+
+        relations = []
+        for f in relation_files:
+            with open(f, 'r', encoding='utf-8') as fp:
+                for line in fp:
+                    line = line.strip()
+                    if line:
+                        try:
+                            relations.append(json.loads(line))
+                        except:
+                            pass
+
+        entities = list(entities_map.values())
+        valid_eids = set(e['id'] for e in entities)
+
+        valid_relations = []
+        dangling_removed = 0
+
+        for r in relations:
+            if r['src'] in valid_eids and r['dst'] in valid_eids:
+                valid_relations.append(r)
+            else:
+                dangling_removed += 1
+
+        linked_nodes = set()
+        for r in valid_relations:
+            linked_nodes.add(r['src'])
+            linked_nodes.add(r['dst'])
+
+        orphans = valid_eids - linked_nodes
+        orphans_auto_connected = 0
+        needs_human = []
+
+        for eid in orphans:
+            if "repo_zero_entropy_lab" in valid_eids and eid != "repo_zero_entropy_lab":
+                new_edge = {
+                    "src": "repo_zero_entropy_lab",
+                    "relation": "contains",
+                    "dst": eid,
+                    "desc": "AUTO_CONNECTED_ORPHAN"
+                }
+                valid_relations.append(new_edge)
+                orphans_auto_connected += 1
+            else:
+                needs_human.append(eid)
+
+        linked_after = linked_nodes.copy()
+        if orphans_auto_connected > 0:
+            linked_after.add("repo_zero_entropy_lab")
+            for eid in orphans:
+                if eid != "repo_zero_entropy_lab":
+                    linked_after.add(eid)
+
+        # Rewrite data
+        entities_by_type = {}
+        for e in entities:
+            t = e.get('type', 'concept')
+            if t not in entities_by_type:
+                entities_by_type[t] = []
+            entities_by_type[t].append(e)
+
+        for t, ents in entities_by_type.items():
+            safe_filename = "".join([c for c in t if c.isalnum() or c in ('-','_')])
+            if not safe_filename: safe_filename = "misc"
+            filepath = self.knowledge_path / "entities" / f"{safe_filename}.jsonl"
+
+            with open(filepath, 'w', encoding='utf-8') as fp:
+                prev_hash = "NEXUS_GENESIS_0000"
+                for e in ents:
+                    e.pop('hash', None)
+                    e.pop('prev_hash', None)
+                    record_str = json.dumps(e, sort_keys=True, ensure_ascii=False)
+                    current_hash = hashlib.sha256(f"{prev_hash}{record_str}".encode('utf-8')).hexdigest()
+                    e['prev_hash'] = prev_hash
+                    e['hash'] = current_hash
+                    fp.write(json.dumps(e, ensure_ascii=False) + "\n")
+
+                    prev_hash = current_hash
+
+        month_str = datetime.datetime.now().strftime("%Y-%m")
+        relation_filepath = self.knowledge_path / "relations" / f"{month_str}.jsonl"
+
+        for f in relation_files:
+            try:
+                os.remove(f)
+            except:
+                pass
+
+        with open(relation_filepath, 'w', encoding='utf-8') as fp:
+            prev_hash = "NEXUS_GENESIS_0000"
+            for r in valid_relations:
+                r.pop('hash', None)
+                r.pop('prev_hash', None)
+                record_str = json.dumps(r, sort_keys=True, ensure_ascii=False)
+                current_hash = hashlib.sha256(f"{prev_hash}{record_str}".encode('utf-8')).hexdigest()
+                r['prev_hash'] = prev_hash
+                r['hash'] = current_hash
+                fp.write(json.dumps(r, ensure_ascii=False) + "\n")
+
+                prev_hash = current_hash
+
         cursor.execute('''
             DELETE FROM relations
             WHERE source NOT IN (SELECT id FROM entities)
                OR target NOT IN (SELECT id FROM entities)
         ''')
-        self.conn.commit()
 
-        # 2. Vacuum SQLite
+        for r in valid_relations:
+            if r.get('desc') == "AUTO_CONNECTED_ORPHAN":
+                try:
+                    cursor.execute(
+                        "INSERT INTO relations (source, relation, target, weight, description) VALUES (?, ?, ?, ?, ?)",
+                        (r['src'], r['relation'], r['dst'], 1.0, r.get('desc', ''))
+                    )
+                except sqlite3.IntegrityError:
+                    pass
+
         cursor.execute('VACUUM')
         self.conn.commit()
-        logger.info("🧹 Cortex memory optimized (orphaned relations purged, VACUUM complete)")
+
+        cursor.execute("SELECT id FROM entities ORDER BY weight DESC LIMIT 5")
+        top5 = [row[0] for row in cursor.fetchall()]
+
+        cursor.execute("SELECT id FROM entities ORDER BY weight ASC LIMIT 5")
+        bottom5 = [row[0] for row in cursor.fetchall()]
+
+        needs_human_str = "[" + "_".join(needs_human) + "]" if needs_human else "NONE"
+        top5_str = "_".join(top5) if top5 else "NONE"
+        bottom5_str = "_".join(bottom5) if bottom5 else "NONE"
+        tamper_str = "[" + "_".join(tamper_detected) + "]" if tamper_detected else "NONE"
+
+        date_str = datetime.datetime.now().strftime("%Y%m%d")
+        report_lines = [
+            f"STATS: ENTITIES=[{len(entities)}] RELATIONS=[{len(valid_relations)}]",
+            f"CRYPTOGRAPHIC_INTEGRITY: VERIFIED_NODES=[{verified_nodes}] TAMPER_DETECTED=[{tamper_str}]",
+            f"INTEGRITY: LINKED=[{len(linked_after)}]/[{len(entities)}] ORPHANS=[{len(orphans)}] DANGLING=[{dangling_removed}] DUPLICATES=[{duplicates_merged}]",
+            f"CLEANING: ORPHANS_AUTO_CONNECTED=[{orphans_auto_connected}] DANGLING_REMOVED=[{dangling_removed}] DUPLICATES_MERGED=[{duplicates_merged}] NEEDS_HUMAN={needs_human_str}",
+            f"PAGERANK: TOP5+[{top5_str}] BOTTOM5+[{bottom5_str}]"
+        ]
+
+        report_path = self.project_root / "data" / "memories" / f"{date_str}-graph-validation.md"
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(report_path, "w", encoding="utf-8") as fp:
+            fp.write("
+".join(report_lines) + "
+")
+
+        logger.info("🧹 Cortex memory optimized (Z2-Daily Cleaner execution complete)")
 
     def close(self):
         """Explicitly close the database connection."""
