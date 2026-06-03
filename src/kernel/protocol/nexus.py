@@ -460,19 +460,213 @@ def main():
                 logger.info("\n🛑 System Halting...")
 
     elif args.command == 'clean':
-        logger.info("🧹 Cleaning environment...")
+        logger.info("🧹 Z2-Daily Cleaner Physical Verification and Cortex Cleaning")
         c = Cortex()
-        c.vacuum()
         
-        # Recursive cleaning
+        # Step 1: Read data/knowledge/entities and data/knowledge/relations JSONL data
+        knowledge_path = c.knowledge_path
+        entities_path = knowledge_path / "entities"
+        relations_path = knowledge_path / "relations"
+
+        entities = {}
+        duplicate_ids = set()
+
+        if entities_path.exists():
+            for f in entities_path.glob('*.jsonl'):
+                try:
+                    with open(f, 'r') as file:
+                        for line in file:
+                            data = json.loads(line)
+                            eid = data.get('id')
+                            if eid in entities:
+                                duplicate_ids.add(eid)
+                            entities[eid] = data
+                except Exception as e:
+                    logger.error(f"Error reading {f} {e}")
+
+        relations = []
+        if relations_path.exists():
+            for f in relations_path.glob('*.jsonl'):
+                try:
+                    with open(f, 'r') as file:
+                        for line in file:
+                            data = json.loads(line)
+                            relations.append(data)
+                except Exception as e:
+                    logger.error(f"Error reading {f} {e}")
+
+        # Physical validation & Cleaning
+        valid_relations = []
+        dangling_removed = 0
+        for r in relations:
+            src = r.get('src') or r.get('source')
+            dst = r.get('dst') or r.get('target')
+            if src in entities and dst in entities:
+                r['src'] = src
+                r['dst'] = dst
+                valid_relations.append(r)
+            else:
+                dangling_removed += 1
+
+        connected_entities = set()
+        for r in valid_relations:
+            connected_entities.add(r['src'])
+            connected_entities.add(r['dst'])
+
+        orphans = set(entities.keys()) - connected_entities
+        orphans_auto_connected = 0
+        needs_human = []
+
+        for orphan_id in orphans:
+            if orphan_id == "repo_zero_entropy_lab":
+                continue
+            if "repo_zero_entropy_lab" in entities:
+                valid_relations.append({
+                    "src": "repo_zero_entropy_lab",
+                    "relation": "contains",
+                    "dst": orphan_id,
+                    "desc": ""
+                })
+                orphans_auto_connected += 1
+            else:
+                needs_human.append(orphan_id)
+
+        # Step 2 & 3: Cryptographic integrity verification & Ledger Rewrite
+        verified_nodes = 0
+        tamper_detected = []
+
+        # Verify db entities
+        cursor = c.conn.cursor()
+        db_entities = cursor.execute('SELECT id FROM entities').fetchall()
+        for row in db_entities:
+            eid = row['id']
+            if c.verify_memory(eid):
+                verified_nodes += 1
+            else:
+                tamper_detected.append(eid)
+
+        # Rewrite ledgers
+        def rewrite_ledger(file_path, items_dict_or_list):
+            import hmac, hashlib
+            secret_key = os.environ.get("NEXUS_SECRET_KEY", "absolute-zero-entropy-override").encode('utf-8')
+            prev_hash = "NEXUS_GENESIS_0000"
+
+            with open(file_path, 'w') as f:
+                if isinstance(items_dict_or_list, dict):
+                    items = items_dict_or_list.values()
+                else:
+                    items = items_dict_or_list
+
+                for item in items:
+                    item.pop('hash', None)
+                    item.pop('prev_hash', None)
+                    item['prev_hash'] = prev_hash
+
+                    serialized = json.dumps(item, sort_keys=True)
+                    new_hash = hmac.new(secret_key, serialized.encode('utf-8'), hashlib.sha256).hexdigest()
+                    item['hash'] = new_hash
+                    prev_hash = new_hash
+
+                    f.write(json.dumps(item) + '\n')
+
+        # Group entities by type for ledger rewrite
+        entities_by_type = {}
+        for eid, data in entities.items():
+            t = data.get('type', 'concept')
+            if t not in entities_by_type:
+                entities_by_type[t] = []
+            entities_by_type[t].append(data)
+
+        # Clean entities directory
+        if entities_path.exists():
+            for f in entities_path.glob('*.jsonl'):
+                f.unlink()
+
+        for t, data_list in entities_by_type.items():
+            rewrite_ledger(entities_path / f"{t}.jsonl", data_list)
+
+        # Clean relations directory
+        if relations_path.exists():
+            for f in relations_path.glob('*.jsonl'):
+                f.unlink()
+
+        # Write valid relations to a single ledger file for the month
+        import datetime
+        month_str = datetime.datetime.now().strftime("%Y-%m")
+        rewrite_ledger(relations_path / f"{month_str}.jsonl", valid_relations)
+
+        # Step 4: Pure Python PageRank Calculation
+        def calculate_pagerank(nodes, edges, max_iter=20, d=0.85):
+            N = len(nodes)
+            if N == 0: return {}
+
+            # Initialize PageRank
+            pr = {node: 1.0 / N for node in nodes}
+
+            # Precompute outgoing edge counts and incoming edges
+            out_degree = {node: 0 for node in nodes}
+            in_edges = {node: [] for node in nodes}
+
+            for edge in edges:
+                src, dst = edge.get('src') or edge.get('source'), edge.get('dst') or edge.get('target')
+                if src in nodes and dst in nodes:
+                    out_degree[src] += 1
+                    in_edges[dst].append(src)
+
+            for _ in range(max_iter):
+                new_pr = {}
+                sink_pr = sum(pr[node] for node in nodes if out_degree[node] == 0)
+
+                for node in nodes:
+                    rank_sum = sum(pr[src] / out_degree[src] for src in in_edges[node])
+                    new_pr[node] = (1.0 - d) / N + d * (rank_sum + sink_pr / N)
+
+                pr = new_pr
+
+            return pr
+
+        pageranks = calculate_pagerank(list(entities.keys()), valid_relations)
+        sorted_pr = sorted(pageranks.items(), key=lambda x: x[1], reverse=True)
+        top5 = [k for k, v in sorted_pr[:5]] if len(sorted_pr) >= 5 else [k for k, v in sorted_pr]
+        bottom5 = [k for k, v in sorted_pr[-5:]] if len(sorted_pr) >= 5 else [k for k, v in sorted_pr]
+
+        # Step 5: Generate Report
+        import datetime
+        date_str = datetime.datetime.now().strftime("%Y%m%d")
+        report_path = c.project_root / "data" / "memories" / f"{date_str}-graph-validation.md"
+
+        # Ensure directory exists
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+
+        def format_list(lst):
+            if not lst: return "NONE"
+            return "[" + ",".join(lst) + "]"
+
+        lines = []
+        lines.append(f"STATS: ENTITIES={len(entities)} RELATIONS={len(relations)}")
+        lines.append(f"CRYPTOGRAPHIC_INTEGRITY: VERIFIED_NODES={verified_nodes} TAMPER_DETECTED={format_list(tamper_detected)}")
+        lines.append(f"INTEGRITY: LINKED={len(connected_entities)}/{len(entities)} ORPHANS={len(orphans)} DANGLING={dangling_removed} DUPLICATES={len(duplicate_ids)}")
+        lines.append(f"CLEANING: ORPHANS_AUTO_CONNECTED={orphans_auto_connected} DANGLING_REMOVED={dangling_removed} DUPLICATES_MERGED={len(duplicate_ids)} NEEDS_HUMAN={format_list(needs_human)}")
+        lines.append(f"PAGERANK: TOP5+{format_list(top5)} BOTTOM5+{format_list(bottom5)}")
+
+        with open(report_path, "w") as f:
+            f.write("\n".join(lines) + "\n")
+
+        logger.info(f"Graph Validation Report generated at {report_path}")
+
+        # Existing logic
+        c.vacuum()
         for root, dirs, files in os.walk(c.project_root):
             for d in dirs:
                 if d in ["__pycache__", ".pytest_cache", ".pytest_cache"]:
                     shutil.rmtree(Path(root)/d)
             for f in files:
                 if f.startswith("test_cortex.db") or f.endswith(".pyc"):
-                    os.remove(Path(root)/f)
-        logger.info("✨ Environment purified.")
+                    try:
+                        os.remove(Path(root)/f)
+                    except:
+                        pass
+        logger.info("✨ Environment purified")
 
     elif args.command == 'ponder':
         r = ReasoningEngine()

@@ -46,3 +46,4 @@ build/
 out/
 .cache
 .env
+data/cortex.db
