@@ -1,0 +1,5 @@
+STATS: ENTITIES=257 RELATIONS=28803
+CRYPTOGRAPHIC_INTEGRITY: VERIFIED_NODES=257 TAMPER_DETECTED=NONE
+INTEGRITY: LINKED=257/257 ORPHANS=0 DANGLING=77 DUPLICATES=195
+CLEANING: ORPHANS_AUTO_CONNECTED=0 DANGLING_REMOVED=77 DUPLICATES_MERGED=195 NEEDS_HUMAN=NONE
+PAGERANK: TOP5+[class_BaseSkill,func___init__,func_run_all,func_test_mcp_server,func_main] BOTTOM5+[file_patch_reason_py,file_patch_nexus_py,file_patch_scholar_py,file_z_matrix_executor_py,repo_zero_entropy_lab]
