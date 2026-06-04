@@ -1,9 +1,9 @@
 # NEXUS HARVESTER: Intelligence Dossier
 
-DATE: 2026-06-04 00:11:17 (UTC)
+DATE: 2026-06-04 22:59:46 (UTC)
 TARGET_IDENTITY: ollama/ollama
-VERSION_ASSET: v0.30.4
-SOURCE_LINK: https://github.com/ollama/ollama/releases/tag/v0.30.4-rc1
+VERSION_ASSET: v0.30.5
+SOURCE_LINK: https://github.com/ollama/ollama/releases/tag/v0.30.5
 
 ## 资产物理属性 (Asset Physical Properties)
 REPOSITORY_TYPE: EXTERNAL_PACKAGE_INTELLIGENCE
@@ -28,9 +28,8 @@ DIRECTIVE_3: ENSURE_ANY_EXTRACTED_LOGIC_USES_PURE_PYTHON_TYPING_AND_INSPECT_SIGN
 
 ```text
 ## What's Changed
-* llama.cpp version update by @dhiltgen in https://github.com/ollama/ollama/pull/16463
-* Kill llama-server during Windows cleanup by @dhiltgen in https://github.com/ollama/ollama/pull/16458
+* Fix gemma4:12b floating point exception crash
+* integrations: hermes windows install by @BruceMacD in https://github.com/ollama/ollama/pull/16487
 
-
-**Full Changelog**: https://github.com/ollama/ollama/compare/v0.30.3...v0.30.4-rc0
+**Full Changelog**: https://github.com/ollama/ollama/compare/v0.30.4...v0.30.5
 ```
