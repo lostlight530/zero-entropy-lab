@@ -1,9 +1,9 @@
 # NEXUS HARVESTER: Intelligence Dossier
 
-DATE: 2026-06-10 14:07:11 (UTC)
+DATE: 2026-06-10 23:17:30 (UTC)
 TARGET_IDENTITY: langchain-ai/langchain
-VERSION_ASSET: langchain==1.3.6
-SOURCE_LINK: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.6
+VERSION_ASSET: langchain==1.3.7
+SOURCE_LINK: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.7
 
 ## 资产物理属性 (Asset Physical Properties)
 REPOSITORY_TYPE: EXTERNAL_PACKAGE_INTELLIGENCE
@@ -27,8 +27,11 @@ DIRECTIVE_3: ENSURE_ANY_EXTRACTED_LOGIC_USES_PURE_PYTHON_TYPING_AND_INSPECT_SIGN
 ## 原始载荷 (Raw Payload)
 
 ```text
-Changes since langchain==1.3.5
+Changes since langchain==1.3.6
 
-release(langchain): 1.3.6 (#38001)
-fix(langchain): preserve summarization trigger compatibility (#38000)
+release(langchain): 1.3.7 (#38024)
+style(langchain): add ruff rules ARG (#34435)
+feat(langchain): add `ProviderToolSearchMiddleware` (#37969)
+chore(langchain): activate mypy `warn_return_any` (#34249)
+test(langchain): mark legacy trigger view for 2.0 removal (#38002)
 ```
