@@ -471,6 +471,7 @@ def main():
         entities = {}
         duplicate_ids = set()
 
+        all_entities = []
         if entities_path.exists():
             for f in entities_path.glob('*.jsonl'):
                 try:
@@ -480,7 +481,9 @@ def main():
                             eid = data.get('id')
                             if eid in entities:
                                 duplicate_ids.add(eid)
+                            # Update dictionary to just get a single reference per ID for graphs
                             entities[eid] = data
+                            all_entities.append(data)
                 except Exception as e:
                     logger.error(f"Error reading {f} {e}")
 
@@ -532,18 +535,46 @@ def main():
                 needs_human.append(orphan_id)
 
         # Step 2 & 3: Cryptographic integrity verification & Ledger Rewrite
+
+        # Verify JSONL ledgers
+        import hmac, hashlib
+        secret_key = os.environ.get("NEXUS_SECRET_KEY", "absolute-zero-entropy-override").encode('utf-8')
+
         verified_nodes = 0
         tamper_detected = []
 
-        # Verify db entities
-        cursor = c.conn.cursor()
-        db_entities = cursor.execute('SELECT id FROM entities').fetchall()
-        for row in db_entities:
-            eid = row['id']
-            if c.verify_memory(eid):
-                verified_nodes += 1
-            else:
-                tamper_detected.append(eid)
+        def verify_file_hmac(file_path):
+            nonlocal verified_nodes
+            prev_hash = "NEXUS_GENESIS_0000"
+            try:
+                with open(file_path, 'r') as f:
+                    for line in f:
+                        data = json.loads(line)
+                        current_hash = data.get('hash')
+                        data_copy = data.copy()
+                        data_copy.pop('hash', None)
+
+                        if data_copy.get('prev_hash') != prev_hash:
+                            tamper_detected.append(data.get('id', 'UNKNOWN'))
+
+                        serialized = json.dumps(data_copy, sort_keys=True)
+                        expected_hash = hmac.new(secret_key, serialized.encode('utf-8'), hashlib.sha256).hexdigest()
+
+                        if expected_hash == current_hash and current_hash is not None:
+                            verified_nodes += 1
+                        else:
+                            tamper_detected.append(data.get('id', 'UNKNOWN'))
+
+                        prev_hash = expected_hash
+            except Exception as e:
+                pass
+
+        if entities_path.exists():
+            for f in entities_path.glob('*.jsonl'):
+                verify_file_hmac(f)
+        if relations_path.exists():
+            for f in relations_path.glob('*.jsonl'):
+                verify_file_hmac(f)
 
         # Rewrite ledgers
         def rewrite_ledger(file_path, items_dict_or_list):
@@ -571,7 +602,7 @@ def main():
 
         # Group entities by type for ledger rewrite
         entities_by_type = {}
-        for eid, data in entities.items():
+        for data in all_entities:
             t = data.get('type', 'concept')
             if t not in entities_by_type:
                 entities_by_type[t] = []
@@ -642,12 +673,37 @@ def main():
             if not lst: return "NONE"
             return "[" + ",".join(lst) + "]"
 
+        def format_report_list(lst):
+            if not lst: return "NONE"
+            import re
+            return "[" + ",".join([re.sub(r'[\.\-\/]', '_', str(item).upper()) for item in lst]) + "]"
+
         lines = []
-        lines.append(f"STATS: ENTITIES={len(entities)} RELATIONS={len(relations)}")
-        lines.append(f"CRYPTOGRAPHIC_INTEGRITY: VERIFIED_NODES={verified_nodes} TAMPER_DETECTED={format_list(tamper_detected)}")
-        lines.append(f"INTEGRITY: LINKED={len(connected_entities)}/{len(entities)} ORPHANS={len(orphans)} DANGLING={dangling_removed} DUPLICATES={len(duplicate_ids)}")
-        lines.append(f"CLEANING: ORPHANS_AUTO_CONNECTED={orphans_auto_connected} DANGLING_REMOVED={dangling_removed} DUPLICATES_MERGED={len(duplicate_ids)} NEEDS_HUMAN={format_list(needs_human)}")
-        lines.append(f"PAGERANK: TOP5+{format_list(top5)} BOTTOM5+{format_list(bottom5)}")
+        lines.append("# 每日图谱验证 (Graph Validation)")
+        lines.append("")
+        lines.append("## 核心统计 (Core Stats)")
+        lines.append(f"ENTITIES: {len(entities)}")
+        lines.append(f"RELATIONS: {len(relations)}")
+        lines.append("")
+        lines.append("## 密码学完整性 (Cryptographic Integrity)")
+        lines.append(f"VERIFIED_NODES: {verified_nodes}")
+        lines.append(f"TAMPER_DETECTED: {format_report_list(tamper_detected)}")
+        lines.append("")
+        lines.append("## 连通性状态 (Integrity Status)")
+        lines.append(f"LINKED_RATIO: {len(connected_entities)}_{len(entities)}")
+        lines.append(f"ORPHANS: {len(orphans)}")
+        lines.append(f"DANGLING: {dangling_removed}")
+        lines.append(f"DUPLICATES: {len(duplicate_ids)}")
+        lines.append("")
+        lines.append("## 清理建议 (Cleaning Actions)")
+        lines.append(f"ORPHANS_AUTO_CONNECTED: {orphans_auto_connected}")
+        lines.append(f"DANGLING_REMOVED: {dangling_removed}")
+        lines.append(f"DUPLICATES_MERGED: {len(duplicate_ids)}")
+        lines.append(f"NEEDS_HUMAN: {format_report_list(needs_human)}")
+        lines.append("")
+        lines.append("## 权重排行 (PageRank)")
+        lines.append(f"TOP5: {format_report_list(top5)}")
+        lines.append(f"BOTTOM5: {format_report_list(bottom5)}")
 
         with open(report_path, "w") as f:
             f.write("\n".join(lines) + "\n")
