@@ -1,9 +1,9 @@
 # NEXUS HARVESTER: Intelligence Dossier
 
-DATE: 2026-06-12 06:47:04 (UTC)
+DATE: 2026-06-12 23:05:41 (UTC)
 TARGET_IDENTITY: langchain-ai/langchain
-VERSION_ASSET: langchain==1.3.8
-SOURCE_LINK: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.8
+VERSION_ASSET: langchain==1.3.9
+SOURCE_LINK: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.9
 
 ## 资产物理属性 (Asset Physical Properties)
 REPOSITORY_TYPE: EXTERNAL_PACKAGE_INTELLIGENCE
@@ -27,16 +27,9 @@ DIRECTIVE_3: ENSURE_ANY_EXTRACTED_LOGIC_USES_PURE_PYTHON_TYPING_AND_INSPECT_SIGN
 ## 原始载荷 (Raw Payload)
 
 ```text
-Changes since langchain==1.3.7
+Changes since langchain==1.3.8
 
-release(langchain): 1.3.8 (#38096)
-style(core,langchain,langchain-classic,partners): replace double backticks in docstrings (#38095)
-release(core): 1.4.6 (#38061)
-chore(langchain): add overloads to `create_agent` (#34309)
-chore(infra): bump mypy to 2.1 and unify type-check config across the monorepo (#36470)
-fix(langchain): support async middleware decorator typing (#34584)
-fix(langchain): tighten structured output model fallbacks (#38042)
-release(anthropic): 1.4.5 (#38036)
-hotfix(core): bump lockfile(s) (#38032)
-refactor(langchain): refactor `test_create_agent_tool_validation` (#34443)
+release(anthropic): 1.4.6 (#38105)
+release(langchain): 1.3.9 (#38104)
+fix(langchain,anthropic): confine file-search results and tighten anthropic `allowed_prefixes` (#38106)
 ```
