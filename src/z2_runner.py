@@ -34,28 +34,27 @@ def verify_and_read_jsonl():
                 current_hash = data.pop('hash', None)
                 stored_prev = data.pop('prev_hash', None)
 
-                data_str = json.dumps(data, sort_keys=True, ensure_ascii=False)
-                # The user prompt requires using HMAC!
                 secret_key = os.environ.get("NEXUS_SECRET_KEY", "absolute-zero-entropy-override").encode('utf-8')
-                # Wait, the expected hash might just be data_str or with prev_hash?
-                # Actually, in nexus.py clean it uses just `json.dumps(data, sort_keys=True)`. Let's look exactly at how it's done:
-                # `hmac.new(secret_key, serialized.encode('utf-8'), hashlib.sha256).hexdigest()`
-                expected_hash = hmac.new(secret_key, json.dumps(data, sort_keys=True).encode('utf-8'), hashlib.sha256).hexdigest()
 
                 node_id = data.get('id') if is_entity else f"{data.get('src')}_{data.get('relation')}_{data.get('dst')}"
                 if not node_id:
                     node_id = "UNKNOWN"
 
-                # We expect the file's current hash to match the expected hash based on its stored_prev.
-                # And we expect stored_prev to match the prev_hash from the previous line.
-                if expected_hash == current_hash and stored_prev == prev_hash:
+                if stored_prev != prev_hash:
+                    tampered_nodes.append(node_id)
+
+                if stored_prev is not None:
+                    data['prev_hash'] = stored_prev
+
+                serialized = json.dumps(data, sort_keys=True)
+                expected_hash = hmac.new(secret_key, serialized.encode('utf-8'), hashlib.sha256).hexdigest()
+
+                if expected_hash == current_hash and current_hash is not None:
                     verified_nodes += 1
                 else:
                     tampered_nodes.append(node_id)
 
-                # To prevent complete cascade failure, we use current_hash if it exists
-                # Or wait, if we use current_hash we are checking if the file is intrinsically chained
-                prev_hash = current_hash if current_hash else expected_hash
+                prev_hash = expected_hash
 
                 if is_entity:
                     eid = data.get('id')
@@ -171,9 +170,14 @@ def generate_report():
         if not lst:
             return "NONE"
         sanitized = []
+        seen = set()
         for item in lst:
-            s = str(item).upper().replace('.', '_').replace('/', '_').replace('-', '_')
-            sanitized.append(s)
+            if item not in seen:
+                seen.add(item)
+                s = str(item).upper().replace('.', '_').replace('/', '_').replace('-', '_')
+                sanitized.append(s)
+        if not sanitized:
+            return "NONE"
         return "[" + ",".join(sanitized) + "]"
 
     date_str = datetime.now().strftime("%Y%m%d")
