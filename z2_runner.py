@@ -8,7 +8,7 @@ import datetime
 def format_list(lst):
     if not lst:
         return "NONE"
-    return "[" + ",".join([str(x).replace(".", "_").replace("-", "_").replace("/", "_").upper() for x in lst]) + "]"
+    return "_".join([str(x).replace(".", "_").replace("-", "_").replace("/", "_").upper() for x in lst])
 
 def main():
     knowledge_dir = Path("data/knowledge")
