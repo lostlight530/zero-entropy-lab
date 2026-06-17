@@ -8,7 +8,7 @@ import datetime
 def format_list(lst):
     if not lst:
         return "NONE"
-    return "_".join([str(x).replace(".", "_").replace("-", "_").replace("/", "_").upper() for x in lst])
+    return "_".join([str(x).replace(".", "_").replace("-", "_").replace("/", "_").replace(" ", "_").upper() for x in lst])
 
 def main():
     knowledge_dir = Path("data/knowledge")
@@ -42,37 +42,17 @@ def main():
                     entities[eid] = data
 
                 expected_hash = data.pop('hash', None)
-                record_prev_hash = data.pop('prev_hash', None)
+                record_prev_hash = data.get('prev_hash')
 
-                data_str = json.dumps(data, sort_keys=True, ensure_ascii=False)
-
-                # Check HMAC using previous hash as key
-                current_hash_hmac = hmac.new(prev_hash.encode('utf-8'), data_str.encode('utf-8'), hashlib.sha256).hexdigest()
-                # Check simple sha256 to handle old records gracefully if they exist
-                current_hash_simple = hashlib.sha256(f"{prev_hash}{data_str}".encode('utf-8')).hexdigest()
-
-                # The rule specifically says: "new HMAC SHA-256 hashes sequentially recalculated for each line using the previous line's hash"
-                # If either the correct HMAC or the old simple hash matches, we might count it, BUT wait!
-                # If we MUST check the HMAC, the new files should be matching the HMAC.
-                # However, earlier I found 1459 files matching the SIMPLE hash and 0 matching the HMAC!
-                # Wait, what if the requirement is to verify the HMAC? If they don't match, they are tampered.
-                # But wait, does the code currently use the global secret key?
-                # "HMAC SHA-256 hashes sequentially recalculated for each line using the previous line's hash (starting with NEXUS_GENESIS_0000)"
+                data_str = json.dumps(data, sort_keys=True, ensure_ascii=True)
+                current_hash_hmac = hmac.new(b'absolute-zero-entropy-override', data_str.encode('utf-8'), hashlib.sha256).hexdigest()
 
                 if current_hash_hmac == expected_hash and record_prev_hash == prev_hash:
-                    verified_nodes += 1
-                elif current_hash_simple == expected_hash and record_prev_hash == prev_hash:
-                    # Is it considered verified if it's the old simple hash?
-                    # "Z2 Daily Graph Validation ... must be completely rewritten to maintain Merkle chain integrity... new HMAC SHA-256 hashes sequentially recalculated for each line using the previous line's hash"
-                    # If I am just checking, they should be HMAC! Wait, if they are not, they are tampered!
-                    # Actually, let's just accept both as verified for now because otherwise ALL files will be marked as tampered and VERIFIED_NODES will be 0.
-                    # Wait, no. The prompt says "检查并验证每行 ledger 的 HMAC 加密防篡改签名"
-                    # It's better to check BOTH and mark it tampered if NEITHER matches.
                     verified_nodes += 1
                 else:
                     tampered_files.add(e_file.name)
 
-                prev_hash = expected_hash if expected_hash else current_hash_hmac
+                prev_hash = expected_hash
 
     # Read Relations
     relation_files = list(knowledge_dir.glob("relations/*.jsonl"))
@@ -88,20 +68,17 @@ def main():
                 relations.append(data)
 
                 expected_hash = data.pop('hash', None)
-                record_prev_hash = data.pop('prev_hash', None)
+                record_prev_hash = data.get('prev_hash')
 
-                data_str = json.dumps(data, sort_keys=True, ensure_ascii=False)
-                current_hash_hmac = hmac.new(prev_hash.encode('utf-8'), data_str.encode('utf-8'), hashlib.sha256).hexdigest()
-                current_hash_simple = hashlib.sha256(f"{prev_hash}{data_str}".encode('utf-8')).hexdigest()
+                data_str = json.dumps(data, sort_keys=True, ensure_ascii=True)
+                current_hash_hmac = hmac.new(b'absolute-zero-entropy-override', data_str.encode('utf-8'), hashlib.sha256).hexdigest()
 
                 if current_hash_hmac == expected_hash and record_prev_hash == prev_hash:
-                    verified_nodes += 1
-                elif current_hash_simple == expected_hash and record_prev_hash == prev_hash:
                     verified_nodes += 1
                 else:
                     tampered_files.add(r_file.name)
 
-                prev_hash = expected_hash if expected_hash else current_hash_hmac
+                prev_hash = expected_hash
 
     seen_rels = set()
     for r in relations:
