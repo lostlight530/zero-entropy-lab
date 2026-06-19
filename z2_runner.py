@@ -5,13 +5,9 @@ import hmac
 import hashlib
 from datetime import datetime
 
-def calculate_hmac(data):
-    s = json.dumps(data, sort_keys=True, ensure_ascii=True)
-    return hmac.new(b"absolute-zero-entropy-override", s.encode("utf-8"), hashlib.sha256).hexdigest()
-
 def clean_val(val):
     s = str(val).upper()
-    for c in ['.', '/', '-', ' ']:
+    for c in ['.', '/', '-', ' ', '(', ')', '[', ']']:
         s = s.replace(c, '_')
     return s
 
@@ -36,65 +32,67 @@ def main():
     verified_nodes_count = 0
     duplicates_count = 0
 
+    secret_key = os.environ.get("NEXUS_SECRET_KEY", "absolute-zero-entropy-override").encode('utf-8')
+
     for filepath in entities_files:
-        prev_expected = None
-        with open(filepath, 'r') as f:
-            for line_num, line in enumerate(f):
+        expected_prev = "NEXUS_GENESIS_0000"
+        with open(filepath, 'r') as file:
+            for line_num, line in enumerate(file):
                 if not line.strip(): continue
                 data = json.loads(line)
-                h = data.pop("hash", None)
+                eid = data.get('id', f"UNKNOWN_{filepath}_{line_num}")
+                stored_hash = data.get('hash')
 
-                expected_hash = calculate_hmac(data)
-
-                is_valid = True
-                if expected_hash != h:
-                    is_valid = False
-
-                if prev_expected is not None:
-                    if data.get("prev_hash") != prev_expected:
-                        is_valid = False
-
-                if is_valid:
-                    verified_nodes_count += 1
+                if data.get('prev_hash') != expected_prev:
+                    tampered_nodes.add(eid)
+                    expected_prev = stored_hash
                 else:
-                    tampered_nodes.add(data.get("id", f"UNKNOWN_{filepath}_{line_num}"))
+                    item = data.copy()
+                    item.pop('hash', None)
+                    # Use standard json serialization for HMAC calculation according to check_hmac.py
+                    payload = json.dumps(item, sort_keys=True).encode('utf-8')
+                    new_hash = hmac.new(secret_key, payload, hashlib.sha256).hexdigest()
+                    if new_hash == stored_hash:
+                        verified_nodes_count += 1
+                    else:
+                        tampered_nodes.add(eid)
+                    expected_prev = stored_hash
 
-                prev_expected = expected_hash
-
-                eid = data.get("id")
-                if eid:
-                    if eid in entities:
+                # Deduplication logic
+                real_eid = data.get('id')
+                if real_eid:
+                    if real_eid in entities:
                         duplicates_count += 1
                     else:
-                        entities[eid] = []
-                    entities[eid].append(data)
+                        entities[real_eid] = []
+                    entities[real_eid].append(data)
 
     for filepath in relations_files:
-        prev_expected = None
-        with open(filepath, 'r') as f:
-            for line_num, line in enumerate(f):
+        expected_prev = "NEXUS_GENESIS_0000"
+        with open(filepath, 'r') as file:
+            for line_num, line in enumerate(file):
                 if not line.strip(): continue
                 data = json.loads(line)
-                h = data.pop("hash", None)
+                stored_hash = data.get('hash')
+                eid = f"RELATION_ROW_{line_num}"
 
-                expected_hash = calculate_hmac(data)
-
-                is_valid = True
-                if expected_hash != h:
-                    is_valid = False
-
-                if prev_expected is not None:
-                    if data.get("prev_hash") != prev_expected:
-                        is_valid = False
-
-                if is_valid:
-                    verified_nodes_count += 1
+                if data.get('prev_hash') != expected_prev:
+                    tampered_nodes.add(eid)
+                    expected_prev = stored_hash
                 else:
-                    tampered_nodes.add(data.get("id", f"RELATION_ROW_{line_num}"))
+                    item = data.copy()
+                    item.pop('hash', None)
+                    payload = json.dumps(item, sort_keys=True).encode('utf-8')
+                    new_hash = hmac.new(secret_key, payload, hashlib.sha256).hexdigest()
+                    if new_hash == stored_hash:
+                        verified_nodes_count += 1
+                    else:
+                        tampered_nodes.add(eid)
+                    expected_prev = stored_hash
 
-                prev_expected = expected_hash
                 relations.append(data)
 
+                # memory: "When natively parsing JSONL ledgers for graph validation, scripts must specifically read 'src' and 'dst' to avoid miscalculating orphans and dangling relations."
                 src = data.get("src")
                 dst = data.get("dst")
                 if src and dst:
@@ -144,7 +142,8 @@ def main():
             for n in nodes:
                 new_pr[n] = (1 - d) / N + d * sink_pr / N
                 for incoming in in_edges[n]:
-                    new_pr[n] += d * pr[incoming] / out_degree[incoming]
+                    if out_degree[incoming] > 0:
+                        new_pr[n] += d * pr[incoming] / out_degree[incoming]
             pr = new_pr
 
     sorted_pr = sorted(pr.items(), key=lambda x: x[1], reverse=True)
@@ -155,29 +154,31 @@ def main():
     if len(tampered_nodes) == 0:
         tamper_list_clean = "NONE"
 
-    report_content = f"""# 每日图谱验证 (Graph Validation)
+    needs_human_str = "CHECK_TAMPERED_NODES" if len(tampered_nodes) > 0 else "NONE"
 
-## 核心统计 (Core Stats)
+    report_content = f"""# 每日图谱验证 (GRAPH VALIDATION)
+
+## 核心统计 (CORE STATS)
 ENTITIES: {len(unique_entities)}
 RELATIONS: {len(relations)}
 
-## 密码学完整性 (Cryptographic Integrity)
+## 密码学完整性 (CRYPTOGRAPHIC INTEGRITY)
 VERIFIED_NODES: {verified_nodes_count}
 TAMPER_DETECTED: {tamper_list_clean}
 
-## 连通性状态 (Integrity Status)
+## 连通性状态 (INTEGRITY STATUS)
 LINKED_RATIO: {linked_ratio_str}
 ORPHANS: {orphan_count}
 DANGLING: {dangling_count}
 DUPLICATES: {duplicates_count}
 
-## 清理建议 (Cleaning Actions)
+## 清理建议 (CLEANING ACTIONS)
 ORPHANS_AUTO_CONNECTED: 0
 DANGLING_REMOVED: 0
 DUPLICATES_MERGED: 0
-NEEDS_HUMAN: CHECK_TAMPERED_NODES
+NEEDS_HUMAN: {needs_human_str}
 
-## 权重排行 (PageRank)
+## 权重排行 (PAGERANK)
 TOP5: {clean_list(top5)}
 BOTTOM5: {clean_list(bottom5)}
 """
