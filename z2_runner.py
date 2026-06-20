@@ -1,192 +1,189 @@
 import os
-import glob
 import json
 import hmac
 import hashlib
-from datetime import datetime
+from collections import defaultdict
+import datetime
 
-def clean_val(val):
-    s = str(val).upper()
-    for c in ['.', '/', '-', ' ', '(', ')', '[', ']']:
-        s = s.replace(c, '_')
-    return s
+KNOWLEDGE_DIR = 'data/knowledge'
+SECRET_KEY = os.environ.get('NEXUS_SECRET_KEY', 'absolute-zero-entropy-override').encode('utf-8')
 
-def clean_list(lst):
-    if not lst:
-        return "NONE"
-    return clean_val("_".join(lst))
+def calculate_pagerank(nodes, edges, iterations=10, d=0.85):
+    pr = {node: 1.0 for node in nodes}
+    out_degree = defaultdict(int)
+    in_edges = defaultdict(list)
+    for src, dst in edges:
+        out_degree[src] += 1
+        in_edges[dst].append(src)
+
+    n = len(nodes)
+    if n == 0: return pr
+
+    for _ in range(iterations):
+        new_pr = {}
+        for node in nodes:
+            s = sum(pr[src] / out_degree[src] for src in in_edges[node] if out_degree[src] > 0)
+            new_pr[node] = (1 - d) / n + d * s
+        pr = new_pr
+    return pr
 
 def main():
-    date_str = datetime.now().strftime("%Y%m%d")
-    out_path = f"data/memories/{date_str}-graph-validation.md"
-
-    entities_files = glob.glob('data/knowledge/entities/*.jsonl')
-    relations_files = glob.glob('data/knowledge/relations/*.jsonl')
-
     entities = {}
     relations = []
 
-    unique_relation_signatures = set()
+    verified_nodes = 0
+    tamper_detected = []
 
-    tampered_nodes = set()
-    verified_nodes_count = 0
-    duplicates_count = 0
+    duplicates = 0
+    seen_entity_ids = set()
+    seen_relations = set()
 
-    secret_key = os.environ.get("NEXUS_SECRET_KEY", "absolute-zero-entropy-override").encode('utf-8')
+    entities_dir = os.path.join(KNOWLEDGE_DIR, 'entities')
+    if os.path.exists(entities_dir):
+        for filename in sorted(os.listdir(entities_dir)):
+            if not filename.endswith('.jsonl'):
+                continue
+            filepath = os.path.join(entities_dir, filename)
 
-    for filepath in entities_files:
-        expected_prev = "NEXUS_GENESIS_0000"
-        with open(filepath, 'r') as file:
-            for line_num, line in enumerate(file):
-                if not line.strip(): continue
-                data = json.loads(line)
-                eid = data.get('id', f"UNKNOWN_{filepath}_{line_num}")
-                stored_hash = data.get('hash')
+            with open(filepath, 'r', encoding='utf-8') as f:
+                expected_prev = "NEXUS_GENESIS_0000"
+                for line in f:
+                    line = line.strip()
+                    if not line: continue
+                    data = json.loads(line)
 
-                if data.get('prev_hash') != expected_prev:
-                    tampered_nodes.add(eid)
-                    expected_prev = stored_hash
-                else:
-                    item = data.copy()
-                    item.pop('hash', None)
-                    # Use standard json serialization for HMAC calculation according to check_hmac.py
-                    payload = json.dumps(item, sort_keys=True).encode('utf-8')
-                    new_hash = hmac.new(secret_key, payload, hashlib.sha256).hexdigest()
-                    if new_hash == stored_hash:
-                        verified_nodes_count += 1
+                    actual_prev = data.get('prev_hash')
+                    expected_hash = data.pop('hash', '')
+
+                    serialized = json.dumps(data, sort_keys=True)
+                    computed_hash = hmac.new(SECRET_KEY, serialized.encode('utf-8'), hashlib.sha256).hexdigest()
+
+                    if computed_hash != expected_hash or actual_prev != expected_prev:
+                        tamper_detected.append(data.get('id', 'UNKNOWN'))
                     else:
-                        tampered_nodes.add(eid)
-                    expected_prev = stored_hash
+                        verified_nodes += 1
 
-                # Deduplication logic
-                real_eid = data.get('id')
-                if real_eid:
-                    if real_eid in entities:
-                        duplicates_count += 1
+                    expected_prev = expected_hash
+
+                    e_id = data.get('id')
+                    if e_id:
+                        if e_id in seen_entity_ids:
+                            duplicates += 1
+                        else:
+                            seen_entity_ids.add(e_id)
+                            entities[e_id] = data
+
+    relations_dir = os.path.join(KNOWLEDGE_DIR, 'relations')
+    if os.path.exists(relations_dir):
+        for filename in sorted(os.listdir(relations_dir)):
+            if not filename.endswith('.jsonl'):
+                continue
+            filepath = os.path.join(relations_dir, filename)
+            with open(filepath, 'r', encoding='utf-8') as f:
+                expected_prev = "NEXUS_GENESIS_0000"
+                for line in f:
+                    line = line.strip()
+                    if not line: continue
+                    data = json.loads(line)
+
+                    actual_prev = data.get('prev_hash')
+                    expected_hash = data.pop('hash', '')
+
+                    serialized = json.dumps(data, sort_keys=True)
+                    computed_hash = hmac.new(SECRET_KEY, serialized.encode('utf-8'), hashlib.sha256).hexdigest()
+
+                    if computed_hash != expected_hash or actual_prev != expected_prev:
+                        tamper_detected.append(f"{data.get('src', 'UNKNOWN')}_{data.get('dst', 'UNKNOWN')}")
                     else:
-                        entities[real_eid] = []
-                    entities[real_eid].append(data)
+                        verified_nodes += 1
 
-    for filepath in relations_files:
-        expected_prev = "NEXUS_GENESIS_0000"
-        with open(filepath, 'r') as file:
-            for line_num, line in enumerate(file):
-                if not line.strip(): continue
-                data = json.loads(line)
-                stored_hash = data.get('hash')
-                eid = f"RELATION_ROW_{line_num}"
+                    expected_prev = expected_hash
 
-                if data.get('prev_hash') != expected_prev:
-                    tampered_nodes.add(eid)
-                    expected_prev = stored_hash
-                else:
-                    item = data.copy()
-                    item.pop('hash', None)
-                    payload = json.dumps(item, sort_keys=True).encode('utf-8')
-                    new_hash = hmac.new(secret_key, payload, hashlib.sha256).hexdigest()
-                    if new_hash == stored_hash:
-                        verified_nodes_count += 1
+                    src = data.get('src')
+                    dst = data.get('dst')
+                    rel = data.get('relation')
+
+                    rel_tuple = (src, dst, rel)
+                    if rel_tuple in seen_relations:
+                        duplicates += 1
                     else:
-                        tampered_nodes.add(eid)
-                    expected_prev = stored_hash
+                        seen_relations.add(rel_tuple)
+                        relations.append((src, dst))
 
-                relations.append(data)
-
-                # memory: "When natively parsing JSONL ledgers for graph validation, scripts must specifically read 'src' and 'dst' to avoid miscalculating orphans and dangling relations."
-                src = data.get("src")
-                dst = data.get("dst")
-                if src and dst:
-                    sig = f"{src}_{dst}_{data.get('type', '')}"
-                    if sig in unique_relation_signatures:
-                        duplicates_count += 1
-                    else:
-                        unique_relation_signatures.add(sig)
-
-    unique_entities = set(entities.keys())
-    nodes = list(unique_entities)
-    N = len(nodes)
-
+    linked_entities = set()
     dangling_count = 0
-    out_degree = {n: 0 for n in nodes}
-    in_edges = {n: [] for n in nodes}
-
-    for r in relations:
-        source = r.get("src")
-        target = r.get("dst")
-        if source not in unique_entities or target not in unique_entities:
+    for src, dst in relations:
+        src_valid = src in seen_entity_ids
+        dst_valid = dst in seen_entity_ids
+        if not src_valid or not dst_valid:
             dangling_count += 1
-        if source in unique_entities and target in unique_entities:
-            out_degree[source] += 1
-            in_edges[target].append(source)
 
-    connected_nodes = set()
-    for r in relations:
-        source = r.get("src")
-        target = r.get("dst")
-        if source in unique_entities and target in unique_entities:
-            connected_nodes.add(source)
-            connected_nodes.add(target)
+        if src_valid: linked_entities.add(src)
+        if dst_valid: linked_entities.add(dst)
 
-    orphans = unique_entities - connected_nodes
+    orphans = seen_entity_ids - linked_entities
     orphan_count = len(orphans)
+    linked_count = len(linked_entities)
+    total_entities = len(seen_entity_ids)
 
-    linked_ratio = len(connected_nodes) / N if N > 0 else 0
-    linked_ratio_str = f"{linked_ratio:.2f}".replace(".", "_")
-
-    d = 0.85
-    pr = {n: 1.0/N for n in nodes if N > 0}
-    if N > 0:
-        for _ in range(10):
-            new_pr = {}
-            sink_pr = sum(pr[n] for n in nodes if out_degree[n] == 0)
-            for n in nodes:
-                new_pr[n] = (1 - d) / N + d * sink_pr / N
-                for incoming in in_edges[n]:
-                    if out_degree[incoming] > 0:
-                        new_pr[n] += d * pr[incoming] / out_degree[incoming]
-            pr = new_pr
-
+    pr = calculate_pagerank(seen_entity_ids, relations)
     sorted_pr = sorted(pr.items(), key=lambda x: x[1], reverse=True)
     top5 = [x[0] for x in sorted_pr[:5]]
     bottom5 = [x[0] for x in sorted_pr[-5:]]
 
-    tamper_list_clean = clean_list(list(tampered_nodes))
-    if len(tampered_nodes) == 0:
-        tamper_list_clean = "NONE"
+    needs_human_list = []
+    if orphan_count > 0:
+        needs_human_list.append("REVIEW_ORPHANS")
+    if dangling_count > 0:
+        needs_human_list.append("REVIEW_DANGLING")
+    if tamper_detected:
+        needs_human_list.append("REVIEW_TAMPERED")
+    if not needs_human_list:
+        needs_human_list.append("NONE")
 
-    needs_human_str = "CHECK_TAMPERED_NODES" if len(tampered_nodes) > 0 else "NONE"
+    def fmt(s):
+        s = str(s).upper()
+        for c in ['.', '/', '-', ' ']:
+            s = s.replace(c, '_')
+        return s
 
-    report_content = f"""# 每日图谱验证 (GRAPH VALIDATION)
+    top5_str = "_".join(fmt(x) for x in top5)
+    bottom5_str = "_".join(fmt(x) for x in bottom5)
+    tamper_str = "_".join(fmt(x) for x in tamper_detected) if tamper_detected else "NONE"
+    needs_human_str = "_".join(fmt(x) for x in needs_human_list)
 
-## 核心统计 (CORE STATS)
-ENTITIES: {len(unique_entities)}
+    report = f"""# \u6bcf\u65e5\u56fe\u8c31\u9a8c\u8bc1 (Graph Validation)
+
+## \u6838\u5fc3\u7edf\u8ba1 (Core Stats)
+ENTITIES: {total_entities}
 RELATIONS: {len(relations)}
 
-## 密码学完整性 (CRYPTOGRAPHIC INTEGRITY)
-VERIFIED_NODES: {verified_nodes_count}
-TAMPER_DETECTED: {tamper_list_clean}
+## \u5bc6\u7801\u5b66\u5b8c\u6574\u6027 (Cryptographic Integrity)
+VERIFIED_NODES: {verified_nodes}
+TAMPER_DETECTED: {tamper_str}
 
-## 连通性状态 (INTEGRITY STATUS)
-LINKED_RATIO: {linked_ratio_str}
+## \u8fde\u901a\u6027\u72b6\u6001 (Integrity Status)
+LINKED_RATIO: {linked_count}_{total_entities}
 ORPHANS: {orphan_count}
 DANGLING: {dangling_count}
-DUPLICATES: {duplicates_count}
+DUPLICATES: {duplicates}
 
-## 清理建议 (CLEANING ACTIONS)
+## \u6e05\u7406\u5efa\u8bae (Cleaning Actions)
 ORPHANS_AUTO_CONNECTED: 0
 DANGLING_REMOVED: 0
 DUPLICATES_MERGED: 0
 NEEDS_HUMAN: {needs_human_str}
 
-## 权重排行 (PAGERANK)
-TOP5: {clean_list(top5)}
-BOTTOM5: {clean_list(bottom5)}
+## \u6743\u91cd\u6392\u884c (PageRank)
+TOP5: {top5_str}
+BOTTOM5: {bottom5_str}
 """
+    print(report)
 
-    os.makedirs('data/memories', exist_ok=True)
-    with open(out_path, 'w') as f:
-        f.write(report_content)
-    print(f"Report written to {out_path}")
+    today = datetime.datetime.now().strftime("%Y%m%d")
+    out_path = f"data/memories/{today}-graph-validation.md"
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(report)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
