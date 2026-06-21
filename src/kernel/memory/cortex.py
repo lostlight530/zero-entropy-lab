@@ -169,12 +169,12 @@ class Cortex:
         """Synaptic Search: Zero-Entropy 2-Stage Retrieval (FTS5 BM25 + Python Reranking)"""
         # Delay import to avoid circular dependencies if nlp imports cortex later
         try:
-            from nlp import CognitiveReranker
+            from cognitive.nlp import CognitiveReranker
         except ImportError:
             # Fallback if executing outside standard paths
             import sys, os
             sys.path.append(os.path.dirname(__file__))
-            from nlp import CognitiveReranker
+            from cognitive.nlp import CognitiveReranker
 
         cursor = self.conn.cursor()
         safe_query = "".join(c for c in query if c.isalnum() or c.isspace())
