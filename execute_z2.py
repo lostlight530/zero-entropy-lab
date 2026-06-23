@@ -174,8 +174,88 @@ def rewrite_data(entities, valid_relations):
     conn.close()
 
 
+def format_val(val):
+    if isinstance(val, list):
+        if not val:
+            return "NONE"
+        s = "_".join(str(x) for x in val)
+        return s.replace(".", "_").replace("/", "_").replace("-", "_").replace(" ", "_").upper()
+    elif isinstance(val, str):
+        if not val:
+            return "NONE"
+        return val.replace(".", "_").replace("/", "_").replace("-", "_").replace(" ", "_").upper()
+    return str(val).upper()
+
 def extract_pagerank_and_report(entities_count, relations_count, linked_count, orphans_count, duplicates_merged, dangling_removed, orphans_auto_connected, needs_human):
+    import datetime
+    import glob
+    import sqlite3
+    import json
+    import os
+    import hmac
+    import hashlib
     date_str = datetime.datetime.now().strftime("%Y%m%d")
+
+    entity_files = glob.glob("data/knowledge/entities/*.jsonl")
+    relation_files = glob.glob("data/knowledge/relations/*.jsonl")
+
+    tampered = []
+    verified_nodes = 0
+    secret_key = os.environ.get("NEXUS_SECRET_KEY", "absolute-zero-entropy-override").encode('utf-8')
+
+    for f in sorted(entity_files):
+        expected_prev = "NEXUS_GENESIS_0000"
+        with open(f, 'r') as fp:
+            for line in fp:
+                line = line.strip()
+                if line:
+                    data = json.loads(line)
+                    eid = data.get('id')
+                    stored_hash = data.get('hash')
+
+                    if data.get('prev_hash') != expected_prev:
+                        tampered.append(eid)
+                        expected_prev = stored_hash
+                        continue
+
+                    item = data.copy()
+                    item.pop('hash', None)
+
+                    payload = json.dumps(item, sort_keys=True).encode('utf-8')
+                    new_hash = hmac.new(secret_key, payload, hashlib.sha256).hexdigest()
+                    if new_hash == stored_hash:
+                        verified_nodes += 1
+                    else:
+                        tampered.append(eid)
+
+                    expected_prev = stored_hash
+
+    for f in sorted(relation_files):
+        expected_prev = "NEXUS_GENESIS_0000"
+        with open(f, 'r') as fp:
+            for i, line in enumerate(fp):
+                line = line.strip()
+                if line:
+                    data = json.loads(line)
+                    stored_hash = data.get('hash')
+                    rid = data.get('id', f"relation_{i}")
+
+                    if data.get('prev_hash') != expected_prev:
+                        tampered.append(rid)
+                        expected_prev = stored_hash
+                        continue
+
+                    item = data.copy()
+                    item.pop('hash', None)
+
+                    payload = json.dumps(item, sort_keys=True).encode('utf-8')
+                    new_hash = hmac.new(secret_key, payload, hashlib.sha256).hexdigest()
+                    if new_hash == stored_hash:
+                        verified_nodes += 1
+                    else:
+                        tampered.append(rid)
+
+                    expected_prev = stored_hash
 
     conn = sqlite3.connect('data/cortex.db')
     cursor = conn.cursor()
@@ -188,19 +268,41 @@ def extract_pagerank_and_report(entities_count, relations_count, linked_count, o
 
     conn.close()
 
-    needs_human_str = "[" + "_".join(needs_human) + "]" if needs_human else "NONE"
-    top5_str = "_".join(top5) if top5 else "NONE"
-    bottom5_str = "_".join(bottom5) if bottom5 else "NONE"
+    if not tampered:
+        tamper_out = "NONE"
+    else:
+        tamper_out = "_".join([format_val(t) for t in tampered])
 
     report_lines = [
-        f"Stats: Entities={entities_count} Relations={relations_count}",
-        f"Integrity: Linked={linked_count}/{entities_count} Orphans={orphans_count} Dangling={dangling_removed} Duplicates={duplicates_merged}",
-        f"Cleaning: Orphans_auto_connected={orphans_auto_connected} Dangling_removed={dangling_removed} Duplicates_merged={duplicates_merged} Needs_human={needs_human_str}",
-        f"PageRank: Top5+{top5_str} Bottom5+{bottom5_str}"
+        "# 每日图谱验证 (GRAPH VALIDATION)",
+        "",
+        "## 核心统计 (CORE STATS)",
+        f"ENTITIES: {format_val(entities_count)}",
+        f"RELATIONS: {format_val(relations_count)}",
+        "",
+        "## 密码学完整性 (CRYPTOGRAPHIC INTEGRITY)",
+        f"VERIFIED_NODES: {format_val(verified_nodes)}",
+        f"TAMPER_DETECTED: {tamper_out}",
+        "",
+        "## 连通性状态 (INTEGRITY STATUS)",
+        f"LINKED_RATIO: {format_val(linked_count)}_{format_val(entities_count)}",
+        f"ORPHANS: {format_val(orphans_count)}",
+        f"DANGLING: {format_val(dangling_removed)}",
+        f"DUPLICATES: {format_val(duplicates_merged)}",
+        "",
+        "## 清理建议 (CLEANING ACTIONS)",
+        f"ORPHANS_AUTO_CONNECTED: {format_val(orphans_auto_connected)}",
+        f"DANGLING_REMOVED: {format_val(dangling_removed)}",
+        f"DUPLICATES_MERGED: {format_val(duplicates_merged)}",
+        f"NEEDS_HUMAN: {format_val(needs_human)}",
+        "",
+        "## 权重排行 (PAGERANK)",
+        f"TOP5: {format_val(top5)}",
+        f"BOTTOM5: {format_val(bottom5)}"
     ]
 
     report_path = f"data/memories/{date_str}-graph-validation.md"
     with open(report_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(report_lines) + "\n")
+        f.write(chr(10).join(report_lines) + chr(10))
 
     print(f"Generated report at {report_path}")
