@@ -1,659 +1,1142 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zero-Entropy Lab | Fundamentalist Engineering</title>
-    <meta name="description" content="Fundamentalist Engineering. Absolute Zero-Dependency. Proximity to Bare-Metal Truth." />
-    <link rel="stylesheet" href="./src/styles/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <style>
-        /* The floating background persona is removed in favor of the integrated NEXUS-CHAN area */
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEXUS Life-Cycle Workflow Visualizer</title>
+  <meta name="description" content="Zero and Welcome GitHub Actions workflow visualizer with bilingual zero-basics explanation">
+  <style>
+    :root {
+      --bg: #05070d;
+      --bg2: #0b1020;
+      --panel: rgba(14, 22, 38, 0.82);
+      --panel2: rgba(8, 12, 22, 0.9);
+      --line: rgba(148, 163, 184, 0.18);
+      --muted: #94a3b8;
+      --text: #e5e7eb;
+      --white: #ffffff;
+      --zero: #00f0ff;
+      --welcome: #ff2a85;
+      --gold: #fbbf24;
+      --green: #34d399;
+      --red: #fb7185;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(0, 240, 255, 0.14), transparent 26rem),
+        radial-gradient(circle at 82% 18%, rgba(255, 42, 133, 0.16), transparent 25rem),
+        radial-gradient(circle at 50% 100%, rgba(251, 191, 36, 0.08), transparent 24rem),
+        linear-gradient(180deg, #05070d 0%, #090d18 45%, #030407 100%);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
+      z-index: -3;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: rgba(5, 7, 13, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+      color: var(--white);
+      font-family: var(--mono);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(0, 240, 255, 0.55);
+      box-shadow: 0 0 26px rgba(0, 240, 255, 0.22);
+      border-radius: 12px;
+      color: var(--zero);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .lang-btn {
+      border: 1px solid rgba(0, 240, 255, 0.45);
+      color: var(--zero);
+      background: rgba(0, 240, 255, 0.06);
+      padding: 0.55rem 0.8rem;
+      border-radius: 999px;
+      font-family: var(--mono);
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .lang-btn:hover {
+      transform: translateY(-1px);
+      background: rgba(0, 240, 255, 0.12);
+    }
+
+    .hero {
+      padding: 78px 0 48px;
+      position: relative;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.44rem 0.72rem;
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      border-radius: 999px;
+      background: rgba(251, 191, 36, 0.06);
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--gold);
+      box-shadow: 0 0 18px var(--gold);
+      animation: pulse 1.6s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.42; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.1); }
+    }
+
+    h1 {
+      max-width: 980px;
+      font-size: clamp(2.55rem, 6.4vw, 6.9rem);
+      line-height: 0.92;
+      letter-spacing: -0.07em;
+      color: var(--white);
+      margin-bottom: 1.3rem;
+    }
+
+    .grad {
+      background: linear-gradient(92deg, var(--zero), var(--welcome) 52%, var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-copy {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 44px;
+      padding: 0.72rem 1rem;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.045);
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 0.83rem;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .btn.zero {
+      border-color: rgba(0, 240, 255, 0.55);
+      color: var(--zero);
+    }
+
+    .btn.welcome {
+      border-color: rgba(255, 42, 133, 0.55);
+      color: var(--welcome);
+    }
+
+    .section {
+      padding: 34px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1.2rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .section-kicker {
+      font-family: var(--mono);
+      color: var(--gold);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 4vw, 3.1rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--white);
+    }
+
+    .section-desc {
+      color: var(--muted);
+      max-width: 620px;
+      margin-top: 0.7rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(14, 22, 38, 0.86), rgba(7, 10, 18, 0.86));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 1.1rem;
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.22);
+    }
+
+    .metric {
+      position: relative;
+      overflow: hidden;
+      min-height: 132px;
+    }
+
+    .metric::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -50% auto;
+      width: 130px;
+      height: 130px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.09), transparent 68%);
+    }
+
+    .metric-label {
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.7rem;
+    }
+
+    .metric-value {
+      font-family: var(--mono);
+      font-size: clamp(1.65rem, 4vw, 2.5rem);
+      line-height: 1;
+      color: var(--white);
+      font-weight: 900;
+      margin-bottom: 0.55rem;
+    }
+
+    .metric-note {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .metric.zero {
+      border-color: rgba(0, 240, 255, 0.24);
+    }
+
+    .metric.zero .metric-value {
+      color: var(--zero);
+    }
+
+    .metric.welcome {
+      border-color: rgba(255, 42, 133, 0.24);
+    }
+
+    .metric.welcome .metric-value {
+      color: var(--welcome);
+    }
+
+    .lane {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .lane-head {
+      padding: 1.2rem;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .lane-title {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .lane-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-family: var(--mono);
+      font-weight: 900;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line);
+    }
+
+    .lane.zero .lane-number {
+      color: var(--zero);
+      border-color: rgba(0, 240, 255, 0.45);
+      box-shadow: 0 0 28px rgba(0, 240, 255, 0.14);
+    }
+
+    .lane.welcome .lane-number {
+      color: var(--welcome);
+      border-color: rgba(255, 42, 133, 0.45);
+      box-shadow: 0 0 28px rgba(255, 42, 133, 0.14);
+    }
+
+    .repo-name {
+      color: var(--white);
+      font-weight: 850;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .repo-role {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      margin-top: 0.2rem;
+    }
+
+    .lane-body {
+      padding: 1.2rem;
+    }
+
+    .mini-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .mini {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 0.8rem;
+    }
+
+    .mini b {
+      display: block;
+      font-family: var(--mono);
+      font-size: 1.25rem;
+      color: var(--white);
+      margin-bottom: 0.1rem;
+    }
+
+    .mini span {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-family: var(--mono);
+      text-transform: uppercase;
+    }
+
+    .steps {
+      display: grid;
+      gap: 0.6rem;
+      counter-reset: step;
+    }
+
+    .step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 34px 1fr auto;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.75rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .step::before {
+      content: counter(step);
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--muted);
+    }
+
+    .step-main {
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    .step-sub {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 0.12rem;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 0.26rem 0.45rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .matrix {
+      overflow: hidden;
+    }
+
+    .matrix-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border-top: 1px solid var(--line);
+      min-height: 58px;
+    }
+
+    .matrix-row:first-child {
+      border-top: 0;
+    }
+
+    .matrix-cell {
+      padding: 0.9rem;
+      border-left: 1px solid var(--line);
+    }
+
+    .matrix-cell:first-child {
+      border-left: 0;
+    }
+
+    .matrix-head {
+      color: var(--white);
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .yes {
+      color: var(--green);
+      font-family: var(--mono);
+      font-weight: 800;
+    }
+
+    .no {
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    .warn {
+      color: var(--gold);
+      font-family: var(--mono);
+      font-weight: 800;
+    }
+
+    .bars {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 150px 1fr 90px;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .bar-label {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .bar-track {
+      height: 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      width: var(--w);
+      background: linear-gradient(90deg, var(--zero), var(--welcome));
+    }
+
+    .bar-value {
+      font-family: var(--mono);
+      color: var(--white);
+      text-align: right;
+      font-size: 0.82rem;
+    }
+
+    .terminal {
+      background: rgba(2, 6, 12, 0.92);
+      border: 1px solid rgba(0, 240, 255, 0.22);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: inset 0 0 40px rgba(0, 240, 255, 0.03);
+    }
+
+    .terminal-head {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.035);
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .dots {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--muted);
+      opacity: 0.7;
+    }
+
+    .dot:nth-child(1) { background: var(--red); }
+    .dot:nth-child(2) { background: var(--gold); }
+    .dot:nth-child(3) { background: var(--green); }
+
+    .terminal-body {
+      padding: 1rem;
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+
+    .log-line {
+      color: var(--muted);
+      margin-bottom: 0.48rem;
+      white-space: nowrap;
+    }
+
+    .log-line b.zero-text {
+      color: var(--zero);
+    }
+
+    .log-line b.welcome-text {
+      color: var(--welcome);
+    }
+
+    .log-line strong {
+      color: var(--white);
+    }
+
+    .explain-card h3 {
+      color: var(--white);
+      margin-bottom: 0.55rem;
+      font-size: 1.05rem;
+    }
+
+    .explain-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer {
+      padding: 52px 0 72px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 44px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+    }
+
+    .footer a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .lang-en .zh {
+      display: none !important;
+    }
+
+    .lang-zh .en {
+      display: none !important;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .nav-links a {
+        display: none;
+      }
+
+      .mini-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .matrix-row {
+        grid-template-columns: 1fr;
+      }
+
+      .matrix-cell {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .matrix-cell:first-child {
+        border-top: 0;
+      }
+
+      .bar-row {
+        grid-template-columns: 1fr;
+      }
+
+      .bar-value {
+        text-align: left;
+      }
+    }
+  </style>
 </head>
-<body class="antialiased">
-    <!-- Background Canvas for Neural Mesh -->
-    <canvas id="neuralCanvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -10; pointer-events: none; opacity: 0.4; filter: contrast(1.2) brightness(0.8);"></canvas>
-
-    <!-- Navigation -->
-    <nav class="glass" style="background: rgba(10, 15, 25, 0.6); border-bottom: 1px solid rgba(0, 240, 255, 0.2);">
-        <div class="max-w-7xl nav-container">
-            <a href="#home" class="gradient-text glitch-text" data-text="lostlight" style="font-size: 1.5rem; font-weight: 800; text-decoration: none; letter-spacing: 2px;">lostlight</a>
-            <div class="nav-links">
-                <a href="#home" id="nav-home"></a>
-                <a href="#telemetry" id="nav-telemetry"></a>
-                <a href="#matrix" id="nav-matrix"></a>
-                <a href="#nexus" id="nav-nexus"></a>
-                <a href="#philosophy" id="nav-philosophy"></a>
-                <button id="langSwitch" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem; border-color: var(--cyber-cyan); color: var(--cyber-cyan);">ZH / EN</button>
-            </div>
-        </div>
-    </nav>
-
-
-
-    <!-- Ecosystem Command Center Dashboard -->
-    <div class="dashboard-container" style="padding-top: 6rem; min-height: 100vh; display: flex; flex-direction: column; position: relative; z-index: 10;">
-
-        <!-- Hero Header -->
-        <header class="dashboard-header" style="text-align: center; margin-bottom: 2rem; flex-shrink: 0;">
-            <p id="hero-role" style="color: var(--cyber-cyan); font-weight: 800; letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 0.5rem; text-shadow: 0 0 10px rgba(0,240,255,0.5);"></p>
-            <h1 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.02em;">
-                <span style="color: #fff;">NEXUS CORE SINGULARITY //</span><br/>
-                <span id="hero-tagline" class="gradient-text glitch-text"></span>
-            </h1>
-            <p id="hero-desc" style="color: var(--text-secondary); font-size: 1rem; max-width: 42rem; margin: 0 auto; font-family: var(--font-mono); letter-spacing: 0.05em;"></p>
-        </header>
-
-        <!-- Stats Grid (Top HUD) -->
-        <div class="max-w-7xl w-full" style="flex-shrink: 0; margin-bottom: 2rem; margin: 0 auto;">
-            <div id="stats-grid" class="grid grid-4" style="gap: 1rem;">
-                <!-- Filled by JS -->
-            </div>
-        </div>
-
-        <!-- Main Dashboard Grid -->
-        <div class="max-w-7xl w-full dashboard-grid" style="flex-grow: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; padding-bottom: 2rem; margin: 0 auto 0 auto;">
-
-            <!-- Panel 1: Telemetry (Core Repositories) -->
-            <div class="dashboard-panel glass" id="telemetry" style="display: flex; flex-direction: column; overflow: hidden; border: 1px solid rgba(0, 240, 255, 0.2); border-top: 3px solid var(--cyber-cyan); background: rgba(10, 15, 25, 0.8);">
-                <div class="panel-header" style="padding: 1rem; border-bottom: 1px solid rgba(0, 240, 255, 0.1); display: flex; justify-content: space-between; align-items: center;">
-                    <h2 id="telemetry-title" style="color: var(--cyber-cyan); text-shadow: 0 0 10px rgba(0,240,255,0.3); font-size: 1.2rem; font-weight: 700; margin: 0;"></h2>
-                    <span class="status-indicator blinking" style="width: 8px; height: 8px; background-color: var(--cyber-cyan); border-radius: 50%; box-shadow: 0 0 8px var(--cyber-cyan);"></span>
-                </div>
-                <div class="panel-content custom-scrollbar" style="padding: 1rem; overflow-y: auto; flex-grow: 1;">
-                    <p id="telemetry-intro" style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 1rem;"></p>
-                    <div id="telemetry-grid" style="display: flex; flex-direction: column; gap: 0.8rem;">
-                        <!-- Filled by JS -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Panel 2: Matrix (Harvester Intel) -->
-            <div class="dashboard-panel glass" id="matrix" style="display: flex; flex-direction: column; overflow: hidden; border: 1px solid rgba(255, 42, 133, 0.2); border-top: 3px solid var(--cyber-pink); background: rgba(10, 15, 25, 0.8);">
-                <div class="panel-header" style="padding: 1rem; border-bottom: 1px solid rgba(255, 42, 133, 0.1); display: flex; justify-content: space-between; align-items: center;">
-                    <h2 id="matrix-title" style="color: var(--cyber-pink); text-shadow: 0 0 10px rgba(255,42,133,0.3); font-size: 1.2rem; font-weight: 700; margin: 0;"></h2>
-                    <span class="status-indicator blinking" style="width: 8px; height: 8px; background-color: var(--cyber-pink); border-radius: 50%; box-shadow: 0 0 8px var(--cyber-pink);"></span>
-                </div>
-                <div class="panel-content custom-scrollbar" style="padding: 1rem; overflow-y: auto; flex-grow: 1;">
-                    <p id="matrix-intro" style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 1rem;"></p>
-                    <div id="matrix-grid" style="display: flex; flex-direction: column; gap: 0.8rem;">
-                        <!-- Filled by JS -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Panel 3: Philosophy (Cognitive Core) -->
-            <div class="dashboard-panel glass" id="philosophy" style="display: flex; flex-direction: column; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.2); border-top: 3px solid #fff; background: rgba(10, 15, 25, 0.8);">
-                <div class="panel-header" style="padding: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center;">
-                    <h2 id="philosophy-title" style="color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.3); font-size: 1.2rem; font-weight: 700; margin: 0; text-transform: uppercase;"></h2>
-                    <span class="status-indicator blinking" style="width: 8px; height: 8px; background-color: #fff; border-radius: 50%; box-shadow: 0 0 8px #fff;"></span>
-                </div>
-                <div class="panel-content custom-scrollbar" style="padding: 1rem; overflow-y: auto; flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
-                    <div id="philosophy-points" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 0.8rem;">
-                        <!-- Filled by JS -->
-                    </div>
-                    <div style="padding: 1.5rem; border-left: 2px solid var(--cyber-cyan); background: linear-gradient(90deg, rgba(0,240,255,0.05) 0%, transparent 100%);">
-                        <p id="philosophy-content" style="font-weight: 800; font-size: 1.1rem; color: #fff; letter-spacing: 1px; margin: 0;"></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Panel 4: NEXUS-CHAN Terminal -->
-            <div class="dashboard-panel glass" id="nexus" style="display: flex; flex-direction: column; overflow: hidden; border: 1px solid rgba(0, 240, 255, 0.3); box-shadow: 0 0 15px rgba(0, 240, 255, 0.1); background: rgba(5, 8, 15, 0.9);">
-                <div class="nexus-domain" style="height: 100%; display: flex; flex-direction: column; margin: 0; padding: 0;">
-                    <!-- Removed avatar zone for cleaner dashboard look, kept terminal -->
-                    <div id="nexus-terminal" style="height: 100%; border: none; border-radius: 0; display: flex; flex-direction: column; box-shadow: none;">
-                        <div class="terminal-header" style="background: rgba(255, 42, 133, 0.1); border-bottom: 1px solid rgba(255, 42, 133, 0.3); color: var(--cyber-pink); padding: 0.5rem 1rem;">
-                            <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                <span class="status-dot" style="background-color: var(--cyber-cyan); box-shadow: 0 0 8px var(--cyber-cyan);"></span>
-                                <span id="term-title" style="font-size: 0.9rem; font-weight: bold; letter-spacing: 1px;">NEXUS-CHAN.exe [AWAKENED]</span>
-                            </div>
-                            <div class="terminal-actions">
-                                <span class="action-btn" style="color: var(--cyber-cyan);">_</span>
-                                <span class="action-btn" style="color: var(--cyber-cyan);">□</span>
-                                <span class="action-btn" style="color: var(--cyber-pink);">×</span>
-                            </div>
-                        </div>
-                        <div id="term-body" class="terminal-body custom-scrollbar" style="font-family: var(--font-mono); font-size: 0.85rem; flex-grow: 1; padding: 1rem; overflow-y: auto;">
-                            <!-- JS generated output -->
-                        </div>
-                        <div class="terminal-input-line" style="display: flex; padding: 0.8rem 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); background: rgba(0,0,0,0.3);">
-                            <span style="color: var(--cyber-cyan); flex-shrink: 0;">~/nexus></span>
-                            <input type="text" id="term-input" autocomplete="off" spellcheck="false" style="color: var(--cyber-pink); caret-color: var(--cyber-pink); background: transparent; border: none; outline: none; width: 100%; font-family: var(--font-mono); font-size: 0.9rem; margin-left: 0.5rem;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+<body class="lang-zh">
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="NEXUS Life-Cycle Workflow Visualizer">
+        <span class="brand-mark">NX</span>
+        <span>NEXUS FLOW</span>
+      </a>
+      <div class="nav-links">
+        <a href="#usage"><span class="zh">年度用量</span><span class="en">Usage</span></a>
+        <a href="#lanes"><span class="zh">双工作流</span><span class="en">Lanes</span></a>
+        <a href="#matrix"><span class="zh">步骤对比</span><span class="en">Matrix</span></a>
+        <a href="#explain"><span class="zh">0基础解析</span><span class="en">Basics</span></a>
+        <button class="lang-btn" id="langBtn" type="button">ZH / EN</button>
+      </div>
     </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer class="footer" style="background: #000; border-top: none; margin-top: 0; padding-bottom: 6rem;">
-        <div id="footer-greeting" style="color: #fff; font-weight: 900; font-family: var(--font-mono); letter-spacing: 0.4em; margin-bottom: 1.5rem; text-shadow: 0 0 10px rgba(255,255,255,0.3);"></div>
-        <p id="footer-note" style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 3rem; font-family: var(--font-mono); letter-spacing: 0.2em; text-transform: uppercase;"></p>
-        <div style="display: flex; justify-content: center; gap: 3rem; font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">
-            <a href="https://github.com/lostlight530" target="_blank" style="color: var(--cyber-cyan); text-decoration: none; transition: text-shadow 0.2s;">GitHub</a>
-            <a href="https://lostlight530.github.io/welcome-to-github/" target="_blank" style="color: var(--cyber-pink); text-decoration: none; transition: text-shadow 0.2s;">Portal</a>
-            <a href="./LICENSE" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">License</a>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          <span class="zh">2026-06-26 数据例子 · Last-year Actions usage snapshot</span>
+          <span class="en">2026-06-26 data example · Last-year Actions usage snapshot</span>
         </div>
-    </footer>
+        <h1>
+          NEXUS LIFE-CYCLE
+          <span class="grad">WORKFLOW VISUALIZER</span>
+        </h1>
+        <p class="hero-copy zh">
+          这是 zero-entropy-lab 与 welcome-to-github 的双工作流可视化主页, 用一页展示年度用量, 运行效率, 失败成本, 步骤差异, 以及实际运行日志证据
+        </p>
+        <p class="hero-copy en">
+          A single-page visualizer for the zero-entropy-lab and welcome-to-github workflows, showing yearly usage, execution efficiency, failure cost, stage differences, and concrete run-log evidence
+        </p>
+        <div class="hero-actions">
+          <a class="btn zero" href="#zero-lane">1 · zero-entropy-lab</a>
+          <a class="btn welcome" href="#welcome-lane">2 · welcome-to-github</a>
+          <a class="btn" href="https://github.com/lostlight530/zero-entropy-lab" target="_blank" rel="noreferrer">GitHub Zero</a>
+          <a class="btn" href="https://github.com/lostlight530/welcome-to-github" target="_blank" rel="noreferrer">GitHub Welcome</a>
+        </div>
+      </div>
+    </section>
 
-    <script type="module">
-        import translations from './src/scripts/translations.js';
+    <section class="section" id="usage">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Annual Actions Load</div>
+            <h2><span class="zh">年度负载对比</span><span class="en">Yearly load comparison</span></h2>
+            <p class="section-desc zh">
+              这里使用你给出的 GitHub Actions last year 数据, 1 是 zero, 2 是 welcome, 页面内明确标记 2026-06-26 数据例子
+            </p>
+            <p class="section-desc en">
+              This section uses the GitHub Actions last-year metrics you provided, 1 is zero, 2 is welcome, and the page marks the data example as 2026-06-26
+            </p>
+          </div>
+        </div>
 
-        let currentLang = 'zh';
-        const btn = document.getElementById('langSwitch');
+        <div class="grid grid-4">
+          <article class="card metric zero">
+            <div class="metric-label">1 · Zero total minutes</div>
+            <div class="metric-value">4,948</div>
+            <div class="metric-note zh">年度工作流总分钟数</div>
+            <div class="metric-note en">Total workflow minutes for last year</div>
+          </article>
+          <article class="card metric zero">
+            <div class="metric-label">1 · Zero job runs</div>
+            <div class="metric-value">4,079</div>
+            <div class="metric-note zh">年度 job run 总数</div>
+            <div class="metric-note en">Total job runs for last year</div>
+          </article>
+          <article class="card metric welcome">
+            <div class="metric-label">2 · Welcome total minutes</div>
+            <div class="metric-value">2,038</div>
+            <div class="metric-note zh">年度工作流总分钟数</div>
+            <div class="metric-note en">Total workflow minutes for last year</div>
+          </article>
+          <article class="card metric welcome">
+            <div class="metric-label">2 · Welcome job runs</div>
+            <div class="metric-value">1,725</div>
+            <div class="metric-note zh">年度 job run 总数</div>
+            <div class="metric-note en">Total job runs for last year</div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        function renderStats(items) {
-            const statsGrid = document.getElementById('stats-grid');
-            statsGrid.innerHTML = items.map(item => `
-                <div class="glass card-hover" style="padding: 1.5rem; text-align: center; border-radius: 1.25rem; border-color: rgba(0,240,255,0.15); background: rgba(0,240,255,0.03);">
-                    <div class="gradient-text" style="font-size: 2.25rem; font-weight: 900; margin-bottom: 0.5rem; font-family: var(--font-mono);">${item.value}</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary); letter-spacing: 1px; text-transform: uppercase;">${item.label}</div>
+    <section class="section">
+      <div class="wrap grid grid-2">
+        <article class="card">
+          <div class="section-kicker">Compute Budget</div>
+          <h2><span class="zh">计算预算</span><span class="en">Compute budget</span></h2>
+          <p class="section-desc zh">
+            zero 消耗的 Actions 分钟约为 welcome 的 2.43 倍, job run 数约为 welcome 的 2.36 倍, 说明 zero 是更重的内核执行线
+          </p>
+          <p class="section-desc en">
+            Zero uses about 2.43x the Actions minutes of welcome and about 2.36x the job runs, which makes it the heavier kernel execution lane
+          </p>
+          <div class="bars" style="margin-top:1.1rem">
+            <div class="bar-row">
+              <div class="bar-label">Zero minutes</div>
+              <div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div>
+              <div class="bar-value">4,948</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Welcome minutes</div>
+              <div class="bar-track"><div class="bar-fill" style="--w:41%"></div></div>
+              <div class="bar-value">2,038</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Zero runs</div>
+              <div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div>
+              <div class="bar-value">4,079</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Welcome runs</div>
+              <div class="bar-track"><div class="bar-fill" style="--w:42%"></div></div>
+              <div class="bar-value">1,725</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="section-kicker">Efficiency And Failure Cost</div>
+          <h2><span class="zh">效率与失败成本</span><span class="en">Efficiency and failure cost</span></h2>
+          <p class="section-desc zh">
+            两边平均排队时间都是 3s, 失败率都是 2%, 差异主要在年度负载和失败分钟数, zero 约 70 failed minutes, welcome 是 26 failed minutes
+          </p>
+          <p class="section-desc en">
+            Both lanes have a 3s average queue time and 2% job failure rate, while the main difference is annual load and failed-job minutes, zero is about 70 failed minutes and welcome is 26
+          </p>
+          <div class="grid grid-3" style="margin-top:1.1rem">
+            <div class="mini"><b>37s</b><span>Zero avg run</span></div>
+            <div class="mini"><b>42s</b><span>Welcome avg run</span></div>
+            <div class="mini"><b>3s / 3s</b><span>Avg queue</span></div>
+            <div class="mini"><b>2%</b><span>Zero fail rate</span></div>
+            <div class="mini"><b>2%</b><span>Welcome fail rate</span></div>
+            <div class="mini"><b>70 / 26</b><span>Failed minutes</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="lanes">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Two Concrete Workflow Lanes</div>
+            <h2><span class="zh">两个具体工作流</span><span class="en">Two concrete workflow lanes</span></h2>
+            <p class="section-desc zh">
+              这不是泛生态展示, 而是把 zero 和 welcome 两条 NEXUS CORTEX Life Cycle 直接展开成可读步骤
+            </p>
+            <p class="section-desc en">
+              This is not a generic ecosystem page, it expands the zero and welcome NEXUS CORTEX Life Cycle workflows into readable stages
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="card lane zero" id="zero-lane">
+            <div class="lane-head">
+              <div class="lane-title">
+                <div class="lane-number">1</div>
+                <div>
+                  <div class="repo-name">zero-entropy-lab</div>
+                  <div class="repo-role zh">Kernel Execution Lane</div>
+                  <div class="repo-role en">Kernel Execution Lane</div>
                 </div>
-            `).join('');
-        }
+              </div>
+              <span class="tag">4,948 min</span>
+            </div>
+            <div class="lane-body">
+              <div class="mini-metrics">
+                <div class="mini"><b>4,079</b><span>job runs</span></div>
+                <div class="mini"><b>37s</b><span>avg run</span></div>
+                <div class="mini"><b>2%</b><span>failure</span></div>
+              </div>
+              <div class="steps">
+                <div class="step"><div><div class="step-main">Cleanup generated state</div><div class="step-sub zh">清理冲突生成物</div><div class="step-sub en">Remove conflicting generated files</div></div><span class="tag">zero only</span></div>
+                <div class="step"><div><div class="step-main">Checkout reality</div><div class="step-sub zh">拉取仓库现实状态</div><div class="step-sub en">Fetch repository reality</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Rebuild memory</div><div class="step-sub zh">重建 Cortex 记忆</div><div class="step-sub en">Reconstruct Cortex memory</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Ingest self-codebase</div><div class="step-sub zh">扫描自身代码库</div><div class="step-sub en">Map self-code into Cortex</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Deep ponder</div><div class="step-sub zh">运行图推理报告</div><div class="step-sub en">Run graph reasoning report</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Evolution cycle</div><div class="step-sub zh">生成认知报告与任务简报</div><div class="step-sub en">Generate cognitive report and mission brief</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Verification tests</div><div class="step-sub zh">运行测试与服务验证</div><div class="step-sub en">Run tests and service checks</div></div><span class="tag">zero only</span></div>
+                <div class="step"><div><div class="step-main">Sync and commit</div><div class="step-sub zh">同步世界线并提交认知变化</div><div class="step-sub en">Sync world-line and commit cognitive changes</div></div><span class="tag">writeback</span></div>
+              </div>
+            </div>
+          </article>
 
-        function renderTelemetry(items) {
-            const grid = document.getElementById('telemetry-grid');
-            grid.innerHTML = items.map(item => `
-                <article class="glass card-hover" style="padding: 2rem; border-radius: 1.5rem; display: flex; flex-direction: column; border-left: 3px solid var(--cyber-cyan);">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 0.7rem; font-family: var(--font-mono); color: var(--cyber-cyan); letter-spacing: 1px;">
-                        <span>[ ${item.name} ]</span>
-                        <span style="opacity: 0.6;">${item.tech}</span>
-                    </div>
-                    <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: #fff;">${item.title}</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; flex-grow: 1;">${item.desc}</p>
-                </article>
-            `).join('');
-        }
-
-        function renderMatrix(items) {
-            const grid = document.getElementById('matrix-grid');
-            grid.innerHTML = items.map(item => `
-                <a href="${item.link}" target="_blank" style="text-decoration: none;">
-                    <article class="glass card-hover" style="padding: 2rem; border-radius: 1.5rem; display: flex; flex-direction: column; border: 1px solid rgba(255,42,133,0.2); background: linear-gradient(135deg, rgba(255,42,133,0.05) 0%, transparent 100%); transition: all 0.3s;">
-                        <div style="font-size: 0.65rem; font-family: var(--font-mono); color: var(--cyber-pink); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem;">
-                            >> ${item.category}
-                        </div>
-                        <h4 style="font-size: 1.3rem; font-weight: 900; margin-bottom: 1.5rem; color: #fff;">${item.title}</h4>
-                        <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-secondary); margin-top: auto;">
-                            > ${item.tech}
-                        </div>
-                    </article>
-                </a>
-            `).join('');
-        }
-
-        function renderPhilosophyPoints(points) {
-            const wrap = document.getElementById('philosophy-points');
-            wrap.innerHTML = points.map(point => `
-                <div class="glass card-hover" style="padding: 1rem; font-size: 0.8rem; border-radius: 1rem; color: var(--text-secondary);">
-                    ${point}
+          <article class="card lane welcome" id="welcome-lane">
+            <div class="lane-head">
+              <div class="lane-title">
+                <div class="lane-number">2</div>
+                <div>
+                  <div class="repo-name">welcome-to-github</div>
+                  <div class="repo-role zh">Harvester And Ledger Lane</div>
+                  <div class="repo-role en">Harvester And Ledger Lane</div>
                 </div>
-            `).join('');
-        }
-
-        function updateContent() {
-            const t = translations[currentLang];
-            document.title = t.meta.title;
-
-            // Update elements safely handling glitch data-text attributes
-            const updateText = (id, content) => {
-                const el = document.getElementById(id);
-                if (el) {
-                    el.innerHTML = content;
-                    if (el.classList.contains('glitch-text')) {
-                        el.setAttribute('data-text', content);
-                    }
-                }
-            };
-
-            updateText('nav-home', t.nav.home);
-            updateText('nav-telemetry', t.nav.telemetry);
-            updateText('nav-matrix', t.nav.matrix);
-            updateText('nav-nexus', t.nav.nexus);
-            updateText('nav-philosophy', t.nav.philosophy);
-
-            updateText('hero-role', t.hero.role);
-            updateText('hero-tagline', t.hero.tagline);
-            updateText('hero-desc', t.hero.description);
-            updateText('hero-primary', t.hero.primaryCta);
-            updateText('hero-secondary', t.hero.secondaryCta);
-
-            updateText('telemetry-title', t.telemetry.title);
-            updateText('telemetry-intro', t.telemetry.intro);
-
-            updateText('matrix-title', t.matrix.title);
-            updateText('matrix-intro', t.matrix.intro);
-
-            updateText('nexuschan-title', t.nexusChan.title);
-            updateText('nexuschan-intro', t.nexusChan.intro);
-
-            updateText('philosophy-title', t.philosophy.title);
-            updateText('philosophy-content', t.philosophy.content);
-            updateText('footer-greeting', t.footer.greeting);
-            updateText('footer-note', t.footer.note);
-
-            renderStats(t.stats.items);
-            renderTelemetry(t.telemetry.items);
-            renderMatrix(t.matrix.items);
-            renderPhilosophyPoints(t.philosophy.points);
-
-            btn.innerText = currentLang === 'zh' ? '中 / EN' : 'EN / 中';
-            document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
-        }
-
-        btn.addEventListener('click', () => {
-            currentLang = currentLang === 'en' ? 'zh' : 'en';
-            updateContent();
-        });
-
-        updateContent();
-
-        // --- GPU Retina Physics Engine (WebGL + Web Worker) ---
-        // Exiled physics logic to string for blob worker creation
-        const workerCode = `
-            let nodes = [];
-            let links = [];
-            let width = 800;
-            let height = 600;
-
-            self.onmessage = function(e) {
-                if(e.data.type === 'init') {
-                    width = e.data.width;
-                    height = e.data.height;
-                    nodes = e.data.nodes;
-                    links = e.data.links;
-                    loop();
-                } else if(e.data.type === 'resize') {
-                    width = e.data.width;
-                    height = e.data.height;
-                }
-            };
-
-            function loop() {
-                const damping = 0.85;
-                const kRepel = 2000;
-                const springLen = 80;
-                const kSpring = 0.02;
-
-                for (let i = 0; i < nodes.length; i++) {
-                    for (let j = i + 1; j < nodes.length; j++) {
-                        const dx = nodes[i].x - nodes[j].x;
-                        const dy = nodes[i].y - nodes[j].y;
-                        let dist = Math.sqrt(dx*dx + dy*dy) || 1;
-                        if (dist < 300) {
-                            const force = kRepel / (dist * dist);
-                            nodes[i].vx += (dx / dist) * force;
-                            nodes[i].vy += (dy / dist) * force;
-                            nodes[j].vx -= (dx / dist) * force;
-                            nodes[j].vy -= (dy / dist) * force;
-                        }
-                    }
-                }
-
-                for (let i = 0; i < links.length; i++) {
-                    const l = links[i];
-                    const n1 = nodes[l.s];
-                    const n2 = nodes[l.t];
-                    const dx = n2.x - n1.x;
-                    const dy = n2.y - n1.y;
-                    const dist = Math.sqrt(dx*dx + dy*dy) || 1;
-                    const force = (dist - springLen) * kSpring;
-                    n1.vx += (dx / dist) * force;
-                    n1.vy += (dy / dist) * force;
-                    n2.vx -= (dx / dist) * force;
-                    n2.vy -= (dy / dist) * force;
-                }
-
-                const cx = width / 2;
-                const cy = height / 2;
-                const posArray = new Float32Array(nodes.length * 2);
-
-                for (let i = 0; i < nodes.length; i++) {
-                    let n = nodes[i];
-                    n.vx += (cx - n.x) * 0.005;
-                    n.vy += (cy - n.y) * 0.005;
-                    n.vx *= damping;
-                    n.vy *= damping;
-                    n.x += n.vx;
-                    n.y += n.vy;
-                    n.x = Math.max(n.radius, Math.min(width - n.radius, n.x));
-                    n.y = Math.max(n.radius, Math.min(height - n.radius, n.y));
-
-                    posArray[i*2] = n.x;
-                    posArray[i*2+1] = n.y;
-                }
-
-                self.postMessage({ type: 'tick', positions: posArray }, [posArray.buffer]);
-                setTimeout(loop, 16);
-            }
-        `;
-        const blob = new Blob([workerCode], {type: 'application/javascript'});
-        const worker = new Worker(URL.createObjectURL(blob));
-
-        const canvas = document.getElementById('neuralCanvas');
-        const gl = canvas.getContext('webgl');
-        let width = canvas.width = window.innerWidth;
-        let height = canvas.height = window.innerHeight;
-
-        const colors = ['#4285F4', '#EA4335', '#FBBC05', '#34A853', '#ffffff'];
-
-        let renderNodes = [];
-        let renderLinks = [];
-
-        // WebGL Setup (Stripped down pure Vanilla JS without Three.js)
-        const vsSource = `
-            attribute vec2 aVertexPosition;
-            attribute float aPointSize;
-            attribute vec3 aColor;
-            uniform vec2 uResolution;
-            varying vec3 vColor;
-            void main() {
-               vec2 zeroToOne = aVertexPosition / uResolution;
-               vec2 zeroToTwo = zeroToOne * 2.0;
-               vec2 clipSpace = zeroToTwo - 1.0;
-               gl_Position = vec4(clipSpace * vec2(1, -1), 0, 1);
-               gl_PointSize = aPointSize;
-               vColor = aColor;
-            }
-        `;
-        const fsSource = `
-            precision mediump float;
-            varying vec3 vColor;
-            void main() {
-               vec2 distToCenter = gl_PointCoord - vec2(0.5, 0.5);
-               if (dot(distToCenter, distToCenter) > 0.25) discard;
-               gl_FragColor = vec4(vColor, 1.0);
-            }
-        `;
-
-        function compileShader(gl, type, source) {
-            const shader = gl.createShader(type);
-            gl.shaderSource(shader, source);
-            gl.compileShader(shader);
-            return shader;
-        }
-        const program = gl.createProgram();
-        gl.attachShader(program, compileShader(gl, gl.VERTEX_SHADER, vsSource));
-        gl.attachShader(program, compileShader(gl, gl.FRAGMENT_SHADER, fsSource));
-        gl.linkProgram(program);
-        gl.useProgram(program);
-
-        const positionBuffer = gl.createBuffer();
-        const positionLocation = gl.getAttribLocation(program, "aVertexPosition");
-        gl.enableVertexAttribArray(positionLocation);
-        gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-        gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
-
-        const sizeBuffer = gl.createBuffer();
-        const sizeLocation = gl.getAttribLocation(program, "aPointSize");
-        gl.enableVertexAttribArray(sizeLocation);
-
-        const colorBuffer = gl.createBuffer();
-        const colorLocation = gl.getAttribLocation(program, "aColor");
-        gl.enableVertexAttribArray(colorLocation);
-
-        const resolutionLocation = gl.getUniformLocation(program, "uResolution");
-
-        // WebGL Setup for Lines
-        const lineVsSource = `
-            attribute vec2 aVertexPosition;
-            uniform vec2 uResolution;
-            void main() {
-               vec2 zeroToOne = aVertexPosition / uResolution;
-               vec2 zeroToTwo = zeroToOne * 2.0;
-               vec2 clipSpace = zeroToTwo - 1.0;
-               gl_Position = vec4(clipSpace * vec2(1, -1), 0, 1);
-            }
-        `;
-        const lineFsSource = `
-            precision mediump float;
-            void main() {
-               gl_FragColor = vec4(1.0, 1.0, 1.0, 0.15); // Semi-transparent white
-            }
-        `;
-        const lineProgram = gl.createProgram();
-        gl.attachShader(lineProgram, compileShader(gl, gl.VERTEX_SHADER, lineVsSource));
-        gl.attachShader(lineProgram, compileShader(gl, gl.FRAGMENT_SHADER, lineFsSource));
-        gl.linkProgram(lineProgram);
-
-        const linePositionBuffer = gl.createBuffer();
-        const linePositionLocation = gl.getAttribLocation(lineProgram, "aVertexPosition");
-        gl.enableVertexAttribArray(linePositionLocation);
-        const lineResolutionLocation = gl.getUniformLocation(lineProgram, "uResolution");
-
-
-        async function fetchGraphData() {
-            try {
-                const res = await fetch('/api/graph');
-                const data = await res.json();
-                if (data.status === 'ok') {
-                    const payloadNodes = data.payload.nodes || [];
-                    const payloadLinks = data.payload.links || [];
-
-                    const nodeMap = {};
-                    renderNodes = payloadNodes.map((n, i) => {
-                        const maxW = Math.max(...payloadNodes.map(x => x.weight || 1));
-                        const r = Math.max((n.weight / maxW) * 8, 2);
-                        const cHex = colors[i % colors.length];
-                        const rCol = parseInt(cHex.slice(1,3), 16)/255;
-                        const gCol = parseInt(cHex.slice(3,5), 16)/255;
-                        const bCol = parseInt(cHex.slice(5,7), 16)/255;
-
-                        const nodeObj = {
-                            id: n.id,
-                            name: n.name,
-                            radius: r,
-                            x: Math.random() * width,
-                            y: Math.random() * height,
-                            vx: 0, vy: 0,
-                            r: rCol, g: gCol, b: bCol
-                        };
-                        nodeMap[n.id] = i;
-                        return nodeObj;
-                    });
-
-                    renderLinks = payloadLinks
-                        .filter(l => nodeMap[l.source] !== undefined && nodeMap[l.target] !== undefined)
-                        .map(l => ({
-                            s: nodeMap[l.source],
-                            t: nodeMap[l.target]
-                        }));
-
-                    // Send to Worker
-                    worker.postMessage({
-                        type: 'init',
-                        width: width, height: height,
-                        nodes: renderNodes,
-                        links: renderLinks
-                    });
-
-                    // Setup static buffers
-                    const sizeArray = new Float32Array(renderNodes.map(n => n.radius * 2));
-                    gl.bindBuffer(gl.ARRAY_BUFFER, sizeBuffer);
-                    gl.bufferData(gl.ARRAY_BUFFER, sizeArray, gl.STATIC_DRAW);
-
-                    const colorArray = new Float32Array(renderNodes.length * 3);
-                    for(let i=0; i<renderNodes.length; i++) {
-                        colorArray[i*3] = renderNodes[i].r;
-                        colorArray[i*3+1] = renderNodes[i].g;
-                        colorArray[i*3+2] = renderNodes[i].b;
-                    }
-                    gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
-                    gl.bufferData(gl.ARRAY_BUFFER, colorArray, gl.STATIC_DRAW);
-
-                }
-            } catch (e) {
-                console.warn('Cortex Offline. Visual cortex disconnected.', e);
-            }
-        }
-
-        // Handle Worker Updates
-        worker.onmessage = function(e) {
-            if(e.data.type === 'tick') {
-                const posArray = new Float32Array(e.data.positions);
-
-                gl.viewport(0, 0, width, height);
-                gl.clearColor(0, 0, 0, 0);
-                gl.clear(gl.COLOR_BUFFER_BIT);
-                gl.uniform2f(resolutionLocation, width, height);
-
-                // Draw Lines (Simple implementation via WebGL LINES)
-                // Performance Note: we draw lines via a secondary pass if needed, but for Singularity we just draw nodes as particles.
-                // For a complete graph, let's inject a line buffer.
-                const linePositions = new Float32Array(renderLinks.length * 4);
-                for(let i=0; i<renderLinks.length; i++) {
-                    const s = renderLinks[i].s;
-                    const t = renderLinks[i].t;
-                    linePositions[i*4] = posArray[s*2];
-                    linePositions[i*4+1] = posArray[s*2+1];
-                    linePositions[i*4+2] = posArray[t*2];
-                    linePositions[i*4+3] = posArray[t*2+1];
-                }
-
-                gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-                gl.bufferData(gl.ARRAY_BUFFER, posArray, gl.DYNAMIC_DRAW);
-
-                gl.bindBuffer(gl.ARRAY_BUFFER, sizeBuffer);
-                gl.vertexAttribPointer(sizeLocation, 1, gl.FLOAT, false, 0, 0);
-                gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
-                gl.vertexAttribPointer(colorLocation, 3, gl.FLOAT, false, 0, 0);
-
-                gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-                gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
-
-                // Draw Lines using a separate basic shader program
-                // In a pure Vanilla WebGL context, we bind the line buffer and draw lines
-                gl.useProgram(lineProgram);
-                gl.uniform2f(lineResolutionLocation, width, height);
-                gl.bindBuffer(gl.ARRAY_BUFFER, linePositionBuffer);
-                gl.bufferData(gl.ARRAY_BUFFER, linePositions, gl.DYNAMIC_DRAW);
-                gl.vertexAttribPointer(linePositionLocation, 2, gl.FLOAT, false, 0, 0);
-                gl.drawArrays(gl.LINES, 0, renderLinks.length * 2);
-
-                // Switch back to Point program
-                gl.useProgram(program);
-
-                // Draw Nodes
-                gl.drawArrays(gl.POINTS, 0, renderNodes.length);
-            }
-        };
-
-        window.addEventListener('resize', () => {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-            worker.postMessage({type: 'resize', width: width, height: height});
-        });
-
-        fetchGraphData();
-
-        // --- Terminal Logic ---
-        const termBody = document.getElementById('term-body');
-        const termInput = document.getElementById('term-input');
-
-        // Initial Startup Sequence & Greeting
-
-        function printLine(text, type = 'sys') {
-            const line = document.createElement('div');
-            line.className = `terminal-line ${type}`;
-            termBody.appendChild(line);
-
-            if (type === 'nexus') {
-                // Typewriter effect
-                let i = 0;
-                line.textContent = "Nexus: ";
-                const interval = setInterval(() => {
-                    if (i < text.length) {
-                        line.textContent += text.charAt(i);
-                        i++;
-                        termBody.scrollTop = termBody.scrollHeight;
-                    } else {
-                        clearInterval(interval);
-                    }
-                }, 30);
-            } else {
-                line.textContent = text;
-                termBody.scrollTop = termBody.scrollHeight;
-            }
-        }
-
-        // Initial Startup Sequence for NEXUS-CHAN
-        setTimeout(() => printLine(`[SYS] Holographic retina online`, 'sys'), 500);
-        setTimeout(() => printLine(`[SYS] Bypassing Node modules... Complete`, 'sys'), 1200);
-        setTimeout(() => {
-            fetch('/api/status')
-                .then(res => res.json())
-                .then(data => {
-                    if(data.status === 'ok') {
-                        printLine(`Hmph, how many bloated dependencies did you kill today Master? I have observed ${data.payload.entities || 0} native entities and ${data.payload.relations || 0} hyper-dimensional synapses`, 'nexus');
-                        setTimeout(() => printLine(`Identity source signal received from Google Developer, Creator privileges confirmed`, 'nexus'), 2000);
-                    } else {
-                        printLine(`Cortex disconnected, are you rewriting the kernel again Master?`, 'nexus');
-                    }
-                })
-                .catch(() => {
-                    printLine(`Static display mode initiated, I am starving without backend feeds`, 'nexus');
-                });
-        }, 2200);
-
-        termInput.addEventListener('keydown', async (e) => {
-            if (e.key === 'Enter') {
-                const cmd = termInput.value.trim();
-                if (!cmd) return;
-
-                printLine(`~/nexus> ${cmd}`, 'user');
-                termInput.value = '';
-
-                if (cmd === '/help') {
-                    printLine(`Available commands:\n/search [query] - Search my memories\n/status - Check my vitals\n/clear - Purge terminal output`, 'nexus');
-                    return;
-                }
-
-                if (cmd === '/clear') {
-                    termBody.innerHTML = '';
-                    return;
-                }
-
-                if (cmd.startsWith('/search ')) {
-                    const q = cmd.replace('/search ', '');
-                    try {
-                        const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`);
-                        const data = await res.json();
-                        if(data.status === 'ok' && data.payload.length > 0) {
-                            let reply = `I found ${data.payload.length} memory fragments for "${q}":\n`;
-                            data.payload.slice(0, 3).forEach(item => {
-                                reply += `- [${item.id}] ${item.name}\n`;
-                            });
-                            printLine(reply, 'nexus');
-                        } else {
-                            printLine(`Sorry Master, my synapses drew a blank on "${q}".`, 'nexus');
-                        }
-                    } catch (err) {
-                        printLine(`Ah... static interference! Can't reach the Cortex.`, 'nexus');
-                    }
-                    return;
-                }
-
-                if (cmd === '/status') {
-                     try {
-                        const res = await fetch('/api/status');
-                        const data = await res.json();
-                        if(data.status === 'ok') {
-                            printLine(`Vitals: ${data.payload.entities} entities, ${data.payload.relations} relations Density: ${data.payload.density.toFixed(2)} I am feeling healthy`, 'nexus');
-                        }
-                    } catch (err) {
-                        printLine(`Vitals unknown Cortex API is offline`, 'nexus');
-                    }
-                    return;
-                }
-
-                printLine(`Unknown command Type /help if you are lost`, 'nexus');
-            }
-        });
-    </script>
+              </div>
+              <span class="tag">2,038 min</span>
+            </div>
+            <div class="lane-body">
+              <div class="mini-metrics">
+                <div class="mini"><b>1,725</b><span>job runs</span></div>
+                <div class="mini"><b>42s</b><span>avg run</span></div>
+                <div class="mini"><b>2%</b><span>failure</span></div>
+              </div>
+              <div class="steps">
+                <div class="step"><div><div class="step-main">Checkout reality</div><div class="step-sub zh">拉取 main 分支现实状态</div><div class="step-sub en">Fetch main branch reality</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Rebuild memory</div><div class="step-sub zh">从 schema 重建数据库</div><div class="step-sub en">Rebuild database from schema</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Harvest external facts</div><div class="step-sub zh">扫描外部 AI 仓库信号</div><div class="step-sub en">Scan external AI repository signals</div></div><span class="tag">welcome only</span></div>
+                <div class="step"><div><div class="step-main">Ingest self-codebase</div><div class="step-sub zh">把自身文件映射进 Cortex</div><div class="step-sub en">Map self files into Cortex</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Deep ponder</div><div class="step-sub zh">主动推理与 PageRank 中心性观察</div><div class="step-sub en">Active inference and PageRank centrality observation</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Sandbox evolution</div><div class="step-sub zh">AST 变异沙盒和信任网关验证</div><div class="step-sub en">AST mutation sandbox and trust gateway verification</div></div><span class="tag">welcome focus</span></div>
+                <div class="step"><div><div class="step-main">Ledger and dashboard</div><div class="step-sub zh">追加量化账本并渲染仪表盘</div><div class="step-sub en">Append quantitative ledger and render dashboard</div></div><span class="tag">welcome only</span></div>
+                <div class="step"><div><div class="step-main">Sync, resolve, commit</div><div class="step-sub zh">同步, 处理 stash 冲突, 提交认知变化</div><div class="step-sub en">Sync, resolve stash conflicts, commit cognitive changes</div></div><span class="tag">writeback</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="matrix">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Step Comparison Matrix</div>
+            <h2><span class="zh">步骤对比矩阵</span><span class="en">Step comparison matrix</span></h2>
+            <p class="section-desc zh">
+              shared 表示两边共同存在, zero only 表示内核线专属, welcome only 表示外部信号与账本线专属
+            </p>
+            <p class="section-desc en">
+              shared means both lanes contain the step, zero only means kernel-specific, welcome only means external-signal or ledger-specific
+            </p>
+          </div>
+        </div>
+
+        <div class="card matrix">
+          <div class="matrix-row matrix-head">
+            <div class="matrix-cell">Stage</div>
+            <div class="matrix-cell">1 · zero</div>
+            <div class="matrix-cell">2 · welcome</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Cleanup</div>
+            <div class="matrix-cell yes">yes · cleanup generated state</div>
+            <div class="matrix-cell no">not primary</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Checkout</div>
+            <div class="matrix-cell yes">yes</div>
+            <div class="matrix-cell yes">yes</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Rebuild memory</div>
+            <div class="matrix-cell yes">yes · src/kernel/protocol/nexus.py rebuild</div>
+            <div class="matrix-cell yes">yes · docs/brain/nexus.py rebuild</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">External harvest</div>
+            <div class="matrix-cell warn">inside evolve signals</div>
+            <div class="matrix-cell yes">yes · harvest external facts</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Self ingestion</div>
+            <div class="matrix-cell yes">yes · 42 files in example log</div>
+            <div class="matrix-cell yes">yes · 14 files in example log</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Ponder</div>
+            <div class="matrix-cell yes">yes · graph analysis</div>
+            <div class="matrix-cell yes">yes · active inference</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Evolution</div>
+            <div class="matrix-cell yes">yes · cognitive report</div>
+            <div class="matrix-cell yes">yes · sandbox evolution</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Verification</div>
+            <div class="matrix-cell yes">yes · tests OK</div>
+            <div class="matrix-cell warn">sandbox verification</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Writeback</div>
+            <div class="matrix-cell yes">10 files changed, 545 insertions</div>
+            <div class="matrix-cell yes">15 files changed, 230 insertions</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="logs">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Run Log Evidence</div>
+            <h2><span class="zh">运行日志证据</span><span class="en">Run-log evidence</span></h2>
+            <p class="section-desc zh">
+              下面不是实时 API 拉取, 是把你提供的 run log 摘成页面样例, 用来证明每条 lane 的具体行为
+            </p>
+            <p class="section-desc en">
+              This is not a live API fetch, it is a summarized sample from your provided run logs, used to show the concrete behavior of each lane
+            </p>
+          </div>
+        </div>
+
+        <div class="terminal">
+          <div class="terminal-head">
+            <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div>RUN LOG CONSOLE · 2026-06-28 EXAMPLE</div>
+          </div>
+          <div class="terminal-body">
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>rebuild</strong> Reconstruction Complete, 49397 memories restored</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>ingest</strong> 42 files mapped into Cortex</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>ponder</strong> nodes 70, topology HIGHLY_STRUCTURED_ZERO_ORPHANS, graph density 3.54</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>tests</strong> tests OK, MCP and server checks passed</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>commit</strong> 10 files changed, 545 insertions, cognitive report created</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>harvest</strong> transformers, nexent, astron-agent, vllm, dify, mediapipe, markitdown, python-genai</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>ingest</strong> 14 files mapped into Cortex</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>ponder</strong> isolation risk, structural intuition, PageRank centrality, self-driven goal</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>evolve</strong> AST sandbox passed, Trust Gateway Active, quantitative ledger rendered</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>commit</strong> 15 files changed, 230 insertions, archive and ledger updated</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="explain">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Zero-Basics Explanation</div>
+            <h2><span class="zh">0基础解析</span><span class="en">Zero-basics explanation</span></h2>
+            <p class="section-desc zh">
+              这部分给第一次看到 GitHub Actions 的人看, 不预设 CI/CD 背景
+            </p>
+            <p class="section-desc en">
+              This part is for people seeing GitHub Actions for the first time, no CI/CD background required
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card explain-card">
+            <h3 class="zh">什么是 workflow</h3>
+            <h3 class="en">What is a workflow</h3>
+            <p class="zh">workflow 是仓库里的自动流程, 通常放在 .github/workflows 目录, 它告诉 GitHub 什么时候运行, 运行哪些 job, 每个 job 做什么</p>
+            <p class="en">A workflow is an automated process stored in a repository, usually under .github/workflows, it tells GitHub when to run, which jobs to run, and what each job should do</p>
+          </article>
+          <article class="card explain-card">
+            <h3 class="zh">什么是 job run</h3>
+            <h3 class="en">What is a job run</h3>
+            <p class="zh">job run 是一次具体执行, 比如 checkout, setup python, rebuild, ingest, test, commit 都可以作为步骤出现在一次 job run 里</p>
+            <p class="en">A job run is one concrete execution, steps such as checkout, setup python, rebuild, ingest, test, and commit can appear inside a job run</p>
+          </article>
+          <article class="card explain-card">
+            <h3 class="zh">什么是 total minutes</h3>
+            <h3 class="en">What are total minutes</h3>
+            <p class="zh">total minutes 表示工作流在 runner 上消耗的总运行时间, 数字越高, 说明这一条 lane 年度执行负载越重</p>
+            <p class="en">Total minutes means the total runner time consumed by workflows, the higher the number, the heavier the yearly execution load</p>
+          </article>
+          <article class="card explain-card">
+            <h3 class="zh">为什么看 queue time</h3>
+            <h3 class="en">Why queue time matters</h3>
+            <p class="zh">queue time 是 job 等待 runner 的时间, 这里两边都是 3s, 表示调度等待不是主要差异, 差异主要来自实际执行量</p>
+            <p class="en">Queue time is how long a job waits for a runner, both lanes are 3s here, so scheduling delay is not the main difference, execution volume is</p>
+          </article>
+          <article class="card explain-card">
+            <h3 class="zh">为什么看 failure rate</h3>
+            <h3 class="en">Why failure rate matters</h3>
+            <p class="zh">failure rate 表示失败 job 的比例, 两边都是 2%, 说明稳定性同级, failed job usage 用来观察失败消耗的分钟成本</p>
+            <p class="en">Failure rate is the share of failed jobs, both lanes are 2%, so reliability is similar, failed job usage shows the minute cost of failed work</p>
+          </article>
+          <article class="card explain-card">
+            <h3 class="zh">怎么读这页</h3>
+            <h3 class="en">How to read this page</h3>
+            <p class="zh">先看 1 和 2 的年度数字, 再看两条 lane 的步骤, 最后用日志控制台验证这些数字背后的真实行为</p>
+            <p class="en">Start with the yearly numbers for 1 and 2, then read the two lanes, then use the log console to connect the metrics to concrete behavior</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <span class="zh">© 2026 NEXUS FLOW · 2026-06-26 数据例子 · single-file homepage</span>
+        <span class="en">© 2026 NEXUS FLOW · 2026-06-26 data example · single-file homepage</span>
+      </div>
+      <div>
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const button = document.getElementById("langBtn")
+    const body = document.body
+
+    button.addEventListener("click", () => {
+      const isZh = body.classList.contains("lang-zh")
+      body.classList.toggle("lang-zh", !isZh)
+      body.classList.toggle("lang-en", isZh)
+      document.documentElement.lang = isZh ? "en" : "zh-CN"
+      button.textContent = isZh ? "EN / ZH" : "ZH / EN"
+    })
+  </script>
 </body>
 </html>
