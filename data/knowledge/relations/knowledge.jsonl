@@ -1,0 +1,3 @@
+{"dst": "graph_topology_v2", "hash": "bb54272219af52f35d2f10eb7dbe9e2b1f18e1c399c869f53e06982be46830cd", "prev_hash": "NEXUS_GENESIS_0000", "relation": "introduces", "src": "nexus_core_update", "weight": 1.0}
+{"dst": "memory_shield_mk3", "hash": "eace52e012d319344bca38c266500cc929f21e6b47688a2f801f61a81d1e8309", "prev_hash": "bb54272219af52f35d2f10eb7dbe9e2b1f18e1c399c869f53e06982be46830cd", "relation": "upgrades", "src": "nexus_core_update", "weight": 1.0}
+{"dst": "memory_shield_mk3", "hash": "9f26dc3e987299eb25eb4679a8b014857d24f6ccaffa454fc9e3f85cb3386cc0", "prev_hash": "eace52e012d319344bca38c266500cc929f21e6b47688a2f801f61a81d1e8309", "relation": "protects", "src": "graph_topology_v2", "weight": 0.8}
