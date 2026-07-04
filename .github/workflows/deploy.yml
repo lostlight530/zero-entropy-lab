@@ -33,10 +33,15 @@ jobs:
         with:
           enablement: true
 
+      - name: Prepare clean artifact directory
+        run: |
+          mkdir public
+          cp index.html public/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: 'public'
 
       - name: Deploy to GitHub Pages
         id: deployment
