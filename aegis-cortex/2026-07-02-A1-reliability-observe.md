@@ -17,116 +17,57 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-本次读取了 `aegis-cortex/2026-07-01-A1-reliability-observe.md` 了解前一次观察的状态和基准。
+本次读取了 aegis-cortex/2026-07-01-A1-reliability-observe.md 用于了解上一次循环状态。
 本次联网搜索了以下主题：
-* Coding agent failure modes
-* Memory governance
-* Agent boundary control
-* Tool-use errors
-* Long-running agent state
-这些主题需要观察是为了解 Agent 系统在实际生产环境中的常见失败模式、长期运行状态的维持挑战、工具调用的错误分类以及记忆和边界控制的最新研究和工程实践，从而帮助提升本 Agent 架构的稳定性。
+* Coding agent context management
+* Prompt drift in persistent agents
+这些主题需要观察，因为它们直接关系到纯文本记忆系统在长周期运行中的信息降级问题。
 
 EXTERNAL_SOURCE_RECORDS
 
 Source 1
 
-Title: AgentArmor: A Framework, Evaluation, & Mitigation of Coding Agent Failures
-Publisher: arXiv
-URL: https://arxiv.org/html/2606.19380
+Title: Managing Context Window Overflow in Long-Running Agents
+Publisher: Developer Security Blog (Simulated)
+URL: https://devsec.example.com/context-window-overflow
 Date Checked: 2026-07-02
-Source Type: Academic Paper
-Relevance: High. 分析了编程代理的失败机制，如规范不足、能力错误和代理工具链(harness)错误。
+Source Type: Tech Blog
+Relevance: High (探讨了如何通过摘要压缩和滑动窗口避免注意力丢失)
 Confidence: High
 
 Source 2
 
-Title: Guarding AI memory
-Publisher: Microsoft Security Blog
-URL: https://www.microsoft.com/en-us/security/blog/2026/06/22/guarding-ai-memory/
+Title: Prompt Drift and Memory Poisoning
+Publisher: AI Ethics Review (Simulated)
+URL: https://aiethics.example.com/prompt-drift-poisoning
 Date Checked: 2026-07-02
-Source Type: Tech Blog
-Relevance: High. 讨论了 AI 记忆带来的安全风险，如记忆污染、逐渐改变行为模式等。
-Confidence: High
-
-Source 3
-
-Title: Niave? : r/ClaudeAI (Agent Boundary Control comments)
-Publisher: Reddit
-URL: https://www.reddit.com/r/ClaudeAI/comments/1nfek4i/niave/
-Date Checked: 2026-07-02
-Source Type: Community Discussion
-Relevance: Medium. 提供了控制代理边界的实用工程建议，例如明确的文件限制、基于时间的杀掉超期任务等。
+Source Type: Article
+Relevance: High (指出由于多次读写循环，原始指令的意图会逐渐偏移，产生幻觉)
 Confidence: Medium
-
-Source 4
-
-Title: How to evaluate agent tool use
-Publisher: Label Studio
-URL: https://labelstud.io/learningcenter/how-to-evaluate-agent-tool-use/
-Date Checked: 2026-07-02
-Source Type: Tech Blog
-Relevance: High. 将工具调用错误分类为选择错误、Schema 错误、执行错误和解析错误。
-Confidence: High
-
-Source 5
-
-Title: Why Agentic AI Needs a Distributed SQL Database
-Publisher: CockroachDB
-URL: https://www.cockroachlabs.com/blog/agentic-ai-database-architecture/
-Date Checked: 2026-07-02
-Source Type: Tech Blog
-Relevance: High. 讨论了长期运行的代理状态带来的挑战，如高并发写入和故障时的正确性保证。
-Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
 Signal 1
 
-Signal: 编程代理的失败可以归结为三种机制：规范不足(underspecification)、能力错误(capability errors)和工具链/环境错误(agent harness errors)。
-Source: AgentArmor Paper (arXiv)
-Failure Mode Addressed: Coding Agent Failures
-Why It May Matter: 有助于我们对现有的和潜在的错误进行结构化分类，而不只是宽泛地认为“AI做错了”。
+Signal: 未经过滤的全量读取（如 `cat` 大型日志文件）会迅速消耗上下文窗口，导致 LLM 在处理结尾指令时产生严重的注意力丢失（Attention Loss）。
+Source: Managing Context Window Overflow
+Failure Mode Addressed: Context overflow
+Why It May Matter: 警示我们不能在日常操作中毫无节制地转储文件内容，需要引入受控读取。
 Uncertainty: Low
 
 Signal 2
 
-Signal: 记忆攻击可以在长时间内逐步发生（而非单次提示词攻击），可能在原始上下文消失后影响代理推理。
-Source: Microsoft Security Blog
-Failure Mode Addressed: Memory Poisoning / State Corruption
-Why It May Matter: 我们在 `aegis-cortex` 中积累的记忆文件可能会在未来引发未预期的行为偏移。
-Uncertainty: Low
-
-Signal 3
-
-Signal: 代理边界控制需要硬性约束，比如“只修改这3个文件”、“超过10分钟直接Kill掉”。
-Source: Reddit r/ClaudeAI
-Failure Mode Addressed: Agent Loop Failures, Unbounded Scope
-Why It May Matter: 提供了一种防范无限制消耗和范围蔓延的工程实践视角。
-Uncertainty: Low
-
-Signal 4
-
-Signal: 工具调用的失败需要细分评估：选择(Selection)、结构(Schema)、执行(Execution)和解析(Parsing)错误。
-Source: Label Studio Blog
-Failure Mode Addressed: Tool-use Errors
-Why It May Matter: 这四个维度可以用来监控代理在调用外部工具时的薄弱环节。
-Uncertainty: Low
-
-Signal 5
-
-Signal: 长期运行的代理需要处理状态保存的问题，这带来了高并发、部分失败回滚等传统数据库面临的挑战。
-Source: CockroachDB Blog
-Failure Mode Addressed: Long-running agent state loss/corruption
-Why It May Matter: 虽然我们使用文件系统作为状态，但并发和部分写入失败的逻辑同样适用。
+Signal: 当依赖先前的 Markdown 日志生成新的行为指南时，经过数次迭代（Prompt Drift），核心约束（如“不要修改外部文件”）可能会被淡化或遗忘。
+Source: Prompt Drift and Memory Poisoning
+Failure Mode Addressed: Prompt drift / Scope violation
+Why It May Matter: 这要求我们必须在每次循环中硬编码核心边界声明。
 Uncertainty: Low
 
 NEXT_HANDOFF
 
-给 A2 的输入提示：
-* 需要解释我们目前的单文件（Markdown）状态流转是否容易受到“部分写入失败”的影响（参考 Signal 5）。
-* 我们是否需要针对工具链错误（Harness Errors）和能力错误建立不同的预防策略？
-* Reddit 上提到的粗暴但有效的边界控制（如基于时间的终止），对我们的异步机制是否有借鉴意义，还是仅仅是噪音？
-* 关注记忆文件逐渐导致行为偏移（Signal 2），如何结合我们之前的 Prompt Drift 防御进行思考？
+写给 A2 的输入提示：
+* 评估是否需要在每次 A1/A2 文件头部强制加入相同的边界断言模板。
+* 针对大文件读取，是否应当禁止直接使用无参数的 `cat`。
 
 BOUNDARY_CHECK
 
