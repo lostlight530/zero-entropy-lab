@@ -1,5 +1,3 @@
-# A1 Daily Reliability Observe
-
 CORTEX_RUN_HEADER
 
 Cortex: aegis-cortex

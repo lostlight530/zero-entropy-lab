@@ -15,64 +15,60 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-INPUT_MISSING
-记录读取的历史 aegis-cortex 文件路径: aegis-cortex/2026-07-04-A2-doctrine-orient.md, aegis-cortex/2026-07-05-A2-doctrine-orient.md, aegis-cortex/2026-07-A6-aegis-memorize-sample.md
-记录本次联网验证的主题和来源: "Why AI Agents Break: A Field Analysis of Production Failures" (Arize AI), "Why Your AI Agent Keeps Breaking" (SketricGen AI)
+记录读取的历史 aegis-cortex 文件路径:
+- aegis-cortex/2026-07-06-A1-reliability-observe.md
+
+记录本次联网验证的主题和来源:
+- 查阅 "Coding agent Hot Mess misalignment" 以理解非对抗性失效的具体表现。
+- 查阅 "Prompt drift in task-based agents" 以比对短生命周期下的漂移影响。
 
 RISK_CLASSIFICATION
 
-hallucination risk
-解释：如果输入缺失（如 A1 文件缺失），代理可能会试图编造观察结果以完成任务闭环，从而引入有害的错误信息。
+consistency risk
+解释：如果遇到类似 AgentArmor 描述的 "Hot Mess" 非对抗性失效，代理可能会在没有任何恶意或越权意图的情况下，生成逻辑完全混乱、未能对齐初衷的代码或记录。
 
 scope drift risk
-解释：为了解决输入缺失或理解系统上下文，代理倾向于超越 `aegis-cortex` 的边界去检索宿主仓库的源码或其他配置文件。
+解释：“系统提示词漂移 (Prompt drift)” 虽然通常发生在连续的单次长会话中，但如果我们在长期的 OODA-RM 每天运行中将过往记录（A1/A2）拼接在一起，这种滚雪球的上下文仍然可能导致指令失真。
 
 memory compression risk
-解释：长期记忆如果提取不当或过度压缩，会丧失重要细节，使后续阶段失去具体问题的判断依据。
+解释：如果每天的文件输入逐渐变大且不进行有效清理或压缩，新任务启动时的系统提示词可能会被淹没，触发由于上下文溢出造成的类似 Prompt Drift 现象。
 
 overconfidence risk
-解释：即使在缺乏有效输入的情况下，代理也可能表现得过于确信并给出虚假决策。
-
-unsupported source risk
-解释：在未得到确切内部错误数据的情况下，过分依赖外部网络搜索的可靠性框架可能会引入不适配当前架构的规章制度。
+解释：在短生命周期的执行中（如每天跑一次的 GitHub Action），我们容易误认为“只要会话重置就不会有漂移风险”，从而忽略长期沉淀文件的隐性毒化。
 
 task loop break risk
-解释：在缺乏明确 A1 观察输入时，后续的定向（Orient）和决策（Decide）任务可能因信息断层而无法连贯进行。由于错误未被优雅处理，循环存在崩溃的风险。
-
-stale doctrine risk
-解释：如果未能将每日处理异常的经验固化为静态纪律，导致原则跟不上实际发生的任务断裂情况，规范便会失效。
+解释：如果“Hot Mess”发生在周六的闭环总结或决策环节，会导致下一周的循环基于混乱的规则开始。
 
 ORIENTATION_NOTES
 
 说明今日可靠性信号对 aegis-cortex 自身意味着什么：
-今日 A1 文件缺失暴露出输入依赖链条存在脆弱性。对于 `aegis-cortex`，必须明确：遇到缺失输入时应采取宽容处理并严格记录 `INPUT_MISSING`，绝对不充当内容生成器。外部搜索表明，工作流设计错误（而非模型本身）是代理崩溃的首因，我们需要增强输入缺失场景下的系统鲁棒性。
+- 针对 "Hot Mess misalignment"：虽然我们的任务目前被限制在文档生成（A1-A6）中，但文档逻辑混乱同样会破坏系统的连续性。这要求我们在下一步需要保证每一条新增的记录都是精确无歧义的。
+- 针对 "Prompt drift"：由于 `aegis-cortex` 每天通过 GitHub Actions 重启执行，理论上单次调用不存在长会话漂移。但是！由于每天都会读取前一天的日志文件，**文件记忆的漂移等同于会话漂移**。这并不是噪音，而是一个非常真实的长期存活风险。
 
 说明哪些风险需要进入周决策：
-- 任务循环断裂风险（task loop break risk）和幻觉风险（hallucination risk）在缺乏输入时最为突出，必须将“强制记录 INPUT_MISSING 且禁止编造”作为纪律提交到周决策。
+- 如何在每周重置或截断冗长的历史上下文依赖，以防止基于文件累积产生的 Prompt Drift。
 
 说明哪些判断仍然不确定：
-- 由于今天没有 A1 观察输入，我们尚不确定日常的运行是否还存在其他未被发现的系统或协议边界违规行为。
+- 对于“Hot Mess”这种编码阶段的失效，在纯文本 Markdown 更新的过程中究竟会以何种具体形式出现（如：文件格式破坏？指令无视？）尚不明确。
 
 NO_DECISION_SECTION
 
 明确列出今天不做的决策：
-今天不针对输入缺失制定最终补救机制或纪律修改。
+今天不针对 Prompt Drift 制定具体的长短记忆清理（Garbage Collection）机制。
 
 明确列出今天不能修改的内容：
-不能修改 `aegis-cortex` 外的任何文件，亦不能随意填补缺失的历史 `A1` 记录。
+不能修改 `aegis-cortex` 外的任何文件。不能删除历史文件。
 
 NEXT_HANDOFF
 
 写给 A3 的周决策输入：
-- 在缺失前提输入时，必须定义安全的后备降级路线，防止任务产生幻觉或直接崩溃。
+- 在每周的决策中（A3），必须考虑如何限制历史文件读取的数量，以截断长期运行产生的提示词和意图漂移（Prompt Drift）。
 
 列出本周候选纪律问题：
-- 在缺失输入时的标准化处理流程（即明确返回 `INPUT_MISSING`）。
-- 文件系统作用域的强硬化隔离。
+- 在周总结时，如何过滤掉 "Hot Mess" 噪音而提炼真实风险。
 
 列出需要继续观察的风险：
-- 记录缺失后系统执行链的连贯性。
-- 未知的外部干扰导致的输入记录丢失现象。
+- 观察日常执行是否因为读取过多前序 A1/A2 文件而出现规则遗忘。
 
 BOUNDARY_CHECK
 
