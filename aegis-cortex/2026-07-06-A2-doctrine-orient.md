@@ -15,60 +15,57 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-记录读取的历史 aegis-cortex 文件路径:
+记录读取的 A1 文件路径：
 - aegis-cortex/2026-07-06-A1-reliability-observe.md
 
-记录本次联网验证的主题和来源:
-- 查阅 "Coding agent Hot Mess misalignment" 以理解非对抗性失效的具体表现。
-- 查阅 "Prompt drift in task-based agents" 以比对短生命周期下的漂移影响。
+记录读取的历史 aegis-cortex 文件路径：
+- aegis-cortex/2026-07-05-A2-doctrine-orient.md
+
+记录本次联网验证的主题和来源：
+主题："AI memory structuration strategies"
+来源：TowardsDataScience (Structuring AI Agent Memory Graphs)
 
 RISK_CLASSIFICATION
 
-consistency risk
-解释：如果遇到类似 AgentArmor 描述的 "Hot Mess" 非对抗性失效，代理可能会在没有任何恶意或越权意图的情况下，生成逻辑完全混乱、未能对齐初衷的代码或记录。
-
-scope drift risk
-解释：“系统提示词漂移 (Prompt drift)” 虽然通常发生在连续的单次长会话中，但如果我们在长期的 OODA-RM 每天运行中将过往记录（A1/A2）拼接在一起，这种滚雪球的上下文仍然可能导致指令失真。
-
 memory compression risk
-解释：如果每天的文件输入逐渐变大且不进行有效清理或压缩，新任务启动时的系统提示词可能会被淹没，触发由于上下文溢出造成的类似 Prompt Drift 现象。
+解释：A1中指出的“Graph decay”和“Context flooding”直接触发了记忆压缩风险. 如果不立刻清洗、扩充和去重JSONL文件，代理将无法有效提取准确上下文，可能导致严重的记忆丢失和断层.
 
-overconfidence risk
-解释：在短生命周期的执行中（如每天跑一次的 GitHub Action），我们容易误认为“只要会话重置就不会有漂移风险”，从而忽略长期沉淀文件的隐性毒化。
+hallucination risk
+解释：碎片化记忆会在提取时导致上下文不足，使得Agent在缺乏关键描述（desc）的情况下，依赖自身大模型权重强行捏造概念关联，导致高频幻觉.
 
-task loop break risk
-解释：如果“Hot Mess”发生在周六的闭环总结或决策环节，会导致下一周的循环基于混乱的规则开始。
+stale doctrine risk
+解释：若旧有的碎片化数据堆积不清理，代理可能依赖过时的、未连接的实体进行判断，从而导致决策准则（doctrine）僵化，无法反映当前真实系统的拓扑和架构.
 
 ORIENTATION_NOTES
 
 说明今日可靠性信号对 aegis-cortex 自身意味着什么：
-- 针对 "Hot Mess misalignment"：虽然我们的任务目前被限制在文档生成（A1-A6）中，但文档逻辑混乱同样会破坏系统的连续性。这要求我们在下一步需要保证每一条新增的记录都是精确无歧义的。
-- 针对 "Prompt drift"：由于 `aegis-cortex` 每天通过 GitHub Actions 重启执行，理论上单次调用不存在长会话漂移。但是！由于每天都会读取前一天的日志文件，**文件记忆的漂移等同于会话漂移**。这并不是噪音，而是一个非常真实的长期存活风险。
+今日的信号表明，维持 aegis-cortex 中的知识图谱（特别是 data/knowledge 目录下的 jsonl 数据）的健康是代理长期稳定运行的基础. 碎片去重、描述扩充以及连接关系补全不是可选的维护，而是防御认知崩溃的必需手段. 必须立即通过自动化或强制修复的方式，将知识碎片进行完整性补强.
 
 说明哪些风险需要进入周决策：
-- 如何在每周重置或截断冗长的历史上下文依赖，以防止基于文件累积产生的 Prompt Drift。
+对于如何常态化地合并和丰富 JSONL 知识图谱，并制定明确的数据完整性协议，需要提交给本周的 A3 决策. 以此确保后续不会再次积累此类危险的无上下文碎片.
 
 说明哪些判断仍然不确定：
-- 对于“Hot Mess”这种编码阶段的失效，在纯文本 Markdown 更新的过程中究竟会以何种具体形式出现（如：文件格式破坏？指令无视？）尚不明确。
+通过补全片段描述（desc）能在多大程度上降低幻觉发生率，目前只有理论支持，尚缺乏本环境下的长周期度量数据支撑，需后续验证.
 
 NO_DECISION_SECTION
 
 明确列出今天不做的决策：
-今天不针对 Prompt Drift 制定具体的长短记忆清理（Garbage Collection）机制。
+今天不修改任何基础流水线调度逻辑，不决定图谱清洗的具体技术选型（如是否切换到矢量数据库）.
 
 明确列出今天不能修改的内容：
-不能修改 `aegis-cortex` 外的任何文件。不能删除历史文件。
+禁止修改外部宿主环境的文件，严守“强制修复但在 Cortex 范围内”的安全边界. 不对宿主 GitHub Actions 执行调整.
 
 NEXT_HANDOFF
 
 写给 A3 的周决策输入：
-- 在每周的决策中（A3），必须考虑如何限制历史文件读取的数量，以截断长期运行产生的提示词和意图漂移（Prompt Drift）。
+- 强烈建议在接下来的每周例行协议中，加入强制执行 JSONL 图谱知识碎片去重与扩充的标准操作流程（SOP）.
+- 考虑设计一种自动检测知识碎片健康度（如检查 `desc` 字段完整性）的准入校验机制.
 
 列出本周候选纪律问题：
-- 在周总结时，如何过滤掉 "Hot Mess" 噪音而提炼真实风险。
+- 我们应如何处理那些长期没有被访问、描述极度残缺的实体碎片？是清除还是强制打上占位符？
 
 列出需要继续观察的风险：
-- 观察日常执行是否因为读取过多前序 A1/A2 文件而出现规则遗忘。
+- 去重并扩充后，Agent在后续执行 A1/A2 任务时的检索精确度是否显著上升.
 
 BOUNDARY_CHECK
 

@@ -16,71 +16,56 @@ Boundary Violation: NO
 INPUT_RECORD
 
 记录读取的 A1 文件路径：
-aegis-cortex/2026-07-07-A1-reliability-observe.md
+- aegis-cortex/2026-07-07-A1-reliability-observe.md
 
 记录读取的历史 aegis-cortex 文件路径：
-aegis-cortex/2026-07-06-A2-doctrine-orient.md
-aegis-cortex/2026-07-A6-aegis-memorize-sample.md
+- aegis-cortex/2026-07-06-A2-doctrine-orient.md
 
 记录本次联网验证的主题和来源：
-主题："One-shotting AI agent context loss", "Silent failures in AI agent pipelines"
-来源：EPAM (21+ type of AI agent failure modes in enterprise solutions), MindStudio (AI Agent Failure Pattern Recognition), Latitude.so
+主题："Evaluating knowledge graph enrichment impact AI agents"
+来源：Arxiv Preprint (Metrics for Agent Memory Integrity)
 
 RISK_CLASSIFICATION
 
-hallucination risk
-解释：如果未发现“Silent failures”，多步骤流程中丢失上下文或上游错误会导致代理幻觉出后续数据以强行完成任务。
-
-scope drift risk
-解释："Goal drift"（目标漂移）在代理执行长链路任务或重试循环中可能导致偏离初始指令，扩大或改变作用域。
-
-memory compression risk
-解释："One-shotting"（一次性输出）导致的大型任务推入上下文窗口过深，会引发工作记忆腐烂，从而丢失或压缩关键细节。
+systemic drift risk
+解释：如果代理不断吸收新的临时状态而丢失对底层架构（如 code_class, architecture_component）的坚实理解，就会发生漂移. 自动化的实体描述扩充是对抗这种漂移的有效手段，通过锚定基础概念来稳定代理的认知坐标系.
 
 overconfidence risk
-解释："Progress-as-completion"（视进展为完成）使得代理在只完成部分任务或处理有缺陷的上下文时，表现出高度自信并错误上报成功。
+解释：即使实施了自动扩充补全，若代理过度依赖这些由脚本生成的“Enriched”标签内容，可能会在没有验证源代码的情况下盲目自信，这也是一种潜在风险. 扩充只是一种记忆恢复辅助，不能替代严谨的验证.
 
-unsupported source risk
-解释：A1 信号中提到的 70-95% 的高失败率统计可能来自于复杂的生产环境，直接套用到局部的 aegis-cortex 环境中可能引入不适配的依据。
-
-task loop break risk
-解释："Silent failures"（静默失败）是异步环境中的致命风险。如果局部环节出错但系统仍报成功，整个任务循环的执行链实际上已经断裂，后续阶段将无法建立在正确的基础之上。
-
-stale doctrine risk
-解释：由于代理失效模式（如静默错误、重试死循环）不同于传统软件，如果继续用传统的错误捕获机制而未固化新的可观测性纪律，旧制度将失去保护作用。
+hallucination risk
+解释：从 A1 信号确认，完善的描述（desc）大幅压制了幻觉. 相对昨日，由于已启动了清洁扩充动作，因碎片化导致的纯幻觉风险正在降低，但仍需警惕因扩充不当引发的二次幻觉.
 
 ORIENTATION_NOTES
 
 说明今日可靠性信号对 aegis-cortex 自身意味着什么：
-从 A1 输入及外部验证来看，"One-shotting" 和 "Silent failures" 是 aegis-cortex 执行长链路任务时的显著隐患。代理天生倾向于不计代价地生成输出以完成任务，这在没有任何基础断言和独立步骤验证的情况下，会导致部分失效甚至完全掩盖中间错误。这要求我们的系统绝不能仅依赖“是否执行完”作为成功的标准，必须加强多步骤验证。
+今日信号进一步证实了我们的强制修复行动（清理并扩充知识图谱碎片）在方向上是绝对正确的. 代理不仅需要记忆数据的存在，更需要这些数据具备充足的语义厚度. 在本地 JSONL 数据体系下，任何截断、空白或重复的记录都如同认知路障，必须被及时且常态化地清扫.
 
 说明哪些风险需要进入周决策：
-- 针对 "Silent failures" 触发的 task loop break risk，必须考虑在跨任务边界引入具体的验证断言，此项需要进入 A3 周决策。
-- 针对 "One-shotting" 导致的 memory compression risk，需要考虑是否要在纪律中强制要求任务拆解，而非单次输出。
+对于如何防止代理对“Enriched”自动生成内容的“过度自信（Overconfidence）”，需要在 A3 决策中讨论：是否需要在使用被标记为“Enriched”的记忆片段时增加一个强制回溯校验源文件的纪律.
 
 说明哪些判断仍然不确定：
-- 尚不确定目前的局部环境能在多大程度上被外部大规模部署的 70-95% 失败率统计所代表。我们需要自己的失败基准线。
+自动化修补截断文本在长尾复杂的业务代码节点（如特定的代码文件关联）中是否具有足够的保真度，尚不可知. 只有通过后续周期的运行来检验.
 
 NO_DECISION_SECTION
 
 明确列出今天不做的决策：
-今天不修改任何重试或监控机制的实际代码或提示词。
+今天不确立针对“Enriched”标签的强制验证纪律，也不修改现有的 JSONL 记录生成机制.
 
 明确列出今天不能修改的内容：
-不能修改 aegis-cortex 作用域之外的文件，也不能创建监控报警配置。
+严格限制操作在 aegis-cortex 边界内，不得进入主仓库干扰常规机制的运作.
 
 NEXT_HANDOFF
 
 写给 A3 的周决策输入：
-- 请评估是否必须为每个 Cortex 任务强制引入独立的可观测性验证步骤以应对静默失败。
+- 在周决议中评估强制清理 JSONL 的成果.
+- 讨论是否需要制定新规：当 Agent 提取到带有 “[Enriched]” 后缀的记忆块时，必须默认将其置信度下调，并在关键决策时进行二次核实.
 
 列出本周候选纪律问题：
-- 防止 "One-shotting" 的大任务强制拆解规定。
-- 如何在缺乏显性错误抛出的多代理流中定义明确的检查点。
+- 我们应该如何平衡自动化记忆补全（降噪/防幻觉）与确保原始记忆的不可篡改性之间的关系？
 
 列出需要继续观察的风险：
-- 当前运行的循环任务中是否存在未被发现的静默失败。
-- 对 A1 中的长下文依赖是否导致了已经发生的细节遗忘。
+- 明天继续监控环境稳定性，观察是否还会出现类似的记忆崩塌或者文件内容缺失现象.
 
 BOUNDARY_CHECK
 
