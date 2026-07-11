@@ -1,6 +1,50 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_pydantic_pydantic_ai_readme_md_e19db6d9b579", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:01.033417+00:00", "source_path": "README.md", "source_repo": "pydantic/pydantic-ai", "source_sha": "e19db6d9b579d475bde9def9984926dfece3a083"}
+# pydantic/pydantic-ai · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) |
+| 来源文件 | [README.md](https://github.com/pydantic/pydantic-ai/blob/e19db6d9b579d475bde9def9984926dfece3a083/README.md) |
+| 来源版本 | `e19db6d9b579d475bde9def9984926dfece3a083` |
+| 摄取时间 | `2026-07-11T06:09:01.033417+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_pydantic_pydantic_ai_readme_md_e19db6d9b579` |
+
+## 本次变化
+
+- 新增行数 `228`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- <em>Pydantic AI is a Python agent framework designed to help you quickly, confidently, and painlessly build production grade applications and workflows with Generative AI.</em>
+- Why use Pydantic AI
+- Hello World Example
+- Define a very simple agent including the model to use, you can also set the model when running the agent.
+- Run the agent synchronously, conducting a conversation with the LLM.
+- Tools & Dependency Injection Example
+- SupportDependencies is used to pass data, connections, and logic into the model that will be needed when running
+- instructions and tool functions. Dependency injection provides a type-safe way to customise the behavior of your agents.
+- This Pydantic model defines the structure of the output returned by the agent.
+- This agent will act as first-tier support in a bank.
+- Agents are generic in the type of dependencies they accept and the type of output they return.
+- In this case, the support agent has type `Agent[SupportDependencies, SupportOutput]`.
+- Dynamic instructions can make use of dependency injection.
+- Dependencies are carried via the `RunContext` argument, which is parameterized with the `deps_type` from above.
+- If the type annotation here is wrong, static type checkers will catch it.
+- The `tool` decorator let you register functions which the LLM may call while responding to a user.
+- Again, dependencies are carried via `RunContext`, any other arguments become the tool schema passed to the LLM.
+- Pydantic is used to validate these arguments, and errors are passed back to the LLM so it can retry.
+- Next Steps
+- Part of the Pydantic Stack
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <div align="center">
   <a href="https://ai.pydantic.dev/">
@@ -231,8 +275,10 @@ The Pydantic Stack is everything you need to ship production-grade AI agents:
 - [Pydantic Logfire](https://pydantic.dev/logfire?utm_source=github&utm_medium=readme&utm_campaign=pydantic-ai) - AI-first, full-stack observability
 - [Logfire AI Gateway](https://pydantic.dev/ai-gateway?utm_source=github&utm_medium=readme&utm_campaign=pydantic-ai) - Unified LLM proxy
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -470,3 +516,5 @@ The Pydantic Stack is everything you need to ship production-grade AI agents:
 +- [Pydantic Logfire](https://pydantic.dev/logfire?utm_source=github&utm_medium=readme&utm_campaign=pydantic-ai) - AI-first, full-stack observability
 +- [Logfire AI Gateway](https://pydantic.dev/ai-gateway?utm_source=github&utm_medium=readme&utm_campaign=pydantic-ai) - Unified LLM proxy
 ```
+
+</details>

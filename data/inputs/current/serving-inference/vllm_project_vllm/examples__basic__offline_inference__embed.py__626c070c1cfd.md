@@ -1,6 +1,32 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_embed_py_626c070c1cfd", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:13.070550+00:00", "source_path": "examples/basic/offline_inference/embed.py", "source_repo": "vllm-project/vllm", "source_sha": "626c070c1cfd8270dde6e1216e1e97dca2032e6f"}
+# vllm-project/vllm · examples/basic/offline_inference/embed.py
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [examples/basic/offline_inference/embed.py](https://github.com/vllm-project/vllm/blob/626c070c1cfd8270dde6e1216e1e97dca2032e6f/examples/basic/offline_inference/embed.py) |
+| 来源版本 | `626c070c1cfd8270dde6e1216e1e97dca2032e6f` |
+| 摄取时间 | `2026-07-11T06:09:13.070550+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_examples_basic_offline_inference_embed_py_626c070c1cfd` |
+
+## 本次变化
+
+- 新增行数 `50`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: Copyright contributors to the vLLM project
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-FileCopyrightText: Copyright contributors to the vLLM project
@@ -53,8 +79,10 @@ if __name__ == "__main__":
     args = parse_args()
     main(args)
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -114,3 +142,5 @@ if __name__ == "__main__":
 +    args = parse_args()
 +    main(args)
 ```
+
+</details>

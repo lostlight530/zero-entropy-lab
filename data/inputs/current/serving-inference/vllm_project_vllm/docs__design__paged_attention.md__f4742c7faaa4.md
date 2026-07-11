@@ -1,6 +1,43 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_paged_attention_md_f4742c7faaa4", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:11.739117+00:00", "source_path": "docs/design/paged_attention.md", "source_repo": "vllm-project/vllm", "source_sha": "f4742c7faaa45697c9d1fd45743814f1b114932b"}
+# vllm-project/vllm · docs/design/paged_attention.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/paged_attention.md](https://github.com/vllm-project/vllm/blob/f4742c7faaa45697c9d1fd45743814f1b114932b/docs/design/paged_attention.md) |
+| 来源版本 | `f4742c7faaa45697c9d1fd45743814f1b114932b` |
+| 摄取时间 | `2026-07-11T06:09:11.739117+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_paged_attention_md_f4742c7faaa4` |
+
+## 本次变化
+
+- 新增行数 `498`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Paged Attention
+- Inputs
+- Concepts
+- Query
+- Key
+- QK
+- Softmax
+- `qk_max` and `logits`
+- `exp_sum`
+- Value
+- LV
+- Output
+- Citation
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Paged Attention
 
@@ -501,8 +538,10 @@ and write out the corresponding accumulated result based on the
 }
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1010,3 +1049,5 @@ and write out the corresponding accumulated result based on the
 +}
 +```
 ```
+
+</details>

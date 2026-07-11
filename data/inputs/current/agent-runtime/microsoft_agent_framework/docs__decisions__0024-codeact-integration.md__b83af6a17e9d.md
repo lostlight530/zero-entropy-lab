@@ -1,6 +1,53 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0024_codeact_integration_md_b83af6a17e9d", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:57.898695+00:00", "source_path": "docs/decisions/0024-codeact-integration.md", "source_repo": "microsoft/agent-framework", "source_sha": "b83af6a17e9de21c8ef7a4f88d00e0aa3d744dd2"}
+# microsoft/agent-framework · docs/decisions/0024-codeact-integration.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0024-codeact-integration.md](https://github.com/microsoft/agent-framework/blob/b83af6a17e9de21c8ef7a4f88d00e0aa3d744dd2/docs/decisions/0024-codeact-integration.md) |
+| 来源版本 | `b83af6a17e9de21c8ef7a4f88d00e0aa3d744dd2` |
+| 摄取时间 | `2026-07-11T06:08:57.898695+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0024_codeact_integration_md_b83af6a17e9d` |
+
+## 本次变化
+
+- 新增行数 `233`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- CodeAct integration through backend-specific context providers and an `execute_code` tool
+- Introduction
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- Pros and Cons of the Options
+- Option 1: Standardize on context provider-based CodeAct with a shared cross-SDK contract and backend-specific public types
+- Option 2: Implement CodeAct as a dedicated chat-client decorator/wrapper
+- Option 3: Integrate CodeAct directly into the function invocation layer/FunctionInvokingChatClient
+- Approval Model Options
+- Pros and Cons of the Approval Options
+- Option A: Bundled approval for the `execute_code` invocation
+- Option B: Pre-execution inspection of `call_tool(...)` references before approving `execute_code`
+- Option C: Nested per-tool approvals during `execute_code`
+- Decision Outcomes
+- Decision 1: Integration seam and public structure
+- Decision 2: Initial approval model
+- Design summary
+- Minimal core hooks required by the optional package
+- Concrete provider implementation contract
+- More Information
+- Related artifacts
+- Related decisions
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: proposed
@@ -236,8 +283,10 @@ The design does not require a public abstract `CodeActContextProvider` base clas
 - [0015-agent-run-context](0015-agent-run-context.md)
 - [0016-python-context-middleware](0016-python-context-middleware.md)
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -480,3 +529,5 @@ The design does not require a public abstract `CodeActContextProvider` base clas
 +- [0015-agent-run-context](0015-agent-run-context.md)
 +- [0016-python-context-middleware](0016-python-context-middleware.md)
 ```
+
+</details>

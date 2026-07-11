@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_deepset_ai_haystack_migration_md_dce8a569b2a4", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:22.800871+00:00", "source_path": "MIGRATION.md", "source_repo": "deepset-ai/haystack", "source_sha": "dce8a569b2a4200947c2e4690488723ab691517a"}
+# deepset-ai/haystack · MIGRATION.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [deepset-ai/haystack](https://github.com/deepset-ai/haystack) |
+| 来源文件 | [MIGRATION.md](https://github.com/deepset-ai/haystack/blob/dce8a569b2a4200947c2e4690488723ab691517a/MIGRATION.md) |
+| 来源版本 | `dce8a569b2a4200947c2e4690488723ab691517a` |
+| 摄取时间 | `2026-07-11T06:09:22.800871+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_deepset_ai_haystack_migration_md_dce8a569b2a4` |
+
+## 本次变化
+
+- 新增行数 `1142`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Migration Guide
+- How to Document a Breaking Change
+- Entry template
+- <Short title describing what changed>
+- example using the old API
+- example using the new API
+- Tips
+- Breaking Changes
+- Example entry: `Document.dataframe` field removed
+- Store tabular data as plain content or create a custom component that returns pandas DataFrames as needed.
+- `GeneratedAnswer` and `ExtractedAnswer` serialization format
+- Components Moved to External Packages
+- `DatadogTracer` moved to the `datadog-haystack` integration
+- `OpenTelemetryTracer` moved to the `opentelemetry-haystack` integration
+- `TransformersSimilarityRanker` removed
+- ToolInvoker component removed
+- `haystack-experimental` is no longer a core dependency
+- Agent
+- Breakpoint and snapshot API removed
+- Pause before the chat generator runs
+- Or pause before a specific tool is invoked
+- Pausing inside an Agent is no longer supported. To inspect an Agent's behavior,
+- use tracing instead (https://docs.haystack.deepset.ai/docs/tracing). For example,
+- you can wire up a Langfuse tracer for a standalone Agent by instantiating a
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Migration Guide
 
@@ -1145,8 +1193,10 @@ embedder = OpenAITextEmbedder()  # no error at construction
 embedder.warm_up()               # raised here
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -2298,3 +2348,5 @@ embedder.warm_up()               # raised here
 +embedder.warm_up()               # raised here
 +```
 ```
+
+</details>

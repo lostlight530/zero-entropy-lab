@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_stepfun_ai_stepdeepresearch_readme_md_a33cabc2f936", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:25.397587+00:00", "source_path": "README.md", "source_repo": "stepfun-ai/StepDeepResearch", "source_sha": "a33cabc2f936bf7c184ca8e40d65ab42f26d93c6"}
+# stepfun-ai/StepDeepResearch · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [stepfun-ai/StepDeepResearch](https://github.com/stepfun-ai/StepDeepResearch) |
+| 来源文件 | [README.md](https://github.com/stepfun-ai/StepDeepResearch/blob/a33cabc2f936bf7c184ca8e40d65ab42f26d93c6/README.md) |
+| 来源版本 | `a33cabc2f936bf7c184ca8e40d65ab42f26d93c6` |
+| 摄取时间 | `2026-07-11T06:09:25.397587+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_stepfun_ai_stepdeepresearch_readme_md_a33cabc2f936` |
+
+## 本次变化
+
+- 新增行数 `639`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Step-DeepResearch
+- News
+- Introduction
+- Model Summary
+- System Architecture
+- Case
+- Query
+- Model Output (Report)
+- AI Agent记忆模块深度调研报告：技术演进与产品化路径
+- 一、引言与核心问题界定
+- 1.1 记忆能力为何成为Agent时代的分水岭
+- 1.2 记忆的本质定义
+- 1.3 报告研究范围与目标
+- 二、Agent记忆模块的分类体系与核心架构
+- 2.1 从认知科学到工程实践的记忆分层
+- 2.2 三种记忆形式的技术实现
+- 2.3 记忆模块在Agent架构中的位置
+- 三、短期记忆的技术实现与优化策略
+- 3.1 上下文窗口的根本限制
+- 3.2 KV Cache优化技术
+- 3.3 短期记忆的工程实现方案
+- 四、长期记忆的技术路线全景
+- 4.1 RAG与Memory的区别与联系
+- 4.2 主流长期记忆框架对比
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Step-DeepResearch
 
@@ -642,8 +690,10 @@ The code in the repository is licensed under [Apache 2.0](LICENSE) License.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=stepfun-ai/StepDeepResearch&type=date&legend=top-left)](https://www.star-history.com/#stepfun-ai/StepDeepResearch&type=date&legend=top-left)
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1292,3 +1342,5 @@ The code in the repository is licensed under [Apache 2.0](LICENSE) License.
 +
 +[![Star History Chart](https://api.star-history.com/svg?repos=stepfun-ai/StepDeepResearch&type=date&legend=top-left)](https://www.star-history.com/#stepfun-ai/StepDeepResearch&type=date&legend=top-left)
 ```
+
+</details>

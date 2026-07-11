@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_vllm_ir_md_82628f3762fe", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:12.415049+00:00", "source_path": "docs/design/vllm_ir.md", "source_repo": "vllm-project/vllm", "source_sha": "82628f3762fe7b715579fe1437ffd092c55f526c"}
+# vllm-project/vllm · docs/design/vllm_ir.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/vllm_ir.md](https://github.com/vllm-project/vllm/blob/82628f3762fe7b715579fe1437ffd092c55f526c/docs/design/vllm_ir.md) |
+| 来源版本 | `82628f3762fe7b715579fe1437ffd092c55f526c` |
+| 摄取时间 | `2026-07-11T06:09:12.415049+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_vllm_ir_md_82628f3762fe` |
+
+## 本次变化
+
+- 新增行数 `615`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- vLLM IR: Functional Intermediate Representation
+- Motivation
+- Quick Overview
+- Declaring an IR Operation
+- vllm/ir/ops/layernorm.py
+- Registering Implementations
+- vllm/kernels/vllm_c.py
+- Using IR Operations in Models
+- vllm/model_executor/layers/layernorm.py
+- Configuring Kernel Selection
+- Command Line Configuration
+- CUDA: Use vllm_c implementation for rms_norm
+- ROCm: Try aiter first, fall back to vllm_c, then native
+- Configure multiple operations
+- Python Configuration
+- Platform Defaults
+- CUDA/XPU/ROCm platform defaults (when compiling with Inductor)
+- CUDA platform defaults (eager or Dynamo-only)
+- ROCm platform defaults (future - currently same as CUDA)
+- XPU platform defaults (eager or Dynamo-only)
+- Compilation Pipeline
+- 1. Dynamo Tracing
+- Python code (epsilon=1e-5)
+- FX graph after Dynamo tracing
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # vLLM IR: Functional Intermediate Representation
 
@@ -618,8 +666,10 @@ The migration can be done incrementally, one operation at a time.
 - [Fusions](fusions.md) - Custom fusion and transformation passes in vLLM
 - [Custom Operations](custom_op.md) - Legacy custom op system
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1244,3 +1294,5 @@ The migration can be done incrementally, one operation at a time.
 +- [Fusions](fusions.md) - Custom fusion and transformation passes in vLLM
 +- [Custom Operations](custom_op.md) - Legacy custom op system
 ```
+
+</details>

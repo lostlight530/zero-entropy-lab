@@ -1,6 +1,31 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openai_openai_agents_python_examples_mcp_git_example_main_py_8a62744d186f", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:46.999425+00:00", "source_path": "examples/mcp/git_example/main.py", "source_repo": "openai/openai-agents-python", "source_sha": "8a62744d186f6d5cd3075c52cd2bdcefa68d5839"}
+# openai/openai-agents-python · examples/mcp/git_example/main.py
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/mcp/git_example/main.py](https://github.com/openai/openai-agents-python/blob/8a62744d186f6d5cd3075c52cd2bdcefa68d5839/examples/mcp/git_example/main.py) |
+| 来源版本 | `8a62744d186f6d5cd3075c52cd2bdcefa68d5839` |
+| 摄取时间 | `2026-07-11T06:08:46.999425+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_mcp_git_example_main_py_8a62744d186f` |
+
+## 本次变化
+
+- 新增行数 `48`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 未发现 Markdown 标题.
+
+<details>
+<summary>展开完整外部原文</summary>
 
 import asyncio
 import shutil
@@ -51,8 +76,10 @@ if __name__ == "__main__":
 
     asyncio.run(main())
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -110,3 +137,5 @@ if __name__ == "__main__":
 +
 +    asyncio.run(main())
 ```
+
+</details>

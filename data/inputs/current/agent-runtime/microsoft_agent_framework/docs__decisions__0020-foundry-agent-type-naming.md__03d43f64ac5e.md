@@ -1,6 +1,40 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0020_foundry_agent_type_naming_md_03d43f64ac5e", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:57.177072+00:00", "source_path": "docs/decisions/0020-foundry-agent-type-naming.md", "source_repo": "microsoft/agent-framework", "source_sha": "03d43f64ac5e30dc72cbc8796472ff5d01725aaf"}
+# microsoft/agent-framework · docs/decisions/0020-foundry-agent-type-naming.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0020-foundry-agent-type-naming.md](https://github.com/microsoft/agent-framework/blob/03d43f64ac5e30dc72cbc8796472ff5d01725aaf/docs/decisions/0020-foundry-agent-type-naming.md) |
+| 来源版本 | `03d43f64ac5e30dc72cbc8796472ff5d01725aaf` |
+| 摄取时间 | `2026-07-11T06:08:57.177072+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0020_foundry_agent_type_naming_md_03d43f64ac5e` |
+
+## 本次变化
+
+- 新增行数 `125`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Foundry agent surface stays centered on `ChatClientAgent`
+- Context
+- Decision
+- Why
+- Consequences
+- Direct Responses path
+- Versioned agent path
+- Samples
+- Compatibility APIs
+- Rejected direction
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: accepted
@@ -128,8 +162,10 @@ That approach:
 - complicates samples and docs,
 - and makes migration harder by encouraging wrapper-specific affordances.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -264,3 +300,5 @@ That approach:
 +- complicates samples and docs,
 +- and makes migration harder by encouraging wrapper-specific affordances.
 ```
+
+</details>

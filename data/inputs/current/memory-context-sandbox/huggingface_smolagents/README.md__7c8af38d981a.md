@@ -1,6 +1,41 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_huggingface_smolagents_readme_md_7c8af38d981a", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:19.818101+00:00", "source_path": "README.md", "source_repo": "huggingface/smolagents", "source_sha": "7c8af38d981a563add56db76b10cde810e010690"}
+# huggingface/smolagents · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [huggingface/smolagents](https://github.com/huggingface/smolagents) |
+| 来源文件 | [README.md](https://github.com/huggingface/smolagents/blob/7c8af38d981a563add56db76b10cde810e010690/README.md) |
+| 来源版本 | `7c8af38d981a563add56db76b10cde810e010690` |
+| 摄取时间 | `2026-07-11T06:09:19.818101+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_huggingface_smolagents_readme_md_7c8af38d981a` |
+
+## 本次变化
+
+- 新增行数 `291`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Quick demo
+- agent.from_hub("m-ric/my_agent") to load an agent from Hub
+- CLI
+- Run with direct prompt and options
+- Run in interactive mode (launches setup wizard when no prompt provided)
+- How do Code agents work?
+- How smol is this library?
+- How strong are open models for agentic workflows?
+- Security
+- Contribute
+- Cite smolagents
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <!---
 Copyright 2024 The HuggingFace Team. All rights reserved.
@@ -294,8 +329,10 @@ If you use `smolagents` in your publication, please cite it by using the followi
 }
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -596,3 +633,5 @@ If you use `smolagents` in your publication, please cite it by using the followi
 +}
 +```
 ```
+
+</details>

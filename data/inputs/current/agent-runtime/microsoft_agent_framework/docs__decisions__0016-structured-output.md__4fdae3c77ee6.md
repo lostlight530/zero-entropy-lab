@@ -1,6 +1,50 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0016_structured_output_md_4fdae3c77ee6", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:56.623679+00:00", "source_path": "docs/decisions/0016-structured-output.md", "source_repo": "microsoft/agent-framework", "source_sha": "4fdae3c77ee67dc4e5d623274dd1680df9b442b2"}
+# microsoft/agent-framework · docs/decisions/0016-structured-output.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0016-structured-output.md](https://github.com/microsoft/agent-framework/blob/4fdae3c77ee67dc4e5d623274dd1680df9b442b2/docs/decisions/0016-structured-output.md) |
+| 来源版本 | `4fdae3c77ee67dc4e5d623274dd1680df9b442b2` |
+| 摄取时间 | `2026-07-11T06:08:56.623679+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0016_structured_output_md_4fdae3c77ee6` |
+
+## 本次变化
+
+- 新增行数 `658`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Structured Output
+- Context and Problem Statement
+- Approaches Overview
+- 1. SO usage via `ResponseFormat` property
+- 1.1 SO result as text is sufficient as is, and deserialization is not required
+- 1.2 SO for inter-agent collaboration
+- 1.3 SO configured at agent creation time
+- 1.4 SO type not known at compile time and represented by System.Type
+- 1.5 SO represented by JSON schema with no corresponding .NET type
+- 1.6 SO in streaming scenarios
+- 2. SO usage via `RunAsync<T>` generic method
+- Decision Drivers
+- Considered Options
+- 1. `RunAsync<T>` as an instance method of `AIAgent` class delegating to virtual `RunCoreAsync<T>`
+- 2. `RunAsync<T>` as an extension method using feature collection
+- 3. `RunAsync<T>` as a method of the new `ITypedAIAgent` interface
+- 4. `RunAsync<T>` as an instance method of `AIAgent` class working via the new `AgentRunOptions.ResponseFormat` property
+- Decision Table
+- Cross-Cutting Aspects
+- Decision Outcome
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: proposed
@@ -661,7 +705,10 @@ Finally, it was decided not to include the `StructuredOutputAgent` decorator in 
 LLM call may not be sufficient for all scenarios. Instead, this pattern is provided as a sample to demonstrate how structured output can be achieved for agents without native support,
 giving users a reference implementation they can adapt to their own requirements.
 
-# Document Diff
+</details>
+
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1329,3 +1376,5 @@ giving users a reference implementation they can adapt to their own requirements
 +LLM call may not be sufficient for all scenarios. Instead, this pattern is provided as a sample to demonstrate how structured output can be achieved for agents without native support,
 +giving users a reference implementation they can adapt to their own requirements.
 ```
+
+</details>

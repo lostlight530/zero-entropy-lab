@@ -1,6 +1,39 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openhands_software_agent_sdk_readme_md_3e4e4eb91e99", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:01.665193+00:00", "source_path": "README.md", "source_repo": "OpenHands/software-agent-sdk", "source_sha": "3e4e4eb91e9955b3ee85ede24e43ebf3a14d9ab6"}
+# OpenHands/software-agent-sdk · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [OpenHands/software-agent-sdk](https://github.com/OpenHands/software-agent-sdk) |
+| 来源文件 | [README.md](https://github.com/OpenHands/software-agent-sdk/blob/3e4e4eb91e9955b3ee85ede24e43ebf3a14d9ab6/README.md) |
+| 来源版本 | `3e4e4eb91e9955b3ee85ede24e43ebf3a14d9ab6` |
+| 摄取时间 | `2026-07-11T06:09:01.665193+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openhands_software_agent_sdk_readme_md_3e4e4eb91e99` |
+
+## 本次变化
+
+- 新增行数 `197`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Quick Start
+- Documentation
+- Examples
+- Skills for modern package tooling
+- Contributing
+- Community
+- Cite
+- Thank You to Our Contributors
+- Trusted by Engineers at
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <a name="readme-top"></a>
 
@@ -200,8 +233,10 @@ For development setup, testing, and contribution guidelines, see [DEVELOPMENT.md
 </picture>
 </div>
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -408,3 +443,5 @@ For development setup, testing, and contribution guidelines, see [DEVELOPMENT.md
 +</picture>
 +</div>
 ```
+
+</details>

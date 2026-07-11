@@ -1,3 +1,30 @@
+# 每日认知报告
+
+## 今日结论
+
+- 系统状态 `ONLINE`.
+- 节点 `80`.
+- 关系 `0`.
+- 拓扑 `FRAGMENTED_3_ORPHANS`.
+
+## 物理遥测
+
+| 指标 | 值 |
+| --- | --- |
+| 存储 MB | `0.25` |
+| Journal 行数 | `0` |
+| 图密度 | `1.81_HIGH_COHESIVENESS` |
+
+## 风险与动作
+
+- 结构桥 `NONE_DETECTED`.
+- 推荐任务 `RELATION_MAPPING_RECOMMENDED`.
+- 演进策略 `INTEGRATE_ISOLATED_ENTITIES`.
+
+<details>
+<summary>展开机器原始数据</summary>
+
+```text
 # NEXUS CORTEX: Cognitive Report
 
 DATE: 2026-07-11 06:24:01 (UTC)
@@ -19,3 +46,6 @@ STRUCTURAL_BRIDGES: NONE_DETECTED
 
 ## 零熵演化推演 (Zero-Entropy Evolution Hypothesis)
 STRATEGY: INTEGRATE_ISOLATED_ENTITIES
+```
+
+</details>

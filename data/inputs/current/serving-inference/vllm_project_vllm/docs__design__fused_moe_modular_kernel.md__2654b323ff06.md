@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_fused_moe_modular_kernel_md_2654b323ff06", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:09.742894+00:00", "source_path": "docs/design/fused_moe_modular_kernel.md", "source_repo": "vllm-project/vllm", "source_sha": "2654b323ff06f80d88cc3af90fba4fecb793cf99"}
+# vllm-project/vllm · docs/design/fused_moe_modular_kernel.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/fused_moe_modular_kernel.md](https://github.com/vllm-project/vllm/blob/2654b323ff06f80d88cc3af90fba4fecb793cf99/docs/design/fused_moe_modular_kernel.md) |
+| 来源版本 | `2654b323ff06f80d88cc3af90fba4fecb793cf99` |
+| 摄取时间 | `2026-07-11T06:09:09.742894+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_fused_moe_modular_kernel_md_2654b323ff06` |
+
+## 本次变化
+
+- 新增行数 `245`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Fused MoE Modular Kernel
+- Introduction
+- Motivation
+- ModularKernel Components
+- TopKWeightAndReduce
+- FusedMoEPrepareAndFinalizeModular
+- FusedMoEExpertsModular
+- apply()
+- workspace_shapes()
+- finalize_weight_and_reduce_impl()
+- FusedMoEModularKernel
+- How-To
+- How To Add a FusedMoEPrepareAndFinalizeModular Type
+- Step 1: Add an All2All manager
+- Step 2: Add a FusedMoEPrepareAndFinalizeModular Type
+- How To Add a FusedMoEExpertsModular Type
+- FusedMoEModularKernel Initialization
+- maybe_make_prepare_finalize
+- select_gemm_impl
+- init_prepare_finalize
+- How To Unit Test
+- How To Check `FusedMoEPrepareAndFinalizeModular` & `FusedMoEExpertsModular` Compatibility
+- How To Profile
+- FusedMoEPrepareAndFinalizeModular Implementations
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Fused MoE Modular Kernel
 
@@ -248,8 +296,10 @@ See [Fused MoE Kernel features](./moe_kernel_features.md#fused-moe-modular-all2a
 
 See [Fused MoE Kernel features](./moe_kernel_features.md#fused-moe-experts-kernels) for a list of all the available modular experts.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -504,3 +554,5 @@ See [Fused MoE Kernel features](./moe_kernel_features.md#fused-moe-experts-kerne
 +
 +See [Fused MoE Kernel features](./moe_kernel_features.md#fused-moe-experts-kernels) for a list of all the available modular experts.
 ```
+
+</details>

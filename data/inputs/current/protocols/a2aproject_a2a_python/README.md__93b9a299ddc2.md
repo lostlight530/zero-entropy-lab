@@ -1,6 +1,41 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_a2aproject_a2a_python_readme_md_93b9a299ddc2", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:40.350949+00:00", "source_path": "README.md", "source_repo": "a2aproject/a2a-python", "source_sha": "93b9a299ddc2ea34e1b8a9f7c52b81c44a367140"}
+# a2aproject/a2a-python · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [a2aproject/a2a-python](https://github.com/a2aproject/a2a-python) |
+| 来源文件 | [README.md](https://github.com/a2aproject/a2a-python/blob/93b9a299ddc2ea34e1b8a9f7c52b81c44a367140/README.md) |
+| 来源版本 | `93b9a299ddc2ea34e1b8a9f7c52b81c44a367140` |
+| 摄取时间 | `2026-07-11T06:08:40.350949+00:00` |
+| 归属层 | `protocols` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_a2aproject_a2a_python_readme_md_93b9a299ddc2` |
+
+## 本次变化
+
+- 新增行数 `123`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- A2A Python SDK
+- ✨ Features
+- 🧩 Compatibility
+- 🚀 Getting Started
+- Prerequisites
+- 🔧 Installation
+- Examples
+- [Helloworld Example](https://github.com/a2aproject/a2a-samples/tree/main/samples/python/agents/helloworld)
+- 🌐 More Examples
+- 🤝 Contributing
+- 📄 License
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # A2A Python SDK
 
@@ -126,8 +161,10 @@ Contributions are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) fil
 
 This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for more details.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -260,3 +297,5 @@ This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE
 +
 +This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for more details.
 ```
+
+</details>

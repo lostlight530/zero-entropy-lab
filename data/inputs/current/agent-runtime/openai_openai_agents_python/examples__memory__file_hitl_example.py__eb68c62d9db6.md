@@ -1,6 +1,31 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openai_openai_agents_python_examples_memory_file_hitl_example_py_eb68c62d9db6", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:51.033993+00:00", "source_path": "examples/memory/file_hitl_example.py", "source_repo": "openai/openai-agents-python", "source_sha": "eb68c62d9db6eeb09e1b232f8895974c9f78927c"}
+# openai/openai-agents-python · examples/memory/file_hitl_example.py
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/memory/file_hitl_example.py](https://github.com/openai/openai-agents-python/blob/eb68c62d9db6eeb09e1b232f8895974c9f78927c/examples/memory/file_hitl_example.py) |
+| 来源版本 | `eb68c62d9db6eeb09e1b232f8895974c9f78927c` |
+| 摄取时间 | `2026-07-11T06:08:51.033993+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_memory_file_hitl_example_py_eb68c62d9db6` |
+
+## 本次变化
+
+- 新增行数 `152`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 未发现 Markdown 标题.
+
+<details>
+<summary>展开完整外部原文</summary>
 
 """
 File-backed session example with human-in-the-loop tool approval.
@@ -155,8 +180,10 @@ async def prompt_yes_no(question: str) -> bool:
 if __name__ == "__main__":
     asyncio.run(main())
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -318,3 +345,5 @@ if __name__ == "__main__":
 +if __name__ == "__main__":
 +    asyncio.run(main())
 ```
+
+</details>

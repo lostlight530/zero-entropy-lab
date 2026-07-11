@@ -1,6 +1,51 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_agentscope_ai_agentscope_readme_md_5c721dc098a1", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:02.960382+00:00", "source_path": "README.md", "source_repo": "agentscope-ai/agentscope", "source_sha": "5c721dc098a15547e02b94fb06968e3322327844"}
+# agentscope-ai/agentscope · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) |
+| 来源文件 | [README.md](https://github.com/agentscope-ai/agentscope/blob/5c721dc098a15547e02b94fb06968e3322327844/README.md) |
+| 来源版本 | `5c721dc098a15547e02b94fb06968e3322327844` |
+| 摄取时间 | `2026-07-11T06:09:02.960382+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_agentscope_ai_agentscope_readme_md_5c721dc098a1` |
+
+## 本次变化
+
+- 新增行数 `277`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- What is AgentScope 2.0?
+- News
+- Community
+- Quickstart
+- Installation
+- From PyPI
+- or
+- pip install agentscope
+- From source
+- Pull the source code from GitHub
+- Install the package in editable mode
+- or
+- pip install -e .
+- Hello AgentScope!
+- Hello Agent Service!
+- start the agent service backend
+- start the webui
+- Contributing
+- License
+- Publications
+- Contributors
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <p align="center">
   <img
@@ -280,8 +325,10 @@ All thanks to our contributors:
   <img src="https://contrib.rocks/image?repo=agentscope-ai/agentscope&max=999&columns=12&anon=1" />
 </a>
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -568,3 +615,5 @@ All thanks to our contributors:
 +  <img src="https://contrib.rocks/image?repo=agentscope-ai/agentscope&max=999&columns=12&anon=1" />
 +</a>
 ```
+
+</details>

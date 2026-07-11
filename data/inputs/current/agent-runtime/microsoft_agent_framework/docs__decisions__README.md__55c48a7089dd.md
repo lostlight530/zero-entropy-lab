@@ -1,6 +1,32 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_readme_md_55c48a7089dd", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:59.335390+00:00", "source_path": "docs/decisions/README.md", "source_repo": "microsoft/agent-framework", "source_sha": "55c48a7089dde103d2ec7bc3c9d16412989fe2e7"}
+# microsoft/agent-framework · docs/decisions/README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/README.md](https://github.com/microsoft/agent-framework/blob/55c48a7089dde103d2ec7bc3c9d16412989fe2e7/docs/decisions/README.md) |
+| 来源版本 | `55c48a7089dde103d2ec7bc3c9d16412989fe2e7` |
+| 摄取时间 | `2026-07-11T06:08:59.335390+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_readme_md_55c48a7089dd` |
+
+## 本次变化
+
+- 新增行数 `24`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Architectural Decision Records (ADRs)
+- How are we using ADRs to track technical decisions?
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Architectural Decision Records (ADRs)
 
@@ -27,8 +53,10 @@ For more information [see](https://adr.github.io/)
    3. Approval of the decision is captured using PR approval.
 5. Decisions can be changed later and superseded by a new ADR. In this case it is useful to record any negative outcomes in the original ADR.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -62,3 +90,5 @@ For more information [see](https://adr.github.io/)
 +   3. Approval of the decision is captured using PR approval.
 +5. Decisions can be changed later and superseded by a new ADR. In this case it is useful to record any negative outcomes in the original ADR.
 ```
+
+</details>

@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0009_support_long_running_operations_md_a62a03855312", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:55.419729+00:00", "source_path": "docs/decisions/0009-support-long-running-operations.md", "source_repo": "microsoft/agent-framework", "source_sha": "a62a03855312db430df3e58c0792e69724692ae0"}
+# microsoft/agent-framework · docs/decisions/0009-support-long-running-operations.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0009-support-long-running-operations.md](https://github.com/microsoft/agent-framework/blob/a62a03855312db430df3e58c0792e69724692ae0/docs/decisions/0009-support-long-running-operations.md) |
+| 来源版本 | `a62a03855312db430df3e58c0792e69724692ae0` |
+| 摄取时间 | `2026-07-11T06:08:55.419729+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0009_support_long_running_operations_md_a62a03855312` |
+
+## 本次变化
+
+- 新增行数 `1689`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Long-Running Operations Design
+- Context and Problem Statement
+- Decision Drivers
+- Comparison of Long-Running Operation Features
+- Long-Running Operations Support for Chat Clients
+- 1. Methods for Working with Long-Running Operations
+- 1.1 New IAsyncChatClient Interface for All Long-Running Execution Operations
+- 1.2 Get{Streaming}ResponseAsync for Common Operations & New IAsyncChatClient Interface for Uncommon Operations
+- 1.3 Get{Streaming}ResponseAsync for Common Operations & New IAsyncChatClient Interface for Uncommon Operations & Capability Check
+- 1.4 Get{Streaming}ResponseAsync for Common Operations & Individual Interface per Uncommon Operation
+- 2. Enabling Long-Running Operations
+- 2.1 Execution Mode per `Get{Streaming}ResponseAsync` Invocation
+- 2.2 Execution Mode per `Get{Streaming}ResponseAsync` Invocation + Model Class
+- 2.3 Execution Mode per Chat Client Instance
+- 2.4 Combined Approach
+- 3. Getting Status and Result of Long-Running Execution
+- 3.1 Two Separate Methods for Status and Result
+- 3.2 One Method to Get Status and Result
+- 4. Place For RunId, Status, and UpdateId of Long-Running Operations
+- 4.1. As AIContent
+- 4.2. As Properties Of ChatResponse{Update}
+- 5. Streaming Support
+- Required Changes
+- Function Calling
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ﻿---
 status: accepted
@@ -1692,7 +1740,10 @@ the thread is provided with background operations consistently for all runs.
 
 </details>
 
-# Document Diff
+</details>
+
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -3391,3 +3442,5 @@ the thread is provided with background operations consistently for all runs.
 +
 +</details>
 ```
+
+</details>

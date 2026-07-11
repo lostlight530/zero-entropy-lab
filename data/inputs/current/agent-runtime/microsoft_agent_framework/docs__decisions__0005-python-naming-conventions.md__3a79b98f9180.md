@@ -1,6 +1,36 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0005_python_naming_conventions_md_3a79b98f9180", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:54.752096+00:00", "source_path": "docs/decisions/0005-python-naming-conventions.md", "source_repo": "microsoft/agent-framework", "source_sha": "3a79b98f9180f882ddaaa0b578967fa69118426b"}
+# microsoft/agent-framework · docs/decisions/0005-python-naming-conventions.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0005-python-naming-conventions.md](https://github.com/microsoft/agent-framework/blob/3a79b98f9180f882ddaaa0b578967fa69118426b/docs/decisions/0005-python-naming-conventions.md) |
+| 来源版本 | `3a79b98f9180f882ddaaa0b578967fa69118426b` |
+| 摄取时间 | `2026-07-11T06:08:54.752096+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0005_python_naming_conventions_md_3a79b98f9180` |
+
+## 本次变化
+
+- 新增行数 `70`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Python naming conventions and renames (ADR)
+- Context and Problem Statement
+- Decision drivers
+- Principles applied
+- Renaming table
+- Naming guidance
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: accepted
@@ -73,8 +103,10 @@ When mapping .NET names to Python:
 - Use `Base` prefix for base classes that are not abstract but serve as a common ancestor for internal implementations.
 - When readability improves while it is still easy to understand what it does and how it maps to the .NET name, prefer the shorter name.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -154,3 +186,5 @@ When mapping .NET names to Python:
 +- Use `Base` prefix for base classes that are not abstract but serve as a common ancestor for internal implementations.
 +- When readability improves while it is still easy to understand what it does and how it maps to the .NET name, prefer the shorter name.
 ```
+
+</details>

@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openspg_kag_readme_md_189179325180", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:26.112193+00:00", "source_path": "README.md", "source_repo": "OpenSPG/KAG", "source_sha": "189179325180dcc7de0341ae6b8c64a6a97b2daa"}
+# OpenSPG/KAG · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [OpenSPG/KAG](https://github.com/OpenSPG/KAG) |
+| 来源文件 | [README.md](https://github.com/OpenSPG/KAG/blob/189179325180dcc7de0341ae6b8c64a6a97b2daa/README.md) |
+| 来源版本 | `189179325180dcc7de0341ae6b8c64a6a97b2daa` |
+| 摄取时间 | `2026-07-11T06:09:26.112193+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openspg_kag_readme_md_189179325180` |
+
+## 本次变化
+
+- 新增行数 `232`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- KAG: Knowledge Augmented Generation
+- 1. What is KAG?
+- 2. Core Features
+- 2.1 Knowledge Representation
+- 2.2 Mixed Reasoning Guided by Logic Forms
+- 3. Release Notes
+- 3.1 Latest Updates
+- 3.2 Future Plans
+- 4. Quick Start
+- 4.1 product-based (for ordinary users)
+- 4.1.1 Engine & Dependent Image Installation
+- set the HOME environment variable (only Windows users need to execute this command)
+- set HOME=%USERPROFILE%
+- 4.1.2 Use the product
+- 4.2 toolkit-based (for developers)
+- 4.2.1 Engine & Dependent Image Installation
+- 4.2.2 Installation of KAG
+- Create conda env: conda create -n kag-demo python=3.10 && conda activate kag-demo
+- Clone code: git clone https://github.com/OpenSPG/KAG.git
+- Install KAG: cd KAG && pip install -e .
+- Install the official Python 3.10 or later, install Git.
+- Create and activate Python venv: py -m venv kag-demo && kag-demo\Scripts\activate
+- Clone code: git clone https://github.com/OpenSPG/KAG.git
+- Install KAG: cd KAG && pip install -e .
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # KAG: Knowledge Augmented Generation
 
@@ -235,8 +283,10 @@ If you use this software, please cite it as below:
 # KAG Core Team
 Lei Liang, Mengshu Sun, Zhengke Gui, Zhongshu Zhu, Zhouyu Jiang, Ling Zhong, Peilong Zhao, Zhongpu Bo, Jin Yang, Huaidong Xiong, Lin Yuan, Jun Xu, Zaoyang Wang, Zhiqiang Zhang, Wen Zhang, Huajun Chen, Wenguang Chen, Jun Zhou, Haofen Wang
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -478,3 +528,5 @@ Lei Liang, Mengshu Sun, Zhengke Gui, Zhongshu Zhu, Zhouyu Jiang, Ling Zhong, Pei
 +# KAG Core Team
 +Lei Liang, Mengshu Sun, Zhengke Gui, Zhongshu Zhu, Zhouyu Jiang, Ling Zhong, Peilong Zhao, Zhongpu Bo, Jin Yang, Huaidong Xiong, Lin Yuan, Jun Xu, Zaoyang Wang, Zhiqiang Zhang, Wen Zhang, Huajun Chen, Wenguang Chen, Jun Zhou, Haofen Wang
 ```
+
+</details>

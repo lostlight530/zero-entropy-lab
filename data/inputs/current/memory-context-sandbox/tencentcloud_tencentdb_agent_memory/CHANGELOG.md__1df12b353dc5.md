@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_tencentcloud_tencentdb_agent_memory_changelog_md_1df12b353dc5", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:26.710917+00:00", "source_path": "CHANGELOG.md", "source_repo": "TencentCloud/TencentDB-Agent-Memory", "source_sha": "1df12b353dc5e198babb588bb8204c7908cf7208"}
+# TencentCloud/TencentDB-Agent-Memory · CHANGELOG.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) |
+| 来源文件 | [CHANGELOG.md](https://github.com/TencentCloud/TencentDB-Agent-Memory/blob/1df12b353dc5e198babb588bb8204c7908cf7208/CHANGELOG.md) |
+| 来源版本 | `1df12b353dc5e198babb588bb8204c7908cf7208` |
+| 摄取时间 | `2026-07-11T06:09:26.710917+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_tencentcloud_tencentdb_agent_memory_changelog_md_1df12b353dc5` |
+
+## 本次变化
+
+- 新增行数 `440`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Changelog
+- [Unreleased]
+- ✨ 新功能
+- ⚠️ 升级注意（仅在显式配置 `timezone` 时生效）
+- [0.3.6] - 2026-05-27
+- ✨ 新功能
+- 🐛 修复
+- 数据安全 / 数据隔离
+- OpenClaw 宿主兼容
+- Offload（Context Engine）稳定性
+- Hermes / Docker 部署
+- ✨ 改进
+- 🧪 测试 / 内部
+- ⚠️ 配置项变化（向后兼容）
+- [0.3.5] - 2026-05-15
+- 🐛 修复
+- ✨ 改进
+- 📖 文档
+- [0.3.4] - 2026-05-12
+- 🐛 修复
+- ✨ 改进
+- 🔧 兼容性适配
+- 📦 新功能
+- ✅ 测试
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Changelog
 
@@ -443,8 +491,10 @@ PROVENANCE: {"confidence": 1.0, "entity_id": "doc_tencentcloud_tencentdb_agent_m
 4. Pipeline 调度器优化文件锁用法
 5. 避免全量读取 L0、L1 数据
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -894,3 +944,5 @@ PROVENANCE: {"confidence": 1.0, "entity_id": "doc_tencentcloud_tencentdb_agent_m
 +4. Pipeline 调度器优化文件锁用法
 +5. 避免全量读取 L0、L1 数据
 ```
+
+</details>

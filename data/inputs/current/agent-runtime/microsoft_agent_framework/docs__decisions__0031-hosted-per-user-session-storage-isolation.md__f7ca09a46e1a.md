@@ -1,6 +1,38 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0031_hosted_per_user_session_storage_isolation_md_f7ca09a46e1a", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:59.203044+00:00", "source_path": "docs/decisions/0031-hosted-per-user-session-storage-isolation.md", "source_repo": "microsoft/agent-framework", "source_sha": "f7ca09a46e1a31c33687db1c1ede6b482dac16af"}
+# microsoft/agent-framework · docs/decisions/0031-hosted-per-user-session-storage-isolation.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0031-hosted-per-user-session-storage-isolation.md](https://github.com/microsoft/agent-framework/blob/f7ca09a46e1a31c33687db1c1ede6b482dac16af/docs/decisions/0031-hosted-per-user-session-storage-isolation.md) |
+| 来源版本 | `f7ca09a46e1a31c33687db1c1ede6b482dac16af` |
+| 摄取时间 | `2026-07-11T06:08:59.203044+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0031_hosted_per_user_session_storage_isolation_md_f7ca09a46e1a` |
+
+## 本次变化
+
+- 新增行数 `119`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Per-agent and per-user session-storage isolation for Foundry Hosting
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- Decision Outcome
+- Consequences
+- Out of scope
+- Update (2026-07-01): local runs no longer fail closed; sample dev provider removed
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: accepted
@@ -122,8 +154,10 @@ were removed. To simulate distinct users locally, send an `x-agent-user-id` requ
 `PlatformHostedSessionIsolationKeyProvider` reads it via `ResponseContext.PlatformContext.UserIdKey`
 (the SDK's `PlatformContext.FromRequest` populates it from the header unconditionally, hosted or not).
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -252,3 +286,5 @@ were removed. To simulate distinct users locally, send an `x-agent-user-id` requ
 +`PlatformHostedSessionIsolationKeyProvider` reads it via `ResponseContext.PlatformContext.UserIdKey`
 +(the SDK's `PlatformContext.FromRequest` populates it from the header unconditionally, hosted or not).
 ```
+
+</details>

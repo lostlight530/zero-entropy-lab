@@ -1,6 +1,42 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_volcengine_verl_readme_md_db9c2eb67915", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:27.922018+00:00", "source_path": "README.md", "source_repo": "volcengine/verl", "source_sha": "db9c2eb67915f9597a30a4d5a32599717c4ccaae"}
+# volcengine/verl · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [volcengine/verl](https://github.com/volcengine/verl) |
+| 来源文件 | [README.md](https://github.com/volcengine/verl/blob/db9c2eb67915f9597a30a4d5a32599717c4ccaae/README.md) |
+| 来源版本 | `db9c2eb67915f9597a30a4d5a32599717c4ccaae` |
+| 摄取时间 | `2026-07-11T06:09:27.922018+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_volcengine_verl_readme_md_db9c2eb67915` |
+
+## 本次变化
+
+- 新增行数 `310`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- News
+- Key Features
+- Getting Started
+- Performance Tuning Guide
+- Upgrade to vLLM >= v0.8.2
+- Use Latest SGLang
+- Upgrade to FSDP2
+- AMD Support (ROCm Kernel)
+- Citation and acknowledgement
+- Awesome Projects Built with `verl`
+- Contribution Guide
+- About [ByteDance Seed Team](https://team.doubao.com/)
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <div align="center">
  👋 Hi, everyone!
@@ -313,8 +349,10 @@ Founded in 2023, ByteDance Seed Team is dedicated to crafting the industry's mos
 
 We are HIRING! Send us an [email](mailto:the.verl.project@gmail.com) if you are interested in internship/FTE opportunities in RL for agents.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -634,3 +672,5 @@ We are HIRING! Send us an [email](mailto:the.verl.project@gmail.com) if you are 
 +
 +We are HIRING! Send us an [email](mailto:the.verl.project@gmail.com) if you are interested in internship/FTE opportunities in RL for agents.
 ```
+
+</details>

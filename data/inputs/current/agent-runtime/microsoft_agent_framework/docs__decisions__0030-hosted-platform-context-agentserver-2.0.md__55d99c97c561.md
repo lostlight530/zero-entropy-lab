@@ -1,6 +1,37 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0030_hosted_platform_context_agentserver_2_0_md_55d99c97c561", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:59.073152+00:00", "source_path": "docs/decisions/0030-hosted-platform-context-agentserver-2.0.md", "source_repo": "microsoft/agent-framework", "source_sha": "55d99c97c5610c1057b15a4faaf9c0c9ce293690"}
+# microsoft/agent-framework · docs/decisions/0030-hosted-platform-context-agentserver-2.0.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0030-hosted-platform-context-agentserver-2.0.md](https://github.com/microsoft/agent-framework/blob/55d99c97c5610c1057b15a4faaf9c0c9ce293690/docs/decisions/0030-hosted-platform-context-agentserver-2.0.md) |
+| 来源版本 | `55d99c97c5610c1057b15a4faaf9c0c9ce293690` |
+| 摄取时间 | `2026-07-11T06:08:59.073152+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0030_hosted_platform_context_agentserver_2_0_md_55d99c97c561` |
+
+## 本次变化
+
+- 新增行数 `84`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Hosted platform context (user id + call id) for Foundry Hosting on AgentServer 2.0
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- Decision Outcome
+- Consequences
+- Out of scope
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: accepted
@@ -87,8 +118,10 @@ Negative:
 - HMAC tamper signatures over the persisted context remain unimplemented; equality comparison against `ResponseContext.PlatformContext` on every request is sufficient because the platform sets the header at the trust boundary.
 - The per-request `User` field on `CreateResponse` is still intentionally not consumed.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -182,3 +215,5 @@ Negative:
 +- HMAC tamper signatures over the persisted context remain unimplemented; equality comparison against `ResponseContext.PlatformContext` on every request is sufficient because the platform sets the header at the trust boundary.
 +- The per-request `User` field on `CreateResponse` is still intentionally not consumed.
 ```
+
+</details>

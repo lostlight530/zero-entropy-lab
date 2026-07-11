@@ -1,6 +1,47 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_lora_resolver_plugins_md_019c4eef93d9", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:10.555162+00:00", "source_path": "docs/design/lora_resolver_plugins.md", "source_repo": "vllm-project/vllm", "source_sha": "019c4eef93d962960042b72cff36dbcdd22112be"}
+# vllm-project/vllm · docs/design/lora_resolver_plugins.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/lora_resolver_plugins.md](https://github.com/vllm-project/vllm/blob/019c4eef93d962960042b72cff36dbcdd22112be/docs/design/lora_resolver_plugins.md) |
+| 来源版本 | `019c4eef93d962960042b72cff36dbcdd22112be` |
+| 摄取时间 | `2026-07-11T06:09:10.555162+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_lora_resolver_plugins_md_019c4eef93d9` |
+
+## 本次变化
+
+- 新增行数 `219`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- LoRA Resolver Plugins
+- Overview
+- Prerequisites
+- Required Environment Variables
+- Optional Environment Variables
+- Available Resolvers
+- lora_filesystem_resolver
+- Setup Steps
+- Directory Structure Requirements
+- Usage Example
+- How It Works
+- Advanced Configuration
+- Multiple Resolvers
+- Custom Resolver Implementation
+- Troubleshooting
+- Common Issues
+- Debugging Tips
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # LoRA Resolver Plugins
 
@@ -222,8 +263,10 @@ To implement your own resolver plugin:
    "
    ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -452,3 +495,5 @@ To implement your own resolver plugin:
 +   "
 +   ```
 ```
+
+</details>

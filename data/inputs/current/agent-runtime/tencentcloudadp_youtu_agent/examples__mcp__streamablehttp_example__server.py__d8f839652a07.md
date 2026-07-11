@@ -1,6 +1,31 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_tencentcloudadp_youtu_agent_examples_mcp_streamablehttp_example_server_py_d8f839652a07", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:06.148924+00:00", "source_path": "examples/mcp/streamablehttp_example/server.py", "source_repo": "TencentCloudADP/youtu-agent", "source_sha": "d8f839652a07608c21909c94f3217b9ce20e3787"}
+# TencentCloudADP/youtu-agent · examples/mcp/streamablehttp_example/server.py
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [TencentCloudADP/youtu-agent](https://github.com/TencentCloudADP/youtu-agent) |
+| 来源文件 | [examples/mcp/streamablehttp_example/server.py](https://github.com/TencentCloudADP/youtu-agent/blob/d8f839652a07608c21909c94f3217b9ce20e3787/examples/mcp/streamablehttp_example/server.py) |
+| 来源版本 | `d8f839652a07608c21909c94f3217b9ce20e3787` |
+| 摄取时间 | `2026-07-11T06:09:06.148924+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_tencentcloudadp_youtu_agent_examples_mcp_streamablehttp_example_server_py_d8f839652a07` |
+
+## 本次变化
+
+- 新增行数 `33`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Create server
+
+<details>
+<summary>展开完整外部原文</summary>
 
 import random
 
@@ -36,8 +61,10 @@ def get_current_weather(city: str) -> str:
 if __name__ == "__main__":
     mcp.run(transport="streamable-http")
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -80,3 +107,5 @@ if __name__ == "__main__":
 +if __name__ == "__main__":
 +    mcp.run(transport="streamable-http")
 ```
+
+</details>

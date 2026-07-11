@@ -1,6 +1,34 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_modelcontextprotocol_modelcontextprotocol_readme_md_4e4811014ee7", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:38.042045+00:00", "source_path": "README.md", "source_repo": "modelcontextprotocol/modelcontextprotocol", "source_sha": "4e4811014ee7abd43b8cfc4730bd3f9b8dd2aaca"}
+# modelcontextprotocol/modelcontextprotocol · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [modelcontextprotocol/modelcontextprotocol](https://github.com/modelcontextprotocol/modelcontextprotocol) |
+| 来源文件 | [README.md](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/4e4811014ee7abd43b8cfc4730bd3f9b8dd2aaca/README.md) |
+| 来源版本 | `4e4811014ee7abd43b8cfc4730bd3f9b8dd2aaca` |
+| 摄取时间 | `2026-07-11T06:08:38.042045+00:00` |
+| 归属层 | `protocols` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_modelcontextprotocol_modelcontextprotocol_readme_md_4e4811014ee7` |
+
+## 本次变化
+
+- 新增行数 `28`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Model Context Protocol (MCP)
+- Authors
+- Contributing
+- License
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Model Context Protocol (MCP)
 
@@ -31,8 +59,10 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 This project is licensed under the [MIT License](LICENSE).
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -70,3 +100,5 @@ This project is licensed under the [MIT License](LICENSE).
 +
 +This project is licensed under the [MIT License](LICENSE).
 ```
+
+</details>

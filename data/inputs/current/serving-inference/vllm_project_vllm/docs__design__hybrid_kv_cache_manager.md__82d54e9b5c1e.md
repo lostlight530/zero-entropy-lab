@@ -1,6 +1,49 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_hybrid_kv_cache_manager_md_82d54e9b5c1e", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:10.159242+00:00", "source_path": "docs/design/hybrid_kv_cache_manager.md", "source_repo": "vllm-project/vllm", "source_sha": "82d54e9b5c1ec819e0e2f2b4ca88bd4632b956f1"}
+# vllm-project/vllm · docs/design/hybrid_kv_cache_manager.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/hybrid_kv_cache_manager.md](https://github.com/vllm-project/vllm/blob/82d54e9b5c1ec819e0e2f2b4ca88bd4632b956f1/docs/design/hybrid_kv_cache_manager.md) |
+| 来源版本 | `82d54e9b5c1ec819e0e2f2b4ca88bd4632b956f1` |
+| 摄取时间 | `2026-07-11T06:09:10.159242+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_hybrid_kv_cache_manager_md_82d54e9b5c1e` |
+
+## 本次变化
+
+- 新增行数 `245`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Hybrid KV Cache Manager
+- What is a hybrid model?
+- Definitions
+- Allocation
+- High level idea
+- Case 1: toy model
+- Case 2: same `kv_hidden_size` and a regular pattern
+- Case 3: same `kv_hidden_size` and no regular pattern
+- Case 4: different `kv_hidden_size` (mainly hybrid mamba models)
+- Case 5: KV sharing
+- Prefix caching
+- High level idea
+- Case 0: full attention only models
+- Case 1: sliding window attention only models
+- Case 2: sliding window attention + full attention models
+- Case 3: mamba models
+- Implementation
+- Overview
+- Memory Layout
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Hybrid KV Cache Manager
 
@@ -248,8 +291,10 @@ With such an example, the physical memory is divided into 10 buffers (`KVCacheTe
 !!! note
     One logic "block" is mapped to 10 pieces in the 10 buffers of the physical memory.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -504,3 +549,5 @@ With such an example, the physical memory is divided into 10 buffers (`KVCacheTe
 +!!! note
 +    One logic "block" is mapped to 10 pieces in the 10 buffers of the physical memory.
 ```
+
+</details>

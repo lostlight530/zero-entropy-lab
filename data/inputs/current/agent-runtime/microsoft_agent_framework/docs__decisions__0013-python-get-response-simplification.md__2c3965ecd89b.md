@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0013_python_get_response_simplification_md_2c3965ecd89b", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:55.972473+00:00", "source_path": "docs/decisions/0013-python-get-response-simplification.md", "source_repo": "microsoft/agent-framework", "source_sha": "2c3965ecd89ba671b97e2dcf9cf440d12c53a0b7"}
+# microsoft/agent-framework · docs/decisions/0013-python-get-response-simplification.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0013-python-get-response-simplification.md](https://github.com/microsoft/agent-framework/blob/2c3965ecd89ba671b97e2dcf9cf440d12c53a0b7/docs/decisions/0013-python-get-response-simplification.md) |
+| 来源版本 | `2c3965ecd89ba671b97e2dcf9cf440d12c53a0b7` |
+| 摄取时间 | `2026-07-11T06:08:55.972473+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0013_python_get_response_simplification_md_2c3965ecd89b` |
+
+## 本次变化
+
+- 新增行数 `258`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Simplify Python Get Response API into a single method
+- Context and Problem Statement
+- Implications of this change
+- Current Architecture Overview
+- Key Usage Areas Identified
+- 1. **ChatAgent** (_agents.py)
+- 2. **Function Invocation Decorator** (_tools.py)
+- 3. **Observability/Instrumentation** (observability.py)
+- 4. **Chat Middleware** (_middleware.py)
+- 5. **AG-UI Client** (_client.py)
+- 6. **Provider Implementations** (all subpackages)
+- Implications of Consolidation
+- Recommendation
+- Decision Drivers
+- Considered Options
+- Option 1: Status Quo
+- Option 2: Consolidate into Single Method
+- Option 3: Consolidate + Merge Agent and Workflow Methods
+- Misc
+- Decision Outcome
+- Appendix
+- Code Samples for Consolidated Method
+- Python - Option 3: Direct ChatClient + Agent with Single Method
+- Copyright (c) Microsoft. All rights reserved.
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: Accepted
@@ -261,8 +309,10 @@ Console.WriteLine();
 
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -530,3 +580,5 @@ Console.WriteLine();
 +
 +```
 ```
+
+</details>

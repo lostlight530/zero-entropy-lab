@@ -1,6 +1,38 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0015_agent_run_context_md_615d6ed97bd3", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:56.249499+00:00", "source_path": "docs/decisions/0015-agent-run-context.md", "source_repo": "microsoft/agent-framework", "source_sha": "615d6ed97bd36b22acc0d12f2e3ee192770bee1b"}
+# microsoft/agent-framework · docs/decisions/0015-agent-run-context.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0015-agent-run-context.md](https://github.com/microsoft/agent-framework/blob/615d6ed97bd36b22acc0d12f2e3ee192770bee1b/docs/decisions/0015-agent-run-context.md) |
+| 来源版本 | `615d6ed97bd36b22acc0d12f2e3ee192770bee1b` |
+| 摄取时间 | `2026-07-11T06:08:56.249499+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0015_agent_run_context_md_615d6ed97bd3` |
+
+## 本次变化
+
+- 新增行数 `147`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- AgentRunContext for Agent Run
+- Context and Problem Statement
+- Sample Scenario
+- Decision Drivers
+- Considered Options
+- Decision Outcome
+- AgentRunContext Design
+- Benefits
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: proposed
@@ -150,8 +182,10 @@ Key design decisions:
 3. **Modifiability**: Components can modify or replace session, messages, or options as needed
 4. **Testability**: The explicit parameter to `RunCoreAsync` makes unit testing straightforward
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -308,3 +342,5 @@ Key design decisions:
 +3. **Modifiability**: Components can modify or replace session, messages, or options as needed
 +4. **Testability**: The explicit parameter to `RunCoreAsync` makes unit testing straightforward
 ```
+
+</details>

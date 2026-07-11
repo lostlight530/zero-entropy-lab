@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0029_mcp_skill_templates_and_direct_references_md_7c9aa6fbb961", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:58.775596+00:00", "source_path": "docs/decisions/0029-mcp-skill-templates-and-direct-references.md", "source_repo": "microsoft/agent-framework", "source_sha": "7c9aa6fbb961da0f7da9a3a332ecb948b30d8caf"}
+# microsoft/agent-framework · docs/decisions/0029-mcp-skill-templates-and-direct-references.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0029-mcp-skill-templates-and-direct-references.md](https://github.com/microsoft/agent-framework/blob/7c9aa6fbb961da0f7da9a3a332ecb948b30d8caf/docs/decisions/0029-mcp-skill-templates-and-direct-references.md) |
+| 来源版本 | `7c9aa6fbb961da0f7da9a3a332ecb948b30d8caf` |
+| 摄取时间 | `2026-07-11T06:08:58.775596+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0029_mcp_skill_templates_and_direct_references_md_7c9aa6fbb961` |
+
+## 本次变化
+
+- 新增行数 `641`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Skills Over MCP: Implementation Design Options
+- Part 1: MCP Resource Template Skills
+- Context and Problem Statement
+- Index Entry Format
+- Use Cases
+- How Template Skills Are Consumed
+- Potential Implementation Options
+- Option 1: Callback on `AgentMcpSkillsSource` for Variable Value Selection
+- Option 2: Integrate into Agent Conversation via `ChatClientAgent` Decorator
+- Open Questions
+- Part 2: Direct Skill References
+- How MCP Skills and Relative Links Work Today
+- Usage
+- Unit Conversion Table
+- Direct Reference Examples
+- Naming
+- Naming Rules
+- Function for Reading Direct Skill References
+- Option 1: Extend existing `load_skill` and `read_skill_resource` functions
+- Option 2 (Proposed): Add a dedicated `read_skill_uri` function alongside existing ones
+- Option 3: Collapse `load_skill` and `read_skill_resource` into a single `read_resource` function
+- Origin Marker
+- Code Standards
+- Naming Rules
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: proposed
@@ -644,8 +692,10 @@ The method naming (`SupportsReadByUri`, `CanReadByUri`, `ReadByUriAsync`) should
 - [Anthropic Agent Skills - Overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) - Prior art: single skill entrypoint + generic file reads
 - [Anthropic Agent Skills in the SDK](https://code.claude.com/docs/en/agent-sdk/skills) - The `Skill` tool exposed to the model
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1296,3 +1346,5 @@ The method naming (`SupportsReadByUri`, `CanReadByUri`, `ReadByUriAsync`) should
 +- [Anthropic Agent Skills - Overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) - Prior art: single skill entrypoint + generic file reads
 +- [Anthropic Agent Skills in the SDK](https://code.claude.com/docs/en/agent-sdk/skills) - The `Skill` tool exposed to the model
 ```
+
+</details>

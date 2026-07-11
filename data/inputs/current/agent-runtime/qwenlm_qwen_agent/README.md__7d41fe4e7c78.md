@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_qwenlm_qwen_agent_readme_md_7d41fe4e7c78", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:02.294556+00:00", "source_path": "README.md", "source_repo": "QwenLM/Qwen-Agent", "source_sha": "7d41fe4e7c78fa62d59b03ce4bd444fcdb75eb58"}
+# QwenLM/Qwen-Agent · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [QwenLM/Qwen-Agent](https://github.com/QwenLM/Qwen-Agent) |
+| 来源文件 | [README.md](https://github.com/QwenLM/Qwen-Agent/blob/7d41fe4e7c78fa62d59b03ce4bd444fcdb75eb58/README.md) |
+| 来源版本 | `7d41fe4e7c78fa62d59b03ce4bd444fcdb75eb58` |
+| 摄取时间 | `2026-07-11T06:09:02.294556+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_qwenlm_qwen_agent_readme_md_7d41fe4e7c78` |
+
+## 本次变化
+
+- 新增行数 `292`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- News
+- Getting Started
+- Installation
+- Or use `pip install -U qwen-agent` for the minimal requirements.
+- The optional requirements, specified in double brackets, are:
+- [gui] for Gradio-based GUI support;
+- [rag] for RAG support;
+- [code_interpreter] for Code Interpreter support;
+- [mcp] for MCP support.
+- Or `pip install -e ./` for minimal requirements.
+- Preparation: Model Service
+- Developing Your Own Agent
+- Step 1 (Optional): Add a custom tool named `my_image_gen`.
+- Step 2: Configure the LLM you are using.
+- Step 3: Create an agent. Here we use the `Assistant` agent as an example, which is capable of using tools and reading files.
+- Step 4: Run the agent as a chatbot.
+- FAQ
+- How to Use the Code Interpreter Tool?
+- How to Use MCP?
+- Node.js (Download and install the latest version from the Node.js official website)
+- uv 0.4.18 or higher (Check with uv --version)
+- Git (Check with git --version)
+- SQLite (Check with sqlite3 --version)
+- For macOS users, you can install these components using Homebrew:
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <!---
 Copyright 2023 The Qwen team, Alibaba Group. All rights reserved.
@@ -295,8 +343,10 @@ BrowserQwen is a browser assistant built upon Qwen-Agent. Please refer to its [d
 
 The Docker container-based code interpreter mounts only the specified working directory and implements basic sandbox isolation, but it should still be used with caution in production environments.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -598,3 +648,5 @@ The Docker container-based code interpreter mounts only the specified working di
 +
 +The Docker container-based code interpreter mounts only the specified working directory and implements basic sandbox isolation, but it should still be used with caution in production environments.
 ```
+
+</details>

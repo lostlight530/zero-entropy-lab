@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_google_adk_python_changelog_md_edaeda5557cc", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:53.046183+00:00", "source_path": "CHANGELOG.md", "source_repo": "google/adk-python", "source_sha": "edaeda5557cc9487037c3453cf69f3dd57e23146"}
+# google/adk-python · CHANGELOG.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [google/adk-python](https://github.com/google/adk-python) |
+| 来源文件 | [CHANGELOG.md](https://github.com/google/adk-python/blob/edaeda5557cc9487037c3453cf69f3dd57e23146/CHANGELOG.md) |
+| 来源版本 | `edaeda5557cc9487037c3453cf69f3dd57e23146` |
+| 摄取时间 | `2026-07-11T06:08:53.046183+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_google_adk_python_changelog_md_edaeda5557cc` |
+
+## 本次变化
+
+- 新增行数 `2758`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Changelog
+- [2.4.0](https://github.com/google/adk-python/compare/v2.3.0...v2.4.0) (2026-07-07)
+- Features
+- Bug Fixes
+- Performance Improvements
+- Documentation
+- [2.3.0](https://github.com/google/adk-python/compare/v2.2.0...v2.3.0) (2026-06-17)
+- Features
+- Bug Fixes
+- Performance Improvements
+- Code Refactoring
+- Documentation
+- [2.2.0](https://github.com/google/adk-python/compare/v2.1.0...v2.2.0) (2026-06-04)
+- Features
+- Bug Fixes
+- Performance Improvements
+- Code Refactoring
+- Documentation
+- [2.1.0](https://github.com/google/adk-python/compare/v2.0.0...v2.1.0) (2026-05-23)
+- Features
+- Bug Fixes
+- [2.0.0](https://github.com/google/adk-python/compare/v2.0.0b1...v2.0.0) (2026-05-19)
+- ADK 2.0 General Availability
+- Core Architecture Highlights
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Changelog
 
@@ -2761,8 +2809,10 @@ with Bigtable for building AI Agent applications(experimental feature) ([a953807
 * Deploy to Google Cloud Run, Agent Engine
 * (Experimental) Live(Bidi) audio/video agent support and Compositional Function Calling(CFC) support
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -5530,3 +5580,5 @@ with Bigtable for building AI Agent applications(experimental feature) ([a953807
 +* Deploy to Google Cloud Run, Agent Engine
 +* (Experimental) Live(Bidi) audio/video agent support and Compositional Function Calling(CFC) support
 ```
+
+</details>

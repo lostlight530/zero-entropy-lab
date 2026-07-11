@@ -1,6 +1,32 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openai_openai_agents_python_examples_mcp_git_example_readme_md_6a809afae455", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:46.847930+00:00", "source_path": "examples/mcp/git_example/README.md", "source_repo": "openai/openai-agents-python", "source_sha": "6a809afae455ec354ac767e29e9865bf3cc6dc8a"}
+# openai/openai-agents-python · examples/mcp/git_example/README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/mcp/git_example/README.md](https://github.com/openai/openai-agents-python/blob/6a809afae455ec354ac767e29e9865bf3cc6dc8a/examples/mcp/git_example/README.md) |
+| 来源版本 | `6a809afae455ec354ac767e29e9865bf3cc6dc8a` |
+| 摄取时间 | `2026-07-11T06:08:46.847930+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_mcp_git_example_readme_md_6a809afae455` |
+
+## 本次变化
+
+- 新增行数 `26`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- MCP Git Example
+- Details
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # MCP Git Example
 
@@ -29,8 +55,10 @@ Under the hood:
 3. Each time the agent runs, we call out to the MCP server to fetch the list of tools via `server.list_tools()`. The result is cached.
 4. If the LLM chooses to use an MCP tool, we call the MCP server to run the tool via `server.run_tool()`.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -66,3 +94,5 @@ Under the hood:
 +3. Each time the agent runs, we call out to the MCP server to fetch the list of tools via `server.list_tools()`. The result is cached.
 +4. If the LLM chooses to use an MCP tool, we call the MCP server to run the tool via `server.run_tool()`.
 ```
+
+</details>

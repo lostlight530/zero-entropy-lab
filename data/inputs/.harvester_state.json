@@ -18,7 +18,7 @@
         "README.md": {
           "content_hash": "1e7e5f0e8d409aa13f201f45f6ab9aeb4849d182c745f6736056e4185b1fc526",
           "entity_id": "doc_minimax_ai_mini_agent_readme_md_0cf8494d1a82",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/minimax_ai_mini_agent/README.md__0cf8494d1a82.md",
+          "output": "current/memory-context-sandbox/minimax_ai_mini_agent/README.md__0cf8494d1a82.md",
           "sha": "0cf8494d1a82b39e1b23d0795615b592dee5cf6e"
         }
       },
@@ -29,7 +29,7 @@
         "README.md": {
           "content_hash": "37a26e27113f5823b4077a7477d33a0f47c19590262fdf76da22076193458e2c",
           "entity_id": "doc_modelengine_group_fit_framework_readme_md_e55b50d07d0c",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/modelengine_group_fit_framework/README.md__e55b50d07d0c.md",
+          "output": "current/agent-runtime/modelengine_group_fit_framework/README.md__e55b50d07d0c.md",
           "sha": "e55b50d07d0c01ef70ae88885c4372efdc3970f7"
         }
       },
@@ -40,7 +40,7 @@
         "README.md": {
           "content_hash": "615e975788ea0d011784f4bf4c506d21bbccabc85f0eabecfc3357e964048947",
           "entity_id": "doc_moonshotai_kimi_agent_sdk_readme_md_e48d8c4fcd98",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/moonshotai_kimi_agent_sdk/README.md__e48d8c4fcd98.md",
+          "output": "current/agent-runtime/moonshotai_kimi_agent_sdk/README.md__e48d8c4fcd98.md",
           "sha": "e48d8c4fcd987e9f2550fb2bb0acbecd307ec9c7"
         }
       },
@@ -51,7 +51,7 @@
         "README.md": {
           "content_hash": "1bf0552065e392e8555df8bee6775f01c77ac6ba5a749060e440bbe41b568eb1",
           "entity_id": "doc_nvidia_tensorrt_llm_readme_md_943083d6c4c6",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/nvidia_tensorrt_llm/README.md__943083d6c4c6.md",
+          "output": "current/serving-inference/nvidia_tensorrt_llm/README.md__943083d6c4c6.md",
           "sha": "943083d6c4c612b4694a9b675758527594154d34"
         }
       },
@@ -62,7 +62,7 @@
         "README.md": {
           "content_hash": "cd5b41ce3767fa65f05a449a20121cb53d2ff93f4f25b5377b71e2e0e6c322ef",
           "entity_id": "doc_openhands_software_agent_sdk_readme_md_3e4e4eb91e99",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openhands_software_agent_sdk/README.md__3e4e4eb91e99.md",
+          "output": "current/agent-runtime/openhands_software_agent_sdk/README.md__3e4e4eb91e99.md",
           "sha": "3e4e4eb91e9955b3ee85ede24e43ebf3a14d9ab6"
         }
       },
@@ -73,7 +73,7 @@
         "README.md": {
           "content_hash": "81e21965cc2754c81d3d9217d9b7826d0b8338b19b6f35b2769316f8b51d4c76",
           "entity_id": "doc_openspg_kag_readme_md_189179325180",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/openspg_kag/README.md__189179325180.md",
+          "output": "current/memory-context-sandbox/openspg_kag/README.md__189179325180.md",
           "sha": "189179325180dcc7de0341ae6b8c64a6a97b2daa"
         }
       },
@@ -84,7 +84,7 @@
         "README.md": {
           "content_hash": "c33f158284cb0529807a8ee6b5fd5e439e51bb9865ddc8274ae3ec61fc04f6e2",
           "entity_id": "doc_qwenlm_qwen_agent_readme_md_7d41fe4e7c78",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/qwenlm_qwen_agent/README.md__7d41fe4e7c78.md",
+          "output": "current/agent-runtime/qwenlm_qwen_agent/README.md__7d41fe4e7c78.md",
           "sha": "7d41fe4e7c78fa62d59b03ce4bd444fcdb75eb58"
         }
       },
@@ -95,13 +95,13 @@
         "CHANGELOG.md": {
           "content_hash": "c46a48f1d749e38bf5fb682e0aa1e9cad370aac9cfa3c89f629ce8f6f6056525",
           "entity_id": "doc_tencentcloud_tencentdb_agent_memory_changelog_md_1df12b353dc5",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/tencentcloud_tencentdb_agent_memory/CHANGELOG.md__1df12b353dc5.md",
+          "output": "current/memory-context-sandbox/tencentcloud_tencentdb_agent_memory/CHANGELOG.md__1df12b353dc5.md",
           "sha": "1df12b353dc5e198babb588bb8204c7908cf7208"
         },
         "README.md": {
           "content_hash": "91d1b6d7e7502aa41e23d61f89e7b8ac24ecf6f191e4edf2feb02e8f1d35b88e",
           "entity_id": "doc_tencentcloud_tencentdb_agent_memory_readme_md_22e61944e3b3",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/tencentcloud_tencentdb_agent_memory/README.md__22e61944e3b3.md",
+          "output": "current/memory-context-sandbox/tencentcloud_tencentdb_agent_memory/README.md__22e61944e3b3.md",
           "sha": "22e61944e3b3a7da5aa63f912e14362e3a72ecbc"
         }
       },
@@ -112,55 +112,55 @@
         "CHANGELOG.md": {
           "content_hash": "809a7757e0e4c0867dde706d973e819666a9a9a00e219dfbb26332628483690a",
           "entity_id": "doc_tencentcloudadp_youtu_agent_changelog_md_1692b41f09c9",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/tencentcloudadp_youtu_agent/CHANGELOG.md__1692b41f09c9.md",
+          "output": "current/agent-runtime/tencentcloudadp_youtu_agent/CHANGELOG.md__1692b41f09c9.md",
           "sha": "1692b41f09c93d663db21a8d5a7bdf63ccbf9822"
         },
         "README.md": {
           "content_hash": "24d551fb0d804bd215cc7df443700c8ebdc264aa26942598f98376c63e38a67c",
           "entity_id": "doc_tencentcloudadp_youtu_agent_readme_md_43bd8dd07bd6",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/tencentcloudadp_youtu_agent/README.md__43bd8dd07bd6.md",
+          "output": "current/agent-runtime/tencentcloudadp_youtu_agent/README.md__43bd8dd07bd6.md",
           "sha": "43bd8dd07bd65c3dbeede27582f1d4a123928118"
         },
         "examples/basic/chat_image.py": {
           "content_hash": "9a53a2f14573c5100cb457b0bec730de6eaaa95b75e34f2cb3090c18e2401354",
           "entity_id": "doc_tencentcloudadp_youtu_agent_examples_basic_chat_image_py_8ba04c99b03d",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/tencentcloudadp_youtu_agent/examples__basic__chat_image.py__8ba04c99b03d.md",
+          "output": "current/agent-runtime/tencentcloudadp_youtu_agent/examples__basic__chat_image.py__8ba04c99b03d.md",
           "sha": "8ba04c99b03da7b7c5e97b461b7e57563e5a2c8b"
         },
         "examples/basic/tools/dynamic_toolkit.py": {
           "content_hash": "7d0ee810c42da1589af9ec21abe6b9cdf0aebfd2c6adcb1f6ce981aa7ee22f44",
           "entity_id": "doc_tencentcloudadp_youtu_agent_examples_basic_tools_dynamic_toolkit_py_4f0881adb318",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/tencentcloudadp_youtu_agent/examples__basic__tools__dynamic_toolkit.py__4f0881adb318.md",
+          "output": "current/agent-runtime/tencentcloudadp_youtu_agent/examples__basic__tools__dynamic_toolkit.py__4f0881adb318.md",
           "sha": "4f0881adb31821d4693373134d5d62b1e58048f3"
         },
         "examples/mcp/sse_example/main.py": {
           "content_hash": "3b4e109160011f569a79f95a6f8e9ead3d40963e71b113d40d9c03d3b02d2d7b",
           "entity_id": "doc_tencentcloudadp_youtu_agent_examples_mcp_sse_example_main_py_447e5aa5607a",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/tencentcloudadp_youtu_agent/examples__mcp__sse_example__main.py__447e5aa5607a.md",
+          "output": "current/agent-runtime/tencentcloudadp_youtu_agent/examples__mcp__sse_example__main.py__447e5aa5607a.md",
           "sha": "447e5aa5607adab28ddee4433de01b7ba92572b5"
         },
         "examples/mcp/sse_example/server.py": {
           "content_hash": "08fe9e35039cae194ad3d4e82c2fc0f2d5379f6e26553cc69e89e283cdb05b2a",
           "entity_id": "doc_tencentcloudadp_youtu_agent_examples_mcp_sse_example_server_py_df364aa3aff5",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/tencentcloudadp_youtu_agent/examples__mcp__sse_example__server.py__df364aa3aff5.md",
+          "output": "current/agent-runtime/tencentcloudadp_youtu_agent/examples__mcp__sse_example__server.py__df364aa3aff5.md",
           "sha": "df364aa3aff51eb3ebdf0a512528c618ad91c951"
         },
         "examples/mcp/stdio_example/main.py": {
           "content_hash": "c04068614c88e063a3e480061d7582c6862232066ae3f07c5f1a6f44efbd6c46",
           "entity_id": "doc_tencentcloudadp_youtu_agent_examples_mcp_stdio_example_main_py_5cc592459fdf",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/tencentcloudadp_youtu_agent/examples__mcp__stdio_example__main.py__5cc592459fdf.md",
+          "output": "current/agent-runtime/tencentcloudadp_youtu_agent/examples__mcp__stdio_example__main.py__5cc592459fdf.md",
           "sha": "5cc592459fdf6b7ef5915c4bc668583013446bd7"
         },
         "examples/mcp/streamablehttp_example/main.py": {
           "content_hash": "0bbd0a53738198d3105e5768390bf5865dba153eda9bd99f21b3ad4eddc765db",
           "entity_id": "doc_tencentcloudadp_youtu_agent_examples_mcp_streamablehttp_example_main_py_f46529c9239c",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/tencentcloudadp_youtu_agent/examples__mcp__streamablehttp_example__main.py__f46529c9239c.md",
+          "output": "current/agent-runtime/tencentcloudadp_youtu_agent/examples__mcp__streamablehttp_example__main.py__f46529c9239c.md",
           "sha": "f46529c9239c88faded0f2174a628a98632a98c7"
         },
         "examples/mcp/streamablehttp_example/server.py": {
           "content_hash": "9b22ef597e529fa4e5d671a184d6bf4fd57d7522eec7d24d4bf34ba38c2cf397",
           "entity_id": "doc_tencentcloudadp_youtu_agent_examples_mcp_streamablehttp_example_server_py_d8f839652a07",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/tencentcloudadp_youtu_agent/examples__mcp__streamablehttp_example__server.py__d8f839652a07.md",
+          "output": "current/agent-runtime/tencentcloudadp_youtu_agent/examples__mcp__streamablehttp_example__server.py__d8f839652a07.md",
           "sha": "d8f839652a07608c21909c94f3217b9ce20e3787"
         }
       },
@@ -171,13 +171,13 @@
         "CHANGELOG.md": {
           "content_hash": "5608a3dddcaa39b05d9c555d1d75aa4f59641390bc43db205e8704e51b8dadeb",
           "entity_id": "doc_a2aproject_a2a_changelog_md_bfc2c8667818",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/protocols/a2aproject_a2a/CHANGELOG.md__bfc2c8667818.md",
+          "output": "current/protocols/a2aproject_a2a/CHANGELOG.md__bfc2c8667818.md",
           "sha": "bfc2c8667818cb5ef43470c1384829020cee619b"
         },
         "README.md": {
           "content_hash": "fcb02100aac936fc781f5adfd5ac8213f4beeb0c6d582888c2bebc13f6fc26b7",
           "entity_id": "doc_a2aproject_a2a_readme_md_9db896e8b055",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/protocols/a2aproject_a2a/README.md__9db896e8b055.md",
+          "output": "current/protocols/a2aproject_a2a/README.md__9db896e8b055.md",
           "sha": "9db896e8b05538b2a157215d3dba660dddc8c5ed"
         }
       },
@@ -188,13 +188,13 @@
         "CHANGELOG.md": {
           "content_hash": "95794bbf2e601c22179602fe2e5815490e9a15a73ff5c5d6355a5ae0d49d2c59",
           "entity_id": "doc_a2aproject_a2a_python_changelog_md_0a6d41305fe6",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/protocols/a2aproject_a2a_python/CHANGELOG.md__0a6d41305fe6.md",
+          "output": "current/protocols/a2aproject_a2a_python/CHANGELOG.md__0a6d41305fe6.md",
           "sha": "0a6d41305fe6a7fcc57ecb006d24c466e72ebd28"
         },
         "README.md": {
           "content_hash": "e21f971f18d21dabc845a5fcbbe74b2c763a53f32c1b06d9a38c4852e3b24034",
           "entity_id": "doc_a2aproject_a2a_python_readme_md_93b9a299ddc2",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/protocols/a2aproject_a2a_python/README.md__93b9a299ddc2.md",
+          "output": "current/protocols/a2aproject_a2a_python/README.md__93b9a299ddc2.md",
           "sha": "93b9a299ddc2ea34e1b8a9f7c52b81c44a367140"
         }
       },
@@ -205,13 +205,13 @@
         "CHANGELOG.md": {
           "content_hash": "7ea997b15cf65b458b00263e815c8b25c26f4b2b2440aab86e3a4ee99624ce97",
           "entity_id": "doc_agentclientprotocol_agent_client_protocol_changelog_md_44220302a86e",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/protocols/agentclientprotocol_agent_client_protocol/CHANGELOG.md__44220302a86e.md",
+          "output": "current/protocols/agentclientprotocol_agent_client_protocol/CHANGELOG.md__44220302a86e.md",
           "sha": "44220302a86eac10fad6c7a550c77447249950e7"
         },
         "README.md": {
           "content_hash": "101f71ceb6f783d2534e0bc65ea7a39353e04acbcd9773108a1754b6ad5fe3dc",
           "entity_id": "doc_agentclientprotocol_agent_client_protocol_readme_md_1b4fbc172daa",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/protocols/agentclientprotocol_agent_client_protocol/README.md__1b4fbc172daa.md",
+          "output": "current/protocols/agentclientprotocol_agent_client_protocol/README.md__1b4fbc172daa.md",
           "sha": "1b4fbc172daae9b829cf8337bd92d99b2855e721"
         }
       },
@@ -222,7 +222,7 @@
         "README.md": {
           "content_hash": "08e65a03f453718a00c807382ced5ae36f9b22bf9e928482352c30ee7765f179",
           "entity_id": "doc_agentscope_ai_agentscope_readme_md_5c721dc098a1",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/agentscope_ai_agentscope/README.md__5c721dc098a1.md",
+          "output": "current/agent-runtime/agentscope_ai_agentscope/README.md__5c721dc098a1.md",
           "sha": "5c721dc098a15547e02b94fb06968e3322327844"
         }
       },
@@ -233,7 +233,7 @@
         "README.md": {
           "content_hash": "36a3d55cea3f0c0540d0ebb0700dbf151314a184a40d79c7850367bfadbba1ac",
           "entity_id": "doc_agentskills_agentskills_readme_md_247e4a18e908",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/protocols/agentskills_agentskills/README.md__247e4a18e908.md",
+          "output": "current/protocols/agentskills_agentskills/README.md__247e4a18e908.md",
           "sha": "247e4a18e908d3bf27092f886f25c2515d84ecbc"
         }
       },
@@ -244,7 +244,7 @@
         "README.md": {
           "content_hash": "6ff8517a40f275e5f6df349f7e37e06b81dc88b7d40dda2b7d866e8cf9ef54cb",
           "entity_id": "doc_cloudwego_eino_readme_md_a74ba7979f4c",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/cloudwego_eino/README.md__a74ba7979f4c.md",
+          "output": "current/agent-runtime/cloudwego_eino/README.md__a74ba7979f4c.md",
           "sha": "a74ba7979f4c7e3c895f26ae520fa0125bce9505"
         }
       },
@@ -255,7 +255,7 @@
         "README.md": {
           "content_hash": "6981d5d9bcec1fbb4f3ea4b7c6913e3eeb5846a6708c371f64d3a7d042c5f137",
           "entity_id": "doc_deepseek_ai_3fs_readme_md_18d89937ffbb",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/deepseek_ai_3fs/README.md__18d89937ffbb.md",
+          "output": "current/serving-inference/deepseek_ai_3fs/README.md__18d89937ffbb.md",
           "sha": "18d89937ffbb47bfda1569b3d8bff743be64d70a"
         }
       },
@@ -266,7 +266,7 @@
         "README.md": {
           "content_hash": "b1eaf7c68de8e120847619e7d4f1ba02978d36d8622f3d5a4b2786609f896bfe",
           "entity_id": "doc_deepseek_ai_deepep_readme_md_078a15146bff",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/deepseek_ai_deepep/README.md__078a15146bff.md",
+          "output": "current/serving-inference/deepseek_ai_deepep/README.md__078a15146bff.md",
           "sha": "078a15146bffdf1ffb27a1018eb3c5472d9dcad0"
         }
       },
@@ -277,7 +277,7 @@
         "README.md": {
           "content_hash": "66435ec935a09a6eec7303a5ea8ed161c6bad5470e8ad850f5d7108fc3595a6d",
           "entity_id": "doc_deepseek_ai_deepgemm_readme_md_6ef705ffceb9",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/deepseek_ai_deepgemm/README.md__6ef705ffceb9.md",
+          "output": "current/serving-inference/deepseek_ai_deepgemm/README.md__6ef705ffceb9.md",
           "sha": "6ef705ffceb9f41b2f2588b62a910ed6cbc819a5"
         }
       },
@@ -288,7 +288,7 @@
         "README.md": {
           "content_hash": "6a7099f72b07e516da7161fe8ae84588522e3089d1a745c8b23715f67957316a",
           "entity_id": "doc_deepseek_ai_flashmla_readme_md_1945725fb253",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/deepseek_ai_flashmla/README.md__1945725fb253.md",
+          "output": "current/serving-inference/deepseek_ai_flashmla/README.md__1945725fb253.md",
           "sha": "1945725fb253b7b1b4681bed10b04a1a83d5fe6e"
         }
       },
@@ -299,13 +299,13 @@
         "MIGRATION.md": {
           "content_hash": "a61dd80e406c6c21531169cf903a7980d0b2dbb2f556706e8fc2be639cb330e4",
           "entity_id": "doc_deepset_ai_haystack_migration_md_dce8a569b2a4",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/deepset_ai_haystack/MIGRATION.md__dce8a569b2a4.md",
+          "output": "current/memory-context-sandbox/deepset_ai_haystack/MIGRATION.md__dce8a569b2a4.md",
           "sha": "dce8a569b2a4200947c2e4690488723ab691517a"
         },
         "README.md": {
           "content_hash": "d69b19192b56c92fcd901044d004766ab326d3d795024270b9a5c09077cb09e2",
           "entity_id": "doc_deepset_ai_haystack_readme_md_e9f3982dd7c4",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/deepset_ai_haystack/README.md__e9f3982dd7c4.md",
+          "output": "current/memory-context-sandbox/deepset_ai_haystack/README.md__e9f3982dd7c4.md",
           "sha": "e9f3982dd7c4b71acf9d61d56782814d4af6855d"
         }
       },
@@ -316,7 +316,7 @@
         "README.md": {
           "content_hash": "652e31017c330c73e12e7d65ca370a7bd60825b6aa1983c90cbbfa7fd8d875d0",
           "entity_id": "doc_ggml_org_llama.cpp_readme_md_e98f2b7f18b1",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/ggml_org_llama.cpp/README.md__e98f2b7f18b1.md",
+          "output": "current/serving-inference/ggml_org_llama.cpp/README.md__e98f2b7f18b1.md",
           "sha": "e98f2b7f18b1924d223c2c0d64171f63e42fc1b7"
         }
       },
@@ -327,13 +327,13 @@
         "CHANGELOG.md": {
           "content_hash": "555b0de981d0a05b8bcfce966473cee3d9b96c9470e7cd90167e4680ad9fc506",
           "entity_id": "doc_google_adk_python_changelog_md_edaeda5557cc",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/google_adk_python/CHANGELOG.md__edaeda5557cc.md",
+          "output": "current/agent-runtime/google_adk_python/CHANGELOG.md__edaeda5557cc.md",
           "sha": "edaeda5557cc9487037c3453cf69f3dd57e23146"
         },
         "README.md": {
           "content_hash": "b1cf275361d5fee207d130af2458a3a2ec1cdb482e96f537a21132a44d2a8be4",
           "entity_id": "doc_google_adk_python_readme_md_0eddf283f0b4",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/google_adk_python/README.md__0eddf283f0b4.md",
+          "output": "current/agent-runtime/google_adk_python/README.md__0eddf283f0b4.md",
           "sha": "0eddf283f0b470e4c166784bd0b5bb98ca397810"
         }
       },
@@ -344,7 +344,7 @@
         "README.md": {
           "content_hash": "b0186af16162fc7ac216c4dc7d36658e6841942aab7aad38596c327871124a12",
           "entity_id": "doc_huggingface_smolagents_readme_md_7c8af38d981a",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/huggingface_smolagents/README.md__7c8af38d981a.md",
+          "output": "current/memory-context-sandbox/huggingface_smolagents/README.md__7c8af38d981a.md",
           "sha": "7c8af38d981a563add56db76b10cde810e010690"
         }
       },
@@ -355,7 +355,7 @@
         "README.md": {
           "content_hash": "87e122baf35bd5450b08941d7fe935815d5686870bf243d4fe52793ff3591c5d",
           "entity_id": "doc_huggingface_transformers_readme_md_4fe7136d2529",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/huggingface_transformers/README.md__4fe7136d2529.md",
+          "output": "current/serving-inference/huggingface_transformers/README.md__4fe7136d2529.md",
           "sha": "4fe7136d25294b26a50b4fefd70f0cb12db06d4f"
         }
       },
@@ -366,7 +366,7 @@
         "README.md": {
           "content_hash": "2ac76cdf642e7ec1d51bd9a3b59bffaf470a415f8a251f4cb52923a38b89f759",
           "entity_id": "doc_langchain_ai_langgraph_readme_md_97c31e9cb4d8",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/langchain_ai_langgraph/README.md__97c31e9cb4d8.md",
+          "output": "current/agent-runtime/langchain_ai_langgraph/README.md__97c31e9cb4d8.md",
           "sha": "97c31e9cb4d8fe56be8d768ce3eb5e22400e897e"
         }
       },
@@ -377,7 +377,7 @@
         "README.md": {
           "content_hash": "83ae0391c3d990d9353a4d72214fd6c59c7bf20f0de2ad38d563053fd1b44e5b",
           "entity_id": "doc_mem0ai_mem0_readme_md_9a81e74effac",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/mem0ai_mem0/README.md__9a81e74effac.md",
+          "output": "current/memory-context-sandbox/mem0ai_mem0/README.md__9a81e74effac.md",
           "sha": "9a81e74effacbd7433e91b6c1fcc907f110d4773"
         }
       },
@@ -388,241 +388,241 @@
         "README.md": {
           "content_hash": "c8ea66ffa4e0b2c2a5d1e9996eba4ea7cf91f6b7dcbaca59d47619115677eafb",
           "entity_id": "doc_microsoft_agent_framework_readme_md_f1e82d81a897",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/README.md__f1e82d81a897.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/README.md__f1e82d81a897.md",
           "sha": "f1e82d81a8977e65a6f455fcd20edf8ab8a67443"
         },
         "docs/decisions/0001-agent-run-response.md": {
           "content_hash": "8c8d22e7347709e8e626a2a71ed6a852703a619ebfea6737bbe9ffa3a1a36804",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0001_agent_run_response_md_6ffebe7e4f37",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0001-agent-run-response.md__6ffebe7e4f37.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0001-agent-run-response.md__6ffebe7e4f37.md",
           "sha": "6ffebe7e4f3799cfaf096ef66c3e62924ee46be8"
         },
         "docs/decisions/0002-agent-tools.md": {
           "content_hash": "6c2bedfb4d81346b8734e176e31bbb573117aa729280ffe10a75d3dedca3babc",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0002_agent_tools_md_e08ff21afa15",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0002-agent-tools.md__e08ff21afa15.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0002-agent-tools.md__e08ff21afa15.md",
           "sha": "e08ff21afa15967f53d6962cf4981ac1c17af6ca"
         },
         "docs/decisions/0003-agent-opentelemetry-instrumentation.md": {
           "content_hash": "fcdeabb90567b984d4a25272a223116b4df978d52a87d486d75642fbb5dc7624",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0003_agent_opentelemetry_instrumentation_md_863387b5cbd6",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0003-agent-opentelemetry-instrumentation.md__863387b5cbd6.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0003-agent-opentelemetry-instrumentation.md__863387b5cbd6.md",
           "sha": "863387b5cbd6a097bd250777bfff0c05813330cd"
         },
         "docs/decisions/0004-foundry-sdk-extensions.md": {
           "content_hash": "6eb6b722cf84f9864027c07493bb78cb8351d1fd9ffe417e20a7a0d9498456df",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0004_foundry_sdk_extensions_md_b4f030802883",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0004-foundry-sdk-extensions.md__b4f030802883.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0004-foundry-sdk-extensions.md__b4f030802883.md",
           "sha": "b4f030802883fd2c8c76bbbc62f38bce8f6e2a00"
         },
         "docs/decisions/0005-python-naming-conventions.md": {
           "content_hash": "e187644d04f158e6f3511f3d78b57fddb4e8b2f7fca527e28a67b58400732d36",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0005_python_naming_conventions_md_3a79b98f9180",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0005-python-naming-conventions.md__3a79b98f9180.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0005-python-naming-conventions.md__3a79b98f9180.md",
           "sha": "3a79b98f9180f882ddaaa0b578967fa69118426b"
         },
         "docs/decisions/0006-userapproval.md": {
           "content_hash": "6536b63e8cd7499939a640b07b4c02e8b5375831216f92e5fe7df80f60183b08",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0006_userapproval_md_7823ab4de44f",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0006-userapproval.md__7823ab4de44f.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0006-userapproval.md__7823ab4de44f.md",
           "sha": "7823ab4de44f992a4127c604c4f7937694d60412"
         },
         "docs/decisions/0007-agent-filtering-middleware.md": {
           "content_hash": "3af916b70905d7557a4fc18ca1868380e978519cb4573dde8d62e008facfac89",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0007_agent_filtering_middleware_md_4fd3b57727a5",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0007-agent-filtering-middleware.md__4fd3b57727a5.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0007-agent-filtering-middleware.md__4fd3b57727a5.md",
           "sha": "4fd3b57727a5f048ddc316562922a1468bfb9172"
         },
         "docs/decisions/0008-python-subpackages.md": {
           "content_hash": "71b642d369c61c0f4e1f40361383b1f49f6af50ab33a4873ecda511e2bf08d0d",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0008_python_subpackages_md_fdd5a792b262",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0008-python-subpackages.md__fdd5a792b262.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0008-python-subpackages.md__fdd5a792b262.md",
           "sha": "fdd5a792b262d8b3d966cd8a00bfb63e267317d2"
         },
         "docs/decisions/0009-support-long-running-operations.md": {
           "content_hash": "479a79819f412972e52650abf15be54b8e19eafc800e539325f20a10223401f8",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0009_support_long_running_operations_md_a62a03855312",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0009-support-long-running-operations.md__a62a03855312.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0009-support-long-running-operations.md__a62a03855312.md",
           "sha": "a62a03855312db430df3e58c0792e69724692ae0"
         },
         "docs/decisions/0010-ag-ui-support.md": {
           "content_hash": "2c667c908c6680e16a16e62e8391bf855655daccfe6cd45ceb635c8b709fdd41",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0010_ag_ui_support_md_e1d46e9efff0",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0010-ag-ui-support.md__e1d46e9efff0.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0010-ag-ui-support.md__e1d46e9efff0.md",
           "sha": "e1d46e9efff0fa5d2c0befcb6c091c6d32220111"
         },
         "docs/decisions/0011-create-get-agent-api.md": {
           "content_hash": "2c1a79e67f5a67092dede910d7382fb6d788dc3eebdf32178fcce01361a3c43e",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0011_create_get_agent_api_md_4703c1271d2d",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0011-create-get-agent-api.md__4703c1271d2d.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0011-create-get-agent-api.md__4703c1271d2d.md",
           "sha": "4703c1271d2dc2422311616f7ff317f179bc86c2"
         },
         "docs/decisions/0012-python-typeddict-options.md": {
           "content_hash": "46cd920e784a938c5f89083cd5332ae1157fdada6b64a4bdf48f19be95480fa1",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0012_python_typeddict_options_md_5e754dc3dcc3",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0012-python-typeddict-options.md__5e754dc3dcc3.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0012-python-typeddict-options.md__5e754dc3dcc3.md",
           "sha": "5e754dc3dcc30921fd50c0f9c18bd9dc8c74558e"
         },
         "docs/decisions/0013-python-get-response-simplification.md": {
           "content_hash": "265289fcbe3f39765f35639d6ec41fbcbaa1ecf104f7b3f5c9afbf4bb3841444",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0013_python_get_response_simplification_md_2c3965ecd89b",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0013-python-get-response-simplification.md__2c3965ecd89b.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0013-python-get-response-simplification.md__2c3965ecd89b.md",
           "sha": "2c3965ecd89ba671b97e2dcf9cf440d12c53a0b7"
         },
         "docs/decisions/0014-feature-collections.md": {
           "content_hash": "35c54c819ed86e956775d9ed72be38094b72d698502e48a28f17a7fefc67aeb3",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0014_feature_collections_md_d96ab4ca5a84",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0014-feature-collections.md__d96ab4ca5a84.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0014-feature-collections.md__d96ab4ca5a84.md",
           "sha": "d96ab4ca5a845775a6447d923a7324fe12118f9b"
         },
         "docs/decisions/0015-agent-run-context.md": {
           "content_hash": "b915635d75035828051132f456251cc8511f53601ae9b4202f75204e918380fd",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0015_agent_run_context_md_615d6ed97bd3",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0015-agent-run-context.md__615d6ed97bd3.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0015-agent-run-context.md__615d6ed97bd3.md",
           "sha": "615d6ed97bd36b22acc0d12f2e3ee192770bee1b"
         },
         "docs/decisions/0016-python-context-middleware.md": {
           "content_hash": "7d4905e07ea2b074ce0339269da3d6bd56c45e013ce2e4c595aa9f7f99d71574",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0016_python_context_middleware_md_776df1e92680",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0016-python-context-middleware.md__776df1e92680.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0016-python-context-middleware.md__776df1e92680.md",
           "sha": "776df1e926800a1ba11702372adc2cd7ef558fd6"
         },
         "docs/decisions/0016-structured-output.md": {
           "content_hash": "9f5d89f14b99be59b7705e32f8a11409265271a7e2b640a7dda566bd23ad9eec",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0016_structured_output_md_4fdae3c77ee6",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0016-structured-output.md__4fdae3c77ee6.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0016-structured-output.md__4fdae3c77ee6.md",
           "sha": "4fdae3c77ee67dc4e5d623274dd1680df9b442b2"
         },
         "docs/decisions/0017-agent-additional-properties.md": {
           "content_hash": "03f5a4a95288038ff0beaf24357aa1d2662d4b58cb5f28f5dbe247336c85bb40",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0017_agent_additional_properties_md_8531a9bd2bd6",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0017-agent-additional-properties.md__8531a9bd2bd6.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0017-agent-additional-properties.md__8531a9bd2bd6.md",
           "sha": "8531a9bd2bd6be0902fb48d49211a444e4e7c9db"
         },
         "docs/decisions/0018-agentthread-serialization.md": {
           "content_hash": "a16059d72a8febefa6e808148031903227a7659a7d37b9a79494b355055e453c",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0018_agentthread_serialization_md_4a1ba3b692d0",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0018-agentthread-serialization.md__4a1ba3b692d0.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0018-agentthread-serialization.md__4a1ba3b692d0.md",
           "sha": "4a1ba3b692d07820388de27a9a704b29bac396bb"
         },
         "docs/decisions/0019-python-context-compaction-strategy.md": {
           "content_hash": "be22f25ab702402ae5ce83792d2e21f2eb149f38bb5efb365ee9400e6870f760",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0019_python_context_compaction_strategy_md_8fffb185d1a8",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0019-python-context-compaction-strategy.md__8fffb185d1a8.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0019-python-context-compaction-strategy.md__8fffb185d1a8.md",
           "sha": "8fffb185d1a89894b44a9104c9c1efacf1b25dfe"
         },
         "docs/decisions/0020-foundry-agent-type-naming.md": {
           "content_hash": "e031af3b94a4a184cc7a835ab88d570a4c80921648e9ecb6c11c6238fe944e90",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0020_foundry_agent_type_naming_md_03d43f64ac5e",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0020-foundry-agent-type-naming.md__03d43f64ac5e.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0020-foundry-agent-type-naming.md__03d43f64ac5e.md",
           "sha": "03d43f64ac5e30dc72cbc8796472ff5d01725aaf"
         },
         "docs/decisions/0021-agent-skills-design.md": {
           "content_hash": "faf549819051505e0c2124e74361fc0c98d352b8fbb15d9e5d991a48f7212b18",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0021_agent_skills_design_md_d63f38c73461",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0021-agent-skills-design.md__d63f38c73461.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0021-agent-skills-design.md__d63f38c73461.md",
           "sha": "d63f38c734616987dabdfee74738c361d7e8dc62"
         },
         "docs/decisions/0021-provider-leading-clients.md": {
           "content_hash": "3fb149e082c29873d166155764e9e52ae4b1e40522eb39a0ad848b66d2e5104b",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0021_provider_leading_clients_md_7f9580216164",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0021-provider-leading-clients.md__7f9580216164.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0021-provider-leading-clients.md__7f9580216164.md",
           "sha": "7f9580216164e475bc0bc93f78847fbc1e5daf86"
         },
         "docs/decisions/0022-chat-history-persistence-consistency.md": {
           "content_hash": "fe31ce57d556c187a431ac937102757c86e32d84a355151fec360d607911f6ce",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0022_chat_history_persistence_consistency_md_5bd303a02961",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0022-chat-history-persistence-consistency.md__5bd303a02961.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0022-chat-history-persistence-consistency.md__5bd303a02961.md",
           "sha": "5bd303a02961c3f5401f49b5e92da3b398ab2aab"
         },
         "docs/decisions/0023-foundry-evals-integration.md": {
           "content_hash": "cead187e351a312a8b545be96a89faedc5ebabf2c01c8398d62567f9b79c4f9d",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0023_foundry_evals_integration_md_ea9d2f3c694d",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0023-foundry-evals-integration.md__ea9d2f3c694d.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0023-foundry-evals-integration.md__ea9d2f3c694d.md",
           "sha": "ea9d2f3c694d05af9c445b05764b917a8ab49e7c"
         },
         "docs/decisions/0024-codeact-integration.md": {
           "content_hash": "67eee68c2ef5daa937ccfb4deeb47609c42c45019dd2321442fdd74b2e4ad18a",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0024_codeact_integration_md_b83af6a17e9d",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0024-codeact-integration.md__b83af6a17e9d.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0024-codeact-integration.md__b83af6a17e9d.md",
           "sha": "b83af6a17e9de21c8ef7a4f88d00e0aa3d744dd2"
         },
         "docs/decisions/0024-prompt-injection-defense.md": {
           "content_hash": "477de9d00b66e77236df3b172aa6ff6428613eee74cfb71ea8dc63d1a5933fbd",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0024_prompt_injection_defense_md_0dc2de6301aa",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0024-prompt-injection-defense.md__0dc2de6301aa.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0024-prompt-injection-defense.md__0dc2de6301aa.md",
           "sha": "0dc2de6301aa9af5a8cc8f7121eead6afa790608"
         },
         "docs/decisions/0025-foundry-toolbox-support.md": {
           "content_hash": "d16efa401aecdf4acd3dced03be12c6ecab76ddb445e9ea9275c8fed239ee264",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0025_foundry_toolbox_support_md_a68b98b3bfc8",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0025-foundry-toolbox-support.md__a68b98b3bfc8.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0025-foundry-toolbox-support.md__a68b98b3bfc8.md",
           "sha": "a68b98b3bfc854c02e9bc75a5188957473da1a35"
         },
         "docs/decisions/0026-hosted-session-identity-context.md": {
           "content_hash": "576de5ee9024abe08e04c162e572d671f76ffb0bf25e349dfa93ad1f7d0cba89",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0026_hosted_session_identity_context_md_9612ba3af21e",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0026-hosted-session-identity-context.md__9612ba3af21e.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0026-hosted-session-identity-context.md__9612ba3af21e.md",
           "sha": "9612ba3af21e860a179347b0b238c32efa0799c7"
         },
         "docs/decisions/0027-hosting-channels.md": {
           "content_hash": "4ae6b917cf20d63f70e13d1be4ff67b36d57fbc5d2b27e37f5e6c097c2fec33d",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0027_hosting_channels_md_55bbc52cfafb",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0027-hosting-channels.md__55bbc52cfafb.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0027-hosting-channels.md__55bbc52cfafb.md",
           "sha": "55bbc52cfafb13f8bd828b0451ac1e18e1666d33"
         },
         "docs/decisions/0028-hosting-linking-multicast-enhancements.md": {
           "content_hash": "cb0d998358d4b5633a585adbae1dc49e85b2ddbddd50c70b6469c6aa3bbc2686",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0028_hosting_linking_multicast_enhancements_md_390881b7ea63",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0028-hosting-linking-multicast-enhancements.md__390881b7ea63.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0028-hosting-linking-multicast-enhancements.md__390881b7ea63.md",
           "sha": "390881b7ea63a53e4bb21374f79ccdf133e2e3e1"
         },
         "docs/decisions/0029-mcp-skill-templates-and-direct-references.md": {
           "content_hash": "8a05c28190901f989ef5b6ab1feaffa7130f339b992b002ca9a3ed976df32ec5",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0029_mcp_skill_templates_and_direct_references_md_7c9aa6fbb961",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0029-mcp-skill-templates-and-direct-references.md__7c9aa6fbb961.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0029-mcp-skill-templates-and-direct-references.md__7c9aa6fbb961.md",
           "sha": "7c9aa6fbb961da0f7da9a3a332ecb948b30d8caf"
         },
         "docs/decisions/0029-python-agent-session-identity.md": {
           "content_hash": "9923da51abde5623cfcf3e0d4654bc6a8bcc3481a65ff6ab0b2ba340e138f47f",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0029_python_agent_session_identity_md_d830c64798d5",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0029-python-agent-session-identity.md__d830c64798d5.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0029-python-agent-session-identity.md__d830c64798d5.md",
           "sha": "d830c64798d501aae1fc4644491c005958ede348"
         },
         "docs/decisions/0030-hosted-platform-context-agentserver-2.0.md": {
           "content_hash": "88ec0e525842c2270ac5c51f0c6a729df18f0bf2cf4b68cc3424f469371b396a",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0030_hosted_platform_context_agentserver_2_0_md_55d99c97c561",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0030-hosted-platform-context-agentserver-2.0.md__55d99c97c561.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0030-hosted-platform-context-agentserver-2.0.md__55d99c97c561.md",
           "sha": "55d99c97c5610c1057b15a4faaf9c0c9ce293690"
         },
         "docs/decisions/0031-hosted-per-user-session-storage-isolation.md": {
           "content_hash": "9a447b7ea847bb069108673a7205eea0fb0875007551ca233adbc87c24fd7b73",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0031_hosted_per_user_session_storage_isolation_md_f7ca09a46e1a",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__0031-hosted-per-user-session-storage-isolation.md__f7ca09a46e1a.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0031-hosted-per-user-session-storage-isolation.md__f7ca09a46e1a.md",
           "sha": "f7ca09a46e1a31c33687db1c1ede6b482dac16af"
         },
         "docs/decisions/README.md": {
           "content_hash": "29ed38dcdae75adad775392d96f10e646d113e5465e9d89d10d1e5c6df9ba442",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_readme_md_55c48a7089dd",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__README.md__55c48a7089dd.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__README.md__55c48a7089dd.md",
           "sha": "55c48a7089dde103d2ec7bc3c9d16412989fe2e7"
         },
         "docs/decisions/adr-short-template.md": {
           "content_hash": "042925ef16a97abdf192376a083f6df351c765e78ac1fb5315dc062ae534d8c7",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_adr_short_template_md_bd8b10491f55",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__adr-short-template.md__bd8b10491f55.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__adr-short-template.md__bd8b10491f55.md",
           "sha": "bd8b10491f55230f41160e4fe5a0879fdf36b16e"
         },
         "docs/decisions/adr-template.md": {
           "content_hash": "90cd594d036735d25b9b6841a5542abe77004d6f40dcb1f9b809895195d54415",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_adr_template_md_a96551338a6e",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__decisions__adr-template.md__a96551338a6e.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__adr-template.md__a96551338a6e.md",
           "sha": "a96551338a6e4510959d9baab30b943ab1019b73"
         },
         "docs/design/python-package-setup.md": {
           "content_hash": "b2fe753df5ffff0da969593f7422aa46b1f0d5a2e2107efd434f2d412a4757d7",
           "entity_id": "doc_microsoft_agent_framework_docs_design_python_package_setup_md_1c7afbad1a0f",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/microsoft_agent_framework/docs__design__python-package-setup.md__1c7afbad1a0f.md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__design__python-package-setup.md__1c7afbad1a0f.md",
           "sha": "1c7afbad1a0f494855e2c29669001d90f01c7722"
         }
       },
@@ -633,7 +633,7 @@
         "README.md": {
           "content_hash": "392aaf5607d50fb8550eaa1595d773bd501e214596c58728a94a4c7cff149c3c",
           "entity_id": "doc_modelcontextprotocol_modelcontextprotocol_readme_md_4e4811014ee7",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/protocols/modelcontextprotocol_modelcontextprotocol/README.md__4e4811014ee7.md",
+          "output": "current/protocols/modelcontextprotocol_modelcontextprotocol/README.md__4e4811014ee7.md",
           "sha": "4e4811014ee7abd43b8cfc4730bd3f9b8dd2aaca"
         }
       },
@@ -644,7 +644,7 @@
         "README.md": {
           "content_hash": "d47f398e6f762ea43c4d5fbd5afc1b2dd1b2eb3de56c5b273a7ba5626e015931",
           "entity_id": "doc_modelcontextprotocol_python_sdk_readme_md_3822976640b0",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/protocols/modelcontextprotocol_python_sdk/README.md__3822976640b0.md",
+          "output": "current/protocols/modelcontextprotocol_python_sdk/README.md__3822976640b0.md",
           "sha": "3822976640b088b1beaf9945fbfc9fc160cc0b77"
         }
       },
@@ -655,7 +655,7 @@
         "README.md": {
           "content_hash": "ebc49927c7e10172969e10cc49ad75009be421a17022c305ddb33fd7a598dcae",
           "entity_id": "doc_modelcontextprotocol_servers_readme_md_fe5351a890ab",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/modelcontextprotocol_servers/README.md__fe5351a890ab.md",
+          "output": "current/memory-context-sandbox/modelcontextprotocol_servers/README.md__fe5351a890ab.md",
           "sha": "fe5351a890ab80f6d49b2b50f1e0732224313b24"
         }
       },
@@ -666,463 +666,463 @@
         "README.md": {
           "content_hash": "afce9e20389ad33c4219a308594281e46228de827e824d3a0a0b31d801f64350",
           "entity_id": "doc_openai_openai_agents_python_readme_md_a8acfe5b4cb7",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/README.md__a8acfe5b4cb7.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/README.md__a8acfe5b4cb7.md",
           "sha": "a8acfe5b4cb7edbdac0d30a2ebb94122ef0287f8"
         },
         "examples/basic/agent_lifecycle_example.py": {
           "content_hash": "51b7352b5ff45e6f43b3e6c6ed624084c5d20f56ea861696c9855f20a843be70",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_agent_lifecycle_example_py_260cb3925242",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__agent_lifecycle_example.py__260cb3925242.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__agent_lifecycle_example.py__260cb3925242.md",
           "sha": "260cb392524278338ab14ebc1e03fbcf475efc9a"
         },
         "examples/basic/dynamic_system_prompt.py": {
           "content_hash": "8ec9f13cd8b1934659ec139d636a6f1163e2094f135bcafddac4adef73ad547a",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_dynamic_system_prompt_py_d9a99bd378ff",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__dynamic_system_prompt.py__d9a99bd378ff.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__dynamic_system_prompt.py__d9a99bd378ff.md",
           "sha": "d9a99bd378ffa0eaf6b887591261a6eb16fed149"
         },
         "examples/basic/hello_world.py": {
           "content_hash": "601c32312ed039e6a970f9ace84db99072907db14a7bc20e87168c3ed18eecae",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_hello_world_py_169290d6f59a",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__hello_world.py__169290d6f59a.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__hello_world.py__169290d6f59a.md",
           "sha": "169290d6f59af88e3e52aab09bce7341ae3d832c"
         },
         "examples/basic/hello_world_gpt_5.py": {
           "content_hash": "f43cd13e24ef587df9afdf1c53b8d03e4e9ad464a14b95628f1268617ad3682f",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_hello_world_gpt_5_py_6b33be4d8506",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__hello_world_gpt_5.py__6b33be4d8506.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__hello_world_gpt_5.py__6b33be4d8506.md",
           "sha": "6b33be4d85060bcde8fcaa209898e9e35ecb753c"
         },
         "examples/basic/hello_world_gpt_oss.py": {
           "content_hash": "5b6536aa717541620ad626b85ce88af9e3c4b1fa6fd5f45f59a2914bb49bc7cd",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_hello_world_gpt_oss_py_aeb599a1df90",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__hello_world_gpt_oss.py__aeb599a1df90.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__hello_world_gpt_oss.py__aeb599a1df90.md",
           "sha": "aeb599a1df908948e5f676a5d0556dcbaa029802"
         },
         "examples/basic/hello_world_jupyter.ipynb": {
           "content_hash": "281f30223c50b6012636c3739fdb2851a5a0a8a32d907f54db222d50aefdcbee",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_hello_world_jupyter_ipynb_8dd3bb379968",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__hello_world_jupyter.ipynb__8dd3bb379968.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__hello_world_jupyter.ipynb__8dd3bb379968.md",
           "sha": "8dd3bb379968f9301984f019fe95a237caab19cc"
         },
         "examples/basic/image_tool_output.py": {
           "content_hash": "9f00d7ea29c2faf8baaf9fedef02b7a4b0caf225cb453450f59238701c67ed7f",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_image_tool_output_py_460ac1fe11ae",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__image_tool_output.py__460ac1fe11ae.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__image_tool_output.py__460ac1fe11ae.md",
           "sha": "460ac1fe11aefb9450113a99ce4d464f62ce1b50"
         },
         "examples/basic/lifecycle_example.py": {
           "content_hash": "62047a5a5367562aa4979510d339a1fc03b586aabc413cf7c373c414e2c860be",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_lifecycle_example_py_744fd86462b6",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__lifecycle_example.py__744fd86462b6.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__lifecycle_example.py__744fd86462b6.md",
           "sha": "744fd86462b6851f984f4a0c627467a8ca80d183"
         },
         "examples/basic/local_file.py": {
           "content_hash": "823382a8a2a1eaf04bbe90cd9235ada3bd4d5503d0819e6f1d08c5d37d9f66b4",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_local_file_py_a261ff5c85a0",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__local_file.py__a261ff5c85a0.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__local_file.py__a261ff5c85a0.md",
           "sha": "a261ff5c85a09a71a6d74cba162923ef9f263bb8"
         },
         "examples/basic/local_image.py": {
           "content_hash": "dc3d68b2d56f4e25aad6e05733dc8d5beff80002350ab9afb30d2eb84dd0eb32",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_local_image_py_d4a784ba2991",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__local_image.py__d4a784ba2991.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__local_image.py__d4a784ba2991.md",
           "sha": "d4a784ba2991c652505b133c40bfd4ef913fd6d8"
         },
         "examples/basic/media/image_bison.jpg": {
           "content_hash": "ef6c62a10c5e3efad1eb84d75b6309be1660a153efda26bf7ff9eeec98e77a7f",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_media_image_bison_jpg_b113c91f601e",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__media__image_bison.jpg__b113c91f601e.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__media__image_bison.jpg__b113c91f601e.md",
           "sha": "b113c91f601eac2369c4b859b18f86a24a228d89"
         },
         "examples/basic/media/partial_o3-and-o4-mini-system-card.pdf": {
           "content_hash": "f133db85d0ebd4048bb115b5f462e8ac678acf876a971e4dfac240a2f013c137",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_media_partial_o3_and_o4_mini_system_card_pdf_e4e0feaa0391",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__media__partial_o3-and-o4-mini-system-card.pdf__e4e0feaa0391.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__media__partial_o3-and-o4-mini-system-card.pdf__e4e0feaa0391.md",
           "sha": "e4e0feaa03911891c1122c811d9d8d569b560e4c"
         },
         "examples/basic/non_strict_output_type.py": {
           "content_hash": "8c5d95a70ce0da0fe2356e5ae52dbba2544152d3eed93a57f5aef66a2abf3c96",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_non_strict_output_type_py_fcb7e4f38bff",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__non_strict_output_type.py__fcb7e4f38bff.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__non_strict_output_type.py__fcb7e4f38bff.md",
           "sha": "fcb7e4f38bffc200ed1ef7df4fc50be523d1378a"
         },
         "examples/basic/previous_response_id.py": {
           "content_hash": "fbe895c07ded7cf6644d9e8b6a633a6482231f364b04443bb91aa4a5c2e82f4b",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_previous_response_id_py_2b54a43115ec",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__previous_response_id.py__2b54a43115ec.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__previous_response_id.py__2b54a43115ec.md",
           "sha": "2b54a43115ec1bad41026976888d33603bf4f4d3"
         },
         "examples/basic/prompt_template.py": {
           "content_hash": "89e334e514c50cdcd4b75d97bb06411b14e8eb5615a458d28fb5ab0dce10002e",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_prompt_template_py_11fbaa0d3015",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__prompt_template.py__11fbaa0d3015.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__prompt_template.py__11fbaa0d3015.md",
           "sha": "11fbaa0d301512f25d4da5e562bc3ef091bc0ac4"
         },
         "examples/basic/remote_image.py": {
           "content_hash": "3f12ef8198b60f3148ef076fb49630099189fd349fd8671b2f79638e19331538",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_remote_image_py_e4c43e4dc283",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__remote_image.py__e4c43e4dc283.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__remote_image.py__e4c43e4dc283.md",
           "sha": "e4c43e4dc283d87a2e934a9dc92cf7c326028535"
         },
         "examples/basic/remote_pdf.py": {
           "content_hash": "b40bb65ebe79cea9c744cb0fb21f5ff51a1f9354046febc4084c1bed781c0dc7",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_remote_pdf_py_da425faa0638",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__remote_pdf.py__da425faa0638.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__remote_pdf.py__da425faa0638.md",
           "sha": "da425faa06387bba1e04a2d118caa94148317cf1"
         },
         "examples/basic/retry.py": {
           "content_hash": "4f66bce7d7e88c88fc9edcb464815b909da77937aaada843f60f2b06675c4521",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_retry_py_ebb6e1acfbb0",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__retry.py__ebb6e1acfbb0.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__retry.py__ebb6e1acfbb0.md",
           "sha": "ebb6e1acfbb0a85ab855602597f328f1601bad23"
         },
         "examples/basic/retry_litellm.py": {
           "content_hash": "5ef60ad4c8cc29a16cded5a2c00070044403ae2db9c986f1f0b868c7ecfbe62c",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_retry_litellm_py_1e9d99d6cd8e",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__retry_litellm.py__1e9d99d6cd8e.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__retry_litellm.py__1e9d99d6cd8e.md",
           "sha": "1e9d99d6cd8ea084a17ef9d8a3e49af9c4f22bf9"
         },
         "examples/basic/stream_function_call_args.py": {
           "content_hash": "9c9458f8bff45eca31edce8c99c76f7c292c5a80a6d903597ac8db20dae7b9a7",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_stream_function_call_args_py_969c4ed4e933",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__stream_function_call_args.py__969c4ed4e933.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__stream_function_call_args.py__969c4ed4e933.md",
           "sha": "969c4ed4e9339b9379f520e645b98a25429c224b"
         },
         "examples/basic/stream_items.py": {
           "content_hash": "fc9f4e2ddc6366b3b1e8426e8584182ce00c25ea38eb5481613deb461fe9f3c0",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_stream_items_py_bf8a1e2bbf12",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__stream_items.py__bf8a1e2bbf12.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__stream_items.py__bf8a1e2bbf12.md",
           "sha": "bf8a1e2bbf12953ae4a9992b6a584cff90105fab"
         },
         "examples/basic/stream_text.py": {
           "content_hash": "0163d38c753dcd54738995b4ace5e4f967348f30dc514b1e3e87583def9158a6",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_stream_text_py_a73c1feeb105",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__stream_text.py__a73c1feeb105.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__stream_text.py__a73c1feeb105.md",
           "sha": "a73c1feeb105b889a8235c250cd4553883cec48a"
         },
         "examples/basic/stream_ws.py": {
           "content_hash": "6efe977a0622bdea65f9e3ce18057035c09be81f61f3c20e305a7c4deed0d891",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_stream_ws_py_a2d795b48849",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__stream_ws.py__a2d795b48849.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__stream_ws.py__a2d795b48849.md",
           "sha": "a2d795b48849d158af60c52d16e5d80530430328"
         },
         "examples/basic/tool_guardrails.py": {
           "content_hash": "c81e52e9e6cb22800f7f0c913d387fddeaeb79e8a1728edda79d5af9d73d57bd",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_tool_guardrails_py_4e9949473c28",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__tool_guardrails.py__4e9949473c28.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__tool_guardrails.py__4e9949473c28.md",
           "sha": "4e9949473c289831531d178ff340499ee7c240e8"
         },
         "examples/basic/tools.py": {
           "content_hash": "cd322243f9b134b0371baf1d26c6bd6f48230881948606dafaef377fa8530da0",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_tools_py_2052d9427db3",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__tools.py__2052d9427db3.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__tools.py__2052d9427db3.md",
           "sha": "2052d9427db38b2d013ab8a775adfd5803180b7c"
         },
         "examples/basic/usage_tracking.py": {
           "content_hash": "0df74c49fe72e5b908f8534bf0c673f61434ed75105451959db0258b9c55c788",
           "entity_id": "doc_openai_openai_agents_python_examples_basic_usage_tracking_py_a5154d6e76ec",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__basic__usage_tracking.py__a5154d6e76ec.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__usage_tracking.py__a5154d6e76ec.md",
           "sha": "a5154d6e76ec888189dcd73a8271cebae56fb122"
         },
         "examples/mcp/filesystem_example/README.md": {
           "content_hash": "d1f38c6e2a9fb44c3b93cead072f71f3e1be137539a06083d50e2ae1ee0cc99b",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_filesystem_example_readme_md_4ed6ac46f797",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__filesystem_example__README.md__4ed6ac46f797.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__filesystem_example__README.md__4ed6ac46f797.md",
           "sha": "4ed6ac46f7975a33671db58cf1dde22f038291fa"
         },
         "examples/mcp/filesystem_example/main.py": {
           "content_hash": "0a41186ad5d862d85791e28da6868b0c430e40a054087eadb634041dc9f1c600",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_filesystem_example_main_py_392c92e419a7",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__filesystem_example__main.py__392c92e419a7.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__filesystem_example__main.py__392c92e419a7.md",
           "sha": "392c92e419a7216a8684589682cee6f41104bb4b"
         },
         "examples/mcp/filesystem_example/sample_files/favorite_books.txt": {
           "content_hash": "99bd28b552548a76280d234a141b366128b69862eb02e2b75831c29be1fa9e79",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_filesystem_example_sample_files_favorite_books_txt_c55f457ec106",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__filesystem_example__sample_files__favorite_books.txt__c55f457ec106.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__filesystem_example__sample_files__favorite_books.txt__c55f457ec106.md",
           "sha": "c55f457ec106f7f3d4a59d56ec148ccab929e9f4"
         },
         "examples/mcp/filesystem_example/sample_files/favorite_cities.txt": {
           "content_hash": "a59ade34bd2cfc4495fc7f3b4d436c8504608c03462882fddedf3ff01daafdfc",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_filesystem_example_sample_files_favorite_cities_txt_1d3354f22235",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__filesystem_example__sample_files__favorite_cities.txt__1d3354f22235.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__filesystem_example__sample_files__favorite_cities.txt__1d3354f22235.md",
           "sha": "1d3354f22235c030884f066702ba510dae1461f6"
         },
         "examples/mcp/filesystem_example/sample_files/favorite_songs.txt": {
           "content_hash": "bc358de46165507a21263c1a12f627bbf3a7cd0ba2cf2f686d08d9c0ad3e6f10",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_filesystem_example_sample_files_favorite_songs_txt_d659bb58925f",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__filesystem_example__sample_files__favorite_songs.txt__d659bb58925f.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__filesystem_example__sample_files__favorite_songs.txt__d659bb58925f.md",
           "sha": "d659bb58925fc0eab4c77dcbfae060586d739119"
         },
         "examples/mcp/get_all_mcp_tools_example/README.md": {
           "content_hash": "9374d368d832c0f0953c8edb6424286898ce1a1867937c20dac728569ee10101",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_get_all_mcp_tools_example_readme_md_2e1dc021fa6b",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__get_all_mcp_tools_example__README.md__2e1dc021fa6b.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__get_all_mcp_tools_example__README.md__2e1dc021fa6b.md",
           "sha": "2e1dc021fa6be23016627ae2797f68fbb2a53f72"
         },
         "examples/mcp/get_all_mcp_tools_example/main.py": {
           "content_hash": "2244f521dbc1a95261442d6b368101a4cf985663530573448dc91abb5e97718b",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_get_all_mcp_tools_example_main_py_e15f58f97b54",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__get_all_mcp_tools_example__main.py__e15f58f97b54.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__get_all_mcp_tools_example__main.py__e15f58f97b54.md",
           "sha": "e15f58f97b5412036263bb6c7045a5161954f338"
         },
         "examples/mcp/get_all_mcp_tools_example/sample_files/books.txt": {
           "content_hash": "99bd28b552548a76280d234a141b366128b69862eb02e2b75831c29be1fa9e79",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_get_all_mcp_tools_example_sample_files_books_txt_51c34d225bd6",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__get_all_mcp_tools_example__sample_files__books.txt__51c34d225bd6.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__get_all_mcp_tools_example__sample_files__books.txt__51c34d225bd6.md",
           "sha": "51c34d225bd6fa554b86a9db5e14a40942458f18"
         },
         "examples/mcp/get_all_mcp_tools_example/sample_files/favorite_songs.txt": {
           "content_hash": "bc358de46165507a21263c1a12f627bbf3a7cd0ba2cf2f686d08d9c0ad3e6f10",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_get_all_mcp_tools_example_sample_files_favorite_songs_txt_d659bb58925f",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__get_all_mcp_tools_example__sample_files__favorite_songs.txt__d659bb58925f.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__get_all_mcp_tools_example__sample_files__favorite_songs.txt__d659bb58925f.md",
           "sha": "d659bb58925fc0eab4c77dcbfae060586d739119"
         },
         "examples/mcp/git_example/README.md": {
           "content_hash": "1105514e7105277f98770f2edcd4dc06c3bcd79a70416e0cab842bae33485694",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_git_example_readme_md_6a809afae455",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__git_example__README.md__6a809afae455.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__git_example__README.md__6a809afae455.md",
           "sha": "6a809afae455ec354ac767e29e9865bf3cc6dc8a"
         },
         "examples/mcp/git_example/main.py": {
           "content_hash": "ab6cede598cf974e7028fea656b4c732d5a40810afebe6dcf6ed43c134925879",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_git_example_main_py_8a62744d186f",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__git_example__main.py__8a62744d186f.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__git_example__main.py__8a62744d186f.md",
           "sha": "8a62744d186f6d5cd3075c52cd2bdcefa68d5839"
         },
         "examples/mcp/manager_example/README.md": {
           "content_hash": "a28b1d1c363f39e8c9d9817958ed0ce4cbad25f346a02f6fd93aa16755021172",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_manager_example_readme_md_ec4dcbe4bc5d",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__manager_example__README.md__ec4dcbe4bc5d.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__manager_example__README.md__ec4dcbe4bc5d.md",
           "sha": "ec4dcbe4bc5dd4f7435cfa9ea6995b5ae9c63354"
         },
         "examples/mcp/manager_example/app.py": {
           "content_hash": "d788724ab1a76291a50a53eefb2facfc341d34dde2a91ca28d199f2b7fc1264a",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_manager_example_app_py_cae0eb75010f",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__manager_example__app.py__cae0eb75010f.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__manager_example__app.py__cae0eb75010f.md",
           "sha": "cae0eb75010f89ecf49923d314b839ae553448f7"
         },
         "examples/mcp/manager_example/mcp_server.py": {
           "content_hash": "8efabf978067a26b9f8dd026afa94e84b5464950d9419d6d47cd0f66fe6eb576",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_manager_example_mcp_server_py_a67c224994f9",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__manager_example__mcp_server.py__a67c224994f9.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__manager_example__mcp_server.py__a67c224994f9.md",
           "sha": "a67c224994f908f74d0b715f8112646322694d05"
         },
         "examples/mcp/manager_example/smoke_test.py": {
           "content_hash": "b9eba3dfc0d9dd0a4a9ebb08728050eb558d3413bf70e6e68f68fd94d516058a",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_manager_example_smoke_test_py_2cc5d0932afa",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__manager_example__smoke_test.py__2cc5d0932afa.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__manager_example__smoke_test.py__2cc5d0932afa.md",
           "sha": "2cc5d0932afaa121c7d78bfe7209196c449043c6"
         },
         "examples/mcp/prompt_server/README.md": {
           "content_hash": "0c0f1d4533332fa981b5a8beb079b471fbf86dc8f70ad456fffe398d787486a2",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_prompt_server_readme_md_74ee0fe07e22",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__prompt_server__README.md__74ee0fe07e22.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__prompt_server__README.md__74ee0fe07e22.md",
           "sha": "74ee0fe07e223b1d93c313a269eb494f1a914cf1"
         },
         "examples/mcp/prompt_server/main.py": {
           "content_hash": "2f72e93515a42805af6e0cd47a6ad4001e86612faeea5b5004777b6952d6b1c3",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_prompt_server_main_py_3cd045e63b14",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__prompt_server__main.py__3cd045e63b14.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__prompt_server__main.py__3cd045e63b14.md",
           "sha": "3cd045e63b14521078e9d584671f3ae5fb62846d"
         },
         "examples/mcp/prompt_server/server.py": {
           "content_hash": "f372b69cb245ab802dcbca3e2ed305ab8fcdaba368ad1a083992b0788a1cd194",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_prompt_server_server_py_7d6629acd72b",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__prompt_server__server.py__7d6629acd72b.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__prompt_server__server.py__7d6629acd72b.md",
           "sha": "7d6629acd72b820eb07b69c3c39f52e325f6d025"
         },
         "examples/mcp/sse_example/README.md": {
           "content_hash": "8fe9c6d49685c62ee6c39fd9df3620cdfc0d943eef43b5abf7cf78c875f4d378",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_sse_example_readme_md_9a667d31e1b5",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__sse_example__README.md__9a667d31e1b5.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__sse_example__README.md__9a667d31e1b5.md",
           "sha": "9a667d31e1b5629ad9c7415bafff69ac296a40e4"
         },
         "examples/mcp/sse_example/main.py": {
           "content_hash": "1c3de5210d52d227f7471db8258210440701ac20b61796f155080eec047719b0",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_sse_example_main_py_8180914cd352",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__sse_example__main.py__8180914cd352.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__sse_example__main.py__8180914cd352.md",
           "sha": "8180914cd352913faa3fde01f536ff4690684a4e"
         },
         "examples/mcp/sse_example/server.py": {
           "content_hash": "75e8220571efd9d8abc8ce361c9bc74d799cc5a7539c8b4cfb9349586c91cdcb",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_sse_example_server_py_075137fe0301",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__sse_example__server.py__075137fe0301.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__sse_example__server.py__075137fe0301.md",
           "sha": "075137fe03016ea6a3856730d774859246b0c05e"
         },
         "examples/mcp/sse_remote_example/README.md": {
           "content_hash": "0ddbddbce39cd3d6183de7ba4df5615b21a3d447b48e123561842406ee0f9f15",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_sse_remote_example_readme_md_9d8816a06752",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__sse_remote_example__README.md__9d8816a06752.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__sse_remote_example__README.md__9d8816a06752.md",
           "sha": "9d8816a06752316f9f46cb397f4cd3a4fba997cd"
         },
         "examples/mcp/sse_remote_example/main.py": {
           "content_hash": "5d1ec8a373d885b89b8512b18dfb046563441be7ddf6443aeef834bcd242584f",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_sse_remote_example_main_py_f62ac1a51102",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__sse_remote_example__main.py__f62ac1a51102.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__sse_remote_example__main.py__f62ac1a51102.md",
           "sha": "f62ac1a5110215371398809711435cfb3e4c13e0"
         },
         "examples/mcp/streamable_http_remote_example/README.md": {
           "content_hash": "a2fbdbdbeaa42eb8152b71179444c4873c4f3330ecf7269ea832182e74d12c5c",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_streamable_http_remote_example_readme_md_d40ffcc5d29a",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__streamable_http_remote_example__README.md__d40ffcc5d29a.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__streamable_http_remote_example__README.md__d40ffcc5d29a.md",
           "sha": "d40ffcc5d29a900cf5e9c56ad5190a0f434c2059"
         },
         "examples/mcp/streamable_http_remote_example/main.py": {
           "content_hash": "edfef0f35ddd6640c2e63019220b5cd53c18e4c151f3d8956f82edf8df24d713",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_streamable_http_remote_example_main_py_d0c48da7d9d5",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__streamable_http_remote_example__main.py__d0c48da7d9d5.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__streamable_http_remote_example__main.py__d0c48da7d9d5.md",
           "sha": "d0c48da7d9d5e0e31cf9f71e2c4c864db3d40f67"
         },
         "examples/mcp/streamablehttp_custom_client_example/README.md": {
           "content_hash": "31e6b8ab7b37cc627d60068689db5d575f451922533661ad92c0b60e1415b682",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_streamablehttp_custom_client_example_readme_md_fc269a06447c",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__streamablehttp_custom_client_example__README.md__fc269a06447c.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__streamablehttp_custom_client_example__README.md__fc269a06447c.md",
           "sha": "fc269a06447c21ba778b1d60a53772e91b90c422"
         },
         "examples/mcp/streamablehttp_custom_client_example/main.py": {
           "content_hash": "93d04212e96466d5506b19dd4dd9fcf83d6072e3fad7c4fdef0f2e1df267eb10",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_streamablehttp_custom_client_example_main_py_20cbef1cdc78",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__streamablehttp_custom_client_example__main.py__20cbef1cdc78.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__streamablehttp_custom_client_example__main.py__20cbef1cdc78.md",
           "sha": "20cbef1cdc78975a68ceb82e69c3758a9acc747d"
         },
         "examples/mcp/streamablehttp_custom_client_example/server.py": {
           "content_hash": "d81394c73957b7593b5130005db0d86a051313081ec2f3c85564aedd6bf6fadd",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_streamablehttp_custom_client_example_server_py_dd0d468753b3",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__streamablehttp_custom_client_example__server.py__dd0d468753b3.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__streamablehttp_custom_client_example__server.py__dd0d468753b3.md",
           "sha": "dd0d468753b3ace313789a878db5f3e13cd3a6d4"
         },
         "examples/mcp/streamablehttp_example/README.md": {
           "content_hash": "4525f4d380be44b9221d814fbcfafe1972046fb7630daa40a1c3f3a590bef070",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_streamablehttp_example_readme_md_83cae670b626",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__streamablehttp_example__README.md__83cae670b626.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__streamablehttp_example__README.md__83cae670b626.md",
           "sha": "83cae670b626edd8fe42d2f4890abcd85c148f86"
         },
         "examples/mcp/streamablehttp_example/main.py": {
           "content_hash": "03ff11bb8472ea9e8b01d6f8b4d5576de16e5f988f3f070188af00268eafcf9b",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_streamablehttp_example_main_py_564a7bf98fbe",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__streamablehttp_example__main.py__564a7bf98fbe.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__streamablehttp_example__main.py__564a7bf98fbe.md",
           "sha": "564a7bf98fbea937f70e1bd414e2e651daccf3ad"
         },
         "examples/mcp/streamablehttp_example/server.py": {
           "content_hash": "70aca1edf6a4c3eb2bd4687edec9a430a0077ac102fa9c322eaf89c3d6702421",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_streamablehttp_example_server_py_d73ab895b6aa",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__streamablehttp_example__server.py__d73ab895b6aa.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__streamablehttp_example__server.py__d73ab895b6aa.md",
           "sha": "d73ab895b6aa264b2cbe02834bdac6fe92e523d9"
         },
         "examples/mcp/tool_filter_example/README.md": {
           "content_hash": "3ee3d31e3a66e23c5cb8c666889a84b3abbea213b9d563689bfae2ab66019cff",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_tool_filter_example_readme_md_1a82f266ea5f",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__tool_filter_example__README.md__1a82f266ea5f.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__tool_filter_example__README.md__1a82f266ea5f.md",
           "sha": "1a82f266ea5ff9df9e30208e5950e21e4c648cd8"
         },
         "examples/mcp/tool_filter_example/main.py": {
           "content_hash": "31c640645492602513d5705e7e21fd9212035d2e086895cc0dfb8e7c7c77a80c",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_tool_filter_example_main_py_7f25cf4ae343",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__tool_filter_example__main.py__7f25cf4ae343.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__tool_filter_example__main.py__7f25cf4ae343.md",
           "sha": "7f25cf4ae343713599022b3e69e41a26262d5479"
         },
         "examples/mcp/tool_filter_example/sample_files/books.txt": {
           "content_hash": "99bd28b552548a76280d234a141b366128b69862eb02e2b75831c29be1fa9e79",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_tool_filter_example_sample_files_books_txt_51c34d225bd6",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__tool_filter_example__sample_files__books.txt__51c34d225bd6.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__tool_filter_example__sample_files__books.txt__51c34d225bd6.md",
           "sha": "51c34d225bd6fa554b86a9db5e14a40942458f18"
         },
         "examples/mcp/tool_filter_example/sample_files/favorite_songs.txt": {
           "content_hash": "bc358de46165507a21263c1a12f627bbf3a7cd0ba2cf2f686d08d9c0ad3e6f10",
           "entity_id": "doc_openai_openai_agents_python_examples_mcp_tool_filter_example_sample_files_favorite_songs_txt_d659bb58925f",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__mcp__tool_filter_example__sample_files__favorite_songs.txt__d659bb58925f.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__mcp__tool_filter_example__sample_files__favorite_songs.txt__d659bb58925f.md",
           "sha": "d659bb58925fc0eab4c77dcbfae060586d739119"
         },
         "examples/memory/advanced_sqlite_session_example.py": {
           "content_hash": "f02a924bbb7c947645a9bf64605477106e224df367f00de5fd9637837184b66a",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_advanced_sqlite_session_example_py_492fb06afdb2",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__advanced_sqlite_session_example.py__492fb06afdb2.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__advanced_sqlite_session_example.py__492fb06afdb2.md",
           "sha": "492fb06afdb2f3975b742848ffd60b0f8d7280c7"
         },
         "examples/memory/compaction_session_example.py": {
           "content_hash": "23a3cc0745795b66b32bf918f8ac4037f4b704493a223b95bde18fd42e91da92",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_compaction_session_example_py_73c539f30ad9",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__compaction_session_example.py__73c539f30ad9.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__compaction_session_example.py__73c539f30ad9.md",
           "sha": "73c539f30ad97f738341ba1e2a99a2e4e4ec17f4"
         },
         "examples/memory/compaction_session_stateless_example.py": {
           "content_hash": "fbd705e44c6eba69ae46dc4966812375d424e9143510e9edbe6bdbccb3da3ab5",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_compaction_session_stateless_example_py_87c685aca7a7",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__compaction_session_stateless_example.py__87c685aca7a7.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__compaction_session_stateless_example.py__87c685aca7a7.md",
           "sha": "87c685aca7a7201c3c2701b9885df98e7799d3fd"
         },
         "examples/memory/dapr_session_example.py": {
           "content_hash": "556ff36427bbfa502f633c6b405ce7f7f5e3a3fd40e955f5755d04deda812c95",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_dapr_session_example_py_3a5a777a4a24",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__dapr_session_example.py__3a5a777a4a24.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__dapr_session_example.py__3a5a777a4a24.md",
           "sha": "3a5a777a4a24de5e5adc490cd83052d03380bfda"
         },
         "examples/memory/encrypted_session_example.py": {
           "content_hash": "05d7054ddce5f6a3bc0e7aad879c1fcd7a40914703befca7099a8cfdad3e885d",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_encrypted_session_example_py_d3d9a9e74705",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__encrypted_session_example.py__d3d9a9e74705.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__encrypted_session_example.py__d3d9a9e74705.md",
           "sha": "d3d9a9e747056d79d5a1dc178146074e9ed8c5e8"
         },
         "examples/memory/file_hitl_example.py": {
           "content_hash": "8cfa737baf3f6586e1011be366c9c30363483228a04185c854364e501ed9c111",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_file_hitl_example_py_eb68c62d9db6",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__file_hitl_example.py__eb68c62d9db6.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__file_hitl_example.py__eb68c62d9db6.md",
           "sha": "eb68c62d9db6eeb09e1b232f8895974c9f78927c"
         },
         "examples/memory/file_session.py": {
           "content_hash": "39a7e52955dbf95c776d512bade0785ca0daaa3343f6716fdf798bb419274bf9",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_file_session_py_e62dbd167fa8",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__file_session.py__e62dbd167fa8.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__file_session.py__e62dbd167fa8.md",
           "sha": "e62dbd167fa88e17005cfcd81e370cd3fc14ff64"
         },
         "examples/memory/hitl_session_scenario.py": {
           "content_hash": "250c76ecb97fd7c0ab3de5018c2e648bcb24f916ad214fbf571a598819bfb78f",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_hitl_session_scenario_py_e53f8a580c3d",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__hitl_session_scenario.py__e53f8a580c3d.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__hitl_session_scenario.py__e53f8a580c3d.md",
           "sha": "e53f8a580c3da4d1607df5b4a277633ddc265ccc"
         },
         "examples/memory/memory_session_hitl_example.py": {
           "content_hash": "c68748f1e00733bf341bb365bbacc9c39a0bfea78edcccc6e880826be3a2570c",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_memory_session_hitl_example_py_73d7e3ae0369",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__memory_session_hitl_example.py__73d7e3ae0369.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__memory_session_hitl_example.py__73d7e3ae0369.md",
           "sha": "73d7e3ae0369c3dd7a557b85533e37d4ee105462"
         },
         "examples/memory/mongodb_session_example.py": {
           "content_hash": "b9805d672df3595fd5f9cf5ab93bd2efc98dd90607ad421f1a52a6212144f50a",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_mongodb_session_example_py_f22f4ab9a36c",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__mongodb_session_example.py__f22f4ab9a36c.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__mongodb_session_example.py__f22f4ab9a36c.md",
           "sha": "f22f4ab9a36cc2b404cc245a3149ea60a0a4060f"
         },
         "examples/memory/openai_session_example.py": {
           "content_hash": "53cb4df95d202272687e43bd35ddc50052aca8c05f249ec0a58ac6a330e917b9",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_openai_session_example_py_9254195b3338",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__openai_session_example.py__9254195b3338.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__openai_session_example.py__9254195b3338.md",
           "sha": "9254195b3338e4572d669efe765e44314afaafb0"
         },
         "examples/memory/openai_session_hitl_example.py": {
           "content_hash": "4ca78d3b91bdbb433fcb7580891f45c9b77d958f515e18f66d730bca3a9f85fa",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_openai_session_hitl_example_py_8024e30f665c",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__openai_session_hitl_example.py__8024e30f665c.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__openai_session_hitl_example.py__8024e30f665c.md",
           "sha": "8024e30f665c40b7b1e27719269d00eb88e50402"
         },
         "examples/memory/redis_session_example.py": {
           "content_hash": "7c79acc5bc98c5541a1510bcc1387a3c008a6bf810b507002e330962aec351bd",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_redis_session_example_py_8d552f5242a9",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__redis_session_example.py__8d552f5242a9.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__redis_session_example.py__8d552f5242a9.md",
           "sha": "8d552f5242a9cc21c5d7046597f3cfa12457e243"
         },
         "examples/memory/sqlalchemy_session_example.py": {
           "content_hash": "f315e6371a2bad01af04b3cc3f60a018082b8f2ac7070615dad1b2c50609596a",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_sqlalchemy_session_example_py_84a6c754f018",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__sqlalchemy_session_example.py__84a6c754f018.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__sqlalchemy_session_example.py__84a6c754f018.md",
           "sha": "84a6c754f018a4952c63b6746685b38aa435e06e"
         },
         "examples/memory/sqlite_session_example.py": {
           "content_hash": "42645764d82e67a9faa7683ccb8c3a0e8d917e949e25fe0d57c58aad75b0b449",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_sqlite_session_example_py_63d1d1b7c62a",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/openai_openai_agents_python/examples__memory__sqlite_session_example.py__63d1d1b7c62a.md",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__sqlite_session_example.py__63d1d1b7c62a.md",
           "sha": "63d1d1b7c62ad1b1711d296b486efcadeec7491b"
         }
       },
@@ -1133,7 +1133,7 @@
         "README.md": {
           "content_hash": "130021993c75f6ce9e155dc9aef9617cf607f5ea8d144ffe55e449374742c475",
           "entity_id": "doc_pydantic_pydantic_ai_readme_md_e19db6d9b579",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/agent-runtime/pydantic_pydantic_ai/README.md__e19db6d9b579.md",
+          "output": "current/agent-runtime/pydantic_pydantic_ai/README.md__e19db6d9b579.md",
           "sha": "e19db6d9b579d475bde9def9984926dfece3a083"
         }
       },
@@ -1144,13 +1144,13 @@
         "CHANGELOG.md": {
           "content_hash": "4c7709b22180c0925bafe557c017c3968aedcad9fb446ca0501ba7bf50c5cba0",
           "entity_id": "doc_run_llama_llama_index_changelog_md_2983f3183db5",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/run_llama_llama_index/CHANGELOG.md__2983f3183db5.md",
+          "output": "current/memory-context-sandbox/run_llama_llama_index/CHANGELOG.md__2983f3183db5.md",
           "sha": "2983f3183db55e93c963ac90f0740dcc58b83c69"
         },
         "README.md": {
           "content_hash": "353281492b93a5c3c96f9e09c2516eaf5850735f04bf16b19baa9be8c036607d",
           "entity_id": "doc_run_llama_llama_index_readme_md_c1c7af8256b4",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/run_llama_llama_index/README.md__c1c7af8256b4.md",
+          "output": "current/memory-context-sandbox/run_llama_llama_index/README.md__c1c7af8256b4.md",
           "sha": "c1c7af8256b4d278748ea9b5c8b1a5da1858e691"
         }
       },
@@ -1161,7 +1161,7 @@
         "README.md": {
           "content_hash": "dc40d8bbad038f7d62b56cb4ab4159c62ef5449319d2d1fc975863663db3db07",
           "entity_id": "doc_sgl_project_sglang_readme_md_e5cfd3d65b13",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/sgl_project_sglang/README.md__e5cfd3d65b13.md",
+          "output": "current/serving-inference/sgl_project_sglang/README.md__e5cfd3d65b13.md",
           "sha": "e5cfd3d65b13a715964a1497f9514afc0c1726e7"
         }
       },
@@ -1172,7 +1172,7 @@
         "README.md": {
           "content_hash": "ae079f9dc28452eae9b919eb35f63905188f616f83c3856ee185966235ceac76",
           "entity_id": "doc_stanfordnlp_dspy_readme_md_fe73d8cc8973",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/stanfordnlp_dspy/README.md__fe73d8cc8973.md",
+          "output": "current/memory-context-sandbox/stanfordnlp_dspy/README.md__fe73d8cc8973.md",
           "sha": "fe73d8cc8973045e34397b852c6f40670380c363"
         }
       },
@@ -1183,7 +1183,7 @@
         "README.md": {
           "content_hash": "a8abe338d5e5b5308348af45cedbe4d3c225e6d978886b0c4881b475ff0075dc",
           "entity_id": "doc_stepfun_ai_stepdeepresearch_readme_md_a33cabc2f936",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/stepfun_ai_stepdeepresearch/README.md__a33cabc2f936.md",
+          "output": "current/memory-context-sandbox/stepfun_ai_stepdeepresearch/README.md__a33cabc2f936.md",
           "sha": "a33cabc2f936bf7c184ca8e40d65ab42f26d93c6"
         }
       },
@@ -1194,235 +1194,235 @@
         "README.md": {
           "content_hash": "004a10054886d0010b276539a1b97c11a99825f1feef925310ba5420c93f9bf8",
           "entity_id": "doc_vllm_project_vllm_readme_md_42777436c63d",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/README.md__42777436c63d.md",
+          "output": "current/serving-inference/vllm_project_vllm/README.md__42777436c63d.md",
           "sha": "42777436c63dd58fd5d66040261d6ea8e2477c40"
         },
         "docs/design/arch_overview.md": {
           "content_hash": "c0d9dfeb71ee9372074f51ae7a9bd4aea0910eb39dc92b4c5fddaedca78b765e",
           "entity_id": "doc_vllm_project_vllm_docs_design_arch_overview_md_c19ea49d96db",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__arch_overview.md__c19ea49d96db.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__arch_overview.md__c19ea49d96db.md",
           "sha": "c19ea49d96db1fbe4389201b07e483fb3f357b8f"
         },
         "docs/design/attention_backends.md": {
           "content_hash": "6d8a46583612ab29386fc514d321df03807d2785de40c0377ecc5402a468477e",
           "entity_id": "doc_vllm_project_vllm_docs_design_attention_backends_md_23df00672fbf",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__attention_backends.md__23df00672fbf.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__attention_backends.md__23df00672fbf.md",
           "sha": "23df00672fbf1e65ae72442208b45dde3086d30c"
         },
         "docs/design/cuda_graphs.md": {
           "content_hash": "07f9a5fe36ca32f4ca42b1e59f6a1f41c3dab0db9660ca6e7396eaf16fa5a209",
           "entity_id": "doc_vllm_project_vllm_docs_design_cuda_graphs_md_e274b68c7021",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__cuda_graphs.md__e274b68c7021.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__cuda_graphs.md__e274b68c7021.md",
           "sha": "e274b68c70213a1c89fd48683f5a857ff7795b01"
         },
         "docs/design/cuda_graphs_multimodal.md": {
           "content_hash": "14ac77bf71b830def5eaf524edc35fd6c0173cd8a5f544b1f86b13ade50c682b",
           "entity_id": "doc_vllm_project_vllm_docs_design_cuda_graphs_multimodal_md_7eab425d6e21",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__cuda_graphs_multimodal.md__7eab425d6e21.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__cuda_graphs_multimodal.md__7eab425d6e21.md",
           "sha": "7eab425d6e21033e565443329e93473683f65603"
         },
         "docs/design/custom_op.md": {
           "content_hash": "314c1e3494b6ae8b5bfaffa895806bb769d240e99db85614e718bb8afda6fcc7",
           "entity_id": "doc_vllm_project_vllm_docs_design_custom_op_md_d2557a2281cf",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__custom_op.md__d2557a2281cf.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__custom_op.md__d2557a2281cf.md",
           "sha": "d2557a2281cf27353b1355cc104036cca248b512"
         },
         "docs/design/dbo.md": {
           "content_hash": "52410045e528f42687033d99be059f821735329e3d445982052e3987e46dba3f",
           "entity_id": "doc_vllm_project_vllm_docs_design_dbo_md_43b3ce0bb5a7",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__dbo.md__43b3ce0bb5a7.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__dbo.md__43b3ce0bb5a7.md",
           "sha": "43b3ce0bb5a734941a84e3d1c17dd6555fc51332"
         },
         "docs/design/debug_vllm_compile.md": {
           "content_hash": "5cbca2d00c3597207741a4866af1c9e424bdec7669a0bde3933afacf8aac4e8c",
           "entity_id": "doc_vllm_project_vllm_docs_design_debug_vllm_compile_md_7edda6fa6476",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__debug_vllm_compile.md__7edda6fa6476.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__debug_vllm_compile.md__7edda6fa6476.md",
           "sha": "7edda6fa6476c8ce847c096d8a7a3fc159dbf382"
         },
         "docs/design/endpoint_plugins.md": {
           "content_hash": "d57d9a5dc942a2bec05a96e7503b59906729f74f707e8f22357fb34e52415278",
           "entity_id": "doc_vllm_project_vllm_docs_design_endpoint_plugins_md_9f38fe5da188",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__endpoint_plugins.md__9f38fe5da188.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__endpoint_plugins.md__9f38fe5da188.md",
           "sha": "9f38fe5da1886de2b67bbba491e9f9e6ad3a5c6d"
         },
         "docs/design/fused_moe_modular_kernel.md": {
           "content_hash": "924ee2356674f43cc1f8e50ee1aa3dcec167a57e22b60aaa823bf5fc74a3c39c",
           "entity_id": "doc_vllm_project_vllm_docs_design_fused_moe_modular_kernel_md_2654b323ff06",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__fused_moe_modular_kernel.md__2654b323ff06.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__fused_moe_modular_kernel.md__2654b323ff06.md",
           "sha": "2654b323ff06f80d88cc3af90fba4fecb793cf99"
         },
         "docs/design/fusions.md": {
           "content_hash": "f29b47c243b4d3050330a63bda74a386e0a55bd9999df7dd0f83cdb7924d9374",
           "entity_id": "doc_vllm_project_vllm_docs_design_fusions_md_c9991f75cdb8",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__fusions.md__c9991f75cdb8.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__fusions.md__c9991f75cdb8.md",
           "sha": "c9991f75cdb88796b834fd2e6cdc77ae5f341ae2"
         },
         "docs/design/huggingface_integration.md": {
           "content_hash": "2c5f79fd21457292386bf289f90b31652d41f3edf34f1deb0f7c0ed212c7c6fa",
           "entity_id": "doc_vllm_project_vllm_docs_design_huggingface_integration_md_c3937d15db89",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__huggingface_integration.md__c3937d15db89.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__huggingface_integration.md__c3937d15db89.md",
           "sha": "c3937d15db895aebbf1876d04f6996a88beba616"
         },
         "docs/design/hybrid_kv_cache_manager.md": {
           "content_hash": "0e78564466aac033a21358740d8bf6d553b48930b3f33f038890766611b6211c",
           "entity_id": "doc_vllm_project_vllm_docs_design_hybrid_kv_cache_manager_md_82d54e9b5c1e",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__hybrid_kv_cache_manager.md__82d54e9b5c1e.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__hybrid_kv_cache_manager.md__82d54e9b5c1e.md",
           "sha": "82d54e9b5c1ec819e0e2f2b4ca88bd4632b956f1"
         },
         "docs/design/io_processor_plugins.md": {
           "content_hash": "dd8ab0e1462341b80d849232cd26a195f43f2194d1671931c513315ea2cc0def",
           "entity_id": "doc_vllm_project_vllm_docs_design_io_processor_plugins_md_68b532108672",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__io_processor_plugins.md__68b532108672.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__io_processor_plugins.md__68b532108672.md",
           "sha": "68b5321086724cff7e4737d9790927d05b83c8e8"
         },
         "docs/design/logits_processors.md": {
           "content_hash": "e160639280d75f778236aa971c2a96207ca9ce3c7adb06184273874e48cce844",
           "entity_id": "doc_vllm_project_vllm_docs_design_logits_processors_md_980001156d3b",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__logits_processors.md__980001156d3b.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__logits_processors.md__980001156d3b.md",
           "sha": "980001156d3b0f33f30ab103530b9e261494b1f5"
         },
         "docs/design/lora_resolver_plugins.md": {
           "content_hash": "2526597c7665f562b3f94ff94f06d7afd44f3bd09cab1dda685066cb7d23df82",
           "entity_id": "doc_vllm_project_vllm_docs_design_lora_resolver_plugins_md_019c4eef93d9",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__lora_resolver_plugins.md__019c4eef93d9.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__lora_resolver_plugins.md__019c4eef93d9.md",
           "sha": "019c4eef93d962960042b72cff36dbcdd22112be"
         },
         "docs/design/metrics.md": {
           "content_hash": "afbd6c562e2cb702f7125d454d5352ff1a6f703cf1adcde851404b386b5ec35d",
           "entity_id": "doc_vllm_project_vllm_docs_design_metrics_md_7b463b8750c7",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__metrics.md__7b463b8750c7.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__metrics.md__7b463b8750c7.md",
           "sha": "7b463b8750c728cc5f52d9c6540320a356e77e97"
         },
         "docs/design/mm_processing.md": {
           "content_hash": "1bc7423af99163b985c121ece5429b5b66d02e608450d4652ef549f6ba97a62d",
           "entity_id": "doc_vllm_project_vllm_docs_design_mm_processing_md_18d6c947e649",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__mm_processing.md__18d6c947e649.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__mm_processing.md__18d6c947e649.md",
           "sha": "18d6c947e64920283b28b2e7f49268bd4ded6e92"
         },
         "docs/design/model_runner_v2.md": {
           "content_hash": "ae0c5eb5c5709a36b58cd5d4a7d696c9f737c125e10138ed67a235550c85dcf5",
           "entity_id": "doc_vllm_project_vllm_docs_design_model_runner_v2_md_fb40d51ee7b7",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__model_runner_v2.md__fb40d51ee7b7.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__model_runner_v2.md__fb40d51ee7b7.md",
           "sha": "fb40d51ee7b7e49a7b3df98d769ab52a4cb86566"
         },
         "docs/design/moe_kernel_features.md": {
           "content_hash": "f6d514f482566c71edb83478c12c145aa0590f2d2b7eef27a719a9ffcc301048",
           "entity_id": "doc_vllm_project_vllm_docs_design_moe_kernel_features_md_07d2a5398013",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__moe_kernel_features.md__07d2a5398013.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__moe_kernel_features.md__07d2a5398013.md",
           "sha": "07d2a5398013fff0ffcd2a88e2b233dd2bebba90"
         },
         "docs/design/multiprocessing.md": {
           "content_hash": "7e36b3a6e435595b3d9406bf97dc0d5153c038d73353244535cc1c274c4bcd62",
           "entity_id": "doc_vllm_project_vllm_docs_design_multiprocessing_md_d34b6fa86f30",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__multiprocessing.md__d34b6fa86f30.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__multiprocessing.md__d34b6fa86f30.md",
           "sha": "d34b6fa86f3032c01669c1b6e0849f6ac978fd77"
         },
         "docs/design/nixl_kv_cache_lease.md": {
           "content_hash": "9299a3510c8ada738715cc9e357393ec616007bd5a2c22379ebe9ae69ec764b2",
           "entity_id": "doc_vllm_project_vllm_docs_design_nixl_kv_cache_lease_md_aa7683bb9e1d",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__nixl_kv_cache_lease.md__aa7683bb9e1d.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__nixl_kv_cache_lease.md__aa7683bb9e1d.md",
           "sha": "aa7683bb9e1dbee17f86a462a47442f50b2a3b25"
         },
         "docs/design/nixl_kv_push_connector.md": {
           "content_hash": "b87010e16d1189576634235a1c87d38dcd0e3d7061cf670672906e7f907b350e",
           "entity_id": "doc_vllm_project_vllm_docs_design_nixl_kv_push_connector_md_b99ba6659f74",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__nixl_kv_push_connector.md__b99ba6659f74.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__nixl_kv_push_connector.md__b99ba6659f74.md",
           "sha": "b99ba6659f746340ed8f8b322d6104c70d172658"
         },
         "docs/design/optimization_levels.md": {
           "content_hash": "87d1988cb5ecd666904d3c035934bfa529874091868e12e90d1f8ca8ac45a337",
           "entity_id": "doc_vllm_project_vllm_docs_design_optimization_levels_md_3261aed74794",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__optimization_levels.md__3261aed74794.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__optimization_levels.md__3261aed74794.md",
           "sha": "3261aed747948e3008b6af6abc6a1f458bc3e636"
         },
         "docs/design/paged_attention.md": {
           "content_hash": "01856594e376d7032030a4fb610a57988c6801527ba44e95e451ed7bf916498b",
           "entity_id": "doc_vllm_project_vllm_docs_design_paged_attention_md_f4742c7faaa4",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__paged_attention.md__f4742c7faaa4.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__paged_attention.md__f4742c7faaa4.md",
           "sha": "f4742c7faaa45697c9d1fd45743814f1b114932b"
         },
         "docs/design/plugin_system.md": {
           "content_hash": "88b6fe88475fe9fd2d35fefaa108be02a4dd24be948b0ac88f382c21e6afaee8",
           "entity_id": "doc_vllm_project_vllm_docs_design_plugin_system_md_dd49df0ef2f5",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__plugin_system.md__dd49df0ef2f5.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__plugin_system.md__dd49df0ef2f5.md",
           "sha": "dd49df0ef2f556914413af96c4a2c037fb013c1f"
         },
         "docs/design/prefix_caching.md": {
           "content_hash": "20bb1fca27262f1324a84de9dd595e6b21f46c33bb8486c24b73cbc91e6e9d23",
           "entity_id": "doc_vllm_project_vllm_docs_design_prefix_caching_md_f783f4a1bc85",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__prefix_caching.md__f783f4a1bc85.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__prefix_caching.md__f783f4a1bc85.md",
           "sha": "f783f4a1bc85a7ee15e00ed736a473f3ef3f896c"
         },
         "docs/design/torch_compile.md": {
           "content_hash": "80b60dc14548c28e86fdbf4eb9c292ddd235b7c0121462af9d9cb716febee74d",
           "entity_id": "doc_vllm_project_vllm_docs_design_torch_compile_md_4dc0da0c7d65",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__torch_compile.md__4dc0da0c7d65.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__torch_compile.md__4dc0da0c7d65.md",
           "sha": "4dc0da0c7d659be9923017db73a3aeff67c99728"
         },
         "docs/design/torch_compile_multimodal.md": {
           "content_hash": "7fc461fa734d6160ea524cee1051106fb7239fdafc80acb444e8c49a968b3fb8",
           "entity_id": "doc_vllm_project_vllm_docs_design_torch_compile_multimodal_md_bb30de56bc14",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__torch_compile_multimodal.md__bb30de56bc14.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__torch_compile_multimodal.md__bb30de56bc14.md",
           "sha": "bb30de56bc147ef1008a15baaefc1abfe98744d6"
         },
         "docs/design/vllm_ir.md": {
           "content_hash": "773e62a32bdff045dc23cd4f5269d4689df7ec94ef5bf91225c5fc7b7ba13f69",
           "entity_id": "doc_vllm_project_vllm_docs_design_vllm_ir_md_82628f3762fe",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/docs__design__vllm_ir.md__82628f3762fe.md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__vllm_ir.md__82628f3762fe.md",
           "sha": "82628f3762fe7b715579fe1437ffd092c55f526c"
         },
         "examples/basic/offline_inference/README.md": {
           "content_hash": "f67e76bc4e6a6ef91d1a64c210b6802ecd247bb7a62303bc088858fbcfd55a60",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_readme_md_026c7ec994eb",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__README.md__026c7ec994eb.md",
+          "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__README.md__026c7ec994eb.md",
           "sha": "026c7ec994eb29d9168f831ed4310d692fdd6319"
         },
         "examples/basic/offline_inference/basic.py": {
           "content_hash": "26d1d648e0fece08b6e771d30d2a342bc0d1d763ef2c842538b039d9ed048b6d",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_basic_py_78bfda9bcf4e",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__basic.py__78bfda9bcf4e.md",
+          "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__basic.py__78bfda9bcf4e.md",
           "sha": "78bfda9bcf4e3c5b8fbe7843e4be8b5b10dcec24"
         },
         "examples/basic/offline_inference/chat.py": {
           "content_hash": "69c9b8284e27cd62bb65cec8fa144303ed8b29f299a3088c9b41ecfe3c4a3ba4",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_chat_py_bca962597c6b",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__chat.py__bca962597c6b.md",
+          "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__chat.py__bca962597c6b.md",
           "sha": "bca962597c6bad025f646e944093ce7ee2cdd39a"
         },
         "examples/basic/offline_inference/classify.py": {
           "content_hash": "9b14770f7d769be8b338c591ec0e15582f2421e0e52e879379e7aab1ae066b9a",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_classify_py_b72ddde1fb55",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__classify.py__b72ddde1fb55.md",
+          "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__classify.py__b72ddde1fb55.md",
           "sha": "b72ddde1fb55366f3f2a60d14b6c38d80f4bf962"
         },
         "examples/basic/offline_inference/embed.py": {
           "content_hash": "f289a77b25118de7152423e764f6e5b59696cc2ebf441ad82c7bdb81b076e658",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_embed_py_626c070c1cfd",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__embed.py__626c070c1cfd.md",
+          "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__embed.py__626c070c1cfd.md",
           "sha": "626c070c1cfd8270dde6e1216e1e97dca2032e6f"
         },
         "examples/basic/offline_inference/generate.py": {
           "content_hash": "ef720fb26a47dca0333d5633c51c856c21acc45f2f39a8c8dad935f1c693ca8e",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_generate_py_9650dcfe967b",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__generate.py__9650dcfe967b.md",
+          "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__generate.py__9650dcfe967b.md",
           "sha": "9650dcfe967b3a5ef6716be3d2bbc1e24b1c0d1d"
         },
         "examples/basic/offline_inference/score.py": {
           "content_hash": "42c9582694f8378bdc4804ea7eaa671f01f7b0168c48a007ae4b146ee01abbb7",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_score_py_36f028515302",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__score.py__36f028515302.md",
+          "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__score.py__36f028515302.md",
           "sha": "36f028515302a643d5aefd1ffaee3d7dc862e31c"
         },
         "examples/basic/online_serving/openai_chat_completion_client.py": {
           "content_hash": "be52371f5d32b9ae54ec5b9612390a9413cd398651f4da42e6a3d49d617d0291",
           "entity_id": "doc_vllm_project_vllm_examples_basic_online_serving_openai_chat_completion_client_py_def95deb0c95",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/examples__basic__online_serving__openai_chat_completion_client.py__def95deb0c95.md",
+          "output": "current/serving-inference/vllm_project_vllm/examples__basic__online_serving__openai_chat_completion_client.py__def95deb0c95.md",
           "sha": "def95deb0c95d8954fce642cbc9b2a5875236d75"
         },
         "examples/basic/online_serving/openai_completion_client.py": {
           "content_hash": "a91d3ef619274b99e78b7d76d760350fe27c4045283b4054118c8dfcf2e7926c",
           "entity_id": "doc_vllm_project_vllm_examples_basic_online_serving_openai_completion_client_py_df6e4e942965",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/serving-inference/vllm_project_vllm/examples__basic__online_serving__openai_completion_client.py__df6e4e942965.md",
+          "output": "current/serving-inference/vllm_project_vllm/examples__basic__online_serving__openai_completion_client.py__df6e4e942965.md",
           "sha": "df6e4e9429650b7db914f585f4ccadb643d9c887"
         }
       },
@@ -1433,7 +1433,7 @@
         "README.md": {
           "content_hash": "8004a2c41f8158ecdfeeb8cf90f6a80a017682cb33c55219d830aa2a4eb2a69d",
           "entity_id": "doc_volcengine_verl_readme_md_db9c2eb67915",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/volcengine_verl/README.md__db9c2eb67915.md",
+          "output": "current/memory-context-sandbox/volcengine_verl/README.md__db9c2eb67915.md",
           "sha": "db9c2eb67915f9597a30a4d5a32599717c4ccaae"
         }
       },
@@ -1444,12 +1444,12 @@
         "README.md": {
           "content_hash": "69503f39188350486eec3376b82f94f7980bc54dac03be630471e4f03088df08",
           "entity_id": "doc_zai_org_open_autoglm_readme_md_2af1de1ecb44",
-          "output": "/home/runner/work/zero-entropy-lab/zero-entropy-lab/data/inputs/current/memory-context-sandbox/zai_org_open_autoglm/README.md__2af1de1ecb44.md",
+          "output": "current/memory-context-sandbox/zai_org_open_autoglm/README.md__2af1de1ecb44.md",
           "sha": "2af1de1ecb44f51c31256cd0bd2aa12842866423"
         }
       },
       "last_checked_at": "2026-07-11T06:23:58.446627+00:00"
     }
   },
-  "schema_version": 2
+  "schema_version": 3
 }

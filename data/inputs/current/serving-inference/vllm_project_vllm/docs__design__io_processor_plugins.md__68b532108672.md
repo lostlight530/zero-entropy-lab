@@ -1,6 +1,33 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_io_processor_plugins_md_68b532108672", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:10.311289+00:00", "source_path": "docs/design/io_processor_plugins.md", "source_repo": "vllm-project/vllm", "source_sha": "68b5321086724cff7e4737d9790927d05b83c8e8"}
+# vllm-project/vllm · docs/design/io_processor_plugins.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/io_processor_plugins.md](https://github.com/vllm-project/vllm/blob/68b5321086724cff7e4737d9790927d05b83c8e8/docs/design/io_processor_plugins.md) |
+| 来源版本 | `68b5321086724cff7e4737d9790927d05b83c8e8` |
+| 摄取时间 | `2026-07-11T06:09:10.311289+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_io_processor_plugins_md_68b532108672` |
+
+## 本次变化
+
+- 新增行数 `94`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- IO Processor Plugins
+- Writing an IO Processor Plugin
+- Using an IO Processor plugin
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # IO Processor Plugins
 
@@ -97,8 +124,10 @@ IO Processor plugins are loaded at engine startup and there are two methods for 
 
 The order also determines method priority. i.e., setting the plugin name via `EngineArgs` will override any plugin name specified in the model HF config (config.json).
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -202,3 +231,5 @@ The order also determines method priority. i.e., setting the plugin name via `En
 +
 +The order also determines method priority. i.e., setting the plugin name via `EngineArgs` will override any plugin name specified in the model HF config (config.json).
 ```
+
+</details>

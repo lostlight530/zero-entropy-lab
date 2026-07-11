@@ -1,6 +1,37 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0026_hosted_session_identity_context_md_9612ba3af21e", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:58.365034+00:00", "source_path": "docs/decisions/0026-hosted-session-identity-context.md", "source_repo": "microsoft/agent-framework", "source_sha": "9612ba3af21e860a179347b0b238c32efa0799c7"}
+# microsoft/agent-framework · docs/decisions/0026-hosted-session-identity-context.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0026-hosted-session-identity-context.md](https://github.com/microsoft/agent-framework/blob/9612ba3af21e860a179347b0b238c32efa0799c7/docs/decisions/0026-hosted-session-identity-context.md) |
+| 来源版本 | `9612ba3af21e860a179347b0b238c32efa0799c7` |
+| 摄取时间 | `2026-07-11T06:08:58.365034+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0026_hosted_session_identity_context_md_9612ba3af21e` |
+
+## 本次变化
+
+- 新增行数 `86`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Hosted session identity context for Foundry Hosting
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- Decision Outcome
+- Consequences
+- Out of scope
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: superseded by [ADR-0030](0030-hosted-platform-context-agentserver-2.0.md)
@@ -89,8 +120,10 @@ Negative:
 - Generic (non-Foundry) hosting layers can re-define an equivalent type if needed; nothing in this ADR is moved into `Microsoft.Agents.AI.Hosting` because `Microsoft.Agents.AI.Foundry.Hosting` does not depend on it.
 - HMAC tamper signatures over the persisted context are not implemented; comparison against `ResponseContext.Isolation` on every request is sufficient because the platform sets those headers at the trust boundary.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -186,3 +219,5 @@ Negative:
 +- Generic (non-Foundry) hosting layers can re-define an equivalent type if needed; nothing in this ADR is moved into `Microsoft.Agents.AI.Hosting` because `Microsoft.Agents.AI.Foundry.Hosting` does not depend on it.
 +- HMAC tamper signatures over the persisted context are not implemented; comparison against `ResponseContext.Isolation` on every request is sufficient because the platform sets those headers at the trust boundary.
 ```
+
+</details>

@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_model_runner_v2_md_fb40d51ee7b7", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:10.949370+00:00", "source_path": "docs/design/model_runner_v2.md", "source_repo": "vllm-project/vllm", "source_sha": "fb40d51ee7b7e49a7b3df98d769ab52a4cb86566"}
+# vllm-project/vllm · docs/design/model_runner_v2.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/model_runner_v2.md](https://github.com/vllm-project/vllm/blob/fb40d51ee7b7e49a7b3df98d769ab52a4cb86566/docs/design/model_runner_v2.md) |
+| 来源版本 | `fb40d51ee7b7e49a7b3df98d769ab52a4cb86566` |
+| 摄取时间 | `2026-07-11T06:09:10.949370+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_model_runner_v2_md_fb40d51ee7b7` |
+
+## 本次变化
+
+- 新增行数 `198`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Model Runner V2 Design Document
+- Introduction
+- 1. Persistent Batch
+- Background
+- Problems with V1's Approach
+- MRV2's Solution
+- 2. Async-First
+- 3. Removing Async Barrier
+- MRV2's Solution: Eliminate the Race
+- 4. StagedWriteTensor
+- Initialize state on GPU
+- Write [3, 1, 2] into row 2, starting at index 3
+- Write [-1, -2, -5] into row 0, starting at index 1
+- Apply staged changes
+- 5. GPU-Native Input Metadata Preparation and Output Processing
+- Universal Virtual Addressing (UVA)
+- 6. Triton-Native Sampler
+- Gumbel Sampling Kernel
+- Efficient Top-K Logprobs
+- Memory-Efficient Prompt Logprobs
+- Better Compatibility with Speculative Decoding
+- 7. Modularity
+- 8. No Abuse of `dummy_run`
+- 9. Explicit CUDA Graph Management
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Model Runner V2 Design Document
 
@@ -201,8 +249,10 @@ MRV2 changes should meet a higher code quality bar. As feature gaps with V1 are 
 
 A key requirement is preserving modularity and clean abstraction boundaries, even if that requires more upfront design iteration.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -410,3 +460,5 @@ A key requirement is preserving modularity and clean abstraction boundaries, eve
 +
 +A key requirement is preserving modularity and clean abstraction boundaries, even if that requires more upfront design iteration.
 ```
+
+</details>

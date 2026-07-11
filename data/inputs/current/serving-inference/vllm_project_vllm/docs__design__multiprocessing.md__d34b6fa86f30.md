@@ -1,6 +1,44 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_multiprocessing_md_d34b6fa86f30", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:11.236270+00:00", "source_path": "docs/design/multiprocessing.md", "source_repo": "vllm-project/vllm", "source_sha": "d34b6fa86f3032c01669c1b6e0849f6ac978fd77"}
+# vllm-project/vllm · docs/design/multiprocessing.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/multiprocessing.md](https://github.com/vllm-project/vllm/blob/d34b6fa86f3032c01669c1b6e0849f6ac978fd77/docs/design/multiprocessing.md) |
+| 来源版本 | `d34b6fa86f3032c01669c1b6e0849f6ac978fd77` |
+| 摄取时间 | `2026-07-11T06:09:11.236270+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_multiprocessing_md_d34b6fa86f30` |
+
+## 本次变化
+
+- 新增行数 `191`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Python Multiprocessing
+- Debugging
+- Introduction
+- Multiprocessing Methods
+- Tradeoffs
+- Compatibility with Dependencies
+- Current State (v0)
+- Prior State in v1
+- Changes Made in v1
+- Alternatives Considered
+- Detect if a `__main__` guard is present
+- Use `forkserver`
+- Force `spawn` all the time
+- Future Work
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Python Multiprocessing
 
@@ -194,8 +232,10 @@ that works around these challenges.
 
     - <https://github.com/joblib/loky>
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -396,3 +436,5 @@ that works around these challenges.
 +
 +    - <https://github.com/joblib/loky>
 ```
+
+</details>

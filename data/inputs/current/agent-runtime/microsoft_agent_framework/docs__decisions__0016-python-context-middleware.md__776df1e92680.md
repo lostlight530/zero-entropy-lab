@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0016_python_context_middleware_md_776df1e92680", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:56.469425+00:00", "source_path": "docs/decisions/0016-python-context-middleware.md", "source_repo": "microsoft/agent-framework", "source_sha": "776df1e926800a1ba11702372adc2cd7ef558fd6"}
+# microsoft/agent-framework · docs/decisions/0016-python-context-middleware.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0016-python-context-middleware.md](https://github.com/microsoft/agent-framework/blob/776df1e926800a1ba11702372adc2cd7ef558fd6/docs/decisions/0016-python-context-middleware.md) |
+| 来源版本 | `776df1e926800a1ba11702372adc2cd7ef558fd6` |
+| 摄取时间 | `2026-07-11T06:08:56.469425+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0016_python_context_middleware_md_776df1e92680` |
+
+## 本次变化
+
+- 新增行数 `2620`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- These are optional elements. Feel free to remove any of them.
+- Unifying Context Management with ContextPlugin
+- Context and Problem Statement
+- Decision Drivers
+- Related Issues
+- Current State Analysis
+- ContextProvider (Current)
+- ChatMessageStore (Current)
+- AgentThread (Current)
+- Key Design Considerations
+- Considered Options
+- Option 1: Status Quo - Keep Separate Abstractions
+- Option 2: ContextMiddleware - Wrapper Pattern
+- Option 3: ContextHooks - Pre/Post Pattern
+- Pipeline execution is linear, not nested:
+- 1. hook1.before_run(context)
+- 2. hook2.before_run(context)
+- 3. <model invocation>
+- 4. hook2.after_run(context)  # Reverse order for symmetry
+- 5. hook1.after_run(context)
+- Detailed Design
+- 1. Execution Pattern
+- Subclass must implement process():
+- Subclass overrides only the hooks it needs:
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 # These are optional elements. Feel free to remove any of them.
@@ -2623,8 +2671,10 @@ class ChatAgent:
 #   session.state = data["state"]
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -5254,3 +5304,5 @@ class ChatAgent:
 +#   session.state = data["state"]
 +```
 ```
+
+</details>

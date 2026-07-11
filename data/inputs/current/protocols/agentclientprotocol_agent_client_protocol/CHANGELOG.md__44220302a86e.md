@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_agentclientprotocol_agent_client_protocol_changelog_md_44220302a86e", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:40.972819+00:00", "source_path": "CHANGELOG.md", "source_repo": "agentclientprotocol/agent-client-protocol", "source_sha": "44220302a86eac10fad6c7a550c77447249950e7"}
+# agentclientprotocol/agent-client-protocol · CHANGELOG.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [agentclientprotocol/agent-client-protocol](https://github.com/agentclientprotocol/agent-client-protocol) |
+| 来源文件 | [CHANGELOG.md](https://github.com/agentclientprotocol/agent-client-protocol/blob/44220302a86eac10fad6c7a550c77447249950e7/CHANGELOG.md) |
+| 来源版本 | `44220302a86eac10fad6c7a550c77447249950e7` |
+| 摄取时间 | `2026-07-11T06:08:40.972819+00:00` |
+| 归属层 | `protocols` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_agentclientprotocol_agent_client_protocol_changelog_md_44220302a86e` |
+
+## 本次变化
+
+- 新增行数 `635`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Changelog
+- [1.4.0](https://github.com/agentclientprotocol/agent-client-protocol/compare/v1.3.0...v1.4.0) - 2026-07-06
+- Added
+- [1.3.0](https://github.com/agentclientprotocol/agent-client-protocol/compare/v1.2.0...v1.3.0) - 2026-07-06
+- Added
+- Fixed
+- Other
+- [1.2.0](https://github.com/agentclientprotocol/agent-client-protocol/compare/v1.1.0...v1.2.0) - 2026-06-29
+- Added
+- Fixed
+- Other
+- [1.1.0](https://github.com/agentclientprotocol/agent-client-protocol/compare/v1.0.0...v1.1.0) - 2026-06-24
+- Added
+- [1.0.0](https://github.com/agentclientprotocol/agent-client-protocol/compare/v0.14.0...v1.0.0) - 2026-06-24
+- Added
+- [0.14.0](https://github.com/agentclientprotocol/agent-client-protocol/compare/v0.13.8...v0.14.0) - 2026-06-18
+- Added
+- [0.13.8](https://github.com/agentclientprotocol/agent-client-protocol/compare/v0.13.7...v0.13.8) - 2026-06-18
+- Other
+- [0.13.7](https://github.com/agentclientprotocol/agent-client-protocol/compare/v0.13.6...v0.13.7) - 2026-06-16
+- Added
+- Fixed
+- Other
+- [0.13.6](https://github.com/agentclientprotocol/agent-client-protocol/compare/v0.13.5...v0.13.6) - 2026-06-05
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Changelog
 
@@ -638,8 +686,10 @@ No changes.
   - Makes it easier to use with websockets instead of stdio
 - Improve type safety for method map helpers [#94](https://github.com/agentclientprotocol/agent-client-protocol/pull/94)
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1284,3 +1334,5 @@ No changes.
 +  - Makes it easier to use with websockets instead of stdio
 +- Improve type safety for method map helpers [#94](https://github.com/agentclientprotocol/agent-client-protocol/pull/94)
 ```
+
+</details>

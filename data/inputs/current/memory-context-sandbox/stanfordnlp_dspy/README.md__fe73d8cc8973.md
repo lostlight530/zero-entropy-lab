@@ -1,6 +1,34 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_stanfordnlp_dspy_readme_md_fe73d8cc8973", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:20.377009+00:00", "source_path": "README.md", "source_repo": "stanfordnlp/dspy", "source_sha": "fe73d8cc8973045e34397b852c6f40670380c363"}
+# stanfordnlp/dspy · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) |
+| 来源文件 | [README.md](https://github.com/stanfordnlp/dspy/blob/fe73d8cc8973045e34397b852c6f40670380c363/README.md) |
+| 来源版本 | `fe73d8cc8973045e34397b852c6f40670380c363` |
+| 摄取时间 | `2026-07-11T06:09:20.377009+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_stanfordnlp_dspy_readme_md_fe73d8cc8973` |
+
+## 本次变化
+
+- 新增行数 `88`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- DSPy: _Programming_—not prompting—Foundation Models
+- Documentation: [dspy.ai](https://dspy.ai)
+- Installation
+- 📜 Citation & Reading More
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <p align="center">
   <img align="center" src="docs/docs/static/img/dspy_logo.png" width="460px" />
@@ -90,9 +118,10 @@ If you use DSPy or DSP in a research paper, please cite our work as follows:
 * [**Introducing DSP**](https://twitter.com/lateinteraction/status/1617953413576425472)  (Twitter Thread, Jan 2023)
 * [**Demonstrate-Search-Predict: Composing retrieval and language models for knowledge-intensive NLP**](https://arxiv.org/abs/2212.14024.pdf) (Academic Paper, Dec 2022) -->
 
+</details>
 
-
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -190,3 +219,5 @@ If you use DSPy or DSP in a research paper, please cite our work as follows:
 +* [**Demonstrate-Search-Predict: Composing retrieval and language models for knowledge-intensive NLP**](https://arxiv.org/abs/2212.14024.pdf) (Academic Paper, Dec 2022) -->
 +
 ```
+
+</details>

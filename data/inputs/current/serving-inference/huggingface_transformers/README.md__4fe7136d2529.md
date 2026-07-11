@@ -1,6 +1,43 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_huggingface_transformers_readme_md_4fe7136d2529", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:07.649043+00:00", "source_path": "README.md", "source_repo": "huggingface/transformers", "source_sha": "4fe7136d25294b26a50b4fefd70f0cb12db06d4f"}
+# huggingface/transformers · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [huggingface/transformers](https://github.com/huggingface/transformers) |
+| 来源文件 | [README.md](https://github.com/huggingface/transformers/blob/4fe7136d25294b26a50b4fefd70f0cb12db06d4f/README.md) |
+| 来源版本 | `4fe7136d25294b26a50b4fefd70f0cb12db06d4f` |
+| 摄取时间 | `2026-07-11T06:09:07.649043+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_huggingface_transformers_readme_md_4fe7136d2529` |
+
+## 本次变化
+
+- 新增行数 `338`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Installation
+- venv
+- uv
+- pip
+- uv
+- pip
+- uv
+- Quickstart
+- Why should I use Transformers?
+- When shouldn't I use Transformers?
+- 100 projects using Transformers
+- Example models
+- Citation
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <!---
 Copyright 2020 The HuggingFace Team. All rights reserved.
@@ -341,8 +378,10 @@ We now have a [paper](https://aclanthology.org/2020.emnlp-demos.6/) you can cite
 }
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -690,3 +729,5 @@ We now have a [paper](https://aclanthology.org/2020.emnlp-demos.6/) you can cite
 +}
 +```
 ```
+
+</details>

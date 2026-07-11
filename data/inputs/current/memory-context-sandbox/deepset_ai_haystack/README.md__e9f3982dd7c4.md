@@ -1,6 +1,39 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_deepset_ai_haystack_readme_md_e9f3982dd7c4", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:22.945685+00:00", "source_path": "README.md", "source_repo": "deepset-ai/haystack", "source_sha": "e9f3982dd7c4b71acf9d61d56782814d4af6855d"}
+# deepset-ai/haystack · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [deepset-ai/haystack](https://github.com/deepset-ai/haystack) |
+| 来源文件 | [README.md](https://github.com/deepset-ai/haystack/blob/e9f3982dd7c4b71acf9d61d56782814d4af6855d/README.md) |
+| 来源版本 | `e9f3982dd7c4b71acf9d61d56782814d4af6855d` |
+| 摄取时间 | `2026-07-11T06:09:22.945685+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_deepset_ai_haystack_readme_md_e9f3982dd7c4` |
+
+## 本次变化
+
+- 新增行数 `114`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Table of Contents
+- Installation
+- Documentation
+- Features
+- Haystack Enterprise: Support & Platform
+- Telemetry
+- 🖖 Community
+- Contributing to Haystack
+- Organizations using Haystack
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <div align="center">
   <a href="https://haystack.deepset.ai/"><img src="https://raw.githubusercontent.com/deepset-ai/haystack/main/images/banner.png" alt="Blue banner with the Haystack logo and the text ‘haystack by deepset – The Open Source AI Framework for Production Ready RAG & Agents’ surrounded by abstract icons representing search, documents, agents, pipelines, and cloud systems."></a>
@@ -117,8 +150,10 @@ Haystack is used by thousands of teams building production AI systems across ind
 
 Are you also using Haystack? Open a PR or [tell us your story](https://forms.gle/Mm3G1aEST3GAH2rn8)
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -242,3 +277,5 @@ Are you also using Haystack? Open a PR or [tell us your story](https://forms.gle
 +
 +Are you also using Haystack? Open a PR or [tell us your story](https://forms.gle/Mm3G1aEST3GAH2rn8)
 ```
+
+</details>

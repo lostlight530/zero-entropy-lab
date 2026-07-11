@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0007_agent_filtering_middleware_md_4fd3b57727a5", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:55.129480+00:00", "source_path": "docs/decisions/0007-agent-filtering-middleware.md", "source_repo": "microsoft/agent-framework", "source_sha": "4fd3b57727a5f048ddc316562922a1468bfb9172"}
+# microsoft/agent-framework · docs/decisions/0007-agent-filtering-middleware.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0007-agent-filtering-middleware.md](https://github.com/microsoft/agent-framework/blob/4fd3b57727a5f048ddc316562922a1468bfb9172/docs/decisions/0007-agent-filtering-middleware.md) |
+| 来源版本 | `4fd3b57727a5f048ddc316562922a1468bfb9172` |
+| 摄取时间 | `2026-07-11T06:08:55.129480+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0007_agent_filtering_middleware_md_4fd3b57727a5` |
+
+## 本次变化
+
+- 新增行数 `1190`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Agent Filtering Middleware Design
+- Context and Problem Statement
+- Decision Drivers
+- Other AI Agent Framework Analysis
+- Overview Comparison Table
+- Considered Options
+- Option 1: Semantic Kernel Approach
+- Pros
+- Cons
+- Option 2: Agent Filter Decorator Pattern
+- 2a. Direct Decorator Implementation (GuardrailCallbackAgent)
+- 2b. Context-Based Middleware (RunningCallbackHandlerAgent)
+- 2c. Function Invocation Filtering
+- Pros
+- Option 3: Dedicated Processor Component for Middleware
+- Current POC Implementation
+- Function Invocation Filtering
+- Processor Implementation
+- CallbackEnabledAgent Implementation
+- Pros
+- Cons
+- APPENDIX 1: Proposed Middleware Contexts
+- APPENDIX 2: Setting Up Middleware Options
+- 1. Semantic Kernel Setup
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: proposed
@@ -1193,8 +1241,10 @@ const chainWithHandler = new SomeChain({ callbacks: [handler] });
 await chainWithHandler.invoke({ number: 25 });
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -2394,3 +2444,5 @@ await chainWithHandler.invoke({ number: 25 });
 +await chainWithHandler.invoke({ number: 25 });
 +```
 ```
+
+</details>

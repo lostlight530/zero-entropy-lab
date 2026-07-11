@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_readme_md_f1e82d81a897", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:54.060441+00:00", "source_path": "README.md", "source_repo": "microsoft/agent-framework", "source_sha": "f1e82d81a8977e65a6f455fcd20edf8ab8a67443"}
+# microsoft/agent-framework · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [README.md](https://github.com/microsoft/agent-framework/blob/f1e82d81a8977e65a6f455fcd20edf8ab8a67443/README.md) |
+| 来源版本 | `f1e82d81a8977e65a6f455fcd20edf8ab8a67443` |
+| 摄取时间 | `2026-07-11T06:08:54.060441+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_readme_md_f1e82d81a897` |
+
+## 本次变化
+
+- 新增行数 `213`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Welcome to Microsoft Agent Framework!
+- Is this the right framework for you?
+- Key Features
+- Table of Contents
+- Getting Started
+- Installation
+- This will install all sub-packages, see `python/packages` for individual packages.
+- It may take a minute on first install on Windows.
+- For Foundry integration (used in the .NET quickstart below):
+- Learning Resources
+- Quickstart
+- Basic Agent - Python
+- pip install agent-framework
+- Use `az login` to authenticate with Azure CLI
+- Basic Agent - .NET
+- More Examples & Samples
+- Python
+- .NET
+- Community & Feedback
+- Troubleshooting
+- Authentication
+- Environment Variables
+- Contributor Resources
+- Important Notes
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ![Microsoft Agent Framework](docs/assets/readme-banner.png)
 
@@ -216,8 +264,10 @@ For environment variable configuration specific to each sample, refer to the REA
 > 
 >You are responsible for carefully reviewing and testing applications you build using Microsoft Agent Framework in the context of your specific use cases, and making all appropriate decisions and customizations. This includes implementing your own responsible AI mitigations such as metaprompt, content filters, or other safety systems, and ensuring your applications meet appropriate quality, reliability, security, and trustworthiness standards. See also: [Transparency FAQ](./TRANSPARENCY_FAQ.md)
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -440,3 +490,5 @@ For environment variable configuration specific to each sample, refer to the REA
 +> 
 +>You are responsible for carefully reviewing and testing applications you build using Microsoft Agent Framework in the context of your specific use cases, and making all appropriate decisions and customizations. This includes implementing your own responsible AI mitigations such as metaprompt, content filters, or other safety systems, and ensuring your applications meet appropriate quality, reliability, security, and trustworthiness standards. See also: [Transparency FAQ](./TRANSPARENCY_FAQ.md)
 ```
+
+</details>

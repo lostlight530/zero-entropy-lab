@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_metrics_md_7b463b8750c7", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:10.694497+00:00", "source_path": "docs/design/metrics.md", "source_repo": "vllm-project/vllm", "source_sha": "7b463b8750c728cc5f52d9c6540320a356e77e97"}
+# vllm-project/vllm · docs/design/metrics.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/metrics.md](https://github.com/vllm-project/vllm/blob/7b463b8750c728cc5f52d9c6540320a356e77e97/docs/design/metrics.md) |
+| 来源版本 | `7b463b8750c728cc5f52d9c6540320a356e77e97` |
+| 摄取时间 | `2026-07-11T06:09:10.694497+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_metrics_md_7b463b8750c7` |
+
+## 本次变化
+
+- 新增行数 `702`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Metrics
+- Objectives
+- Background
+- Metrics Overview
+- v1 Metrics
+- Grafana Dashboard
+- Prometheus Client Library
+- Multi-process Mode
+- Built in Python/Process Metrics
+- Metrics Design
+- Legacy PRs
+- Metrics Implementation PRs
+- Metrics Collection
+- Interval Calculations
+- Scheduler Stats
+- Engine Core Events
+- Interval Calculations vs Preemptions
+- Frontend Stats Collection
+- KV Cache Residency Metrics
+- Metrics Publishing - Logging
+- Metrics Publishing - Prometheus
+- HELP vllm:num_requests_running Number of requests in model execution batches.
+- TYPE vllm:num_requests_running gauge
+- HELP vllm:generation_tokens_total Number of generation tokens processed.
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Metrics
 
@@ -705,8 +753,10 @@ higher-resolution timings to justify the overhead.
 Since we are going to treat the question of OpenTelemetry support
 separately, we will include these particular metrics under that topic.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1418,3 +1468,5 @@ separately, we will include these particular metrics under that topic.
 +Since we are going to treat the question of OpenTelemetry support
 +separately, we will include these particular metrics under that topic.
 ```
+
+</details>

@@ -1,6 +1,35 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openai_openai_agents_python_examples_memory_dapr_session_example_py_3a5a777a4a24", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:50.738590+00:00", "source_path": "examples/memory/dapr_session_example.py", "source_repo": "openai/openai-agents-python", "source_sha": "3a5a777a4a24de5e5adc490cd83052d03380bfda"}
+# openai/openai-agents-python · examples/memory/dapr_session_example.py
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/memory/dapr_session_example.py](https://github.com/openai/openai-agents-python/blob/3a5a777a4a24de5e5adc490cd83052d03380bfda/examples/memory/dapr_session_example.py) |
+| 来源版本 | `3a5a777a4a24de5e5adc490cd83052d03380bfda` |
+| 摄取时间 | `2026-07-11T06:08:50.738590+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_memory_dapr_session_example_py_3a5a777a4a24` |
+
+## 本次变化
+
+- 新增行数 `586`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Save as components/statestore-redis.yaml
+- Save as components/statestore-postgres.yaml
+- ------------------------------------------------------------------------------------------------
+- ---               Setup Helper Functions                                                      --
+- ------------------------------------------------------------------------------------------------
+
+<details>
+<summary>展开完整外部原文</summary>
 
 """
 Example demonstrating Dapr State Store session memory functionality.
@@ -589,8 +618,10 @@ if __name__ == "__main__":
     asyncio.run(demonstrate_advanced_features())
     asyncio.run(demonstrate_multi_store())
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1186,3 +1217,5 @@ if __name__ == "__main__":
 +    asyncio.run(demonstrate_advanced_features())
 +    asyncio.run(demonstrate_multi_store())
 ```
+
+</details>

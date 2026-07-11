@@ -1,6 +1,42 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_endpoint_plugins_md_9f38fe5da188", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:09.563786+00:00", "source_path": "docs/design/endpoint_plugins.md", "source_repo": "vllm-project/vllm", "source_sha": "9f38fe5da1886de2b67bbba491e9f9e6ad3a5c6d"}
+# vllm-project/vllm · docs/design/endpoint_plugins.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/endpoint_plugins.md](https://github.com/vllm-project/vllm/blob/9f38fe5da1886de2b67bbba491e9f9e6ad3a5c6d/docs/design/endpoint_plugins.md) |
+| 来源版本 | `9f38fe5da1886de2b67bbba491e9f9e6ad3a5c6d` |
+| 摄取时间 | `2026-07-11T06:09:09.563786+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_endpoint_plugins_md_9f38fe5da188` |
+
+## 本次变化
+
+- 新增行数 `136`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Endpoint Plugins
+- The `EndpointPlugin` protocol
+- The two phase lifecycle
+- Engine less servers (the render server)
+- Reaching the engine from a route handler
+- Registering the entry point
+- pyproject.toml
+- setup.py equivalent
+- Gating: `VLLM_PLUGINS` and `required_tasks`
+- Pairing with `vllm.general_plugins`
+- Path-prefix convention
+- Compatibility
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Endpoint Plugins
 
@@ -139,8 +175,10 @@ There is currently no route conflict enforcement (tracked as a follow-up to RFC 
 
 `state`/serving handler internals (e.g. the shape of in-tree `OpenAIServing*` classes) are not a stable public contract yet. Treat them as use-at-your-own-risk and expect them to change between vLLM versions. `FastAPI`, `EngineClient` and the `EndpointPlugin` protocol itself are the supported surface.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -286,3 +324,5 @@ There is currently no route conflict enforcement (tracked as a follow-up to RFC 
 +
 +`state`/serving handler internals (e.g. the shape of in-tree `OpenAIServing*` classes) are not a stable public contract yet. Treat them as use-at-your-own-risk and expect them to change between vLLM versions. `FastAPI`, `EngineClient` and the `EndpointPlugin` protocol itself are the supported surface.
 ```
+
+</details>

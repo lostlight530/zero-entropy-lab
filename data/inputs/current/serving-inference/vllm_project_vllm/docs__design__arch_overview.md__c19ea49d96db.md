@@ -1,6 +1,47 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_arch_overview_md_c19ea49d96db", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:08.593898+00:00", "source_path": "docs/design/arch_overview.md", "source_repo": "vllm-project/vllm", "source_sha": "c19ea49d96db1fbe4389201b07e483fb3f357b8f"}
+# vllm-project/vllm · docs/design/arch_overview.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/arch_overview.md](https://github.com/vllm-project/vllm/blob/c19ea49d96db1fbe4389201b07e483fb3f357b8f/docs/design/arch_overview.md) |
+| 来源版本 | `c19ea49d96db1fbe4389201b07e483fb3f357b8f` |
+| 摄取时间 | `2026-07-11T06:09:08.593898+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_arch_overview_md_c19ea49d96db` |
+
+## 本次变化
+
+- 新增行数 `314`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Architecture Overview
+- Entrypoints
+- LLM Class
+- Online Serving
+- V1 Process Architecture
+- API Server Process
+- Engine Core Process
+- GPU Worker Processes
+- DP Coordinator Process (conditional)
+- Process Count Summary
+- LLM Engine
+- LLMEngine
+- AsyncLLMEngine
+- Worker
+- Model Runner
+- Model
+- Class Hierarchy
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Architecture Overview
 
@@ -317,8 +358,10 @@ big problem.
 In summary, the complete config object `VllmConfig` can be treated as an
 engine-level global state that is shared among all vLLM classes.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -642,3 +685,5 @@ engine-level global state that is shared among all vLLM classes.
 +In summary, the complete config object `VllmConfig` can be treated as an
 +engine-level global state that is shared among all vLLM classes.
 ```
+
+</details>

@@ -1,6 +1,33 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openai_openai_agents_python_examples_mcp_prompt_server_readme_md_74ee0fe07e22", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:47.634068+00:00", "source_path": "examples/mcp/prompt_server/README.md", "source_repo": "openai/openai-agents-python", "source_sha": "74ee0fe07e223b1d93c313a269eb494f1a914cf1"}
+# openai/openai-agents-python · examples/mcp/prompt_server/README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/mcp/prompt_server/README.md](https://github.com/openai/openai-agents-python/blob/74ee0fe07e223b1d93c313a269eb494f1a914cf1/examples/mcp/prompt_server/README.md) |
+| 来源版本 | `74ee0fe07e223b1d93c313a269eb494f1a914cf1` |
+| 摄取时间 | `2026-07-11T06:08:47.634068+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_mcp_prompt_server_readme_md_74ee0fe07e22` |
+
+## 本次变化
+
+- 新增行数 `29`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- MCP Prompt Server Example
+- Details
+- Workflow
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # MCP Prompt Server Example
 
@@ -30,10 +57,12 @@ The example demonstrates two key functions:
    - Runs the agent against vulnerable sample code (command injection via `os.system`)
    - The agent analyzes the code and provides security-focused feedback using available tools
 
-This pattern allows users to dynamically configure agent behavior through MCP prompts rather than hardcoded instructions. 
+This pattern allows users to dynamically configure agent behavior through MCP prompts rather than hardcoded instructions.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -70,5 +99,7 @@ This pattern allows users to dynamically configure agent behavior through MCP pr
 +   - Runs the agent against vulnerable sample code (command injection via `os.system`)
 +   - The agent analyzes the code and provides security-focused feedback using available tools
 +
-+This pattern allows users to dynamically configure agent behavior through MCP prompts rather than hardcoded instructions. 
++This pattern allows users to dynamically configure agent behavior through MCP prompts rather than hardcoded instructions.
 ```
+
+</details>

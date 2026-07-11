@@ -1,6 +1,46 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_cuda_graphs_multimodal_md_7eab425d6e21", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:09.022708+00:00", "source_path": "docs/design/cuda_graphs_multimodal.md", "source_repo": "vllm-project/vllm", "source_sha": "7eab425d6e21033e565443329e93473683f65603"}
+# vllm-project/vllm · docs/design/cuda_graphs_multimodal.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/cuda_graphs_multimodal.md](https://github.com/vllm-project/vllm/blob/7eab425d6e21033e565443329e93473683f65603/docs/design/cuda_graphs_multimodal.md) |
+| 来源版本 | `7eab425d6e21033e565443329e93473683f65603` |
+| 摄取时间 | `2026-07-11T06:09:09.022708+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_cuda_graphs_multimodal_md_7eab425d6e21` |
+
+## 本次变化
+
+- 新增行数 `289`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Vision Encoder (ViT) CUDA Graphs
+- Motivation
+- Design
+- Budget-based graph capture
+- Greedy bin-packing at runtime
+- Dual-Path graph capture
+- Data-parallel support
+- Video inference support
+- Model integration via `SupportsEncoderCudaGraph`
+- Configuration
+- Usage guide
+- Image inference
+- Video inference
+- About the Performance
+- Single GPU (1x GB200)
+- Multi-GPU (4x GB200, TP=4, DP=4)
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Vision Encoder (ViT) CUDA Graphs
 
@@ -292,8 +332,10 @@ vllm bench mm-processor \
 !!! note
     Find more details about benchmarks on GPUs (A100) for video inference at [#38061](https://github.com/vllm-project/vllm/pull/38061).
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -592,3 +634,5 @@ vllm bench mm-processor \
 +!!! note
 +    Find more details about benchmarks on GPUs (A100) for video inference at [#38061](https://github.com/vllm-project/vllm/pull/38061).
 ```
+
+</details>

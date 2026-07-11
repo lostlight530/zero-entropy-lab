@@ -1,6 +1,37 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_sgl_project_sglang_readme_md_e5cfd3d65b13", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:14.564666+00:00", "source_path": "README.md", "source_repo": "sgl-project/sglang", "source_sha": "e5cfd3d65b13a715964a1497f9514afc0c1726e7"}
+# sgl-project/sglang · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [sgl-project/sglang](https://github.com/sgl-project/sglang) |
+| 来源文件 | [README.md](https://github.com/sgl-project/sglang/blob/e5cfd3d65b13a715964a1497f9514afc0c1726e7/README.md) |
+| 来源版本 | `e5cfd3d65b13a715964a1497f9514afc0c1726e7` |
+| 摄取时间 | `2026-07-11T06:09:14.564666+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_sgl_project_sglang_readme_md_e5cfd3d65b13` |
+
+## 本次变化
+
+- 新增行数 `95`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- News
+- About
+- Getting Started
+- Benchmark and Performance
+- Adoption and Sponsorship
+- Contact Us
+- Acknowledgment
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <div align="center" id="sglangtop">
 <img src="https://raw.githubusercontent.com/sgl-project/sglang/main/assets/logo.png" alt="logo" width="400" margin="10px"></img>
@@ -98,8 +129,10 @@ Long-term active SGLang contributors are eligible for coding agent sponsorship, 
 ## Acknowledgment
 We learned the design and reused code from the following projects: [Guidance](https://github.com/guidance-ai/guidance), [vLLM](https://github.com/vllm-project/vllm), [LightLLM](https://github.com/ModelTC/lightllm), [FlashInfer](https://github.com/flashinfer-ai/flashinfer), [Outlines](https://github.com/outlines-dev/outlines), and [LMQL](https://github.com/eth-sri/lmql).
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -204,3 +237,5 @@ We learned the design and reused code from the following projects: [Guidance](ht
 +## Acknowledgment
 +We learned the design and reused code from the following projects: [Guidance](https://github.com/guidance-ai/guidance), [vLLM](https://github.com/vllm-project/vllm), [LightLLM](https://github.com/ModelTC/lightllm), [FlashInfer](https://github.com/flashinfer-ai/flashinfer), [Outlines](https://github.com/outlines-dev/outlines), and [LMQL](https://github.com/eth-sri/lmql).
 ```
+
+</details>

@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0019_python_context_compaction_strategy_md_8fffb185d1a8", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:57.039098+00:00", "source_path": "docs/decisions/0019-python-context-compaction-strategy.md", "source_repo": "microsoft/agent-framework", "source_sha": "8fffb185d1a89894b44a9104c9c1efacf1b25dfe"}
+# microsoft/agent-framework · docs/decisions/0019-python-context-compaction-strategy.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0019-python-context-compaction-strategy.md](https://github.com/microsoft/agent-framework/blob/8fffb185d1a89894b44a9104c9c1efacf1b25dfe/docs/decisions/0019-python-context-compaction-strategy.md) |
+| 来源版本 | `8fffb185d1a89894b44a9104c9c1efacf1b25dfe` |
+| 摄取时间 | `2026-07-11T06:08:57.039098+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0019_python_context_compaction_strategy_md_8fffb185d1a8` |
+
+## 本次变化
+
+- 新增行数 `1249`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Context Compaction Strategy for Long-Running Agents
+- Context and Problem Statement
+- Why Current Architecture Cannot Support In-Run Compaction
+- Message-list correctness constraint: Atomic group preservation
+- Where Compaction Is Needed
+- Scope: Not Applicable to Service-Managed Storage
+- Decision Drivers
+- Considered Options
+- Pros and Cons of the Options
+- Option 1: Standalone `CompactionStrategy` Object
+- Variant A: In-place mutation
+- Variant B: Return new list
+- Inside the function invocation loop
+- Variant C: Group-aware compaction entry points
+- Variant C1: `MessageGroups` sidecar state
+- Usage at a compaction point:
+- optional also emit OTEL events next to these loggers, but not sure if needed
+- add messages from response into new group and to the groups.
+- Variant C2: `_`-prefixed metadata directly on `Message`
+- Variant D: Exclude-based projection (builds on Variant C1/C2)
+- Variant D1: exclusion state on `MessageGroup`
+- Variant D2: exclusion state on message `_`-attributes
+- Variant E: Tokenization and accounting (builds on Variant C1/C2)
+- Variant E1: token rollups on grouped state
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: accepted
@@ -1252,8 +1300,10 @@ Implementation is split into two phases:
 1. **Phase 1 (PR 1):** runtime compaction foundation in `agent_framework/_compaction.py`, in-run integration, and extensive core tests, plus in-run compaction samples (`basics`, `advanced`, `custom`).
 2. **Phase 2 (PR 2):** history/storage compaction (`upsert`-based full replacement), provider support, storage tests, and storage-focused sample (`storage`).
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -2512,3 +2562,5 @@ Implementation is split into two phases:
 +1. **Phase 1 (PR 1):** runtime compaction foundation in `agent_framework/_compaction.py`, in-run integration, and extensive core tests, plus in-run compaction samples (`basics`, `advanced`, `custom`).
 +2. **Phase 2 (PR 2):** history/storage compaction (`upsert`-based full replacement), provider support, storage tests, and storage-focused sample (`storage`).
 ```
+
+</details>

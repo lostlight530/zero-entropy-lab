@@ -1,6 +1,40 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_nixl_kv_push_connector_md_b99ba6659f74", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:11.493303+00:00", "source_path": "docs/design/nixl_kv_push_connector.md", "source_repo": "vllm-project/vllm", "source_sha": "b99ba6659f746340ed8f8b322d6104c70d172658"}
+# vllm-project/vllm · docs/design/nixl_kv_push_connector.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/nixl_kv_push_connector.md](https://github.com/vllm-project/vllm/blob/b99ba6659f746340ed8f8b322d6104c70d172658/docs/design/nixl_kv_push_connector.md) |
+| 来源版本 | `b99ba6659f746340ed8f8b322d6104c70d172658` |
+| 摄取时间 | `2026-07-11T06:09:11.493303+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_nixl_kv_push_connector_md_b99ba6659f74` |
+
+## 本次变化
+
+- 新增行数 `256`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- NIXL push-mode KV transfer
+- High-level flow
+- Threads
+- Wake model
+- Writer-local matching tables
+- Wire format
+- Scheduler-side responsibilities
+- Timeouts and watchdogs
+- Failure handling
+- Summary
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # NIXL push-mode KV transfer
 
@@ -259,8 +293,10 @@ existing NIXL connector:
 Behavior on the engine main thread is otherwise unchanged. The writer
 thread is event-driven and idle when there is no push work.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -526,3 +562,5 @@ thread is event-driven and idle when there is no push work.
 +Behavior on the engine main thread is otherwise unchanged. The writer
 +thread is event-driven and idle when there is no push work.
 ```
+
+</details>

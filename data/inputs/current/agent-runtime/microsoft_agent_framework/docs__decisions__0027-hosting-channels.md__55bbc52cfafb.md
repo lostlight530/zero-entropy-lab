@@ -1,6 +1,53 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0027_hosting_channels_md_55bbc52cfafb", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:58.504997+00:00", "source_path": "docs/decisions/0027-hosting-channels.md", "source_repo": "microsoft/agent-framework", "source_sha": "55bbc52cfafb13f8bd828b0451ac1e18e1666d33"}
+# microsoft/agent-framework · docs/decisions/0027-hosting-channels.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0027-hosting-channels.md](https://github.com/microsoft/agent-framework/blob/55bbc52cfafb13f8bd828b0451ac1e18e1666d33/docs/decisions/0027-hosting-channels.md) |
+| 来源版本 | `55bbc52cfafb13f8bd828b0451ac1e18e1666d33` |
+| 摄取时间 | `2026-07-11T06:08:58.504997+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0027_hosting_channels_md_55bbc52cfafb` |
+
+## 本次变化
+
+- 新增行数 `518`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Python protocol helpers and optional execution state
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- 1. Create protocol-specific hosts
+- 2. Ship a full host/channel framework
+- 3. Ship protocol helpers plus optional execution state
+- Decision Outcome
+- Helper naming and families
+- Security responsibilities for application builders
+- Session continuity
+- Workflow checkpoints
+- session_id must already be authenticated and authorized for this caller
+- session_id must already be authenticated and authorized for this caller
+- Non-goals for v1
+- App-owned in v1
+- Future framework work
+- Consequences
+- More Information
+- Appendix: Developer experience sketch
+- Optional execution state
+- Responses-only route
+- Responses-only Django class-based view
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: accepted
@@ -521,8 +568,10 @@ class ResponsesView(View):
         return JsonResponse(responses_from_run(result, response_id=response_id, session_id=candidate_session_id))
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1050,3 +1099,5 @@ class ResponsesView(View):
 +        return JsonResponse(responses_from_run(result, response_id=response_id, session_id=candidate_session_id))
 +```
 ```
+
+</details>

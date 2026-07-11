@@ -1,6 +1,31 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_tencentcloudadp_youtu_agent_examples_basic_tools_dynamic_toolkit_py_4f0881adb318", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:05.478792+00:00", "source_path": "examples/basic/tools/dynamic_toolkit.py", "source_repo": "TencentCloudADP/youtu-agent", "source_sha": "4f0881adb31821d4693373134d5d62b1e58048f3"}
+# TencentCloudADP/youtu-agent · examples/basic/tools/dynamic_toolkit.py
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [TencentCloudADP/youtu-agent](https://github.com/TencentCloudADP/youtu-agent) |
+| 来源文件 | [examples/basic/tools/dynamic_toolkit.py](https://github.com/TencentCloudADP/youtu-agent/blob/4f0881adb31821d4693373134d5d62b1e58048f3/examples/basic/tools/dynamic_toolkit.py) |
+| 来源版本 | `4f0881adb31821d4693373134d5d62b1e58048f3` |
+| 摄取时间 | `2026-07-11T06:09:05.478792+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_tencentcloudadp_youtu_agent_examples_basic_tools_dynamic_toolkit_py_4f0881adb318` |
+
+## 本次变化
+
+- 新增行数 `175`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 未发现 Markdown 标题.
+
+<details>
+<summary>展开完整外部原文</summary>
 
 """Dynamic toolkit that registers tools from an API at runtime.
 
@@ -178,8 +203,10 @@ class DynamicToolkit(AsyncBaseToolkit):
         self.session_id = None
         self._tools_map = None
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -364,3 +391,5 @@ class DynamicToolkit(AsyncBaseToolkit):
 +        self.session_id = None
 +        self._tools_map = None
 ```
+
+</details>

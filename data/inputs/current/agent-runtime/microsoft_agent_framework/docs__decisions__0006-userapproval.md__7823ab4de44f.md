@@ -1,6 +1,47 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0006_userapproval_md_7823ab4de44f", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:54.961356+00:00", "source_path": "docs/decisions/0006-userapproval.md", "source_repo": "microsoft/agent-framework", "source_sha": "7823ab4de44f992a4127c604c4f7937694d60412"}
+# microsoft/agent-framework · docs/decisions/0006-userapproval.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0006-userapproval.md](https://github.com/microsoft/agent-framework/blob/7823ab4de44f992a4127c604c4f7937694d60412/docs/decisions/0006-userapproval.md) |
+| 来源版本 | `7823ab4de44f992a4127c604c4f7937694d60412` |
+| 摄取时间 | `2026-07-11T06:08:54.961356+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0006_userapproval_md_7823ab4de44f` |
+
+## 本次变化
+
+- 新增行数 `521`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- These are optional elements. Feel free to remove any of them.
+- Agent User Approvals Content Types and FunctionCall approvals Design
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- 1. Return a FunctionCallContent to the agent caller, that it executes
+- 2. Introduce an ApprovalCallback in AgentRunOptions and ChatOptions
+- 3. Introduce new ApprovalRequestContent and ApprovalResponseContent types
+- 4. Introduce new Container UserInputRequestContent and UserInputResponseContent types
+- 5. Introduce new Base UserInputRequestContent and UserInputResponseContent types
+- Decision Outcome
+- Appendices
+- ChatClientAgent Approval Process Flow
+- CustomAgent Approval Process Flow
+- Sequence Diagram: FunctionInvokingChatClient with built in Approval Generation
+- Sequence Diagram: Post FunctionInvokingChatClient ApprovalGeneratingChatClient - Multiple function calls with partial approval
+- Sequence Diagram: Pre FunctionInvokingChatClient ApprovalGeneratingChatClient - Multiple function calls with partial approval
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 # These are optional elements. Feel free to remove any of them.
@@ -524,8 +565,10 @@ sequenceDiagram
     ApprovalGeneratingChatClient-->>-Developer: [FunctionCallContent(GetMenu)]<br/>[FunctionResultContent(GetMenu, "mains.... deserts...")]<br/>[FunctionCallContent(GetSpecials)<br/>[FunctionResultContent(GetSpecials, "Function invocation denied"))]<br/>[TextContent("The specials soup is...")]
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1056,3 +1099,5 @@ sequenceDiagram
 +    ApprovalGeneratingChatClient-->>-Developer: [FunctionCallContent(GetMenu)]<br/>[FunctionResultContent(GetMenu, "mains.... deserts...")]<br/>[FunctionCallContent(GetSpecials)<br/>[FunctionResultContent(GetSpecials, "Function invocation denied"))]<br/>[TextContent("The specials soup is...")]
 +```
 ```
+
+</details>

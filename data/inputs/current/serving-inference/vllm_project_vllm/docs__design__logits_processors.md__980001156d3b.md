@@ -1,6 +1,44 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_logits_processors_md_980001156d3b", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:10.435289+00:00", "source_path": "docs/design/logits_processors.md", "source_repo": "vllm-project/vllm", "source_sha": "980001156d3b0f33f30ab103530b9e261494b1f5"}
+# vllm-project/vllm · docs/design/logits_processors.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/logits_processors.md](https://github.com/vllm-project/vllm/blob/980001156d3b0f33f30ab103530b9e261494b1f5/docs/design/logits_processors.md) |
+| 来源版本 | `980001156d3b0f33f30ab103530b9e261494b1f5` |
+| 摄取时间 | `2026-07-11T06:09:10.435289+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_logits_processors_md_980001156d3b` |
+
+## 本次变化
+
+- 新增行数 `571`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Logits Processors
+- Logits Processors Background
+- Logits Processors in the vLLM engine
+- Updating Logits Processor Internal State
+- Applying Logits Processors to the Model Output Logits
+- Logits Processor Programming Model
+- `BatchUpdate` data structure
+- How the vLLM engine builds the `BatchUpdate` data structure
+- Example: Batch Update with Fewer New Requests Than Finished Requests
+- Example: Batch Update with More New Requests Than Finished Requests
+- How to Introduce a New Logits Processor to vLLM
+- Best Practices for Writing Built-In Logits Processors
+- Built-In Logits Processors
+- Custom Logits Processors
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Logits Processors
 
@@ -574,8 +612,10 @@ Additionally, the following logits-processor-like functionalities are hard-coded
 
 vLLM can be augmented with [user-provided custom logits processors](../features/custom_logitsprocs.md).
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1156,3 +1196,5 @@ vLLM can be augmented with [user-provided custom logits processors](../features/
 +
 +vLLM can be augmented with [user-provided custom logits processors](../features/custom_logitsprocs.md).
 ```
+
+</details>

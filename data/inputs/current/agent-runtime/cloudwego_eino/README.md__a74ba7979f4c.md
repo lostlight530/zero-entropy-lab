@@ -1,6 +1,48 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_cloudwego_eino_readme_md_a74ba7979f4c", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:03.604045+00:00", "source_path": "README.md", "source_repo": "cloudwego/eino", "source_sha": "a74ba7979f4c7e3c895f26ae520fa0125bce9505"}
+# cloudwego/eino · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [cloudwego/eino](https://github.com/cloudwego/eino) |
+| 来源文件 | [README.md](https://github.com/cloudwego/eino/blob/a74ba7979f4c7e3c895f26ae520fa0125bce9505/README.md) |
+| 来源版本 | `a74ba7979f4c7e3c895f26ae520fa0125bce9505` |
+| 摄取时间 | `2026-07-11T06:09:03.604045+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_cloudwego_eino_readme_md_a74ba7979f4c` |
+
+## 本次变化
+
+- 新增行数 `209`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Eino
+- Overview
+- Quick Start
+- ChatModelAgent
+- DeepAgent
+- Composition
+- Key Features
+- Component Ecosystem
+- Stream Processing
+- Callback Aspects
+- Interrupt/Resume
+- Framework Structure
+- Documentation
+- Dependencies
+- Code Style
+- Security
+- Contact
+- License
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Eino
 
@@ -212,8 +254,10 @@ Do **not** create a public GitHub issue.
 
 This project is licensed under the [Apache-2.0 License](LICENSE-APACHE).
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -432,3 +476,5 @@ This project is licensed under the [Apache-2.0 License](LICENSE-APACHE).
 +
 +This project is licensed under the [Apache-2.0 License](LICENSE-APACHE).
 ```
+
+</details>

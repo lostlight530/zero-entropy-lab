@@ -1,6 +1,41 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_optimization_levels_md_3261aed74794", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:11.614967+00:00", "source_path": "docs/design/optimization_levels.md", "source_repo": "vllm-project/vllm", "source_sha": "3261aed747948e3008b6af6abc6a1f458bc3e636"}
+# vllm-project/vllm · docs/design/optimization_levels.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/optimization_levels.md](https://github.com/vllm-project/vllm/blob/3261aed747948e3008b6af6abc6a1f458bc3e636/docs/design/optimization_levels.md) |
+| 来源版本 | `3261aed747948e3008b6af6abc6a1f458bc3e636` |
+| 摄取时间 | `2026-07-11T06:09:11.614967+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_optimization_levels_md_3261aed74794` |
+
+## 本次变化
+
+- 新增行数 `89`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Optimization Levels
+- Overview
+- Level Summaries and Usage Examples
+- CLI usage
+- Python API usage
+- `-O0`: No Optimization
+- `-O1`: Fast Optimization
+- `-O2`: Full Optimization (Default)
+- `-O3`: Aggressive Optimization
+- Troubleshooting
+- Common Issues
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Optimization Levels
 
@@ -92,8 +127,10 @@ in the future that are more time-consuming or experimental.
 2. **Compilation Errors**: Use `debug_dump_path` for additional debugging information
 3. **Performance Issues**: Ensure using `-O2` for production
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -192,3 +229,5 @@ in the future that are more time-consuming or experimental.
 +2. **Compilation Errors**: Use `debug_dump_path` for additional debugging information
 +3. **Performance Issues**: Ensure using `-O2` for production
 ```
+
+</details>

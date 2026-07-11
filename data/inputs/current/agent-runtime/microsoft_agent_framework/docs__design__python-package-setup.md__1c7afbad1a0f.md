@@ -1,6 +1,47 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_design_python_package_setup_md_1c7afbad1a0f", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:59.715358+00:00", "source_path": "docs/design/python-package-setup.md", "source_repo": "microsoft/agent-framework", "source_sha": "1c7afbad1a0f494855e2c29669001d90f01c7722"}
+# microsoft/agent-framework · docs/design/python-package-setup.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/design/python-package-setup.md](https://github.com/microsoft/agent-framework/blob/1c7afbad1a0f494855e2c29669001d90f01c7722/docs/design/python-package-setup.md) |
+| 来源版本 | `1c7afbad1a0f494855e2c29669001d90f01c7722` |
+| 摄取时间 | `2026-07-11T06:08:59.715358+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_design_python_package_setup_md_1c7afbad1a0f` |
+
+## 本次变化
+
+- 新增行数 `273`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Python Package design for Agent Framework
+- Design goals
+- Sample getting started code
+- Global Package structure
+- File structure
+- Subpackage scope
+- Evolving the package structure
+- Coding standards
+- Tooling
+- Type checking
+- Task runner
+- Unit test coverage
+- Telemetry and logging
+- Logging
+- in file _logging.py
+- Telemetry
+- Build and release
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Python Package design for Agent Framework
 
@@ -276,8 +317,10 @@ The build step will be done in GHA, adding the package to the release and then w
 
 For now we will stick to semantic versioning, and all preview release will be tagged as such.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -560,3 +603,5 @@ For now we will stick to semantic versioning, and all preview release will be ta
 +
 +For now we will stick to semantic versioning, and all preview release will be tagged as such.
 ```
+
+</details>

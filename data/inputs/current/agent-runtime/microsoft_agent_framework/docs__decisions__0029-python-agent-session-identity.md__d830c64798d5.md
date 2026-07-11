@@ -1,6 +1,50 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0029_python_agent_session_identity_md_d830c64798d5", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:58.923912+00:00", "source_path": "docs/decisions/0029-python-agent-session-identity.md", "source_repo": "microsoft/agent-framework", "source_sha": "d830c64798d501aae1fc4644491c005958ede348"}
+# microsoft/agent-framework · docs/decisions/0029-python-agent-session-identity.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0029-python-agent-session-identity.md](https://github.com/microsoft/agent-framework/blob/d830c64798d501aae1fc4644491c005958ede348/docs/decisions/0029-python-agent-session-identity.md) |
+| 来源版本 | `d830c64798d501aae1fc4644491c005958ede348` |
+| 摄取时间 | `2026-07-11T06:08:58.923912+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0029_python_agent_session_identity_md_d830c64798d5` |
+
+## 本次变化
+
+- 新增行数 `356`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Python identity lifetimes for sessions, tasks, and continuation
+- Context and Problem Statement
+- Concrete gap example
+- Current implementation notes
+- Decision Drivers
+- Non-goals
+- Remaining question: durable shape for additional continuation state
+- Option A: Use protocol-specific `AgentSession` subclasses
+- First call returns a task that future A2A messages may need to reference.
+- A2AAgent updates durable A2A protocol state from the returned task/status payload.
+- The user does not set these manually.
+- Later call reuses the durable A2A session state. A2AAgent decides whether to send task_id
+- for INPUT_REQUIRED or reference_task_ids for task refinement.
+- Option B: Extend `service_session_id` with richer service-owned values
+- Option C: Add a dedicated dict for additional session details
+- Option D: Store additional durable state inside `AgentSession.state`
+- Decision
+- Appendix: A2A `task_id` and `reference_task_ids` implementation check
+- Appendix: implementation notes for Option B
+- More Information
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: accepted
@@ -359,8 +403,10 @@ Related work and issues:
 - [ADR-0018](0018-agentthread-serialization.md): AgentSession serialization.
 - [ADR-0026](0026-hosted-session-identity-context.md): hosted session identity context.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -726,3 +772,5 @@ Related work and issues:
 +- [ADR-0018](0018-agentthread-serialization.md): AgentSession serialization.
 +- [ADR-0026](0026-hosted-session-identity-context.md): hosted session identity context.
 ```
+
+</details>

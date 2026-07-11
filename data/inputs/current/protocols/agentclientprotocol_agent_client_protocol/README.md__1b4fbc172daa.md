@@ -1,6 +1,36 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_agentclientprotocol_agent_client_protocol_readme_md_1b4fbc172daa", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:41.092103+00:00", "source_path": "README.md", "source_repo": "agentclientprotocol/agent-client-protocol", "source_sha": "1b4fbc172daae9b829cf8337bd92d99b2855e721"}
+# agentclientprotocol/agent-client-protocol · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [agentclientprotocol/agent-client-protocol](https://github.com/agentclientprotocol/agent-client-protocol) |
+| 来源文件 | [README.md](https://github.com/agentclientprotocol/agent-client-protocol/blob/1b4fbc172daae9b829cf8337bd92d99b2855e721/README.md) |
+| 来源版本 | `1b4fbc172daae9b829cf8337bd92d99b2855e721` |
+| 摄取时间 | `2026-07-11T06:08:41.092103+00:00` |
+| 归属层 | `protocols` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_agentclientprotocol_agent_client_protocol_readme_md_1b4fbc172daa` |
+
+## 本次变化
+
+- 新增行数 `52`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Agent Client Protocol
+- Rust Crate and Schema Artifacts
+- Versioning
+- Integrations
+- Contributing
+- Contribution Policy
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <a href="https://agentclientprotocol.com/" >
   <img alt="Agent Client Protocol" src="https://zed.dev/img/acp/banner-dark.webp">
@@ -55,8 +85,10 @@ This project does not require a Contributor License Agreement (CLA). Instead, co
 
 > By contributing to this project, you agree that your contributions will be licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). You affirm that you have the legal right to submit your work, that you are not including code you do not have rights to, and that you understand contributions are made without requiring a Contributor License Agreement (CLA).
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -118,3 +150,5 @@ This project does not require a Contributor License Agreement (CLA). Instead, co
 +
 +> By contributing to this project, you agree that your contributions will be licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). You affirm that you have the legal right to submit your work, that you are not including code you do not have rights to, and that you understand contributions are made without requiring a Contributor License Agreement (CLA).
 ```
+
+</details>

@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0023_foundry_evals_integration_md_ea9d2f3c694d", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:57.751330+00:00", "source_path": "docs/decisions/0023-foundry-evals-integration.md", "source_repo": "microsoft/agent-framework", "source_sha": "ea9d2f3c694d05af9c445b05764b917a8ab49e7c"}
+# microsoft/agent-framework · docs/decisions/0023-foundry-evals-integration.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0023-foundry-evals-integration.md](https://github.com/microsoft/agent-framework/blob/ea9d2f3c694d05af9c445b05764b917a8ab49e7c/docs/decisions/0023-foundry-evals-integration.md) |
+| 来源版本 | `ea9d2f3c694d05af9c445b05764b917a8ab49e7c` |
+| 摄取时间 | `2026-07-11T06:08:57.751330+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0023_foundry_evals_integration_md_ea9d2f3c694d` |
+
+## 本次变化
+
+- 新增行数 `815`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Agent Evaluation Architecture with Azure AI Foundry Integration
+- Context and Problem Statement
+- Functional Requirements for Agent Evaluation
+- Decision Drivers
+- Considered Options
+- Decision Outcome
+- Usage Examples
+- Evaluate an agent
+- results[0] (FoundryEvals)
+- Measure consistency with repetitions
+- results contain 3 items (1 query × 3 repetitions)
+- Evaluate a response you already have
+- Evaluate with conversation split strategies
+- Or per-turn: each user→assistant exchange scored independently
+- Evaluate a multi-agent workflow
+- Mix multiple providers
+- Custom function evaluators
+- What To Build
+- Core: Evaluator Protocol
+- Core: EvalItem
+- Internal: AgentEvalConverter
+- Core: EvalResults
+- Core: Orchestration Functions
+- Core: Conversation Split Strategies
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: accepted
@@ -818,8 +866,10 @@ public sealed class EvalItem
 
 - [Foundry Evals documentation](https://learn.microsoft.com/azure/ai-foundry/concepts/evaluation-approach-gen-ai) — Azure AI Foundry evaluation overview
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1644,3 +1694,5 @@ public sealed class EvalItem
 +
 +- [Foundry Evals documentation](https://learn.microsoft.com/azure/ai-foundry/concepts/evaluation-approach-gen-ai) — Azure AI Foundry evaluation overview
 ```
+
+</details>

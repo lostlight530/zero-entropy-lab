@@ -1,6 +1,52 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_deepseek_ai_flashmla_readme_md_1945725fb253", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:17.418840+00:00", "source_path": "README.md", "source_repo": "deepseek-ai/FlashMLA", "source_sha": "1945725fb253b7b1b4681bed10b04a1a83d5fe6e"}
+# deepseek-ai/FlashMLA · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [deepseek-ai/FlashMLA](https://github.com/deepseek-ai/FlashMLA) |
+| 来源文件 | [README.md](https://github.com/deepseek-ai/FlashMLA/blob/1945725fb253b7b1b4681bed10b04a1a83d5fe6e/README.md) |
+| 来源版本 | `1945725fb253b7b1b4681bed10b04a1a83d5fe6e` |
+| 摄取时间 | `2026-07-11T06:09:17.418840+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_deepseek_ai_flashmla_readme_md_1945725fb253` |
+
+## 本次变化
+
+- 新增行数 `234`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- FlashMLA
+- Introduction
+- News
+- Performance
+- Test & benchmark MLA decoding (Sparse & Dense):
+- Test & benchmark MHA prefill (Dense):
+- Test & benchmark MLA prefill (Sparse):
+- Requirements
+- Installation
+- Usage
+- MLA Decoding
+- Sparse MLA Prefill
+- Dense MHA Prefill
+- Acknowledgement
+- Community Support
+- MetaX
+- Moore Threads
+- Hygon DCU
+- Intellifusion
+- Iluvatar Corex
+- AMD Instinct
+- Citation
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # FlashMLA
 
@@ -237,8 +283,10 @@ The corresponding FlashMLA version can be found at: [AITER/MLA](https://github.c
 }
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -482,3 +530,5 @@ The corresponding FlashMLA version can be found at: [AITER/MLA](https://github.c
 +}
 +```
 ```
+
+</details>

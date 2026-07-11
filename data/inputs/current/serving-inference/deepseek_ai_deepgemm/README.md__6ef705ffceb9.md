@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_deepseek_ai_deepgemm_readme_md_6ef705ffceb9", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:18.006371+00:00", "source_path": "README.md", "source_repo": "deepseek-ai/DeepGEMM", "source_sha": "6ef705ffceb9f41b2f2588b62a910ed6cbc819a5"}
+# deepseek-ai/DeepGEMM · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [deepseek-ai/DeepGEMM](https://github.com/deepseek-ai/DeepGEMM) |
+| 来源文件 | [README.md](https://github.com/deepseek-ai/DeepGEMM/blob/6ef705ffceb9f41b2f2588b62a910ed6cbc819a5/README.md) |
+| 来源版本 | `6ef705ffceb9f41b2f2588b62a910ed6cbc819a5` |
+| 摄取时间 | `2026-07-11T06:09:18.006371+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_deepseek_ai_deepgemm_readme_md_6ef705ffceb9` |
+
+## 本次变化
+
+- 新增行数 `207`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- DeepGEMM
+- News
+- Quick start
+- Requirements
+- Development
+- Submodule must be cloned
+- Link some essential includes and build the CPP JIT module
+- Installation
+- Interfaces
+- Notices
+- Normal dense GEMMs (non-grouped)
+- Grouped GEMMs (contiguous layout)
+- Grouped GEMMs (masked layout)
+- V3.2 MQA kernels for the indexer
+- Mega MoE
+- Allocate symmetric memory buffer
+- NOTES: requires PyTorch >= 2.9
+- Transform weights (FP4 with UE8M0 SF) into the required layout
+- Copy inputs into the buffer before each call
+- You may fuse these into previous kernels
+- Run the fused mega MoE kernel
+- Utilities
+- Acknowledgement
+- License
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # DeepGEMM
 
@@ -210,8 +258,10 @@ This code repository is released under [the MIT License](LICENSE).
 }
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -428,3 +478,5 @@ This code repository is released under [the MIT License](LICENSE).
 +}
 +```
 ```
+
+</details>

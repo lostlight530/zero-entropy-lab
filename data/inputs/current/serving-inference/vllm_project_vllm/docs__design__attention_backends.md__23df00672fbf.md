@@ -1,6 +1,51 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_attention_backends_md_23df00672fbf", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:08.732428+00:00", "source_path": "docs/design/attention_backends.md", "source_repo": "vllm-project/vllm", "source_sha": "23df00672fbf1e65ae72442208b45dde3086d30c"}
+# vllm-project/vllm · docs/design/attention_backends.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/attention_backends.md](https://github.com/vllm-project/vllm/blob/23df00672fbf1e65ae72442208b45dde3086d30c/docs/design/attention_backends.md) |
+| 来源版本 | `23df00672fbf1e65ae72442208b45dde3086d30c` |
+| 摄取时间 | `2026-07-11T06:09:08.732428+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_attention_backends_md_23df00672fbf` |
+
+## 本次变化
+
+- 新增行数 `252`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Attention Backend Feature Support
+- Setting the Attention Backend
+- Command Line
+- Dot notation
+- JSON format
+- Python API
+- Method 1: Using AttentionConfig with enum
+- Method 2: Using attention_backend parameter with string
+- Backend Selection Behavior
+- Manual Selection
+- Automatic Selection
+- Backend Priority (CUDA)
+- Standard Attention (MHA, MQA, GQA)
+- MLA Attention (DeepSeek-style)
+- Legend
+- Standard Attention (MHA, MQA, GQA) Backends
+- MiniMax M3 Sparse Attention Backends
+- MLA (Multi-head Latent Attention) Backends
+- Prefill Backends
+- Decode Backends
+- DeepSeek V4 Decode Backends
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Attention Backend Feature Support
 
@@ -255,8 +300,10 @@ default on NVIDIA is `FLASHINFER_MLA_SPARSE_DSV4` on SM12x and
 | `FLASHMLA_SPARSE_DSV4` | bf16 | `auto`, `fp8_ds_mla`, `fp8` | 256 | 512 | ✅ | ❌ | ✅ | ❌ | ❌ | Decoder | 9.x-10.x |
 | `ROCM_FLASHMLA_SPARSE_DSV4` | fp16, bf16 | `auto` | Any | Any | ❌ | ❌ | ❌ | ❌ | ❌ | Decoder | N/A |
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -518,3 +565,5 @@ default on NVIDIA is `FLASHINFER_MLA_SPARSE_DSV4` on SM12x and
 +| `FLASHMLA_SPARSE_DSV4` | bf16 | `auto`, `fp8_ds_mla`, `fp8` | 256 | 512 | ✅ | ❌ | ✅ | ❌ | ❌ | Decoder | 9.x-10.x |
 +| `ROCM_FLASHMLA_SPARSE_DSV4` | fp16, bf16 | `auto` | Any | Any | ❌ | ❌ | ❌ | ❌ | ❌ | Decoder | N/A |
 ```
+
+</details>

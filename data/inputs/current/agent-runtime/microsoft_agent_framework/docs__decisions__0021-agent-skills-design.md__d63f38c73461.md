@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0021_agent_skills_design_md_d63f38c73461", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:57.337774+00:00", "source_path": "docs/decisions/0021-agent-skills-design.md", "source_repo": "microsoft/agent-framework", "source_sha": "d63f38c734616987dabdfee74738c361d7e8dc62"}
+# microsoft/agent-framework · docs/decisions/0021-agent-skills-design.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0021-agent-skills-design.md](https://github.com/microsoft/agent-framework/blob/d63f38c734616987dabdfee74738c361d7e8dc62/docs/decisions/0021-agent-skills-design.md) |
+| 来源版本 | `d63f38c734616987dabdfee74738c361d7e8dc62` |
+| 摄取时间 | `2026-07-11T06:08:57.337774+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0021_agent_skills_design_md_d63f38c73461` |
+
+## 本次变化
+
+- 新增行数 `960`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Agent Skills: Multi-Source Architecture
+- Context and Problem Statement
+- Decision Drivers
+- Architecture
+- Model-Facing Tools
+- Abstract Base Types
+- File-Based Skills
+- Programmatic Skills
+- Inline Skills
+- Class-Based Skills
+- Filtering, Caching, and Deduplication
+- Via Composition
+- Via AgentSkillsProvider
+- Builder Pattern
+- Adding a Custom Skill Type
+- Step 1 — Define a custom resource
+- Step 2 — Define a custom script
+- Step 3 — Define a custom skill
+- Step 4 — Define a custom source
+- Step 5 — Register with the builder
+- Script Representation: `AgentSkillScript` vs `AIFunction`
+- Option A — Custom `AgentSkillScript` abstract base class (original design)
+- Option B — Reuse `AIFunction` directly
+- Resource Representation: `AgentSkillResource` vs `AIFunction`
+
+<details>
+<summary>展开完整外部原文</summary>
 
 status: proposed
 date: 2026-03-23
@@ -963,8 +1011,10 @@ This leaves two public entry points:
 
 Caching of tools and instructions is implemented inside `AgentSkillsProvider` rather than as an external decorator. Recreating tools and instructions on every provider call is wasteful, and a caching decorator sitting outside the provider would not have the information needed to cache them effectively.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1934,3 +1984,5 @@ Caching of tools and instructions is implemented inside `AgentSkillsProvider` ra
 +
 +Caching of tools and instructions is implemented inside `AgentSkillsProvider` rather than as an external decorator. Recreating tools and instructions on every provider call is wasteful, and a caching decorator sitting outside the provider would not have the information needed to cache them effectively.
 ```
+
+</details>

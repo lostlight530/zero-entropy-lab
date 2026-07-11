@@ -1,6 +1,47 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_deepseek_ai_3fs_readme_md_18d89937ffbb", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:18.700554+00:00", "source_path": "README.md", "source_repo": "deepseek-ai/3FS", "source_sha": "18d89937ffbb47bfda1569b3d8bff743be64d70a"}
+# deepseek-ai/3FS · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [deepseek-ai/3FS](https://github.com/deepseek-ai/3FS) |
+| 来源文件 | [README.md](https://github.com/deepseek-ai/3FS/blob/18d89937ffbb47bfda1569b3d8bff743be64d70a/README.md) |
+| 来源版本 | `18d89937ffbb47bfda1569b3d8bff743be64d70a` |
+| 摄取时间 | `2026-07-11T06:09:18.700554+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_deepseek_ai_3fs_readme_md_18d89937ffbb` |
+
+## 本次变化
+
+- 新增行数 `129`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Fire-Flyer File System
+- Documentation
+- Performance
+- 1. Peak throughput
+- 2. GraySort
+- 3. KVCache
+- Check out source code
+- Install dependencies
+- for Ubuntu 20.04.
+- for Ubuntu 22.04.
+- for openEuler 2403sp1
+- for OpenCloudOS 9 and TencentOS 4
+- Build 3FS
+- Replace <method> with 'g++10' or 'g++11' based on your environment
+- Build 3FS use Docker
+- Run a test cluster
+- Report Issues
+
+<details>
+<summary>展开完整外部原文</summary>
 
 #  Fire-Flyer File System
 
@@ -132,8 +173,10 @@ Follow instructions in [setup guide](deploy/README.md) to run a test cluster.
 
 Please visit https://github.com/deepseek-ai/3fs/issues to report issues.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -272,3 +315,5 @@ Please visit https://github.com/deepseek-ai/3fs/issues to report issues.
 +
 +Please visit https://github.com/deepseek-ai/3fs/issues to report issues.
 ```
+
+</details>

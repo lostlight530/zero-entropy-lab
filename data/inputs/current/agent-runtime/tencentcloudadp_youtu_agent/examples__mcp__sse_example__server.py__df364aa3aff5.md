@@ -1,6 +1,31 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_tencentcloudadp_youtu_agent_examples_mcp_sse_example_server_py_df364aa3aff5", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:05.741290+00:00", "source_path": "examples/mcp/sse_example/server.py", "source_repo": "TencentCloudADP/youtu-agent", "source_sha": "df364aa3aff51eb3ebdf0a512528c618ad91c951"}
+# TencentCloudADP/youtu-agent · examples/mcp/sse_example/server.py
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [TencentCloudADP/youtu-agent](https://github.com/TencentCloudADP/youtu-agent) |
+| 来源文件 | [examples/mcp/sse_example/server.py](https://github.com/TencentCloudADP/youtu-agent/blob/df364aa3aff51eb3ebdf0a512528c618ad91c951/examples/mcp/sse_example/server.py) |
+| 来源版本 | `df364aa3aff51eb3ebdf0a512528c618ad91c951` |
+| 摄取时间 | `2026-07-11T06:09:05.741290+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_tencentcloudadp_youtu_agent_examples_mcp_sse_example_server_py_df364aa3aff5` |
+
+## 本次变化
+
+- 新增行数 `33`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Create server
+
+<details>
+<summary>展开完整外部原文</summary>
 
 import random
 
@@ -36,8 +61,10 @@ def get_current_weather(city: str) -> str:
 if __name__ == "__main__":
     mcp.run(transport="sse")
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -80,3 +107,5 @@ if __name__ == "__main__":
 +if __name__ == "__main__":
 +    mcp.run(transport="sse")
 ```
+
+</details>
