@@ -1,6 +1,47 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0014_feature_collections_md_d96ab4ca5a84", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:56.110436+00:00", "source_path": "docs/decisions/0014-feature-collections.md", "source_repo": "microsoft/agent-framework", "source_sha": "d96ab4ca5a845775a6447d923a7324fe12118f9b"}
+# microsoft/agent-framework · docs/decisions/0014-feature-collections.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0014-feature-collections.md](https://github.com/microsoft/agent-framework/blob/d96ab4ca5a845775a6447d923a7324fe12118f9b/docs/decisions/0014-feature-collections.md) |
+| 来源版本 | `d96ab4ca5a845775a6447d923a7324fe12118f9b` |
+| 摄取时间 | `2026-07-11T06:08:56.110436+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0014_feature_collections_md_d96ab4ca5a84` |
+
+## 本次变化
+
+- 新增行数 `423`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Feature Collections
+- Context and Problem Statement
+- Sample Scenario 1 - Per Run ChatMessageStore Override for hosting Libraries
+- Sample Scenario 2 - Structured output
+- Implementation Options
+- IServiceProvider
+- AdditionalProperties dictionary
+- Feature Collection
+- Feature Collections extension points
+- Reconciling with existing AdditionalProperties
+- Feature Collection Implementation
+- Roll our own
+- Reuse asp.net IFeatureCollection
+- Feature Layering
+- Layering Options
+- Accessing application level features Options
+- Decisions
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: accepted
@@ -426,8 +467,10 @@ We need to consider how application level features would be accessed if supporte
 - Feature Collections Container: Use AdditionalProperties
 - Feature Layering: No layering - only a single collection/dictionary is supported per action. Application layers can be added later if needed.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -860,3 +903,5 @@ We need to consider how application level features would be accessed if supporte
 +- Feature Collections Container: Use AdditionalProperties
 +- Feature Layering: No layering - only a single collection/dictionary is supported per action. Application layers can be added later if needed.
 ```
+
+</details>

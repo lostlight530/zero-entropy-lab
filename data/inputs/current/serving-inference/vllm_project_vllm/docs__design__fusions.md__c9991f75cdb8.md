@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_fusions_md_c9991f75cdb8", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:09.884511+00:00", "source_path": "docs/design/fusions.md", "source_repo": "vllm-project/vllm", "source_sha": "c9991f75cdb88796b834fd2e6cdc77ae5f341ae2"}
+# vllm-project/vllm · docs/design/fusions.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/fusions.md](https://github.com/vllm-project/vllm/blob/c9991f75cdb88796b834fd2e6cdc77ae5f341ae2/docs/design/fusions.md) |
+| 来源版本 | `c9991f75cdb88796b834fd2e6cdc77ae5f341ae2` |
+| 摄取时间 | `2026-07-11T06:09:09.884511+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_fusions_md_c9991f75cdb8` |
+
+## 本次变化
+
+- 新增行数 `418`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Fusion torch.compile passes
+- Quick Reference
+- Support Matrix
+- Enabling / Disabling Fusions
+- Enable O2 defaults, but turn off allreduce fusion
+- The above is equivalent to the more verbose:
+- Same syntax in other commands, e.g. vllm bench:
+- Fusion Details
+- AllReduce + RMSNorm (`fuse_allreduce_rms`)
+- Attention + Quantization (`fuse_attn_quant`)
+- RoPE + KV-Cache Update (`fuse_rope_kvcache`)
+- Sequence Parallelism (`enable_sp`)
+- AsyncTP GEMM + Collective Overlap (`fuse_gemm_comms`)
+- QK Norm + RoPE (`enable_qk_norm_rope_fusion`)
+- Unfused:
+- Fused:
+- RMSNorm + Quantization (`fuse_norm_quant`)
+- SiLU+Mul + Quantization (`fuse_act_quant`)
+- RMSNorm + Padding (`fuse_act_padding`)
+- MLA Dual RMSNorm (`fuse_mla_dual_rms_norm`)
+- Unfused:
+- Fused:
+- Unfused (q norm+quant fused; kv still plain rms_norm):
+- Fused:
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Fusion torch.compile passes
 
@@ -421,8 +469,10 @@ q_fp8, q_scale, kv_normed = fused_mla_dual_rms_norm_per_token_quant(
 - [Attention Backends](attention_backends.md) — attention-specific kernel
   selection.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -850,3 +900,5 @@ q_fp8, q_scale, kv_normed = fused_mla_dual_rms_norm_per_token_quant(
 +- [Attention Backends](attention_backends.md) — attention-specific kernel
 +  selection.
 ```
+
+</details>

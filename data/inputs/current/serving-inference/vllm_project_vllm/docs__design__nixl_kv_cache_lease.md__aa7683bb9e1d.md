@@ -1,6 +1,46 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_nixl_kv_cache_lease_md_aa7683bb9e1d", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:11.361249+00:00", "source_path": "docs/design/nixl_kv_cache_lease.md", "source_repo": "vllm-project/vllm", "source_sha": "aa7683bb9e1dbee17f86a462a47442f50b2a3b25"}
+# vllm-project/vllm · docs/design/nixl_kv_cache_lease.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/nixl_kv_cache_lease.md](https://github.com/vllm-project/vllm/blob/aa7683bb9e1dbee17f86a462a47442f50b2a3b25/docs/design/nixl_kv_cache_lease.md) |
+| 来源版本 | `aa7683bb9e1dbee17f86a462a47442f50b2a3b25` |
+| 摄取时间 | `2026-07-11T06:09:11.361249+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_nixl_kv_cache_lease_md_aa7683bb9e1d` |
+
+## 本次变化
+
+- 新增行数 `136`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- NIXL KV Cache Lease Renewal
+- Motivation
+- The single-timeout problem
+- The overloading problem
+- Solution: lease renewal via heartbeats
+- How It Works
+- Lease lifecycle
+- Piggybacking on NIXL notifications
+- Scheduler-side tracking (D)
+- Timing and simplicity
+- Happy Path
+- Decode Instance Crash
+- Worker-side sending and receiving
+- Bidirectional KV Transfer
+- Key Design Decisions
+- Configuration
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # NIXL KV Cache Lease Renewal
 
@@ -139,8 +179,10 @@ vllm serve <MODEL> \
 
 For full NixlConnector configuration details, see the [NixlConnector Usage Guide](../features/nixl_connector_usage.md).
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -286,3 +328,5 @@ For full NixlConnector configuration details, see the [NixlConnector Usage Guide
 +
 +For full NixlConnector configuration details, see the [NixlConnector Usage Guide](../features/nixl_connector_usage.md).
 ```
+
+</details>

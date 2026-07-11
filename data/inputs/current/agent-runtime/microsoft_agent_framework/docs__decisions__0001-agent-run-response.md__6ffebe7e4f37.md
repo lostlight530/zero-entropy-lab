@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0001_agent_run_response_md_6ffebe7e4f37", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:54.198180+00:00", "source_path": "docs/decisions/0001-agent-run-response.md", "source_repo": "microsoft/agent-framework", "source_sha": "6ffebe7e4f3799cfaf096ef66c3e62924ee46be8"}
+# microsoft/agent-framework · docs/decisions/0001-agent-run-response.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0001-agent-run-response.md](https://github.com/microsoft/agent-framework/blob/6ffebe7e4f3799cfaf096ef66c3e62924ee46be8/docs/decisions/0001-agent-run-response.md) |
+| 来源版本 | `6ffebe7e4f3799cfaf096ef66c3e62924ee46be8` |
+| 摄取时间 | `2026-07-11T06:08:54.198180+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0001_agent_run_response_md_6ffebe7e4f37` |
+
+## 本次变化
+
+- 新增行数 `515`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- These are optional elements. Feel free to remove any of them.
+- Agent Run Responses Design
+- Context and Problem Statement
+- Agent response data types
+- Different use cases for Primary and Secondary output
+- Comparison with other SDKs / Protocols
+- Decision Drivers
+- Response Type Options
+- Option 1 Run: Messages List contains mix of Primary and Secondary content, RunStreaming: Stream of Primary + Secondary
+- Option 1.1 `TextContent`, `DataContent` and `UriContent` means Primary content
+- Option 1.1a `TextContent`, `DataContent` and `UriContent` means Primary content, with custom Agent response types
+- Option 1.2 Presence of Secondary Content is determined by a runtime parameter
+- Option 2 Run: Container with Primary and Secondary Properties, RunStreaming: Stream of Primary + Secondary
+- Option 3 Run: Primary-only, RunStreaming: Stream of Primary + Secondary
+- Option 4: Remove Run API and retain RunStreaming API only, which returns a Stream of Primary + Secondary
+- Custom Response Type Design Options
+- Option 1 Response types extend MEAI types
+- Option 2 New Response types
+- Long Running Processes Options
+- Option 1: Add another AIContent type and ChatFinishReason for long running processes
+- Option 2: Add another property on responses for AgentRun
+- Structured user input options (Work in progress)
+- Tool result options (Work in progress)
+- StructuredOutputs
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 # These are optional elements. Feel free to remove any of them.
@@ -518,8 +566,10 @@ We need to decide what AIContent types, each agent response type will be mapped 
 | A2A | No equivalent present, response only contains a [message](https://a2a-protocol.org/latest/specification/#64-message-object) or [task](https://a2a-protocol.org/latest/specification/#61-task-object). |
 | Protocol Activity | [No equivalent present.](https://github.com/microsoft/Agents/blob/main/specs/activity/protocol-activity.md) |
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1044,3 +1094,5 @@ We need to decide what AIContent types, each agent response type will be mapped 
 +| A2A | No equivalent present, response only contains a [message](https://a2a-protocol.org/latest/specification/#64-message-object) or [task](https://a2a-protocol.org/latest/specification/#61-task-object). |
 +| Protocol Activity | [No equivalent present.](https://github.com/microsoft/Agents/blob/main/specs/activity/protocol-activity.md) |
 ```
+
+</details>

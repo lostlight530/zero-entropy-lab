@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0025_foundry_toolbox_support_md_a68b98b3bfc8", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:58.166552+00:00", "source_path": "docs/decisions/0025-foundry-toolbox-support.md", "source_repo": "microsoft/agent-framework", "source_sha": "a68b98b3bfc854c02e9bc75a5188957473da1a35"}
+# microsoft/agent-framework · docs/decisions/0025-foundry-toolbox-support.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0025-foundry-toolbox-support.md](https://github.com/microsoft/agent-framework/blob/a68b98b3bfc854c02e9bc75a5188957473da1a35/docs/decisions/0025-foundry-toolbox-support.md) |
+| 来源版本 | `a68b98b3bfc854c02e9bc75a5188957473da1a35` |
+| 摄取时间 | `2026-07-11T06:08:58.166552+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0025_foundry_toolbox_support_md_a68b98b3bfc8` |
+
+## 本次变化
+
+- 新增行数 `454`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Foundry Toolbox Support in FoundryChatClient
+- What is the goal of this feature?
+- What is the problem being solved?
+- API Changes
+- One new method on the FoundryChatClient surface
+- Return types: raw SDK models, no custom wrappers
+- Design decisions
+- E2E Code Samples
+- Primary sample
+- Version pinning
+- Combining multiple toolboxes
+- Combining toolbox tools with locally defined tools
+- Selecting only some tools from a toolbox
+- Native vs MCP consumption of a Foundry toolbox
+- MCPStreamableHTTPTool example for a Foundry toolbox endpoint
+- Testing Strategy
+- Framework dependency: `normalize_tools` flattening
+- Telemetry
+- Request telemetry for toolbox API access
+- Runtime telemetry for toolbox usage on agent runs
+- Provenance model
+- Span enrichment
+- Scope of telemetry changes
+- Important limitation: no server-side toolbox telemetry solution yet
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: proposed
@@ -457,8 +505,10 @@ Explicitly out of scope for this design. Each is a separate design and PR when n
 
 5. **Toolbox caching or refresh APIs.** Each `get_toolbox()` call hits the network. Users who want caching wrap the call themselves.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -922,3 +972,5 @@ Explicitly out of scope for this design. Each is a separate design and PR when n
 +
 +5. **Toolbox caching or refresh APIs.** Each `get_toolbox()` call hits the network. Users who want caching wrap the call themselves.
 ```
+
+</details>

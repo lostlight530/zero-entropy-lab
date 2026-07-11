@@ -1,6 +1,38 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openai_openai_agents_python_examples_basic_agent_lifecycle_example_py_260cb3925242", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:41.965723+00:00", "source_path": "examples/basic/agent_lifecycle_example.py", "source_repo": "openai/openai-agents-python", "source_sha": "260cb392524278338ab14ebc1e03fbcf475efc9a"}
+# openai/openai-agents-python · examples/basic/agent_lifecycle_example.py
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/basic/agent_lifecycle_example.py](https://github.com/openai/openai-agents-python/blob/260cb392524278338ab14ebc1e03fbcf475efc9a/examples/basic/agent_lifecycle_example.py) |
+| 来源版本 | `260cb392524278338ab14ebc1e03fbcf475efc9a` |
+| 摄取时间 | `2026-07-11T06:08:41.965723+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_basic_agent_lifecycle_example_py_260cb3925242` |
+
+## 本次变化
+
+- 新增行数 `140`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- (Start Agent) 1: Agent Start Agent started
+- (Start Agent) 2: Agent Start Agent started tool random_number
+- (Start Agent) 3: Agent Start Agent ended tool random_number with result 37
+- (Start Agent) 4: Agent Start Agent handed off to Multiply Agent
+- (Multiply Agent) 1: Agent Multiply Agent started
+- (Multiply Agent) 2: Agent Multiply Agent started tool multiply_by_two
+- (Multiply Agent) 3: Agent Multiply Agent ended tool multiply_by_two with result 74
+- (Multiply Agent) 4: Agent Multiply Agent ended with output number=74
+
+<details>
+<summary>展开完整外部原文</summary>
 
 import asyncio
 import random
@@ -143,8 +175,10 @@ Enter a max number: 250
 Done!
 """
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -294,3 +328,5 @@ Done!
 +Done!
 +"""
 ```
+
+</details>

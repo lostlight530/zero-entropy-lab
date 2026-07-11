@@ -1,6 +1,49 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0017_agent_additional_properties_md_8531a9bd2bd6", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:56.755043+00:00", "source_path": "docs/decisions/0017-agent-additional-properties.md", "source_repo": "microsoft/agent-framework", "source_sha": "8531a9bd2bd6be0902fb48d49211a444e4e7c9db"}
+# microsoft/agent-framework · docs/decisions/0017-agent-additional-properties.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0017-agent-additional-properties.md](https://github.com/microsoft/agent-framework/blob/8531a9bd2bd6be0902fb48d49211a444e4e7c9db/docs/decisions/0017-agent-additional-properties.md) |
+| 来源版本 | `8531a9bd2bd6be0902fb48d49211a444e4e7c9db` |
+| 摄取时间 | `2026-07-11T06:08:56.755043+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0017_agent_additional_properties_md_8531a9bd2bd6` |
+
+## 本次变化
+
+- 新增行数 `211`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- AdditionalProperties for AIAgent and AgentSession
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- Surface Area
+- Semantics
+- Decision Outcome
+- Consequences
+- Pros and Cons of the Options
+- Option A — Public get-only property, auto-initialized
+- Option B — Public get/set nullable property
+- Option C — Constructor-injected with public get
+- Option D — External container/wrapper object
+- Option 1 — Metadata only
+- Option 2 — Passed down the stack
+- Serialization Considerations
+- Default behavior — JsonElement round-tripping
+- Custom serialization via JsonSerializerOptions
+- More Information
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: accepted
@@ -214,8 +257,10 @@ By default, when an `AgentSession` with `AdditionalProperties` is serialized and
 - `AdditionalPropertiesDictionary` is defined in `Microsoft.Extensions.AI` and is already a dependency of `Microsoft.Agents.AI.Abstractions`. No new package references are needed.
 - Type-safe access is available via the existing `AdditionalPropertiesExtensions` helper methods (`Add<T>`, `TryGetValue<T>`, `Contains<T>`, `Remove<T>`), which use `typeof(T).FullName` as the dictionary key.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -436,3 +481,5 @@ By default, when an `AgentSession` with `AdditionalProperties` is serialized and
 +- `AdditionalPropertiesDictionary` is defined in `Microsoft.Extensions.AI` and is already a dependency of `Microsoft.Agents.AI.Abstractions`. No new package references are needed.
 +- Type-safe access is available via the existing `AdditionalPropertiesExtensions` helper methods (`Add<T>`, `TryGetValue<T>`, `Contains<T>`, `Remove<T>`), which use `typeof(T).FullName` as the dictionary key.
 ```
+
+</details>

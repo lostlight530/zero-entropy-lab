@@ -1,6 +1,38 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0010_ag_ui_support_md_e1d46e9efff0", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:55.546362+00:00", "source_path": "docs/decisions/0010-ag-ui-support.md", "source_repo": "microsoft/agent-framework", "source_sha": "e1d46e9efff0fa5d2c0befcb6c091c6d32220111"}
+# microsoft/agent-framework · docs/decisions/0010-ag-ui-support.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0010-ag-ui-support.md](https://github.com/microsoft/agent-framework/blob/e1d46e9efff0fa5d2c0befcb6c091c6d32220111/docs/decisions/0010-ag-ui-support.md) |
+| 来源版本 | `e1d46e9efff0fa5d2c0befcb6c091c6d32220111` |
+| 摄取时间 | `2026-07-11T06:08:55.546362+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0010_ag_ui_support_md_e1d46e9efff0` |
+
+## 本次变化
+
+- 新增行数 `95`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- AG-UI Protocol Support for .NET Agent Framework
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- Decision Outcome
+- Implementation Details
+- Key Design Decisions
+- Consequences
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: accepted
@@ -98,8 +130,10 @@ Chosen option: "Current approach with internal event types and framework-native 
 - Initial implementation focused on text streaming
 - Applications responsible for thread persistence
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -204,3 +238,5 @@ Chosen option: "Current approach with internal event types and framework-native 
 +- Initial implementation focused on text streaming
 +- Applications responsible for thread persistence
 ```
+
+</details>

@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_tencentcloudadp_youtu_agent_readme_md_43bd8dd07bd6", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:05.168600+00:00", "source_path": "README.md", "source_repo": "TencentCloudADP/youtu-agent", "source_sha": "43bd8dd07bd65c3dbeede27582f1d4a123928118"}
+# TencentCloudADP/youtu-agent · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [TencentCloudADP/youtu-agent](https://github.com/TencentCloudADP/youtu-agent) |
+| 来源文件 | [README.md](https://github.com/TencentCloudADP/youtu-agent/blob/43bd8dd07bd65c3dbeede27582f1d4a123928118/README.md) |
+| 来源版本 | `43bd8dd07bd65c3dbeede27582f1d4a123928118` |
+| 摄取时间 | `2026-07-11T06:09:05.168600+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_tencentcloudadp_youtu_agent_readme_md_43bd8dd07bd6` |
+
+## 本次变化
+
+- 新增行数 `426`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- <img src="docs/assets/logo.svg" alt="Youtu-agent Logo" height="24px"> Youtu-Agent: Scaling Agent Productivity with Automated Generation and Hybrid Policy Optimization
+- 🗞️ News
+- 🌟 Benchmark Performance
+- 💡 Examples
+- 🤖 Automatic Tool and Agent Generation
+- Interactively clarify your requirements and auto-generate a config
+- Run the generated config
+- ✨ Features
+- Design Philosophy
+- Core Features
+- Automation
+- Use Cases
+- 🤔 Why Choose Youtu-Agent?
+- For Agents Researchers & LLM Trainers
+- For Agent Application Developers
+- For AI & Agent Enthusiasts
+- 🧩 Core Concepts
+- 🚀 Getting Started
+- Setup
+- Source Code Deployment
+- llm requires OpenAI API format compatibility
+- setup your LLM config , ref https://api-docs.deepseek.com/
+- llm
+- setup your LLM config , ref https://www.tencentcloud.com/document/product/1255/70381
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # <img src="docs/assets/logo.svg" alt="Youtu-agent Logo" height="24px"> Youtu-Agent: Scaling Agent Productivity with Automated Generation and Hybrid Policy Optimization
 
@@ -429,8 +477,10 @@ If you find this work useful, please consider citing:
 }
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -866,3 +916,5 @@ If you find this work useful, please consider citing:
 +}
 +```
 ```
+
+</details>

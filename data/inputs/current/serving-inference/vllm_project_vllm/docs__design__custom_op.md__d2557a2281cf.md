@@ -1,6 +1,37 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_custom_op_md_d2557a2281cf", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:09.168431+00:00", "source_path": "docs/design/custom_op.md", "source_repo": "vllm-project/vllm", "source_sha": "d2557a2281cf27353b1355cc104036cca248b512"}
+# vllm-project/vllm · docs/design/custom_op.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/custom_op.md](https://github.com/vllm-project/vllm/blob/d2557a2281cf27353b1355cc104036cca248b512/docs/design/custom_op.md) |
+| 来源版本 | `d2557a2281cf27353b1355cc104036cca248b512` |
+| 摄取时间 | `2026-07-11T06:09:09.168431+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_custom_op_md_d2557a2281cf` |
+
+## 本次变化
+
+- 新增行数 `318`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- CustomOp
+- How CustomOp Works in vLLM
+- How to Customise Your Configuration for CustomOp
+- Types of Supported CustomOp in vLLM
+- Guidelines for Implementing a New CustomOp
+- Implement a New CustomOp in vLLM
+- Register a New CustomOp in OOT Device Plugins
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # CustomOp
 
@@ -321,8 +352,10 @@ In addition, you can also register all your `CustomOp` at one place for better m
         CustomOp.register_oot(_decorated_op_cls=op_cls, name=op_name)
     ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -650,3 +683,5 @@ In addition, you can also register all your `CustomOp` at one place for better m
 +        CustomOp.register_oot(_decorated_op_cls=op_cls, name=op_name)
 +    ```
 ```
+
+</details>

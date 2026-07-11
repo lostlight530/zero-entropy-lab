@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_tencentcloud_tencentdb_agent_memory_readme_md_22e61944e3b3", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:26.837864+00:00", "source_path": "README.md", "source_repo": "TencentCloud/TencentDB-Agent-Memory", "source_sha": "22e61944e3b3a7da5aa63f912e14362e3a72ecbc"}
+# TencentCloud/TencentDB-Agent-Memory · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) |
+| 来源文件 | [README.md](https://github.com/TencentCloud/TencentDB-Agent-Memory/blob/22e61944e3b3a7da5aa63f912e14362e3a72ecbc/README.md) |
+| 来源版本 | `22e61944e3b3a7da5aa63f912e14362e3a72ecbc` |
+| 摄取时间 | `2026-07-11T06:09:26.837864+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_tencentcloud_tencentdb_agent_memory_readme_md_22e61944e3b3` |
+
+## 本次变化
+
+- 新增行数 `548`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Agents remember,Humans innovate.
+- ✨ Highlights
+- Overview
+- Core Technology: Reject Flat Storage, Embrace Layering and Symbolization
+- 1. Memory Layering: Progressive Disclosure with Heterogeneous Storage
+- 2. Symbolic Memory: Maximum Semantics in Minimum Symbols (Mermaid Canvas)
+- Quick Start
+- 🎬 Demos
+- 1. OpenClaw
+- 1.1 Install the plugin
+- 1.2 Zero-config to enable
+- 1.3 Enable short-term compression (optional, requires version ≥ 0.3.4)
+- Step 1 — Register the slot in your plugin config
+- Step 2 — Apply the runtime patch
+- 2. Hermes
+- 2.A Docker (greenfield, requires version ≥ 0.3.4)
+- ============ Configuration Parameters ============
+- MODEL_API_KEY    LLM API key (required) — replace with your own credential
+- MODEL_BASE_URL   LLM endpoint, defaults to Tencent Cloud LKE (Large Model Knowledge Engine)
+- MODEL_NAME       Model name, defaults to DeepSeek-V3.2
+- MODEL_PROVIDER   Provider type: "custom" works for any OpenAI-compatible endpoint
+- ============ docker run Flags ============
+- -d                          Run container in detached (background) mode
+- --name hermes-memory        Container name, for later docker exec / logs / stop
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <div align="center">
 
@@ -551,8 +599,10 @@ We welcome every kind of contribution — bug reports, feature ideas, doc fixes,
 
 [MIT](./LICENSE) © TencentDB Agent Memory Team
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1110,3 +1160,5 @@ We welcome every kind of contribution — bug reports, feature ideas, doc fixes,
 +
 +[MIT](./LICENSE) © TencentDB Agent Memory Team
 ```
+
+</details>

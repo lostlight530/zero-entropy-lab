@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0011_create_get_agent_api_md_4703c1271d2d", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:55.687622+00:00", "source_path": "docs/decisions/0011-create-get-agent-api.md", "source_repo": "microsoft/agent-framework", "source_sha": "4703c1271d2dc2422311616f7ff317f179bc86c2"}
+# microsoft/agent-framework · docs/decisions/0011-create-get-agent-api.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0011-create-get-agent-api.md](https://github.com/microsoft/agent-framework/blob/4703c1271d2dc2422311616f7ff317f179bc86c2/docs/decisions/0011-create-get-agent-api.md) |
+| 来源版本 | `4703c1271d2dc2422311616f7ff317f179bc86c2` |
+| 摄取时间 | `2026-07-11T06:08:55.687622+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0011_create_get_agent_api_md_4703c1271d2d` |
+
+## 本次变化
+
+- 新增行数 `368`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Create/Get Agent API
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- agent-framework-azure-ai (both V1 and V2)
+- agent-framework-core (OpenAI Assistants)
+- Possible Python implementations
+- Option 1: Module-level functions
+- Creates a remote agent first, then returns a local ChatAgent wrapper
+- Gets an existing remote agent and returns a local ChatAgent wrapper
+- Wraps an SDK agent instance (no extra HTTP call)
+- Option 2: Provider object
+- Option 3: Inheritance (SDK client subclass)
+- Option 4: Monkey patching
+- Decision Outcome
+- Rationale
+- Method Naming
+- Provider Class Naming
+- Usage Examples
+- Azure AI Agent Service V2 (based on Responses API)
+- Create new agent on service
+- Get existing agent by name
+- Wrap already-fetched SDK object (no HTTP calls)
+- Azure AI Persistent Agents V1
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: proposed
@@ -371,8 +419,10 @@ Python:
 1. Create static class for extension methods.
 2. Implement `CreateAIAgentAsync`, `GetAIAgentAsync`, `AsAIAgent` as applicable.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -750,3 +800,5 @@ Python:
 +1. Create static class for extension methods.
 +2. Implement `CreateAIAgentAsync`, `GetAIAgentAsync`, `AsAIAgent` as applicable.
 ```
+
+</details>

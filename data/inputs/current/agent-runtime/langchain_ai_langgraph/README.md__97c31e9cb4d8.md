@@ -1,6 +1,35 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_langchain_ai_langgraph_readme_md_97c31e9cb4d8", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:00.328489+00:00", "source_path": "README.md", "source_repo": "langchain-ai/langgraph", "source_sha": "97c31e9cb4d8fe56be8d768ce3eb5e22400e897e"}
+# langchain-ai/langgraph · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) |
+| 来源文件 | [README.md](https://github.com/langchain-ai/langgraph/blob/97c31e9cb4d8fe56be8d768ce3eb5e22400e897e/README.md) |
+| 来源版本 | `97c31e9cb4d8fe56be8d768ce3eb5e22400e897e` |
+| 摄取时间 | `2026-07-11T06:09:00.328489+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_langchain_ai_langgraph_readme_md_97c31e9cb4d8` |
+
+## 本次变化
+
+- 新增行数 `82`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Why use LangGraph?
+- LangGraph ecosystem
+- Documentation
+- Additional resources
+- Acknowledgements
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <div align="center">
   <a href="https://www.langchain.com/langgraph">
@@ -85,8 +114,10 @@ To improve your LLM application development, pair LangGraph with:
 
 LangGraph is inspired by [Pregel](https://research.google/pubs/pub37252/) and [Apache Beam](https://beam.apache.org/). The public interface draws inspiration from [NetworkX](https://networkx.org/documentation/latest/). LangGraph is built by LangChain Inc, the creators of LangChain, but can be used without LangChain.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -178,3 +209,5 @@ LangGraph is inspired by [Pregel](https://research.google/pubs/pub37252/) and [A
 +
 +LangGraph is inspired by [Pregel](https://research.google/pubs/pub37252/) and [Apache Beam](https://beam.apache.org/). The public interface draws inspiration from [NetworkX](https://networkx.org/documentation/latest/). LangGraph is built by LangChain Inc, the creators of LangChain, but can be used without LangChain.
 ```
+
+</details>

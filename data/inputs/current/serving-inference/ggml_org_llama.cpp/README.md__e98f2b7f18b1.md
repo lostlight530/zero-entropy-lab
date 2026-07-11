@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_ggml_org_llama.cpp_readme_md_e98f2b7f18b1", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:16.373564+00:00", "source_path": "README.md", "source_repo": "ggml-org/llama.cpp", "source_sha": "e98f2b7f18b1924d223c2c0d64171f63e42fc1b7"}
+# ggml-org/llama.cpp · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) |
+| 来源文件 | [README.md](https://github.com/ggml-org/llama.cpp/blob/e98f2b7f18b1924d223c2c0d64171f63e42fc1b7/README.md) |
+| 来源版本 | `e98f2b7f18b1924d223c2c0d64171f63e42fc1b7` |
+| 摄取时间 | `2026-07-11T06:09:16.373564+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_ggml_org_llama.cpp_readme_md_e98f2b7f18b1` |
+
+## 本次变化
+
+- 新增行数 `604`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- llama.cpp
+- Recent API changes
+- Hot topics
+- Quick start
+- Use a local model file
+- Or download and run a model directly from Hugging Face
+- Launch OpenAI-compatible API server
+- Description
+- Text-only
+- Multimodal
+- Supported backends
+- Obtaining and quantizing models
+- [`llama-cli`](tools/cli)
+- A CLI tool for accessing and experimenting with most of `llama.cpp`'s functionality.
+- [`llama-server`](tools/server)
+- A lightweight, [OpenAI API](https://github.com/openai/openai-openapi) compatible, HTTP server for serving LLMs.
+- [`llama-perplexity`](tools/perplexity)
+- A tool for measuring the [perplexity](tools/perplexity/README.md) [^1] (and other quality metrics) of a model over a given text.
+- [`llama-bench`](tools/llama-bench)
+- Benchmark the performance of the inference for various parameters.
+- [`llama-simple`](examples/simple)
+- A minimal example for implementing apps with `llama.cpp`. Useful for developers.
+- Contributing
+- Other documentation
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # llama.cpp
 
@@ -607,8 +655,10 @@ $ echo "source ~/.llama-completion.bash" >> ~/.bashrc
 - [miniaudio.h](https://github.com/mackron/miniaudio) - Single-header audio format decoder, used by multimodal subsystem - Public domain
 - [subprocess.h](https://github.com/sheredom/subprocess.h) - Single-header process launching solution for C and C++ - Public domain
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1222,3 +1272,5 @@ $ echo "source ~/.llama-completion.bash" >> ~/.bashrc
 +- [miniaudio.h](https://github.com/mackron/miniaudio) - Single-header audio format decoder, used by multimodal subsystem - Public domain
 +- [subprocess.h](https://github.com/sheredom/subprocess.h) - Single-header process launching solution for C and C++ - Public domain
 ```
+
+</details>

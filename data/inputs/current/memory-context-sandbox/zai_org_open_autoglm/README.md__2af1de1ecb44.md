@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_zai_org_open_autoglm_readme_md_2af1de1ecb44", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:24.789831+00:00", "source_path": "README.md", "source_repo": "zai-org/Open-AutoGLM", "source_sha": "2af1de1ecb44f51c31256cd0bd2aa12842866423"}
+# zai-org/Open-AutoGLM · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [zai-org/Open-AutoGLM](https://github.com/zai-org/Open-AutoGLM) |
+| 来源文件 | [README.md](https://github.com/zai-org/Open-AutoGLM/blob/2af1de1ecb44f51c31256cd0bd2aa12842866423/README.md) |
+| 来源版本 | `2af1de1ecb44f51c31256cd0bd2aa12842866423` |
+| 摄取时间 | `2026-07-11T06:09:24.789831+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_zai_org_open_autoglm_readme_md_2af1de1ecb44` |
+
+## 本次变化
+
+- 新增行数 `991`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Open-AutoGLM
+- 懒人版快速安装
+- 项目介绍
+- 与其他自动化工具集成
+- Midscene.js
+- 模型下载地址
+- Android 环境准备
+- 1. Python 环境
+- 2. 手机调试命令行工具
+- 对于 Android 设备 - 使用 ADB
+- 对于鸿蒙设备 (HarmonyOS NEXT版本以上) - 使用 HDC
+- 3. Android 7.0+ 或 HarmonyOS 设备，并启用 `开发者模式` 和 `USB 调试`
+- 4. 安装 ADB Keyboard(仅 Android 设备需要，用于文本输入)
+- iPhone 环境准备
+- 部署准备工作
+- 1. 安装依赖
+- 2. 配置 ADB 或 HDC
+- 对于 Android 设备
+- 检查已连接的设备
+- 输出结果应显示你的设备，如：
+- List of devices attached
+- emulator-5554   device
+- 对于鸿蒙设备
+- 检查已连接的设备
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Open-AutoGLM
 
@@ -994,8 +1042,10 @@ python main.py --list-apps
 
 **部署完成的标志：手机能自动执行用户的自然语言指令。**
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1996,3 +2046,5 @@ python main.py --list-apps
 +
 +**部署完成的标志：手机能自动执行用户的自然语言指令。**
 ```
+
+</details>

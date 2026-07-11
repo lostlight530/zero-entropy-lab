@@ -1,6 +1,31 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_huggingface_integration_md_c3937d15db89", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:10.024920+00:00", "source_path": "docs/design/huggingface_integration.md", "source_repo": "vllm-project/vllm", "source_sha": "c3937d15db895aebbf1876d04f6996a88beba616"}
+# vllm-project/vllm · docs/design/huggingface_integration.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/huggingface_integration.md](https://github.com/vllm-project/vllm/blob/c3937d15db895aebbf1876d04f6996a88beba616/docs/design/huggingface_integration.md) |
+| 来源版本 | `c3937d15db895aebbf1876d04f6996a88beba616` |
+| 摄取时间 | `2026-07-11T06:09:10.024920+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_huggingface_integration_md_c3937d15db89` |
+
+## 本次变化
+
+- 新增行数 `31`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Integration with Hugging Face
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Integration with Hugging Face
 
@@ -34,8 +59,10 @@ This completes the integration between vLLM and Hugging Face.
 
 In summary, vLLM reads the config file `config.json`, tokenizer, and model weight from the Hugging Face model hub or a local directory. It uses the config class from either vLLM, Hugging Face transformers, or loads the config class from the model's repository.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -76,3 +103,5 @@ In summary, vLLM reads the config file `config.json`, tokenizer, and model weigh
 +
 +In summary, vLLM reads the config file `config.json`, tokenizer, and model weight from the Hugging Face model hub or a local directory. It uses the config class from either vLLM, Hugging Face transformers, or loads the config class from the model's repository.
 ```
+
+</details>

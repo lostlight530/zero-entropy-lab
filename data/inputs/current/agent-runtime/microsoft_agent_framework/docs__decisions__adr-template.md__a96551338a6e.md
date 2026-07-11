@@ -1,6 +1,42 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_adr_template_md_a96551338a6e", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:59.583744+00:00", "source_path": "docs/decisions/adr-template.md", "source_repo": "microsoft/agent-framework", "source_sha": "a96551338a6e4510959d9baab30b943ab1019b73"}
+# microsoft/agent-framework · docs/decisions/adr-template.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/adr-template.md](https://github.com/microsoft/agent-framework/blob/a96551338a6e4510959d9baab30b943ab1019b73/docs/decisions/adr-template.md) |
+| 来源版本 | `a96551338a6e4510959d9baab30b943ab1019b73` |
+| 摄取时间 | `2026-07-11T06:08:59.583744+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_adr_template_md_a96551338a6e` |
+
+## 本次变化
+
+- 新增行数 `87`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- These are optional elements. Feel free to remove any of them.
+- {short title of solved problem and solution}
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- Decision Outcome
+- Consequences
+- Validation
+- Pros and Cons of the Options
+- {title of option 1}
+- {title of other option}
+- More Information
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 # These are optional elements. Feel free to remove any of them.
@@ -90,8 +126,10 @@ define when this decision when and how the decision should be realized and if/wh
 how the decision is validated.
 Links to other decisions and resources might appear here as well.}
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -188,3 +226,5 @@ Links to other decisions and resources might appear here as well.}
 +how the decision is validated.
 +Links to other decisions and resources might appear here as well.}
 ```
+
+</details>

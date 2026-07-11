@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_minimax_ai_mini_agent_readme_md_0cf8494d1a82", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:24.227347+00:00", "source_path": "README.md", "source_repo": "MiniMax-AI/Mini-Agent", "source_sha": "0cf8494d1a82b39e1b23d0795615b592dee5cf6e"}
+# MiniMax-AI/Mini-Agent · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [MiniMax-AI/Mini-Agent](https://github.com/MiniMax-AI/Mini-Agent) |
+| 来源文件 | [README.md](https://github.com/MiniMax-AI/Mini-Agent/blob/0cf8494d1a82b39e1b23d0795615b592dee5cf6e/README.md) |
+| 来源版本 | `0cf8494d1a82b39e1b23d0795615b592dee5cf6e` |
+| 摄取时间 | `2026-07-11T06:09:24.227347+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_minimax_ai_mini_agent_readme_md_0cf8494d1a82` |
+
+## 本次变化
+
+- 新增行数 `344`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Mini Agent
+- Table of Contents
+- Quick Start
+- 1. Get API Key
+- 2. Choose Your Usage Mode
+- macOS/Linux/WSL
+- Windows (PowerShell)
+- Restart PowerShell after installation
+- After installation, restart your terminal or run:
+- 🚀 Quick Start Mode (Recommended for Beginners)
+- 1. Install directly from GitHub
+- 2. Run setup script (automatically creates config files)
+- macOS/Linux:
+- Windows (PowerShell):
+- Edit config file
+- api_base: "https://api.minimaxi.com"  # China
+- Management commands
+- 🔧 Development Mode
+- 1. Clone the repository
+- 2. Install uv (if you haven't)
+- macOS/Linux:
+- Windows (PowerShell):
+- Restart terminal after installation
+- 3. Sync dependencies
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Mini Agent
 
@@ -347,8 +395,10 @@ This project is licensed under the [MIT License](LICENSE).
 
 **⭐ If this project helps you, please give it a Star!**
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -702,3 +752,5 @@ This project is licensed under the [MIT License](LICENSE).
 +
 +**⭐ If this project helps you, please give it a Star!**
 ```
+
+</details>

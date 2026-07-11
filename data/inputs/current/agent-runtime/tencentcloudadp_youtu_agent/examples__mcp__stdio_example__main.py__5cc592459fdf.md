@@ -1,6 +1,31 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_tencentcloudadp_youtu_agent_examples_mcp_stdio_example_main_py_5cc592459fdf", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:05.869968+00:00", "source_path": "examples/mcp/stdio_example/main.py", "source_repo": "TencentCloudADP/youtu-agent", "source_sha": "5cc592459fdf6b7ef5915c4bc668583013446bd7"}
+# TencentCloudADP/youtu-agent · examples/mcp/stdio_example/main.py
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [TencentCloudADP/youtu-agent](https://github.com/TencentCloudADP/youtu-agent) |
+| 来源文件 | [examples/mcp/stdio_example/main.py](https://github.com/TencentCloudADP/youtu-agent/blob/5cc592459fdf6b7ef5915c4bc668583013446bd7/examples/mcp/stdio_example/main.py) |
+| 来源版本 | `5cc592459fdf6b7ef5915c4bc668583013446bd7` |
+| 摄取时间 | `2026-07-11T06:09:05.869968+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_tencentcloudadp_youtu_agent_examples_mcp_stdio_example_main_py_5cc592459fdf` |
+
+## 本次变化
+
+- 新增行数 `40`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- from https://en.wikipedia.org/wiki/Anthropic
+
+<details>
+<summary>展开完整外部原文</summary>
 
 """Example usage of MCP with stdio transport
 
@@ -43,8 +68,10 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -94,3 +121,5 @@ if __name__ == "__main__":
 +if __name__ == "__main__":
 +    asyncio.run(main())
 ```
+
+</details>

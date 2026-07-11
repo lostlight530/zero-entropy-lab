@@ -1,6 +1,38 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_plugin_system_md_dd49df0ef2f5", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:11.862466+00:00", "source_path": "docs/design/plugin_system.md", "source_repo": "vllm-project/vllm", "source_sha": "dd49df0ef2f556914413af96c4a2c037fb013c1f"}
+# vllm-project/vllm · docs/design/plugin_system.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/plugin_system.md](https://github.com/vllm-project/vllm/blob/dd49df0ef2f556914413af96c4a2c037fb013c1f/docs/design/plugin_system.md) |
+| 来源版本 | `dd49df0ef2f556914413af96c4a2c037fb013c1f` |
+| 摄取时间 | `2026-07-11T06:09:11.862466+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_plugin_system_md_dd49df0ef2f5` |
+
+## 本次变化
+
+- 新增行数 `160`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Plugin System
+- How Plugins Work in vLLM
+- How vLLM Discovers Plugins
+- Types of supported plugins
+- Guidelines for Writing Plugins
+- Platform plugins guidelines
+- Compatibility Guarantee
+- Deprecation announcement
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Plugin System
 
@@ -163,8 +195,10 @@ The interface for the model/module may change during vLLM's development. If you 
     - `seed_everything` platform interface is deprecated. It has been removed in v0.16.0. Please use `vllm.utils.torch_utils.set_random_seed` instead.
     - `prompt` in `Platform.validate_request` is deprecated. It has been removed in v0.18.0.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -334,3 +368,5 @@ The interface for the model/module may change during vLLM's development. If you 
 +    - `seed_everything` platform interface is deprecated. It has been removed in v0.16.0. Please use `vllm.utils.torch_utils.set_random_seed` instead.
 +    - `prompt` in `Platform.validate_request` is deprecated. It has been removed in v0.18.0.
 ```
+
+</details>

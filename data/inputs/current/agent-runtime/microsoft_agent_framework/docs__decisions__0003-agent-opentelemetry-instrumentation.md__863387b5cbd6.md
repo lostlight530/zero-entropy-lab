@@ -1,6 +1,51 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0003_agent_opentelemetry_instrumentation_md_863387b5cbd6", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:54.482865+00:00", "source_path": "docs/decisions/0003-agent-opentelemetry-instrumentation.md", "source_repo": "microsoft/agent-framework", "source_sha": "863387b5cbd6a097bd250777bfff0c05813330cd"}
+# microsoft/agent-framework · docs/decisions/0003-agent-opentelemetry-instrumentation.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0003-agent-opentelemetry-instrumentation.md](https://github.com/microsoft/agent-framework/blob/863387b5cbd6a097bd250777bfff0c05813330cd/docs/decisions/0003-agent-opentelemetry-instrumentation.md) |
+| 来源版本 | `863387b5cbd6a097bd250777bfff0c05813330cd` |
+| 摄取时间 | `2026-07-11T06:08:54.482865+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0003_agent_opentelemetry_instrumentation_md_863387b5cbd6` |
+
+## 本次变化
+
+- 新增行数 `144`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Agent OpenTelemetry Instrumentation
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- Option 1: Direct Integration into Core Agent Classes
+- Pros
+- Cons
+- Option 2: Aspect-Oriented Programming (AOP) Approach
+- Pros
+- Cons
+- Option 3: OpenTelemetryAgent Wrapper Pattern
+- Pros
+- Cons
+- Decision Outcome
+- Implementation Details
+- Telemetry Data Captured
+- Consequences
+- Validation
+- More Information
+- Usage Example
+- Relationship to Microsoft.Extensions.AI
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: proposed
@@ -147,8 +192,10 @@ var response = await telemetryAgent.RunAsync(messages);
 
 This implementation follows the exact patterns established by Microsoft.Extensions.AI's OpenTelemetry instrumentation, ensuring consistency across the AI ecosystem and leveraging proven patterns for telemetry integration.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -302,3 +349,5 @@ This implementation follows the exact patterns established by Microsoft.Extensio
 +
 +This implementation follows the exact patterns established by Microsoft.Extensions.AI's OpenTelemetry instrumentation, ensuring consistency across the AI ecosystem and leveraging proven patterns for telemetry integration.
 ```
+
+</details>

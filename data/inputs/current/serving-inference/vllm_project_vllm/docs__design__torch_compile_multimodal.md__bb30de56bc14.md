@@ -1,6 +1,44 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_torch_compile_multimodal_md_bb30de56bc14", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:12.271457+00:00", "source_path": "docs/design/torch_compile_multimodal.md", "source_repo": "vllm-project/vllm", "source_sha": "bb30de56bc147ef1008a15baaefc1abfe98744d6"}
+# vllm-project/vllm · docs/design/torch_compile_multimodal.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/torch_compile_multimodal.md](https://github.com/vllm-project/vllm/blob/bb30de56bc147ef1008a15baaefc1abfe98744d6/docs/design/torch_compile_multimodal.md) |
+| 来源版本 | `bb30de56bc147ef1008a15baaefc1abfe98744d6` |
+| 摄取时间 | `2026-07-11T06:09:12.271457+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_torch_compile_multimodal_md_bb30de56bc14` |
+
+## 本次变化
+
+- 新增行数 `107`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- torch.compile with Multimodal Encoders
+- Overview
+- How Compilation Works for Multimodal Components
+- APIs for Enablement
+- CompilationConfig
+- Applying torch.compile to a New Multimodal Model/Component
+- Common pitfalls
+- VllmBackend Feature Support
+- Compile ranges
+- Cudagraphs
+- Troubleshooting
+- Graph Breaks in Vision Encoders
+- Compilation Errors
+- See Also
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # torch.compile with Multimodal Encoders
 
@@ -110,8 +148,10 @@ If compilation fails for a multimodal model:
 - [Disaggregated Encoder](../features/disagg_encoder.md) - Scaling vision encoders
 - [Supported Multimodal Models](../models/supported_models.md#list-of-multimodal-language-models) - Model compatibility
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -228,3 +268,5 @@ If compilation fails for a multimodal model:
 +- [Disaggregated Encoder](../features/disagg_encoder.md) - Scaling vision encoders
 +- [Supported Multimodal Models](../models/supported_models.md#list-of-multimodal-language-models) - Model compatibility
 ```
+
+</details>

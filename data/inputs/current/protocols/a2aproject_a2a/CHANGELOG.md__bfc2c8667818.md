@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_a2aproject_a2a_changelog_md_bfc2c8667818", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:39.314578+00:00", "source_path": "CHANGELOG.md", "source_repo": "a2aproject/A2A", "source_sha": "bfc2c8667818cb5ef43470c1384829020cee619b"}
+# a2aproject/A2A · CHANGELOG.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [a2aproject/A2A](https://github.com/a2aproject/A2A) |
+| 来源文件 | [CHANGELOG.md](https://github.com/a2aproject/A2A/blob/bfc2c8667818cb5ef43470c1384829020cee619b/CHANGELOG.md) |
+| 来源版本 | `bfc2c8667818cb5ef43470c1384829020cee619b` |
+| 摄取时间 | `2026-07-11T06:08:39.314578+00:00` |
+| 归属层 | `protocols` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_a2aproject_a2a_changelog_md_bfc2c8667818` |
+
+## 本次变化
+
+- 新增行数 `187`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Changelog
+- [1.0.1](https://github.com/a2aproject/A2A/compare/v1.0.0...v1.0.1) (2026-05-26)
+- Bug Fixes
+- [1.0.0](https://github.com/a2aproject/A2A/compare/v0.3.0...v1.0.0) (2026-03-12)
+- ⚠ BREAKING CHANGES
+- Features
+- Bug Fixes
+- Documentation
+- Code Refactoring
+- [0.3.0](https://github.com/a2aproject/A2A/compare/v0.2.6...v0.3.0) (2025-07-30)
+- ⚠ BREAKING CHANGES
+- Features
+- Bug Fixes
+- Code Refactoring
+- [0.2.6](https://github.com/a2aproject/A2A/compare/v0.2.5...v0.2.6) (2025-07-17)
+- Bug Fixes
+- [0.2.5](https://github.com/a2aproject/A2A/compare/v0.2.4...v0.2.5) (2025-06-30)
+- ⚠ BREAKING CHANGES
+- Features
+- Documentation
+- [0.2.4](https://github.com/a2aproject/A2A/compare/v0.2.3...v0.2.4) (2025-06-30)
+- Features
+- [0.2.3](https://github.com/a2aproject/A2A/compare/v0.2.2...v0.2.3) (2025-06-12)
+- Bug Fixes
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Changelog
 
@@ -190,8 +238,10 @@ PROVENANCE: {"confidence": 1.0, "entity_id": "doc_a2aproject_a2a_changelog_md_bf
 * Add a new boolean for supporting authenticated extended cards ([#618](https://github.com/a2aproject/A2A/issues/618)) ([e0a3070](https://github.com/a2aproject/A2A/commit/e0a3070fc289110d43faf2e91b4ffe3c29ef81da))
 * Add optional referenceTaskIds for task followups ([#608](https://github.com/a2aproject/A2A/issues/608)) ([5368e77](https://github.com/a2aproject/A2A/commit/5368e7728cb523caf1a9218fda0b1646325f524b))
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -388,3 +438,5 @@ PROVENANCE: {"confidence": 1.0, "entity_id": "doc_a2aproject_a2a_changelog_md_bf
 +* Add a new boolean for supporting authenticated extended cards ([#618](https://github.com/a2aproject/A2A/issues/618)) ([e0a3070](https://github.com/a2aproject/A2A/commit/e0a3070fc289110d43faf2e91b4ffe3c29ef81da))
 +* Add optional referenceTaskIds for task followups ([#608](https://github.com/a2aproject/A2A/issues/608)) ([5368e77](https://github.com/a2aproject/A2A/commit/5368e7728cb523caf1a9218fda0b1646325f524b))
 ```
+
+</details>

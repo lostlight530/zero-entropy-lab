@@ -1,6 +1,46 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openai_openai_agents_python_examples_basic_lifecycle_example_py_744fd86462b6", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:42.900631+00:00", "source_path": "examples/basic/lifecycle_example.py", "source_repo": "openai/openai-agents-python", "source_sha": "744fd86462b6851f984f4a0c627467a8ca80d183"}
+# openai/openai-agents-python · examples/basic/lifecycle_example.py
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/basic/lifecycle_example.py](https://github.com/openai/openai-agents-python/blob/744fd86462b6851f984f4a0c627467a8ca80d183/examples/basic/lifecycle_example.py) |
+| 来源版本 | `744fd86462b6851f984f4a0c627467a8ca80d183` |
+| 摄取时间 | `2026-07-11T06:08:42.900631+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_basic_lifecycle_example_py_744fd86462b6` |
+
+## 本次变化
+
+- 新增行数 `189`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 1: Agent Start Agent started. Usage: 0 requests, 0 input tokens, 0 output tokens, 0 total tokens
+- 2: LLM started. Usage: 0 requests, 0 input tokens, 0 output tokens, 0 total tokens
+- 3: LLM ended. Usage: 1 requests, 143 input tokens, 15 output tokens, 158 total tokens
+- 4: Tool random_number started. name=random_number, call_id=call_IujmDZYiM800H0hy7v17VTS0, args={"max":250}. Usage: 1 requests, 143 input tokens, 15 output tokens, 158 total tokens
+- 5: Tool random_number finished. result=107, name=random_number, call_id=call_IujmDZYiM800H0hy7v17VTS0, args={"max":250}. Usage: 1 requests, 143 input tokens, 15 output tokens, 158 total tokens
+- 6: LLM started. Usage: 1 requests, 143 input tokens, 15 output tokens, 158 total tokens
+- 7: LLM ended. Usage: 2 requests, 310 input tokens, 29 output tokens, 339 total tokens
+- 8: Handoff from Start Agent to Multiply Agent. Usage: 2 requests, 310 input tokens, 29 output tokens, 339 total tokens
+- 9: Agent Multiply Agent started. Usage: 2 requests, 310 input tokens, 29 output tokens, 339 total tokens
+- 10: LLM started. Usage: 2 requests, 310 input tokens, 29 output tokens, 339 total tokens
+- 11: LLM ended. Usage: 3 requests, 472 input tokens, 45 output tokens, 517 total tokens
+- 12: Tool multiply_by_two started. name=multiply_by_two, call_id=call_KhHvTfsgaosZsfi741QvzgYw, args={"x":107}. Usage: 3 requests, 472 input tokens, 45 output tokens, 517 total tokens
+- 13: Tool multiply_by_two finished. result=214, name=multiply_by_two, call_id=call_KhHvTfsgaosZsfi741QvzgYw, args={"x":107}. Usage: 3 requests, 472 input tokens, 45 output tokens, 517 total tokens
+- 14: LLM started. Usage: 3 requests, 472 input tokens, 45 output tokens, 517 total tokens
+- 15: LLM ended. Usage: 4 requests, 660 input tokens, 56 output tokens, 716 total tokens
+- 16: Agent Multiply Agent ended with output number=214. Usage: 4 requests, 660 input tokens, 56 output tokens, 716 total tokens
+
+<details>
+<summary>展开完整外部原文</summary>
 
 import asyncio
 import random
@@ -192,8 +232,10 @@ Done!
 
 """
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -392,3 +434,5 @@ Done!
 +
 +"""
 ```
+
+</details>

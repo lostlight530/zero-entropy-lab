@@ -1,48 +1,18 @@
-# 每日简报 (Daily Brief)
-DATE: 2026-07-11
-ENTROPY: 1.8074
+# 当前任务
 
-## 系统健康状态 (System Health)
-STATUS: ONLINE
-NODES: 80
-EDGES: 0
+## 系统状态
 
-## 潜意识觉醒 (Nightly Cognitive Intuitions)
-BASELINE_METRICS: ACTIVE
-STATUS: ONLINE
-NODES: 80
-EDGES: 0
-TOPOLOGY: FRAGMENTED_3_ORPHANS
-TASK_SUGGESTION: RELATION_MAPPING_RECOMMENDED
-PHYSICAL_TELEMETRY: ACTIVE
-STORAGE_MB: 0.25
-JOURNAL_ROWS: 0
-GRAPH_DENSITY: 1.81_HIGH_COHESIVENESS
-NETWORK_SCAN: ACTIVE
-STRUCTURAL_BRIDGES: NONE_DETECTED
-EVOLUTION_STRATEGY: ACTIVE
-STRATEGY: INTEGRATE_ISOLATED_ENTITIES
+- 状态 `ONLINE`.
+- 节点 `80`.
+- 关系 `0`.
 
-## 虚空监视 (Void Watch)
-ECOSYSTEM_MOVEMENTS: NONE
+## 建议动作
 
-## 深度工作建议 (Deep Work)
-FOCUS: SYSTEM_OPTIMIZATION
-BLOCK_HOURS: 2
+- 聚焦 `SYSTEM_OPTIMIZATION`.
+- 建议时间 `2` 小时.
 
-## 待处理熵值 (Entropy Targets)
-TARGET_NAME: 1. Correction
-TARGET_ID: doc_section_1_correction
-WEIGHT: 0.95
-TARGET_NAME: 1 基本原则
-TARGET_ID: doc_section_1_基本原则
-WEIGHT: 0.95
-TARGET_NAME: 2 1 Issue
-TARGET_ID: doc_section_2_1_issue
-WEIGHT: 0.95
-TARGET_NAME: 2 2 Pull Request
-TARGET_ID: doc_section_2_2_pull_request
-WEIGHT: 0.95
-TARGET_NAME: 2. Warning
-TARGET_ID: doc_section_2_warning
-WEIGHT: 0.95
+## 约束
+
+- 结论必须可验证.
+- 自动生成内容只使用英文句号.
+- Jules 自主维护目录不由本流程改写.

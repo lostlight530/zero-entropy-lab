@@ -1,6 +1,38 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_mm_processing_md_18d6c947e649", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:10.830283+00:00", "source_path": "docs/design/mm_processing.md", "source_repo": "vllm-project/vllm", "source_sha": "18d6c947e64920283b28b2e7f49268bd4ded6e92"}
+# vllm-project/vllm · docs/design/mm_processing.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/mm_processing.md](https://github.com/vllm-project/vllm/blob/18d6c947e64920283b28b2e7f49268bd4ded6e92/docs/design/mm_processing.md) |
+| 来源版本 | `18d6c947e64920283b28b2e7f49268bd4ded6e92` |
+| 摄取时间 | `2026-07-11T06:09:10.830283+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_mm_processing_md_18d6c947e649` |
+
+## 本次变化
+
+- 新增行数 `63`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Multi-Modal Data Processing
+- Prompt Update Detection
+- Tokenized Prompt Inputs
+- The problem
+- Dummy text
+- Automatic prompt updating
+- Summary
+- Processor Output Caching
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Multi-Modal Data Processing
 
@@ -66,8 +98,10 @@ When new data is passed in, we first check which items are in the cache, and whi
 
 Since we only process the missing multi-modal data items, the number of input placeholder tokens no longer corresponds to the number of the multi-modal inputs, so they can't be passed alongside the text prompt to HF processor. Therefore, we process the text and multi-modal inputs separately, using [dummy text](#dummy-text) to avoid HF errors. Since this skips HF's prompt updating code, we apply [automatic prompt updating](#automatic-prompt-updating) afterwards to keep the output tokens and multi-modal data consistent with each other.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -140,3 +174,5 @@ Since we only process the missing multi-modal data items, the number of input pl
 +
 +Since we only process the missing multi-modal data items, the number of input placeholder tokens no longer corresponds to the number of the multi-modal inputs, so they can't be passed alongside the text prompt to HF processor. Therefore, we process the text and multi-modal inputs separately, using [dummy text](#dummy-text) to avoid HF errors. Since this skips HF's prompt updating code, we apply [automatic prompt updating](#automatic-prompt-updating) afterwards to keep the output tokens and multi-modal data consistent with each other.
 ```
+
+</details>

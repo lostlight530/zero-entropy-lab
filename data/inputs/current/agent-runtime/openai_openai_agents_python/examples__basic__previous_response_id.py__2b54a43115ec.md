@@ -1,6 +1,31 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openai_openai_agents_python_examples_basic_previous_response_id_py_2b54a43115ec", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:43.881176+00:00", "source_path": "examples/basic/previous_response_id.py", "source_repo": "openai/openai-agents-python", "source_sha": "2b54a43115ec1bad41026976888d33603bf4f4d3"}
+# openai/openai-agents-python · examples/basic/previous_response_id.py
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/basic/previous_response_id.py](https://github.com/openai/openai-agents-python/blob/2b54a43115ec1bad41026976888d33603bf4f4d3/examples/basic/previous_response_id.py) |
+| 来源版本 | `2b54a43115ec1bad41026976888d33603bf4f4d3` |
+| 摄取时间 | `2026-07-11T06:08:43.881176+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_basic_previous_response_id_py_2b54a43115ec` |
+
+## 本次变化
+
+- 新增行数 `74`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 未发现 Markdown 标题.
+
+<details>
+<summary>展开完整外部原文</summary>
 
 import asyncio
 
@@ -77,8 +102,10 @@ if __name__ == "__main__":
         else:
             asyncio.run(main())
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -162,3 +189,5 @@ if __name__ == "__main__":
 +        else:
 +            asyncio.run(main())
 ```
+
+</details>

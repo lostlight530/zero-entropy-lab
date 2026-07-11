@@ -1,6 +1,46 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_cuda_graphs_md_e274b68c7021", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:08.883139+00:00", "source_path": "docs/design/cuda_graphs.md", "source_repo": "vllm-project/vllm", "source_sha": "e274b68c70213a1c89fd48683f5a857ff7795b01"}
+# vllm-project/vllm · docs/design/cuda_graphs.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/cuda_graphs.md](https://github.com/vllm-project/vllm/blob/e274b68c70213a1c89fd48683f5a857ff7795b01/docs/design/cuda_graphs.md) |
+| 来源版本 | `e274b68c70213a1c89fd48683f5a857ff7795b01` |
+| 摄取时间 | `2026-07-11T06:09:08.883139+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_cuda_graphs_md_e274b68c7021` |
+
+## 本次变化
+
+- 新增行数 `238`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- CUDA Graphs
+- Motivation
+- `CudagraphModes`
+- Detailed Design
+- Overview
+- `BatchDescriptor`
+- `CudagraphDispatcher`
+- execution
+- `CUDAGraphWrapper`
+- Nested Wrapper design
+- Full CUDA Graph capturing & warm-up
+- CUDA Graphs Compatibility of Attention Backends
+- Usage guide
+- Python examples
+- Piecewise compilation and full graph custom passes (attention fusion, sequence parallelism)
+- About the Performance
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # CUDA Graphs
 
@@ -241,8 +281,10 @@ See the following links for examples:
 * [20059#issuecomment-3188735226](https://github.com/vllm-project/vllm/pull/20059#issuecomment-3188735226)
 * [20059#issuecomment-3219888738](https://github.com/vllm-project/vllm/pull/20059#issuecomment-3219888738)
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -490,3 +532,5 @@ See the following links for examples:
 +* [20059#issuecomment-3188735226](https://github.com/vllm-project/vllm/pull/20059#issuecomment-3188735226)
 +* [20059#issuecomment-3219888738](https://github.com/vllm-project/vllm/pull/20059#issuecomment-3219888738)
 ```
+
+</details>

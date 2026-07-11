@@ -1,6 +1,38 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_agentskills_agentskills_readme_md_247e4a18e908", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:37.405984+00:00", "source_path": "README.md", "source_repo": "agentskills/agentskills", "source_sha": "247e4a18e908d3bf27092f886f25c2515d84ecbc"}
+# agentskills/agentskills · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [agentskills/agentskills](https://github.com/agentskills/agentskills) |
+| 来源文件 | [README.md](https://github.com/agentskills/agentskills/blob/247e4a18e908d3bf27092f886f25c2515d84ecbc/README.md) |
+| 来源版本 | `247e4a18e908d3bf27092f886f25c2515d84ecbc` |
+| 摄取时间 | `2026-07-11T06:08:37.405984+00:00` |
+| 归属层 | `protocols` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_agentskills_agentskills_readme_md_247e4a18e908` |
+
+## 本次变化
+
+- 新增行数 `59`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Agent Skills
+- What are Agent Skills?
+- Why Agent Skills?
+- How do Agent Skills work?
+- Where can I use Agent Skills?
+- Getting started
+- Open development
+- License
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Agent Skills
 
@@ -62,8 +94,10 @@ The Agent Skills format was originally developed by [Anthropic](https://www.anth
 
 Code in this repository is licensed under [Apache 2.0](LICENSE). Documentation is licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). See individual directories for details.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -132,3 +166,5 @@ Code in this repository is licensed under [Apache 2.0](LICENSE). Documentation i
 +
 +Code in this repository is licensed under [Apache 2.0](LICENSE). Documentation is licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). See individual directories for details.
 ```
+
+</details>

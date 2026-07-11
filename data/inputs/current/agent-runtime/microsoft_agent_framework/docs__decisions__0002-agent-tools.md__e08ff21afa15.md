@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0002_agent_tools_md_e08ff21afa15", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:54.351639+00:00", "source_path": "docs/decisions/0002-agent-tools.md", "source_repo": "microsoft/agent-framework", "source_sha": "e08ff21afa15967f53d6962cf4981ac1c17af6ca"}
+# microsoft/agent-framework · docs/decisions/0002-agent-tools.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0002-agent-tools.md](https://github.com/microsoft/agent-framework/blob/e08ff21afa15967f53d6962cf4981ac1c17af6ca/docs/decisions/0002-agent-tools.md) |
+| 来源版本 | `e08ff21afa15967f53d6962cf4981ac1c17af6ca` |
+| 摄取时间 | `2026-07-11T06:08:54.351639+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0002_agent_tools_md_e08ff21afa15` |
+
+## 本次变化
+
+- 新增行数 `1896`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- These are optional elements. Feel free to remove any of them.
+- Agent Tools
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- Option 1: Use ChatOptions.RawRepresentationFactory for Provider-Specific Tools
+- Description
+- Pros
+- Cons
+- Option 2: Add Provider-Specific AITool-Derived Types in Provider Packages
+- Description
+- Pros
+- Cons
+- Option 3: Create Generic AITool-Derived Abstractions in M.E.AI.Abstractions
+- Description
+- Pros
+- Cons
+- Option 4: Hybrid Approach Combining Options 1, 2, and 3
+- Description
+- Pros
+- Cons
+- More information
+- AI Agent Tool Types Availability
+- API Comparison
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 # These are optional elements. Feel free to remove any of them.
@@ -1899,8 +1947,10 @@ Image Generation | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | Generates or edits 
 
 TBD.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -3806,3 +3856,5 @@ TBD.
 +
 +TBD.
 ```
+
+</details>

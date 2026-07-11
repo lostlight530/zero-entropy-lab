@@ -1,6 +1,47 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_torch_compile_md_4dc0da0c7d65", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:12.135357+00:00", "source_path": "docs/design/torch_compile.md", "source_repo": "vllm-project/vllm", "source_sha": "4dc0da0c7d659be9923017db73a3aeff67c99728"}
+# vllm-project/vllm · docs/design/torch_compile.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/torch_compile.md](https://github.com/vllm-project/vllm/blob/4dc0da0c7d659be9923017db73a3aeff67c99728/docs/design/torch_compile.md) |
+| 来源版本 | `4dc0da0c7d659be9923017db73a3aeff67c99728` |
+| 摄取时间 | `2026-07-11T06:09:12.135357+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_torch_compile_md_4dc0da0c7d65` |
+
+## 本次变化
+
+- 新增行数 `261`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- `torch.compile` integration
+- Compilation Cache
+- Dynamic shapes and vllm guard dropping
+- Configuring Dynamic Shapes
+- Offline Inference Example (Using LLM class)
+- Example: Using backed_size_oblivious (experimental, safer than backed)
+- Example: Using unbacked (strongest guarantee against guards)
+- Generate outputs
+- Online Serving Example (Using vllm serve)
+- Example: Using unbacked
+- Alternative: Using dot notation (simpler for single values)
+- Choosing the Right Mode
+- Python Code Compilation
+- Computation Graph Processing
+- Computation Graph Compilation
+- Cudagraph Capture
+- Full Cudagraph capture
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # `torch.compile` integration
 
@@ -264,8 +305,10 @@ Then it will only capture cudagraph for the specified sizes. It can be useful to
 
 It is possible to include attention as part of the cudagraph if using an attention backend that is cudagraph compatible. This can improve performance in some cases such as decode speed for smaller models or MOEs. See [CUDA Graphs](cuda_graphs.md) for more details.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -536,3 +579,5 @@ It is possible to include attention as part of the cudagraph if using an attenti
 +
 +It is possible to include attention as part of the cudagraph if using an attention backend that is cudagraph compatible. This can improve performance in some cases such as decode speed for smaller models or MOEs. See [CUDA Graphs](cuda_graphs.md) for more details.
 ```
+
+</details>

@@ -1,6 +1,37 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_prefix_caching_md_f783f4a1bc85", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:11.988303+00:00", "source_path": "docs/design/prefix_caching.md", "source_repo": "vllm-project/vllm", "source_sha": "f783f4a1bc85a7ee15e00ed736a473f3ef3f896c"}
+# vllm-project/vllm · docs/design/prefix_caching.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/prefix_caching.md](https://github.com/vllm-project/vllm/blob/f783f4a1bc85a7ee15e00ed736a473f3ef3f896c/docs/design/prefix_caching.md) |
+| 来源版本 | `f783f4a1bc85a7ee15e00ed736a473f3ef3f896c` |
+| 摄取时间 | `2026-07-11T06:09:11.988303+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_prefix_caching_md_f783f4a1bc85` |
+
+## 本次变化
+
+- 新增行数 `236`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Automatic Prefix Caching
+- Data Structure
+- Operations
+- Block Allocation
+- Free
+- Eviction (LRU)
+- Example
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Automatic Prefix Caching
 
@@ -239,8 +270,10 @@ In this example, we assume the block size is 4 (each block can cache 4 tokens), 
 
 ![Example Time 6](../assets/design/prefix_caching/example-time-7.png)
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -486,3 +519,5 @@ In this example, we assume the block size is 4 (each block can cache 4 tokens), 
 +
 +![Example Time 6](../assets/design/prefix_caching/example-time-7.png)
 ```
+
+</details>

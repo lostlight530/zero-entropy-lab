@@ -1,6 +1,46 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_modelcontextprotocol_servers_readme_md_fe5351a890ab", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:19.261759+00:00", "source_path": "README.md", "source_repo": "modelcontextprotocol/servers", "source_sha": "fe5351a890ab80f6d49b2b50f1e0732224313b24"}
+# modelcontextprotocol/servers · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) |
+| 来源文件 | [README.md](https://github.com/modelcontextprotocol/servers/blob/fe5351a890ab80f6d49b2b50f1e0732224313b24/README.md) |
+| 来源版本 | `fe5351a890ab80f6d49b2b50f1e0732224313b24` |
+| 摄取时间 | `2026-07-11T06:09:19.261759+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_modelcontextprotocol_servers_readme_md_fe5351a890ab` |
+
+## 本次变化
+
+- 新增行数 `170`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Model Context Protocol servers
+- 🌟 Reference Servers
+- Archived
+- 🚀 Getting Started
+- Using MCP Servers in this Repository
+- With uvx
+- With pip
+- Using an MCP Client
+- 🛠️ Creating Your Own Server
+- 📚 Learn More
+- 🤝 Contributing
+- 📦 Releasing
+- 🔒 Security
+- 📜 License
+- 💬 Community
+- ⭐ Support
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Model Context Protocol servers
 
@@ -173,8 +213,10 @@ If you find MCP servers useful, please consider starring the repository and cont
 
 Managed by Anthropic, but built together with the community. The Model Context Protocol is open source and we encourage everyone to contribute their own servers and improvements!
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -354,3 +396,5 @@ Managed by Anthropic, but built together with the community. The Model Context P
 +
 +Managed by Anthropic, but built together with the community. The Model Context Protocol is open source and we encourage everyone to contribute their own servers and improvements!
 ```
+
+</details>

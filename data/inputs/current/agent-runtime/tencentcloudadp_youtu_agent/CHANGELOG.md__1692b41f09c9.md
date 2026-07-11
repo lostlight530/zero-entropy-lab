@@ -1,6 +1,36 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_tencentcloudadp_youtu_agent_changelog_md_1692b41f09c9", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:05.036455+00:00", "source_path": "CHANGELOG.md", "source_repo": "TencentCloudADP/youtu-agent", "source_sha": "1692b41f09c93d663db21a8d5a7bdf63ccbf9822"}
+# TencentCloudADP/youtu-agent · CHANGELOG.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [TencentCloudADP/youtu-agent](https://github.com/TencentCloudADP/youtu-agent) |
+| 来源文件 | [CHANGELOG.md](https://github.com/TencentCloudADP/youtu-agent/blob/1692b41f09c93d663db21a8d5a7bdf63ccbf9822/CHANGELOG.md) |
+| 来源版本 | `1692b41f09c93d663db21a8d5a7bdf63ccbf9822` |
+| 摄取时间 | `2026-07-11T06:09:05.036455+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_tencentcloudadp_youtu_agent_changelog_md_1692b41f09c9` |
+
+## 本次变化
+
+- 新增行数 `33`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Changelog
+- v0.1.3 - 2025-10-31
+- v0.1.2 - 2025-10-13
+- v0.1.1 - 2025-09-22
+- v0.1.0
+- frontend/v0.1.5 - 2025-08-29
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Changelog
 
@@ -36,8 +66,10 @@ PROVENANCE: {"confidence": 1.0, "entity_id": "doc_tencentcloudadp_youtu_agent_ch
 ## frontend/v0.1.5 - 2025-08-29
 - add the `utu_agent_ui` package by @fpg2012
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -80,3 +112,5 @@ PROVENANCE: {"confidence": 1.0, "entity_id": "doc_tencentcloudadp_youtu_agent_ch
 +## frontend/v0.1.5 - 2025-08-29
 +- add the `utu_agent_ui` package by @fpg2012
 ```
+
+</details>

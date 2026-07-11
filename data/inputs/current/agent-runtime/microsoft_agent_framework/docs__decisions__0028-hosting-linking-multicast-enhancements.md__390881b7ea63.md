@@ -1,6 +1,47 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0028_hosting_linking_multicast_enhancements_md_390881b7ea63", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:58.627517+00:00", "source_path": "docs/decisions/0028-hosting-linking-multicast-enhancements.md", "source_repo": "microsoft/agent-framework", "source_sha": "390881b7ea63a53e4bb21374f79ccdf133e2e3e1"}
+# microsoft/agent-framework · docs/decisions/0028-hosting-linking-multicast-enhancements.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0028-hosting-linking-multicast-enhancements.md](https://github.com/microsoft/agent-framework/blob/390881b7ea63a53e4bb21374f79ccdf133e2e3e1/docs/decisions/0028-hosting-linking-multicast-enhancements.md) |
+| 来源版本 | `390881b7ea63a53e4bb21374f79ccdf133e2e3e1` |
+| 摄取时间 | `2026-07-11T06:08:58.627517+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0028_hosting_linking_multicast_enhancements_md_390881b7ea63` |
+
+## 本次变化
+
+- 新增行数 `132`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Hosting linking and multicast enhancements
+- Context and Problem Statement
+- Decision Drivers
+- Enhancement Areas
+- Considered Options
+- Option A — Leave all behavior to applications
+- Option B — Add the full enhancement stack to v1
+- Option C — Layer opt-in enhancement packages after v1
+- Option D — Build only platform-specific integrations
+- Decision Outcome
+- Safety Requirements
+- Threat model
+- Idempotency and replay
+- Storage
+- Observability and support
+- Validation Gates
+- Relationship to ADR-0027
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: proposed
@@ -135,8 +176,10 @@ Before these enhancements are accepted:
 
 ADR-0027 remains valid without any of these enhancements. This ADR extends the hosting model only after the safety, storage, and support requirements above are satisfied.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -278,3 +321,5 @@ ADR-0027 remains valid without any of these enhancements. This ADR extends the h
 +
 +ADR-0027 remains valid without any of these enhancements. This ADR extends the hosting model only after the safety, storage, and support requirements above are satisfied.
 ```
+
+</details>

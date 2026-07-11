@@ -1,6 +1,52 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_mem0ai_mem0_readme_md_9a81e74effac", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:23.644044+00:00", "source_path": "README.md", "source_repo": "mem0ai/mem0", "source_sha": "9a81e74effacbd7433e91b6c1fcc907f110d4773"}
+# mem0ai/mem0 · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [mem0ai/mem0](https://github.com/mem0ai/mem0) |
+| 来源文件 | [README.md](https://github.com/mem0ai/mem0/blob/9a81e74effacbd7433e91b6c1fcc907f110d4773/README.md) |
+| 来源版本 | `9a81e74effacbd7433e91b6c1fcc907f110d4773` |
+| 摄取时间 | `2026-07-11T06:09:23.644044+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_mem0ai_mem0_readme_md_9a81e74effac` |
+
+## 本次变化
+
+- 新增行数 `269`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- New Memory Algorithm (April 2026)
+- Research Highlights
+- Introduction
+- Key Features & Use Cases
+- 🚀 Quickstart Guide <a name="quickstart"></a>
+- Sign up as an agent
+- 1. Install
+- 2. Sign up as an agent (replace `claude-code` with your name)
+- 3. Add a memory
+- 4. Search
+- Library (pip / npm)
+- Self-Hosted Server
+- Recommended: one command — start the stack, create an admin, issue the first API key.
+- Manual: start the stack and finish setup via the browser wizard.
+- Cloud Platform
+- CLI
+- Agent Skills
+- Basic Usage
+- 🔗 Integrations & Demos
+- 📚 Documentation & Support
+- Citation
+- ⚖️ License
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <p align="center">
   <a href="https://github.com/mem0ai/mem0">
@@ -272,8 +318,10 @@ We now have a paper you can cite:
 
 Apache 2.0 — see the [LICENSE](https://github.com/mem0ai/mem0/blob/main/LICENSE) file for details.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -552,3 +600,5 @@ Apache 2.0 — see the [LICENSE](https://github.com/mem0ai/mem0/blob/main/LICENS
 +
 +Apache 2.0 — see the [LICENSE](https://github.com/mem0ai/mem0/blob/main/LICENSE) file for details.
 ```
+
+</details>

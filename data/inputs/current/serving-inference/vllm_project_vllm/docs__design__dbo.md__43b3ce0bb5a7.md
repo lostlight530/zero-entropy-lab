@@ -1,6 +1,51 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_docs_design_dbo_md_43b3ce0bb5a7", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:09.295060+00:00", "source_path": "docs/design/dbo.md", "source_repo": "vllm-project/vllm", "source_sha": "43b3ce0bb5a734941a84e3d1c17dd6555fc51332"}
+# vllm-project/vllm · docs/design/dbo.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [docs/design/dbo.md](https://github.com/vllm-project/vllm/blob/43b3ce0bb5a734941a84e3d1c17dd6555fc51332/docs/design/dbo.md) |
+| 来源版本 | `43b3ce0bb5a734941a84e3d1c17dd6555fc51332` |
+| 摄取时间 | `2026-07-11T06:09:09.295060+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_docs_design_dbo_md_43b3ce0bb5a7` |
+
+## 本次变化
+
+- 新增行数 `88`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Dual Batch Overlap
+- Motivation
+- Introduction
+- Schedule notation legend:
+- S = Shared expert
+- A0 = MLA qkv proj,
+- A1 = Core attn + out proj + MoE gate
+- D = Dispatch
+- C = Combine
+- Comp: |-A0₀-A1₀-||-MLP₁-||-S₁-MLP₀-||-S₀-A0₁-A1₁-|
+- Comm: |----D₁---||--D₀--||----C₁---||-----C₀-----|
+- Order: D₁ send, A0₀, A1₀, D₁ recv, D₀ send, MLP₁, D₀ recv,
+- C₁ send, S₁, MLP₀, C₁ recv, C₀ send, S₀, A0₁, A1₁, C₀ recv.
+- MLP_SHARED_OVERLAP = "mlp_shared_overlap"
+- Running with DBO
+- DBO Components
+- GPU Model Runner
+- UBatchWrapper
+- Interfaces
+- UBatchContext
+- Interfaces
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Dual Batch Overlap
 
@@ -91,8 +136,10 @@ The `dbo_maybe_run_recv_hook` method runs a callback that’s set by the `dbo_re
 
 The `dbo_yield` method puts the current thread to sleep and wakes up the other UBatch thread.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -190,3 +237,5 @@ The `dbo_yield` method puts the current thread to sleep and wakes up the other U
 +
 +The `dbo_yield` method puts the current thread to sleep and wakes up the other UBatch thread.
 ```
+
+</details>

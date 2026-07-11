@@ -1,6 +1,36 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_vllm_project_vllm_readme_md_42777436c63d", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:08.465997+00:00", "source_path": "README.md", "source_repo": "vllm-project/vllm", "source_sha": "42777436c63dd58fd5d66040261d6ea8e2477c40"}
+# vllm-project/vllm · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [vllm-project/vllm](https://github.com/vllm-project/vllm) |
+| 来源文件 | [README.md](https://github.com/vllm-project/vllm/blob/42777436c63dd58fd5d66040261d6ea8e2477c40/README.md) |
+| 来源版本 | `42777436c63dd58fd5d66040261d6ea8e2477c40` |
+| 摄取时间 | `2026-07-11T06:09:08.465997+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_vllm_project_vllm_readme_md_42777436c63d` |
+
+## 本次变化
+
+- 新增行数 `110`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- About
+- Getting Started
+- Contributing
+- Citation
+- Contact Us
+- Media Kit
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <!-- markdownlint-disable MD001 MD041 -->
 <p align="center">
@@ -113,8 +143,10 @@ If you use vLLM for your research, please cite our [paper](https://arxiv.org/abs
 
 - If you wish to use vLLM's logo, please refer to [our media kit repo](https://github.com/vllm-project/media-kit)
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -234,3 +266,5 @@ If you use vLLM for your research, please cite our [paper](https://arxiv.org/abs
 +
 +- If you wish to use vLLM's logo, please refer to [our media kit repo](https://github.com/vllm-project/media-kit)
 ```
+
+</details>

@@ -1,6 +1,39 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_moonshotai_kimi_agent_sdk_readme_md_e48d8c4fcd98", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:06.755517+00:00", "source_path": "README.md", "source_repo": "MoonshotAI/kimi-agent-sdk", "source_sha": "e48d8c4fcd987e9f2550fb2bb0acbecd307ec9c7"}
+# MoonshotAI/kimi-agent-sdk · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [MoonshotAI/kimi-agent-sdk](https://github.com/MoonshotAI/kimi-agent-sdk) |
+| 来源文件 | [README.md](https://github.com/MoonshotAI/kimi-agent-sdk/blob/e48d8c4fcd987e9f2550fb2bb0acbecd307ec9c7/README.md) |
+| 来源版本 | `e48d8c4fcd987e9f2550fb2bb0acbecd307ec9c7` |
+| 摄取时间 | `2026-07-11T06:09:06.755517+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_moonshotai_kimi_agent_sdk_readme_md_e48d8c4fcd98` |
+
+## 本次变化
+
+- 新增行数 `58`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Kimi Agent SDK
+- Overview
+- Available SDKs
+- Quick Start
+- Installation
+- Go
+- Node.js
+- Python
+- Examples
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Kimi Agent SDK
 
@@ -61,8 +94,10 @@ Python quick start: [guides/python/quickstart.md](./guides/python/quickstart.md)
 - Go: [examples/go/ralph-loop](./examples/go/ralph-loop), [examples/go/rumor-buster](./examples/go/rumor-buster)
 - Python: [examples/python/customized-tools](./examples/python/customized-tools), [examples/python/kaos](./examples/python/kaos) (KAOS sandbox backends: run the same agent tools in BoxLite, E2B, or Sprites)
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -130,3 +165,5 @@ Python quick start: [guides/python/quickstart.md](./guides/python/quickstart.md)
 +- Go: [examples/go/ralph-loop](./examples/go/ralph-loop), [examples/go/rumor-buster](./examples/go/rumor-buster)
 +- Python: [examples/python/customized-tools](./examples/python/customized-tools), [examples/python/kaos](./examples/python/kaos) (KAOS sandbox backends: run the same agent tools in BoxLite, E2B, or Sprites)
 ```
+
+</details>

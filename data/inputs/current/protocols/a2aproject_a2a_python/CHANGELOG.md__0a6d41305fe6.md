@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_a2aproject_a2a_python_changelog_md_0a6d41305fe6", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:40.220070+00:00", "source_path": "CHANGELOG.md", "source_repo": "a2aproject/a2a-python", "source_sha": "0a6d41305fe6a7fcc57ecb006d24c466e72ebd28"}
+# a2aproject/a2a-python · CHANGELOG.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [a2aproject/a2a-python](https://github.com/a2aproject/a2a-python) |
+| 来源文件 | [CHANGELOG.md](https://github.com/a2aproject/a2a-python/blob/0a6d41305fe6a7fcc57ecb006d24c466e72ebd28/CHANGELOG.md) |
+| 来源版本 | `0a6d41305fe6a7fcc57ecb006d24c466e72ebd28` |
+| 摄取时间 | `2026-07-11T06:08:40.220070+00:00` |
+| 归属层 | `protocols` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_a2aproject_a2a_python_changelog_md_0a6d41305fe6` |
+
+## 本次变化
+
+- 新增行数 `826`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Changelog
+- [1.1.0](https://github.com/a2aproject/a2a-python/compare/v1.0.3...v1.1.0) (2026-05-29)
+- Features
+- Bug Fixes
+- Documentation
+- Miscellaneous Chores
+- [1.0.3](https://github.com/a2aproject/a2a-python/compare/v1.0.2...v1.0.3) (2026-05-13)
+- Features
+- Bug Fixes
+- Documentation
+- [1.0.2](https://github.com/a2aproject/a2a-python/compare/v1.0.1...v1.0.2) (2026-04-24)
+- Features
+- Bug Fixes
+- [1.0.1](https://github.com/a2aproject/a2a-python/compare/v1.0.0...v1.0.1) (2026-04-22)
+- Bug Fixes
+- [1.0.0](https://github.com/a2aproject/a2a-python/compare/v1.0.0-alpha.3...v1.0.0) (2026-04-20)
+- ⚠ BREAKING CHANGES
+- Bug Fixes
+- Documentation
+- Miscellaneous Chores
+- [1.0.0-alpha.3](https://github.com/a2aproject/a2a-python/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2026-04-17)
+- Bug Fixes
+- [1.0.0-alpha.2](https://github.com/a2aproject/a2a-python/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2026-04-17)
+- ⚠ BREAKING CHANGES
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Changelog
 
@@ -829,8 +877,10 @@ See the [**v0.3 → v1.0 migration guide**](docs/migrations/v1_0/README.md) and 
 
 * Write/Update Docstrings for Classes/Methods ([#59](https://github.com/a2aproject/a2a-python/issues/59)) ([9f773ef](https://github.com/a2aproject/a2a-python/commit/9f773eff4dddc4eec723d519d0050f21b9ccc042))
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -1666,3 +1716,5 @@ See the [**v0.3 → v1.0 migration guide**](docs/migrations/v1_0/README.md) and 
 +
 +* Write/Update Docstrings for Classes/Methods ([#59](https://github.com/a2aproject/a2a-python/issues/59)) ([9f773ef](https://github.com/a2aproject/a2a-python/commit/9f773eff4dddc4eec723d519d0050f21b9ccc042))
 ```
+
+</details>

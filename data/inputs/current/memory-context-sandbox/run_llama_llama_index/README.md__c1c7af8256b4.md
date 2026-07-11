@@ -1,6 +1,49 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_run_llama_llama_index_readme_md_c1c7af8256b4", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:21.730804+00:00", "source_path": "README.md", "source_repo": "run-llama/llama_index", "source_sha": "c1c7af8256b4d278748ea9b5c8b1a5da1858e691"}
+# run-llama/llama_index · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [run-llama/llama_index](https://github.com/run-llama/llama_index) |
+| 来源文件 | [README.md](https://github.com/run-llama/llama_index/blob/c1c7af8256b4d278748ea9b5c8b1a5da1858e691/README.md) |
+| 来源版本 | `c1c7af8256b4d278748ea9b5c8b1a5da1858e691` |
+| 摄取时间 | `2026-07-11T06:09:21.730804+00:00` |
+| 归属层 | `memory-context-sandbox` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_run_llama_llama_index_readme_md_c1c7af8256b4` |
+
+## 本次变化
+
+- 新增行数 `217`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 🗂️ LlamaIndex 🦙
+- typical pattern
+- concrete example
+- LlamaParse (document agent platform)
+- Important Links
+- 🚀 Overview
+- Context
+- Proposed Solution
+- 💡 Contributing
+- 📄 Documentation
+- 💻 Example Usage
+- custom selection of integrations to work with core
+- set the LLM
+- set tokenizer to match LLM
+- set the embed model
+- rebuild storage context
+- load index
+- A note on Verification of Build Assets
+- 📖 Citation
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # 🗂️ LlamaIndex 🦙
 
@@ -220,8 +263,10 @@ year = {2022}
 }
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -448,3 +493,5 @@ year = {2022}
 +}
 +```
 ```
+
+</details>

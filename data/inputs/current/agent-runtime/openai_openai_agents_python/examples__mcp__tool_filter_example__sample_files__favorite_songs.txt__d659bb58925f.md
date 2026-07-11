@@ -1,6 +1,31 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openai_openai_agents_python_examples_mcp_tool_filter_example_sample_files_favorite_songs_txt_d659bb58925f", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:50.151858+00:00", "source_path": "examples/mcp/tool_filter_example/sample_files/favorite_songs.txt", "source_repo": "openai/openai-agents-python", "source_sha": "d659bb58925fc0eab4c77dcbfae060586d739119"}
+# openai/openai-agents-python · examples/mcp/tool_filter_example/sample_files/favorite_songs.txt
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/mcp/tool_filter_example/sample_files/favorite_songs.txt](https://github.com/openai/openai-agents-python/blob/d659bb58925fc0eab4c77dcbfae060586d739119/examples/mcp/tool_filter_example/sample_files/favorite_songs.txt) |
+| 来源版本 | `d659bb58925fc0eab4c77dcbfae060586d739119` |
+| 摄取时间 | `2026-07-11T06:08:50.151858+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_mcp_tool_filter_example_sample_files_favorite_songs_txt_d659bb58925f` |
+
+## 本次变化
+
+- 新增行数 `10`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 未发现 Markdown 标题.
+
+<details>
+<summary>展开完整外部原文</summary>
 
 1. "Here Comes the Sun" – The Beatles
 2. "Imagine" – John Lennon
@@ -13,8 +38,10 @@ PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openai_openai_agents_python_ex
 9. "Happy" – Pharrell Williams
 10. "Wonderwall" – Oasis
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -34,3 +61,5 @@ PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openai_openai_agents_python_ex
 +9. "Happy" – Pharrell Williams
 +10. "Wonderwall" – Oasis
 ```
+
+</details>

@@ -1,6 +1,48 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0024_prompt_injection_defense_md_0dc2de6301aa", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:58.022647+00:00", "source_path": "docs/decisions/0024-prompt-injection-defense.md", "source_repo": "microsoft/agent-framework", "source_sha": "0dc2de6301aa9af5a8cc8f7121eead6afa790608"}
+# microsoft/agent-framework · docs/decisions/0024-prompt-injection-defense.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0024-prompt-injection-defense.md](https://github.com/microsoft/agent-framework/blob/0dc2de6301aa9af5a8cc8f7121eead6afa790608/docs/decisions/0024-prompt-injection-defense.md) |
+| 来源版本 | `0dc2de6301aa9af5a8cc8f7121eead6afa790608` |
+| 摄取时间 | `2026-07-11T06:08:58.022647+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0024_prompt_injection_defense_md_0dc2de6301aa` |
+
+## 本次变化
+
+- 新增行数 `154`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- FIDES - Deterministic Prompt Injection Defense [Costa et al., 2025]
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- Decision Outcome
+- Consequences
+- Pros and Cons of the Options
+- Information-flow control with label-based middleware (FIDES)
+- Prompt engineering defense
+- Content sanitization
+- Separate agent instances
+- Runtime monitoring only
+- Implementation Notes
+- Integration Points
+- MCP-Specific Security Notes
+- Backwards Compatibility
+- Related Decisions
+- References
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 status: proposed
@@ -157,8 +199,10 @@ Monitor agent behavior and block suspicious actions post-facto.
 - [ ] Performance Benchmarks
 - [ ] User Acceptance Testing
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -322,3 +366,5 @@ Monitor agent behavior and block suspicious actions post-facto.
 +- [ ] Performance Benchmarks
 +- [ ] User Acceptance Testing
 ```
+
+</details>

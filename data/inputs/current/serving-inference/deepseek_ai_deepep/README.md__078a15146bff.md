@@ -1,6 +1,54 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_deepseek_ai_deepep_readme_md_078a15146bff", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:16.908357+00:00", "source_path": "README.md", "source_repo": "deepseek-ai/DeepEP", "source_sha": "078a15146bffdf1ffb27a1018eb3c5472d9dcad0"}
+# deepseek-ai/DeepEP · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [deepseek-ai/DeepEP](https://github.com/deepseek-ai/DeepEP) |
+| 来源文件 | [README.md](https://github.com/deepseek-ai/DeepEP/blob/078a15146bffdf1ffb27a1018eb3c5472d9dcad0/README.md) |
+| 来源版本 | `078a15146bffdf1ffb27a1018eb3c5472d9dcad0` |
+| 摄取时间 | `2026-07-11T06:09:16.908357+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_deepseek_ai_deepep_readme_md_078a15146bff` |
+
+## 本次变化
+
+- 新增行数 `449`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- DeepEP
+- News
+- New features
+- Notes
+- Still on-going features
+- Performance
+- Quick start
+- Requirements
+- Install NCCL dependency
+- Install NVSHMEM dependency
+- Development
+- Build and make symbolic links for SO files
+- You may modify the specific SO names according to your own platform
+- Run test cases
+- NOTES: you may modify the `init_dist` function in `tests/utils/envs.py`
+- according to your own cluster settings, and launch into multiple nodes
+- Installation
+- Interfaces and examples
+- Buffer initialization
+- Communication buffer (will allocate at runtime)
+- Number of SMs to use for communication kernels (will be set at buffer creation)
+- Example use in model training or inference prefilling
+- After dispatch, overlap computation while communication is in-flight
+- ... do some independent computation here ...
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # DeepEP
 
@@ -452,8 +500,10 @@ This code repository is released under [the MIT License](LICENSE).
 }
 ```
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -912,3 +962,5 @@ This code repository is released under [the MIT License](LICENSE).
 +}
 +```
 ```
+
+</details>

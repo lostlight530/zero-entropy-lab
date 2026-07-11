@@ -1,6 +1,31 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openai_openai_agents_python_examples_memory_file_session_py_e62dbd167fa8", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:51.167229+00:00", "source_path": "examples/memory/file_session.py", "source_repo": "openai/openai-agents-python", "source_sha": "e62dbd167fa88e17005cfcd81e370cd3fc14ff64"}
+# openai/openai-agents-python · examples/memory/file_session.py
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/memory/file_session.py](https://github.com/openai/openai-agents-python/blob/e62dbd167fa88e17005cfcd81e370cd3fc14ff64/examples/memory/file_session.py) |
+| 来源版本 | `e62dbd167fa88e17005cfcd81e370cd3fc14ff64` |
+| 摄取时间 | `2026-07-11T06:08:51.167229+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_memory_file_session_py_e62dbd167fa8` |
+
+## 本次变化
+
+- 新增行数 `124`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 未发现 Markdown 标题.
+
+<details>
+<summary>展开完整外部原文</summary>
 
 """
 Simple file-backed session implementation for examples.
@@ -127,8 +152,10 @@ class FileSession(Session):
         await asyncio.to_thread(self._dir.mkdir, parents=True, exist_ok=True)
         await asyncio.to_thread(state_path.write_text, payload, encoding="utf-8")
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -262,3 +289,5 @@ class FileSession(Session):
 +        await asyncio.to_thread(self._dir.mkdir, parents=True, exist_ok=True)
 +        await asyncio.to_thread(state_path.write_text, payload, encoding="utf-8")
 ```
+
+</details>

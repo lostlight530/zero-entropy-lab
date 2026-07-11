@@ -1,6 +1,38 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_nvidia_tensorrt_llm_readme_md_943083d6c4c6", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:09:15.655022+00:00", "source_path": "README.md", "source_repo": "NVIDIA/TensorRT-LLM", "source_sha": "943083d6c4c612b4694a9b675758527594154d34"}
+# NVIDIA/TensorRT-LLM · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) |
+| 来源文件 | [README.md](https://github.com/NVIDIA/TensorRT-LLM/blob/943083d6c4c612b4694a9b675758527594154d34/README.md) |
+| 来源版本 | `943083d6c4c612b4694a9b675758527594154d34` |
+| 摄取时间 | `2026-07-11T06:09:15.655022+00:00` |
+| 归属层 | `serving-inference` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_nvidia_tensorrt_llm_readme_md_943083d6c4c6` |
+
+## 本次变化
+
+- 新增行数 `341`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Tech Blogs
+- Latest News
+- TensorRT LLM Overview
+- Getting Started
+- Deprecation Policy
+- Telemetry Data Collection
+- Opting Out of Telemetry Data Collection
+- Useful Links
+
+<details>
+<summary>展开完整外部原文</summary>
 
 <div align="center">
 
@@ -344,8 +376,10 @@ reference of exactly what is collected, see the
 - [AutoDeploy](https://nvidia.github.io/TensorRT-LLM/features/auto_deploy/auto-deploy.html): A beta backend for TensorRT LLM to simplify and accelerate the deployment of PyTorch models.
 - [WeChat Discussion Group](https://github.com/NVIDIA/TensorRT-LLM/issues/5359): A real-time channel for TensorRT LLM Q&A and news.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -696,3 +730,5 @@ reference of exactly what is collected, see the
 +- [AutoDeploy](https://nvidia.github.io/TensorRT-LLM/features/auto_deploy/auto-deploy.html): A beta backend for TensorRT LLM to simplify and accelerate the deployment of PyTorch models.
 +- [WeChat Discussion Group](https://github.com/NVIDIA/TensorRT-LLM/issues/5359): A real-time channel for TensorRT LLM Q&A and news.
 ```
+
+</details>

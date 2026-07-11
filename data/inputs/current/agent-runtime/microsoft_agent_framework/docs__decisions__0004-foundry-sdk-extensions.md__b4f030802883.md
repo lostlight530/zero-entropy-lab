@@ -1,6 +1,39 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_microsoft_agent_framework_docs_decisions_0004_foundry_sdk_extensions_md_b4f030802883", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:54.616007+00:00", "source_path": "docs/decisions/0004-foundry-sdk-extensions.md", "source_repo": "microsoft/agent-framework", "source_sha": "b4f030802883fd2c8c76bbbc62f38bce8f6e2a00"}
+# microsoft/agent-framework · docs/decisions/0004-foundry-sdk-extensions.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/0004-foundry-sdk-extensions.md](https://github.com/microsoft/agent-framework/blob/b4f030802883fd2c8c76bbbc62f38bce8f6e2a00/docs/decisions/0004-foundry-sdk-extensions.md) |
+| 来源版本 | `b4f030802883fd2c8c76bbbc62f38bce8f6e2a00` |
+| 摄取时间 | `2026-07-11T06:08:54.616007+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_0004_foundry_sdk_extensions_md_b4f030802883` |
+
+## 本次变化
+
+- 新增行数 `62`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- These are optional elements. Feel free to remove any of them.
+- `Azure.AI.Agents.Persistent` package Extensions Methods for Agent Framework
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- Add the extension methods to the `Azure.AI.Agents.Persistent` package and change it's dependencies
+- - Add the extension methods to the `Azure.AI.Agents.Persistent` package without changing it's dependencies
+- Add the extension methods to a `Microsoft.Extensions.AI.Azure` package
+- Decision Outcome
+
+<details>
+<summary>展开完整外部原文</summary>
 
 ---
 # These are optional elements. Feel free to remove any of them.
@@ -65,8 +98,10 @@ The purpose of this ADR is to decide where these extension methods should live.
 Chosen option: "Add the extension methods to a `Microsoft.Extensions.AI.Azure` package", because
 it introduces no additional dependencies to `Azure.AI.Agents.Persistent` package.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -138,3 +173,5 @@ it introduces no additional dependencies to `Azure.AI.Agents.Persistent` package
 +Chosen option: "Add the extension methods to a `Microsoft.Extensions.AI.Azure` package", because
 +it introduces no additional dependencies to `Azure.AI.Agents.Persistent` package.
 ```
+
+</details>

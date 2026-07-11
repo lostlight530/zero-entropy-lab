@@ -1,6 +1,39 @@
-PROVENANCE: {"confidence": 1.0, "entity_id": "doc_a2aproject_a2a_readme_md_9db896e8b055", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:39.451361+00:00", "source_path": "README.md", "source_repo": "a2aproject/A2A", "source_sha": "9db896e8b05538b2a157215d3dba660dddc8c5ed"}
+# a2aproject/A2A · README.md
 
-# Source Document
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [a2aproject/A2A](https://github.com/a2aproject/A2A) |
+| 来源文件 | [README.md](https://github.com/a2aproject/A2A/blob/9db896e8b05538b2a157215d3dba660dddc8c5ed/README.md) |
+| 来源版本 | `9db896e8b05538b2a157215d3dba660dddc8c5ed` |
+| 摄取时间 | `2026-07-11T06:08:39.451361+00:00` |
+| 归属层 | `protocols` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_a2aproject_a2a_readme_md_9db896e8b055` |
+
+## 本次变化
+
+- 新增行数 `129`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- Agent2Agent (A2A) Protocol
+- DeepLearning.AI Course
+- Why A2A?
+- Key Features
+- Getting Started
+- Contributing
+- What's next
+- Protocol Enhancements
+- About
+
+<details>
+<summary>展开完整外部原文</summary>
 
 # Agent2Agent (A2A) Protocol
 
@@ -132,8 +165,10 @@ We welcome community contributions to enhance and evolve the A2A protocol!
 
 The A2A Protocol is an open source project under the Linux Foundation, contributed by Google. It is licensed under the [Apache License 2.0](LICENSE) and is open to contributions from the community.
 
+</details>
 
-# Document Diff
+<details>
+<summary>展开完整版本差异</summary>
 
 ```diff
 --- previous
@@ -272,3 +307,5 @@ The A2A Protocol is an open source project under the Linux Foundation, contribut
 +
 +The A2A Protocol is an open source project under the Linux Foundation, contributed by Google. It is licensed under the [Apache License 2.0](LICENSE) and is open to contributions from the community.
 ```
+
+</details>
