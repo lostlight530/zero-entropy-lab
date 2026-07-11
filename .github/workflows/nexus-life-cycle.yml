@@ -5,8 +5,10 @@ on:
     - cron: '0 22 * * *'
   push:
     paths:
-      - 'docs/brain/**'
+      - '.github/workflows/nexus-life-cycle.yml'
+      - 'data/inputs/**'
       - 'src/**'
+      - 'tests/**'
   workflow_dispatch:
 
 jobs:
@@ -17,14 +19,6 @@ jobs:
       contents: write
 
     steps:
-    - name: Cleanup conflicting untracked files
-      run: |
-        rm -f data/inputs/.harvester_state.json
-        rm -f data/inputs/archive/2026/03/ModelEngine-Group_nexent_v1.8.0.2.md
-        rm -f data/memories/MISSION_ACTIVE.md
-        # Just in case, remove anything generated in previous runs before checkout
-        rm -rf data/inputs/archive/* || true
-
     - name: Checkout Reality
       uses: actions/checkout@v4
       with:
@@ -37,6 +31,14 @@ jobs:
 
     - name: 🟢 Rebuild Memory (Wake Up)
       run: python src/kernel/protocol/nexus.py rebuild
+
+    - name: 📡 Harvest Approved External Documents
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: python src/kernel/protocol/nexus.py harvest
+
+    - name: 🧪 Validate Harvester Contracts
+      run: python -m unittest discover -s tests -p test_harvester.py
 
     - name: 🔍 Ingest Self-Codebase (Omniscience)
       run: python src/kernel/protocol/nexus.py ingest

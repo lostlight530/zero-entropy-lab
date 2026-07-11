@@ -1,0 +1,1528 @@
+{
+    "schema_version":  2,
+    "archive_cutoff":  "2026-07-11T13:40:00+08:00",
+    "owner":  "zero",
+    "sources":  [
+                    {
+                        "repo":  "agentskills/agentskills",
+                        "region":  "global",
+                        "layer":  "protocols",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "daily",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "modelcontextprotocol/modelcontextprotocol",
+                        "region":  "global",
+                        "layer":  "protocols",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "daily",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "modelcontextprotocol/python-sdk",
+                        "region":  "global",
+                        "layer":  "protocols",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "daily",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "a2aproject/A2A",
+                        "region":  "global",
+                        "layer":  "protocols",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "daily",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "a2aproject/a2a-python",
+                        "region":  "global",
+                        "layer":  "protocols",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "daily",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "agentclientprotocol/agent-client-protocol",
+                        "region":  "global",
+                        "layer":  "protocols",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "daily",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "openai/openai-agents-python",
+                        "region":  "global",
+                        "layer":  "agent-runtime",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "google/adk-python",
+                        "region":  "global",
+                        "layer":  "agent-runtime",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "microsoft/agent-framework",
+                        "region":  "global",
+                        "layer":  "agent-runtime",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "langchain-ai/langgraph",
+                        "region":  "global",
+                        "layer":  "agent-runtime",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "pydantic/pydantic-ai",
+                        "region":  "global",
+                        "layer":  "agent-runtime",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "OpenHands/software-agent-sdk",
+                        "region":  "global",
+                        "layer":  "agent-runtime",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "QwenLM/Qwen-Agent",
+                        "region":  "domestic",
+                        "layer":  "agent-runtime",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "agentscope-ai/agentscope",
+                        "region":  "domestic",
+                        "layer":  "agent-runtime",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "cloudwego/eino",
+                        "region":  "domestic",
+                        "layer":  "agent-runtime",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "ModelEngine-Group/fit-framework",
+                        "region":  "domestic",
+                        "layer":  "agent-runtime",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "TencentCloudADP/youtu-agent",
+                        "region":  "domestic",
+                        "layer":  "agent-runtime",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "MoonshotAI/kimi-agent-sdk",
+                        "region":  "domestic",
+                        "layer":  "agent-runtime",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "huggingface/transformers",
+                        "region":  "global",
+                        "layer":  "serving-inference",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "vllm-project/vllm",
+                        "region":  "global",
+                        "layer":  "serving-inference",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "sgl-project/sglang",
+                        "region":  "global",
+                        "layer":  "serving-inference",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "NVIDIA/TensorRT-LLM",
+                        "region":  "global",
+                        "layer":  "serving-inference",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "ggml-org/llama.cpp",
+                        "region":  "global",
+                        "layer":  "serving-inference",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "deepseek-ai/DeepEP",
+                        "region":  "domestic",
+                        "layer":  "serving-inference",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "deepseek-ai/FlashMLA",
+                        "region":  "domestic",
+                        "layer":  "serving-inference",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "deepseek-ai/DeepGEMM",
+                        "region":  "domestic",
+                        "layer":  "serving-inference",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "deepseek-ai/3FS",
+                        "region":  "domestic",
+                        "layer":  "serving-inference",
+                        "primary_owner":  "zero",
+                        "status":  "core",
+                        "cadence":  "weekly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "modelcontextprotocol/servers",
+                        "region":  "global",
+                        "layer":  "memory-context-sandbox",
+                        "primary_owner":  "zero",
+                        "status":  "topic",
+                        "cadence":  "monthly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "huggingface/smolagents",
+                        "region":  "global",
+                        "layer":  "memory-context-sandbox",
+                        "primary_owner":  "zero",
+                        "status":  "topic",
+                        "cadence":  "monthly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "stanfordnlp/dspy",
+                        "region":  "global",
+                        "layer":  "memory-context-sandbox",
+                        "primary_owner":  "zero",
+                        "status":  "topic",
+                        "cadence":  "monthly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "run-llama/llama_index",
+                        "region":  "global",
+                        "layer":  "memory-context-sandbox",
+                        "primary_owner":  "zero",
+                        "status":  "topic",
+                        "cadence":  "monthly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "deepset-ai/haystack",
+                        "region":  "global",
+                        "layer":  "memory-context-sandbox",
+                        "primary_owner":  "zero",
+                        "status":  "topic",
+                        "cadence":  "monthly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "mem0ai/mem0",
+                        "region":  "global",
+                        "layer":  "memory-context-sandbox",
+                        "primary_owner":  "zero",
+                        "status":  "topic",
+                        "cadence":  "monthly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "MiniMax-AI/Mini-Agent",
+                        "region":  "domestic",
+                        "layer":  "memory-context-sandbox",
+                        "primary_owner":  "zero",
+                        "status":  "topic",
+                        "cadence":  "monthly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "zai-org/Open-AutoGLM",
+                        "region":  "domestic",
+                        "layer":  "memory-context-sandbox",
+                        "primary_owner":  "zero",
+                        "status":  "topic",
+                        "cadence":  "monthly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "stepfun-ai/StepDeepResearch",
+                        "region":  "domestic",
+                        "layer":  "memory-context-sandbox",
+                        "primary_owner":  "zero",
+                        "status":  "topic",
+                        "cadence":  "monthly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "OpenSPG/KAG",
+                        "region":  "domestic",
+                        "layer":  "memory-context-sandbox",
+                        "primary_owner":  "zero",
+                        "status":  "topic",
+                        "cadence":  "monthly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "TencentCloud/TencentDB-Agent-Memory",
+                        "region":  "domestic",
+                        "layer":  "memory-context-sandbox",
+                        "primary_owner":  "zero",
+                        "status":  "topic",
+                        "cadence":  "monthly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    },
+                    {
+                        "repo":  "volcengine/verl",
+                        "region":  "domestic",
+                        "layer":  "memory-context-sandbox",
+                        "primary_owner":  "zero",
+                        "status":  "topic",
+                        "cadence":  "monthly",
+                        "documents":  [
+                                          "README.md",
+                                          "docs/architecture/**",
+                                          "docs/concepts/**",
+                                          "docs/design/**",
+                                          "docs/internals/**",
+                                          "docs/decisions/**",
+                                          "docs/adr/**",
+                                          "rfcs/**",
+                                          "spec/**",
+                                          "CHANGELOG.md",
+                                          "MIGRATION.md",
+                                          "UPGRADING.md",
+                                          "examples/basic/**",
+                                          "examples/workflow/**",
+                                          "examples/memory/**",
+                                          "examples/mcp/**",
+                                          "examples/a2a/**",
+                                          "examples/acp/**"
+                                      ],
+                        "watch_releases":  true,
+                        "watch_commits":  "selected",
+                        "ignore_patterns":  [
+                                                "**/node_modules/**",
+                                                "**/vendor/**"
+                                            ],
+                        "zero_topics":  [
+
+                                        ],
+                        "trust_level":  "reviewed",
+                        "promotion_approved":  true
+                    }
+                ]
+}

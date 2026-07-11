@@ -1,188 +1,90 @@
-import json
-import os
-import datetime
-import re
+﻿"""Profile-driven GitHub document harvester using only the standard library"""
+import base64, datetime as dt, difflib, fnmatch, hashlib, json, os, re
+import urllib.error, urllib.request
 from pathlib import Path
 
-try:
-    from logger import logger
-except ImportError:
-    import sys, os
-    sys.path.append(os.path.dirname(__file__))
-    from logger import logger
-
 class Harvester:
-    def __init__(self, project_root=None):
-        # Default to the root of the repo (parent of src/kernel/sensory)
-        self.project_root = project_root or Path(__file__).resolve().parents[3]
-        self.kernel_path = self.project_root / "src" / "kernel"
-        self.data_path = self.project_root / "data"
-        self.inputs_path = self.data_path / "inputs"
-        
-        # Ensure directory structure exists
-        self.inputs_path.mkdir(parents=True, exist_ok=True)
-        
-        self.state_file = self.inputs_path / ".harvester_state.json"
-        self.state = self._load_state()
+    def __init__(self, root=None):
+        here=Path(__file__).resolve()
+        if root is not None and (Path(root)/"inputs").exists():
+            self.inputs=Path(root)/"inputs"; self.profile_path=Path(root)/"source_profiles.json"
+        else:
+            project=Path(root) if root else here.parents[3]
+            self.inputs=project/"data"/"inputs"; self.profile_path=self.inputs/"source_profiles.json"
+        self.state_path=self.inputs/".harvester_state.json"; self.cache=self.inputs/".raw_cache"
+        self.token=os.environ.get("GITHUB_TOKEN",""); self.dry=os.environ.get("HARVESTER_DRY_RUN","0")=="1"
+        self.profiles=self._json(self.profile_path,{})
+        old=self._json(self.state_path,{})
+        self.state=old if "repositories" in old else {"schema_version":2,"legacy_state":old,"repositories":{}}
 
-        # 情报数据源 (Data Sources)
-        # 切换到 releases 节点以获取包含真实描述体的载荷
-        self.data_sources = {
-            "ModelEngine-Group/nexent": ["releases"],
-            "iflytek/astron-agent": ["releases"],
-            "langgenius/dify": ["releases"],
-            "vllm-project/vllm": ["releases"],
-            "huggingface/transformers": ["releases"],
-            "google-ai-edge/mediapipe": ["releases"],
-            "microsoft/markitdown": ["releases"],
-            "langchain-ai/langchain": ["releases"],
-            "ollama/ollama": ["releases"],
-            "openai/openai-python": ["releases"]
-        }
+    @staticmethod
+    def _json(path, default):
+        try: return json.loads(Path(path).read_text(encoding="utf-8"))
+        except (OSError,json.JSONDecodeError): return default
 
-    def _load_state(self):
-        if self.state_file.exists():
-            try:
-                with open(self.state_file, 'r', encoding='utf-8') as f:
-                    return json.load(f)
-            except Exception as e:
-                logger.error(f"Failed to load harvester state: {e}", exc_info=True)
-        return {}
+    def _api(self,url):
+        headers={"Accept":"application/vnd.github+json","User-Agent":"Nexus-Document-Harvester/2"}
+        if self.token: headers["Authorization"]=f"Bearer {self.token}"
+        with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=30) as r:
+            return json.loads(r.read().decode("utf-8"))
 
-    def _save_state(self):
-        try:
-            with open(self.state_file, 'w', encoding='utf-8') as f:
-                json.dump(self.state, f, indent=2, ensure_ascii=False)
-        except Exception as e:
-            logger.error(f"Failed to save harvester state: {e}", exc_info=True)
+    @staticmethod
+    def _selected(path,patterns,ignored):
+        value=path.lower()
+        if any(fnmatch.fnmatch(value,p.lower()) for p in ignored): return False
+        return value=="readme.md" or any(fnmatch.fnmatch(value,p.lower()) for p in patterns)
 
-    def _extract_tags(self, text):
-        """内容标签提取 (Content Tag Extraction)"""
-        tags = []
-        # Edge AI
-        if re.search(r'(?i)(onnx|gguf|litert|android|ios|arm|npu|quantiz)', text):
-            tags.append("EDGE_READY")
-        # Breaking Changes
-        if re.search(r'(?i)(breaking|deprecated|removed|migration)', text):
-            tags.append("BREAKING_CHANGE")
-        # Agent Protocol
-        if re.search(r'(?i)(mcp|plugin|workflow|skill|orchestrat|hitl)', text):
-            tags.append("AGENT_PROTOCOL")
-        return tags
+    @staticmethod
+    def _normalized(text):
+        kept=[]
+        for line in text.splitlines():
+            if re.search(r"(?i)(badge|shields\.io|updated[_ -]?at|last[_ -]?updated)",line): continue
+            line=re.sub(r"\s+"," ",line).strip()
+            if line: kept.append(line)
+        return "\n".join(kept)
+
+    def validate_profiles(self):
+        owner=self.profiles.get("owner"); seen=set()
+        for p in self.profiles.get("sources",[]):
+            key=p.get("repo","").lower()
+            if p.get("primary_owner")!=owner: raise ValueError(f"owner mismatch: {key}")
+            if owner=="zero" and not p.get("promotion_approved"): raise ValueError(f"unapproved source: {key}")
+            if key in seen: raise ValueError(f"duplicate source: {key}")
+            seen.add(key)
+        return True
+
+    def _source(self,p):
+        repo=p["repo"]; meta=self._api(f"https://api.github.com/repos/{repo}")
+        tree=self._api(f"https://api.github.com/repos/{repo}/git/trees/{meta['default_branch']}?recursive=1")
+        rs=self.state["repositories"].setdefault(repo,{"documents":{}}); changed=[]
+        items=[x for x in tree.get("tree",[]) if x.get("type")=="blob" and self._selected(x["path"],p.get("documents",[]),p.get("ignore_patterns",[]))]
+        for item in sorted(items,key=lambda x:x["path"]):
+            path,sha=item["path"],item["sha"]; previous=rs["documents"].get(path,{})
+            if previous.get("sha")==sha: continue
+            blob=self._api(f"https://api.github.com/repos/{repo}/git/blobs/{sha}")
+            if blob.get("encoding")!="base64": continue
+            text=base64.b64decode(blob["content"]).decode("utf-8",errors="replace")
+            digest=hashlib.sha256(self._normalized(text).encode()).hexdigest()
+            if previous.get("content_hash")==digest:
+                rs["documents"][path]={**previous,"sha":sha}; continue
+            namespace=repo.lower().replace("/","_").replace("-","_")
+            entity=f"doc_{namespace}_{re.sub(r'[^a-z0-9]+','_',path.lower()).strip('_')}_{sha[:12]}"
+            target=self.inputs/"current"/p["layer"]/namespace/(path.replace("/","__")+f"__{sha[:12]}.md")
+            cache=self.cache/namespace/(path.replace("/","__")+".txt")
+            old=cache.read_text(encoding="utf-8") if cache.exists() else ""
+            diff="\n".join(difflib.unified_diff(old.splitlines(),text.splitlines(),fromfile="previous",tofile=sha,n=3))
+            provenance={"source_repo":repo,"source_path":path,"source_sha":sha,"retrieved_at":dt.datetime.now(dt.timezone.utc).isoformat(),"confidence":1.0,"primary_owner":p["primary_owner"],"entity_id":entity}
+            if not self.dry:
+                target.parent.mkdir(parents=True,exist_ok=True); cache.parent.mkdir(parents=True,exist_ok=True)
+                target.write_text("PROVENANCE: "+json.dumps(provenance,ensure_ascii=False,sort_keys=True)+"\n\n# Source Document\n\n"+text+"\n\n# Document Diff\n\n```diff\n"+diff+"\n```\n",encoding="utf-8")
+                cache.write_text(text,encoding="utf-8")
+            rs["documents"][path]={"sha":sha,"content_hash":digest,"entity_id":entity,"output":str(target)}; changed.append(str(target))
+        rs["last_checked_at"]=dt.datetime.now(dt.timezone.utc).isoformat(); return changed
 
     def fetch_github_data(self):
-        import urllib.request
-        logger.info("[Harvester] Scanning frequencies...")
-        new_files = []
-        token = os.environ.get("GITHUB_TOKEN")
-
-        # 零依赖 HTTP 客户端 (Zero-Dependency HTTP Client)
-        for repo, endpoints in self.data_sources.items():
-            for endpoint in endpoints:
-                url = f"https://api.github.com/repos/{repo}/{endpoint}"
-                req = urllib.request.Request(url)
-                req.add_header('User-Agent', 'Nexus-Cortex-Harvester/1.0')
-                if token:
-                    req.add_header('Authorization', f'Bearer {token}')
-
-                try:
-                    with urllib.request.urlopen(req, timeout=10) as response:
-                        if response.status == 200:
-                            try:
-                                data = json.loads(response.read().decode('utf-8'))
-                                if not isinstance(data, list):
-                                    logger.warning(f"Expected list from GitHub API for {endpoint}, got {type(data)}.")
-                                    data = data.get('items', []) if isinstance(data, dict) else []
-                            except json.JSONDecodeError:
-                                logger.error(f"Failed to parse JSON from GitHub API for {endpoint}")
-                                data = []
-
-                            # 取最新的一条数据 (Get the latest entry)
-                            if data and isinstance(data, list):
-                                latest = data[0]
-                                item_id = str(latest.get('id', latest.get('node_id', 'unknown')))
-
-                                state_key = f"{repo}_{endpoint}"
-                                if self.state.get(state_key) != item_id:
-                                    # 发现新数据 (New data discovered)
-                                    self.state[state_key] = item_id
-
-                                    # 构建 MD 报告 (Generate MD Report)
-                                    name = latest.get('name', 'N/A')
-                                    body = latest.get('body', '') or latest.get('commit', {}).get('message', '')
-                                    html_url = latest.get('html_url', f"https://github.com/{repo}")
-
-                                    tags = self._extract_tags(body)
-                                    tags_str = "_".join(tags) if tags else "GENERAL"
-
-                                    # 动态生成基于真实文本内容的评估 (Dynamic assessment based on actual content)
-                                    arch_conflict = "LOW"
-                                    if re.search(r'(?i)(docker|npm|pip|kubernetes|helm|compose)', body):
-                                        arch_conflict = "HIGH"
-                                    elif re.search(r'(?i)(rust|c\+\+|go)', body):
-                                        arch_conflict = "MEDIUM"
-
-                                    hallucination_risk = "MODERATE"
-                                    if "AGENT_PROTOCOL" in tags:
-                                        hallucination_risk = "HIGH"
-
-                                    safe_repo = repo.replace("/", "_").lower()
-                                    date_prefix = datetime.datetime.utcnow().strftime("%Y%m%d")
-                                    filename = f"{date_prefix}-{safe_repo}-scan.md"
-                                    filepath = self.inputs_path / filename
-
-                                    content = f"# NEXUS HARVESTER: Intelligence Dossier\n\n"
-                                    content += f"DATE: {datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')} (UTC)\n"
-                                    content += f"TARGET_IDENTITY: {repo}\n"
-                                    content += f"VERSION_ASSET: {name}\n"
-                                    content += f"SOURCE_LINK: {html_url}\n\n"
-
-                                    content += f"## 资产物理属性 (Asset Physical Properties)\n"
-                                    content += f"REPOSITORY_TYPE: EXTERNAL_PACKAGE_INTELLIGENCE\n"
-                                    content += f"PRIMARY_LANGUAGE: N/A\n"
-                                    content += f"API_RATE_LIMIT_STATUS: BYPASSED_VIA_TOKEN\n\n"
-
-                                    content += f"## 零熵解析矩阵 (Zero-Entropy Analysis Matrix)\n"
-                                    content += f"DEPENDENCY_ENTROPY: {tags_str.upper().replace(' ', '_')}\n"
-                                    content += f"ARCHITECTURE_CONFLICT: {arch_conflict.split(' ')[0].upper()}\n"
-                                    content += f"INTERNAL_LOGIC: EXTERNAL_PAYLOAD_REFERENCE_ONLY\n\n"
-
-                                    content += f"## 威胁与兼容性评估 (Threat & Compatibility Assessment)\n"
-                                    if "Breaking-Change" in tags:
-                                        content += f"DIRECT_CODE_INTEGRATION: HIGH_RISK\n"
-                                    else:
-                                        content += f"DIRECT_CODE_INTEGRATION: STRICTLY_PROHIBITED\n"
-                                    content += f"HALLUCINATION_RISK: {hallucination_risk.split(' ')[0].upper()}\n\n"
-
-                                    content += f"## 行动指令 (Action Directives)\n"
-                                    content += f"DIRECTIVE_1: REJECT_ALL_DEPENDENCY_INJECTIONS_FROM_THIS_REPOSITORY\n"
-                                    if "AGENT_PROTOCOL" in tags:
-                                        content += f"DIRECTIVE_2: ANALYZE_PLUGIN_AGENT_ARCHITECTURE_FOR_CONCEPTUAL_INTEGRATION\n"
-                                    elif "EDGE_READY" in tags:
-                                        content += f"DIRECTIVE_2: EXTRACT_EDGE_EXECUTION_BOUNDARIES_FOR_POTENTIAL_LOCAL_DEPLOYMENT\n"
-                                    else:
-                                        content += f"DIRECTIVE_2: EXTRACT_CORE_THEORETICAL_CONCEPTS_FOR_ZERO_ENTROPY_REFACTORING\n"
-                                    content += f"DIRECTIVE_3: ENSURE_ANY_EXTRACTED_LOGIC_USES_PURE_PYTHON_TYPING_AND_INSPECT_SIGNATURE\n\n"
-
-                                    content += f"## 原始载荷 (Raw Payload)\n\n```text\n{body}\n```\n"
-
-                                    with open(filepath, 'w', encoding='utf-8') as f:
-                                        f.write(content)
-
-                                    new_files.append(filepath)
-                                    logger.info(f"[Harvester] New Intel harvested: {filename}")
-                except urllib.error.HTTPError as e:
-                    if e.code in [403, 429]:
-                        logger.warning(f"[Harvester] Defensive retreat: Rate limit hit on {url}")
-                        # Defensive retreat: gracefully break the internal fetch loop on rate limit
-                        break
-                    elif e.code == 404:
-                        logger.debug(f"[Harvester] Endpoint not found (404), skipping: {url}")
-                        continue
-                    else:
-                        logger.warning(f"[Harvester] Failed to fetch {url}: {e}")
-                except Exception as e:
-                    logger.warning(f"[Harvester] Failed to fetch {url}: {e}")
-
-        self._save_state()
-        return new_files
+        self.validate_profiles(); changed=[]
+        for p in self.profiles.get("sources",[]):
+            try: changed.extend(self._source(p))
+            except (urllib.error.URLError,KeyError,ValueError) as exc: print(f"[Harvester] {p.get('repo')}: {exc}")
+        if not self.dry: self.state_path.write_text(json.dumps(self.state,ensure_ascii=False,indent=2,sort_keys=True),encoding="utf-8")
+        return changed

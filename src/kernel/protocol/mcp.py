@@ -189,10 +189,10 @@ class CortexSearchSkill(BaseSkill):
         Returns:
             Dict[str, Any]: A list of nodes (id, name, desc, final_score).
         """
-        cortex = Cortex()
-        # Ensure search handles limit logic. Cortex.search currently doesn't natively accept limit,
-        # so we will slice the result array or we might need to update Cortex to accept a limit.
-        results = cortex.search(query)
+        with Cortex() as cortex:
+            # Ensure search handles limit logic. Cortex.search currently doesn't natively accept limit,
+            # so we will slice the result array or we might need to update Cortex to accept a limit.
+            results = cortex.search(query)
 
         # We limit the results after retrieving them.
         limited_results = results[:limit]

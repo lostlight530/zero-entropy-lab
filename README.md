@@ -47,3 +47,13 @@ Because restraint is the ultimate form of digital violence By stripping away thi
 
 ---
 © Zero-Entropy Lab | Built for the Edge Built for the Future
+
+## Document synchronization
+
+Approved external repository documents are synchronized by `src/kernel/sensory/harvester.py` from the 39 explicit profiles in `data/inputs/source_profiles.json`
+
+Historical inputs through 2026-07-11 13:40 Asia Shanghai remain byte preserved under `data/inputs/archive/legacy-through-2026-07-11-1340`
+
+External synchronization is an explicit lifecycle stage and remains separate from internal evolution
+
+See `data/inputs/ARCHIVE_AND_HARVESTER.md` for the archive contract provenance fields and verification commands

@@ -10,7 +10,20 @@ for layer in layers:
     sys.path.append(str(kernel_dir / layer))
 sys.path.append(str(kernel_dir))
 
+def configure_output(stream):
+    """Keep the test runner usable on consoles with limited encodings."""
+    reconfigure = getattr(stream, "reconfigure", None)
+    if reconfigure:
+        reconfigure(errors="backslashreplace")
+
+def build_test_environment(base_environment):
+    environment = base_environment.copy()
+    environment["PYTHONIOENCODING"] = "utf-8"
+    return environment
+
 def run_all():
+    configure_output(sys.stdout)
+    configure_output(sys.stderr)
     print("🧬 NEXUS: Running Foundation Verification...")
     
     # Run tests in separate processes to isolate mocking side effects
@@ -19,7 +32,7 @@ def run_all():
     all_passed = True
 
     # Add env var for PYTHONPATH
-    env = os.environ.copy()
+    env = build_test_environment(os.environ)
     pythonpath = str(kernel_dir)
     for layer in layers:
         pythonpath += os.pathsep + str(kernel_dir / layer)
