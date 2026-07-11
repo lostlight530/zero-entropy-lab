@@ -50,6 +50,8 @@ class HiveMind:
             sock.bind(('', self.mcast_port))
         except Exception as e:
             logger.error(f"HiveMind binding failed: {e}")
+            sock.close()
+            self._running = False
             return
 
         # 加入组播组 (Join multicast group)

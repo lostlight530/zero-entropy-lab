@@ -1,0 +1,92 @@
+PROVENANCE: {"confidence": 1.0, "entity_id": "doc_openai_openai_agents_python_examples_mcp_streamable_http_remote_example_main_py_d0c48da7d9d5", "primary_owner": "zero", "retrieved_at": "2026-07-11T06:08:48.855380+00:00", "source_path": "examples/mcp/streamable_http_remote_example/main.py", "source_repo": "openai/openai-agents-python", "source_sha": "d0c48da7d9d5e0e31cf9f71e2c4c864db3d40f67"}
+
+# Source Document
+
+import asyncio
+
+from agents import Agent, Runner, gen_trace_id, trace
+from agents.mcp import MCPServerStreamableHttp
+
+
+async def main():
+    async with MCPServerStreamableHttp(
+        name="DeepWiki MCP Streamable HTTP Server",
+        params={
+            "url": "https://mcp.deepwiki.com/mcp",
+            # Allow more time for remote tool responses.
+            "timeout": 15,
+            "sse_read_timeout": 300,
+        },
+        # Retry slow/unstable remote calls a couple of times.
+        max_retry_attempts=2,
+        retry_backoff_seconds_base=2.0,
+        client_session_timeout_seconds=15,
+    ) as server:
+        agent = Agent(
+            name="DeepWiki Assistant",
+            instructions="Use the tools to respond to user requests.",
+            mcp_servers=[server],
+        )
+
+        trace_id = gen_trace_id()
+        with trace(workflow_name="DeepWiki Streamable HTTP Example", trace_id=trace_id):
+            print(f"View trace: https://platform.openai.com/traces/trace?trace_id={trace_id}\n")
+            result = await Runner.run(
+                agent,
+                "For the repository openai/codex, tell me the primary programming language.",
+            )
+            print(result.final_output)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+
+# Document Diff
+
+```diff
+--- previous
+
++++ d0c48da7d9d5e0e31cf9f71e2c4c864db3d40f67
+
+@@ -0,0 +1,38 @@
+
++import asyncio
++
++from agents import Agent, Runner, gen_trace_id, trace
++from agents.mcp import MCPServerStreamableHttp
++
++
++async def main():
++    async with MCPServerStreamableHttp(
++        name="DeepWiki MCP Streamable HTTP Server",
++        params={
++            "url": "https://mcp.deepwiki.com/mcp",
++            # Allow more time for remote tool responses.
++            "timeout": 15,
++            "sse_read_timeout": 300,
++        },
++        # Retry slow/unstable remote calls a couple of times.
++        max_retry_attempts=2,
++        retry_backoff_seconds_base=2.0,
++        client_session_timeout_seconds=15,
++    ) as server:
++        agent = Agent(
++            name="DeepWiki Assistant",
++            instructions="Use the tools to respond to user requests.",
++            mcp_servers=[server],
++        )
++
++        trace_id = gen_trace_id()
++        with trace(workflow_name="DeepWiki Streamable HTTP Example", trace_id=trace_id):
++            print(f"View trace: https://platform.openai.com/traces/trace?trace_id={trace_id}\n")
++            result = await Runner.run(
++                agent,
++                "For the repository openai/codex, tell me the primary programming language.",
++            )
++            print(result.final_output)
++
++
++if __name__ == "__main__":
++    asyncio.run(main())
+```

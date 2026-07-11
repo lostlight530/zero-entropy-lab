@@ -207,6 +207,15 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
 
         super().__init__(*args, **kwargs)
 
+    def finish(self):
+        """Release request-scoped resources after the response is complete."""
+        try:
+            super().finish()
+        finally:
+            cortex = getattr(self, "cortex", None)
+            if cortex is not None:
+                cortex.close()
+
     def _check_auth(self) -> bool:
         if not self.api_key:
             return True # Open if no key configured
@@ -796,8 +805,7 @@ def main():
         logger.info("🧹 Running scheduled purification...")
         c = Cortex()
         c.vacuum()
-        h = Harvester()
-        h.fetch_github_data()
+        # External harvesting is an explicit Action stage
         e = Evolver()
         e.run_daily_cycle()
         for root, dirs, files in os.walk(c.project_root):

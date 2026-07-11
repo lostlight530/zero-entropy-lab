@@ -1,0 +1,1587 @@
+{
+  "schema_version": 1,
+  "cutoff": "2026-07-11T13:40:00+08:00",
+  "file_count": 158,
+  "files": [
+    {
+      "original_path": "data/inputs/archive/2026/04/20260427-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/04/20260427-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "cb1c307e1d05abd4aaede12b3ad98538063a7b9c48a66126f6423f7ac489f3b0"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260428-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/04/20260428-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "8403d9022749e528f2a04607ddc10cd81279b3ff5a93a4a09efdf678c8c31b78"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260429-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/04/20260429-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "85f94dd8f6b2f5265f1b7e6930b56a3e416c532520ccbdc199c791908b17f2c2"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260430-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/04/20260430-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "5b6237c1de51708c0871c1720f8970506ad842f974dba5d95687cf69667af3c3"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260501-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260501-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "3572507c91789694b95d51e74f2acccfb2f6e3e3f06458d43f4089e6c7c3b6c6"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260503-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260503-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "defb406fb9f028da2b3b5b18e8926c2a42aaa0e81e8f5afe14185371426abc02"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260505-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260505-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "a480c03aa90dcb2272cdeac30e82237707f3f433ea2ea6d5531c0d447531a8e3"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260506-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260506-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "90c3c893d285f7a07082357b6aec7e032185d5880ff23524e8fd5b98ba943932"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260507-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260507-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "eb379fe3197e4e1745bd55d8ab12df8ae251460d9899e29e044b2ecdffd941e3"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260508-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260508-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "adaba6931effa5dd766bfdd673e82394175b723dd26a1df846c20b2b74704e8f"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260511-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260511-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "0f3b9aa947694f7a97777b134c4b4f8804a255368277b82104557307f9d72167"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260512-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260512-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "eb6847108cdff09555014cf484f20243aa4882c928655d3ae21e612c3607305c"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260515-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260515-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "e46070dd2b0461f1ad9d12108c778773307e252cc741965e23b5eaa03c90034c"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260518-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260518-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "8fda6ae4974c58a5a0f1a10ed68a3e40dbf8c1ddf7362283f684f2ab99b097fe"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260520-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260520-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "ced62415e10b38a4b2fa2418625ca3177f0726347c154130cfe51eee164d16bd"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260521-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260521-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "b633fb860aa50aa434d4d215452ad9dc4a23d75c3714dd34aaaf7332fd5e759d"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260526-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260526-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "207a59d16047173d1ab0363e870ddff10e6c23c26eb35546ed2cf7edb1cb660b"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260527-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260527-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "f7f1c4ec2c5f0f19d1c9f9605965f31e3d1d6dbe6278fe047e57ad58def1da35"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260528-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/05/20260528-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "74770d0d38eeef6e8ec9994a147bfb62742c2598b87cd5d8f6a031fc322a20e9"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260602-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260602-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "d6e8130058ce1e1b33c38bf66c77ba16fa192fe2d5d686fbc73e27551f3d9726"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260603-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260603-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "10f3625ddf0c2a80f47567df45d24d1706973e1ca163946bc086e237292114de"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260604-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260604-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "9f0e996c36c4864776abd2fce13efc2e6afe976de9ff62437bfc7c535418fb9a"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260605-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260605-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "5dd37a560556d972215a9193edeceacc9bac52aa6042499ddb1dac93c5afd7f6"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260607-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260607-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "c12482ee91c47a8525d1fd840b7e7b37cd11528f849bb38a1c44c7b5331514c3"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260608-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260608-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "f07ab872cbd5fe2b33c736bdecc59b71411446c575ac695ebf8201dda3f4acc7"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260609-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260609-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "ca9ae9d6e3e70501cbe114577a2047e1bfcfff108a9232a601b7e7bdc27b6ae2"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260610-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260610-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "a25a6527052bc2c842b80f58541b437650e97021f818dd2c9a25c213532d1b58"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260611-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260611-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "9a77734e2ea6e3588ebbe6bf0d9b41f624c99eb3b9354ca7c4647e8219889ce6"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260612-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260612-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "466cb1c02ec5d3c7929ef243885be309da419126d97a2ec09cd0ca021bfd00cb"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260613-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260613-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "746989845c9483ff2d70527b4c979fe17abb0af91027f021d8be7ccbd0760d97"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260616-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260616-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "413aa5d94e2d6e38417a16a7685d05ae34b5f63406cd04b9daa4ceec994a4633"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260618-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260618-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "f938ed3817cee8a0b016962d27c8ea9d52c89d05ae7798bf4656ecabab817d2a"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260622-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260622-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "7a48cf2a5ca4489e6ad8edec93dc38ac564deb8edf5df3fcd6e2f6b044584009"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260623-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260623-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "72d2c7fb214b44cc2dc9a8dae4b3d3a1b50132ab4552390256f13af161e55b01"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260626-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260626-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "e37abc0716fcc92cfede3a5e79a9fedd894046c53c6473b3273f9404ca2e74d9"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260629-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/06/20260629-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "d24ad50a379c5e9ad4bf291c6c97b618b6a71c2f9549fc0eca2b9a21783bfd9d"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/07/20260705-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/07/20260705-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "e629e20ec2f0865656224fa4dbc16b7ba7de35f00ff1f239da15fcd73fc0d912"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/07/20260708-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/07/20260708-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "03c073412937cac4af94b4aa43a01df4cb6e3a5ed51a90f25f88b2695a1a26a2"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/07/20260709-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/07/20260709-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "2d61374a9bedc95a6e625791dab80e0af7665bda2fe6bb01fcde69d57bd214ab"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/07/20260710-langchain-ai_langchain-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/langchain-ai_langchain/2026/07/20260710-langchain-ai_langchain-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "langchain-ai_langchain",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "ea620f637c0ad373d450bf2cf3830c60e095582262a559d687925256775c8ebe"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260427-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/04/20260427-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "08956cb97ea12c0aa2ad5777e60d380138ab4e3133d69a501ad9950726de86f9"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260428-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/04/20260428-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "b20bc97e08e715852015f74bab2bc1c0eba5336ae090c8695c7be8cbbe3cc7fc"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260504-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/05/20260504-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "eb83186eeb1efef7d3df997938351a2833c840a3d591c38b8d310f6806ef2546"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260506-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/05/20260506-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "d6f9f791a5aa893b58f5e5e7d26d7959b220b3632b23e80818040a0681e7a5d1"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260507-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/05/20260507-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "53075d71572d8925542936a784a559fdb65934ae90f5120917fc01a13bd29d5d"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260515-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/05/20260515-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "7188fcb6e6d9de9b40d92c28513211fa247ede101671cdb5fe09242ae7dd2400"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260521-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/05/20260521-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "4222dd7276d643618d36e479d11deddbf299b531c50fb9aace066c6375ede356"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260601-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/06/20260601-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "2f122cf4a3a09fde3f1af543f76db98186d3b187e837081e8773ee352f2bc6f5"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260603-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/06/20260603-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "7c0e18744f909cfc62bd5af6475f10f32983523c0c948d5e0159c3452e88100c"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260604-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/06/20260604-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "5c42cfe6afb3c174566724c0b3e4dc9ce92c87cccca34d89f6ed8b9cf758f9cb"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260605-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/06/20260605-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "083395f9af257da6219b8720f6dc46c7329bb5b1d0ec614ab902d29af05be83b"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260607-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/06/20260607-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "c20d5824806f9dcf8ec8470e8529bc225b8e37200b4000ed24f611ccc98cdb1e"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260610-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/06/20260610-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "0158753525a8be71c0860f12fa9304e8312670bbe5d349c1d2d084115fb5f057"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260616-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/06/20260616-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "3a875f8647b9e57c2b978bf22181253ff88ea550888185eebb00a7a0702cffe6"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260617-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/06/20260617-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "7c821426ed139604973dba7854b08dd22147cb21ee7e55e5df18fa3de4444f18"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260624-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/06/20260624-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "f91cefe8011e5bcee7eb037150baee20f0fed51539f3d1c9c219c6a172f89a58"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/07/20260709-openai_openai-python-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/02-agent-runtime/openai_openai-python/2026/07/20260709-openai_openai-python-scan.md",
+      "layer": "02-agent-runtime",
+      "source_namespace": "openai_openai-python",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "00f2b53ca54bd7a1dd9ae2aabcf1dca14dead537ed3eae8a96afb7bfb14b820d"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260408-iflytek_astron-agent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/iflytek_astron-agent/2026/04/20260408-iflytek_astron-agent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "iflytek_astron-agent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "7d2f2a36b15557653343afe89a854dd72db9cc6390b15f5917520ff18b00d570"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260417-iflytek_astron-agent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/iflytek_astron-agent/2026/04/20260417-iflytek_astron-agent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "iflytek_astron-agent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "025a0b8aba48b9f58b06bc7d220628426652e47a36f09feb77367995186d6126"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260430-iflytek_astron-agent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/iflytek_astron-agent/2026/04/20260430-iflytek_astron-agent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "iflytek_astron-agent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "a8226d33a29d275dfa80347487dcf24d40d947998aa9746227895d8dccbfa95d"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260515-iflytek_astron-agent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/iflytek_astron-agent/2026/05/20260515-iflytek_astron-agent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "iflytek_astron-agent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "2df8abcec1622c491f5471ee7ba609abac795357a36b3525f442efcc200163b6"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260529-iflytek_astron-agent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/iflytek_astron-agent/2026/05/20260529-iflytek_astron-agent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "iflytek_astron-agent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "a67201dd01efd139ef772525e21b2859c385b5be97083e21a0ff4e45cdecc1d1"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260604-iflytek_astron-agent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/iflytek_astron-agent/2026/06/20260604-iflytek_astron-agent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "iflytek_astron-agent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "5d4e3f0dc8787916a91c95c75a2268d36249363c25e0b66fc2458ac8b024d83c"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260605-iflytek_astron-agent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/iflytek_astron-agent/2026/06/20260605-iflytek_astron-agent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "iflytek_astron-agent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "ff4e5d5c49d99ebbf7649ba8b57b754c310bfa604187beeaa411a90f41d2ed4e"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260607-iflytek_astron-agent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/iflytek_astron-agent/2026/06/20260607-iflytek_astron-agent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "iflytek_astron-agent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "4b27ae4e583786ebccc91170d8998c7b49320d50cfd546627cce01a89a502d45"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260616-iflytek_astron-agent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/iflytek_astron-agent/2026/06/20260616-iflytek_astron-agent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "iflytek_astron-agent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "68a0d3242cb3969b48cf076d050a1e97fc42b0122e498c84fc946329f06b6d6e"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260618-iflytek_astron-agent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/iflytek_astron-agent/2026/06/20260618-iflytek_astron-agent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "iflytek_astron-agent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "c9a98d5b4c998c93fdb9396254a4c9cd153415da5833dec69dd96d47a4035d01"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/07/20260706-iflytek_astron-agent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/iflytek_astron-agent/2026/07/20260706-iflytek_astron-agent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "iflytek_astron-agent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "c3b3ac7b83142a734b321cc1238de581e075a37a8e22fd7dc835d56ca90b85da"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260408-langgenius_dify-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/langgenius_dify/2026/04/20260408-langgenius_dify-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "langgenius_dify",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "e95185ab2ee15a8ac1f561d9c114408a621701cfb4134b8c736640f421fcfc6a"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260429-langgenius_dify-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/langgenius_dify/2026/04/20260429-langgenius_dify-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "langgenius_dify",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "24304e6fc1f14c35a6185b9677413982aeaf3d8b5eff7772a7ae2716e7bdd99e"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260512-langgenius_dify-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/langgenius_dify/2026/05/20260512-langgenius_dify-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "langgenius_dify",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "7f5ad00bda37cb4d48780e4bd63e6edfc29d9745bf86855c77f1ac4f323a6685"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260519-langgenius_dify-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/langgenius_dify/2026/05/20260519-langgenius_dify-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "langgenius_dify",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "a0a264d6d1acba7987e86c4866530c9bda8a85e609e978ce9200ebb72132de5a"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260604-langgenius_dify-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/langgenius_dify/2026/06/20260604-langgenius_dify-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "langgenius_dify",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "bf97d690bfab7fcb1e7f5418d5698787dc360821dd6afad931e14b4036c179d1"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260605-langgenius_dify-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/langgenius_dify/2026/06/20260605-langgenius_dify-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "langgenius_dify",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "5498b7a8b362db2561f7d331d1994653e7560b738e54b113cb362077440bb554"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260607-langgenius_dify-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/langgenius_dify/2026/06/20260607-langgenius_dify-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "langgenius_dify",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "99ee7f2148db03d62ab9f1a704f2ab075ae103e6ba67d1fdb7f6b4f4bc721606"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260616-langgenius_dify-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/langgenius_dify/2026/06/20260616-langgenius_dify-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "langgenius_dify",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "ac49f1e2bf265d12e05d18f771cb4f5db6ec1ce020da6c157ab8af2850c3bc2f"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260625-langgenius_dify-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/langgenius_dify/2026/06/20260625-langgenius_dify-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "langgenius_dify",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "f6b84bb8c316196d50dcc574063fff14b51eb25c193f8f04bdd8317848951383"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/07/20260709-langgenius_dify-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/langgenius_dify/2026/07/20260709-langgenius_dify-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "langgenius_dify",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "8bd67e077f484187869aed57c6daf4a4a9b53e002a4b57888695d339f1d28336"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260408-modelengine-group_nexent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/modelengine-group_nexent/2026/04/20260408-modelengine-group_nexent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "modelengine-group_nexent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "5d602fc1332b7e3cc983aaabc4d8160cd7cd2ba33e1fc0999c5d0e2631f86553"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260410-modelengine-group_nexent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/modelengine-group_nexent/2026/04/20260410-modelengine-group_nexent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "modelengine-group_nexent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "326abadeac77dcb486788cf4e77a46e39468fd671469f764f147aa302b4325d3"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260418-modelengine-group_nexent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/modelengine-group_nexent/2026/04/20260418-modelengine-group_nexent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "modelengine-group_nexent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "1c48e483922ca90411ddd52dbddacef2102ec770ae7e8bfd729a637bd48cd8cf"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260430-modelengine-group_nexent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/modelengine-group_nexent/2026/04/20260430-modelengine-group_nexent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "modelengine-group_nexent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "e0aa108741704c0bcdbbfed86aab2a0afc779041383575e2c8b2ffe7fb4b0780"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260515-modelengine-group_nexent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/modelengine-group_nexent/2026/05/20260515-modelengine-group_nexent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "modelengine-group_nexent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "fd422786493963c702f9a5f399a570d3ffa080bd6f74eaa6bf0f53d960334971"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260603-modelengine-group_nexent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/modelengine-group_nexent/2026/06/20260603-modelengine-group_nexent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "modelengine-group_nexent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "101bf6878b8fea4f3ca2e41d88bc1b35379ae81e0f047d2590720d1280a34c5e"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260604-modelengine-group_nexent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/modelengine-group_nexent/2026/06/20260604-modelengine-group_nexent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "modelengine-group_nexent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "69e2a55d035542016125b59de67f07c8a68f03b0b0beb71e0bc21b35883c00a4"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260605-modelengine-group_nexent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/modelengine-group_nexent/2026/06/20260605-modelengine-group_nexent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "modelengine-group_nexent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "97eced51b7e781c38ea1ac8d145af9015ca462a75c2543e90c171e0e16a6d3a3"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260607-modelengine-group_nexent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/modelengine-group_nexent/2026/06/20260607-modelengine-group_nexent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "modelengine-group_nexent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "bb046c2fe93c866868ddb214e996b500bede98d6eba665e7a72e8e0a1b88745a"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260616-modelengine-group_nexent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/modelengine-group_nexent/2026/06/20260616-modelengine-group_nexent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "modelengine-group_nexent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "b29b633108bd75bb1933c57e7062955dc81d008c4048e7aac08a8cd86f210638"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260618-modelengine-group_nexent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/modelengine-group_nexent/2026/06/20260618-modelengine-group_nexent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "modelengine-group_nexent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "e8e1b6ed3a94404d204dd9fca9803eb0a523f08938b1c199c2e1711bc5d0a5ab"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/07/20260701-modelengine-group_nexent-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/modelengine-group_nexent/2026/07/20260701-modelengine-group_nexent-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "modelengine-group_nexent",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "d0762c4b6108aa268b804b917cc6a0a1d104f68d70954ac6e1f89fab929d020a"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260427-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/04/20260427-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "253c1edd0d0d916a7315571169d152c48d908b401de53fc2e81d8e2d05315c50"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260428-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/04/20260428-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "ee1c49aaa9e56adef95890a604d5a7a5c1e90d15ea950ba27f5b0e8dc04a1baf"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260503-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/05/20260503-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "8f0ae0c699eaf202ca775ff31441585b856f03b195bf86788435b317aa21d6f0"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260505-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/05/20260505-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "b4f754541871572797304ace0f01e06b44c0451a01589733af7f71a4f505f1c3"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260507-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/05/20260507-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "86c85cda25e52d456adafa62b9af75c293ee02e5852154330bdfd00044357a68"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260512-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/05/20260512-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "a94daef698878f7400f882023b31893bd62708222a3d9603c1c01b02c66a5835"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260513-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/05/20260513-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "305f767b928e272744dd300d2f453648a25b8006ba5471ca2c2a848ac5fce2bb"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260514-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/05/20260514-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "4f1b5913ae39ddb70d10551850ac9768c8fce07d2433be0c2ac9433fbb67ab36"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260515-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/05/20260515-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "ba04f2fff7e8abfd44ad70ab02b6e3fa163f3acdc2a3cf67f99df6c85c954e72"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260602-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/06/20260602-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "788100b7ed10223e28e26fc81e0afb20212fff72029c047a0414124243bcf5b0"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260603-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/06/20260603-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "a683a85db9e6a5e0148317da0392c902d82c4e41e98fbc4de589f71fb052b06d"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260604-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/06/20260604-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "38c26050cd98dd1e4c82a8af4e8b7247952c45e1b89687f82ec2ab1e95e0f553"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260605-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/06/20260605-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "84734be52b54b1ad8b6a87f798260187d502c01c378f6b877099401c1140fe87"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260607-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/06/20260607-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "9b5436c44b3e1ba3903676ea83fa6d32f48aa30e03891ff387e18b85a5b7a6cf"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260612-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/06/20260612-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "0cfde585526921d97a5923f1fc8d9f1bc9f85285ff1eb90ca21cb210618818e2"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260615-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/06/20260615-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "14313dae83fe21e10c3afe7f74c6a0211263944bcf83509e5ddf1d0fb4ed3d1b"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260616-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/06/20260616-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "fd660bc4cdd94dd08e2b4c86d26d13c4e11f8e5098aaa6c36b7586a729e721fd"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260617-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/06/20260617-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "c1e8f6e8d804c320903d18c56e774a2893241e3dbffc9e7db94db0e574523ad8"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260625-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/06/20260625-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "2be399a8f12f4f1f3ae854d73218c70279ccee8203e8a05d4c709a77fdf1a70a"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260629-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/06/20260629-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "482f438dd56e4ec97c3aea0e5b96abaa676afd598fe590028a92b324847a5510"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260630-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/06/20260630-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "e6e4b441d7f26c8d9a2466776811545a3c2b37273a4953176c58964e630b4076"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/07/20260706-ollama_ollama-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/04-complex-agent-systems/ollama_ollama/2026/07/20260706-ollama_ollama-scan.md",
+      "layer": "04-complex-agent-systems",
+      "source_namespace": "ollama_ollama",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "3796089150508b8df8c0c437b8accc03d706616be07d580feb8c2ffc7f7c70e3"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260408-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/04/20260408-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "00fda73d918e89481eea5ad4816aaa0979b1a04acfc6a0f0869c151a901bd9bc"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260418-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/04/20260418-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "8451b60e2299ef22690cf10609ecb19c629113b4f66b33b4f4180100f1c2bf01"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260423-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/04/20260423-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "3b1e372461148b0f950c3b1d880ffde1fc37e8ae8b452df05fd7716038704768"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260427-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/04/20260427-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "b1a1c0b6f1bc312cab9d64e176d9df7e2b19d6ee618aa9dc46e7ab0c4288e2f4"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260503-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/05/20260503-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "afee1ff243236c0aa35f0249b8ee8a2bb600f9f8e55e481b5926f3440e27eff9"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260510-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/05/20260510-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "d69fc76f9ae74d3c726b15d696fbf560bc1b996b9e4705369d44b51b7a823224"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260514-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/05/20260514-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "489030db3aaa95c96102e7e13d8d62aca9cf73b694ed78c7043c604d960611ac"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260515-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/05/20260515-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "3320f5ced4b02f0aa6cc29f969109195d6559ec481ee9df0df79f16557c62085"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260529-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/05/20260529-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "0d9a67f844f5f17b6abe99a6d7f3fdb9dcb389d5cdbc3b7c7d663c854a9d3817"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260604-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/06/20260604-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "370cc70a9056f77c201faf90f7e8c6422baaebc1939f2658c44dfb3c0978e5d1"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260605-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/06/20260605-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "f2a2f40190b9093f5b3d369c0a16feb714ea8577ea831e5cc06d7592d6487ce0"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260607-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/06/20260607-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "6489f3f181e575012f731e2264fc9904824838779bed4ae0638fece097348fa4"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260613-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/06/20260613-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "ebe6262f8bccb8e005f99f8f35dd91a663905ef8f15a260a5c4a62a7605358a9"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260615-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/06/20260615-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "f3750c365ef85fb1d093ebab217f3cba1670078c1963582f8cb4fd6e3580ab14"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260616-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/06/20260616-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "88b14ba075184bd2962352cc518c168ba974a0c9d602a863ba17d0a0cd5180e0"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260629-vllm-project_vllm-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/06-serving-inference/vllm-project_vllm/2026/06/20260629-vllm-project_vllm-scan.md",
+      "layer": "06-serving-inference",
+      "source_namespace": "vllm-project_vllm",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "0e631bc9ade17f393fa6a46185530588e1aedb6f32814471b61ace9bbb0abfd7"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260408-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/04/20260408-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "106741d5246d667a82e780e9c0a072769039730bb7f2c85f63f8994dae62da4a"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260409-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/04/20260409-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "66618ec5e7d96fe634a058f1f9c9f5a1ada51d0643f530e5ca85626a539f52c5"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260413-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/04/20260413-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "fb615149836a73fcba8e372068a13b31bb55bb6e8c33626900d4d6408a8f3079"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260422-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/04/20260422-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "bb6f5ae0451b84758ed81ba9e729b52e08992368d22e672d2a6b102e7b2770b1"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260423-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/04/20260423-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "5f1a0932c319d087b14ec2770d4e04ed22b3e8c0da2492f4994bd510d6975bc0"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260428-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/04/20260428-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "a71fbbe1713b9a5d8f6537f0449768e4586dd6526ec698a608fde978d1d1fbf0"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260505-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/05/20260505-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "7ffcbf4aa92cb5a4de1c226ac5e79f6075344ef40428f05b8cb119cb3b78cc1d"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260513-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/05/20260513-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "d83ac94fd10cf6494d6766fa74806579736fe52da329f12f29d046174818e475"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260520-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/05/20260520-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "b42e3cd7f7d281c57bde0a5f61cf1762ab8bec7b74e14553ce1caaa3d5ca4000"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260603-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/06/20260603-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "81f8073ab40b3183cf299bd6a53c9227c13c6ef0ed9cc805410030b098a34a7a"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260604-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/06/20260604-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "77e0332c9f2a66a97728e39e9753388935dbfccea6208db122302c272929ff59"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260605-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/06/20260605-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "e4f586e781d687554c8d94816b752096373bc2778847fc6d2d371b773ccb8906"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260607-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/06/20260607-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "27c272edc4037102277e81269c862498714559e547a1f3855b573d28596cad05"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260610-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/06/20260610-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "0ad5cda3eab7b618c10ecbfb96ecfbeafa8b0d7783fbd3dfba18e6f74ccee2c7"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260612-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/06/20260612-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "3ebcb27110f203b968076aa65cb125ae9286107a1e9f704da3358e6ef6b108ca"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260615-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/06/20260615-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "a05cb6d59c08710b53a5952d4779ef4ecb04e259ff357415be57707ab527ce27"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260616-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/06/20260616-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "51278bad5cf25f5540487f21a9e8d16eba8f8c73b7f57c1ce53a2bcb538a6dfa"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/07/20260703-huggingface_transformers-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/07-model-and-training/huggingface_transformers/2026/07/20260703-huggingface_transformers-scan.md",
+      "layer": "07-model-and-training",
+      "source_namespace": "huggingface_transformers",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "9507f3e0baaade7a3318246f327bf58ff7bfdd72e4fff846a34ac319465e5dec"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260408-google-ai-edge_mediapipe-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/08-tooling-reference/google-ai-edge_mediapipe/2026/04/20260408-google-ai-edge_mediapipe-scan.md",
+      "layer": "08-tooling-reference",
+      "source_namespace": "google-ai-edge_mediapipe",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "c23d53de9d33143b9c5b936201620b3d6035c44ff39b97756384c2f4d531119d"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260428-google-ai-edge_mediapipe-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/08-tooling-reference/google-ai-edge_mediapipe/2026/04/20260428-google-ai-edge_mediapipe-scan.md",
+      "layer": "08-tooling-reference",
+      "source_namespace": "google-ai-edge_mediapipe",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "d4a3d340a0ed47a92e34d5a3990d1dbad78799000c0f300b3d5b59cc821b36a0"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260604-google-ai-edge_mediapipe-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/08-tooling-reference/google-ai-edge_mediapipe/2026/06/20260604-google-ai-edge_mediapipe-scan.md",
+      "layer": "08-tooling-reference",
+      "source_namespace": "google-ai-edge_mediapipe",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "4c41c337ff4b579952a8e6cf871766e5d14fb502a5703dd3d3a78c443449727b"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260605-google-ai-edge_mediapipe-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/08-tooling-reference/google-ai-edge_mediapipe/2026/06/20260605-google-ai-edge_mediapipe-scan.md",
+      "layer": "08-tooling-reference",
+      "source_namespace": "google-ai-edge_mediapipe",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "dbdc5e9d4f70e560984b0e48e986f84c644580edb8edcad9ac7b1b8b9938ca7d"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260607-google-ai-edge_mediapipe-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/08-tooling-reference/google-ai-edge_mediapipe/2026/06/20260607-google-ai-edge_mediapipe-scan.md",
+      "layer": "08-tooling-reference",
+      "source_namespace": "google-ai-edge_mediapipe",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "a0e354adb13dee9c0dddf7ce31cb978e40f65d5d524011ade63fa9f54e1c89cd"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260616-google-ai-edge_mediapipe-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/08-tooling-reference/google-ai-edge_mediapipe/2026/06/20260616-google-ai-edge_mediapipe-scan.md",
+      "layer": "08-tooling-reference",
+      "source_namespace": "google-ai-edge_mediapipe",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "24bfb35fa7c123ad13393f6567443cf7d08aa5c23e65eae2d12b62192456decb"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/04/20260408-microsoft_markitdown-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/08-tooling-reference/microsoft_markitdown/2026/04/20260408-microsoft_markitdown-scan.md",
+      "layer": "08-tooling-reference",
+      "source_namespace": "microsoft_markitdown",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "fa58cc16137599affeff6d3e6d434bb8b4f0f9effd4fd1c0ab692915b33b4e32"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/05/20260526-microsoft_markitdown-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/08-tooling-reference/microsoft_markitdown/2026/05/20260526-microsoft_markitdown-scan.md",
+      "layer": "08-tooling-reference",
+      "source_namespace": "microsoft_markitdown",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "06de917c36e079564efc5c1cf2d16ba6a819310047eca043933718299d48f4dc"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260604-microsoft_markitdown-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/08-tooling-reference/microsoft_markitdown/2026/06/20260604-microsoft_markitdown-scan.md",
+      "layer": "08-tooling-reference",
+      "source_namespace": "microsoft_markitdown",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "ec554f1de9fe17b7dba553e491ec77f7360df50bdb5d7b4e3de1abff1f434d3a"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260605-microsoft_markitdown-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/08-tooling-reference/microsoft_markitdown/2026/06/20260605-microsoft_markitdown-scan.md",
+      "layer": "08-tooling-reference",
+      "source_namespace": "microsoft_markitdown",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "535f493bcd6153c835753a29bec328726d349a1def023840b2f35e8cb89873c7"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260607-microsoft_markitdown-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/08-tooling-reference/microsoft_markitdown/2026/06/20260607-microsoft_markitdown-scan.md",
+      "layer": "08-tooling-reference",
+      "source_namespace": "microsoft_markitdown",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "3fa7b49ac53f8307cc8d83419343e9ee30f03129c7d6f1162ce5d0c7008f9f36"
+    },
+    {
+      "original_path": "data/inputs/archive/2026/06/20260616-microsoft_markitdown-scan.md",
+      "archive_path": "data/inputs/archive/legacy-through-2026-07-11-1340/08-tooling-reference/microsoft_markitdown/2026/06/20260616-microsoft_markitdown-scan.md",
+      "layer": "08-tooling-reference",
+      "source_namespace": "microsoft_markitdown",
+      "primary_owner": "zero",
+      "status": "legacy",
+      "cutoff": "2026-07-11T13:40:00+08:00",
+      "sha256": "6a860d0f0ad476a82467071c13e00a659d024c2308e8ec824a7fe14c22910cf9"
+    }
+  ]
+}

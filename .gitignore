@@ -46,3 +46,4 @@ out/
 .cache
 .env
 data/cortex.db
+data/inputs/.raw_cache/
