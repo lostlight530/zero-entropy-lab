@@ -22,7 +22,7 @@
           "sha": "0cf8494d1a82b39e1b23d0795615b592dee5cf6e"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:27.648401+00:00"
+      "last_checked_at": "2026-07-13T17:27:57.898972+00:00"
     },
     "ModelEngine-Group/fit-framework": {
       "documents": {
@@ -33,7 +33,7 @@
           "sha": "e55b50d07d0c01ef70ae88885c4372efdc3970f7"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:17.181743+00:00"
+      "last_checked_at": "2026-07-13T17:27:38.932341+00:00"
     },
     "MoonshotAI/kimi-agent-sdk": {
       "documents": {
@@ -44,7 +44,7 @@
           "sha": "e48d8c4fcd987e9f2550fb2bb0acbecd307ec9c7"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:18.139880+00:00"
+      "last_checked_at": "2026-07-13T17:27:40.630423+00:00"
     },
     "NVIDIA/TensorRT-LLM": {
       "documents": {
@@ -55,7 +55,7 @@
           "sha": "943083d6c4c612b4694a9b675758527594154d34"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:21.368269+00:00"
+      "last_checked_at": "2026-07-13T17:27:46.019166+00:00"
     },
     "OpenHands/software-agent-sdk": {
       "documents": {
@@ -66,7 +66,7 @@
           "sha": "3e4e4eb91e9955b3ee85ede24e43ebf3a14d9ab6"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:14.742747+00:00"
+      "last_checked_at": "2026-07-13T17:27:35.308068+00:00"
     },
     "OpenSPG/KAG": {
       "documents": {
@@ -77,7 +77,7 @@
           "sha": "189179325180dcc7de0341ae6b8c64a6a97b2daa"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:28.979323+00:00"
+      "last_checked_at": "2026-07-13T17:28:00.180543+00:00"
     },
     "QwenLM/Qwen-Agent": {
       "documents": {
@@ -88,7 +88,7 @@
           "sha": "7d41fe4e7c78fa62d59b03ce4bd444fcdb75eb58"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:15.264602+00:00"
+      "last_checked_at": "2026-07-13T17:27:36.072663+00:00"
     },
     "TencentCloud/TencentDB-Agent-Memory": {
       "documents": {
@@ -105,7 +105,7 @@
           "sha": "789aee7123a8427da9276b7bb29c787ac182f998"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:29.573553+00:00"
+      "last_checked_at": "2026-07-13T17:28:00.879923+00:00"
     },
     "TencentCloudADP/youtu-agent": {
       "documents": {
@@ -164,7 +164,7 @@
           "sha": "d8f839652a07608c21909c94f3217b9ce20e3787"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:17.646616+00:00"
+      "last_checked_at": "2026-07-13T17:27:39.872159+00:00"
     },
     "a2aproject/A2A": {
       "documents": {
@@ -181,7 +181,7 @@
           "sha": "9db896e8b05538b2a157215d3dba660dddc8c5ed"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:10.500529+00:00"
+      "last_checked_at": "2026-07-13T17:27:27.302725+00:00"
     },
     "a2aproject/a2a-python": {
       "documents": {
@@ -198,7 +198,7 @@
           "sha": "93b9a299ddc2ea34e1b8a9f7c52b81c44a367140"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:10.971022+00:00"
+      "last_checked_at": "2026-07-13T17:27:28.024044+00:00"
     },
     "agentclientprotocol/agent-client-protocol": {
       "documents": {
@@ -215,7 +215,7 @@
           "sha": "1b4fbc172daae9b829cf8337bd92d99b2855e721"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:11.465554+00:00"
+      "last_checked_at": "2026-07-13T17:27:29.004294+00:00"
     },
     "agentscope-ai/agentscope": {
       "documents": {
@@ -226,7 +226,7 @@
           "sha": "4415c1cedff446704e35e0623fde7d429bffa0ad"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:15.971929+00:00"
+      "last_checked_at": "2026-07-13T17:27:36.949381+00:00"
     },
     "agentskills/agentskills": {
       "documents": {
@@ -237,7 +237,7 @@
           "sha": "247e4a18e908d3bf27092f886f25c2515d84ecbc"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:08.894286+00:00"
+      "last_checked_at": "2026-07-13T17:27:24.959192+00:00"
     },
     "cloudwego/eino": {
       "documents": {
@@ -248,7 +248,7 @@
           "sha": "a74ba7979f4c7e3c895f26ae520fa0125bce9505"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:16.512825+00:00"
+      "last_checked_at": "2026-07-13T17:27:37.746442+00:00"
     },
     "deepseek-ai/3FS": {
       "documents": {
@@ -259,7 +259,7 @@
           "sha": "18d89937ffbb47bfda1569b3d8bff743be64d70a"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:23.560754+00:00"
+      "last_checked_at": "2026-07-13T17:27:50.526448+00:00"
     },
     "deepseek-ai/DeepEP": {
       "documents": {
@@ -270,7 +270,7 @@
           "sha": "078a15146bffdf1ffb27a1018eb3c5472d9dcad0"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:22.284469+00:00"
+      "last_checked_at": "2026-07-13T17:27:48.153147+00:00"
     },
     "deepseek-ai/DeepGEMM": {
       "documents": {
@@ -281,7 +281,7 @@
           "sha": "6ef705ffceb9f41b2f2588b62a910ed6cbc819a5"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:23.066109+00:00"
+      "last_checked_at": "2026-07-13T17:27:49.696649+00:00"
     },
     "deepseek-ai/FlashMLA": {
       "documents": {
@@ -292,15 +292,15 @@
           "sha": "1945725fb253b7b1b4681bed10b04a1a83d5fe6e"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:22.691758+00:00"
+      "last_checked_at": "2026-07-13T17:27:48.920410+00:00"
     },
     "deepset-ai/haystack": {
       "documents": {
         "MIGRATION.md": {
-          "content_hash": "889c9426ac1e3e5d174baa3e37b1e976612a8db32d75fa906875b5e03f53c3da",
-          "entity_id": "doc_deepset_ai_haystack_migration_md_31b292a1dcf8",
-          "output": "current/memory-context-sandbox/deepset_ai_haystack/MIGRATION.md__31b292a1dcf8.md",
-          "sha": "31b292a1dcf876693722b88da84c69525b5d6ea7"
+          "content_hash": "53da70d98c143b8000727b6cca5d4a85d6f6920d7c9c6bcdc36f3559100dd413",
+          "entity_id": "external_doc_deepset_ai_haystack_migration_md",
+          "output": "current/memory-context-sandbox/deepset_ai_haystack/MIGRATION.md__7b72c178be97.md",
+          "sha": "7b72c178be9702db50056459b38a6a8e64c71d5e"
         },
         "README.md": {
           "content_hash": "d69b19192b56c92fcd901044d004766ab326d3d795024270b9a5c09077cb09e2",
@@ -309,18 +309,18 @@
           "sha": "e9f3982dd7c4b71acf9d61d56782814d4af6855d"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:26.699724+00:00"
+      "last_checked_at": "2026-07-13T17:27:56.302840+00:00"
     },
     "ggml-org/llama.cpp": {
       "documents": {
         "README.md": {
-          "content_hash": "652e31017c330c73e12e7d65ca370a7bd60825b6aa1983c90cbbfa7fd8d875d0",
-          "entity_id": "doc_ggml_org_llama.cpp_readme_md_e98f2b7f18b1",
-          "output": "current/serving-inference/ggml_org_llama.cpp/README.md__e98f2b7f18b1.md",
-          "sha": "e98f2b7f18b1924d223c2c0d64171f63e42fc1b7"
+          "content_hash": "5f6788811c05fea58cc2d0a9972cfdc50a9f05a40dc2dd0c335f602d162ca98c",
+          "entity_id": "external_doc_ggml_org_llama.cpp_readme_md",
+          "output": "current/serving-inference/ggml_org_llama.cpp/README.md__ee70581e3763.md",
+          "sha": "ee70581e3763f53e59bf1addb7bad70a7b2745ee"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:21.902279+00:00"
+      "last_checked_at": "2026-07-13T17:27:47.444615+00:00"
     },
     "google/adk-python": {
       "documents": {
@@ -337,7 +337,7 @@
           "sha": "0eddf283f0b470e4c166784bd0b5bb98ca397810"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:12.545836+00:00"
+      "last_checked_at": "2026-07-13T17:27:31.194995+00:00"
     },
     "huggingface/smolagents": {
       "documents": {
@@ -348,7 +348,7 @@
           "sha": "7c8af38d981a563add56db76b10cde810e010690"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:24.427327+00:00"
+      "last_checked_at": "2026-07-13T17:27:51.980866+00:00"
     },
     "huggingface/transformers": {
       "documents": {
@@ -359,7 +359,7 @@
           "sha": "4fe7136d25294b26a50b4fefd70f0cb12db06d4f"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:18.881094+00:00"
+      "last_checked_at": "2026-07-13T17:27:41.887892+00:00"
     },
     "langchain-ai/langgraph": {
       "documents": {
@@ -370,7 +370,7 @@
           "sha": "97c31e9cb4d8fe56be8d768ce3eb5e22400e897e"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:13.706640+00:00"
+      "last_checked_at": "2026-07-13T17:27:33.206030+00:00"
     },
     "mem0ai/mem0": {
       "documents": {
@@ -381,7 +381,7 @@
           "sha": "9a81e74effacbd7433e91b6c1fcc907f110d4773"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:27.202851+00:00"
+      "last_checked_at": "2026-07-13T17:27:57.111247+00:00"
     },
     "microsoft/agent-framework": {
       "documents": {
@@ -626,7 +626,7 @@
           "sha": "1c7afbad1a0f494855e2c29669001d90f01c7722"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:13.211992+00:00"
+      "last_checked_at": "2026-07-13T17:27:32.415414+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
@@ -637,7 +637,7 @@
           "sha": "4e4811014ee7abd43b8cfc4730bd3f9b8dd2aaca"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:09.519700+00:00"
+      "last_checked_at": "2026-07-13T17:27:25.774768+00:00"
     },
     "modelcontextprotocol/python-sdk": {
       "documents": {
@@ -648,7 +648,7 @@
           "sha": "3822976640b088b1beaf9945fbfc9fc160cc0b77"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:10.054767+00:00"
+      "last_checked_at": "2026-07-13T17:27:26.621526+00:00"
     },
     "modelcontextprotocol/servers": {
       "documents": {
@@ -659,7 +659,7 @@
           "sha": "fe5351a890ab80f6d49b2b50f1e0732224313b24"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:23.978029+00:00"
+      "last_checked_at": "2026-07-13T17:27:51.281159+00:00"
     },
     "openai/openai-agents-python": {
       "documents": {
@@ -1126,7 +1126,7 @@
           "sha": "63d1d1b7c62ad1b1711d296b486efcadeec7491b"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:11.981600+00:00"
+      "last_checked_at": "2026-07-13T17:27:30.102493+00:00"
     },
     "pydantic/pydantic-ai": {
       "documents": {
@@ -1137,7 +1137,7 @@
           "sha": "e19db6d9b579d475bde9def9984926dfece3a083"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:14.256195+00:00"
+      "last_checked_at": "2026-07-13T17:27:34.148893+00:00"
     },
     "run-llama/llama_index": {
       "documents": {
@@ -1154,7 +1154,7 @@
           "sha": "c1c7af8256b4d278748ea9b5c8b1a5da1858e691"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:25.783686+00:00"
+      "last_checked_at": "2026-07-13T17:27:54.399206+00:00"
     },
     "sgl-project/sglang": {
       "documents": {
@@ -1165,7 +1165,7 @@
           "sha": "e5cfd3d65b13a715964a1497f9514afc0c1726e7"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:20.503263+00:00"
+      "last_checked_at": "2026-07-13T17:27:44.504604+00:00"
     },
     "stanfordnlp/dspy": {
       "documents": {
@@ -1176,7 +1176,7 @@
           "sha": "fe73d8cc8973045e34397b852c6f40670380c363"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:24.898095+00:00"
+      "last_checked_at": "2026-07-13T17:27:52.714666+00:00"
     },
     "stepfun-ai/StepDeepResearch": {
       "documents": {
@@ -1187,7 +1187,7 @@
           "sha": "a33cabc2f936bf7c184ca8e40d65ab42f26d93c6"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:28.429682+00:00"
+      "last_checked_at": "2026-07-13T17:27:59.335531+00:00"
     },
     "vllm-project/vllm": {
       "documents": {
@@ -1426,7 +1426,7 @@
           "sha": "df6e4e9429650b7db914f585f4ccadb643d9c887"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:19.604163+00:00"
+      "last_checked_at": "2026-07-13T17:27:43.239047+00:00"
     },
     "volcengine/verl": {
       "documents": {
@@ -1437,7 +1437,7 @@
           "sha": "db9c2eb67915f9597a30a4d5a32599717c4ccaae"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:30.343832+00:00"
+      "last_checked_at": "2026-07-13T17:28:02.372823+00:00"
     },
     "zai-org/Open-AutoGLM": {
       "documents": {
@@ -1448,7 +1448,7 @@
           "sha": "2af1de1ecb44f51c31256cd0bd2aa12842866423"
         }
       },
-      "last_checked_at": "2026-07-13T11:27:28.012994+00:00"
+      "last_checked_at": "2026-07-13T17:27:58.595686+00:00"
     }
   },
   "schema_version": 3
