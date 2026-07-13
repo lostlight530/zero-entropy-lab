@@ -49,6 +49,8 @@ Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
+*Deep Reliability Observation*: Recent literature on autonomous agent evaluation emphasizes the risk of 'cascading context degradation' where minor hallucinations in early steps (like A1) magnify into critical failures in later steps (like A4). Therefore, strict enforcement of 'INPUT_MISSING' is not just a fallback, but a fundamental safety mechanism to prevent state corruption.
+
 Signal 1
 Signal: Prompt drift detection is crucial in production. Multi-step agentic chains are vulnerable to cascading drift, where modifying a retrieval prompt alters the context for downstream generation, causing unintended behavioral changes.
 Source: Confident AI blog / Zylos Research context

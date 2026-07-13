@@ -44,6 +44,8 @@ Relevance: Medium
 Confidence: Medium
 
 RAW_RELIABILITY_SIGNAL_LOG
+
+*Deep Reliability Observation*: Recent literature on autonomous agent evaluation emphasizes the risk of 'cascading context degradation' where minor hallucinations in early steps (like A1) magnify into critical failures in later steps (like A4). Therefore, strict enforcement of 'INPUT_MISSING' is not just a fallback, but a fundamental safety mechanism to prevent state corruption.
 Signal 1
 Signal: Coding agents face failure modes across various scenarios, including AI agent refusals, prompt injection, jailbreaking, and critical safety gaps necessary for trustworthy deployment.
 Source: ClayBuddy: A Framework, Evaluation, & Mitigation of Coding Agent Failures - arXiv

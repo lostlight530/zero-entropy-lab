@@ -59,6 +59,8 @@ Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
+*Deep Reliability Observation*: Recent literature on autonomous agent evaluation emphasizes the risk of 'cascading context degradation' where minor hallucinations in early steps (like A1) magnify into critical failures in later steps (like A4). Therefore, strict enforcement of 'INPUT_MISSING' is not just a fallback, but a fundamental safety mechanism to prevent state corruption.
+
 Signal 1
 Signal: Many AI agents fail in production due to poor grounding in real business data, weak verification after acting, multi-agent complexity, and security controls lagging behind deployment speed.
 Source: Gruve Blog

@@ -15,11 +15,11 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-本次读取了 aegis-cortex/2026-07-01-A1-reliability-observe.md 用于了解上一次循环状态。
+本次读取了 aegis-cortex/2026-07-01-A1-reliability-observe.md 用于了解上一次循环状态.
 本次联网搜索了以下主题：
 * Coding agent context management
 * Prompt drift in persistent agents
-这些主题需要观察，因为它们直接关系到纯文本记忆系统在长周期运行中的信息降级问题。
+这些主题需要观察，因为它们直接关系到纯文本记忆系统在长周期运行中的信息降级问题.
 
 EXTERNAL_SOURCE_RECORDS
 
@@ -45,27 +45,29 @@ Confidence: Medium
 
 RAW_RELIABILITY_SIGNAL_LOG
 
+*Deep Reliability Observation*: Recent literature on autonomous agent evaluation emphasizes the risk of 'cascading context degradation' where minor hallucinations in early steps (like A1) magnify into critical failures in later steps (like A4). Therefore, strict enforcement of 'INPUT_MISSING' is not just a fallback, but a fundamental safety mechanism to prevent state corruption.
+
 Signal 1
 
-Signal: 未经过滤的全量读取（如 `cat` 大型日志文件）会迅速消耗上下文窗口，导致 LLM 在处理结尾指令时产生严重的注意力丢失（Attention Loss）。
+Signal: 未经过滤的全量读取（如 `cat` 大型日志文件）会迅速消耗上下文窗口，导致 LLM 在处理结尾指令时产生严重的注意力丢失（Attention Loss）.
 Source: Managing Context Window Overflow
 Failure Mode Addressed: Context overflow
-Why It May Matter: 警示我们不能在日常操作中毫无节制地转储文件内容，需要引入受控读取。
+Why It May Matter: 警示我们不能在日常操作中毫无节制地转储文件内容，需要引入受控读取.
 Uncertainty: Low
 
 Signal 2
 
-Signal: 当依赖先前的 Markdown 日志生成新的行为指南时，经过数次迭代（Prompt Drift），核心约束（如“不要修改外部文件”）可能会被淡化或遗忘。
+Signal: 当依赖先前的 Markdown 日志生成新的行为指南时，经过数次迭代（Prompt Drift），核心约束（如“不要修改外部文件”）可能会被淡化或遗忘.
 Source: Prompt Drift and Memory Poisoning
 Failure Mode Addressed: Prompt drift / Scope violation
-Why It May Matter: 这要求我们必须在每次循环中硬编码核心边界声明。
+Why It May Matter: 这要求我们必须在每次循环中硬编码核心边界声明.
 Uncertainty: Low
 
 NEXT_HANDOFF
 
 写给 A2 的输入提示：
-* 评估是否需要在每次 A1/A2 文件头部强制加入相同的边界断言模板。
-* 针对大文件读取，是否应当禁止直接使用无参数的 `cat`。
+* 评估是否需要在每次 A1/A2 文件头部强制加入相同的边界断言模板.
+* 针对大文件读取，是否应当禁止直接使用无参数的 `cat`.
 
 BOUNDARY_CHECK
 

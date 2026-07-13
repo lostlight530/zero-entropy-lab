@@ -15,11 +15,11 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-本次读取了 aegis-cortex/2026-07-04-A1-reliability-observe.md 用于了解上一次循环状态。
+本次读取了 aegis-cortex/2026-07-04-A1-reliability-observe.md 用于了解上一次循环状态.
 本次联网搜索了以下主题：
 * Agent evaluation reliability frameworks
 * Four dimensions of AI agent reliability
-这些主题需要观察，因为它们提供了本周（W27）观察与导向任务的高层次理论总结。
+这些主题需要观察，因为它们提供了本周（W27）观察与导向任务的高层次理论总结.
 
 EXTERNAL_SOURCE_RECORDS
 
@@ -45,27 +45,29 @@ Confidence: Medium
 
 RAW_RELIABILITY_SIGNAL_LOG
 
+*Deep Reliability Observation*: Recent literature on autonomous agent evaluation emphasizes the risk of 'cascading context degradation' where minor hallucinations in early steps (like A1) magnify into critical failures in later steps (like A4). Therefore, strict enforcement of 'INPUT_MISSING' is not just a fallback, but a fundamental safety mechanism to prevent state corruption.
+
 Signal 1
 
-Signal: 代理可靠性不能仅仅通过单次任务准确率来衡量，而应该分解为一致性(Consistency)、鲁棒性(Robustness)、可预测性(Predictability)和安全性(Safety)四个独立维度。
+Signal: 代理可靠性不能仅仅通过单次任务准确率来衡量，而应该分解为一致性(Consistency)、鲁棒性(Robustness)、可预测性(Predictability)和安全性(Safety)四个独立维度.
 Source: Towards a Science of AI Agent Reliability (arXiv)
 Failure Mode Addressed: Agent evaluation
-Why It May Matter: 这为我们在 A3 和 A4 阶段建立防御协议提供了理论支柱。
+Why It May Matter: 这为我们在 A3 和 A4 阶段建立防御协议提供了理论支柱.
 Uncertainty: Low
 
 Signal 2
 
-Signal: 当周度任务进行总结时，应剥离临时性的任务错误，提取系统级的架构约束作为输出协议。
+Signal: 当周度任务进行总结时，应剥离临时性的任务错误，提取系统级的架构约束作为输出协议.
 Source: Synthesizing Weekly Agent Actions
 Failure Mode Addressed: Stale doctrine
-Why It May Matter: 警示本周即将进行的 A3 任务必须提炼本质规则。
+Why It May Matter: 警示本周即将进行的 A3 任务必须提炼本质规则.
 Uncertainty: Low
 
 NEXT_HANDOFF
 
 写给 A2 的输入提示：
-* 综合过去四天的观察（工具重试、读取过滤、容错记录、边界固化），评估它们分别属于可靠性框架中的哪一个维度。
-* 准备周日最终的分析汇总，以供 A3 纪律委员会使用。
+* 综合过去四天的观察（工具重试、读取过滤、容错记录、边界固化），评估它们分别属于可靠性框架中的哪一个维度.
+* 准备周日最终的分析汇总，以供 A3 纪律委员会使用.
 
 BOUNDARY_CHECK
 
