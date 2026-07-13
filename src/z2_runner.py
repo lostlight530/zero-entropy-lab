@@ -5,6 +5,11 @@ import hmac
 from pathlib import Path
 from datetime import datetime
 
+SENSORY_PATH = Path(__file__).resolve().parent / "kernel" / "sensory"
+if str(SENSORY_PATH) not in sys.path:
+    sys.path.insert(0, str(SENSORY_PATH))
+from document_hygiene import GENESIS_HASH, ledger_hash
+
 def verify_and_read_jsonl():
     knowledge_path = Path('data/knowledge')
     entities_path = knowledge_path / "entities"
@@ -20,51 +25,33 @@ def verify_and_read_jsonl():
 
     def process_file(file_path, is_entity):
         nonlocal verified_nodes, tampered_nodes, duplicate_count
-        prev_hash = "NEXUS_GENESIS_0000"
-
+        previous = GENESIS_HASH
         if not file_path.exists():
             return
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            for line in f:
+        domain = file_path.relative_to(knowledge_path).as_posix()
+        with open(file_path, "r", encoding="utf-8") as stream:
+            for line in stream:
                 if not line.strip():
                     continue
-                data = json.loads(line)
-
-                current_hash = data.pop('hash', None)
-                stored_prev = data.pop('prev_hash', None)
-
-                secret_key = os.environ.get("NEXUS_SECRET_KEY", "absolute-zero-entropy-override").encode('utf-8')
-
-                node_id = data.get('id') if is_entity else f"{data.get('src')}_{data.get('relation')}_{data.get('dst')}"
-                if not node_id:
-                    node_id = "UNKNOWN"
-
-                if stored_prev != prev_hash:
+                stored = json.loads(line)
+                current_hash = stored.get("hash")
+                expected_hash = ledger_hash(stored, previous, domain)
+                node_id = stored.get("id") if is_entity else f"{stored.get('src')}_{stored.get('relation')}_{stored.get('dst')}"
+                node_id = node_id or "UNKNOWN"
+                if stored.get("prev_hash") != previous or current_hash != expected_hash:
                     tampered_nodes.append(node_id)
-
-                if stored_prev is not None:
-                    data['prev_hash'] = stored_prev
-
-                serialized = json.dumps(data, sort_keys=True)
-                expected_hash = hmac.new(secret_key, serialized.encode('utf-8'), hashlib.sha256).hexdigest()
-
-                if expected_hash == current_hash and current_hash is not None:
-                    verified_nodes += 1
                 else:
-                    tampered_nodes.append(node_id)
-
-                prev_hash = expected_hash
-
+                    verified_nodes += 1
+                previous = current_hash or expected_hash
+                data = {key: value for key, value in stored.items() if key not in {"hash", "prev_hash"}}
                 if is_entity:
-                    eid = data.get('id')
-                    if eid:
-                        if eid in entities:
+                    entity_id = data.get("id")
+                    if entity_id:
+                        if entity_id in entities:
                             duplicate_count += 1
-                        entities[eid] = data
+                        entities[entity_id] = data
                 else:
                     relations.append(data)
-
     if entities_path.exists():
         for f in sorted(entities_path.glob('*.jsonl')):
             process_file(f, is_entity=True)

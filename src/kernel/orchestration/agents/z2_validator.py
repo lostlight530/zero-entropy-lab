@@ -4,16 +4,12 @@ import hmac
 import hashlib
 from pathlib import Path
 from collections import defaultdict
+
+SENSORY_PATH = Path(__file__).resolve().parents[2] / "sensory"
+if str(SENSORY_PATH) not in sys.path:
+    sys.path.insert(0, str(SENSORY_PATH))
+from document_hygiene import GENESIS_HASH, ledger_hash
 from datetime import datetime
-
-def verify_hmac(data_dict, expected_hash, secret):
-    data_to_hash = data_dict.copy()
-    if 'hash' in data_to_hash:
-        del data_to_hash['hash']
-
-    serialized = json.dumps(data_to_hash, sort_keys=True)
-    computed = hmac.new(secret, serialized.encode('utf-8'), hashlib.sha256).hexdigest()
-    return computed == expected_hash
 
 def compute_pagerank(nodes, edges, iterations=15, damping_factor=0.85):
     if not nodes:
@@ -56,7 +52,7 @@ def main():
     relations = []
 
     for filepath in entities_dir.glob("*.jsonl"):
-        prev_hash_expected = "NEXUS_GENESIS_0000"
+        prev_hash_expected = GENESIS_HASH
         with open(filepath, 'r', encoding='utf-8') as f:
             for line_no, line in enumerate(f, 1):
                 line = line.strip()
@@ -68,12 +64,14 @@ def main():
                     tamper_detected.append(f"{filepath.name}_L{line_no}_BROKEN_CHAIN")
 
                 current_hash = data.get('hash')
-                if verify_hmac(data, current_hash, secret):
+                domain = filepath.relative_to(knowledge_dir).as_posix()
+                expected_hash = ledger_hash(data, prev_hash_expected, domain)
+                if expected_hash == current_hash:
                     verified_nodes_count += 1
                 else:
-                    tamper_detected.append(f"{filepath.name}_L{line_no}_INVALID_MAC")
+                    tamper_detected.append(f"{filepath.name}_L{line_no}_INVALID_HASH")
 
-                prev_hash_expected = current_hash
+                prev_hash_expected = current_hash or expected_hash
 
                 eid = data.get('id')
                 if eid in entities:
@@ -82,7 +80,7 @@ def main():
                     entities[eid] = data
 
     for filepath in relations_dir.glob("*.jsonl"):
-        prev_hash_expected = "NEXUS_GENESIS_0000"
+        prev_hash_expected = GENESIS_HASH
         with open(filepath, 'r', encoding='utf-8') as f:
             for line_no, line in enumerate(f, 1):
                 line = line.strip()
@@ -94,12 +92,14 @@ def main():
                     tamper_detected.append(f"{filepath.name}_L{line_no}_BROKEN_CHAIN")
 
                 current_hash = data.get('hash')
-                if verify_hmac(data, current_hash, secret):
+                domain = filepath.relative_to(knowledge_dir).as_posix()
+                expected_hash = ledger_hash(data, prev_hash_expected, domain)
+                if expected_hash == current_hash:
                     verified_nodes_count += 1
                 else:
-                    tamper_detected.append(f"{filepath.name}_L{line_no}_INVALID_MAC")
+                    tamper_detected.append(f"{filepath.name}_L{line_no}_INVALID_HASH")
 
-                prev_hash_expected = current_hash
+                prev_hash_expected = current_hash or expected_hash
 
                 relations.append(data)
 

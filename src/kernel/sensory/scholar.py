@@ -129,7 +129,7 @@ class Scholar:
             for node in ast.walk(tree):
                 # Classes
                 if isinstance(node, ast.ClassDef):
-                    class_id = f"class_{node.name}"
+                    class_id = f"{file_id}__class_{node.name}"
 
                     # Detect Decorators (e.g. @dataclass)
                     is_dataclass = False
@@ -160,7 +160,7 @@ class Scholar:
 
                 # Functions
                 elif isinstance(node, ast.FunctionDef):
-                    func_id = f"func_{node.name}"
+                    func_id = f"{file_id}__func_{node.name}"
                     desc = ast.get_docstring(node) or "Python Function"
                     self.cortex.add_entity(func_id, "code_function", node.name, desc[:100], save_to_disk=True)
                     self.cortex.connect_entities(file_id, "defines", func_id, save_to_disk=True)
@@ -189,7 +189,7 @@ class Scholar:
                         title = match.group(2).strip()
                         safe_title = "".join([c for c in title if c.isalnum() or c == ' ']).strip().replace(' ', '_').lower()
                         if safe_title:
-                            concept_id = f"{concept_type}_{safe_title}"[:60]
+                            concept_id = f"{file_id}__{concept_type}_{safe_title}"
                             self.cortex.add_entity(concept_id, concept_type, title, f"Section in {filepath.name}", save_to_disk=True)
                             self.cortex.connect_entities(file_id, "documents", concept_id, save_to_disk=True)
         except Exception as e:

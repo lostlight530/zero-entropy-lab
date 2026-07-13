@@ -1,0 +1,66 @@
+{
+    "schema":  "nexus-ledger-archive",
+    "created_at":  "2026-07-13T13:40:00+08:00",
+    "files":  [
+                  {
+                      "path":  "entities/architecture_component.jsonl",
+                      "size":  351,
+                      "sha256":  "0f0c8d9921980ebdbf65a6701ce21ef9b876a8b2d11d1dc992d1da84c526104f",
+                      "records":  1
+                  },
+                  {
+                      "path":  "entities/architecture_concept.jsonl",
+                      "size":  56501,
+                      "sha256":  "b2d9b41c93e31b070c25d14103a39480334c0f2fff86476a8de8f1b9fab0ab83",
+                      "records":  157
+                  },
+                  {
+                      "path":  "entities/code_class.jsonl",
+                      "size":  125227,
+                      "sha256":  "f65a623d4cf3eab3be5fcaade776fa587479b31f681abad0a363f4aa884b0ead",
+                      "records":  382
+                  },
+                  {
+                      "path":  "entities/code_file.jsonl",
+                      "size":  299139,
+                      "sha256":  "eac95301ae367475280dd9a8d73b75bc4e77fdefa3d1751632572a1fb5507b14",
+                      "records":  920
+                  },
+                  {
+                      "path":  "entities/code_function.jsonl",
+                      "size":  521521,
+                      "sha256":  "94981f2b73d7a027bfe9870cbdf0f159a82b159306e6aee985221945e963d856",
+                      "records":  1842
+                  },
+                  {
+                      "path":  "entities/core_concept.jsonl",
+                      "size":  32202,
+                      "sha256":  "f652a8cfd34a647b8dfd435efad8ed8286b19e7db823f2de6fb83a2f28f6de04",
+                      "records":  101
+                  },
+                  {
+                      "path":  "entities/doc_section.jsonl",
+                      "size":  138248,
+                      "sha256":  "949ccac3b9dbfd4ae0125dafec3f9fb54e745f5735751dfb44d39599dd2ad296",
+                      "records":  442
+                  },
+                  {
+                      "path":  "entities/repository.jsonl",
+                      "size":  3802,
+                      "sha256":  "7dd727bde7d5d25da1ef0eab41389759fbfec8177b777ae26e379204206aace0",
+                      "records":  13
+                  },
+                  {
+                      "path":  "relations/2026-07.jsonl",
+                      "size":  1094735,
+                      "sha256":  "072507b76284ec2b5c50ca849e07616b464de85335cf2d422b9685a11ba25627",
+                      "records":  4011
+                  },
+                  {
+                      "path":  "relations/knowledge.jsonl",
+                      "size":  199,
+                      "sha256":  "c6aa9e60df74e116aa1d30d7260f863e15b981e8aea0f993dd48613ba43dc69f",
+                      "records":  1
+                  }
+              ]
+}

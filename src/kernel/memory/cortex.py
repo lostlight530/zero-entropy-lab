@@ -9,6 +9,13 @@ from pathlib import Path
 from typing import List, Dict
 
 try:
+    from sensory.document_hygiene import ledger_hash
+except ImportError:
+    import sys
+    sys.path.append(str(Path(__file__).resolve().parents[1] / "sensory"))
+    from document_hygiene import ledger_hash
+
+try:
     from logger import logger
 except ImportError:
     import sys, os
@@ -140,31 +147,21 @@ class Cortex:
             return "NEXUS_GENESIS_0000"
 
     def _log_to_jsonl(self, category, filename, data):
-        """Append knowledge to the cryptographic Merkle Chain text ledger."""
-        # Sanitize filename to prevent directory traversal or invalid chars
-        safe_filename = "".join([c for c in filename if c.isalnum() or c in ('-','_')])
-        if not safe_filename: safe_filename = "misc"
-
+        """Append one canonical record to the linked text ledger."""
+        safe_filename = "".join(c for c in filename if c.isalnum() or c in ("-", "_")) or "misc"
         filepath = self.knowledge_path / category / f"{safe_filename}.jsonl"
         try:
-            # 1. 获取上一行的 Hash (Get previous hash)
-            prev_hash = self._get_last_hash(filepath)
-
-            # 2. 生成当前记录的不可篡改哈希 (Generate tamper-proof hash for current record)
-            # 为了保证哈希一致性，对数据进行稳定排序的 JSON 序列化
-            data_str = json.dumps(data, sort_keys=True, ensure_ascii=False)
-            current_hash = hashlib.sha256(f"{prev_hash}{data_str}".encode('utf-8')).hexdigest()
-
-            # 3. 附加密码学证明 (Append cryptographic proofs)
-            data['hash'] = current_hash
-            data['prev_hash'] = prev_hash
-
-            # 4. 追加写入 (Append write)
-            with open(filepath, 'a', encoding='utf-8') as f:
-                f.write(json.dumps(data, ensure_ascii=False) + "\n")
-        except Exception as e:
-            logger.error(f"⚠️ Failed to write cryptographic text memory: {e}", exc_info=True)
-
+            previous = self._get_last_hash(filepath)
+            record = dict(data)
+            domain = filepath.relative_to(self.knowledge_path).as_posix()
+            record["prev_hash"] = previous
+            record["hash"] = ledger_hash(record, previous, domain)
+            with open(filepath, "a", encoding="utf-8", newline="\n") as stream:
+                stream.write(json.dumps(record, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n")
+            return record["hash"]
+        except Exception as exc:
+            logger.error(f"Failed to write linked text memory: {exc}", exc_info=True)
+            raise
     def search(self, query: str, limit: int = 10) -> List[Dict]:
         """Synaptic Search: Zero-Entropy 2-Stage Retrieval (FTS5 BM25 + Python Reranking)"""
         # Delay import to avoid circular dependencies if nlp imports cortex later
@@ -292,88 +289,88 @@ class Cortex:
     def add_entities_batch(self, entities: List[Dict], save_to_disk=True):
         cursor = self.conn.cursor()
         now = time.time()
+        inserted = []
+        try:
+            cursor.execute("SAVEPOINT entity_batch")
+            for entity in entities:
+                entity_id = entity.get("id")
+                if not entity_id:
+                    continue
+                existing = cursor.execute(
+                    "SELECT 1 FROM entities WHERE id = ?",
+                    (entity_id,),
+                ).fetchone()
+                if existing:
+                    cursor.execute(
+                        "UPDATE entities SET last_activated = ? WHERE id = ?",
+                        (now, entity_id),
+                    )
+                    continue
+                entity_type = entity.get("type", "concept")
+                name = entity.get("name")
+                desc = entity.get("desc", "")
+                weight = 2.0 if entity_id in self.CORE_WHITELIST else 1.0
+                signature = self._sign_memory(entity_id, entity_type, name, desc)
+                cursor.execute(
+                    "INSERT INTO entities VALUES (?, ?, ?, ?, ?, ?, ?)",
+                    (entity_id, entity_type, name, desc, weight, now, signature),
+                )
+                cursor.execute(
+                    "INSERT INTO entities_fts VALUES (?, ?, ?)",
+                    (entity_id, name, desc),
+                )
+                inserted.append(dict(entity))
+            cursor.execute("RELEASE SAVEPOINT entity_batch")
+            self.conn.commit()
+        except Exception:
+            cursor.execute("ROLLBACK TO SAVEPOINT entity_batch")
+            self.conn.rollback()
+            raise
 
-        # Process in chunks of 500 to keep transaction size manageable
-        CHUNK_SIZE = 500
-        for i in range(0, len(entities), CHUNK_SIZE):
-            chunk = entities[i:i + CHUNK_SIZE]
-            entity_data = []
-            fts_data = []
-
-            for e in chunk:
-                eid = e.get('id')
-                etype = e.get('type', 'concept')
-                ename = e.get('name')
-                edesc = e.get('desc', '')
-                w = 2.0 if eid in self.CORE_WHITELIST else 1.0
-
-                # 插入记录完整性签名 (Insert record integrity signature)
-                signature = self._sign_memory(eid, etype, ename, edesc)
-                entity_data.append((eid, etype, ename, edesc, w, now, signature))
-                fts_data.append((eid, ename, edesc))
-
-            try:
-                # Use a subtransaction for the chunk
-                cursor.execute("SAVEPOINT chunk_insert")
-                cursor.executemany('INSERT INTO entities VALUES (?, ?, ?, ?, ?, ?, ?)', entity_data)
-                cursor.executemany('INSERT INTO entities_fts VALUES (?, ?, ?)', fts_data)
-                cursor.execute("RELEASE SAVEPOINT chunk_insert")
-                self.conn.commit()
-            except sqlite3.IntegrityError:
-                cursor.execute("ROLLBACK TO SAVEPOINT chunk_insert")
-                # Individual fallback for the chunk to handle existing entities
-                for e in chunk:
-                    try:
-                        w = 2.0 if e['id'] in self.CORE_WHITELIST else 1.0
-                        sig = self._sign_memory(e['id'], e.get('type','concept'), e.get('name'), e.get('desc',''))
-                        cursor.execute('INSERT INTO entities VALUES (?, ?, ?, ?, ?, ?, ?)',
-                                     (e['id'], e.get('type','concept'), e.get('name'), e.get('desc',''), w, now, sig))
-                        cursor.execute('INSERT INTO entities_fts VALUES (?, ?, ?)', (e['id'], e.get('name'), e.get('desc','')))
-                        self.conn.commit()
-                    except sqlite3.IntegrityError:
-                        self.activate_memory(e['id'])
-
-            if save_to_disk:
-                for e in chunk:
-                    self._log_to_jsonl("entities", e.get('type', 'concept'), e)
-
+        if save_to_disk:
+            for entity in inserted:
+                self._log_to_jsonl("entities", entity.get("type", "concept"), entity)
+        return len(inserted)
     def connect_entities(self, source, relation, target, desc="", save_to_disk=True):
         self.connect_entities_batch([{"src": source, "relation": relation, "dst": target, "desc": desc}], save_to_disk=save_to_disk)
 
     def connect_entities_batch(self, relations: List[Dict], save_to_disk=True):
         cursor = self.conn.cursor()
-        CHUNK_SIZE = 400 # Max params per query is 999 in many sqlite builds, 400 relations * 2 entities = 800 params
+        inserted = []
+        now = time.time()
+        try:
+            cursor.execute("SAVEPOINT relation_batch")
+            for relation in relations:
+                source = relation["src"]
+                relation_type = relation.get("relation", "connected")
+                target = relation["dst"]
+                existing = cursor.execute(
+                    "SELECT 1 FROM relations WHERE source = ? AND relation = ? AND target = ?",
+                    (source, relation_type, target),
+                ).fetchone()
+                if existing:
+                    continue
+                cursor.execute(
+                    "INSERT INTO relations VALUES (?, ?, ?, ?)",
+                    (source, relation_type, target, 1.0),
+                )
+                cursor.execute(
+                    "UPDATE entities SET weight = weight + 0.1, last_activated = ? WHERE id IN (?, ?)",
+                    (now, source, target),
+                )
+                inserted.append(dict(relation))
+            cursor.execute("RELEASE SAVEPOINT relation_batch")
+            self.conn.commit()
+        except Exception:
+            cursor.execute("ROLLBACK TO SAVEPOINT relation_batch")
+            self.conn.rollback()
+            raise
 
-        for i in range(0, len(relations), CHUNK_SIZE):
-            chunk = relations[i:i + CHUNK_SIZE]
-            rel_data = [(r['src'], r.get('relation', 'connected'), r['dst'], 1.0) for r in chunk]
-
-            try:
-                cursor.executemany('INSERT OR IGNORE INTO relations VALUES (?, ?, ?, ?)', rel_data)
-                self.conn.commit()
-
-                # Batch activation with frequency awareness to match original logic
-                now = time.time()
-                activation_counts = {}
-                for r in chunk:
-                    activation_counts[r['src']] = activation_counts.get(r['src'], 0) + 0.1
-                    activation_counts[r['dst']] = activation_counts.get(r['dst'], 0) + 0.1
-
-                # Perform individual updates for frequency (still faster than individual commits)
-                # Alternatively, we could do complex SQL, but individual updates in a single transaction are fine.
-                for eid, boost in activation_counts.items():
-                    cursor.execute('UPDATE entities SET weight = weight + ?, last_activated = ? WHERE id = ?',
-                                 (boost, now, eid))
-                self.conn.commit()
-
-                if save_to_disk:
-                    month_str = datetime.datetime.now().strftime("%Y-%m")
-                    for r in chunk:
-                        self._log_to_jsonl("relations", month_str, r)
-            except Exception as e:
-                logger.error(f"Batch connection failed: {e}")
-                self.conn.rollback()
-
+        if save_to_disk and inserted:
+            month = datetime.datetime.now().strftime("%Y-%m")
+            for relation in inserted:
+                self._log_to_jsonl("relations", month, relation)
+        return len(inserted)
     def activate_memory(self, id, boost=0.1):
         cursor = self.conn.cursor()
         now = time.time()

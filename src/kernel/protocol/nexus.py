@@ -408,6 +408,7 @@ def main():
     subparsers.add_parser('serve', help='Launch Native Portal Server (Port 8000)')
     subparsers.add_parser('evolve', help='Run Daily Cycle (Harvest -> Dream -> Plan)')
     subparsers.add_parser('harvest', help='Run Sensory Harvester (External)')
+    subparsers.add_parser('project', help='Project current external evidence into the graph')
     subparsers.add_parser('ingest', help='Deep Scan Codebase (Internal)')
     subparsers.add_parser('ponder', help='Run Deep Inference (Cognition)')
     subparsers.add_parser('rebuild', help='Rebuild DB from Text (Restoration)')
@@ -543,98 +544,17 @@ def main():
             else:
                 needs_human.append(orphan_id)
 
-        # Step 2 & 3: Cryptographic integrity verification & Ledger Rewrite
-
-        # Verify JSONL ledgers
-        import hmac, hashlib
-        secret_key = os.environ.get("NEXUS_SECRET_KEY", "absolute-zero-entropy-override").encode('utf-8')
-
-        verified_nodes = 0
-        tamper_detected = []
-
-        def verify_file_hmac(file_path):
-            nonlocal verified_nodes
-            prev_hash = "NEXUS_GENESIS_0000"
-            try:
-                with open(file_path, 'r') as f:
-                    for line in f:
-                        data = json.loads(line)
-                        current_hash = data.get('hash')
-                        data_copy = data.copy()
-                        data_copy.pop('hash', None)
-
-                        if data_copy.get('prev_hash') != prev_hash:
-                            tamper_detected.append(data.get('id', 'UNKNOWN'))
-
-                        serialized = json.dumps(data_copy, sort_keys=True)
-                        expected_hash = hmac.new(secret_key, serialized.encode('utf-8'), hashlib.sha256).hexdigest()
-
-                        if expected_hash == current_hash and current_hash is not None:
-                            verified_nodes += 1
-                        else:
-                            tamper_detected.append(data.get('id', 'UNKNOWN'))
-
-                        prev_hash = expected_hash
-            except Exception as e:
-                pass
-
-        if entities_path.exists():
-            for f in entities_path.glob('*.jsonl'):
-                verify_file_hmac(f)
-        if relations_path.exists():
-            for f in relations_path.glob('*.jsonl'):
-                verify_file_hmac(f)
-
-        # Rewrite ledgers
-        def rewrite_ledger(file_path, items_dict_or_list):
-            import hmac, hashlib
-            secret_key = os.environ.get("NEXUS_SECRET_KEY", "absolute-zero-entropy-override").encode('utf-8')
-            prev_hash = "NEXUS_GENESIS_0000"
-
-            with open(file_path, 'w') as f:
-                if isinstance(items_dict_or_list, dict):
-                    items = items_dict_or_list.values()
-                else:
-                    items = items_dict_or_list
-
-                for item in items:
-                    item.pop('hash', None)
-                    item.pop('prev_hash', None)
-                    item['prev_hash'] = prev_hash
-
-                    serialized = json.dumps(item, sort_keys=True)
-                    new_hash = hmac.new(secret_key, serialized.encode('utf-8'), hashlib.sha256).hexdigest()
-                    item['hash'] = new_hash
-                    prev_hash = new_hash
-
-                    f.write(json.dumps(item) + '\n')
-
-        # Group entities by type for ledger rewrite
-        entities_by_type = {}
-        for data in all_entities:
-            t = data.get('type', 'concept')
-            if t not in entities_by_type:
-                entities_by_type[t] = []
-            entities_by_type[t].append(data)
-
-        # Clean entities directory
-        if entities_path.exists():
-            for f in entities_path.glob('*.jsonl'):
-                f.unlink()
-
-        for t, data_list in entities_by_type.items():
-            rewrite_ledger(entities_path / f"{t}.jsonl", data_list)
-
-        # Clean relations directory
-        if relations_path.exists():
-            for f in relations_path.glob('*.jsonl'):
-                f.unlink()
-
-        # Write valid relations to a single ledger file for the month
-        import datetime
-        month_str = datetime.datetime.now().strftime("%Y-%m")
-        rewrite_ledger(relations_path / f"{month_str}.jsonl", valid_relations)
-
+        # Step 2 and 3: Canonical linked-ledger maintenance
+        sensory_path = Path(__file__).resolve().parents[1] / "sensory"
+        if str(sensory_path) not in sys.path:
+            sys.path.insert(0, str(sensory_path))
+        from document_hygiene import canonicalize_ledger, verify_hash_chain
+        ledger_result = canonicalize_ledger(knowledge_path, hash_chain=True)
+        hash_result = verify_hash_chain(knowledge_path)
+        verified_nodes = hash_result["records"] - hash_result["broken"]
+        tamper_detected = [] if hash_result["broken"] == 0 else ["BROKEN_LINKED_LEDGER"]
+        logger.info(f"Canonical ledger maintenance: {ledger_result}")
+        logger.info(f"Linked ledger verification: {hash_result}")
         # Step 4: Pure Python PageRank Calculation
         def calculate_pagerank(nodes, edges, max_iter=20, d=0.85):
             N = len(nodes)
@@ -819,6 +739,18 @@ def main():
     elif args.command == 'harvest':
         h = Harvester()
         h.fetch_github_data()
+
+    elif args.command == 'project':
+        sensory_path = Path(__file__).resolve().parents[1] / "sensory"
+        if str(sensory_path) not in sys.path:
+            sys.path.insert(0, str(sensory_path))
+        from document_hygiene import project_current_snapshots
+        project_root = Path(__file__).resolve().parents[3]
+        print(project_current_snapshots(
+            project_root / "data" / "inputs",
+            project_root / "data" / "knowledge",
+            hash_chain=True,
+        ))
 
     elif args.command == 'learn':
         s = Scholar()
