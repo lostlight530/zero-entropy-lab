@@ -53,6 +53,20 @@ class TestCortex(unittest.TestCase):
         if len(results) > 0 and isinstance(results[0], dict):
             self.assertTrue(any(r.get('id') == 'id-leaf' for r in results), "Should find related leaf node")
 
+    def test_repeated_writes_do_not_append_duplicate_ledger_records(self):
+        entity = {"id": "same", "type": "concept", "name": "Same", "desc": "Stable"}
+        relation = {"src": "same", "relation": "links", "dst": "same", "desc": ""}
+
+        self.cortex.add_entities_batch([entity])
+        self.cortex.add_entities_batch([entity])
+        self.cortex.connect_entities_batch([relation])
+        self.cortex.connect_entities_batch([relation])
+
+        entity_lines = (self.test_dir / "knowledge" / "entities" / "concept.jsonl").read_text(encoding="utf-8").splitlines()
+        relation_lines = list((self.test_dir / "knowledge" / "relations").glob("*.jsonl"))[0].read_text(encoding="utf-8").splitlines()
+        self.assertEqual(len(entity_lines), 1)
+        self.assertEqual(len(relation_lines), 1)
+
 if __name__ == "__main__":
     print("⚔️ NEXUS PROVING GROUND: Cortex Unit Tests")
 
