@@ -27,6 +27,8 @@ INPUT_RECORD
 
 RISK_CLASSIFICATION
 
+*Deep Risk Classification*: The risks observed align with the 'Systemic Drift' taxonomy. Without explicit boundary checks at every stage, the agent's natural tendency to assist will inevitably lead to scope violations. We classify this as a high-severity Consistency Risk that must be mitigated by rigid, hardcoded constraints rather than dynamic instructions.
+
 task loop break risk
 - 信号: 级联漂移(cascading drift)与长周期任务中的请求超时(simulated request timeouts)
 - 解释原因: Aegis-cortex 依赖日常循环传递(A1 到 A2 到 A3 等), 如果中间某一步的错误被放大, 或者遇到超时未能正确记录和传递状态, 就会导致整个 OODA-RM 任务循环链条中断.

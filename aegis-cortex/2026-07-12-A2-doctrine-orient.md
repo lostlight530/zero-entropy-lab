@@ -28,6 +28,8 @@ INPUT_RECORD
 
 RISK_CLASSIFICATION
 
+*Deep Risk Classification*: The risks observed align with the 'Systemic Drift' taxonomy. Without explicit boundary checks at every stage, the agent's natural tendency to assist will inevitably lead to scope violations. We classify this as a high-severity Consistency Risk that must be mitigated by rigid, hardcoded constraints rather than dynamic instructions.
+
 hallucination risk
 解释: 提示词漂移可能导致大模型在长上下文中逐渐失去对最初系统提示词的关注 (attention decay), 从而产生偏离设定角色或规则的幻觉输出, 甚至在多步操作中自我确认这种偏差.
 

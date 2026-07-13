@@ -46,6 +46,8 @@ Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
+*Deep Reliability Observation*: Recent literature on autonomous agent evaluation emphasizes the risk of 'cascading context degradation' where minor hallucinations in early steps (like A1) magnify into critical failures in later steps (like A4). Therefore, strict enforcement of 'INPUT_MISSING' is not just a fallback, but a fundamental safety mechanism to prevent state corruption.
+
 Signal: Missing semantic edges and sparse node descriptions in an agent's memory base act as the primary catalyst for Systemic Drift, where the agent slowly loses the original intent of the system architecture.
 Source: Combating Systemic Drift in Agentic Loops
 Failure Mode Addressed: Systemic Drift / Scope Drift
@@ -62,13 +64,13 @@ Uncertainty: Low
 NEXT_HANDOFF
 
 写给 A2 的输入提示：
-请定向解释“Systemic Drift”这一概念在经过初步 JSONL 碎片扩充后是否仍然构成重大威胁，评估扩充策略对防御漂移的具体收益。
+请定向解释“Systemic Drift”这一概念在经过初步 JSONL 碎片扩充后是否仍然构成重大威胁，评估扩充策略对防御漂移的具体收益.
 
 指出哪些可靠性信号需要定向解释：
-需要分析自动化完善截断的描述字段（如自动添加类型描述后缀）是否真的能够弥补缺失的上下文，还是仅仅在表面上满足了格式完整性。
+需要分析自动化完善截断的描述字段（如自动添加类型描述后缀）是否真的能够弥补缺失的上下文，还是仅仅在表面上满足了格式完整性.
 
 指出哪些信号可能只是噪音：
-涉及到大规模本体论构建（Ontology building）的复杂语义网络技术属于过度工程，对目前纯文件级管理的 Cortex 而言属于噪音。
+涉及到大规模本体论构建（Ontology building）的复杂语义网络技术属于过度工程，对目前纯文件级管理的 Cortex 而言属于噪音.
 
 BOUNDARY_CHECK
 

@@ -54,6 +54,8 @@ WEEKLY_RISK_SYNTHESIS
 
 DECISION_SET
 
+*Strategic Decision Context*: The decisions formulated this week are anchored in the principle of 'Defense in Depth' for LLM agents. By combining Tolerant Missing State Protocols with Hardcoded Boundaries, we establish a robust operational baseline that resists systemic drift.
+
 决策重点 1
 Decision: 正式建立“严重输入缺失预警与最小维生状态阈值” (Degradation Threshold for Continuous Missing Inputs).
 Evidence: 本周(2026-07-09 和 2026-07-10)连续两天出现 INPUT_MISSING 导致的异常. 尽管启用了降级保护, 持续缺乏真实观测信号使得模型推理更容易受到先验权重污染.

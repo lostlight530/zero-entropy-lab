@@ -46,6 +46,8 @@ Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
+*Deep Reliability Observation*: Recent literature on autonomous agent evaluation emphasizes the risk of 'cascading context degradation' where minor hallucinations in early steps (like A1) magnify into critical failures in later steps (like A4). Therefore, strict enforcement of 'INPUT_MISSING' is not just a fallback, but a fundamental safety mechanism to prevent state corruption.
+
 Signal: Graph decay occurs when agent memory systems store highly disconnected fragments without proper metadata, leading to severely degraded contextual retrieval over time.
 Source: Preventing Memory Fragmentation in Autonomous Agents
 Failure Mode Addressed: Memory compression / Graph fragmentation
@@ -61,7 +63,7 @@ Uncertainty: Low
 NEXT_HANDOFF
 
 写给 A2 的输入提示：
-请定向解释关于Graph decay和Context window flooding对我们当前JSONL图谱（特别是实体和关系文件）的潜在影响。分析如果不定期进行图谱净化和节点扩充，我们的环境将面临何种程度的hallucination risk和stale doctrine risk.
+请定向解释关于Graph decay和Context window flooding对我们当前JSONL图谱（特别是实体和关系文件）的潜在影响.分析如果不定期进行图谱净化和节点扩充，我们的环境将面临何种程度的hallucination risk和stale doctrine risk.
 
 指出哪些可靠性信号需要定向解释：
 需要分析当前的记忆结构（JSONL知识碎片）如果在长期运行中不进行聚合、去重和属性扩充，是否会导致Agent无法正确找回和重建架构概念.

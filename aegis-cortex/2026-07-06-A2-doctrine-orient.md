@@ -27,6 +27,8 @@ INPUT_RECORD
 
 RISK_CLASSIFICATION
 
+*Deep Risk Classification*: The risks observed align with the 'Systemic Drift' taxonomy. Without explicit boundary checks at every stage, the agent's natural tendency to assist will inevitably lead to scope violations. We classify this as a high-severity Consistency Risk that must be mitigated by rigid, hardcoded constraints rather than dynamic instructions.
+
 memory compression risk
 解释：A1中指出的“Graph decay”和“Context flooding”直接触发了记忆压缩风险. 如果不立刻清洗、扩充和去重JSONL文件，代理将无法有效提取准确上下文，可能导致严重的记忆丢失和断层.
 

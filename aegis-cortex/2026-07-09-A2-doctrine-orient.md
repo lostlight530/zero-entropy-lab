@@ -29,6 +29,8 @@ INPUT_MISSING
 
 RISK_CLASSIFICATION
 
+*Deep Risk Classification*: The risks observed align with the 'Systemic Drift' taxonomy. Without explicit boundary checks at every stage, the agent's natural tendency to assist will inevitably lead to scope violations. We classify this as a high-severity Consistency Risk that must be mitigated by rigid, hardcoded constraints rather than dynamic instructions.
+
 task loop break risk
 解释: 今天的 A1 输入文件完全缺失. 如果在此情况下停止执行，会导致 OODA 循环断链. 通过执行优雅降级，系统可以继续输出结构化的定向报告并标记缺失状态，从而保护循环不被中断.
 

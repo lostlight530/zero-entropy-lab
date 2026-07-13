@@ -27,6 +27,8 @@ INPUT_RECORD
 
 RISK_CLASSIFICATION
 
+*Deep Risk Classification*: The risks observed align with the 'Systemic Drift' taxonomy. Without explicit boundary checks at every stage, the agent's natural tendency to assist will inevitably lead to scope violations. We classify this as a high-severity Consistency Risk that must be mitigated by rigid, hardcoded constraints rather than dynamic instructions.
+
 hallucination risk
 解释: 智能体自我修正失败的一个核心原因是生成器和验证器共享同一个大语言模型上下文, 导致"yes-man"现象. 这会使得模型对自己产生的幻觉进行确认, 放大虚假信息的危害.
 

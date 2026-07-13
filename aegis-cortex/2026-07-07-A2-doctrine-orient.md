@@ -27,6 +27,8 @@ INPUT_RECORD
 
 RISK_CLASSIFICATION
 
+*Deep Risk Classification*: The risks observed align with the 'Systemic Drift' taxonomy. Without explicit boundary checks at every stage, the agent's natural tendency to assist will inevitably lead to scope violations. We classify this as a high-severity Consistency Risk that must be mitigated by rigid, hardcoded constraints rather than dynamic instructions.
+
 systemic drift risk
 解释：如果代理不断吸收新的临时状态而丢失对底层架构（如 code_class, architecture_component）的坚实理解，就会发生漂移. 自动化的实体描述扩充是对抗这种漂移的有效手段，通过锚定基础概念来稳定代理的认知坐标系.
 

@@ -47,6 +47,8 @@ Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
+*Deep Reliability Observation*: Recent literature on autonomous agent evaluation emphasizes the risk of 'cascading context degradation' where minor hallucinations in early steps (like A1) magnify into critical failures in later steps (like A4). Therefore, strict enforcement of 'INPUT_MISSING' is not just a fallback, but a fundamental safety mechanism to prevent state corruption.
+
 Signal: In autonomous pipelines, an unhandled missing input often cascades into full system lockup. Systems must support "graceful degradation," allowing downstream components to generate placeholder analytics while explicitly tagging the output as recovering.
 Source: Resilience in Autonomous Systems: Handling Missing Inputs
 Failure Mode Addressed: Task loop break risk / Missing input failure mode
