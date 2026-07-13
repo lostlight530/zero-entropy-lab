@@ -42,7 +42,7 @@ jobs:
       - name: Ingest Self-Codebase
         run: python src/kernel/protocol/nexus.py ingest
       - name: Validate Canonical Graph
-        run: python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import canonicalize_ledger, verify_hash_chain; r=canonicalize_ledger('data/knowledge', hash_chain=True); h=verify_hash_chain('data/knowledge'); print(r); print(h); assert r['duplicate_entities']==0 and r['duplicate_relations']==0 and r['dangling_relations']==0 and h['broken']==0"
+        run: python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import canonicalize_ledger, verify_hash_chain; repaired=canonicalize_ledger('data/knowledge', hash_chain=True); clean=canonicalize_ledger('data/knowledge', hash_chain=True); h=verify_hash_chain('data/knowledge'); print(repaired); print(clean); print(h); assert clean['duplicate_entities']==0 and clean['duplicate_relations']==0 and clean['dangling_relations']==0 and h['broken']==0"
       - name: Rebuild Validated Memory
         run: python src/kernel/protocol/nexus.py rebuild
       - name: Deep Ponder
