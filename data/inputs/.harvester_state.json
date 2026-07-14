@@ -22,7 +22,7 @@
           "sha": "0cf8494d1a82b39e1b23d0795615b592dee5cf6e"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:09.094917+00:00"
+      "last_checked_at": "2026-07-14T22:44:59.116954+00:00"
     },
     "ModelEngine-Group/fit-framework": {
       "documents": {
@@ -33,7 +33,7 @@
           "sha": "e55b50d07d0c01ef70ae88885c4372efdc3970f7"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:57.650466+00:00"
+      "last_checked_at": "2026-07-14T22:44:48.278463+00:00"
     },
     "MoonshotAI/kimi-agent-sdk": {
       "documents": {
@@ -44,7 +44,7 @@
           "sha": "e48d8c4fcd987e9f2550fb2bb0acbecd307ec9c7"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:58.750416+00:00"
+      "last_checked_at": "2026-07-14T22:44:49.329042+00:00"
     },
     "NVIDIA/TensorRT-LLM": {
       "documents": {
@@ -55,7 +55,7 @@
           "sha": "943083d6c4c612b4694a9b675758527594154d34"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:02.130472+00:00"
+      "last_checked_at": "2026-07-14T22:44:52.783041+00:00"
     },
     "OpenHands/software-agent-sdk": {
       "documents": {
@@ -66,7 +66,7 @@
           "sha": "3e4e4eb91e9955b3ee85ede24e43ebf3a14d9ab6"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:55.361418+00:00"
+      "last_checked_at": "2026-07-14T22:44:45.871227+00:00"
     },
     "OpenSPG/KAG": {
       "documents": {
@@ -77,7 +77,7 @@
           "sha": "189179325180dcc7de0341ae6b8c64a6a97b2daa"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:10.663380+00:00"
+      "last_checked_at": "2026-07-14T22:45:00.429773+00:00"
     },
     "QwenLM/Qwen-Agent": {
       "documents": {
@@ -88,7 +88,7 @@
           "sha": "7d41fe4e7c78fa62d59b03ce4bd444fcdb75eb58"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:55.866145+00:00"
+      "last_checked_at": "2026-07-14T22:44:46.360369+00:00"
     },
     "TencentCloud/TencentDB-Agent-Memory": {
       "documents": {
@@ -105,7 +105,7 @@
           "sha": "789aee7123a8427da9276b7bb29c787ac182f998"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:11.144332+00:00"
+      "last_checked_at": "2026-07-14T22:45:00.812047+00:00"
     },
     "TencentCloudADP/youtu-agent": {
       "documents": {
@@ -164,7 +164,7 @@
           "sha": "d8f839652a07608c21909c94f3217b9ce20e3787"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:58.185046+00:00"
+      "last_checked_at": "2026-07-14T22:44:48.744105+00:00"
     },
     "a2aproject/A2A": {
       "documents": {
@@ -181,7 +181,7 @@
           "sha": "9db896e8b05538b2a157215d3dba660dddc8c5ed"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:50.819051+00:00"
+      "last_checked_at": "2026-07-14T22:44:39.706350+00:00"
     },
     "a2aproject/a2a-python": {
       "documents": {
@@ -198,7 +198,7 @@
           "sha": "93b9a299ddc2ea34e1b8a9f7c52b81c44a367140"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:51.324770+00:00"
+      "last_checked_at": "2026-07-14T22:44:40.303410+00:00"
     },
     "agentclientprotocol/agent-client-protocol": {
       "documents": {
@@ -215,7 +215,7 @@
           "sha": "1b4fbc172daae9b829cf8337bd92d99b2855e721"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:51.827338+00:00"
+      "last_checked_at": "2026-07-14T22:44:40.770185+00:00"
     },
     "agentscope-ai/agentscope": {
       "documents": {
@@ -226,7 +226,7 @@
           "sha": "4415c1cedff446704e35e0623fde7d429bffa0ad"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:56.407713+00:00"
+      "last_checked_at": "2026-07-14T22:44:46.891065+00:00"
     },
     "agentskills/agentskills": {
       "documents": {
@@ -237,7 +237,7 @@
           "sha": "247e4a18e908d3bf27092f886f25c2515d84ecbc"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:49.262038+00:00"
+      "last_checked_at": "2026-07-14T22:44:37.967017+00:00"
     },
     "cloudwego/eino": {
       "documents": {
@@ -248,7 +248,7 @@
           "sha": "a74ba7979f4c7e3c895f26ae520fa0125bce9505"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:56.968219+00:00"
+      "last_checked_at": "2026-07-14T22:44:47.613058+00:00"
     },
     "deepseek-ai/3FS": {
       "documents": {
@@ -259,7 +259,7 @@
           "sha": "18d89937ffbb47bfda1569b3d8bff743be64d70a"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:04.740348+00:00"
+      "last_checked_at": "2026-07-14T22:44:55.064370+00:00"
     },
     "deepseek-ai/DeepEP": {
       "documents": {
@@ -270,7 +270,7 @@
           "sha": "078a15146bffdf1ffb27a1018eb3c5472d9dcad0"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:03.189098+00:00"
+      "last_checked_at": "2026-07-14T22:44:53.810998+00:00"
     },
     "deepseek-ai/DeepGEMM": {
       "documents": {
@@ -281,7 +281,7 @@
           "sha": "6ef705ffceb9f41b2f2588b62a910ed6cbc819a5"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:04.103041+00:00"
+      "last_checked_at": "2026-07-14T22:44:54.584345+00:00"
     },
     "deepseek-ai/FlashMLA": {
       "documents": {
@@ -292,7 +292,7 @@
           "sha": "1945725fb253b7b1b4681bed10b04a1a83d5fe6e"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:03.643717+00:00"
+      "last_checked_at": "2026-07-14T22:44:54.214450+00:00"
     },
     "deepset-ai/haystack": {
       "documents": {
@@ -309,7 +309,7 @@
           "sha": "e9f3982dd7c4b71acf9d61d56782814d4af6855d"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:08.017988+00:00"
+      "last_checked_at": "2026-07-14T22:44:58.059031+00:00"
     },
     "ggml-org/llama.cpp": {
       "documents": {
@@ -320,7 +320,7 @@
           "sha": "ee70581e3763f53e59bf1addb7bad70a7b2745ee"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:02.736808+00:00"
+      "last_checked_at": "2026-07-14T22:44:53.368772+00:00"
     },
     "google/adk-python": {
       "documents": {
@@ -337,7 +337,7 @@
           "sha": "0eddf283f0b470e4c166784bd0b5bb98ca397810"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:52.967445+00:00"
+      "last_checked_at": "2026-07-14T22:44:41.965955+00:00"
     },
     "huggingface/smolagents": {
       "documents": {
@@ -348,7 +348,7 @@
           "sha": "7c8af38d981a563add56db76b10cde810e010690"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:05.686930+00:00"
+      "last_checked_at": "2026-07-14T22:44:56.008353+00:00"
     },
     "huggingface/transformers": {
       "documents": {
@@ -359,7 +359,7 @@
           "sha": "4fe7136d25294b26a50b4fefd70f0cb12db06d4f"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:59.474508+00:00"
+      "last_checked_at": "2026-07-14T22:44:50.058327+00:00"
     },
     "langchain-ai/langgraph": {
       "documents": {
@@ -370,7 +370,7 @@
           "sha": "97c31e9cb4d8fe56be8d768ce3eb5e22400e897e"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:54.209504+00:00"
+      "last_checked_at": "2026-07-14T22:44:44.759858+00:00"
     },
     "mem0ai/mem0": {
       "documents": {
@@ -381,7 +381,7 @@
           "sha": "9a81e74effacbd7433e91b6c1fcc907f110d4773"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:08.607129+00:00"
+      "last_checked_at": "2026-07-14T22:44:58.624283+00:00"
     },
     "microsoft/agent-framework": {
       "documents": {
@@ -392,16 +392,16 @@
           "sha": "f1e82d81a8977e65a6f455fcd20edf8ab8a67443"
         },
         "docs/decisions/0001-agent-run-response.md": {
-          "content_hash": "8c8d22e7347709e8e626a2a71ed6a852703a619ebfea6737bbe9ffa3a1a36804",
-          "entity_id": "doc_microsoft_agent_framework_docs_decisions_0001_agent_run_response_md_6ffebe7e4f37",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0001-agent-run-response.md__6ffebe7e4f37.md",
-          "sha": "6ffebe7e4f3799cfaf096ef66c3e62924ee46be8"
+          "content_hash": "6fb8f3ce163c26a37bdd2fa065ed7dffeb940317e0efc2e24026f4b9ec32d97c",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0001_agent_run_response_md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0001-agent-run-response.md__68626cb1818e.md",
+          "sha": "68626cb1818eb077e9dd9d51ab286b3fba520ed5"
         },
         "docs/decisions/0002-agent-tools.md": {
-          "content_hash": "6c2bedfb4d81346b8734e176e31bbb573117aa729280ffe10a75d3dedca3babc",
-          "entity_id": "doc_microsoft_agent_framework_docs_decisions_0002_agent_tools_md_e08ff21afa15",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0002-agent-tools.md__e08ff21afa15.md",
-          "sha": "e08ff21afa15967f53d6962cf4981ac1c17af6ca"
+          "content_hash": "b0add3ab83feb65d7f3e05f57b22af2c63186ea3900776cccd3ffaec511509d8",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0002_agent_tools_md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0002-agent-tools.md__0f0cb85abfd6.md",
+          "sha": "0f0cb85abfd6a63f08a92b0e3c69599f3cff3844"
         },
         "docs/decisions/0003-agent-opentelemetry-instrumentation.md": {
           "content_hash": "fcdeabb90567b984d4a25272a223116b4df978d52a87d486d75642fbb5dc7624",
@@ -422,10 +422,10 @@
           "sha": "3a79b98f9180f882ddaaa0b578967fa69118426b"
         },
         "docs/decisions/0006-userapproval.md": {
-          "content_hash": "6536b63e8cd7499939a640b07b4c02e8b5375831216f92e5fe7df80f60183b08",
-          "entity_id": "doc_microsoft_agent_framework_docs_decisions_0006_userapproval_md_7823ab4de44f",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0006-userapproval.md__7823ab4de44f.md",
-          "sha": "7823ab4de44f992a4127c604c4f7937694d60412"
+          "content_hash": "d636e7d3ffe77ea7186eee981917412ddd8e01cc59a64a3c8b493d3bc8a50a9e",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0006_userapproval_md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0006-userapproval.md__a2e24c76fdd1.md",
+          "sha": "a2e24c76fdd19dbebcbc12057c2ed5afc43a0f1a"
         },
         "docs/decisions/0007-agent-filtering-middleware.md": {
           "content_hash": "3af916b70905d7557a4fc18ca1868380e978519cb4573dde8d62e008facfac89",
@@ -440,10 +440,10 @@
           "sha": "fdd5a792b262d8b3d966cd8a00bfb63e267317d2"
         },
         "docs/decisions/0009-support-long-running-operations.md": {
-          "content_hash": "479a79819f412972e52650abf15be54b8e19eafc800e539325f20a10223401f8",
-          "entity_id": "doc_microsoft_agent_framework_docs_decisions_0009_support_long_running_operations_md_a62a03855312",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0009-support-long-running-operations.md__a62a03855312.md",
-          "sha": "a62a03855312db430df3e58c0792e69724692ae0"
+          "content_hash": "4183068bfd177160b5e2bb61dfbbfc3d8b5023e35bbdb7b9b773fed5051dfd41",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0009_support_long_running_operations_md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0009-support-long-running-operations.md__c44cabc500da.md",
+          "sha": "c44cabc500dab022ae88c56de5a1d6f8b2b58b97"
         },
         "docs/decisions/0010-ag-ui-support.md": {
           "content_hash": "2c667c908c6680e16a16e62e8391bf855655daccfe6cd45ceb635c8b709fdd41",
@@ -524,10 +524,10 @@
           "sha": "d63f38c734616987dabdfee74738c361d7e8dc62"
         },
         "docs/decisions/0021-provider-leading-clients.md": {
-          "content_hash": "3fb149e082c29873d166155764e9e52ae4b1e40522eb39a0ad848b66d2e5104b",
-          "entity_id": "doc_microsoft_agent_framework_docs_decisions_0021_provider_leading_clients_md_7f9580216164",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0021-provider-leading-clients.md__7f9580216164.md",
-          "sha": "7f9580216164e475bc0bc93f78847fbc1e5daf86"
+          "content_hash": "fb332c0410bc18bccdadae33008f0098e4defef96dea9199dfe4bed4aacc74aa",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0021_provider_leading_clients_md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0021-provider-leading-clients.md__d019db314960.md",
+          "sha": "d019db314960b4254292af7ba5f8ac993aff6e0e"
         },
         "docs/decisions/0022-chat-history-persistence-consistency.md": {
           "content_hash": "fe31ce57d556c187a431ac937102757c86e32d84a355151fec360d607911f6ce",
@@ -536,10 +536,10 @@
           "sha": "5bd303a02961c3f5401f49b5e92da3b398ab2aab"
         },
         "docs/decisions/0023-foundry-evals-integration.md": {
-          "content_hash": "cead187e351a312a8b545be96a89faedc5ebabf2c01c8398d62567f9b79c4f9d",
-          "entity_id": "doc_microsoft_agent_framework_docs_decisions_0023_foundry_evals_integration_md_ea9d2f3c694d",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0023-foundry-evals-integration.md__ea9d2f3c694d.md",
-          "sha": "ea9d2f3c694d05af9c445b05764b917a8ab49e7c"
+          "content_hash": "8f7a2980439e272ced75fa1ed0706a2677c14ebe83daf1dc48d7064f4064f1d5",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0023_foundry_evals_integration_md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0023-foundry-evals-integration.md__e2534020871b.md",
+          "sha": "e2534020871b9d0ff05b36dc9eb0403c8cf2474d"
         },
         "docs/decisions/0024-codeact-integration.md": {
           "content_hash": "67eee68c2ef5daa937ccfb4deeb47609c42c45019dd2321442fdd74b2e4ad18a",
@@ -554,10 +554,10 @@
           "sha": "0dc2de6301aa9af5a8cc8f7121eead6afa790608"
         },
         "docs/decisions/0025-foundry-toolbox-support.md": {
-          "content_hash": "d16efa401aecdf4acd3dced03be12c6ecab76ddb445e9ea9275c8fed239ee264",
-          "entity_id": "doc_microsoft_agent_framework_docs_decisions_0025_foundry_toolbox_support_md_a68b98b3bfc8",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0025-foundry-toolbox-support.md__a68b98b3bfc8.md",
-          "sha": "a68b98b3bfc854c02e9bc75a5188957473da1a35"
+          "content_hash": "e29a255ecffe69fed6144730b9a2b3a60877d0a699920a9a111d3d65c255064d",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0025_foundry_toolbox_support_md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0025-foundry-toolbox-support.md__12eb23b5e58a.md",
+          "sha": "12eb23b5e58a49b5bad3f4c62d3d4021d879ce24"
         },
         "docs/decisions/0026-hosted-session-identity-context.md": {
           "content_hash": "576de5ee9024abe08e04c162e572d671f76ffb0bf25e349dfa93ad1f7d0cba89",
@@ -566,10 +566,10 @@
           "sha": "9612ba3af21e860a179347b0b238c32efa0799c7"
         },
         "docs/decisions/0027-hosting-channels.md": {
-          "content_hash": "4ae6b917cf20d63f70e13d1be4ff67b36d57fbc5d2b27e37f5e6c097c2fec33d",
-          "entity_id": "doc_microsoft_agent_framework_docs_decisions_0027_hosting_channels_md_55bbc52cfafb",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0027-hosting-channels.md__55bbc52cfafb.md",
-          "sha": "55bbc52cfafb13f8bd828b0451ac1e18e1666d33"
+          "content_hash": "336308638b2c96a4d0d53499b34a89ec44a525fe9a6f0397a5a24d3ace7165a4",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0027_hosting_channels_md",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0027-hosting-channels.md__36d4f14b76ac.md",
+          "sha": "36d4f14b76ac9c35697683389852b9925a223e92"
         },
         "docs/decisions/0028-hosting-linking-multicast-enhancements.md": {
           "content_hash": "cb0d998358d4b5633a585adbae1dc49e85b2ddbddd50c70b6469c6aa3bbc2686",
@@ -626,7 +626,7 @@
           "sha": "1c7afbad1a0f494855e2c29669001d90f01c7722"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:53.692275+00:00"
+      "last_checked_at": "2026-07-14T22:44:44.309551+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
@@ -637,7 +637,7 @@
           "sha": "4e4811014ee7abd43b8cfc4730bd3f9b8dd2aaca"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:49.808998+00:00"
+      "last_checked_at": "2026-07-14T22:44:38.530647+00:00"
     },
     "modelcontextprotocol/python-sdk": {
       "documents": {
@@ -648,7 +648,7 @@
           "sha": "3822976640b088b1beaf9945fbfc9fc160cc0b77"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:50.356611+00:00"
+      "last_checked_at": "2026-07-14T22:44:39.240151+00:00"
     },
     "modelcontextprotocol/servers": {
       "documents": {
@@ -659,7 +659,7 @@
           "sha": "fe5351a890ab80f6d49b2b50f1e0732224313b24"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:05.241204+00:00"
+      "last_checked_at": "2026-07-14T22:44:55.491104+00:00"
     },
     "openai/openai-agents-python": {
       "documents": {
@@ -1126,7 +1126,7 @@
           "sha": "63d1d1b7c62ad1b1711d296b486efcadeec7491b"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:52.346987+00:00"
+      "last_checked_at": "2026-07-14T22:44:41.310645+00:00"
     },
     "pydantic/pydantic-ai": {
       "documents": {
@@ -1137,7 +1137,7 @@
           "sha": "6c5790ac944b9d9412519e7ffa5ed6af31f4535f"
         }
       },
-      "last_checked_at": "2026-07-14T05:49:54.866489+00:00"
+      "last_checked_at": "2026-07-14T22:44:45.371334+00:00"
     },
     "run-llama/llama_index": {
       "documents": {
@@ -1154,7 +1154,7 @@
           "sha": "c1c7af8256b4d278748ea9b5c8b1a5da1858e691"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:07.112927+00:00"
+      "last_checked_at": "2026-07-14T22:44:57.285432+00:00"
     },
     "sgl-project/sglang": {
       "documents": {
@@ -1165,7 +1165,7 @@
           "sha": "e5cfd3d65b13a715964a1497f9514afc0c1726e7"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:01.171463+00:00"
+      "last_checked_at": "2026-07-14T22:44:51.876514+00:00"
     },
     "stanfordnlp/dspy": {
       "documents": {
@@ -1176,7 +1176,7 @@
           "sha": "fe73d8cc8973045e34397b852c6f40670380c363"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:06.159149+00:00"
+      "last_checked_at": "2026-07-14T22:44:56.451646+00:00"
     },
     "stepfun-ai/StepDeepResearch": {
       "documents": {
@@ -1187,7 +1187,7 @@
           "sha": "a33cabc2f936bf7c184ca8e40d65ab42f26d93c6"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:10.112749+00:00"
+      "last_checked_at": "2026-07-14T22:44:59.888218+00:00"
     },
     "vllm-project/vllm": {
       "documents": {
@@ -1204,10 +1204,10 @@
           "sha": "c19ea49d96db1fbe4389201b07e483fb3f357b8f"
         },
         "docs/design/attention_backends.md": {
-          "content_hash": "27902c328de4051aa9221078e3aa20c82948313e07e63113a6713136b79503cc",
+          "content_hash": "091dc91535a38e6700951c4731a919c2233ac4d06176eb7008235408a4c24782",
           "entity_id": "external_doc_vllm_project_vllm_docs_design_attention_backends_md",
-          "output": "current/serving-inference/vllm_project_vllm/docs__design__attention_backends.md__c8d02fb64025.md",
-          "sha": "c8d02fb6402521159f8fd28dcd9bf39041250aad"
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__attention_backends.md__9d524a489be0.md",
+          "sha": "9d524a489be0a43a9b4e86d63e5ed01c2d32e9ad"
         },
         "docs/design/cuda_graphs.md": {
           "content_hash": "07f9a5fe36ca32f4ca42b1e59f6a1f41c3dab0db9660ca6e7396eaf16fa5a209",
@@ -1318,10 +1318,10 @@
           "sha": "d34b6fa86f3032c01669c1b6e0849f6ac978fd77"
         },
         "docs/design/nixl_kv_cache_lease.md": {
-          "content_hash": "9299a3510c8ada738715cc9e357393ec616007bd5a2c22379ebe9ae69ec764b2",
-          "entity_id": "doc_vllm_project_vllm_docs_design_nixl_kv_cache_lease_md_aa7683bb9e1d",
-          "output": "current/serving-inference/vllm_project_vllm/docs__design__nixl_kv_cache_lease.md__aa7683bb9e1d.md",
-          "sha": "aa7683bb9e1dbee17f86a462a47442f50b2a3b25"
+          "content_hash": "6519d6ebb7f230eec36fcbe4bf95059c1f8ab8715343f4e724a793f31ef40efa",
+          "entity_id": "external_doc_vllm_project_vllm_docs_design_nixl_kv_cache_lease_md",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__nixl_kv_cache_lease.md__35018aca22f2.md",
+          "sha": "35018aca22f23a560ff41ead7f003c251d9b7c09"
         },
         "docs/design/nixl_kv_push_connector.md": {
           "content_hash": "b87010e16d1189576634235a1c87d38dcd0e3d7061cf670672906e7f907b350e",
@@ -1426,7 +1426,7 @@
           "sha": "df6e4e9429650b7db914f585f4ccadb643d9c887"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:00.385713+00:00"
+      "last_checked_at": "2026-07-14T22:44:51.019368+00:00"
     },
     "volcengine/verl": {
       "documents": {
@@ -1437,7 +1437,7 @@
           "sha": "db9c2eb67915f9597a30a4d5a32599717c4ccaae"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:12.014277+00:00"
+      "last_checked_at": "2026-07-14T22:45:01.544305+00:00"
     },
     "zai-org/Open-AutoGLM": {
       "documents": {
@@ -1448,7 +1448,7 @@
           "sha": "2af1de1ecb44f51c31256cd0bd2aa12842866423"
         }
       },
-      "last_checked_at": "2026-07-14T05:50:09.613067+00:00"
+      "last_checked_at": "2026-07-14T22:44:59.494575+00:00"
     }
   },
   "schema_version": 3
