@@ -1,7 +1,9 @@
 import sys
 import tempfile
 import unittest
+import urllib.error
 from pathlib import Path
+from unittest.mock import call, patch
 
 sys.path.insert(0, str(Path(__file__).parents[1] / "src" / "kernel" / "sensory"))
 from harvester import Harvester
@@ -23,6 +25,18 @@ class HarvesterContracts(unittest.TestCase):
 
     def test_unlisted_external_link_is_not_selected(self):
         self.assertFalse(Harvester._selected("external/repo.md", ["docs/**"], []))
+
+    def test_api_retries_transient_network_failures_with_backoff(self):
+        harvester = Harvester.__new__(Harvester)
+        harvester.token = ""
+
+        with patch("harvester.urllib.request.urlopen", side_effect=urllib.error.URLError("offline")) as urlopen:
+            with patch("harvester.time.sleep") as sleep:
+                with self.assertRaises(urllib.error.URLError):
+                    harvester._api("https://example.invalid")
+
+        self.assertEqual(urlopen.call_count, 3)
+        self.assertEqual(sleep.call_args_list, [call(1), call(2)])
 
 
     def test_evolver_keeps_input_contract_out_of_monthly_archive(self):
