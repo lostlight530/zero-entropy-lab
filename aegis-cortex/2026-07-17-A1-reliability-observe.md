@@ -15,41 +15,24 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-读取文件记录:
+记录本次读取了哪些 aegis-cortex 文件:
 - aegis-cortex/2026-07-16-A1-reliability-observe.md
+- aegis-cortex/2026-07-16-A2-doctrine-orient.md
 
-联网搜索主题记录:
-- AI Agent reliability
-- Coding agent failure modes
+记录本次联网搜索了哪些主题:
+- Agent Reliability
+- A Survey of Multi-Agent Deep Reinforcement Learning with Communication
 
-观察原因:
-- 探索当前 AI 代理在长期运行中的稳定性边界
-- 跟踪编程代理面临的潜在失效模式与应对策略
+记录每个主题为什么需要观察:
+- Agent Reliability: 持续跟踪代理系统在长期运行中的稳定性表现.
+- A Survey of Multi-Agent Deep Reinforcement Learning with Communication: 深入理解代理的潜在风险和失效模式, 以便及时应对.
 
 EXTERNAL_SOURCE_RECORDS
 
 来源一:
-- Title: AI reliability is a decade-old problem
-- Publisher: Temporal
-- URL: https://temporal.io/blog/ai-reliability-is-a-decade-old-problem
-- Date Checked: 2026-07-17
-- Source Type: Tech Blog
-- Relevance: High
-- Confidence: High
-
-来源二:
-- Title: Towards a Science of AI Agent Reliability
+- Title: A Survey of Multi-Agent Deep Reinforcement Learning with Communication
 - Publisher: arXiv
-- URL: https://arxiv.org/html/2602.16666v1
-- Date Checked: 2026-07-17
-- Source Type: Academic Paper
-- Relevance: High
-- Confidence: High
-
-来源三:
-- Title: ClayBuddy: A Framework, Evaluation, & Mitigation of Coding Agent Failures
-- Publisher: arXiv
-- URL: https://arxiv.org/html/2606.19380
+- URL: https://arxiv.org/abs/2203.08975v2
 - Date Checked: 2026-07-17
 - Source Type: Academic Paper
 - Relevance: High
@@ -57,31 +40,18 @@ EXTERNAL_SOURCE_RECORDS
 
 RAW_RELIABILITY_SIGNAL_LOG
 
-信号一:
-- Signal: Agent crashes mid-tool-call lacking durable execution, causing context loss
-- Source: Temporal (AI reliability is a decade-old problem)
-- Failure Mode Addressed: Silent corruption and state loss during mid-workflow execution
-- Why It May Matter: Highlights the infrastructure gap between model capability and orchestration reliability
-- Uncertainty: Solution effectiveness may vary across different execution frameworks
-
-信号二:
-- Signal: Failure mechanisms include underspecification, capability errors, and agent harness errors
-- Source: arXiv (ClayBuddy Framework)
-- Failure Mode Addressed: Destructive failure modes arising from model biases and safe action execution failures
-- Why It May Matter: Indicates need for customizable command classifiers and deterministic guardrails
-- Uncertainty: Implementation of mitigations like context editing tools might introduce new edge cases
+- 信号 1: Communication is an effective mechanism for coordinating the behaviors of multiple agents...
+- 信号 2: 在执行长周期复杂任务时, 代理的状态维护存在挑战.
+- 信号 3: 必须避免引入未经证实或容易引起幻觉的信息.
 
 NEXT_HANDOFF
 
-A2 定向解释建议:
-- 需进一步解释持久化执行在代理编排中的实际落地限制
-- 分析由于 underspecification 导致的编程代理行为漂移现象
-
-噪音提示:
-- 关于特定厂商旧版本模型的基础性能报告可视为噪音，无需过度解读
+- Target Task: A2-doctrine-orient
+- Recommended Focus: 对上述可靠性信号进行深入分析和风险分类, 特别是针对新发现的失败模式.
+- Required Data: 本次运行提取的可靠性信号日志.
 
 BOUNDARY_CHECK
 
-- 已确认没有读取宿主仓库机制
-- 已确认没有读取 GitHub Actions
-- 已确认没有写入 aegis-cortex 之外的文件
+- Checked host repository files? NO
+- Inspected GitHub Actions? NO
+- Read/Written outside aegis-cortex? NO
