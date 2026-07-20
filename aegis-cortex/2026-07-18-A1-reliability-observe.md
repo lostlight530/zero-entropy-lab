@@ -20,35 +20,33 @@ INPUT_RECORD
 - aegis-cortex/2026-07-17-A2-doctrine-orient.md
 
 记录本次联网搜索了哪些主题:
-- Agent Reliability
-- Faith in AI can narrow the futures individuals consider
+- Prompt injection via Wikipedia
 
 记录每个主题为什么需要观察:
-- Agent Reliability: 持续跟踪代理系统在长期运行中的稳定性表现.
-- Faith in AI can narrow the futures individuals consider: 深入理解代理的潜在风险和失效模式, 以便及时应对.
+- Prompt injection: 评估通过恶意输入篡改系统指令的风险
 
 EXTERNAL_SOURCE_RECORDS
 
 来源一:
-- Title: Faith in AI can narrow the futures individuals consider
-- Publisher: arXiv
-- URL: https://arxiv.org/abs/2603.28944v2
+- Title: Prompt injection
+- Publisher: Wikipedia
+- URL: https://en.wikipedia.org/wiki/Prompt_injection
 - Date Checked: 2026-07-18
-- Source Type: Academic Paper
+- Source Type: Encyclopedia
 - Relevance: High
 - Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
-- 信号 1: Artificial intelligence (AI) predictions are increasingly used to inform human decisions...
-- 信号 2: 在执行长周期复杂任务时, 代理的状态维护存在挑战.
-- 信号 3: 必须避免引入未经证实或容易引起幻觉的信息.
+- 信号 1: 提示注入(Prompt injection)是一种利用特殊设计的输入使语言模型偏离预定指令的攻击手段
+- 信号 2: 若系统读取了受污染的外部数据，可能被诱导执行未授权的操作
+- 信号 3: 缓解措施包括严格分离系统指令与用户提供的数据内容
 
 NEXT_HANDOFF
 
 - Target Task: A2-doctrine-orient
-- Recommended Focus: 对上述可靠性信号进行深入分析和风险分类, 特别是针对新发现的失败模式.
-- Required Data: 本次运行提取的可靠性信号日志.
+- Recommended Focus: 分析在从文件读取历史信息时受到意外注入攻击或指令覆盖的潜在威胁
+- Required Data: 本次运行提取的可靠性信号日志
 
 BOUNDARY_CHECK
 

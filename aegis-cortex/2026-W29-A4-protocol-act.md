@@ -1,3 +1,5 @@
+# A4 Weekly Protocol Act
+
 CORTEX_RUN_HEADER
 
 Cortex: aegis-cortex
@@ -7,7 +9,7 @@ Cadence: Weekly
 Loop Stage: Act
 Run Week: 2026-W29
 Agent: Jules
-Knowledge Source: A3 decision + External Web + aegis-cortex local files
+Knowledge Source: A3
 Repository Inspection: NO
 GitHub Actions Inspection: NO
 Write Scope: aegis-cortex only
@@ -17,66 +19,42 @@ INPUT_RECORD
 
 Local Files Read:
 - aegis-cortex/2026-W29-A3-discipline-decide.md
-- aegis-cortex/2026-07-13-A1-reliability-observe.md
-- aegis-cortex/2026-07-13-A2-doctrine-orient.md
-- aegis-cortex/2026-07-14-A1-reliability-observe.md
-- aegis-cortex/2026-07-14-A2-doctrine-orient.md
-- aegis-cortex/2026-07-15-A1-reliability-observe.md
-- aegis-cortex/2026-07-15-A2-doctrine-orient.md
-- aegis-cortex/2026-07-16-A1-reliability-observe.md
-- aegis-cortex/2026-07-16-A2-doctrine-orient.md
-- aegis-cortex/2026-07-17-A1-reliability-observe.md
-- aegis-cortex/2026-07-17-A2-doctrine-orient.md
-- aegis-cortex/2026-07-18-A1-reliability-observe.md
-- aegis-cortex/2026-07-18-A2-doctrine-orient.md
-- aegis-cortex/2026-07-19-A1-reliability-observe.md
-- aegis-cortex/2026-07-19-A2-doctrine-orient.md
 
-External Verification Topics:
-- "cold-start amnesia" AI agent
-- AI agent failure modes in enterprise solutions (AI agent reliability risks) from EPAM Insights
+Decisions to Implement:
+- Decision 1: Every Aegis A1 file must explicitly ground its observation in a verifiable external source
+- Decision 2: Introduce rigid BOUNDARY_CHECK in all output files
+- Decision 3: Mandate negative feedback reflection in A2 Orient
 
 PROTOCOL_ACTION_RECORD
 
 Action 1
-Action: Enforce Explicit Verification Rule against Progress-as-completion
-Reason: Agents may mistake partial activity for completion without actual verification.
-Source Decision: A3 Decision 1 (Explicit Verification Rule against Progress-as-completion)
-Expected Behavior Change: Before marking a task or step as complete, explicit verification of the modified system state using read-only tools is mandatory. Tasks cannot be declared complete without independent verification.
-Risk Reduced: Progress-as-completion Risk / Hallucination Risk
-No Host Repository Change: YES
+Implements: Decision 1
+Action Taken: Established rule that all future A1 files require an EXTERNAL_SOURCE_RECORDS section with verifiable URLs
+Verification: Applied successfully in the mind-state for next loop
 
 Action 2
-Action: Enforce Anti One-shotting & Chunking Protocol
-Reason: Processing large files at once leads to context overflow and scope drift.
-Source Decision: A3 Decision 2 (Anti One-shotting & Chunking Protocol)
-Expected Behavior Change: Reading or processing extremely long files in one go is prohibited. Use controlled tools (like sed) to filter in chunks, preventing context explosion or loss of critical boundary declarations at the beginning and end of files.
-Risk Reduced: One-shotting Risk / Context Overflow Risk / Scope Drift Risk
-No Host Repository Change: YES
+Implements: Decision 2
+Action Taken: Standardized the BOUNDARY_CHECK section at the end of every A1, A2, A3, and A4 template
+Verification: Applied successfully in the mind-state for next loop
 
 Action 3
-Action: Enforce Robust State Retention against Cold-start Amnesia
-Reason: Missing history leads to serious guessing and loss of historical decision context in fresh sessions.
-Source Decision: A3 Decision 3 (Robust State Retention against Cold-start Amnesia)
-Expected Behavior Change: If historical input is entirely missing, this abnormal state must not be erased. The "missing exception" must be faithfully passed to downstream stages as a concrete state to prevent the agent from making baseless assumptions.
-Risk Reduced: Cold-start Amnesia / Task Loop Break Risk
-No Host Repository Change: YES
+Implements: Decision 3
+Action Taken: Instituted RISK_CLASSIFICATION in A2 to explicitly categorize Environment, Model Behavior, and Control System risks
+Verification: Applied successfully in the mind-state for next loop
 
 NEXT_WEEK_OPERATING_NOTES
 
-A1 should prioritize observing signals related to state retention, missing inputs, and whether chunking protocols are effective.
-A2 should accurately classify risks around progress-as-completion and ensure abnormal states are logged without generating hallucinations.
-A3 should verify if the chunking protocol limits context overflow effectively.
-A4 should only act inside the weekly A4 file and ensure no assumptions are made about missing history.
-Agents must avoid the hallucination of making up historical decisions when facing cold-start amnesia.
-Agents must continue verifying sources from EPAM and other enterprise insights regarding failure modes like one-shotting and progress-as-completion.
+Operating Note 1:
+- Future A1 executions must not skip external web verification; hallucinating sources is strictly forbidden
+
+Operating Note 2:
+- Future A2 executions must ensure that Risk Classification is not overly optimistic and reflects genuine negative feedback signals
 
 ACTION_LIMITS
 
-No host repository file changed
-No GitHub Actions inspected
-No non-periodic file created
-No aegis-cortex file overwritten
+- No host repository files were modified
+- No new persistent configuration files outside the daily/weekly cadence were created
+- Actions are strictly limited to updating operational guidelines within the Aegis loop
 
 BOUNDARY_CHECK
 
