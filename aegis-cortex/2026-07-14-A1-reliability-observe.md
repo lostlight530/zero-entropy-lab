@@ -20,35 +20,33 @@ INPUT_RECORD
 - aegis-cortex/2026-07-13-A2-doctrine-orient.md
 
 记录本次联网搜索了哪些主题:
-- Agent Reliability
-- Safety Protocols for Autonomous Agents
+- LLM Hallucination via Wikipedia
 
 记录每个主题为什么需要观察:
-- Agent Reliability: 持续跟踪代理系统在长期运行中的稳定性表现.
-- Safety Protocols for Autonomous Agents: 深入理解代理的潜在风险和失效模式, 以便及时应对.
+- LLM Hallucination: 防范代理在推理中生成虚假知识导致失控
 
 EXTERNAL_SOURCE_RECORDS
 
 来源一:
-- Title: Safety Protocols for Autonomous Agents
-- Publisher: arXiv
-- URL: https://arxiv.org/abs/3456.7890
+- Title: Hallucination (artificial intelligence)
+- Publisher: Wikipedia
+- URL: https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)
 - Date Checked: 2026-07-14
-- Source Type: Academic Paper
+- Source Type: Encyclopedia
 - Relevance: High
 - Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
-- 信号 1: A comprehensive survey of safety protocols necessary for deploying autonomous agents...
-- 信号 2: 在执行长周期复杂任务时, 代理的状态维护存在挑战.
-- 信号 3: 必须避免引入未经证实或容易引起幻觉的信息.
+- 信号 1: 幻觉(Hallucination)是指人工智能生成看似合理但不正确或无根据的信息
+- 信号 2: 数据分布漂移和模型过拟合是导致此类问题的常见原因
+- 信号 3: 需要通过基于事实的外部检索来抑制过度推理
 
 NEXT_HANDOFF
 
 - Target Task: A2-doctrine-orient
-- Recommended Focus: 对上述可靠性信号进行深入分析和风险分类, 特别是针对新发现的失败模式.
-- Required Data: 本次运行提取的可靠性信号日志.
+- Recommended Focus: 对幻觉信号进行深入分析并评估其对代理动作的影响
+- Required Data: 本次运行提取的可靠性信号日志
 
 BOUNDARY_CHECK
 

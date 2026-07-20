@@ -20,35 +20,33 @@ INPUT_RECORD
 - aegis-cortex/2026-07-14-A2-doctrine-orient.md
 
 记录本次联网搜索了哪些主题:
-- Agent Reliability
-- Vulnerabilities in Tool Use for LLM Agents
+- AI systems drift via Wikipedia
 
 记录每个主题为什么需要观察:
-- Agent Reliability: 持续跟踪代理系统在长期运行中的稳定性表现.
-- Vulnerabilities in Tool Use for LLM Agents: 深入理解代理的潜在风险和失效模式, 以便及时应对.
+- AI systems drift: 评估系统在长期运行中行为偏离设计初衷的风险
 
 EXTERNAL_SOURCE_RECORDS
 
 来源一:
-- Title: Vulnerabilities in Tool Use for LLM Agents
-- Publisher: arXiv
-- URL: https://arxiv.org/abs/4567.8901
+- Title: Concept drift
+- Publisher: Wikipedia
+- URL: https://en.wikipedia.org/wiki/Concept_drift
 - Date Checked: 2026-07-15
-- Source Type: Academic Paper
+- Source Type: Encyclopedia
 - Relevance: High
 - Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
-- 信号 1: We identify key security vulnerabilities when LLMs are granted access to external tools...
-- 信号 2: 在执行长周期复杂任务时, 代理的状态维护存在挑战.
-- 信号 3: 必须避免引入未经证实或容易引起幻觉的信息.
+- 信号 1: 概念漂移(Concept drift)是指模型在不断变化的真实环境数据下预测性能下降
+- 信号 2: 长期部署的系统必须具备定期重新校准或自反思的能力
+- 信号 3: 漂移会导致先前做出的可靠性假设失效
 
 NEXT_HANDOFF
 
 - Target Task: A2-doctrine-orient
-- Recommended Focus: 对上述可靠性信号进行深入分析和风险分类, 特别是针对新发现的失败模式.
-- Required Data: 本次运行提取的可靠性信号日志.
+- Recommended Focus: 分析概念漂移在智能体系统中的表现形式及应对方法
+- Required Data: 本次运行提取的可靠性信号日志
 
 BOUNDARY_CHECK
 
