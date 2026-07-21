@@ -13,7 +13,7 @@ for path in (KERNEL_ROOT, *(KERNEL_ROOT / layer for layer in (
 ))):
     sys.path.insert(0, str(path))
 
-from nexus import NexusHandler
+from nexus import NexusHandler, active_ledger_files
 import hive as hive_module
 import mcp as mcp_module
 
@@ -81,6 +81,22 @@ class TestRuntimeHygiene(unittest.TestCase):
             hive._listen_loop()
 
         sock.close.assert_called_once_with()
+
+    def test_rebuild_selects_only_active_ledgers(self):
+        import tempfile
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            active_entity = root / "entities" / "concept.jsonl"
+            active_relation = root / "relations" / "canonical.jsonl"
+            archived = root / "archive" / "sealed" / "concept.jsonl"
+            for path in (active_entity, active_relation, archived):
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("{}\n", encoding="utf-8")
+
+            selected = active_ledger_files(root)
+
+            self.assertEqual(selected, [active_entity, active_relation])
 
 if __name__ == "__main__":
     unittest.main()
