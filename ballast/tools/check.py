@@ -17,6 +17,7 @@ REQUIRED = (
     "templates/monthly.md",
     "tools/check.py",
     "tools/experiment_false_success.ps1",
+    "tools/experiment_interrupted_manifest.ps1",
 )
 FORBIDDEN_SUFFIXES = {".db", ".jsonl", ".pyc", ".tmp"}
 TEMPLATE_HEADINGS = {
