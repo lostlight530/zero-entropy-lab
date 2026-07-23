@@ -16,6 +16,37 @@ except ImportError:
     from logger import logger
 
 class Scholar:
+    PROTECTED_ROOTS = (
+        "aegis-cortex",
+        "ballast",
+        "index.html",
+        "src/assets",
+        "src/scripts",
+        "src/styles",
+    )
+    SUPPORTED_SUFFIXES = {".py", ".md"}
+
+    @classmethod
+    def _is_protected_path(cls, path):
+        normalized = Path(path).as_posix().strip("./").lower()
+        return any(
+            normalized == root or normalized.startswith(root + "/")
+            for root in cls.PROTECTED_ROOTS
+        )
+
+    @classmethod
+    def _is_supported_path(cls, path):
+        normalized = Path(path).as_posix().strip("./").lower()
+        return (
+            not cls._is_protected_path(normalized)
+            and Path(normalized).suffix in cls.SUPPORTED_SUFFIXES
+        )
+
+    @staticmethod
+    def _generated_text(text):
+        """Normalize punctuation in text emitted to generated active ledgers."""
+        return text.replace("\u3002", ".")
+
     def __init__(self, project_root=None):
         # Default to the root of the repo (parent of src/kernel/sensory)
         self.project_root = project_root or Path(__file__).resolve().parents[3]
@@ -74,12 +105,21 @@ class Scholar:
 
         for dirpath, dirnames, filenames in os.walk(root):
             # Prune ignored directories
-            dirnames[:] = [d for d in dirnames if d not in self.ignore_dirs]
+            dirnames[:] = [
+                d
+                for d in dirnames
+                if d not in self.ignore_dirs
+                and not self._is_protected_path(
+                    (Path(dirpath) / d).relative_to(root)
+                )
+            ]
 
             for file in filenames:
                 if file in self.ignore_files or file.endswith(('.pyc', '.db')): continue
 
                 filepath = Path(dirpath) / file
+                if not self._is_supported_path(filepath.relative_to(root)):
+                    continue
                 try:
                     file_id = self._digest_file(root, filepath)
                     if file_id and self.cortex:
@@ -125,6 +165,7 @@ class Scholar:
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read()
             tree = ast.parse(content)
+            local_classes = {node.name for node in ast.walk(tree) if isinstance(node, ast.ClassDef)}
 
             for node in ast.walk(tree):
                 # Classes
@@ -143,7 +184,7 @@ class Scholar:
                     if is_dataclass:
                         desc = f"[DataClass] {desc}"
 
-                    self.cortex.add_entity(class_id, "code_class", node.name, desc[:100], save_to_disk=True)
+                    self.cortex.add_entity(class_id, "code_class", node.name, self._generated_text(desc)[:100], save_to_disk=True)
                     self.cortex.connect_entities(file_id, "defines", class_id, save_to_disk=True)
 
                     if is_dataclass:
@@ -151,18 +192,19 @@ class Scholar:
 
                     # Inheritance
                     for base in node.bases:
-                        if isinstance(base, ast.Name):
-                            self.cortex.connect_entities(class_id, "inherits_from", f"class_{base.id}", save_to_disk=True)
-                        elif isinstance(base, ast.Attribute):
-                            # e.g., inherits from http.server.SimpleHTTPRequestHandler
-                            parent_name = f"{base.value.id}.{base.attr}" if isinstance(base.value, ast.Name) else base.attr
-                            self.cortex.connect_entities(class_id, "inherits_from", f"class_{parent_name}", save_to_disk=True)
+                        if isinstance(base, ast.Name) and base.id in local_classes:
+                            self.cortex.connect_entities(
+                                class_id,
+                                "inherits_from",
+                                f"{file_id}__class_{base.id}",
+                                save_to_disk=True,
+                            )
 
                 # Functions
                 elif isinstance(node, ast.FunctionDef):
                     func_id = f"{file_id}__func_{node.name}"
                     desc = ast.get_docstring(node) or "Python Function"
-                    self.cortex.add_entity(func_id, "code_function", node.name, desc[:100], save_to_disk=True)
+                    self.cortex.add_entity(func_id, "code_function", node.name, self._generated_text(desc)[:100], save_to_disk=True)
                     self.cortex.connect_entities(file_id, "defines", func_id, save_to_disk=True)
         except Exception as e:
             logger.error(f"Error analyzing python ast for {filepath}: {e}", exc_info=True)
