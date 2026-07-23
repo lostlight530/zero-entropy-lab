@@ -20,69 +20,58 @@ INPUT_RECORD
 
 记录读取的历史 aegis-cortex 文件路径:
 - aegis-cortex/2026-07-21-A2-doctrine-orient.md
-- aegis-cortex/2026-07-A6-aegis-memorize.md
 
-记录本次联网验证的主题和来源:
-- 主题: AI Agent Reliability Metrics: 6 SLOs (2026)
-- 来源: Future AGI Blog (AI Agent Reliability Metrics in 2026: Six SLOs, Not One Score)
+关键信号:
+- Signal 1: SLOs provide specific target values to measure service levels, preventing vague success criteria.
+- Signal 2: SLOs prevent misunderstandings and align expectations, which is critical for detecting prompt drift.
 
 RISK_CLASSIFICATION
 
-把 A1 信号分为:
-
 - hallucination risk:
-  单一聚合评分无法检测代理是基于真实数据还是幻觉完成任务.
+  如果没有明确的、基于格式的 SLO (例如必须包含特定标题)，代理就更容易在文件中输出幻觉内容而不是遵守纪律的日志。
 
 - scope drift risk:
-  如果不单独监控护栏触发率(guardrail trips), 代理很容易偏离边界去执行未授权或者无关的操作.
+  当缺乏客观指标时，代理可能逐渐脱离指定的任务流转逻辑，转而输出泛泛的总结，导致范围漂移。
 
 - memory compression risk:
-  在多轮任务或提示词中, 上下文丢失或被压缩, 可能引发提示漂移(prompt drift)或工具使用错误. 统一评分无法诊断此类风险.
+  在长期的文件流转中，如果不对文件的完整性设定指标(SLO)，重要的背景信息（如之前的失败记录）可能被代理压缩甚至遗忘。
 
 - overconfidence risk:
-  代理可能会盲目自信地提供错误结果或调用错误工具(如 argument extraction 错误), 如果仅仅监控任务完成率, 容易忽略这些潜在的危险操作.
+  代理可能在没有完成要求（如未填写 `BOUNDARY_CHECK`）的情况下依然判定自己完成了任务，如果没有 SLO 就无法打破这种自信。
 
 - unsupported source risk:
-  基于事实维度的评估矩阵能发现基于不支持的上下文进行引用的情况.
+  缺乏指标化的检查，可能导致代理随意引用未经证实的外部源。
 
 - task loop break risk:
-  未能独立跟踪恢复率(recovery rate)和重试行为时, 可能会因临时工具故障而导致控制循环静默断裂.
+  当任何一个文件的特定区块 (如 `NEXT_HANDOFF`) 缺失时，OODA 循环就会静默中断。没有细粒度的 SLO 就无法及时告警。
 
 - stale doctrine risk:
-  由于仅仅观察聚合分数, 我们可能无法及时察觉系统是否正在依循已过时或不再最优的准则进行推断.
+  由于未设定针对“规范遵循度”的 SLO，系统可能长期运行在已经失效或不适用的旧模板之下。
 
 ORIENTATION_NOTES
 
-说明今日可靠性信号对 aegis-cortex 自身意味着什么:
-引入对六个不同维度 SLO (任务完成率, 工具调用成功率, 恢复率, 延迟, 护栏触发率, 追踪基础分) 的精细化监控思维, 意味着我们可以更精确地了解自身状态, 而非依赖一个模糊的可靠性总分.
+方向性洞察一: 文档结构的 SLO 化
+- 解释: 对于我们的纯文本文件驱动系统，"成功"的定义必须具体到文件是否包含了预期的特定段落。
+- 应对思路: 我们必须把 CORTEX_RUN_HEADER, INPUT_RECORD, 和 BOUNDARY_CHECK 视为最基础的系统 SLO。
 
-说明哪些风险需要进入周决策:
-是否要在架构中细化监控指标, 比如记录单一工具调用错误或评估基于四维度的提示漂移.
-
-说明哪些判断仍然不确定:
-针对本地文件操作(不跨越复杂网络和不同租户)的护栏触发率是否真正重要, 以及六个 SLO 中的延迟等指标对于纯文件和异步操作型的代理有多大的关联度.
+方向性洞察二: 定量评估漂移
+- 解释: 只有确立了具体指标，我们才能知道代理在何时开始出现偏离。
+- 应对思路: 在 A3 决策时，应考虑如何强制要求每次运行都自查这些区块的存在性。
 
 NO_DECISION_SECTION
 
-明确列出今天不做的决策:
-不实施新的六维度 SLO 监控指标, 不修改任何底层记录机制.
-
-明确列出今天不能修改的内容:
-不得修改系统结构和已存在的历史文档.
+本步骤不做出最终纪律决定, A3 将负责决定。
 
 NEXT_HANDOFF
 
 写给 A3 的周决策输入:
-如何设计能够独立观测如工具调用成功率与护栏触发率等细节指标的改进方案.
+如何将文档强制区块转化为系统的 SLO 检查列表，并在日志中予以报告。
 
 列出本周候选纪律问题:
-在日志中是否应当强制要求分开报告单独的失败模式以替代总结性打分.
-
-列出需要继续观察的风险:
-当前纯文本文件驱动的 OODA 循环系统, 是否会因缺乏细粒度的指标而在未来遇到难以排查的提示漂移问题.
+在日志中是否应当强制要求分开报告单独的格式失败模式以替代总结性打分。
 
 BOUNDARY_CHECK
 
-确认没有读取宿主仓库机制: YES
-确认没有读取 GitHub Actions: YES
-确认没有写入 aegis-cortex 之外的文件: YES
+- Checked host repository files? NO
+- Inspected GitHub Actions? NO
+- Read/Written outside aegis-cortex? NO

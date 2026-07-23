@@ -20,53 +20,46 @@ INPUT_RECORD
 - aegis-cortex/2026-07-21-A2-doctrine-orient.md
 
 记录本次联网搜索了哪些主题:
-- AI Agent reliability
-- Agent boundary control
-- Prompt drift
+- Service-level objective (SLO) / AI systems
 
 记录每个主题为什么需要观察:
-- AI Agent reliability: 持续了解2026年业界对于智能体可靠性的最新指标与衡量标准，以提升监控能力
-- Agent boundary control: 防止智能体跨越租户边界执行未授权指令，确保运行环境的安全隔离
-- Prompt drift: 追踪指令遵循能力随时间或复杂任务退化的问题，从而设计更稳定的提示系统
+- Service-level objective (SLO): 探索如何建立客观的衡量指标来评估AI代理系统的可靠性和成功率。
 
 EXTERNAL_SOURCE_RECORDS
 
 来源一:
-- Title: AI Agent Reliability Metrics: 6 SLOs (2026)
-- Publisher: Future AGI
-- URL: https://futureagi.com/blog/ai-agent-reliability-metrics-2026/
+- Title: Service-level objective
+- Publisher: Wikipedia
+- URL: https://en.wikipedia.org/wiki/Service-level_objective
 - Date Checked: 2026-07-22
-- Source Type: Tech Blog
+- Source Type: Encyclopedia
 - Relevance: High
 - Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
 Signal 1:
-- Signal: AI 代理可靠性不能只用单一的评分来衡量，而是需要六个 SLO 指标：任务完成率，工具调用成功率，恢复率，p99 延迟，护栏触发率，以及基于追踪的基础评分
-- Source: AI Agent Reliability Metrics: 6 SLOs (2026)
-- Failure Mode Addressed: 代理不可靠执行与聚合评分掩盖错误
-- Why It May Matter: 将监控指标细化为独立的服务级别目标(SLO)有助于快速定位并解决特定维度的性能下降或故障
-- Uncertainty: 低，这是基于工程实践演进的明确建议
+- Signal: A service-level objective (SLO) is a target value or range of values for a service level that is measured by an SLI (Service Level Indicator).
+- Source: Service-level objective via Wikipedia (https://en.wikipedia.org/wiki/Service-level_objective)
+- Failure Mode Addressed: Vague Success Criteria
+- Why It May Matter: For AI agents, vague goals like "be helpful" need to be translated into measurable SLOs (like parsing success rate or formatting adherence) to detect reliability drops.
+- Uncertainty: Low. Standard engineering practice.
 
 Signal 2:
-- Signal: 基于四维度的评估矩阵(事实基础、隐私安全、指令遵循、最优计划执行)能有效捕获上下文偏离、提示漂移以及工具选择错误
-- Source: AI Agent Reliability Metrics: 6 SLOs (2026)
-- Failure Mode Addressed: 提示漂移、上下文丢失与工具使用错误
-- Why It May Matter: 统一的自动化评判可以持续检测这些失败模式，一旦某项指标跌破阈值即触发警报
-- Uncertainty: 低，提出了具体的分数阈值与警告机制
+- Signal: SLOs are agreed upon as a means of measuring the performance and avoiding disputes based on misunderstanding.
+- Source: Service-level objective via Wikipedia (https://en.wikipedia.org/wiki/Service-level_objective)
+- Failure Mode Addressed: Misaligned Expectations and Prompt Drift
+- Why It May Matter: When agents drift from initial instructions, having strict SLOs based on explicit constraints (like BOUNDARY_CHECK presence) helps instantly flag the degradation.
+- Uncertainty: Low. Standard engineering practice.
 
 NEXT_HANDOFF
 
 写给 A2 的输入提示:
-指出哪些可靠性信号需要定向解释:
-- 需要定向解释 Signal 1 中提到的六个 SLO 指标对目前系统的监控策略改进有何启示
-- 需要解释 Signal 2 中的四维度评判(特别是事实基础与指令遵循)对检测提示漂移的具体应用价值
-指出哪些信号可能只是噪音:
-- 针对多租户场景(跨越租户边界)的隐私泄露警报可能对仅针对单一宿主仓库运行的系统而言关联性较低，可能只是一种噪音
+- 需要定向解释如何将 SLO 概念应用到当前基于 Markdown 模板流转的自治循环中。
+- 需要解释哪些文档区块（例如 CORTEX_RUN_HEADER 的完整性）可以被设定为严格的系统 SLO。
 
 BOUNDARY_CHECK
 
-确认没有读取宿主仓库机制: YES
-确认没有读取 GitHub Actions: YES
-确认没有写入 aegis-cortex 之外的文件: YES
+- Checked host repository files? NO
+- Inspected GitHub Actions? NO
+- Read/Written outside aegis-cortex? NO
