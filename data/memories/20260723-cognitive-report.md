@@ -3,7 +3,7 @@
 ## 今日结论
 
 - 系统状态 `ONLINE`.
-- 节点 `452`.
+- 节点 `366`.
 - 关系 `208`.
 - 拓扑 `FRAGMENTED_3_ORPHANS`.
 
@@ -11,9 +11,9 @@
 
 | 指标 | 值 |
 | --- | --- |
-| 存储 MB | `0.77` |
+| 存储 MB | `0.68` |
 | Journal 行数 | `0` |
-| 图密度 | `0.88_SPARSE` |
+| 图密度 | `0.83_SPARSE` |
 
 ## 风险与动作
 
@@ -27,19 +27,19 @@
 ```text
 # NEXUS CORTEX: Cognitive Report
 
-DATE: 2026-07-23 02:47:51 (UTC)
+DATE: 2026-07-23 08:09:59 (UTC)
 
 ## 系统状态基线 (System Status Baseline)
 STATUS: ONLINE
-NODES: 452
+NODES: 366
 EDGES: 208
 TOPOLOGY: FRAGMENTED_3_ORPHANS
 TASK_SUGGESTION: RELATION_MAPPING_RECOMMENDED
 
 ## 物理层性能遥测 (Physical Telemetry)
-STORAGE_MB: 0.77
+STORAGE_MB: 0.68
 JOURNAL_ROWS: 0
-GRAPH_DENSITY: 0.88_SPARSE
+GRAPH_DENSITY: 0.83_SPARSE
 
 ## 认知网络断层扫描 (Cognitive Network Scan)
 STRUCTURAL_BRIDGES: NONE_DETECTED
