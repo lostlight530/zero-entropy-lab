@@ -12,6 +12,8 @@ REQUIRED = (
     "templates/daily.md", "templates/weekly.md", "templates/monthly.md",
     "tools/check.py", "tools/experiment_false_success.ps1",
     "tools/experiment_interrupted_manifest.ps1", "tools/experiment_stale_replay.ps1",
+    "tools/experiment_unknown_outcome.py",
+    "tools/verify_unknown_outcome.py",
 )
 FORBIDDEN_SUFFIXES = {".backup", ".db", ".jsonl", ".lock", ".pyc", ".stage", ".tmp"}
 DAILY_HEADINGS = (
