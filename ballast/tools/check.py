@@ -31,15 +31,26 @@ SPECIAL_HEADINGS = (
     "## 与每日研究的关系", "## 可迁移问题", "## 已验证事实",
     "## 基于证据的推断", "## 未验证事项", "## 后续研究入口",
 )
+AUDIT_HEADINGS = (
+    "## 覆盖区间", "## 纳入记录", "## 审计方法", "## 证据链审计",
+    "## 特殊专题关系", "## 重复信号", "## 恢复与重放", "## 假成功检查",
+    "## 状态决定", "## 审计缺口", "## 下一阶段控制项", "## 事实分层",
+)
+AUDIT_FACT_HEADINGS = (
+    "### 已验证事实", "### 基于证据的推断", "### 未验证事项"
+)
 TEMPLATE_HEADINGS = {
     "templates/daily.md": DAILY_HEADINGS,
     "templates/special.md": SPECIAL_HEADINGS,
-    "templates/weekly.md": ("## 覆盖区间", "## 恢复与重放", "## 假成功检查", "## 状态决定"),
-    "templates/monthly.md": ("## 日报索引", "## 运行覆盖", "## 已复验发现", "## 失效记录", "## 有效速度"),
+    "templates/weekly.md": AUDIT_HEADINGS,
+    "templates/monthly.md": ("## 日报索引", "## 周期审计索引", "## 运行覆盖", "## 已复验发现", "## 失效记录", "## 有效速度"),
 }
 DAILY_NAME = re.compile(r"^(?P<day>\d{4}-\d{2}-\d{2})\.md$")
 MONTHLY_NAME = re.compile(r"^\d{4}-\d{2}\.md$")
 SPECIAL_NAME = re.compile(r"^(?P<day>\d{4}-\d{2}-\d{2})-[a-z0-9-]+\.md$")
+AUDIT_NAME = re.compile(
+    r"^(?P<start>\d{4}-\d{2}-\d{2})--(?P<end>\d{4}-\d{2}-\d{2})\.md$"
+)
 MARKDOWN_LINK = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 DAILY_REQUIRED_FROM = date(2026, 7, 21)
 
@@ -63,6 +74,8 @@ def validate() -> list[str]:
             continue
         if not text.strip():
             errors.append(f"empty file: {relative}")
+        if path.suffix.lower() == ".md" and text.count("`") % 2:
+            errors.append(f"unbalanced markdown backticks: {relative}")
         if chr(0x3002) in text:
             errors.append(f"forbidden punctuation: {relative}")
         if "?" * 3 in text:
@@ -110,6 +123,14 @@ def validate() -> list[str]:
     special = [
         path for path in special_files if SPECIAL_NAME.fullmatch(path.name)
     ]
+    audits_dir = ROOT / "audits"
+    audit_files = sorted(audits_dir.glob("*.md")) if audits_dir.is_dir() else []
+    audits = [path for path in audit_files if AUDIT_NAME.fullmatch(path.name)]
+    if len(daily) >= 6 and not audits:
+        errors.append("missing cycle audit")
+    for path in audit_files:
+        if not AUDIT_NAME.fullmatch(path.name):
+            errors.append(f"invalid cycle audit name: {path.name}")
     if not monthly:
         errors.append("missing monthly record")
     if not daily:
@@ -192,6 +213,70 @@ def validate() -> list[str]:
                     f"special topic links missing daily: {path.name} -> {linked_day}"
                 )
 
+    audited_days: set[str] = set()
+    for path in audits:
+        match = AUDIT_NAME.fullmatch(path.name)
+        start = date.fromisoformat(match.group("start"))
+        end = date.fromisoformat(match.group("end"))
+        text = path.read_text(encoding="utf-8")
+        record_type = type_pattern.search(text)
+        theme_match = theme_pattern.search(text)
+        if (
+            not record_type
+            or record_type.group(1).strip() != "\u5468\u671f\u5ba1\u8ba1"
+        ):
+            errors.append(f"invalid cycle audit type in audits/{path.name}")
+        if not theme_match or not theme_match.group(1).strip():
+            errors.append(f"missing cycle audit theme in audits/{path.name}")
+        if end < start or (end - start).days not in {5, 6}:
+            errors.append(f"invalid cycle audit window: {path.name}")
+        for heading in AUDIT_HEADINGS + AUDIT_FACT_HEADINGS:
+            if heading not in text:
+                errors.append(
+                    f"missing heading in audits/{path.name}: {heading}"
+                )
+
+        expected_days: set[str] = set()
+        current = start
+        while current <= end:
+            expected_days.add(current.isoformat())
+            current += timedelta(days=1)
+        audited_days.update(expected_days)
+        linked_days = set(
+            re.findall(
+                r"\(\.\./records/(\d{4}-\d{2}-\d{2})\.md\)", text
+            )
+        )
+        missing_days = expected_days - linked_days
+        unexpected_days = linked_days - expected_days
+        for day in sorted(missing_days):
+            errors.append(f"cycle audit missing daily link: {path.name} -> {day}")
+        for day in sorted(unexpected_days):
+            errors.append(f"cycle audit links outside window: {path.name} -> {day}")
+        for day in sorted(expected_days):
+            if day not in daily_days:
+                errors.append(f"cycle audit covers missing daily: {path.name} -> {day}")
+
+        linked_special = set(
+            re.findall(r"\(\.\./special/([^)]+\.md)\)", text)
+        )
+        for special_path in special:
+            special_match = SPECIAL_NAME.fullmatch(special_path.name)
+            special_day = date.fromisoformat(special_match.group("day"))
+            if start <= special_day <= end and special_path.name not in linked_special:
+                errors.append(
+                    f"cycle audit missing special link: {path.name} -> {special_path.name}"
+                )
+
+    if daily_days:
+        latest_daily = max(date.fromisoformat(day) for day in daily_days)
+        audit_cutoff = latest_daily - timedelta(days=6)
+        current = DAILY_REQUIRED_FROM
+        while current <= audit_cutoff:
+            if current.isoformat() not in audited_days:
+                errors.append(f"overdue cycle audit coverage: {current.isoformat()}")
+            current += timedelta(days=1)
+
     for path in monthly:
         text = path.read_text(encoding="utf-8")
         observations = re.findall(
@@ -221,6 +306,20 @@ def validate() -> list[str]:
             ):
                 errors.append(
                     f"special topic missing from monthly index: {special_path.name}"
+                )
+        audit_indexed = set(
+            re.findall(r"\(\.\./audits/([^)]+\.md)\)", text)
+        )
+        for audit_path in audits:
+            match = AUDIT_NAME.fullmatch(audit_path.name)
+            start_month = match.group("start")[:7]
+            end_month = match.group("end")[:7]
+            if (
+                path.stem in {start_month, end_month}
+                and audit_path.name not in audit_indexed
+            ):
+                errors.append(
+                    f"cycle audit missing from monthly index: {audit_path.name}"
                 )
     return errors
 
