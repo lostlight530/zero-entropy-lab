@@ -16,6 +16,8 @@ REQUIRED = (
     "tools/verify_unknown_outcome.py",
     "tools/experiment_shared_outage.py",
     "tools/verify_shared_outage.py",
+    "tools/experiment_breaker_scope.py",
+    "tools/verify_breaker_scope.py",
 )
 FORBIDDEN_SUFFIXES = {".backup", ".db", ".jsonl", ".lock", ".pyc", ".stage", ".tmp"}
 DAILY_HEADINGS = (
