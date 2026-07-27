@@ -11,7 +11,7 @@
 
 ## 事实边界
 
-能够确认的是 OpenAI 官方登记了两起已恢复的跨产品事件, 后续 ChatGPT conversations 事件在 2026-07-27 复核时已从 Investigating 经过 Identified 进入 Monitoring, 并列出 1 个受影响组件
+能够确认的是 OpenAI 官方登记了两起已恢复的跨产品事件, 后续 ChatGPT conversations 事件在 2026-07-28 复核时已从 Investigating 经过 Identified 和 Monitoring 进入 Resolved, 并列出 1 个受影响组件
 
 不能确认的是所有 OpenAI 产品、所有组件、所有区域和所有用户在同一时刻完全不可用
 
@@ -32,18 +32,18 @@ OpenAI 状态页说明可用性按层级、模型和错误类型聚合, 单个�
 - 后续 ChatGPT conversations 事件页面在 22:09 显示 Investigating
 - 后续事件在 23:16 显示 Identified
 - 后续事件在 23:57 显示 Monitoring
-- 该后续事件在复核时列出 ChatGPT 1 个受影响组件, 尚未显示 Resolved
+- 后续事件在 2026-07-27 16:32 显示 Resolved, 页面说明受影响服务已恢复
 
 前两个事件页面均列出 API 12 个组件、ChatGPT 15 个组件和 Codex 4 个组件
 
 ## 来源矩阵
 
-初次查询日期为 2026-07-26, 状态复核日期为 2026-07-27
+初次查询日期为 2026-07-26, 状态复核日期为 2026-07-27 与 2026-07-28
 
 - [OpenAI 事件一](https://status.openai.com/incidents/01KYC921K145JTR1JK7DYKGWH1) 支持第一起事件的状态转换、页面展示时间和组件数量, 边界是聚合状态
 - [OpenAI 事件二](https://status.openai.com/incidents/01KYCGY017EG43XZS6GFVXA8VH) 支持第二起事件的状态转换、页面展示时间和组件数量, 边界是聚合状态
 - [OpenAI 状态历史](https://status.openai.com/history) 当前在 7 月 25 日列出两起跨产品事件和一项后续 ChatGPT conversations 事件, 不提供逐用户影响
-- [OpenAI 后续 ChatGPT conversations 事件](https://status.openai.com/incidents/01KYDN6YPS6ARY1EC9089N089G) 在复核时处于 Monitoring, 列出 ChatGPT 1 个受影响组件, 正文将当前影响期起点表述为约 13:00 PT
+- [OpenAI 后续 ChatGPT conversations 事件](https://status.openai.com/incidents/01KYDN6YPS6ARY1EC9089N089G) 在 2026-07-28 复核时处于 Resolved, 列出 ChatGPT 1 个受影响组件, 正文将当前影响期起点表述为约 13:00 PT
 - [BleepingComputer 事件报道](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-confirms-chatgpt-is-down-worldwide/) 发布于 2026-07-25, 支持用户侧广泛影响的独立报道, 将一次用户可见影响描述为接近 50 分钟
 
 官方最终恢复边界与二手报道的用户可见时长采用不同测量口径, 两者不能直接合并为一个精确持续时间
@@ -71,7 +71,7 @@ OpenAI 状态页说明可用性按层级、模型和错误类型聚合, 单个�
 - 7 月 25 日的官方历史页当前列出三项事件
 - 前两个事件页均列出 API 12 个组件、ChatGPT 15 个组件和 Codex 4 个组件
 - 前两个事件最终均被官方标记为恢复
-- 后续事件已从 Investigating 经过 Identified 进入 Monitoring, 复核时仍未标记 Resolved
+- 后续事件已从 Investigating 经过 Identified 和 Monitoring 进入 Resolved
 - 官方明确说明聚合可用性与单个客户可用性可能不同
 
 ## 基于证据的推断
@@ -87,7 +87,6 @@ OpenAI 状态页说明可用性按层级、模型和错误类型聚合, 单个�
 - 三项事件的内部根因与相互关系
 - 页面展示时间的时区
 - 每个组件的逐分钟错误率与恢复顺序
-- 后续 ChatGPT conversations 事件的最终恢复时间
 - 所有地区、订阅层级、模型和用户的实际影响
 - 客户端是否发生重试风暴或重复副作用
 - 用户所称全部人员失败的完整样本与分母
@@ -98,4 +97,4 @@ OpenAI 状态页说明可用性按层级、模型和错误类型聚合, 单个�
 
 如果任务级调用和独立结果验证在聚合状态恢复前稳定通过, 应推翻必须等待聚合恢复才能继续的解释
 
-如果新的权威证据改变事件范围或时间线, 保留当前记录并标记修订来源, 不物理删除历史
+后续事件已进入 Resolved, 只有新的权威证据改变范围、时间线或状态时才继续维护, 并保留修订历史
