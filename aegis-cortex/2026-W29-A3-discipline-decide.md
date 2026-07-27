@@ -34,6 +34,8 @@ Local Files Read:
 - aegis-cortex/2026-07-19-A2-doctrine-orient.md
 
 External Verification Topics:
+- Title: LLM Powered Autonomous Agents
+  URL: https://lilianweng.github.io/posts/2023-06-23-agent/
 - Agent Reliability via Wikipedia
 - LLM Hallucination via Wikipedia
 - Concept drift via Wikipedia

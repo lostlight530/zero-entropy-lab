@@ -35,6 +35,7 @@ INPUT_RECORD
 * aegis-cortex/2026-07-A6-aegis-memorize-sample.md
 
 联网验证的主题和来源:
+- 来源: https://owasp.org/www-project-machine-learning-security-top-10/
 * 主题: AI Agent Memory Poisoning
 * 来源: OWASP Agent Memory Guard, MintMCP Blog
 

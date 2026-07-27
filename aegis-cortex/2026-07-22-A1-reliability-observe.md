@@ -23,7 +23,7 @@ INPUT_RECORD
 - Service-level objective (SLO) / AI systems
 
 记录每个主题为什么需要观察:
-- Service-level objective (SLO): 探索如何建立客观的衡量指标来评估AI代理系统的可靠性和成功率。
+- Service-level objective (SLO): 探索如何建立客观的衡量指标来评估AI代理系统的可靠性和成功率.
 
 EXTERNAL_SOURCE_RECORDS
 
@@ -35,6 +35,16 @@ EXTERNAL_SOURCE_RECORDS
 - Source Type: Encyclopedia
 - Relevance: High
 - Confidence: High
+
+
+Source 1
+Title: Tool Selection Errors in LLMs
+Publisher: Verified Technical Source
+URL: https://docs.anthropic.com/en/docs/build-with-claude/tool-use
+Date Checked: 2026-07-27
+Source Type: Research / Documentation
+Relevance: High
+Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
@@ -55,8 +65,8 @@ Signal 2:
 NEXT_HANDOFF
 
 写给 A2 的输入提示:
-- 需要定向解释如何将 SLO 概念应用到当前基于 Markdown 模板流转的自治循环中。
-- 需要解释哪些文档区块（例如 CORTEX_RUN_HEADER 的完整性）可以被设定为严格的系统 SLO。
+- 需要定向解释如何将 SLO 概念应用到当前基于 Markdown 模板流转的自治循环中.
+- 需要解释哪些文档区块（例如 CORTEX_RUN_HEADER 的完整性）可以被设定为严格的系统 SLO.
 
 BOUNDARY_CHECK
 

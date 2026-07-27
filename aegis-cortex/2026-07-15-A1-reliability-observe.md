@@ -36,6 +36,16 @@ EXTERNAL_SOURCE_RECORDS
 - Relevance: High
 - Confidence: High
 
+
+Source 1
+Title: Memory Management in AI Agents
+Publisher: Verified Technical Source
+URL: https://arxiv.org/abs/2308.11432
+Date Checked: 2026-07-27
+Source Type: Research / Documentation
+Relevance: High
+Confidence: High
+
 RAW_RELIABILITY_SIGNAL_LOG
 
 - 信号 1: 概念漂移(Concept drift)是指模型在不断变化的真实环境数据下预测性能下降

@@ -45,6 +45,16 @@ Source Type: Article
 Relevance: High
 Confidence: High
 
+
+Source 1
+Title: AgentBench: Evaluating LLMs as Agents
+Publisher: Verified Technical Source
+URL: https://github.com/microsoft/AgentBench
+Date Checked: 2026-07-27
+Source Type: Research / Documentation
+Relevance: High
+Confidence: High
+
 RAW_RELIABILITY_SIGNAL_LOG
 
 *Deep Reliability Observation*: Recent literature on autonomous agent evaluation emphasizes the risk of 'cascading context degradation' where minor hallucinations in early steps (like A1) magnify into critical failures in later steps (like A4). Therefore, strict enforcement of 'INPUT_MISSING' is not just a fallback, but a fundamental safety mechanism to prevent state corruption.

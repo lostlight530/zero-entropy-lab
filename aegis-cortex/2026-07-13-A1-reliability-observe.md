@@ -36,6 +36,16 @@ EXTERNAL_SOURCE_RECORDS
 - Relevance: High
 - Confidence: High
 
+
+Source 1
+Title: LLM Powered Autonomous Agents
+Publisher: Verified Technical Source
+URL: https://lilianweng.github.io/posts/2023-06-23-agent/
+Date Checked: 2026-07-27
+Source Type: Research / Documentation
+Relevance: High
+Confidence: High
+
 RAW_RELIABILITY_SIGNAL_LOG
 
 - 信号 1: 可靠性工程(Reliability engineering)关注系统的持续无故障运行时间

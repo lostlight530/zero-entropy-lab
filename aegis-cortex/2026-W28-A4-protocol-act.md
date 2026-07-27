@@ -23,6 +23,8 @@ Local Files Read:
 * aegis-cortex/2026-07-12-A2-doctrine-orient.md
 
 External Verification Topics:
+- Title: Prompt Engineering
+  URL: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
 * cascading prompt drift in multi-step AI agent systems
 * bounded error severity and attention decay
 

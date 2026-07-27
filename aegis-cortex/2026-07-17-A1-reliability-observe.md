@@ -36,6 +36,16 @@ EXTERNAL_SOURCE_RECORDS
 - Relevance: High
 - Confidence: High
 
+
+Source 1
+Title: Retrieval-Augmented Generation
+Publisher: Verified Technical Source
+URL: https://www.pinecone.io/learn/retrieval-augmented-generation/
+Date Checked: 2026-07-27
+Source Type: Research / Documentation
+Relevance: High
+Confidence: High
+
 RAW_RELIABILITY_SIGNAL_LOG
 
 - 信号 1: 对齐(Alignment)旨在确保人工智能系统的目标与人类价值观和设计意图一致

@@ -17,6 +17,10 @@ INPUT_RECORD
 
 Processed: aegis-cortex/2026-07-A5-drift-reflect.md
 
+External Confirmation Topics:
+- Title: OWASP Machine Learning Security Top 10
+  URL: https://owasp.org/www-project-machine-learning-security-top-10/
+
 KNOWLEDGE_GRAPH_UPDATES
 
 Added nodes:
