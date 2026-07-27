@@ -25,6 +25,12 @@ Decisions to Implement:
 - Decision 2: Introduce rigid BOUNDARY_CHECK in all output files
 - Decision 3: Mandate negative feedback reflection in A2 Orient
 
+EXTERNAL_VALIDATION_RECORD
+
+Source 1
+Title: Retrieval-Augmented Generation
+URL: https://www.pinecone.io/learn/retrieval-augmented-generation/
+
 PROTOCOL_ACTION_RECORD
 
 Action 1

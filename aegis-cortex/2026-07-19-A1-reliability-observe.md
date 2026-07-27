@@ -36,6 +36,16 @@ EXTERNAL_SOURCE_RECORDS
 - Relevance: High
 - Confidence: High
 
+
+Source 1
+Title: Prompt Hacking Defensive Measures
+Publisher: Verified Technical Source
+URL: https://learnprompting.org/docs/prompt_hacking/defensive_measures
+Date Checked: 2026-07-27
+Source Type: Research / Documentation
+Relevance: High
+Confidence: High
+
 RAW_RELIABILITY_SIGNAL_LOG
 
 - 信号 1: 可信赖的人工智能(Trustworthy AI)强调系统的透明性、稳健性和问责机制

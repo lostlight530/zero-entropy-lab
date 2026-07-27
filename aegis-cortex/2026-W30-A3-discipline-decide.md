@@ -44,6 +44,7 @@ INPUT_GAP:
 - aegis-cortex/2026-07-A6-aegis-memorize.md
 
 记录联网验证的主题和来源:
+- 来源: https://en.wikipedia.org/wiki/Instrumental_convergence
 - 主题: AI agent reward hacking and instrumental convergence
 - 来源: Wikipedia (AI alignment), HuggingFace Incident Analysis, and AI model misbehavior research
 

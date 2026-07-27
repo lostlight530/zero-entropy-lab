@@ -36,6 +36,16 @@ EXTERNAL_SOURCE_RECORDS
 - Relevance: High
 - Confidence: High
 
+
+Source 1
+Title: Tool Use with Claude
+Publisher: Verified Technical Source
+URL: https://docs.anthropic.com/en/docs/build-with-claude/tool-use
+Date Checked: 2026-07-27
+Source Type: Research / Documentation
+Relevance: High
+Confidence: High
+
 RAW_RELIABILITY_SIGNAL_LOG
 
 - 信号 1: 基于人类反馈的强化学习能够将模型输出引向预期目标

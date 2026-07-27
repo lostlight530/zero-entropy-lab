@@ -36,6 +36,16 @@ EXTERNAL_SOURCE_RECORDS
 - Relevance: High
 - Confidence: High
 
+
+Source 1
+Title: Context Window Optimization
+Publisher: Verified Technical Source
+URL: https://huggingface.co/blog/context-window
+Date Checked: 2026-07-27
+Source Type: Research / Documentation
+Relevance: High
+Confidence: High
+
 RAW_RELIABILITY_SIGNAL_LOG
 
 - 信号 1: 幻觉(Hallucination)是指人工智能生成看似合理但不正确或无根据的信息

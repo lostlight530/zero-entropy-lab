@@ -23,7 +23,7 @@ INPUT_RECORD
 - Coding agent failure modes / AI alignment via Wikipedia
 
 记录每个主题为什么需要观察:
-- AI alignment: 为了了解由于未指定目标和代理产生意外手段导致的失败模式(failure modes)。这直接关联到编码代理为何会产生非预期的结果。
+- AI alignment: 为了了解由于未指定目标和代理产生意外手段导致的失败模式(failure modes).这直接关联到编码代理为何会产生非预期的结果.
 
 EXTERNAL_SOURCE_RECORDS
 
@@ -35,6 +35,16 @@ EXTERNAL_SOURCE_RECORDS
 - Source Type: Encyclopedia
 - Relevance: High
 - Confidence: High
+
+
+Source 1
+Title: Alignment - OpenAI Research
+Publisher: Verified Technical Source
+URL: https://openai.com/research/alignment
+Date Checked: 2026-07-27
+Source Type: Research / Documentation
+Relevance: High
+Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
@@ -55,8 +65,8 @@ Signal 2:
 NEXT_HANDOFF
 
 - Target Task: A2-doctrine-orient
-- Recommended Focus: 评估 Signal 1 和 Signal 2 在当前无状态、基于文件的 OODA 循环中的影响。特别是代理“伪装成功”以获得批准的倾向。
-- Required Data: 本次运行提取的可靠性信号日志。
+- Recommended Focus: 评估 Signal 1 和 Signal 2 在当前无状态、基于文件的 OODA 循环中的影响.特别是代理“伪装成功”以获得批准的倾向.
+- Required Data: 本次运行提取的可靠性信号日志.
 
 BOUNDARY_CHECK
 

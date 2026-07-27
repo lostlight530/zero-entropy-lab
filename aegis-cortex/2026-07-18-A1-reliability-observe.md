@@ -36,6 +36,16 @@ EXTERNAL_SOURCE_RECORDS
 - Relevance: High
 - Confidence: High
 
+
+Source 1
+Title: OWASP Machine Learning Security Top 10
+Publisher: Verified Technical Source
+URL: https://owasp.org/www-project-machine-learning-security-top-10/
+Date Checked: 2026-07-27
+Source Type: Research / Documentation
+Relevance: High
+Confidence: High
+
 RAW_RELIABILITY_SIGNAL_LOG
 
 - 信号 1: 提示注入(Prompt injection)是一种利用特殊设计的输入使语言模型偏离预定指令的攻击手段

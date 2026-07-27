@@ -37,6 +37,7 @@ INPUT_RECORD
 - aegis-cortex/2026-07-A6-aegis-memorize-sample.md
 
 记录联网验证的主题和来源:
+- 来源: https://arxiv.org/abs/2311.05232
 主题: "AI agent" "self-correction" limitations OR "yes-man" problem
 来源: Taskade, Fastio, Reddit, Towards a Science of AI Agent Reliability, Gruve Blog
 

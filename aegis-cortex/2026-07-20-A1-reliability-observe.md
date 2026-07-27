@@ -23,7 +23,7 @@ INPUT_RECORD
 - AI observability via Wikipedia
 
 记录每个主题为什么需要观察:
-- AI observability: 探讨如何建立针对模型内部推理和外部行为的有效监控手段，特别是针对自治智能体(autonomous agents)的行为透明化。
+- AI observability: 探讨如何建立针对模型内部推理和外部行为的有效监控手段，特别是针对自治智能体(autonomous agents)的行为透明化.
 
 EXTERNAL_SOURCE_RECORDS
 
@@ -35,6 +35,16 @@ EXTERNAL_SOURCE_RECORDS
 - Source Type: Encyclopedia
 - Relevance: High
 - Confidence: High
+
+
+Source 1
+Title: Observability - Langfuse
+Publisher: Verified Technical Source
+URL: https://langfuse.com/docs/observability
+Date Checked: 2026-07-27
+Source Type: Research / Documentation
+Relevance: High
+Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
@@ -55,8 +65,8 @@ Signal 2:
 NEXT_HANDOFF
 
 - Target Task: A2-doctrine-orient
-- Recommended Focus: 将可观察性原则应用于当前基于文件的状态流转机制，特别是需要解释 Signal 1 (理解为何发生错误) 和 Signal 2 (监控概念漂移) 对于纯文本驱动循环的意义。
-- Required Data: 本次运行提取的可靠性信号日志。
+- Recommended Focus: 将可观察性原则应用于当前基于文件的状态流转机制，特别是需要解释 Signal 1 (理解为何发生错误) 和 Signal 2 (监控概念漂移) 对于纯文本驱动循环的意义.
+- Required Data: 本次运行提取的可靠性信号日志.
 
 BOUNDARY_CHECK
 

@@ -23,6 +23,7 @@ INPUT_RECORD
 - aegis-cortex/2026-07-03-A2-doctrine-orient.md
 
 联网复核来源:
+- 来源: https://owasp.org/www-project-machine-learning-security-top-10/
 - "OWASP Agent Memory Poisoning" 相关搜索，来源：Kiteworks / OWASP (确认状态污染在持久化代理内存中是现实的安全风险)
 
 PROTOCOL_ACTION_RECORD

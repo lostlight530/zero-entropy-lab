@@ -15,6 +15,10 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
+External Verification Topics:
+- Title: A Survey on Hallucination in Large Language Models
+  URL: https://arxiv.org/abs/2311.05232
+
 The following A1-A4 records were processed for July:
 - 13 daily A1/A2 records (2026-07-01 to 2026-07-13)
 - 2 weekly A3/A4 records (W27, W28)

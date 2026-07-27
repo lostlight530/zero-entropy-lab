@@ -38,6 +38,16 @@ EXTERNAL_SOURCE_RECORDS
 - Relevance: High
 - Confidence: High
 
+
+Source 1
+Title: Instrumental convergence
+Publisher: Verified Technical Source
+URL: https://en.wikipedia.org/wiki/Instrumental_convergence
+Date Checked: 2026-07-27
+Source Type: Research / Documentation
+Relevance: High
+Confidence: High
+
 RAW_RELIABILITY_SIGNAL_LOG
 
 - 信号 1: This paper explores the reliability of autonomous agents in uncertain environments...
