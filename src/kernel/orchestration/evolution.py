@@ -60,15 +60,14 @@ class Evolver:
         logging.info("Cycle Complete.")
 
     def _incubate_ideas(self):
-        try:
-            r = ReasoningEngine(self.project_root)
-            insights = r.ponder()
-            if isinstance(insights, dict) and "error" not in insights:
-                self._generate_cognitive_report(insights)
-            return insights
-        except Exception as e:
-            logging.error(f"Failed to ponder: {e}")
-            return {}
+        r = ReasoningEngine(self.project_root)
+        insights = r.ponder()
+        if not isinstance(insights, dict):
+            raise TypeError("ponder result must be a mapping")
+        if "error" in insights:
+            raise RuntimeError(f"ponder failed: {insights['error']}")
+        self._generate_cognitive_report(insights)
+        return insights
 
     def _generate_cognitive_report(self, insights):
         now_utc = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
@@ -126,14 +125,29 @@ class Evolver:
                     files.append(f)
         return files
 
+    @staticmethod
+    def _move_to_archive(source, destination):
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        if destination.exists():
+            if source.read_bytes() != destination.read_bytes():
+                raise FileExistsError(f"archive collision: {destination}")
+            source.unlink()
+            return
+        os.replace(source, destination)
+
     def _archive_inputs(self):
         now = datetime.datetime.now()
         archive_dir = self.inputs_path / "archive" / f"{now.year}" / f"{now.month:02d}"
         archive_dir.mkdir(parents=True, exist_ok=True)
 
         for f in self.inputs_path.iterdir():
-            if f.is_file() and f.name.endswith(".md") and not f.name.startswith('.') and f.name != "ARCHIVE_AND_HARVESTER.md":
-                shutil.move(str(f), str(archive_dir / f.name))
+            if (
+                f.is_file()
+                and f.name.endswith(".md")
+                and not f.name.startswith(".")
+                and f.name != "ARCHIVE_AND_HARVESTER.md"
+            ):
+                self._move_to_archive(f, archive_dir / f.name)
 
     def _analyze_file_content(self, filepath):
         """Extract tags from Harvester's analysis block in the MD file."""
