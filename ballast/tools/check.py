@@ -22,6 +22,8 @@ REQUIRED = (
     "tools/verify_lease_fencing.py",
     "tools/experiment_parser_independence.py",
     "tools/verify_parser_independence.py",
+    "tools/experiment_retention_expiry.py",
+    "tools/verify_retention_expiry.py",
 )
 FORBIDDEN_SUFFIXES = {".backup", ".db", ".jsonl", ".lock", ".pyc", ".stage", ".tmp"}
 DAILY_HEADINGS = (
