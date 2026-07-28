@@ -1,0 +1,321 @@
+# openai/openai-agents-python · examples/mcp/streamablehttp_custom_client_example/main.py
+
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/mcp/streamablehttp_custom_client_example/main.py](https://github.com/openai/openai-agents-python/blob/bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1/examples/mcp/streamablehttp_custom_client_example/main.py) |
+| 来源版本 | `bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1` |
+| 来源目录 Tree | `6619014cb5e3c71b86bae8fa1b2514c9d73d8f76` |
+| 来源内容 Blob | `20cbef1cdc78975a68ceb82e69c3758a9acc747d` |
+| 摄取时间 | `2026-07-28T07:52:22.781693+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_mcp_streamablehttp_custom_client_example_main_py_20cbef1cdc78` |
+
+## 本次变化
+
+- 新增行数 `137`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 未发现 Markdown 标题.
+
+<details>
+<summary>展开完整外部原文</summary>
+
+"""Example demonstrating custom httpx_client_factory for MCPServerStreamableHttp.
+
+This example shows how to configure custom HTTP client behavior for MCP StreamableHTTP
+connections, including SSL certificates, proxy settings, and custom timeouts.
+"""
+
+import asyncio
+import os
+import shutil
+import socket
+import subprocess
+import time
+from typing import Any, cast
+
+import httpx
+
+from agents import Agent, Runner, gen_trace_id, trace
+from agents.mcp import MCPServer, MCPServerStreamableHttp
+from agents.model_settings import ModelSettings
+
+STREAMABLE_HTTP_HOST = os.getenv("STREAMABLE_HTTP_HOST", "127.0.0.1")
+
+
+def _choose_port() -> int:
+    env_port = os.getenv("STREAMABLE_HTTP_PORT")
+    if env_port:
+        return int(env_port)
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind((STREAMABLE_HTTP_HOST, 0))
+        address = cast(tuple[str, int], s.getsockname())
+        return address[1]
+
+
+STREAMABLE_HTTP_PORT = _choose_port()
+os.environ.setdefault("STREAMABLE_HTTP_PORT", str(STREAMABLE_HTTP_PORT))
+STREAMABLE_HTTP_URL = f"http://{STREAMABLE_HTTP_HOST}:{STREAMABLE_HTTP_PORT}/mcp"
+
+
+def create_custom_http_client(
+    headers: dict[str, str] | None = None,
+    timeout: httpx.Timeout | None = None,
+    auth: httpx.Auth | None = None,
+) -> httpx.AsyncClient:
+    """Create a custom HTTP client with specific configurations.
+
+    This function demonstrates how to configure:
+    - Custom SSL verification settings
+    - Custom timeouts
+    - Custom headers
+    - Proxy settings (commented out)
+    """
+    if headers is None:
+        headers = {
+            "X-Custom-Client": "agents-mcp-example",
+            "User-Agent": "OpenAI-Agents-MCP/1.0",
+        }
+    if timeout is None:
+        timeout = httpx.Timeout(60.0, read=120.0)
+    if auth is None:
+        auth = None
+    return httpx.AsyncClient(
+        # Disable SSL verification for testing (not recommended for production)
+        verify=False,
+        # Set custom timeout
+        timeout=httpx.Timeout(60.0, read=120.0),
+        # Add custom headers that will be sent with every request
+        headers=headers,
+    )
+
+
+async def run_with_custom_client(mcp_server: MCPServer):
+    """Run the agent with a custom HTTP client configuration."""
+    agent = Agent(
+        name="Assistant",
+        instructions="Use the tools to answer the questions.",
+        mcp_servers=[mcp_server],
+        model_settings=ModelSettings(tool_choice="required"),
+    )
+
+    # Use the `add` tool to add two numbers
+    message = "Add these numbers: 7 and 22."
+    print(f"Running: {message}")
+    result = await Runner.run(starting_agent=agent, input=message)
+    print(result.final_output)
+
+
+async def main():
+    """Main function demonstrating different HTTP client configurations."""
+
+    print("=== Example: Custom HTTP Client with SSL disabled and custom headers ===")
+    async with MCPServerStreamableHttp(
+        name="Streamable HTTP with Custom Client",
+        params={
+            "url": STREAMABLE_HTTP_URL,
+            "httpx_client_factory": create_custom_http_client,
+        },
+    ) as server:
+        trace_id = gen_trace_id()
+        with trace(workflow_name="Custom HTTP Client Example", trace_id=trace_id):
+            print(f"View trace: https://platform.openai.com/logs/trace?trace_id={trace_id}\n")
+            await run_with_custom_client(server)
+
+
+if __name__ == "__main__":
+    # Let's make sure the user has uv installed
+    if not shutil.which("uv"):
+        raise RuntimeError(
+            "uv is not installed. Please install it: https://docs.astral.sh/uv/getting-started/installation/"
+        )
+
+    # We'll run the Streamable HTTP server in a subprocess. Usually this would be a remote server, but for this
+    # demo, we'll run it locally at STREAMABLE_HTTP_URL
+    process: subprocess.Popen[Any] | None = None
+    try:
+        this_dir = os.path.dirname(os.path.abspath(__file__))
+        server_file = os.path.join(this_dir, "server.py")
+
+        print(f"Starting Streamable HTTP server at {STREAMABLE_HTTP_URL} ...")
+
+        # Run `uv run server.py` to start the Streamable HTTP server
+        env = os.environ.copy()
+        env.setdefault("STREAMABLE_HTTP_HOST", STREAMABLE_HTTP_HOST)
+        env.setdefault("STREAMABLE_HTTP_PORT", str(STREAMABLE_HTTP_PORT))
+        process = subprocess.Popen(["uv", "run", server_file], env=env)
+        # Give it 3 seconds to start
+        time.sleep(3)
+
+        print("Streamable HTTP server started. Running example...\n\n")
+    except Exception as e:
+        print(f"Error starting Streamable HTTP server: {e}")
+        exit(1)
+
+    try:
+        asyncio.run(main())
+    finally:
+        if process:
+            process.terminate()
+
+</details>
+
+<details>
+<summary>展开完整版本差异</summary>
+
+```diff
+--- previous
+
++++ 20cbef1cdc78975a68ceb82e69c3758a9acc747d
+
+@@ -0,0 +1,137 @@
+
++"""Example demonstrating custom httpx_client_factory for MCPServerStreamableHttp.
++
++This example shows how to configure custom HTTP client behavior for MCP StreamableHTTP
++connections, including SSL certificates, proxy settings, and custom timeouts.
++"""
++
++import asyncio
++import os
++import shutil
++import socket
++import subprocess
++import time
++from typing import Any, cast
++
++import httpx
++
++from agents import Agent, Runner, gen_trace_id, trace
++from agents.mcp import MCPServer, MCPServerStreamableHttp
++from agents.model_settings import ModelSettings
++
++STREAMABLE_HTTP_HOST = os.getenv("STREAMABLE_HTTP_HOST", "127.0.0.1")
++
++
++def _choose_port() -> int:
++    env_port = os.getenv("STREAMABLE_HTTP_PORT")
++    if env_port:
++        return int(env_port)
++    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
++        s.bind((STREAMABLE_HTTP_HOST, 0))
++        address = cast(tuple[str, int], s.getsockname())
++        return address[1]
++
++
++STREAMABLE_HTTP_PORT = _choose_port()
++os.environ.setdefault("STREAMABLE_HTTP_PORT", str(STREAMABLE_HTTP_PORT))
++STREAMABLE_HTTP_URL = f"http://{STREAMABLE_HTTP_HOST}:{STREAMABLE_HTTP_PORT}/mcp"
++
++
++def create_custom_http_client(
++    headers: dict[str, str] | None = None,
++    timeout: httpx.Timeout | None = None,
++    auth: httpx.Auth | None = None,
++) -> httpx.AsyncClient:
++    """Create a custom HTTP client with specific configurations.
++
++    This function demonstrates how to configure:
++    - Custom SSL verification settings
++    - Custom timeouts
++    - Custom headers
++    - Proxy settings (commented out)
++    """
++    if headers is None:
++        headers = {
++            "X-Custom-Client": "agents-mcp-example",
++            "User-Agent": "OpenAI-Agents-MCP/1.0",
++        }
++    if timeout is None:
++        timeout = httpx.Timeout(60.0, read=120.0)
++    if auth is None:
++        auth = None
++    return httpx.AsyncClient(
++        # Disable SSL verification for testing (not recommended for production)
++        verify=False,
++        # Set custom timeout
++        timeout=httpx.Timeout(60.0, read=120.0),
++        # Add custom headers that will be sent with every request
++        headers=headers,
++    )
++
++
++async def run_with_custom_client(mcp_server: MCPServer):
++    """Run the agent with a custom HTTP client configuration."""
++    agent = Agent(
++        name="Assistant",
++        instructions="Use the tools to answer the questions.",
++        mcp_servers=[mcp_server],
++        model_settings=ModelSettings(tool_choice="required"),
++    )
++
++    # Use the `add` tool to add two numbers
++    message = "Add these numbers: 7 and 22."
++    print(f"Running: {message}")
++    result = await Runner.run(starting_agent=agent, input=message)
++    print(result.final_output)
++
++
++async def main():
++    """Main function demonstrating different HTTP client configurations."""
++
++    print("=== Example: Custom HTTP Client with SSL disabled and custom headers ===")
++    async with MCPServerStreamableHttp(
++        name="Streamable HTTP with Custom Client",
++        params={
++            "url": STREAMABLE_HTTP_URL,
++            "httpx_client_factory": create_custom_http_client,
++        },
++    ) as server:
++        trace_id = gen_trace_id()
++        with trace(workflow_name="Custom HTTP Client Example", trace_id=trace_id):
++            print(f"View trace: https://platform.openai.com/logs/trace?trace_id={trace_id}\n")
++            await run_with_custom_client(server)
++
++
++if __name__ == "__main__":
++    # Let's make sure the user has uv installed
++    if not shutil.which("uv"):
++        raise RuntimeError(
++            "uv is not installed. Please install it: https://docs.astral.sh/uv/getting-started/installation/"
++        )
++
++    # We'll run the Streamable HTTP server in a subprocess. Usually this would be a remote server, but for this
++    # demo, we'll run it locally at STREAMABLE_HTTP_URL
++    process: subprocess.Popen[Any] | None = None
++    try:
++        this_dir = os.path.dirname(os.path.abspath(__file__))
++        server_file = os.path.join(this_dir, "server.py")
++
++        print(f"Starting Streamable HTTP server at {STREAMABLE_HTTP_URL} ...")
++
++        # Run `uv run server.py` to start the Streamable HTTP server
++        env = os.environ.copy()
++        env.setdefault("STREAMABLE_HTTP_HOST", STREAMABLE_HTTP_HOST)
++        env.setdefault("STREAMABLE_HTTP_PORT", str(STREAMABLE_HTTP_PORT))
++        process = subprocess.Popen(["uv", "run", server_file], env=env)
++        # Give it 3 seconds to start
++        time.sleep(3)
++
++        print("Streamable HTTP server started. Running example...\n\n")
++    except Exception as e:
++        print(f"Error starting Streamable HTTP server: {e}")
++        exit(1)
++
++    try:
++        asyncio.run(main())
++    finally:
++        if process:
++            process.terminate()
+```
+
+</details>

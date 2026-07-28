@@ -1,0 +1,197 @@
+# openai/openai-agents-python · examples/mcp/tool_filter_example/main.py
+
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/mcp/tool_filter_example/main.py](https://github.com/openai/openai-agents-python/blob/bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1/examples/mcp/tool_filter_example/main.py) |
+| 来源版本 | `bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1` |
+| 来源目录 Tree | `6619014cb5e3c71b86bae8fa1b2514c9d73d8f76` |
+| 来源内容 Blob | `7f25cf4ae343713599022b3e69e41a26262d5479` |
+| 摄取时间 | `2026-07-28T07:52:24.497740+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_mcp_tool_filter_example_main_py_7f25cf4ae343` |
+
+## 本次变化
+
+- 新增行数 `75`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 未发现 Markdown 标题.
+
+<details>
+<summary>展开完整外部原文</summary>
+
+import asyncio
+import os
+import shutil
+from typing import Any, cast
+
+from agents import Agent, Runner, gen_trace_id, trace
+from agents.mcp import MCPServerStdio
+from agents.mcp.util import create_static_tool_filter
+
+
+async def run_with_auto_approval(agent: Agent[Any], message: str) -> str | None:
+    """Run and auto-approve interruptions."""
+
+    result = await Runner.run(agent, message)
+    while result.interruptions:
+        state = result.to_state()
+        for interruption in result.interruptions:
+            print(f"Approving a tool call... (name: {interruption.name})")
+            state.approve(interruption, always_approve=True)
+        result = await Runner.run(agent, state)
+    return cast(str | None, result.final_output)
+
+
+async def main():
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    samples_dir = os.path.join(current_dir, "sample_files")
+    target_path = os.path.join(samples_dir, "test.txt")
+
+    async with MCPServerStdio(
+        name="Filesystem Server with filter",
+        params={
+            "command": "npx",
+            "args": ["-y", "@modelcontextprotocol/server-filesystem", samples_dir],
+            "cwd": samples_dir,
+        },
+        require_approval="always",
+        tool_filter=create_static_tool_filter(
+            allowed_tool_names=["read_file", "list_directory"],
+            blocked_tool_names=["write_file"],
+        ),
+    ) as server:
+        agent = Agent(
+            name="MCP Assistant",
+            instructions=(
+                "Use only the available filesystem tools. "
+                "All file paths should be absolute paths inside the allowed directory. "
+                "If a user asks for an action that requires an unavailable tool, "
+                "explicitly explain that it is blocked by the tool filter."
+            ),
+            mcp_servers=[server],
+        )
+        trace_id = gen_trace_id()
+        with trace(workflow_name="MCP Tool Filter Example", trace_id=trace_id):
+            print(f"View trace: https://platform.openai.com/traces/trace?trace_id={trace_id}\n")
+            result = await run_with_auto_approval(
+                agent, f"List the files in this allowed directory: {samples_dir}"
+            )
+            print(result)
+
+            blocked_result = await run_with_auto_approval(
+                agent,
+                (
+                    f'Create a file at "{target_path}" with the text "hello". '
+                    "If you cannot, explain that write operations are blocked by the tool filter."
+                ),
+            )
+            print("\nAttempting to write a file (should be blocked):")
+            print(blocked_result)
+
+
+if __name__ == "__main__":
+    if not shutil.which("npx"):
+        raise RuntimeError("npx is required. Install it with `npm install -g npx`.")
+
+    asyncio.run(main())
+
+</details>
+
+<details>
+<summary>展开完整版本差异</summary>
+
+```diff
+--- previous
+
++++ 7f25cf4ae343713599022b3e69e41a26262d5479
+
+@@ -0,0 +1,75 @@
+
++import asyncio
++import os
++import shutil
++from typing import Any, cast
++
++from agents import Agent, Runner, gen_trace_id, trace
++from agents.mcp import MCPServerStdio
++from agents.mcp.util import create_static_tool_filter
++
++
++async def run_with_auto_approval(agent: Agent[Any], message: str) -> str | None:
++    """Run and auto-approve interruptions."""
++
++    result = await Runner.run(agent, message)
++    while result.interruptions:
++        state = result.to_state()
++        for interruption in result.interruptions:
++            print(f"Approving a tool call... (name: {interruption.name})")
++            state.approve(interruption, always_approve=True)
++        result = await Runner.run(agent, state)
++    return cast(str | None, result.final_output)
++
++
++async def main():
++    current_dir = os.path.dirname(os.path.abspath(__file__))
++    samples_dir = os.path.join(current_dir, "sample_files")
++    target_path = os.path.join(samples_dir, "test.txt")
++
++    async with MCPServerStdio(
++        name="Filesystem Server with filter",
++        params={
++            "command": "npx",
++            "args": ["-y", "@modelcontextprotocol/server-filesystem", samples_dir],
++            "cwd": samples_dir,
++        },
++        require_approval="always",
++        tool_filter=create_static_tool_filter(
++            allowed_tool_names=["read_file", "list_directory"],
++            blocked_tool_names=["write_file"],
++        ),
++    ) as server:
++        agent = Agent(
++            name="MCP Assistant",
++            instructions=(
++                "Use only the available filesystem tools. "
++                "All file paths should be absolute paths inside the allowed directory. "
++                "If a user asks for an action that requires an unavailable tool, "
++                "explicitly explain that it is blocked by the tool filter."
++            ),
++            mcp_servers=[server],
++        )
++        trace_id = gen_trace_id()
++        with trace(workflow_name="MCP Tool Filter Example", trace_id=trace_id):
++            print(f"View trace: https://platform.openai.com/traces/trace?trace_id={trace_id}\n")
++            result = await run_with_auto_approval(
++                agent, f"List the files in this allowed directory: {samples_dir}"
++            )
++            print(result)
++
++            blocked_result = await run_with_auto_approval(
++                agent,
++                (
++                    f'Create a file at "{target_path}" with the text "hello". '
++                    "If you cannot, explain that write operations are blocked by the tool filter."
++                ),
++            )
++            print("\nAttempting to write a file (should be blocked):")
++            print(blocked_result)
++
++
++if __name__ == "__main__":
++    if not shutil.which("npx"):
++        raise RuntimeError("npx is required. Install it with `npm install -g npx`.")
++
++    asyncio.run(main())
+```
+
+</details>

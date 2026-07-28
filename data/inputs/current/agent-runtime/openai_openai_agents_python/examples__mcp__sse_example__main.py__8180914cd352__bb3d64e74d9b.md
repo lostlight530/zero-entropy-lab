@@ -1,0 +1,255 @@
+# openai/openai-agents-python · examples/mcp/sse_example/main.py
+
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/mcp/sse_example/main.py](https://github.com/openai/openai-agents-python/blob/bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1/examples/mcp/sse_example/main.py) |
+| 来源版本 | `bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1` |
+| 来源目录 Tree | `6619014cb5e3c71b86bae8fa1b2514c9d73d8f76` |
+| 来源内容 Blob | `8180914cd352913faa3fde01f536ff4690684a4e` |
+| 摄取时间 | `2026-07-28T07:52:20.834649+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_mcp_sse_example_main_py_8180914cd352` |
+
+## 本次变化
+
+- 新增行数 `104`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 未发现 Markdown 标题.
+
+<details>
+<summary>展开完整外部原文</summary>
+
+import asyncio
+import os
+import shutil
+import socket
+import subprocess
+import time
+from typing import Any, cast
+
+from agents import Agent, Runner, gen_trace_id, trace
+from agents.mcp import MCPServer, MCPServerSse
+from agents.model_settings import ModelSettings
+
+SSE_HOST = os.getenv("SSE_HOST", "127.0.0.1")
+
+
+def _choose_port() -> int:
+    env_port = os.getenv("SSE_PORT")
+    if env_port:
+        return int(env_port)
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind((SSE_HOST, 0))
+        address = cast(tuple[str, int], s.getsockname())
+        return address[1]
+
+
+SSE_PORT = _choose_port()
+os.environ.setdefault("SSE_PORT", str(SSE_PORT))
+SSE_URL = f"http://{SSE_HOST}:{SSE_PORT}/sse"
+
+
+async def run(mcp_server: MCPServer):
+    agent = Agent(
+        name="Assistant",
+        instructions="Use the tools to answer the questions.",
+        mcp_servers=[mcp_server],
+        model_settings=ModelSettings(tool_choice="required"),
+    )
+
+    # Use the `add` tool to add two numbers
+    message = "Add these numbers: 7 and 22."
+    print(f"Running: {message}")
+    result = await Runner.run(starting_agent=agent, input=message)
+    print(result.final_output)
+
+    # Run the `get_weather` tool
+    message = "What's the weather in Tokyo?"
+    print(f"\n\nRunning: {message}")
+    result = await Runner.run(starting_agent=agent, input=message)
+    print(result.final_output)
+
+    # Run the `get_secret_word` tool
+    message = "What's the secret word?"
+    print(f"\n\nRunning: {message}")
+    result = await Runner.run(starting_agent=agent, input=message)
+    print(result.final_output)
+
+
+async def main():
+    async with MCPServerSse(
+        name="SSE Python Server",
+        params={
+            "url": SSE_URL,
+        },
+    ) as server:
+        trace_id = gen_trace_id()
+        with trace(workflow_name="SSE Example", trace_id=trace_id):
+            print(f"View trace: https://platform.openai.com/traces/trace?trace_id={trace_id}\n")
+            await run(server)
+
+
+if __name__ == "__main__":
+    # Let's make sure the user has uv installed
+    if not shutil.which("uv"):
+        raise RuntimeError(
+            "uv is not installed. Please install it: https://docs.astral.sh/uv/getting-started/installation/"
+        )
+
+    # We'll run the SSE server in a subprocess. Usually this would be a remote server, but for this
+    # demo, we'll run it locally at SSE_URL.
+    process: subprocess.Popen[Any] | None = None
+    try:
+        this_dir = os.path.dirname(os.path.abspath(__file__))
+        server_file = os.path.join(this_dir, "server.py")
+
+        print(f"Starting SSE server at {SSE_URL} ...")
+
+        # Run `uv run server.py` to start the SSE server
+        env = os.environ.copy()
+        env.setdefault("SSE_HOST", SSE_HOST)
+        env.setdefault("SSE_PORT", str(SSE_PORT))
+        process = subprocess.Popen(["uv", "run", server_file], env=env)
+        # Give it 3 seconds to start
+        time.sleep(3)
+
+        print("SSE server started. Running example...\n\n")
+    except Exception as e:
+        print(f"Error starting SSE server: {e}")
+        exit(1)
+
+    try:
+        asyncio.run(main())
+    finally:
+        if process:
+            process.terminate()
+
+</details>
+
+<details>
+<summary>展开完整版本差异</summary>
+
+```diff
+--- previous
+
++++ 8180914cd352913faa3fde01f536ff4690684a4e
+
+@@ -0,0 +1,104 @@
+
++import asyncio
++import os
++import shutil
++import socket
++import subprocess
++import time
++from typing import Any, cast
++
++from agents import Agent, Runner, gen_trace_id, trace
++from agents.mcp import MCPServer, MCPServerSse
++from agents.model_settings import ModelSettings
++
++SSE_HOST = os.getenv("SSE_HOST", "127.0.0.1")
++
++
++def _choose_port() -> int:
++    env_port = os.getenv("SSE_PORT")
++    if env_port:
++        return int(env_port)
++    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
++        s.bind((SSE_HOST, 0))
++        address = cast(tuple[str, int], s.getsockname())
++        return address[1]
++
++
++SSE_PORT = _choose_port()
++os.environ.setdefault("SSE_PORT", str(SSE_PORT))
++SSE_URL = f"http://{SSE_HOST}:{SSE_PORT}/sse"
++
++
++async def run(mcp_server: MCPServer):
++    agent = Agent(
++        name="Assistant",
++        instructions="Use the tools to answer the questions.",
++        mcp_servers=[mcp_server],
++        model_settings=ModelSettings(tool_choice="required"),
++    )
++
++    # Use the `add` tool to add two numbers
++    message = "Add these numbers: 7 and 22."
++    print(f"Running: {message}")
++    result = await Runner.run(starting_agent=agent, input=message)
++    print(result.final_output)
++
++    # Run the `get_weather` tool
++    message = "What's the weather in Tokyo?"
++    print(f"\n\nRunning: {message}")
++    result = await Runner.run(starting_agent=agent, input=message)
++    print(result.final_output)
++
++    # Run the `get_secret_word` tool
++    message = "What's the secret word?"
++    print(f"\n\nRunning: {message}")
++    result = await Runner.run(starting_agent=agent, input=message)
++    print(result.final_output)
++
++
++async def main():
++    async with MCPServerSse(
++        name="SSE Python Server",
++        params={
++            "url": SSE_URL,
++        },
++    ) as server:
++        trace_id = gen_trace_id()
++        with trace(workflow_name="SSE Example", trace_id=trace_id):
++            print(f"View trace: https://platform.openai.com/traces/trace?trace_id={trace_id}\n")
++            await run(server)
++
++
++if __name__ == "__main__":
++    # Let's make sure the user has uv installed
++    if not shutil.which("uv"):
++        raise RuntimeError(
++            "uv is not installed. Please install it: https://docs.astral.sh/uv/getting-started/installation/"
++        )
++
++    # We'll run the SSE server in a subprocess. Usually this would be a remote server, but for this
++    # demo, we'll run it locally at SSE_URL.
++    process: subprocess.Popen[Any] | None = None
++    try:
++        this_dir = os.path.dirname(os.path.abspath(__file__))
++        server_file = os.path.join(this_dir, "server.py")
++
++        print(f"Starting SSE server at {SSE_URL} ...")
++
++        # Run `uv run server.py` to start the SSE server
++        env = os.environ.copy()
++        env.setdefault("SSE_HOST", SSE_HOST)
++        env.setdefault("SSE_PORT", str(SSE_PORT))
++        process = subprocess.Popen(["uv", "run", server_file], env=env)
++        # Give it 3 seconds to start
++        time.sleep(3)
++
++        print("SSE server started. Running example...\n\n")
++    except Exception as e:
++        print(f"Error starting SSE server: {e}")
++        exit(1)
++
++    try:
++        asyncio.run(main())
++    finally:
++        if process:
++            process.terminate()
+```
+
+</details>

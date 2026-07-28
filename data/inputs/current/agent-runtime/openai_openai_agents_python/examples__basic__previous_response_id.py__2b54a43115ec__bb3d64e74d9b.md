@@ -1,0 +1,195 @@
+# openai/openai-agents-python · examples/basic/previous_response_id.py
+
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/basic/previous_response_id.py](https://github.com/openai/openai-agents-python/blob/bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1/examples/basic/previous_response_id.py) |
+| 来源版本 | `bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1` |
+| 来源目录 Tree | `6619014cb5e3c71b86bae8fa1b2514c9d73d8f76` |
+| 来源内容 Blob | `2b54a43115ec1bad41026976888d33603bf4f4d3` |
+| 摄取时间 | `2026-07-28T07:52:09.855212+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_basic_previous_response_id_py_2b54a43115ec` |
+
+## 本次变化
+
+- 新增行数 `74`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 未发现 Markdown 标题.
+
+<details>
+<summary>展开完整外部原文</summary>
+
+import asyncio
+
+from agents import Agent, Runner
+from examples.auto_mode import input_with_fallback, is_auto_mode
+
+"""This demonstrates usage of the `previous_response_id` parameter to continue a conversation.
+The second run passes the previous response ID to the model, which allows it to continue the
+conversation without re-sending the previous messages.
+
+Notes:
+1. This only applies to the OpenAI Responses API. Other models will ignore this parameter.
+2. Responses are only stored for 30 days as of this writing, so in production you should
+store the response ID along with an expiration date; if the response is no longer valid,
+you'll need to re-send the previous conversation history.
+"""
+
+
+async def main():
+    print("=== Non-streaming Example ===")
+    agent = Agent(
+        name="Assistant",
+        instructions="You are a helpful assistant. be VERY concise.",
+    )
+
+    result = await Runner.run(agent, "What is the largest country in South America?")
+    print(result.final_output)
+    # Brazil
+
+    result = await Runner.run(
+        agent,
+        "What is the capital of that country?",
+        previous_response_id=result.last_response_id,
+    )
+    print(result.final_output)
+    # Brasilia
+
+
+async def main_stream():
+    print("=== Streaming Example ===")
+    agent = Agent(
+        name="Assistant",
+        instructions="You are a helpful assistant. be VERY concise.",
+    )
+
+    result = Runner.run_streamed(agent, "What is the largest country in South America?")
+
+    async for event in result.stream_events():
+        if event.type == "raw_response_event" and event.data.type == "response.output_text.delta":
+            print(event.data.delta, end="", flush=True)
+
+    print()
+
+    result = Runner.run_streamed(
+        agent,
+        "What is the capital of that country?",
+        previous_response_id=result.last_response_id,
+    )
+
+    async for event in result.stream_events():
+        if event.type == "raw_response_event" and event.data.type == "response.output_text.delta":
+            print(event.data.delta, end="", flush=True)
+
+
+if __name__ == "__main__":
+    if is_auto_mode():
+        asyncio.run(main())
+        print()
+        asyncio.run(main_stream())
+    else:
+        is_stream = input_with_fallback("Run in stream mode? (y/n): ", "n")
+        if is_stream == "y":
+            asyncio.run(main_stream())
+        else:
+            asyncio.run(main())
+
+</details>
+
+<details>
+<summary>展开完整版本差异</summary>
+
+```diff
+--- previous
+
++++ 2b54a43115ec1bad41026976888d33603bf4f4d3
+
+@@ -0,0 +1,74 @@
+
++import asyncio
++
++from agents import Agent, Runner
++from examples.auto_mode import input_with_fallback, is_auto_mode
++
++"""This demonstrates usage of the `previous_response_id` parameter to continue a conversation.
++The second run passes the previous response ID to the model, which allows it to continue the
++conversation without re-sending the previous messages.
++
++Notes:
++1. This only applies to the OpenAI Responses API. Other models will ignore this parameter.
++2. Responses are only stored for 30 days as of this writing, so in production you should
++store the response ID along with an expiration date; if the response is no longer valid,
++you'll need to re-send the previous conversation history.
++"""
++
++
++async def main():
++    print("=== Non-streaming Example ===")
++    agent = Agent(
++        name="Assistant",
++        instructions="You are a helpful assistant. be VERY concise.",
++    )
++
++    result = await Runner.run(agent, "What is the largest country in South America?")
++    print(result.final_output)
++    # Brazil
++
++    result = await Runner.run(
++        agent,
++        "What is the capital of that country?",
++        previous_response_id=result.last_response_id,
++    )
++    print(result.final_output)
++    # Brasilia
++
++
++async def main_stream():
++    print("=== Streaming Example ===")
++    agent = Agent(
++        name="Assistant",
++        instructions="You are a helpful assistant. be VERY concise.",
++    )
++
++    result = Runner.run_streamed(agent, "What is the largest country in South America?")
++
++    async for event in result.stream_events():
++        if event.type == "raw_response_event" and event.data.type == "response.output_text.delta":
++            print(event.data.delta, end="", flush=True)
++
++    print()
++
++    result = Runner.run_streamed(
++        agent,
++        "What is the capital of that country?",
++        previous_response_id=result.last_response_id,
++    )
++
++    async for event in result.stream_events():
++        if event.type == "raw_response_event" and event.data.type == "response.output_text.delta":
++            print(event.data.delta, end="", flush=True)
++
++
++if __name__ == "__main__":
++    if is_auto_mode():
++        asyncio.run(main())
++        print()
++        asyncio.run(main_stream())
++    else:
++        is_stream = input_with_fallback("Run in stream mode? (y/n): ", "n")
++        if is_stream == "y":
++            asyncio.run(main_stream())
++        else:
++            asyncio.run(main())
+```
+
+</details>

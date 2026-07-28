@@ -1,0 +1,232 @@
+# microsoft/agent-framework · docs/decisions/adr-template.md
+
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [microsoft/agent-framework](https://github.com/microsoft/agent-framework) |
+| 来源文件 | [docs/decisions/adr-template.md](https://github.com/microsoft/agent-framework/blob/7b6d2579884b0fde7729342f046ea58847ffdf37/docs/decisions/adr-template.md) |
+| 来源版本 | `7b6d2579884b0fde7729342f046ea58847ffdf37` |
+| 来源目录 Tree | `6f8b23f6e1d9616e7048b6be74892c14a50a044d` |
+| 来源内容 Blob | `a96551338a6e4510959d9baab30b943ab1019b73` |
+| 摄取时间 | `2026-07-28T07:52:48.564127+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_microsoft_agent_framework_docs_decisions_adr_template_md_a96551338a6e` |
+
+## 本次变化
+
+- 新增行数 `87`.
+- 删除行数 `0`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- These are optional elements. Feel free to remove any of them.
+- {short title of solved problem and solution}
+- Context and Problem Statement
+- Decision Drivers
+- Considered Options
+- Decision Outcome
+- Consequences
+- Validation
+- Pros and Cons of the Options
+- {title of option 1}
+- {title of other option}
+- More Information
+
+<details>
+<summary>展开完整外部原文</summary>
+
+---
+# These are optional elements. Feel free to remove any of them.
+status: {proposed | rejected | accepted | deprecated | … | superseded by [ADR-0001](0001-madr-architecture-decisions.md)}
+contact: {person proposing the ADR}
+date: {YYYY-MM-DD when the decision was last updated}
+deciders: {list everyone involved in the decision}
+consulted: {list everyone whose opinions are sought (typically subject-matter experts); and with whom there is a two-way communication}
+informed: {list everyone who is kept up-to-date on progress; and with whom there is a one-way communication}
+---
+
+# {short title of solved problem and solution}
+
+## Context and Problem Statement
+
+{Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story.
+You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
+
+<!-- This is an optional element. Feel free to remove. -->
+
+## Decision Drivers
+
+- {decision driver 1, e.g., a force, facing concern, …}
+- {decision driver 2, e.g., a force, facing concern, …}
+- … <!-- numbers of drivers can vary -->
+
+## Considered Options
+
+- {title of option 1}
+- {title of option 2}
+- {title of option 3}
+- … <!-- numbers of options can vary -->
+
+## Decision Outcome
+
+Chosen option: "{title of option 1}", because
+{justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force {force} | … | comes out best (see below)}.
+
+<!-- This is an optional element. Feel free to remove. -->
+
+### Consequences
+
+- Good, because {positive consequence, e.g., improvement of one or more desired qualities, …}
+- Bad, because {negative consequence, e.g., compromising one or more desired qualities, …}
+- … <!-- numbers of consequences can vary -->
+
+<!-- This is an optional element. Feel free to remove. -->
+
+## Validation
+
+{describe how the implementation of/compliance with the ADR is validated. E.g., by a review or an ArchUnit test}
+
+<!-- This is an optional element. Feel free to remove. -->
+
+## Pros and Cons of the Options
+
+### {title of option 1}
+
+<!-- This is an optional element. Feel free to remove. -->
+
+{example | description | pointer to more information | …}
+
+- Good, because {argument a}
+- Good, because {argument b}
+<!-- use "neutral" if the given argument weights neither for good nor bad -->
+- Neutral, because {argument c}
+- Bad, because {argument d}
+- … <!-- numbers of pros and cons can vary -->
+
+### {title of other option}
+
+{example | description | pointer to more information | …}
+
+- Good, because {argument a}
+- Good, because {argument b}
+- Neutral, because {argument c}
+- Bad, because {argument d}
+- …
+
+<!-- This is an optional element. Feel free to remove. -->
+
+## More Information
+
+{You might want to provide additional evidence/confidence for the decision outcome here and/or
+document the team agreement on the decision and/or
+define when this decision when and how the decision should be realized and if/when it should be re-visited and/or
+how the decision is validated.
+Links to other decisions and resources might appear here as well.}
+
+</details>
+
+<details>
+<summary>展开完整版本差异</summary>
+
+```diff
+--- previous
+
++++ a96551338a6e4510959d9baab30b943ab1019b73
+
+@@ -0,0 +1,87 @@
+
++---
++# These are optional elements. Feel free to remove any of them.
++status: {proposed | rejected | accepted | deprecated | … | superseded by [ADR-0001](0001-madr-architecture-decisions.md)}
++contact: {person proposing the ADR}
++date: {YYYY-MM-DD when the decision was last updated}
++deciders: {list everyone involved in the decision}
++consulted: {list everyone whose opinions are sought (typically subject-matter experts); and with whom there is a two-way communication}
++informed: {list everyone who is kept up-to-date on progress; and with whom there is a one-way communication}
++---
++
++# {short title of solved problem and solution}
++
++## Context and Problem Statement
++
++{Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story.
++You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
++
++<!-- This is an optional element. Feel free to remove. -->
++
++## Decision Drivers
++
++- {decision driver 1, e.g., a force, facing concern, …}
++- {decision driver 2, e.g., a force, facing concern, …}
++- … <!-- numbers of drivers can vary -->
++
++## Considered Options
++
++- {title of option 1}
++- {title of option 2}
++- {title of option 3}
++- … <!-- numbers of options can vary -->
++
++## Decision Outcome
++
++Chosen option: "{title of option 1}", because
++{justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force {force} | … | comes out best (see below)}.
++
++<!-- This is an optional element. Feel free to remove. -->
++
++### Consequences
++
++- Good, because {positive consequence, e.g., improvement of one or more desired qualities, …}
++- Bad, because {negative consequence, e.g., compromising one or more desired qualities, …}
++- … <!-- numbers of consequences can vary -->
++
++<!-- This is an optional element. Feel free to remove. -->
++
++## Validation
++
++{describe how the implementation of/compliance with the ADR is validated. E.g., by a review or an ArchUnit test}
++
++<!-- This is an optional element. Feel free to remove. -->
++
++## Pros and Cons of the Options
++
++### {title of option 1}
++
++<!-- This is an optional element. Feel free to remove. -->
++
++{example | description | pointer to more information | …}
++
++- Good, because {argument a}
++- Good, because {argument b}
++<!-- use "neutral" if the given argument weights neither for good nor bad -->
++- Neutral, because {argument c}
++- Bad, because {argument d}
++- … <!-- numbers of pros and cons can vary -->
++
++### {title of other option}
++
++{example | description | pointer to more information | …}
++
++- Good, because {argument a}
++- Good, because {argument b}
++- Neutral, because {argument c}
++- Bad, because {argument d}
++- …
++
++<!-- This is an optional element. Feel free to remove. -->
++
++## More Information
++
++{You might want to provide additional evidence/confidence for the decision outcome here and/or
++document the team agreement on the decision and/or
++define when this decision when and how the decision should be realized and if/when it should be re-visited and/or
++how the decision is validated.
++Links to other decisions and resources might appear here as well.}
+```
+
+</details>

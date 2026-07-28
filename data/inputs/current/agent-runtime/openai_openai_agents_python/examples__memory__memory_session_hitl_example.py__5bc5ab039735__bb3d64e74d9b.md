@@ -1,0 +1,195 @@
+# openai/openai-agents-python · examples/memory/memory_session_hitl_example.py
+
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/memory/memory_session_hitl_example.py](https://github.com/openai/openai-agents-python/blob/bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1/examples/memory/memory_session_hitl_example.py) |
+| 来源版本 | `bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1` |
+| 来源目录 Tree | `6619014cb5e3c71b86bae8fa1b2514c9d73d8f76` |
+| 来源内容 Blob | `5bc5ab03973500bf68d51fb510d42f4b44f4909c` |
+| 摄取时间 | `2026-07-28T07:52:28.969958+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_memory_memory_session_hitl_example_py_73d7e3ae0369` |
+
+## 本次变化
+
+- 新增行数 `7`.
+- 删除行数 `2`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 未发现 Markdown 标题.
+
+<details>
+<summary>展开完整外部原文</summary>
+
+"""
+Example demonstrating SQLite in-memory session with human-in-the-loop (HITL) tool approval.
+
+This example shows how to use SQLite in-memory session memory combined with
+human-in-the-loop tool approval. The session maintains conversation history while
+requiring approval for specific tool calls.
+"""
+
+import asyncio
+
+from agents import (
+    Agent,
+    Runner,
+    SQLiteSession,
+)
+from agents.decorators import tool
+from examples.auto_mode import confirm_with_fallback, input_with_fallback, is_auto_mode
+
+
+async def _needs_approval(_ctx, _params, _call_id) -> bool:
+    """Always require approval for weather tool."""
+    return True
+
+
+@tool(needs_approval=_needs_approval)
+def get_weather(location: str) -> str:
+    """Get weather for a location.
+
+    Args:
+        location: The location to get weather for
+
+    Returns:
+        Weather information as a string
+    """
+    # Simulated weather data
+    weather_data = {
+        "san francisco": "Foggy, 58°F",
+        "oakland": "Sunny, 72°F",
+        "new york": "Rainy, 65°F",
+    }
+    # Check if any city name is in the provided location string
+    location_lower = location.lower()
+    for city, weather in weather_data.items():
+        if city in location_lower:
+            return weather
+    return f"Weather data not available for {location}"
+
+
+async def prompt_yes_no(question: str) -> bool:
+    """Prompt user for yes/no answer.
+
+    Args:
+        question: The question to ask
+
+    Returns:
+        True if user answered yes, False otherwise
+    """
+    return confirm_with_fallback(f"\n{question} (y/n): ", default=True)
+
+
+async def main():
+    # Create an agent with a tool that requires approval
+    agent = Agent(
+        name="HITL Assistant",
+        instructions="You help users with information. Always use available tools when appropriate. Keep responses concise.",
+        tools=[get_weather],
+    )
+
+    # Create an in-memory SQLite session instance that will persist across runs
+    session = SQLiteSession(":memory:")
+    session_id = session.session_id
+
+    print("=== Memory Session + HITL Example ===")
+    print(f"Session id: {session_id}")
+    print("Enter a message to chat with the agent. Submit an empty line to exit.")
+    print("The agent will ask for approval before using tools.\n")
+
+    auto_mode = is_auto_mode()
+
+    while True:
+        # Get user input
+        if auto_mode:
+            user_message = input_with_fallback("You: ", "What's the weather in Oakland?")
+        else:
+            print("You: ", end="", flush=True)
+            loop = asyncio.get_event_loop()
+            user_message = await loop.run_in_executor(None, input)
+
+        if not user_message.strip():
+            break
+
+        # Run the agent
+        result = await Runner.run(agent, user_message, session=session)
+
+        # Handle interruptions (tool approvals)
+        while result.interruptions:
+            # Get the run state
+            state = result.to_state()
+
+            for interruption in result.interruptions:
+                tool_name = interruption.name or "Unknown tool"
+                args = interruption.arguments or "(no arguments)"
+
+                approved = await prompt_yes_no(
+                    f"Agent {interruption.agent.name} wants to call '{tool_name}' with {args}. Approve?"
+                )
+
+                if approved:
+                    state.approve(interruption)
+                    print("Approved tool call.")
+                else:
+                    state.reject(interruption)
+                    print("Rejected tool call.")
+
+            # Resume the run with the updated state
+            result = await Runner.run(agent, state, session=session)
+
+        # Display the response
+        reply = result.final_output or "[No final output produced]"
+        print(f"Assistant: {reply}\n")
+        if auto_mode:
+            break
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+</details>
+
+<details>
+<summary>展开完整版本差异</summary>
+
+```diff
+--- previous
+
++++ 5bc5ab03973500bf68d51fb510d42f4b44f4909c
+
+@@ -8,7 +8,12 @@
+
+ 
+ import asyncio
+ 
+-from agents import Agent, Runner, SQLiteSession, function_tool
++from agents import (
++    Agent,
++    Runner,
++    SQLiteSession,
++)
++from agents.decorators import tool
+ from examples.auto_mode import confirm_with_fallback, input_with_fallback, is_auto_mode
+ 
+ 
+@@ -17,7 +22,7 @@
+
+     return True
+ 
+ 
+-@function_tool(needs_approval=_needs_approval)
++@tool(needs_approval=_needs_approval)
+ def get_weather(location: str) -> str:
+     """Get weather for a location.
+```
+
+</details>
