@@ -26,6 +26,8 @@ REQUIRED = (
     "tools/verify_retention_expiry.py",
     "tools/experiment_dual_write_atomicity.py",
     "tools/verify_dual_write_atomicity.py",
+    "tools/experiment_late_attempt_fencing.py",
+    "tools/verify_late_attempt_fencing.py",
 )
 FORBIDDEN_SUFFIXES = {".backup", ".db", ".jsonl", ".lock", ".pyc", ".stage", ".tmp"}
 DAILY_HEADINGS = (
