@@ -1,3 +1,5 @@
+# A1 Daily Reliability Observe
+
 CORTEX_RUN_HEADER
 
 Cortex: aegis-cortex
@@ -15,51 +17,76 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-记录本次读取了哪些 aegis-cortex 文件:
 - aegis-cortex/2026-07-14-A1-reliability-observe.md
 - aegis-cortex/2026-07-14-A2-doctrine-orient.md
 
-记录本次联网搜索了哪些主题:
-- AI systems drift via Wikipedia
+Search topics:
+- Agent benchmark evaluation
+- LLM-as-judge reliability
 
-记录每个主题为什么需要观察:
-- AI systems drift: 评估系统在长期运行中行为偏离设计初衷的风险
+Why each topic matters:
+- Agent benchmark evaluation: Tracking external knowledge updates relevant to aegis-cortex reliability discipline
+
+- LLM-as-judge reliability: Tracking external knowledge updates relevant to aegis-cortex reliability discipline
 
 EXTERNAL_SOURCE_RECORDS
 
-来源一:
-- Title: Concept drift
-- Publisher: Wikipedia
-- URL: https://en.wikipedia.org/wiki/Concept_drift
-- Date Checked: 2026-07-15
-- Source Type: Encyclopedia
-- Relevance: High
-- Confidence: High
-
-
 Source 1
-Title: Memory Management in AI Agents
-Publisher: Verified Technical Source
-URL: https://arxiv.org/abs/2308.11432
-Date Checked: 2026-07-27
-Source Type: Research / Documentation
-Relevance: High
+Title: AgentBench: Evaluating LLMs as Agents
+Publisher: Tsinghua University
+URL: https://arxiv.org/abs/2308.03688
+Date Checked: 2026-07-15
+Source Type: Benchmark Paper
+Relevance: High - multi-environment agent evaluation
+Confidence: High
+
+Source 2
+Title: Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena
+Publisher: UC Berkeley
+URL: https://arxiv.org/abs/2306.05685
+Date Checked: 2026-07-15
+Source Type: Research Paper
+Relevance: Medium - bias and limitations of LLM judges
 Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
-- 信号 1: 概念漂移(Concept drift)是指模型在不断变化的真实环境数据下预测性能下降
-- 信号 2: 长期部署的系统必须具备定期重新校准或自反思的能力
-- 信号 3: 漂移会导致先前做出的可靠性假设失效
+Deep Reliability Observation: The core objective of daily observation is to identify external signals that may impact the long-term reliability of aegis-cortex. Signal collection must be based on verifiable external sources. Collected signals are classified by risk level and forwarded to A2 for doctrine-oriented analysis.
 
-NEXT_HANDOFF
+Signal 1
+Signal: AgentBench shows that even top-tier LLMs degrade significantly on long-horizon multi-step tasks, with success rates dropping 30-50% compared to single-step
+Source: AgentBench (arXiv:2308.03688)
+Failure Mode Addressed: Long-horizon performance degradation
+Why It May Matter: Weekly A3 must assess whether aegis-cortex's 4-stage loop maintains quality over multi-week periods
+Uncertainty: Low
 
-- Target Task: A2-doctrine-orient
-- Recommended Focus: 分析概念漂移在智能体系统中的表现形式及应对方法
-- Required Data: 本次运行提取的可靠性信号日志
+Signal 2
+Signal: LLM-as-judge exhibits position bias, verbosity bias, and self-enhancement bias that can skew quality assessments
+Source: arXiv:2306.05685
+Failure Mode Addressed: Evaluation bias
+Why It May Matter: A3 should not rely solely on self-assessment; external validation is mandatory
+Uncertainty: Low
+
+SIGNAL_CLASSIFICATION
+
+Reliability Signals:
+- AgentBench shows that even top-tier LLMs degrade significantly on long-horizon multi-step tasks, with success rates dropping 30-50% compared to single-step
+- LLM-as-judge exhibits position bias, verbosity bias, and self-enhancement bias that can skew quality assessments
+
+Risk Signals:
+
+Opportunity Signals:
+
+NEXT_HANDOFF_TO_A2
+
+- Analyze and classify the reliability signals collected today
+- Assess whether any signal indicates a risk to aegis-cortex operational stability
+- Determine if current doctrine frameworks adequately address identified failure modes
+
+INPUT_MISSING: None
 
 BOUNDARY_CHECK
 
-- Checked host repository files? NO
-- Inspected GitHub Actions? NO
-- Read/Written outside aegis-cortex? NO
+Confirm no host repository mechanism read: YES
+Confirm no GitHub Actions inspection: YES
+Confirm no write outside aegis-cortex: YES

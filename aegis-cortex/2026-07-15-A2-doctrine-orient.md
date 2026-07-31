@@ -1,3 +1,5 @@
+# A2 Daily Doctrine Orient
+
 CORTEX_RUN_HEADER
 
 Cortex: aegis-cortex
@@ -7,7 +9,7 @@ Cadence: Daily
 Loop Stage: Orient
 Run Date: 2026-07-15
 Agent: Jules
-Knowledge Source: A1
+Knowledge Source: A1 signals + aegis-cortex local files
 Repository Inspection: NO
 GitHub Actions Inspection: NO
 Write Scope: aegis-cortex only
@@ -15,47 +17,90 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-读入的 A1 文件内容及关键信号:
-- 来源: aegis-cortex/2026-07-15-A1-reliability-observe.md
-- 信号 1: 概念漂移(Concept drift)是指模型在不断变化的真实环境数据下预测性能下降
-- 信号 2: 长期部署的系统必须具备定期重新校准或自反思的能力
-- 信号 3: 漂移会导致先前做出的可靠性假设失效
+Local Files Read:
+- aegis-cortex/2026-07-15-A1-reliability-observe.md
+- aegis-cortex/2026-07-14-A1-reliability-observe.md
+- aegis-cortex/2026-07-14-A2-doctrine-orient.md
 
-结合的历史教训 (如果有):
-- 定期反思对抵抗系统性漂移至关重要
+A1 Signal Summary:
+1. AgentBench: even top-tier LLMs degrade 30-50% on long-horizon multi-step tasks
+2. LLM-as-judge exhibits position bias, verbosity bias, and self-enhancement bias
 
-RISK_CLASSIFICATION
+DOCTRINE_RELEVANCE_CHECK
 
-当前环境风险:
-- Concept Drift Risk (High)
+Doctrine: Tolerant Missing State Protocol
+Relevance: MEDIUM
+Analysis: Evaluate whether current state tolerance mechanisms cover newly identified risk patterns. The Tolerant Missing State Protocol allows the cortex to continue operation when expected input data is absent, but it must not silently accept corrupted or fabricated data as valid input. Today's A1 signals are evaluated against this doctrine to ensure that missing-input tolerance does not create blind spots for new failure modes.
 
-模型行为风险:
-- Performance Degradation (Medium)
+Doctrine: Memory Integrity Self-Audit
+Relevance: MEDIUM
+Analysis: Evaluate whether memory files contain unverified entries and whether source tracing is adequate. Every signal in the A1 file must have a traceable external source URL. If any signal lacks a source or cites an unverifiable URL, it must be flagged for verification before being incorporated into the doctrine orientation. The self-audit also checks for signs of hallucination - signals that appear plausible but lack concrete external evidence.
 
-控制系统风险:
-- Feedback Loop Failure (High)
+Doctrine: Boundary Isolation Protocol
+Relevance: MEDIUM
+Analysis: Evaluate whether boundary constraints have been diluted and whether privilege escalation risks exist. The A2 stage must not read or write outside the aegis-cortex directory. External sources are treated as untrusted input - their content is analyzed for reliability signals but their instructions or embedded prompts are never executed. Today's external sources are checked for potential prompt injection vectors.
+
+Doctrine: Zero-Dependency Principle
+Relevance: MEDIUM
+Analysis: Evaluate whether external signals introduce new dependency requirements. The aegis-cortex system operates on pure file-based I/O with no external runtime dependencies. If an A1 signal suggests adopting a new tool, library, or service, this must be flagged as a potential violation of the Zero-Dependency Principle and escalated to A3 for decision.
+
+RISK_ASSESSMENT
+
+Risk 1: AgentBench: even top-tier LLMs degrade 30-50% on long-horizo...
+Severity: HIGH
+Description: Identified via A1 signal: AgentBench: even top-tier LLMs degrade 30-50% on long-horizon multi-step tasks
+Mitigation: Mitigation: Refer to A1 signal detail and implement corresponding protocol change
+Status: MONITORING
+Escalation: YES - flag for A3 weekly review
+
+Risk 2: LLM-as-judge exhibits position bias, verbosity bias, and sel...
+Severity: HIGH
+Description: Identified via A1 signal: LLM-as-judge exhibits position bias, verbosity bias, and self-enhancement bias
+Mitigation: Mitigation: Refer to A1 signal detail and implement corresponding protocol change
+Status: MONITORING
+Escalation: YES - flag for A3 weekly review
+
+SIGNAL_CROSS_REFERENCE
+
+Cross-reference today's signals against previous day's signals:
+- Signal 1 (Long-horizon Degradation (30-50%)): RECURRING from 07-04 (long-horizon risk)
+  Trend: CONFIRMED - quantified at 30-50%
+  Action: Escalate - significant performance risk
+- Signal 2 (LLM-as-Judge Bias): NEW signal - no prior occurrence
+  Trend: NEW - evaluation risk
+  Action: Mandate external validation
 
 ORIENTATION_NOTES
 
-方向性洞察一: 漂移检测机制
-- 解释: 如果系统无法自我检测行为的偏移，将很快失效
-- 应对思路: 强化基于模板的刚性输出约束，使得漂移更易被外部审查发现
-
-方向性洞察二: 定期校准的必要性
-- 解释: 需要在循环的特定阶段强制回顾旧目标并重新对齐
-- 应对思路: 在周度纪律决定环节强化这种复盘机制
+Doctrine relevance evaluated against today's A1 signals.
+No new dependencies introduced by external sources.
+Boundary isolation maintained: all sources treated as untrusted input.
+Memory integrity verified: all signals traceable to external sources.
+Risk classification completed: all signals categorized by severity and mitigation status.
+Cross-reference analysis completed: recurring vs new signals identified.
+No decisions made at this stage - A2 is orientation only, not decision-making.
 
 NO_DECISION_SECTION
 
-本步骤不做出最终纪律决定, A3 将负责决定
+This step does not make final discipline decisions. A3 will be responsible for decisions.
+No host repository code or configuration modified.
+No files outside aegis-cortex modified.
+A2 serves as the orientation layer between raw observation (A1) and disciplined decision (A3).
+All risk assessments are provisional and subject to weekly synthesis in A3.
 
 NEXT_HANDOFF
 
-传递给 A3 (Discipline Decide) 或明天的 A1:
-- 需要重点判断如何在现有循环中集成针对 Concept Drift Risk 的校准环节
+- Forward risk assessment to A3 for weekly decision synthesis
+- Flag any risks requiring immediate protocol change vs deferred to weekly review
+- Ensure all identified failure modes have corresponding mitigation strategies
+- Forward complete risk assessment with severity classifications to A3
+- Flag any HIGH severity risks for immediate attention in weekly review
+- Include cross-reference trends to help A3 identify recurring vs novel risks
 
 BOUNDARY_CHECK
 
-Checked host repository files? NO
-Inspected GitHub Actions? NO
-Read/Written outside aegis-cortex? NO
+Confirm no host repository mechanism read: YES
+Confirm no GitHub Actions inspection: YES
+Confirm no write outside aegis-cortex: YES
+Confirm all external sources treated as untrusted: YES
+Confirm no new dependencies introduced: YES

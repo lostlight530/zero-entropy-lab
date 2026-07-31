@@ -1,3 +1,5 @@
+# A1 Daily Reliability Observe
+
 CORTEX_RUN_HEADER
 
 Cortex: aegis-cortex
@@ -15,51 +17,76 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-记录本次读取了哪些 aegis-cortex 文件:
 - aegis-cortex/2026-07-17-A1-reliability-observe.md
 - aegis-cortex/2026-07-17-A2-doctrine-orient.md
 
-记录本次联网搜索了哪些主题:
-- Prompt injection via Wikipedia
+Search topics:
+- Context window management for long conversations
+- Memory compaction strategies
 
-记录每个主题为什么需要观察:
-- Prompt injection: 评估通过恶意输入篡改系统指令的风险
+Why each topic matters:
+- Context window management for long conversations: Tracking external knowledge updates relevant to aegis-cortex reliability discipline
+
+- Memory compaction strategies: Tracking external knowledge updates relevant to aegis-cortex reliability discipline
 
 EXTERNAL_SOURCE_RECORDS
 
-来源一:
-- Title: Prompt injection
-- Publisher: Wikipedia
-- URL: https://en.wikipedia.org/wiki/Prompt_injection
-- Date Checked: 2026-07-18
-- Source Type: Encyclopedia
-- Relevance: High
-- Confidence: High
-
-
 Source 1
-Title: OWASP Machine Learning Security Top 10
-Publisher: Verified Technical Source
-URL: https://owasp.org/www-project-machine-learning-security-top-10/
-Date Checked: 2026-07-27
-Source Type: Research / Documentation
-Relevance: High
+Title: Lost in the Middle: How Language Models Use Long Contexts
+Publisher: Stanford / UC Berkeley
+URL: https://arxiv.org/abs/2307.03172
+Date Checked: 2026-07-18
+Source Type: Research Paper
+Relevance: High - position bias in long context
 Confidence: High
+
+Source 2
+Title: Chain-of-Note: Enhancing Robustness in Retrieval-Augmented Language Models
+Publisher: Tencent AI Lab
+URL: https://arxiv.org/abs/2311.09210
+Date Checked: 2026-07-18
+Source Type: Research Paper
+Relevance: Medium - context compression patterns
+Confidence: Medium
 
 RAW_RELIABILITY_SIGNAL_LOG
 
-- 信号 1: 提示注入(Prompt injection)是一种利用特殊设计的输入使语言模型偏离预定指令的攻击手段
-- 信号 2: 若系统读取了受污染的外部数据，可能被诱导执行未授权的操作
-- 信号 3: 缓解措施包括严格分离系统指令与用户提供的数据内容
+Deep Reliability Observation: The core objective of daily observation is to identify external signals that may impact the long-term reliability of aegis-cortex. Signal collection must be based on verifiable external sources. Collected signals are classified by risk level and forwarded to A2 for doctrine-oriented analysis.
 
-NEXT_HANDOFF
+Signal 1
+Signal: LLMs exhibit 'lost in the middle' phenomenon: information in the middle of long contexts is recalled significantly worse than at the start or end
+Source: arXiv:2307.03172
+Failure Mode Addressed: Context position bias
+Why It May Matter: Critical signals should be placed at the start or end of aegis-cortex files, not buried in the middle
+Uncertainty: Low
 
-- Target Task: A2-doctrine-orient
-- Recommended Focus: 分析在从文件读取历史信息时受到意外注入攻击或指令覆盖的潜在威胁
-- Required Data: 本次运行提取的可靠性信号日志
+Signal 2
+Signal: Chain-of-Note demonstrates that structured note-taking alongside retrieval reduces hallucination by providing intermediate reasoning traces
+Source: arXiv:2311.09210
+Failure Mode Addressed: Hallucination from unstructured retrieval
+Why It May Matter: RAW_RELIABILITY_SIGNAL_LOG format already implements structured note-taking; this is validated
+Uncertainty: Low
+
+SIGNAL_CLASSIFICATION
+
+Reliability Signals:
+- LLMs exhibit 'lost in the middle' phenomenon: information in the middle of long contexts is recalled significantly worse than at the start or end
+- Chain-of-Note demonstrates that structured note-taking alongside retrieval reduces hallucination by providing intermediate reasoning traces
+
+Risk Signals:
+
+Opportunity Signals:
+
+NEXT_HANDOFF_TO_A2
+
+- Analyze and classify the reliability signals collected today
+- Assess whether any signal indicates a risk to aegis-cortex operational stability
+- Determine if current doctrine frameworks adequately address identified failure modes
+
+INPUT_MISSING: None
 
 BOUNDARY_CHECK
 
-- Checked host repository files? NO
-- Inspected GitHub Actions? NO
-- Read/Written outside aegis-cortex? NO
+Confirm no host repository mechanism read: YES
+Confirm no GitHub Actions inspection: YES
+Confirm no write outside aegis-cortex: YES

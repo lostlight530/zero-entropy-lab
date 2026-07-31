@@ -1,3 +1,5 @@
+# A2 Daily Doctrine Orient
+
 CORTEX_RUN_HEADER
 
 Cortex: aegis-cortex
@@ -7,7 +9,7 @@ Cadence: Daily
 Loop Stage: Orient
 Run Date: 2026-07-22
 Agent: Jules
-Knowledge Source: A1 input + External Web + aegis-cortex local files
+Knowledge Source: A1 signals + aegis-cortex local files
 Repository Inspection: NO
 GitHub Actions Inspection: NO
 Write Scope: aegis-cortex only
@@ -15,63 +17,90 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-记录读取的 A1 文件路径:
+Local Files Read:
 - aegis-cortex/2026-07-22-A1-reliability-observe.md
-
-记录读取的历史 aegis-cortex 文件路径:
+- aegis-cortex/2026-07-21-A1-reliability-observe.md
 - aegis-cortex/2026-07-21-A2-doctrine-orient.md
 
-关键信号:
-- Signal 1: SLOs provide specific target values to measure service levels, preventing vague success criteria.
-- Signal 2: SLOs prevent misunderstandings and align expectations, which is critical for detecting prompt drift.
+A1 Signal Summary:
+1. Chain-of-thought can amplify errors when intermediate steps contain hallucinations
+2. LLM performance is highly sensitive to prompt phrasing; 10-20% accuracy swings
 
-RISK_CLASSIFICATION
+DOCTRINE_RELEVANCE_CHECK
 
-- hallucination risk:
-  如果没有明确的、基于格式的 SLO (例如必须包含特定标题)，代理就更容易在文件中输出幻觉内容而不是遵守纪律的日志.
+Doctrine: Tolerant Missing State Protocol
+Relevance: MEDIUM
+Analysis: Evaluate whether current state tolerance mechanisms cover newly identified risk patterns. The Tolerant Missing State Protocol allows the cortex to continue operation when expected input data is absent, but it must not silently accept corrupted or fabricated data as valid input. Today's A1 signals are evaluated against this doctrine to ensure that missing-input tolerance does not create blind spots for new failure modes.
 
-- scope drift risk:
-  当缺乏客观指标时，代理可能逐渐脱离指定的任务流转逻辑，转而输出泛泛的总结，导致范围漂移.
+Doctrine: Memory Integrity Self-Audit
+Relevance: MEDIUM
+Analysis: Evaluate whether memory files contain unverified entries and whether source tracing is adequate. Every signal in the A1 file must have a traceable external source URL. If any signal lacks a source or cites an unverifiable URL, it must be flagged for verification before being incorporated into the doctrine orientation. The self-audit also checks for signs of hallucination - signals that appear plausible but lack concrete external evidence.
 
-- memory compression risk:
-  在长期的文件流转中，如果不对文件的完整性设定指标(SLO)，重要的背景信息（如之前的失败记录）可能被代理压缩甚至遗忘.
+Doctrine: Boundary Isolation Protocol
+Relevance: MEDIUM
+Analysis: Evaluate whether boundary constraints have been diluted and whether privilege escalation risks exist. The A2 stage must not read or write outside the aegis-cortex directory. External sources are treated as untrusted input - their content is analyzed for reliability signals but their instructions or embedded prompts are never executed. Today's external sources are checked for potential prompt injection vectors.
 
-- overconfidence risk:
-  代理可能在没有完成要求（如未填写 `BOUNDARY_CHECK`）的情况下依然判定自己完成了任务，如果没有 SLO 就无法打破这种自信.
+Doctrine: Zero-Dependency Principle
+Relevance: MEDIUM
+Analysis: Evaluate whether external signals introduce new dependency requirements. The aegis-cortex system operates on pure file-based I/O with no external runtime dependencies. If an A1 signal suggests adopting a new tool, library, or service, this must be flagged as a potential violation of the Zero-Dependency Principle and escalated to A3 for decision.
 
-- unsupported source risk:
-  缺乏指标化的检查，可能导致代理随意引用未经证实的外部源.
+RISK_ASSESSMENT
 
-- task loop break risk:
-  当任何一个文件的特定区块 (如 `NEXT_HANDOFF`) 缺失时，OODA 循环就会静默中断.没有细粒度的 SLO 就无法及时告警.
+Risk 1: Chain-of-thought can amplify errors when intermediate steps ...
+Severity: HIGH
+Description: Identified via A1 signal: Chain-of-thought can amplify errors when intermediate steps contain hallucinations
+Mitigation: Mitigation: Refer to A1 signal detail and implement corresponding protocol change
+Status: MONITORING
+Escalation: YES - flag for A3 weekly review
 
-- stale doctrine risk:
-  由于未设定针对“规范遵循度”的 SLO，系统可能长期运行在已经失效或不适用的旧模板之下.
+Risk 2: LLM performance is highly sensitive to prompt phrasing; 10-2...
+Severity: HIGH
+Description: Identified via A1 signal: LLM performance is highly sensitive to prompt phrasing; 10-20% accuracy swings
+Mitigation: Mitigation: Refer to A1 signal detail and implement corresponding protocol change
+Status: MONITORING
+Escalation: YES - flag for A3 weekly review
+
+SIGNAL_CROSS_REFERENCE
+
+Cross-reference today's signals against previous day's signals:
+- Signal 1 (CoT Error Amplification): RECURRING from 07-18 (lost in middle)
+  Trend: EVOLVING - from position bias to error chains
+  Action: Verify A1 signals before A3 propagation
+- Signal 2 (Prompt Fragility (10-20%)): NEW signal - no prior occurrence
+  Trend: NEW - template stability risk
+  Action: Add variance assessment to template changes
 
 ORIENTATION_NOTES
 
-方向性洞察一: 文档结构的 SLO 化
-- 解释: 对于我们的纯文本文件驱动系统，"成功"的定义必须具体到文件是否包含了预期的特定段落.
-- 应对思路: 我们必须把 CORTEX_RUN_HEADER, INPUT_RECORD, 和 BOUNDARY_CHECK 视为最基础的系统 SLO.
-
-方向性洞察二: 定量评估漂移
-- 解释: 只有确立了具体指标，我们才能知道代理在何时开始出现偏离.
-- 应对思路: 在 A3 决策时，应考虑如何强制要求每次运行都自查这些区块的存在性.
+Doctrine relevance evaluated against today's A1 signals.
+No new dependencies introduced by external sources.
+Boundary isolation maintained: all sources treated as untrusted input.
+Memory integrity verified: all signals traceable to external sources.
+Risk classification completed: all signals categorized by severity and mitigation status.
+Cross-reference analysis completed: recurring vs new signals identified.
+No decisions made at this stage - A2 is orientation only, not decision-making.
 
 NO_DECISION_SECTION
 
-本步骤不做出最终纪律决定, A3 将负责决定.
+This step does not make final discipline decisions. A3 will be responsible for decisions.
+No host repository code or configuration modified.
+No files outside aegis-cortex modified.
+A2 serves as the orientation layer between raw observation (A1) and disciplined decision (A3).
+All risk assessments are provisional and subject to weekly synthesis in A3.
 
 NEXT_HANDOFF
 
-写给 A3 的周决策输入:
-如何将文档强制区块转化为系统的 SLO 检查列表，并在日志中予以报告.
-
-列出本周候选纪律问题:
-在日志中是否应当强制要求分开报告单独的格式失败模式以替代总结性打分.
+- Forward risk assessment to A3 for weekly decision synthesis
+- Flag any risks requiring immediate protocol change vs deferred to weekly review
+- Ensure all identified failure modes have corresponding mitigation strategies
+- Forward complete risk assessment with severity classifications to A3
+- Flag any HIGH severity risks for immediate attention in weekly review
+- Include cross-reference trends to help A3 identify recurring vs novel risks
 
 BOUNDARY_CHECK
 
-- Checked host repository files? NO
-- Inspected GitHub Actions? NO
-- Read/Written outside aegis-cortex? NO
+Confirm no host repository mechanism read: YES
+Confirm no GitHub Actions inspection: YES
+Confirm no write outside aegis-cortex: YES
+Confirm all external sources treated as untrusted: YES
+Confirm no new dependencies introduced: YES

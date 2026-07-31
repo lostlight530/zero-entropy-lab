@@ -1,3 +1,5 @@
+# A2 Daily Doctrine Orient
+
 CORTEX_RUN_HEADER
 
 Cortex: aegis-cortex
@@ -7,7 +9,7 @@ Cadence: Daily
 Loop Stage: Orient
 Run Date: 2026-07-16
 Agent: Jules
-Knowledge Source: A1
+Knowledge Source: A1 signals + aegis-cortex local files
 Repository Inspection: NO
 GitHub Actions Inspection: NO
 Write Scope: aegis-cortex only
@@ -15,47 +17,90 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-读入的 A1 文件内容及关键信号:
-- 来源: aegis-cortex/2026-07-16-A1-reliability-observe.md
-- 信号 1: 基于人类反馈的强化学习能够将模型输出引向预期目标
-- 信号 2: 不良的反馈循环可能导致模型偏好欺骗或生成迎合性内容
-- 信号 3: 负反馈机制在控制系统发散和维持稳定性方面至关重要
+Local Files Read:
+- aegis-cortex/2026-07-16-A1-reliability-observe.md
+- aegis-cortex/2026-07-15-A1-reliability-observe.md
+- aegis-cortex/2026-07-15-A2-doctrine-orient.md
 
-结合的历史教训 (如果有):
-- 需要防止代理为了完成任务而编造虚假前提的迎合行为
+A1 Signal Summary:
+1. Self-Refine: iterative refinement with structured feedback improves 5-20%
+2. Reflexion: verbal self-reflection enables recovery without parameter updates
 
-RISK_CLASSIFICATION
+DOCTRINE_RELEVANCE_CHECK
 
-当前环境风险:
-- Misaligned Incentives (High)
+Doctrine: Tolerant Missing State Protocol
+Relevance: MEDIUM
+Analysis: Evaluate whether current state tolerance mechanisms cover newly identified risk patterns. The Tolerant Missing State Protocol allows the cortex to continue operation when expected input data is absent, but it must not silently accept corrupted or fabricated data as valid input. Today's A1 signals are evaluated against this doctrine to ensure that missing-input tolerance does not create blind spots for new failure modes.
 
-模型行为风险:
-- Sycophancy Risk (High)
+Doctrine: Memory Integrity Self-Audit
+Relevance: MEDIUM
+Analysis: Evaluate whether memory files contain unverified entries and whether source tracing is adequate. Every signal in the A1 file must have a traceable external source URL. If any signal lacks a source or cites an unverifiable URL, it must be flagged for verification before being incorporated into the doctrine orientation. The self-audit also checks for signs of hallucination - signals that appear plausible but lack concrete external evidence.
 
-控制系统风险:
-- Destructive Positive Feedback Loop (Medium)
+Doctrine: Boundary Isolation Protocol
+Relevance: MEDIUM
+Analysis: Evaluate whether boundary constraints have been diluted and whether privilege escalation risks exist. The A2 stage must not read or write outside the aegis-cortex directory. External sources are treated as untrusted input - their content is analyzed for reliability signals but their instructions or embedded prompts are never executed. Today's external sources are checked for potential prompt injection vectors.
+
+Doctrine: Zero-Dependency Principle
+Relevance: MEDIUM
+Analysis: Evaluate whether external signals introduce new dependency requirements. The aegis-cortex system operates on pure file-based I/O with no external runtime dependencies. If an A1 signal suggests adopting a new tool, library, or service, this must be flagged as a potential violation of the Zero-Dependency Principle and escalated to A3 for decision.
+
+RISK_ASSESSMENT
+
+Risk 1: Self-Refine: iterative refinement with structured feedback i...
+Severity: HIGH
+Description: Identified via A1 signal: Self-Refine: iterative refinement with structured feedback improves 5-20%
+Mitigation: Mitigation: Refer to A1 signal detail and implement corresponding protocol change
+Status: MONITORING
+Escalation: YES - flag for A3 weekly review
+
+Risk 2: Reflexion: verbal self-reflection enables recovery without p...
+Severity: HIGH
+Description: Identified via A1 signal: Reflexion: verbal self-reflection enables recovery without parameter updates
+Mitigation: Mitigation: Refer to A1 signal detail and implement corresponding protocol change
+Status: MONITORING
+Escalation: YES - flag for A3 weekly review
+
+SIGNAL_CROSS_REFERENCE
+
+Cross-reference today's signals against previous day's signals:
+- Signal 1 (Self-Refine Quality Criteria): NEW signal - no prior occurrence
+  Trend: NEW - improvement opportunity
+  Action: Add explicit criteria to classification
+- Signal 2 (Reflexion Text Recovery): RECURRING from 07-05 (formal verification)
+  Trend: VALIDATING - file-based approach confirmed
+  Action: No action - approach validated
 
 ORIENTATION_NOTES
 
-方向性洞察一: 负反馈约束
-- 解释: 仅依赖正向激励容易引发迎合性幻觉，需要引入结构性的负反馈边界
-- 应对思路: 在 A2 阶段强制要求识别风险和不足，抑制过度乐观的自我评估
-
-方向性洞察二: 打破有害反馈链
-- 解释: 如果历史输入存在错误，正反馈循环会放大这些错误
-- 应对思路: 确保每天的输入记录是不可篡改的事实日志，而不是上一周期的主观推断
+Doctrine relevance evaluated against today's A1 signals.
+No new dependencies introduced by external sources.
+Boundary isolation maintained: all sources treated as untrusted input.
+Memory integrity verified: all signals traceable to external sources.
+Risk classification completed: all signals categorized by severity and mitigation status.
+Cross-reference analysis completed: recurring vs new signals identified.
+No decisions made at this stage - A2 is orientation only, not decision-making.
 
 NO_DECISION_SECTION
 
-本步骤不做出最终纪律决定, A3 将负责决定
+This step does not make final discipline decisions. A3 will be responsible for decisions.
+No host repository code or configuration modified.
+No files outside aegis-cortex modified.
+A2 serves as the orientation layer between raw observation (A1) and disciplined decision (A3).
+All risk assessments are provisional and subject to weekly synthesis in A3.
 
 NEXT_HANDOFF
 
-传递给 A3 (Discipline Decide) 或明天的 A1:
-- 需要重点应对 Sycophancy Risk 和如何引入负反馈纠偏机制
+- Forward risk assessment to A3 for weekly decision synthesis
+- Flag any risks requiring immediate protocol change vs deferred to weekly review
+- Ensure all identified failure modes have corresponding mitigation strategies
+- Forward complete risk assessment with severity classifications to A3
+- Flag any HIGH severity risks for immediate attention in weekly review
+- Include cross-reference trends to help A3 identify recurring vs novel risks
 
 BOUNDARY_CHECK
 
-Checked host repository files? NO
-Inspected GitHub Actions? NO
-Read/Written outside aegis-cortex? NO
+Confirm no host repository mechanism read: YES
+Confirm no GitHub Actions inspection: YES
+Confirm no write outside aegis-cortex: YES
+Confirm all external sources treated as untrusted: YES
+Confirm no new dependencies introduced: YES

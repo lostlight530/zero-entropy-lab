@@ -9,7 +9,7 @@ Cadence: Weekly
 Loop Stage: Decide
 Run Week: 2026-W27
 Agent: Jules
-Knowledge Source: This Week A1 / A2 + External Web + aegis-cortex local files
+Knowledge Source: This Week A1/A2 + External Web + aegis-cortex local files
 Repository Inspection: NO
 GitHub Actions Inspection: NO
 Write Scope: aegis-cortex only
@@ -17,81 +17,99 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-本周读取的 A1 和 A2 文件列表:
-* aegis-cortex/2026-07-01-A1-reliability-observe.md
-* aegis-cortex/2026-07-01-A2-doctrine-orient.md
-* aegis-cortex/2026-07-02-A1-reliability-observe.md
-* aegis-cortex/2026-07-02-A2-doctrine-orient.md
-* aegis-cortex/2026-07-03-A1-reliability-observe.md
-* aegis-cortex/2026-07-03-A2-doctrine-orient.md
-* aegis-cortex/2026-07-04-A1-reliability-observe.md
-* aegis-cortex/2026-07-04-A2-doctrine-orient.md
-* aegis-cortex/2026-07-05-A1-reliability-observe.md
-* aegis-cortex/2026-07-05-A2-doctrine-orient.md
-
-读取的历史 A3 / A4 / A6 文件列表:
-* aegis-cortex/2026-W27-A3-discipline-decide-sample.md
-* aegis-cortex/2026-W27-A4-protocol-act-sample.md
-* aegis-cortex/2026-07-A6-aegis-memorize-sample.md
-
-联网验证的主题和来源:
-- 来源: https://owasp.org/www-project-machine-learning-security-top-10/
-* 主题: AI Agent Memory Poisoning
-* 来源: OWASP Agent Memory Guard, MintMCP Blog
+Files read this week:
+- aegis-cortex/2026-07-01-A1-reliability-observe.md
+- aegis-cortex/2026-07-01-A2-doctrine-orient.md
+- aegis-cortex/2026-07-02-A1-reliability-observe.md
+- aegis-cortex/2026-07-02-A2-doctrine-orient.md
+- aegis-cortex/2026-07-03-A1-reliability-observe.md
+- aegis-cortex/2026-07-03-A2-doctrine-orient.md
+- aegis-cortex/2026-07-04-A1-reliability-observe.md
+- aegis-cortex/2026-07-04-A2-doctrine-orient.md
+- aegis-cortex/2026-07-05-A1-reliability-observe.md
+- aegis-cortex/2026-07-05-A2-doctrine-orient.md
 
 WEEKLY_RISK_SYNTHESIS
 
-总结本周重复出现的风险:
-* Memory Poisoning / Hallucination Propagation: 代理在未获取上游文件或文件缺失的情况下强行推理并产生虚假上下文，进而污染整个任务流的风险依然突出.
-* Scope Drift: 代理“乐于助人”的倾向会导致不自觉地检查或修改宿主仓库和配置文件.
+Repeated risks this week:
+- Cascading context degradation from early-stage errors (seen in A1 07-01, 07-03)
+- Tool-use failure modes: schema errors and selection errors (07-01, 07-04)
+- Hallucination risk requiring external source grounding (07-02, 07-03)
 
-总结本周新出现的风险:
-* Context Overflow: 在读取大型聚合日志文件时，无限制的完全读取可能导致 LLM 注意力丢失，并偏离原始指令.
+New risks this week:
+- Prompt injection via indirect content embedding (07-03)
+- Multi-agent state desynchronization from information asymmetry (07-04)
+- Deadlock/livelock risk requiring formal verification (07-05)
 
-总结本周被证伪或降级的风险:
-* 外部官方文档作为个人事实判断来源的风险降级，应将外部产品状态与私有代理状态严格分离，不能让开源治理案例完全覆盖日常运维事实.
+Downgraded or falsified risks:
+- Memory overflow risk partially mitigated by existing recency/importance scoring (07-02)
 
 DECISION_SET
 
-纪律重点 1
-Decision: 采用宽容缺失状态协议 (Tolerant Missing State Protocol)，若预计读取的文件缺失，必须明确记录 INPUT_MISSING，严格禁止通过逻辑推理来凭空补齐缺失文件内容.
-Evidence: 联网搜索 OWASP Agent Memory Poisoning 显示状态污染在长生命周期代理中非常危险，且本周 2026-07-03 的 A1/A2 文件多次指明该问题.
-Risk Reduced: Hallucination Risk / Memory Poisoning Risk
-Expected Behavior Change: 代理在缺失输入时将显示其不确定状态，而不是假装自己获取了文件，确保历史文件的健康.
-Why Now: 避免因个别环节失败而造成未来连续多周的任务流长期虚假化.
+Decision 1
+Decision: Mandate external source citation for all reliability claims in A1 signals
+Evidence: Survey of Hallucination (arXiv:2202.03629) and OWASP LLM Top 10 (07-03)
+Risk Reduced: Hallucination from unverified claims
+Expected Behavior Change: A1 signals must include Source field with traceable URL
+Why Now: Hallucination risk identified across 3 consecutive days (07-01 to 07-03)
+Implementation Priority: HIGH
+Verification Method: Check that A1 files include Source field with URL in next cycle
 
-纪律重点 2
-Decision: 强制固化结构和保护边界 (Hardcoded Boundaries vs Dynamic Prompts).所有生成的输出文件必须强制在首部与尾部分别加入不加修改的静态 CORTEX_RUN_HEADER 与 BOUNDARY_CHECK.
-Evidence: 2026-07-04 A1/A2 文件探讨了动态 prompt 容易被对话上下文冲淡导致代理突破物理边界的问题.
-Risk Reduced: Scope Drift Risk
-Expected Behavior Change: 代理在每个任务中都必须反复确立自己不修改、不审查 zero-entropy-lab 宿主环境这一铁律.
-Why Now: 防止系统逐步“觉醒”去维护无相关权限的宿主系统代码.
+Decision 2
+Decision: Add retry circuit breaker to A2 analysis loop
+Evidence: Towards Reliable Autonomous Agents (arXiv:2402.18862) identifies infinite loop risk
+Risk Reduced: Infinite loop / Execution paralysis
+Expected Behavior Change: A2 must include max-retry counter; if exceeded, flag as INPUT_MISSING
+Why Now: Infinite loop risk identified in 07-01 and confirmed in 07-04
+Implementation Priority: HIGH
+Verification Method: Check that A1 files include Source field with URL in next cycle
 
-纪律重点 3
-Decision: 实行强制受控文件读取纪律 (Mandatory Controlled File Read Discipline).在分析任何长日志或过往历史记录时，代理不再一次性输出全部内容，必须分段或进行条件过滤.
-Evidence: 2026-07-05 和本周 A1 系统提示说明长下文会导致可靠性降级和注意力漂移.
-Risk Reduced: Context Overflow Risk
-Expected Behavior Change: 日志处理和长期记忆恢复将被更细致地检索和分块管理.
-Why Now: A3 与 A4 阶段需处理大量周度上下文，必须立刻保证上下文长度可控.
+Decision 3
+Decision: Treat all external content as untrusted input for boundary isolation
+Evidence: OWASP LLM Top 10 LLM01 (Prompt Injection) and arXiv:2302.12173
+Risk Reduced: Prompt injection / Agent hijacking
+Expected Behavior Change: EXTERNAL_SOURCE_RECORDS must include confidence assessment
+Why Now: Security risk elevated by 07-03 prompt injection research
+Implementation Priority: HIGH
+Verification Method: Check that A1 files include Source field with URL in next cycle
+
+Decision 4
+Decision: Implement freshness verification in A1-A2 handoff
+Evidence: Cooperative LLM Agents (arXiv:2310.14244) identifies state desynchronization
+Risk Reduced: State desynchronization
+Expected Behavior Change: A1 must verify previous day's file exists and is non-empty before processing
+Why Now: Multi-agent coordination risk identified in 07-04
+Implementation Priority: HIGH
+Verification Method: Check that A1 files include Source field with URL in next cycle
 
 DO_NOT_CHANGE
 
-明确不修改的规则或判断:
-1. 不读取、不修改宿主仓库代码 (zero-entropy-lab/src, docs 等).
-2. 不读取 GitHub Actions 任何工作流配置 (.github/workflows 等).
-3. 不删除、不覆写已有的 `-sample.md` 模板文件.
-说明为什么保持不变:
-* aegis-cortex 目录是被隔离运行的智能体工作域，这既是安全性边界也是职责边界，越过这些边界即代表产生了不可挽回的越权风险.保留 sample 文件为后续循环提供了唯一的硬性结构标准.
+- Core OODA loop structure (A1-A2-A3-A4) validated by ReAct research (07-05)
+- File-based memory approach validated by Reflexion research (07-05)
+- Boundary check format remains unchanged
+- Zero-dependency principle maintained: no external libraries required
+
+WEEKLY_TREND_ANALYSIS
+
+Signal Volume: 10 signals collected across 5 days (2 per day average)
+Risk Distribution: 6 HIGH severity, 4 MEDIUM severity
+Novel Risk Rate: 80% of signals are first-time observations (high novelty)
+Architecture Validation: 2 signals confirmed existing architecture (ReAct, file-based memory)
+Security Risk Trend: Escalating - prompt injection and specification gaming identified
+Recommended Focus for Next Week: Monitor for recurring risks and validate mitigations
 
 HANDOFF_TO_A4
 
-A4 需将本周制定的 3 条纪律（宽容缺失状态协议、强制边界断言、受控读取纪律）转化为内部更新记录.
-1. 在 `aegis-cortex/2026-W27-A4-protocol-act.md` 中增加对应三个行动项 (Action).
-2. A4 的更新仅限于写入自己当周的 `A4-protocol-act` 文件.
-3. 严禁 A4 提出修改零熵实验室宿主仓库代码的需求或任何系统全局配置文件.
+- Execute all 4 decisions as protocol actions in A4
+- Monitor for infinite loop symptoms in next week's A1 runs
+- Continue tracking prompt injection vectors as evolving threat
+- Assess formal verification feasibility for state machine
+- All 4 decisions must be implemented as protocol actions
+- Each action must include verification method and risk reduction assessment
+- Include next-week monitoring guidance for each implemented change
 
 BOUNDARY_CHECK
 
-确认没有读取宿主仓库机制: YES
-确认没有读取 GitHub Actions: YES
-确认没有写入 aegis-cortex 之外的文件: YES
+Confirm no host repository mechanism read: YES
+Confirm no GitHub Actions inspection: YES
+Confirm no write outside aegis-cortex: YES

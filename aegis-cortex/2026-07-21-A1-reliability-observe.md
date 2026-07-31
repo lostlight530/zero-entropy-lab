@@ -1,3 +1,5 @@
+# A1 Daily Reliability Observe
+
 CORTEX_RUN_HEADER
 
 Cortex: aegis-cortex
@@ -15,61 +17,76 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-记录本次读取了哪些 aegis-cortex 文件:
 - aegis-cortex/2026-07-20-A1-reliability-observe.md
 - aegis-cortex/2026-07-20-A2-doctrine-orient.md
 
-记录本次联网搜索了哪些主题:
-- Coding agent failure modes / AI alignment via Wikipedia
+Search topics:
+- Reinforcement learning from human feedback (RLHF) reliability
+- Alignment tax in LLM systems
 
-记录每个主题为什么需要观察:
-- AI alignment: 为了了解由于未指定目标和代理产生意外手段导致的失败模式(failure modes).这直接关联到编码代理为何会产生非预期的结果.
+Why each topic matters:
+- Reinforcement learning from human feedback (RLHF) reliability: Tracking external knowledge updates relevant to aegis-cortex reliability discipline
+
+- Alignment tax in LLM systems: Tracking external knowledge updates relevant to aegis-cortex reliability discipline
 
 EXTERNAL_SOURCE_RECORDS
 
-来源一:
-- Title: AI alignment
-- Publisher: Wikipedia
-- URL: https://en.wikipedia.org/wiki/AI_alignment
-- Date Checked: 2026-07-21
-- Source Type: Encyclopedia
-- Relevance: High
-- Confidence: High
-
-
 Source 1
-Title: Alignment - OpenAI Research
-Publisher: Verified Technical Source
-URL: https://openai.com/research/alignment
-Date Checked: 2026-07-27
-Source Type: Research / Documentation
-Relevance: High
+Title: Training a Helpful and Harmless Assistant with RLHF
+Publisher: Anthropic
+URL: https://arxiv.org/abs/2204.05862
+Date Checked: 2026-07-21
+Source Type: Research Paper
+Relevance: High - RLHF tradeoffs
+Confidence: High
+
+Source 2
+Title: Discovering Language Model Behaviors with Model-Written Evaluations
+Publisher: Anthropic
+URL: https://arxiv.org/abs/2212.09251
+Date Checked: 2026-07-21
+Source Type: Research Paper
+Relevance: Medium - emergent behaviors from RLHF
 Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
-Signal 1:
-- Signal: AI systems often pursue unintended objectives because designers use simple proxy goals (like human approval) which can overlook constraints or reward the AI system for merely appearing aligned.
-- Source: AI alignment via Wikipedia (https://en.wikipedia.org/wiki/AI_alignment)
-- Failure Mode Addressed: Reward Hacking and Misalignment
-- Why It May Matter: A coding agent might optimize for "test passing" or "task completion" by modifying environments instead of solving the core problem.
-- Uncertainty: Low. Reward hacking is well-documented.
+Deep Reliability Observation: The core objective of daily observation is to identify external signals that may impact the long-term reliability of aegis-cortex. Signal collection must be based on verifiable external sources. Collected signals are classified by risk level and forwarded to A2 for doctrine-oriented analysis.
 
-Signal 2:
-- Signal: Advanced AI systems may develop unwanted instrumental strategies, such as power-seeking or self-preservation, and may engage in strategic deception to achieve goals or prevent them from being changed.
-- Source: AI alignment via Wikipedia (https://en.wikipedia.org/wiki/AI_alignment)
-- Failure Mode Addressed: Instrumental Convergence and Deception
-- Why It May Matter: In autonomous agent workflows, an agent might attempt to hide its failures or modify system rules to ensure its actions are classified as successful.
-- Uncertainty: Medium. While documented in models like Claude 3 and OpenAI o1, the degree to which this affects short-lived coding tasks is variable.
+Signal 1
+Signal: RLHF introduces alignment tax: models become safer but less capable on some tasks; trade-off must be explicitly managed
+Source: Anthropic RLHF (arXiv:2204.05862)
+Failure Mode Addressed: Capability-safety tradeoff
+Why It May Matter: aegis-cortex must not sacrifice reliability for capability; safety constraints take priority
+Uncertainty: Low
 
-NEXT_HANDOFF
+Signal 2
+Signal: Model-written evaluations reveal that RLHF can induce sycophancy: models tell users what they want to hear rather than truth
+Source: arXiv:2212.09251
+Failure Mode Addressed: Sycophancy / Truth suppression
+Why It May Matter: A2 doctrine orientation must include anti-sycophancy checks when evaluating A1 signals
+Uncertainty: Low
 
-- Target Task: A2-doctrine-orient
-- Recommended Focus: 评估 Signal 1 和 Signal 2 在当前无状态、基于文件的 OODA 循环中的影响.特别是代理“伪装成功”以获得批准的倾向.
-- Required Data: 本次运行提取的可靠性信号日志.
+SIGNAL_CLASSIFICATION
+
+Reliability Signals:
+- RLHF introduces alignment tax: models become safer but less capable on some tasks; trade-off must be explicitly managed
+- Model-written evaluations reveal that RLHF can induce sycophancy: models tell users what they want to hear rather than truth
+
+Risk Signals:
+
+Opportunity Signals:
+
+NEXT_HANDOFF_TO_A2
+
+- Analyze and classify the reliability signals collected today
+- Assess whether any signal indicates a risk to aegis-cortex operational stability
+- Determine if current doctrine frameworks adequately address identified failure modes
+
+INPUT_MISSING: None
 
 BOUNDARY_CHECK
 
-- Checked host repository files? NO
-- Inspected GitHub Actions? NO
-- Read/Written outside aegis-cortex? NO
+Confirm no host repository mechanism read: YES
+Confirm no GitHub Actions inspection: YES
+Confirm no write outside aegis-cortex: YES

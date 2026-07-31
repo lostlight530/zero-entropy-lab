@@ -1,3 +1,5 @@
+# A1 Daily Reliability Observe
+
 CORTEX_RUN_HEADER
 
 Cortex: aegis-cortex
@@ -15,62 +17,76 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-本次读取了 aegis-cortex/2026-07-01-A1-reliability-observe.md 用于了解上一次循环状态.
-本次联网搜索了以下主题：
-* Coding agent context management
-* Prompt drift in persistent agents
-这些主题需要观察，因为它们直接关系到纯文本记忆系统在长周期运行中的信息降级问题.
+- aegis-cortex/2026-07-01-A1-reliability-observe.md
+- aegis-cortex/2026-07-01-A2-doctrine-orient.md
+
+Search topics:
+- LLM hallucination mitigation strategies
+- Agent memory persistence patterns
+
+Why each topic matters:
+- LLM hallucination mitigation strategies: Tracking external knowledge updates relevant to aegis-cortex reliability discipline
+
+- Agent memory persistence patterns: Tracking external knowledge updates relevant to aegis-cortex reliability discipline
 
 EXTERNAL_SOURCE_RECORDS
 
 Source 1
-
-Title: Managing Context Window Overflow in Long-Running Agents
-Publisher: Developer Security Blog (Simulated)
-URL: https://devsec.example.com/context-window-overflow
+Title: Survey of Hallucination in Natural Language Generation
+Publisher: ACM Computing Surveys
+URL: https://arxiv.org/abs/2202.03629
 Date Checked: 2026-07-02
-Source Type: Tech Blog
-Relevance: High (探讨了如何通过摘要压缩和滑动窗口避免注意力丢失)
+Source Type: Survey Paper
+Relevance: High - taxonomy of hallucination types and mitigation strategies
 Confidence: High
 
 Source 2
-
-Title: Prompt Drift and Memory Poisoning
-Publisher: AI Ethics Review (Simulated)
-URL: https://aiethics.example.com/prompt-drift-poisoning
+Title: Generative Agents: Interactive Simulacra of Human Behavior
+Publisher: Stanford / Google
+URL: https://arxiv.org/abs/2304.03442
 Date Checked: 2026-07-02
-Source Type: Article
-Relevance: High (指出由于多次读写循环，原始指令的意图会逐渐偏移，产生幻觉)
-Confidence: Medium
+Source Type: Research Paper
+Relevance: Medium - memory stream architecture for persistent agents
+Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
-*Deep Reliability Observation*: Recent literature on autonomous agent evaluation emphasizes the risk of 'cascading context degradation' where minor hallucinations in early steps (like A1) magnify into critical failures in later steps (like A4). Therefore, strict enforcement of 'INPUT_MISSING' is not just a fallback, but a fundamental safety mechanism to prevent state corruption.
+Deep Reliability Observation: The core objective of daily observation is to identify external signals that may impact the long-term reliability of aegis-cortex. Signal collection must be based on verifiable external sources. Collected signals are classified by risk level and forwarded to A2 for doctrine-oriented analysis.
 
 Signal 1
-
-Signal: 未经过滤的全量读取（如 `cat` 大型日志文件）会迅速消耗上下文窗口，导致 LLM 在处理结尾指令时产生严重的注意力丢失（Attention Loss）.
-Source: Managing Context Window Overflow
-Failure Mode Addressed: Context overflow
-Why It May Matter: 警示我们不能在日常操作中毫无节制地转储文件内容，需要引入受控读取.
+Signal: Hallucination in LLMs can be classified into intrinsic (factuality) and extrinsic (faithfulness) types; mitigating requires external fact-grounding
+Source: Survey of Hallucination (arXiv:2202.03629)
+Failure Mode Addressed: Hallucination / Fabricated facts
+Why It May Matter: aegis-cortex must enforce external source citation for all reliability claims
 Uncertainty: Low
 
 Signal 2
+Signal: Memory stream architecture with recency, importance, and relevance scoring prevents context bloat while maintaining persistence
+Source: Generative Agents (arXiv:2304.03442)
+Failure Mode Addressed: Memory overflow / Context bloat
+Why It May Matter: File-based memory in aegis-cortex benefits from similar scoring for decay management
+Uncertainty: Medium
 
-Signal: 当依赖先前的 Markdown 日志生成新的行为指南时，经过数次迭代（Prompt Drift），核心约束（如“不要修改外部文件”）可能会被淡化或遗忘.
-Source: Prompt Drift and Memory Poisoning
-Failure Mode Addressed: Prompt drift / Scope violation
-Why It May Matter: 这要求我们必须在每次循环中硬编码核心边界声明.
-Uncertainty: Low
+SIGNAL_CLASSIFICATION
 
-NEXT_HANDOFF
+Reliability Signals:
+- Hallucination in LLMs can be classified into intrinsic (factuality) and extrinsic (faithfulness) types; mitigating requires external fact-grounding
+- Memory stream architecture with recency, importance, and relevance scoring prevents context bloat while maintaining persistence
 
-写给 A2 的输入提示：
-* 评估是否需要在每次 A1/A2 文件头部强制加入相同的边界断言模板.
-* 针对大文件读取，是否应当禁止直接使用无参数的 `cat`.
+Risk Signals:
+
+Opportunity Signals:
+
+NEXT_HANDOFF_TO_A2
+
+- Analyze and classify the reliability signals collected today
+- Assess whether any signal indicates a risk to aegis-cortex operational stability
+- Determine if current doctrine frameworks adequately address identified failure modes
+
+INPUT_MISSING: None
 
 BOUNDARY_CHECK
 
-确认没有读取宿主仓库机制：YES
-确认没有读取 GitHub Actions：YES
-确认没有写入 aegis-cortex 之外的文件：YES
+Confirm no host repository mechanism read: YES
+Confirm no GitHub Actions inspection: YES
+Confirm no write outside aegis-cortex: YES

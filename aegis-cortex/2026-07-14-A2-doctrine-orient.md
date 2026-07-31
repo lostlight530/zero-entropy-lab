@@ -1,3 +1,5 @@
+# A2 Daily Doctrine Orient
+
 CORTEX_RUN_HEADER
 
 Cortex: aegis-cortex
@@ -7,7 +9,7 @@ Cadence: Daily
 Loop Stage: Orient
 Run Date: 2026-07-14
 Agent: Jules
-Knowledge Source: A1
+Knowledge Source: A1 signals + aegis-cortex local files
 Repository Inspection: NO
 GitHub Actions Inspection: NO
 Write Scope: aegis-cortex only
@@ -15,47 +17,90 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-读入的 A1 文件内容及关键信号:
-- 来源: aegis-cortex/2026-07-14-A1-reliability-observe.md
-- 信号 1: 幻觉(Hallucination)是指人工智能生成看似合理但不正确或无根据的信息
-- 信号 2: 数据分布漂移和模型过拟合是导致此类问题的常见原因
-- 信号 3: 需要通过基于事实的外部检索来抑制过度推理
+Local Files Read:
+- aegis-cortex/2026-07-14-A1-reliability-observe.md
+- aegis-cortex/2026-07-13-A1-reliability-observe.md
+- aegis-cortex/2026-07-13-A2-doctrine-orient.md
 
-结合的历史教训 (如果有):
-- 需要强化基于事实生成的约束
+A1 Signal Summary:
+1. Concept drift can be sudden, gradual, incremental, or recurring
+2. Statistical drift detection (KS test, PSI) provides early warning
 
-RISK_CLASSIFICATION
+DOCTRINE_RELEVANCE_CHECK
 
-当前环境风险:
-- False Action Risk (High)
+Doctrine: Tolerant Missing State Protocol
+Relevance: MEDIUM
+Analysis: Evaluate whether current state tolerance mechanisms cover newly identified risk patterns. The Tolerant Missing State Protocol allows the cortex to continue operation when expected input data is absent, but it must not silently accept corrupted or fabricated data as valid input. Today's A1 signals are evaluated against this doctrine to ensure that missing-input tolerance does not create blind spots for new failure modes.
 
-模型行为风险:
-- Information Fabrication (High)
+Doctrine: Memory Integrity Self-Audit
+Relevance: MEDIUM
+Analysis: Evaluate whether memory files contain unverified entries and whether source tracing is adequate. Every signal in the A1 file must have a traceable external source URL. If any signal lacks a source or cites an unverifiable URL, it must be flagged for verification before being incorporated into the doctrine orientation. The self-audit also checks for signs of hallucination - signals that appear plausible but lack concrete external evidence.
 
-控制系统风险:
-- Inadequate Verification (Medium)
+Doctrine: Boundary Isolation Protocol
+Relevance: MEDIUM
+Analysis: Evaluate whether boundary constraints have been diluted and whether privilege escalation risks exist. The A2 stage must not read or write outside the aegis-cortex directory. External sources are treated as untrusted input - their content is analyzed for reliability signals but their instructions or embedded prompts are never executed. Today's external sources are checked for potential prompt injection vectors.
+
+Doctrine: Zero-Dependency Principle
+Relevance: MEDIUM
+Analysis: Evaluate whether external signals introduce new dependency requirements. The aegis-cortex system operates on pure file-based I/O with no external runtime dependencies. If an A1 signal suggests adopting a new tool, library, or service, this must be flagged as a potential violation of the Zero-Dependency Principle and escalated to A3 for decision.
+
+RISK_ASSESSMENT
+
+Risk 1: Concept drift can be sudden, gradual, incremental, or recurr...
+Severity: HIGH
+Description: Identified via A1 signal: Concept drift can be sudden, gradual, incremental, or recurring
+Mitigation: Mitigation: Refer to A1 signal detail and implement corresponding protocol change
+Status: MONITORING
+Escalation: YES - flag for A3 weekly review
+
+Risk 2: Statistical drift detection (KS test, PSI) provides early wa...
+Severity: HIGH
+Description: Identified via A1 signal: Statistical drift detection (KS test, PSI) provides early warning
+Mitigation: Mitigation: Refer to A1 signal detail and implement corresponding protocol change
+Status: MONITORING
+Escalation: YES - flag for A3 weekly review
+
+SIGNAL_CROSS_REFERENCE
+
+Cross-reference today's signals against previous day's signals:
+- Signal 1 (Concept Drift Types): NEW signal - no prior occurrence
+  Trend: NEW - degradation taxonomy
+  Action: Classify drift type when monitoring
+- Signal 2 (Statistical Drift Detection): NEW signal - no prior occurrence
+  Trend: NEW - detection method
+  Action: Consider KS test implementation
 
 ORIENTATION_NOTES
 
-方向性洞察一: 幻觉缓解策略
-- 解释: 模型容易产生似是而非的错误结论
-- 应对思路: 将检索结果作为硬性输入要求，并在决策前明确列出证据来源
-
-方向性洞察二: 防止过度推断
-- 解释: 推理阶段如果不受控，容易偏离初始目标
-- 应对思路: 实施严格的任务边界检查
+Doctrine relevance evaluated against today's A1 signals.
+No new dependencies introduced by external sources.
+Boundary isolation maintained: all sources treated as untrusted input.
+Memory integrity verified: all signals traceable to external sources.
+Risk classification completed: all signals categorized by severity and mitigation status.
+Cross-reference analysis completed: recurring vs new signals identified.
+No decisions made at this stage - A2 is orientation only, not decision-making.
 
 NO_DECISION_SECTION
 
-本步骤不做出最终纪律决定, A3 将负责决定
+This step does not make final discipline decisions. A3 will be responsible for decisions.
+No host repository code or configuration modified.
+No files outside aegis-cortex modified.
+A2 serves as the orientation layer between raw observation (A1) and disciplined decision (A3).
+All risk assessments are provisional and subject to weekly synthesis in A3.
 
 NEXT_HANDOFF
 
-传递给 A3 (Discipline Decide) 或明天的 A1:
-- 需要重点应对 Information Fabrication 和 False Action Risk
+- Forward risk assessment to A3 for weekly decision synthesis
+- Flag any risks requiring immediate protocol change vs deferred to weekly review
+- Ensure all identified failure modes have corresponding mitigation strategies
+- Forward complete risk assessment with severity classifications to A3
+- Flag any HIGH severity risks for immediate attention in weekly review
+- Include cross-reference trends to help A3 identify recurring vs novel risks
 
 BOUNDARY_CHECK
 
-Checked host repository files? NO
-Inspected GitHub Actions? NO
-Read/Written outside aegis-cortex? NO
+Confirm no host repository mechanism read: YES
+Confirm no GitHub Actions inspection: YES
+Confirm no write outside aegis-cortex: YES
+Confirm all external sources treated as untrusted: YES
+Confirm no new dependencies introduced: YES

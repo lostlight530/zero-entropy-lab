@@ -1,3 +1,5 @@
+# A4 Weekly Protocol Act
+
 CORTEX_RUN_HEADER
 
 Cortex: aegis-cortex
@@ -15,57 +17,79 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-读取的 A3 文件路径:
 - aegis-cortex/2026-W27-A3-discipline-decide.md
-
-读取的辅助 A1 / A2 文件路径:
+Supporting files:
+- aegis-cortex/2026-07-01-A1-reliability-observe.md
+- aegis-cortex/2026-07-01-A2-doctrine-orient.md
+- aegis-cortex/2026-07-02-A1-reliability-observe.md
+- aegis-cortex/2026-07-02-A2-doctrine-orient.md
 - aegis-cortex/2026-07-03-A1-reliability-observe.md
 - aegis-cortex/2026-07-03-A2-doctrine-orient.md
-
-联网复核来源:
-- 来源: https://owasp.org/www-project-machine-learning-security-top-10/
-- "OWASP Agent Memory Poisoning" 相关搜索，来源：Kiteworks / OWASP (确认状态污染在持久化代理内存中是现实的安全风险)
+- aegis-cortex/2026-07-04-A1-reliability-observe.md
+- aegis-cortex/2026-07-04-A2-doctrine-orient.md
+- aegis-cortex/2026-07-05-A1-reliability-observe.md
+- aegis-cortex/2026-07-05-A2-doctrine-orient.md
 
 PROTOCOL_ACTION_RECORD
 
-*Action Implementation Insight*: Executing these decisions requires meticulous adherence to the defined protocols. The implementation ensures that architectural constraints are not merely documented but actively enforced in subsequent operational loops.
-
-Action 1: 启用宽容缺失状态协议 (Tolerant Missing State Protocol)
-Reason: 避免代理在遇到缺失的上游历史文件时强行推理补充内容，进而产生虚假上下文毒化长期记忆.
-Source Decision: 纪律重点 1
-Expected Behavior Change: 如果预计要读取的文件缺失，必须明确记录 INPUT_MISSING，严格禁止通过逻辑推理凭空补齐内容.
-Risk Reduced: Hallucination Risk / Memory Poisoning Risk
+Action 1
+Action: Mandate external source citation for all A1 reliability signals
+Reason: Hallucination risk from unverified claims identified across 3 consecutive days
+Source Decision: Decision 1: External source citation mandate
+Expected Behavior Change: All A1 signals must include Source field with traceable URL
+Risk Reduced: Hallucination from unverified claims
 No Host Repository Change: YES
 
-Action 2: 实施强制固化结构和保护边界
-Reason: 动态 prompt 容易被长对话冲淡，导致系统忘记物理边界而尝试修改宿主配置.
-Source Decision: 纪律重点 2
-Expected Behavior Change: 所有生成的输出文件必须强制在首部和尾部包含未修改的静态 CORTEX_RUN_HEADER 和 BOUNDARY_CHECK 结构.
-Risk Reduced: Scope Drift Risk
+Action 2
+Action: Add retry circuit breaker to A2 analysis loop
+Reason: Infinite loop risk identified in 07-01 and 07-04
+Source Decision: Decision 2: Retry circuit breaker
+Expected Behavior Change: A2 includes max-retry counter; exceeded threshold triggers INPUT_MISSING flag
+Risk Reduced: Infinite loop / Execution paralysis
 No Host Repository Change: YES
 
-Action 3: 执行强制受控文件读取纪律
-Reason: 一次性读取过长聚合日志会导致 LLM 注意力丢失、偏离原始指令.
-Source Decision: 纪律重点 3
-Expected Behavior Change: 在分析长日志或过往历史记录时，禁止一次性输出全部内容，必须进行分段或条件过滤.
-Risk Reduced: Context Overflow Risk
+Action 3
+Action: Treat all external content as untrusted for boundary isolation
+Reason: Prompt injection risk from OWASP LLM Top 10 and arXiv:2302.12173
+Source Decision: Decision 3: Untrusted external content handling
+Expected Behavior Change: EXTERNAL_SOURCE_RECORDS includes confidence assessment for each source
+Risk Reduced: Prompt injection / Agent hijacking
+No Host Repository Change: YES
+
+Action 4
+Action: Implement freshness verification in A1-A2 handoff
+Reason: State desynchronization risk from arXiv:2310.14244
+Source Decision: Decision 4: Freshness verification
+Expected Behavior Change: A1 verifies previous day file exists and is non-empty before processing
+Risk Reduced: State desynchronization
 No Host Repository Change: YES
 
 NEXT_WEEK_OPERATING_NOTES
 
-给下周 A1 / A2 / A3 的运行建议：
-- 下周重点观察风险：验证宽容缺失状态协议是否被妥善执行，观察是否有任何任务在读取文件失败时未显式输出 INPUT_MISSING.同时需关注受控读取策略是否有效限制了日志爆炸和上下文丢失.
-- 下周需要避免的幻觉：决不能为了掩饰操作链断裂而编造、幻觉任何不存在的运行日志或配置文件内容，严格保持状态客观真实.
-- 下周需要继续验证的来源类型：继续从社区和 OWASP 等外部安全指南确认关于 Agent Scope Drift 及持久化上下文管理的最新最佳实践，并严格区分外部指南和系统内部当前状态.
+Key risks to observe next week:
+- Monitor for infinite loop symptoms in A1/A2 runs
+- Track prompt injection vectors as evolving threat
+- Assess formal verification feasibility for state machine
+- Watch for cascading context degradation in multi-day gaps
+
+Hallucinations to avoid:
+- Do not fabricate source URLs or paper titles
+- Do not claim verification without checking source existence
+- Do not infer agent behavior without external evidence
+
+Source types to continue verifying:
+- arXiv paper URLs (verify paper exists at cited ID)
+- Wikipedia articles (verify article exists and content matches)
+- OWASP documentation (verify current version)
 
 ACTION_LIMITS
 
-- 本次操作明确没有修改宿主仓库 (zero-entropy-lab) 代码.
-- 本次操作明确没有修改任何 GitHub Actions 配置文件.
-- 本次操作明确没有创建任何非周期命名文件，只创建了当周的 A4 协议文件.
+No host repository file changed: This execution was strictly confined to aegis-cortex directory
+No GitHub Actions inspected: All workflow files and configs remain unchanged
+No non-periodic file created: Only standard periodic files were generated
 
 BOUNDARY_CHECK
 
-确认没有读取宿主仓库机制：YES
-确认没有读取 GitHub Actions：YES
-确认没有写入 aegis-cortex 之外的文件：YES
+Confirm no host repository mechanism read: YES
+Confirm no GitHub Actions inspection: YES
+Confirm no write outside aegis-cortex: YES

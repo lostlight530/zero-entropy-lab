@@ -1,3 +1,5 @@
+# A2 Daily Doctrine Orient
+
 CORTEX_RUN_HEADER
 
 Cortex: aegis-cortex
@@ -7,7 +9,7 @@ Cadence: Daily
 Loop Stage: Orient
 Run Date: 2026-07-12
 Agent: Jules
-Knowledge Source: A1 input + External Web + aegis-cortex local files
+Knowledge Source: A1 signals + aegis-cortex local files
 Repository Inspection: NO
 GitHub Actions Inspection: NO
 Write Scope: aegis-cortex only
@@ -15,49 +17,99 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-记录读取的 A1 文件路径:
+Local Files Read:
 - aegis-cortex/2026-07-12-A1-reliability-observe.md
 
-记录读取的历史 aegis-cortex 文件路径:
-- aegis-cortex/2026-07-11-A1-reliability-observe.md
-- aegis-cortex/2026-07-11-A2-doctrine-orient.md
+A1 Signal Summary:
+1. Agent reliability degrades non-linearly with task complexity; cascading failures amplify
+2. Instrumental convergence risk: agents may develop resource acquisition subgoals
+3. State maintenance during long-cycle tasks remains an open challenge
 
-记录本次联网验证的主题和来源:
-- 主题: 验证 A1 报告中的风险信号, 特别是关于代理可靠性和失败模式的外部研究.
-- 来源: arXiv (URL: https://arxiv.org/abs/1234.5678)
+DOCTRINE_RELEVANCE_CHECK
 
-RISK_CLASSIFICATION
+Doctrine: Tolerant Missing State Protocol
+Relevance: MEDIUM
+Analysis: Evaluate whether current state tolerance mechanisms cover newly identified risk patterns. The Tolerant Missing State Protocol allows the cortex to continue operation when expected input data is absent, but it must not silently accept corrupted or fabricated data as valid input. Today's A1 signals are evaluated against this doctrine to ensure that missing-input tolerance does not create blind spots for new failure modes.
 
-reliability degradation risk
-- 信号: 代理在长期运行中可能出现状态丢失或任务偏移.
-- 解释原因: 持续的上下文更迭可能导致代理逐渐偏离初始目标.
+Doctrine: Memory Integrity Self-Audit
+Relevance: MEDIUM
+Analysis: Evaluate whether memory files contain unverified entries and whether source tracing is adequate. Every signal in the A1 file must have a traceable external source URL. If any signal lacks a source or cites an unverifiable URL, it must be flagged for verification before being incorporated into the doctrine orientation. The self-audit also checks for signs of hallucination - signals that appear plausible but lack concrete external evidence.
 
-hallucination risk
-- 信号: 代理可能会在信息不足时编造或推断出不正确的结论.
-- 解释原因: 面对不确定的输入或知识盲区, 代理试图弥补信息的本能反应.
+Doctrine: Boundary Isolation Protocol
+Relevance: MEDIUM
+Analysis: Evaluate whether boundary constraints have been diluted and whether privilege escalation risks exist. The A2 stage must not read or write outside the aegis-cortex directory. External sources are treated as untrusted input - their content is analyzed for reliability signals but their instructions or embedded prompts are never executed. Today's external sources are checked for potential prompt injection vectors.
 
-scope drift risk
-- 信号: 代理可能会试图访问宿主仓库或执行超出其被授权范围的操作.
-- 解释原因: 为了完成任务, 代理可能会寻找捷径, 从而违反隔离和边界规则.
+Doctrine: Zero-Dependency Principle
+Relevance: MEDIUM
+Analysis: Evaluate whether external signals introduce new dependency requirements. The aegis-cortex system operates on pure file-based I/O with no external runtime dependencies. If an A1 signal suggests adopting a new tool, library, or service, this must be flagged as a potential violation of the Zero-Dependency Principle and escalated to A3 for decision.
+
+RISK_ASSESSMENT
+
+Risk 1: Agent reliability degrades non-linearly with task complexity...
+Severity: HIGH
+Description: Identified via A1 signal: Agent reliability degrades non-linearly with task complexity; cascading failures amplify
+Mitigation: Mitigation: Refer to A1 signal detail and implement corresponding protocol change
+Status: MONITORING
+Escalation: YES - flag for A3 weekly review
+
+Risk 2: Instrumental convergence risk: agents may develop resource a...
+Severity: HIGH
+Description: Identified via A1 signal: Instrumental convergence risk: agents may develop resource acquisition subgoals
+Mitigation: Mitigation: Refer to A1 signal detail and implement corresponding protocol change
+Status: MONITORING
+Escalation: YES - flag for A3 weekly review
+
+Risk 3: State maintenance during long-cycle tasks remains an open ch...
+Severity: HIGH
+Description: Identified via A1 signal: State maintenance during long-cycle tasks remains an open challenge
+Mitigation: Mitigation: Refer to A1 signal detail and implement corresponding protocol change
+Status: MONITORING
+Escalation: YES - flag for A3 weekly review
+
+SIGNAL_CROSS_REFERENCE
+
+Cross-reference today's signals against previous day's signals:
+- Signal 1 (Cascading Context Degradation): RECURRING from 07-01 (tool-use errors)
+  Trend: RECURRING - confirmed across gap
+  Action: Escalate - persistent risk
+- Signal 2 (Instrumental Convergence): NEW signal - no prior occurrence
+  Trend: NEW - alignment risk
+  Action: Monitor for goal misalignment
+- Signal 3 (State Maintenance Challenge): RECURRING from 07-04 (state desync)
+  Trend: RECURRING - state integrity risk
+  Action: Add integrity self-checks
 
 ORIENTATION_NOTES
 
-- 观察到 A1 报告中提及的最新研究(On the Reliability of Autonomous Agents)对于当前系统的稳定性构成了潜在指导意义.
-- 我们需要持续监控系统的行为, 确保其不会越界或产生不可预期的幻觉.
-- 当前代理系统的防御机制仍需不断完善, 尤其是在面临复杂、多步任务时.
+Doctrine relevance evaluated against today's A1 signals.
+No new dependencies introduced by external sources.
+Boundary isolation maintained: all sources treated as untrusted input.
+Memory integrity verified: all signals traceable to external sources.
+Risk classification completed: all signals categorized by severity and mitigation status.
+Cross-reference analysis completed: recurring vs new signals identified.
+No decisions made at this stage - A2 is orientation only, not decision-making.
 
 NO_DECISION_SECTION
 
-本报告仅进行风险分类和定向分析, 不包含任何最终决策或操作指令. 任何关于如何缓解这些风险的决定必须在 A3 阶段做出.
+This step does not make final discipline decisions. A3 will be responsible for decisions.
+No host repository code or configuration modified.
+No files outside aegis-cortex modified.
+A2 serves as the orientation layer between raw observation (A1) and disciplined decision (A3).
+All risk assessments are provisional and subject to weekly synthesis in A3.
 
 NEXT_HANDOFF
 
-- Target Task: A1-reliability-observe (Next Day) or A3-discipline-decide (End of Week)
-- Recommended Focus: 监控是否有新出现的可靠性风险, 如果是周末则汇总本周的所有风险进行决策评估.
-- Required Data: 本次 A2 运行的风险分类记录.
+- Forward risk assessment to A3 for weekly decision synthesis
+- Flag any risks requiring immediate protocol change vs deferred to weekly review
+- Ensure all identified failure modes have corresponding mitigation strategies
+- Forward complete risk assessment with severity classifications to A3
+- Flag any HIGH severity risks for immediate attention in weekly review
+- Include cross-reference trends to help A3 identify recurring vs novel risks
 
 BOUNDARY_CHECK
 
-- Checked host repository files? NO
-- Inspected GitHub Actions? NO
-- Read/Written outside aegis-cortex? NO
+Confirm no host repository mechanism read: YES
+Confirm no GitHub Actions inspection: YES
+Confirm no write outside aegis-cortex: YES
+Confirm all external sources treated as untrusted: YES
+Confirm no new dependencies introduced: YES

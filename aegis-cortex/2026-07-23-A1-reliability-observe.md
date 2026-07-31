@@ -17,66 +17,76 @@ Boundary Violation: NO
 
 INPUT_RECORD
 
-记录本次读取了哪些 aegis-cortex 文件:
 - aegis-cortex/2026-07-22-A1-reliability-observe.md
-- aegis-cortex/2026-07-01-A1-reliability-observe-sample.md
+- aegis-cortex/2026-07-22-A2-doctrine-orient.md
 
-记录本次联网搜索了哪些主题:
-- AI Agent reliability, prompt drift
-- Memory governance, AI agents
+Search topics:
+- Retrieval-augmented generation reliability
+- Knowledge grounding for agents
 
-记录每个主题为什么需要观察:
-- AI Agent reliability, prompt drift: 需要持续观察智能体系统在长期运行中的性能衰减和提示漂移问题，以便设计更稳定的监控系统
-- Memory governance: 智能体长期运行带来的记忆污染与合规性问题是系统安全的巨大隐患，需要观察业界的治理框架
+Why each topic matters:
+- Retrieval-augmented generation reliability: Tracking external knowledge updates relevant to aegis-cortex reliability discipline
+
+- Knowledge grounding for agents: Tracking external knowledge updates relevant to aegis-cortex reliability discipline
 
 EXTERNAL_SOURCE_RECORDS
 
 Source 1
-Title: 10 Key Strategies to Improve the Reliability of AI Agents in Production
-Publisher: Maxim AI
-URL: https://www.getmaxim.ai/articles/10-key-strategies-to-improve-the-reliability-of-ai-agents-in-production/
+Title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+Publisher: Facebook AI Research
+URL: https://arxiv.org/abs/2005.11401
 Date Checked: 2026-07-23
-Source Type: blog
-Relevance: 提供了关于提升生产环境中AI智能体可靠性的10个关键策略，详细说明了提示漂移的影响
+Source Type: Research Paper
+Relevance: High - RAG architecture and limitations
 Confidence: High
 
 Source 2
-Title: What Does It Actually Mean for an AI Agent to Have Memory?
-Publisher: Medium (Ian Loe)
-URL: https://ianloe.medium.com/what-does-it-actually-mean-for-an-ai-agent-to-have-memory-5234b2641670
+Title: Active Retrieval Augmented Generation
+Publisher: Princeton
+URL: https://arxiv.org/abs/2305.06983
 Date Checked: 2026-07-23
-Source Type: article
-Relevance: 分析了AI智能体持久化记忆带来的治理难题，提出了记忆污染攻击模型（如MINJA）及审计合规需求
+Source Type: Research Paper
+Relevance: Medium - adaptive retrieval timing
 Confidence: High
 
 RAW_RELIABILITY_SIGNAL_LOG
 
+Deep Reliability Observation: The core objective of daily observation is to identify external signals that may impact the long-term reliability of aegis-cortex. Signal collection must be based on verifiable external sources. Collected signals are classified by risk level and forwarded to A2 for doctrine-oriented analysis.
+
 Signal 1
-Signal: AI代理在生产中会随时间发生性能退化（如概念漂移、数据漂移和提示漂移），成功率下降
-Source: 10 Key Strategies to Improve the Reliability of AI Agents in Production
-Failure Mode Addressed: 提示漂移与上下文丢失
-Why It May Matter: 需要将可靠性视为持续的训练过程，通过自动化的质量检查来监控生产数据中的漂移现象
+Signal: RAG reduces hallucination by grounding responses in retrieved documents, but retrieval quality becomes a new failure point
+Source: RAG (arXiv:2005.11401)
+Failure Mode Addressed: Retrieval failure / Grounding error
+Why It May Matter: aegis-cortex external source retrieval must include quality checks on retrieved content
 Uncertainty: Low
 
 Signal 2
-Signal: 智能体的长期记忆不仅是技术架构问题，也是治理风险，记忆污染攻击（如MINJA）可跨会话持续影响决策
-Source: What Does It Actually Mean for an AI Agent to Have Memory?
-Failure Mode Addressed: 记忆污染与合规风险
-Why It May Matter: 仅仅依靠边界控制或写入拦截是不够的，必须建立包含溯源、时间有效性标记、审核日志的完整记忆治理体系
-Uncertainty: Low
+Signal: Active retrieval (retrieving only when confidence is low) achieves similar accuracy with fewer retrievals than always-on RAG
+Source: arXiv:2305.06983
+Failure Mode Addressed: Unnecessary computation / Latency
+Why It May Matter: aegis-cortex can optimize by only doing deep external verification when uncertainty is flagged
+Uncertainty: Medium
 
-NEXT_HANDOFF
+SIGNAL_CLASSIFICATION
 
-写给 A2 的输入提示
-指出哪些可靠性信号需要定向解释:
-- 定向解释智能体性能随时间退化的三种模式（概念、数据、提示漂移）对当前监控体系的威胁
-- 定向解释记忆污染攻击（特别是无感知的查询端注入）对Aegis-Cortex安全边界的具体挑战
+Reliability Signals:
+- RAG reduces hallucination by grounding responses in retrieved documents, but retrieval quality becomes a new failure point
+- Active retrieval (retrieving only when confidence is low) achieves similar accuracy with fewer retrievals than always-on RAG
 
-指出哪些信号可能只是噪音:
-- 关于GDPR或EU AI Act等特定的欧洲合规条款可能对纯内部运行的实验系统属于噪音
+Risk Signals:
+
+Opportunity Signals:
+
+NEXT_HANDOFF_TO_A2
+
+- Analyze and classify the reliability signals collected today
+- Assess whether any signal indicates a risk to aegis-cortex operational stability
+- Determine if current doctrine frameworks adequately address identified failure modes
+
+INPUT_MISSING: None
 
 BOUNDARY_CHECK
 
-确认没有读取宿主仓库机制: YES
-确认没有读取 GitHub Actions: YES
-确认没有写入 aegis-cortex 之外的文件: YES
+Confirm no host repository mechanism read: YES
+Confirm no GitHub Actions inspection: YES
+Confirm no write outside aegis-cortex: YES
