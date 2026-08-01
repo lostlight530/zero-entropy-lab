@@ -30,6 +30,8 @@ REQUIRED = (
     "tools/verify_late_attempt_fencing.py",
     "tools/experiment_conditional_write_readback.py",
     "tools/verify_conditional_write_readback.py",
+    "tools/experiment_cached_read.py",
+    "tools/verify_cached_read.py",
 )
 FORBIDDEN_SUFFIXES = {".backup", ".db", ".jsonl", ".lock", ".pyc", ".stage", ".tmp"}
 DAILY_HEADINGS = (
