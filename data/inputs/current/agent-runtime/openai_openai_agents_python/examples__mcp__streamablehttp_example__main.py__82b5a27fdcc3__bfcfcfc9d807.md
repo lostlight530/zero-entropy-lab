@@ -1,0 +1,174 @@
+# openai/openai-agents-python · examples/mcp/streamablehttp_example/main.py
+
+> 当前有效快照. 中文说明只使用英文句号. 外部原文保持来源原貌.
+
+## 一眼看懂
+
+| 字段 | 值 |
+| --- | --- |
+| 来源仓库 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
+| 来源文件 | [examples/mcp/streamablehttp_example/main.py](https://github.com/openai/openai-agents-python/blob/bfcfcfc9d807c69a939ce4ab7f1be8e13e18e577/examples/mcp/streamablehttp_example/main.py) |
+| 来源版本 | `bfcfcfc9d807c69a939ce4ab7f1be8e13e18e577` |
+| 来源目录 Tree | `fd30cbc1ad8920bfe04652e325914ea4cd0bb3fb` |
+| 来源内容 Blob | `82b5a27fdcc3c13b86b61b0d67d6447480c377ae` |
+| 摄取时间 | `2026-08-02T22:43:37.631546+00:00` |
+| 归属层 | `agent-runtime` |
+| 可信度 | `1.0` |
+| 记忆实体 | `doc_openai_openai_agents_python_examples_mcp_streamablehttp_example_main_py_564a7bf98fbe` |
+
+## 本次变化
+
+- 新增行数 `6`.
+- 删除行数 `1`.
+- 内容哈希变化时才生成新快照.
+
+## 阅读导航
+
+- 未发现 Markdown 标题.
+
+<details>
+<summary>展开完整外部原文</summary>
+
+import asyncio
+import os
+import shutil
+import socket
+import subprocess
+import time
+from typing import Any, cast
+
+from agents import Agent, Runner, gen_trace_id, trace
+from agents.mcp import MCPServer, MCPServerStreamableHttp
+from agents.model_settings import ModelSettings
+
+STREAMABLE_HTTP_HOST = os.getenv("STREAMABLE_HTTP_HOST", "127.0.0.1")
+
+
+def _choose_port() -> int:
+    env_port = os.getenv("STREAMABLE_HTTP_PORT")
+    if env_port:
+        return int(env_port)
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind((STREAMABLE_HTTP_HOST, 0))
+        address = cast(tuple[str, int], s.getsockname())
+        return address[1]
+
+
+STREAMABLE_HTTP_PORT = _choose_port()
+os.environ.setdefault("STREAMABLE_HTTP_PORT", str(STREAMABLE_HTTP_PORT))
+STREAMABLE_HTTP_URL = f"http://{STREAMABLE_HTTP_HOST}:{STREAMABLE_HTTP_PORT}/mcp"
+
+
+async def run(mcp_server: MCPServer):
+    agent = Agent(
+        name="Assistant",
+        instructions="Use the tools to answer the questions.",
+        mcp_servers=[mcp_server],
+        model_settings=ModelSettings(tool_choice="required"),
+    )
+
+    # Use the `add` tool to add two numbers
+    message = "Add these numbers: 7 and 22."
+    print(f"Running: {message}")
+    result = await Runner.run(starting_agent=agent, input=message)
+    print(result.final_output)
+
+    # Run the `get_weather` tool
+    message = "What's the weather in Tokyo?"
+    print(f"\n\nRunning: {message}")
+    result = await Runner.run(starting_agent=agent, input=message)
+    print(result.final_output)
+
+    # Run the `get_secret_word` tool
+    message = "What's the secret word?"
+    print(f"\n\nRunning: {message}")
+    result = await Runner.run(starting_agent=agent, input=message)
+    print(result.final_output)
+
+
+async def main():
+    async with MCPServerStreamableHttp(
+        name="Streamable HTTP Python Server",
+        params={
+            "url": STREAMABLE_HTTP_URL,
+        },
+    ) as server:
+        trace_id = gen_trace_id()
+        with trace(workflow_name="Streamable HTTP Example", trace_id=trace_id):
+            print(f"View trace: https://platform.openai.com/logs/trace?trace_id={trace_id}\n")
+            await run(server)
+
+
+if __name__ == "__main__":
+    # Let's make sure the user has uv installed
+    if not shutil.which("uv"):
+        raise RuntimeError(
+            "uv is not installed. Please install it: https://docs.astral.sh/uv/getting-started/installation/"
+        )
+
+    # We'll run the Streamable HTTP server in a subprocess. Usually this would be a remote server, but for this
+    # demo, we'll run it locally at STREAMABLE_HTTP_URL
+    process: subprocess.Popen[Any] | None = None
+    try:
+        this_dir = os.path.dirname(os.path.abspath(__file__))
+        server_file = os.path.join(this_dir, "server.py")
+
+        print(f"Starting Streamable HTTP server at {STREAMABLE_HTTP_URL} ...")
+
+        # Run `uv run server.py` to start the Streamable HTTP server
+        env = os.environ.copy()
+        env.setdefault("STREAMABLE_HTTP_HOST", STREAMABLE_HTTP_HOST)
+        env.setdefault("STREAMABLE_HTTP_PORT", str(STREAMABLE_HTTP_PORT))
+        process = subprocess.Popen(["uv", "run", server_file], env=env)
+        # Give it 3 seconds to start
+        time.sleep(3)
+
+        print("Streamable HTTP server started. Running example...\n\n")
+    except Exception as e:
+        print(f"Error starting Streamable HTTP server: {e}")
+        exit(1)
+
+    try:
+        asyncio.run(main())
+    finally:
+        if process:
+            process.terminate()
+            try:
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                process.kill()
+                process.wait()
+
+</details>
+
+<details>
+<summary>展开完整版本差异</summary>
+
+```diff
+--- previous
+
++++ 82b5a27fdcc3c13b86b61b0d67d6447480c377ae
+
+@@ -64,7 +64,7 @@
+
+     ) as server:
+         trace_id = gen_trace_id()
+         with trace(workflow_name="Streamable HTTP Example", trace_id=trace_id):
+-            print(f"View trace: https://platform.openai.com/traces/trace?trace_id={trace_id}\n")
++            print(f"View trace: https://platform.openai.com/logs/trace?trace_id={trace_id}\n")
+             await run(server)
+ 
+ 
+@@ -102,3 +102,8 @@
+
+     finally:
+         if process:
+             process.terminate()
++            try:
++                process.wait(timeout=5)
++            except subprocess.TimeoutExpired:
++                process.kill()
++                process.wait()
+```
+
+</details>
