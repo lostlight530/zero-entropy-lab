@@ -34,6 +34,8 @@ REQUIRED = (
     "tools/verify_cached_read.py",
     "tools/experiment_paginated_snapshot.py",
     "tools/verify_paginated_snapshot.py",
+    "tools/experiment_batch_partial.py",
+    "tools/verify_batch_partial.py",
 )
 FORBIDDEN_SUFFIXES = {".backup", ".db", ".jsonl", ".lock", ".pyc", ".stage", ".tmp"}
 DAILY_HEADINGS = (
