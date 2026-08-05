@@ -3,6 +3,7 @@ import os
 import argparse
 import shutil
 import json
+import hmac
 import http.server
 import socketserver
 import threading
@@ -43,6 +44,29 @@ except ImportError:
     from logger import logger
     from mcp import registry as mcp_registry
     from hive import HiveMind
+
+def resolve_server_bind_host(environ=None) -> str:
+    """Return a loopback bind unless external access is explicitly authorized."""
+    env = os.environ if environ is None else environ
+    host = str(env.get("NEXUS_BIND_HOST", "127.0.0.1")).strip()
+    if not host:
+        raise RuntimeError("NEXUS_BIND_HOST must not be empty")
+    allow_external = str(env.get("NEXUS_ALLOW_EXTERNAL", "")).strip() == "1"
+    if host != "127.0.0.1" and not allow_external:
+        raise RuntimeError(
+            "non-loopback binding requires NEXUS_ALLOW_EXTERNAL=1"
+        )
+    return host
+
+
+def require_server_api_key(environ=None) -> str:
+    """Reject server startup when API authentication is not configured."""
+    env = os.environ if environ is None else environ
+    api_key = env.get("NEXUS_API_KEY")
+    if not isinstance(api_key, str) or not api_key.strip():
+        raise RuntimeError("NEXUS_API_KEY is required to start the server")
+    return api_key
+
 
 def active_ledger_files(knowledge_dir: Path) -> list[Path]:
     """Return only canonical active ledgers, never sealed archives."""
@@ -226,12 +250,12 @@ class NexusHandler(http.server.SimpleHTTPRequestHandler):
 
     def _check_auth(self) -> bool:
         if not self.api_key:
-            return True # Open if no key configured
+            return False
         auth_header = self.headers.get("Authorization")
         if not auth_header or not auth_header.startswith("Bearer "):
             return False
-        token = auth_header.split(" ")[1]
-        return token == self.api_key
+        token = auth_header.removeprefix("Bearer ")
+        return hmac.compare_digest(token, self.api_key)
 
     def do_GET(self):
         parsed_url = urlparse(self.path)
@@ -455,7 +479,13 @@ def main():
 
     if args.command == 'serve':
         PORT = 8000
-        logger.info(f"🚀 NEXUS CORE SINGULARITY: Launching Service at http://localhost:{PORT}")
+        try:
+            bind_host = resolve_server_bind_host()
+            require_server_api_key()
+        except RuntimeError as exc:
+            logger.error(f"Server security configuration rejected: {exc}")
+            raise SystemExit(2) from exc
+        logger.info(f"🚀 NEXUS CORE SINGULARITY: Launching Service at http://{bind_host}:{PORT}")
         logger.info(f"📍 Serving Root: {Path(__file__).parent.parent.parent}")
         
         # 启动多播集群监听 (Start Multicast Hive Listener)
@@ -471,7 +501,7 @@ def main():
         flusher.start()
 
         # 挂载多线程 HTTP 网关 (Mount multithreaded HTTP gateway)
-        with ThreadedNexusServer(("", PORT), NexusHandler) as httpd:
+        with ThreadedNexusServer((bind_host, PORT), NexusHandler) as httpd:
             try:
                 httpd.serve_forever()
             except KeyboardInterrupt:
