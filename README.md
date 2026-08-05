@@ -1,59 +1,42 @@
-# 🧠 NEXUS CORE: Singularity
+# Zero-Entropy Lab
 
-> "While the world is addicted to building tottering Towers of Babel with npm install and pip install we choose to connect directly to the truth of cyberspace using bare-metal protocols"
->
-> —— *The Architect (lostlight)*
+> **"Restraint is the ultimate form of digital violence."**
 
-⚠️ 状态 (Status): **ABSOLUTE ZERO-DEPENDENCY ATTAINED**
+A minimal-dependency research laboratory for deterministic agent systems and edge-native AI architecture.
 
-## 📜 宪章 (The Constitution)
+## ⚠️ Status: ZERO-DEPENDENCY ATTAINED
 
-This laboratory operates under the Zero-Entropy Constitution No third-party dependencies no bloat only raw engineering
+This repository operates under the Zero-Entropy Constitution — no third-party dependencies, no bloat, only raw engineering.
 
-## 🏗️ 架构矩阵 (Architecture Matrix)
+## Architecture
 
-1 **🧠 核心认知图谱 (Cortex - src/kernel/cortex_py)**:
-   - SQLite-driven memory engine featuring WAL concurrency and HMAC entity signatures
+1. **Core (src/kernel/)**: SQLite-driven memory engine with WAL concurrency
+2. **Protocol (src/kernel/protocol/)**: Native multithreaded HTTP server with lock-free ring buffer
+3. **Portal (index.html)**: Vanilla architecture with Web Worker isolation and native WebGL
+4. **Reasoning (src/kernel/cognitive/)**: Graph inference engine with multiprocessing shared memory
 
-2 **🔌 原生协议网关 (Nexus - src/kernel/protocol/nexus_py)**:
-   - Native multithreaded HTTP server leveraging a lock-free Ring Buffer and Single-Writer Queue to eliminate SQLite WAL lock contention
-
-3 **👁️ 视网膜渲染网格 (Portal - index_html)**:
-   - Vanilla architecture featuring Web Worker-isolated physics engine and native WebGL for GPU-accelerated rendering No Three_js
-
-4 **⚙️ 零拷贝推理引擎 (Reasoning - src/kernel/reason_py)**:
-   - Graph inference engine utilizing multiprocessing_shared_memory to flat-pack data streams bypassing the GIL to unlock multi-core computational power
-
-## 🚀 启动指引 (Execution Commands)
-
-### 激活实验终端 (Launch Laboratory Web Portal)
+## Execution Commands
 
 ```bash
+# Launch Laboratory Web Portal
 export PYTHONPATH=$(pwd)/src/kernel:$(pwd)/src/kernel/protocol:$(pwd)/src/kernel/memory:$(pwd)/src/kernel/cognitive:$(pwd)/src/kernel/sensory:$(pwd)/src/kernel/orchestration
 python src/kernel/protocol/nexus.py serve
-```
 
-*地址 (Access at): http://localhost:8000*
-
-### 验证系统完备性 (Verification Tests)
-
-```bash
+# Run Verification Tests
 python tests/run_tests.py
 ```
 
-## 🧬 工程哲学 (Why Zero-Entropy?)
+## Engineering Philosophy
 
-Because restraint is the ultimate form of digital violence By stripping away third-party dependencies we return control to low-level memory layouts kernel scheduling and GPU shaders
+By stripping away third-party dependencies, we return control to low-level memory layouts, kernel scheduling, and GPU shaders.
+
+## External Synchronization
+
+External documents are synchronized by `src/kernel/sensory/harvester.py` from explicit profiles in `data/inputs/source_profiles.json`.
+
+Historical inputs remain byte-preserved under `data/inputs/archive/legacy-through-2026-07-11-1340`.
+
+See `data/inputs/ARCHIVE_AND_HARVESTER.md` for the archive contract.
 
 ---
-© Zero-Entropy Lab | Built for the Edge Built for the Future
-
-## Document synchronization
-
-Approved external repository documents are synchronized by `src/kernel/sensory/harvester.py` from the 39 explicit profiles in `data/inputs/source_profiles.json`
-
-Historical inputs through 2026-07-11 13:40 Asia Shanghai remain byte preserved under `data/inputs/archive/legacy-through-2026-07-11-1340`
-
-External synchronization is an explicit lifecycle stage and remains separate from internal evolution
-
-See `data/inputs/ARCHIVE_AND_HARVESTER.md` for the archive contract provenance fields and verification commands
+© Zero-Entropy Lab | Built for the Edge, Built for the Future
