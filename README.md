@@ -2,33 +2,49 @@
 
 > **"Restraint is the ultimate form of digital violence."**
 
-A minimal-dependency research laboratory for deterministic agent systems and edge-native AI architecture.
+A standard-library research laboratory for deterministic state, evidence, and edge-native execution.
 
-## ⚠️ Status: ZERO-DEPENDENCY ATTAINED
+## Status
 
-This repository operates under the Zero-Entropy Constitution — no third-party dependencies, no bloat, only raw engineering.
+The Python runtime uses the standard library and keeps generated state reproducible from explicit ledgers.
+
+Zero dependency is an implementation constraint. It is not a claim that inputs, network access, or generated results are automatically trusted.
 
 ## Architecture
 
-1. **Core (src/kernel/)**: SQLite-driven memory engine with WAL concurrency
-2. **Protocol (src/kernel/protocol/)**: Native multithreaded HTTP server with lock-free ring buffer
-3. **Portal (index.html)**: Vanilla architecture with Web Worker isolation and native WebGL
-4. **Reasoning (src/kernel/cognitive/)**: Graph inference engine with multiprocessing shared memory
+1. **Core (`src/kernel/`)**: SQLite-backed memory and deterministic state processing
+2. **Protocol (`src/kernel/protocol/`)**: Local protocol experiments and lifecycle commands
+3. **Portal (`index.html`)**: Independent presentation surface
+4. **Reasoning (`src/kernel/cognitive/`)**: Graph-based structural analysis
 
-## Execution Commands
+## Verification
 
 ```bash
-# Launch Laboratory Web Portal
-export PYTHONPATH=$(pwd)/src/kernel:$(pwd)/src/kernel/protocol:$(pwd)/src/kernel/memory:$(pwd)/src/kernel/cognitive:$(pwd)/src/kernel/sensory:$(pwd)/src/kernel/orchestration
-python src/kernel/protocol/nexus.py serve
-
-# Run Verification Tests
 python tests/run_tests.py
 ```
 
-## Engineering Philosophy
+## Optional Local Server
 
-By stripping away third-party dependencies, we return control to low-level memory layouts, kernel scheduling, and GPU shaders.
+The server is a local research interface. It is not required for the lifecycle workflow.
+
+Generate an ephemeral API key before starting it:
+
+```bash
+export NEXUS_API_KEY="$(python -c 'import secrets; print(secrets.token_urlsafe(32))')"
+python src/kernel/protocol/nexus.py serve
+```
+
+The default bind address is `127.0.0.1`. API requests fail closed when `NEXUS_API_KEY` is missing.
+
+A non-loopback bind requires explicit operator opt-in. Do not expose the native server directly to the public Internet. Use an authenticated TLS reverse proxy and network-level access controls when remote access is intentionally enabled.
+
+## Security Boundaries
+
+- External documents and API requests remain untrusted inputs.
+- Rate limiting is not authentication.
+- SHA-256 fingerprints prove content identity, not authorship or authorization.
+- Generated graph state must remain reproducible from validated ledgers.
+- Security reports follow the private process in [SECURITY.md](./SECURITY.md).
 
 ## External Synchronization
 
