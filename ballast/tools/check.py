@@ -38,6 +38,8 @@ REQUIRED = (
     "tools/verify_batch_partial.py",
     "tools/experiment_publish_binding.py",
     "tools/verify_publish_binding.py",
+    "tools/experiment_async_completion.py",
+    "tools/verify_async_completion.py",
 )
 FORBIDDEN_SUFFIXES = {".backup", ".db", ".jsonl", ".lock", ".pyc", ".stage", ".tmp"}
 DAILY_HEADINGS = (
