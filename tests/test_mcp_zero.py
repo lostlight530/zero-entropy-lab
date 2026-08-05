@@ -19,6 +19,7 @@ import cortex as real_cortex
 sys.modules["cortex"] = real_cortex
 importlib.reload(real_cortex)
 
+import nexus as nexus_module
 from nexus import NexusHandler
 import socketserver
 
@@ -66,6 +67,37 @@ class TestMCPZeroProtocol(unittest.TestCase):
         if api_key is not None:
             req.add_header("Authorization", f"Bearer {api_key}")
         return urllib.request.urlopen(req)
+
+    def test_server_defaults_to_loopback(self):
+        resolver = getattr(nexus_module, "resolve_server_bind_host", None)
+        self.assertIsNotNone(resolver)
+        if resolver is not None:
+            self.assertEqual(resolver({}), "127.0.0.1")
+
+    def test_server_rejects_external_bind_without_explicit_opt_in(self):
+        resolver = getattr(nexus_module, "resolve_server_bind_host", None)
+        self.assertIsNotNone(resolver)
+        if resolver is not None:
+            with self.assertRaises(RuntimeError):
+                resolver({"NEXUS_BIND_HOST": "0.0.0.0"})
+            self.assertEqual(
+                resolver({
+                    "NEXUS_BIND_HOST": "0.0.0.0",
+                    "NEXUS_ALLOW_EXTERNAL": "1",
+                }),
+                "0.0.0.0",
+            )
+
+    def test_server_requires_api_key_before_start(self):
+        validator = getattr(nexus_module, "require_server_api_key", None)
+        self.assertIsNotNone(validator)
+        if validator is not None:
+            with self.assertRaises(RuntimeError):
+                validator({})
+            self.assertEqual(
+                validator({"NEXUS_API_KEY": API_KEY}),
+                API_KEY,
+            )
 
     def test_api_fails_closed_without_key_configuration(self):
         os.environ.pop("NEXUS_API_KEY", None)
