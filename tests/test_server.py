@@ -8,82 +8,89 @@ import sys
 import os
 from pathlib import Path
 
+API_KEY = "test-only-nexus-integration-key"
+
+
 class TestServerAPI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        """启动后台服务器进程进行集成测试"""
-        import socketserver
-        socketserver.TCPServer.allow_reuse_address = True
+        """启动回环地址上的鉴权测试服务器"""
         cls.project_root = Path(__file__).parent.parent
-        cls.server_script = cls.project_root / "src" / "kernel" / "protocol" / "nexus.py"
+        cls.server_script = (
+            cls.project_root / "src" / "kernel" / "protocol" / "nexus.py"
+        )
         cls.port = 8000
-        try:
-            subprocess.run(['kill', '-9', subprocess.check_output(['lsof', '-t', '-i', ':8000']).decode().strip()], stderr=subprocess.DEVNULL)
-        except Exception:
-            pass
 
-        
-        # 准备依赖环境的 PYTHONPATH
         kernel_dir = cls.project_root / "src" / "kernel"
         layers = ["protocol", "memory", "cognitive", "sensory", "orchestration"]
-        pythonpath = str(kernel_dir)
-        for layer in layers:
-            pythonpath += os.pathsep + str(kernel_dir / layer)
+        pythonpath = os.pathsep.join(
+            [str(kernel_dir)] + [str(kernel_dir / layer) for layer in layers]
+        )
 
-        # 启动服务器 (使用 nexus.py serve)
         cls.process = subprocess.Popen(
             [sys.executable, str(cls.server_script), "serve"],
             cwd=str(cls.project_root),
-            env={**os.environ, "PYTHONPATH": pythonpath}
+            env={
+                **os.environ,
+                "PYTHONPATH": pythonpath,
+                "NEXUS_API_KEY": API_KEY,
+            },
         )
-        
-        # 等待服务器就绪
-        max_retries = 5
-        while max_retries > 0:
+
+        for _ in range(10):
+            if cls.process.poll() is not None:
+                raise RuntimeError(
+                    f"test server exited with code {cls.process.returncode}"
+                )
             try:
-                with socket.create_connection(("localhost", 8000), timeout=1):
+                with socket.create_connection(("127.0.0.1", cls.port), timeout=1):
                     break
-            except:
+            except OSError:
                 time.sleep(0.5)
-                max_retries -= 1
+        else:
+            cls.process.terminate()
+            cls.process.wait()
+            raise RuntimeError("test server did not become ready")
 
     @classmethod
     def tearDownClass(cls):
-        cls.process.terminate()
-        cls.process.wait()
+        if cls.process.poll() is None:
+            cls.process.terminate()
+            cls.process.wait()
+
+    @classmethod
+    def api_request(cls, path):
+        request = urllib.request.Request(
+            f"http://127.0.0.1:{cls.port}{path}",
+            headers={"Authorization": f"Bearer {API_KEY}"},
+        )
+        return urllib.request.urlopen(request)
 
     def test_api_status(self):
-        """测试 /api/status 接口契约验证"""
-        try:
-            with urllib.request.urlopen("http://localhost:8000/api/status") as response:
-                data = json.loads(response.read().decode())
-                self.assertEqual(data["status"], "ok")
-                self.assertIn("payload", data)
-                self.assertIn("message", data)
-                self.assertIn("entities", data["payload"])
-        except Exception as e:
-            self.fail(f"API Request failed: {e}")
+        """测试鉴权后的状态接口"""
+        with self.api_request("/api/status") as response:
+            data = json.loads(response.read().decode())
+            self.assertEqual(data["status"], "ok")
+            self.assertIn("payload", data)
+            self.assertIn("message", data)
+            self.assertIn("entities", data["payload"])
 
     def test_api_invalid_endpoint(self):
-        """测试未知 API 接口契约返回"""
-        try:
-            with urllib.request.urlopen("http://localhost:8000/api/invalid") as response:
-                data = json.loads(response.read().decode())
-                self.assertEqual(data["status"], "error")
-                self.assertEqual(data["message"], "Invalid endpoint")
-        except Exception as e:
-            self.fail(f"Invalid Endpoint Request failed: {e}")
+        """测试鉴权后的未知接口契约"""
+        with self.api_request("/api/invalid") as response:
+            data = json.loads(response.read().decode())
+            self.assertEqual(data["status"], "error")
+            self.assertEqual(data["message"], "Invalid endpoint")
 
     def test_static_serve(self):
-        """测试静态资源加载"""
-        try:
-            with urllib.request.urlopen("http://localhost:8000/index.html") as response:
-                content = response.read().decode()
-                self.assertIn("<!DOCTYPE html>", content)
-        except Exception as e:
-            self.fail(f"Static Serve failed: {e}")
+        """测试回环地址上的静态资源"""
+        with urllib.request.urlopen(
+            f"http://127.0.0.1:{self.port}/index.html"
+        ) as response:
+            content = response.read().decode()
+            self.assertIn("<!DOCTYPE html>", content)
+
 
 if __name__ == "__main__":
-    import sys, os
-    print("⚔️ NEXUS PROVING GROUND: API Integration Tests")
+    print("NEXUS API Integration Tests")
     unittest.main()
