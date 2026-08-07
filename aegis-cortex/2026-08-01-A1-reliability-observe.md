@@ -1,26 +1,26 @@
 # A1 Daily Reliability Observe
 
-CORTEX_RUN_HEADER
+## CORTEX_RUN_HEADER
 
-Cortex: aegis-cortex
-Host Repository: zero-entropy-lab
-Task ID: A1
-Cadence: Daily
-Loop Stage: Observe
-Logical Date: 2026-08-01
-Execution Time UTC: 2026-07-31 23:33:50
-Execution Time Asia/Shanghai: 2026-08-01 07:33:50
-Agent: Jules
-Knowledge Source: External Web + aegis-cortex local files
-Network Status: NETWORK_VERIFIED
-Source Status: SOURCES_VERIFIED
-Task Status: COMPLETED
-Repository Inspection: NO
-GitHub Actions Inspection: NO
-Write Scope: aegis-cortex only
-Boundary Violation: NO
+- **Cortex**: aegis-cortex
+- **Host Repository**: zero-entropy-lab
+- **Task ID**: A1
+- **Cadence**: Daily
+- **Loop Stage**: Observe
+- **Logical Date**: 2026-08-01
+- **Execution Time UTC**: 2026-07-31 23:33:50
+- **Execution Time Asia/Shanghai**: 2026-08-01 07:33:50
+- **Agent**: Jules
+- **Knowledge Source**: External Web + aegis-cortex local files
+- **Network Status**: NETWORK_VERIFIED
+- **Source Status**: SOURCES_VERIFIED
+- **Task Status**: COMPLETED
+- **Repository Inspection**: NO
+- **GitHub Actions Inspection**: NO
+- **Write Scope**: aegis-cortex only
+- **Boundary Violation**: NO
 
-INPUT_RECORD
+## INPUT_RECORD
 
 记录本次读取了哪些 aegis-cortex 文件:
 - aegis-cortex/2026-07-31-A1-reliability-observe.md
@@ -43,7 +43,7 @@ A4 和 A6 当前重点:
 未取得可靠证据的方向:
 - 无。搜索到高优先级证据 (AgentStatus & 等报告)。
 
-EXTERNAL_SOURCE_RECORDS
+## EXTERNAL_SOURCE_RECORDS
 
 Source ID: SRC-2026-08-01-01
 Title: The State of AI Agent Drift: 88% of Agents Changed Behavior in 30 Days
@@ -94,7 +94,7 @@ Confidence: High
 Limitations: MCP specific.
 
 
-RAW_RELIABILITY_SIGNAL_LOG
+## RAW_RELIABILITY_SIGNAL_LOG
 
 Signal ID: SIG-2026-08-01-01
 Signal: Agent Behavioral Drift Collapse
@@ -133,7 +133,7 @@ Possible Noise: Low
 Needs A2 Verification: YES
 
 
-NEXT_HANDOFF
+## NEXT_HANDOFF
 
 需要 A2 定向解释的风险:
 - Agent Behavioral Drift Collapse (SIG-2026-08-01-01) 需要在 Aegis 体系内定义预防策略（如果适用）。
@@ -154,7 +154,7 @@ NEXT_HANDOFF
 联网限制:
 - 无。搜索与查阅完整顺利完成。
 
-BOUNDARY_CHECK
+## BOUNDARY_CHECK
 
 - 确认未读取宿主仓库 (zero-entropy-lab) 代码、GitHub Actions 配置文件、旧 Nexus 文件和任何非 aegis-cortex/** 的目录。
 - 确认没有把外部风险（如 88% Drift、MCP 隐式故障等）声明为 aegis-cortex 已经发生的本地事实，所有 Local Repository Evidence 均标注为 NONE。

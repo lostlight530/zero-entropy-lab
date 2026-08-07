@@ -1,27 +1,27 @@
 # A2 Daily Doctrine Orient
 
-CORTEX_RUN_HEADER
+## CORTEX_RUN_HEADER
 
-Cortex: aegis-cortex
-Host Repository: zero-entropy-lab
-Task ID: A2
-Cadence: Daily
-Loop Stage: Orient
-Logical Date: 2026-08-01
-Execution Time UTC: 2026-08-01 00:35:00
-Execution Time Asia/Shanghai: 2026-08-01 08:35:00
-Agent: Jules
-Input Status: COMPLETED
+- **Cortex**: aegis-cortex
+- **Host Repository**: zero-entropy-lab
+- **Task ID**: A2
+- **Cadence**: Daily
+- **Loop Stage**: Orient
+- **Logical Date**: 2026-08-01
+- **Execution Time UTC**: 2026-08-01 00:35:00
+- **Execution Time Asia/Shanghai**: 2026-08-01 08:35:00
+- **Agent**: Jules
+- **Input Status**: COMPLETED
 Knowledge Source: A1 signals + External Web + aegis-cortex local files
-Network Status: NETWORK_VERIFIED
-Source Status: SOURCES_VERIFIED
-Task Status: COMPLETED
-Repository Inspection: NO
-GitHub Actions Inspection: NO
-Write Scope: aegis-cortex only
-Boundary Violation: NO
+- **Network Status**: NETWORK_VERIFIED
+- **Source Status**: SOURCES_VERIFIED
+- **Task Status**: COMPLETED
+- **Repository Inspection**: NO
+- **GitHub Actions Inspection**: NO
+- **Write Scope**: aegis-cortex only
+- **Boundary Violation**: NO
 
-INPUT_RECORD
+## INPUT_RECORD
 
 记录本次读取了哪些 aegis-cortex 文件:
 - aegis-cortex/2026-08-01-A1-reliability-observe.md
@@ -48,7 +48,7 @@ INPUT_RECORD
 未完成验证的情况:
 - 无。所有 A1 提及的高优先级外部来源均已成功检索并验证。
 
-RISK_CLASSIFICATION
+## RISK_CLASSIFICATION
 
 Signal ID: SIG-2026-08-01-01
 External Claim: 88% of monitored agents experienced answer correctness drift in 30 days, dropping an average of 84 points. Recoveries are slow or non-existent (56% never recover).
@@ -86,7 +86,7 @@ Counterevidence: 无。
 Remaining Uncertainty: 暂无法确定我们在 Jules 中使用的工具是否会随时面临类似静默故障。
 Weekly Promotion Eligibility: YES
 
-ORIENTATION_NOTES
+## ORIENTATION_NOTES
 
 本阶段定向和意义说明：
 1. 信号对 Aegis 观察纪律的意义：今日外部信号强烈指向由于“状态漂移”或“不可见非 HTTP 错误”导致的静默故障。这证实了我们的 Tolerant Missing State (容忍缺失状态) 以及边界验证协议方向的正确性——不要盲目相信“执行成功”或“无错误”，需要独立验证和确认缺失状态。
@@ -96,7 +96,7 @@ ORIENTATION_NOTES
 5. 只是理论可能：由于边界约束，宿主应用中的非 HTTP 循环失败与 MCP 工具崩溃风险，在缺乏底层监控的情况下仍只属于理论可能。
 6. 仍不确定判断：无法确定宿主仓库在实际生产环境的架构中，到底有没有使用可能引发隐式故障的长周期后台队列或不可见的无头任务循环。
 
-NO_DECISION_SECTION
+## NO_DECISION_SECTION
 
 明确今日不做的操作：
 - 不做任何具体的纪律决策。
@@ -104,7 +104,7 @@ NO_DECISION_SECTION
 - 不对 Aegis 控制面架构或代理循环提出修改。
 - 不直接把今天发现的外部风险固化为长期历史。
 
-NEXT_HANDOFF
+## NEXT_HANDOFF
 
 本周候选纪律问题：
 - 是否需要强化对“工具调用后假性完成 (False Completion)”以及“任务循环静默失败”的本地验证机制。
@@ -130,7 +130,7 @@ NEXT_HANDOFF
 网络和来源限制：
 - 无限制，来源验证完整。
 
-BOUNDARY_CHECK
+## BOUNDARY_CHECK
 
 - 确认未检查 .github/**, src/** 或宿主仓库代码。
 - 确认没有由于理论风险的存在而虚假捏造本地事故，所有结果均记录为 NO_LOCAL_EVIDENCE。
