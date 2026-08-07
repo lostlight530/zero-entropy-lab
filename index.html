@@ -644,6 +644,37 @@
       color: var(--white);
     }
 
+    .log-line.sep {
+      height: 1px;
+      margin: 0.5rem 0;
+      background: rgba(255,255,255,0.06);
+      padding: 0;
+    }
+
+    .archive-terminal {
+      margin-top: 1.5rem;
+      opacity: 0.65;
+      background: rgba(2, 6, 12, 0.92);
+      border: 1px solid rgba(0, 240, 255, 0.22);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: inset 0 0 40px rgba(0, 240, 255, 0.03);
+    }
+
+    .archive-terminal summary {
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-family: inherit;
+      padding: 0.5rem 0;
+      user-select: none;
+    }
+
+    .archive-terminal summary:hover {
+      color: var(--white);
+      opacity: 1;
+    }
+
     .explain-card h3 {
       color: var(--white);
       margin-bottom: 0.55rem;
@@ -748,8 +779,8 @@
       <div class="wrap">
         <div class="eyebrow">
           <span class="pulse"></span>
-          <span class="zh">2026-06-26 数据例子 · Last-year Actions usage snapshot</span>
-          <span class="en">2026-06-26 data example · Last-year Actions usage snapshot</span>
+          <span class="zh">2026-02-12 → 2026-08-07 · GitHub Actions Last-year snapshot</span>
+          <span class="en">2026-02-12 → 2026-08-07 · GitHub Actions Last-year snapshot</span>
         </div>
         <h1>
           NEXUS LIFE-CYCLE
@@ -777,10 +808,10 @@
             <div class="section-kicker">Annual Actions Load</div>
             <h2><span class="zh">年度负载对比</span><span class="en">Yearly load comparison</span></h2>
             <p class="section-desc zh">
-              这里使用你给出的 GitHub Actions last year 数据, 1 是 zero, 2 是 welcome, 页面内明确标记 2026-06-26 数据例子
+              这里使用 GitHub Actions last year 数据, 1 是 zero, 2 是 welcome, 窗口 2026-02-12 → 2026-08-07
             </p>
             <p class="section-desc en">
-              This section uses the GitHub Actions last-year metrics you provided, 1 is zero, 2 is welcome, and the page marks the data example as 2026-06-26
+              This section uses the GitHub Actions last-year metrics, 1 is zero, 2 is welcome, window 2026-02-12 → 2026-08-07
             </p>
           </div>
         </div>
@@ -788,25 +819,25 @@
         <div class="grid grid-4">
           <article class="card metric zero">
             <div class="metric-label">1 · Zero total minutes</div>
-            <div class="metric-value">4,948</div>
+            <div class="metric-value">3,870</div>
             <div class="metric-note zh">年度工作流总分钟数</div>
             <div class="metric-note en">Total workflow minutes for last year</div>
           </article>
           <article class="card metric zero">
             <div class="metric-label">1 · Zero job runs</div>
-            <div class="metric-value">4,079</div>
+            <div class="metric-value">3,172</div>
             <div class="metric-note zh">年度 job run 总数</div>
             <div class="metric-note en">Total job runs for last year</div>
           </article>
           <article class="card metric welcome">
             <div class="metric-label">2 · Welcome total minutes</div>
-            <div class="metric-value">2,038</div>
+            <div class="metric-value">7,045</div>
             <div class="metric-note zh">年度工作流总分钟数</div>
             <div class="metric-note en">Total workflow minutes for last year</div>
           </article>
           <article class="card metric welcome">
             <div class="metric-label">2 · Welcome job runs</div>
-            <div class="metric-value">1,725</div>
+            <div class="metric-value">5,786</div>
             <div class="metric-note zh">年度 job run 总数</div>
             <div class="metric-note en">Total job runs for last year</div>
           </article>
@@ -820,31 +851,31 @@
           <div class="section-kicker">Compute Budget</div>
           <h2><span class="zh">计算预算</span><span class="en">Compute budget</span></h2>
           <p class="section-desc zh">
-            zero 消耗的 Actions 分钟约为 welcome 的 2.43 倍, job run 数约为 welcome 的 2.36 倍, 说明 zero 是更重的内核执行线
+            Welcome 约消耗 Zero 的 1.82 倍 Actions 分钟, 两仓共享同一 NEXUS 生命周期骨架, 承担不同的责任边界
           </p>
           <p class="section-desc en">
-            Zero uses about 2.43x the Actions minutes of welcome and about 2.36x the job runs, which makes it the heavier kernel execution lane
+            Welcome uses about 1.82x the Actions minutes of Zero — both repos share the same NEXUS life-cycle skeleton while carrying different responsibility boundaries
           </p>
           <div class="bars" style="margin-top:1.1rem">
             <div class="bar-row">
               <div class="bar-label">Zero minutes</div>
               <div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div>
-              <div class="bar-value">4,948</div>
+              <div class="bar-value">3,870</div>
             </div>
             <div class="bar-row">
               <div class="bar-label">Welcome minutes</div>
               <div class="bar-track"><div class="bar-fill" style="--w:41%"></div></div>
-              <div class="bar-value">2,038</div>
+              <div class="bar-value">7,045</div>
             </div>
             <div class="bar-row">
               <div class="bar-label">Zero runs</div>
               <div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div>
-              <div class="bar-value">4,079</div>
+              <div class="bar-value">3,172</div>
             </div>
             <div class="bar-row">
               <div class="bar-label">Welcome runs</div>
               <div class="bar-track"><div class="bar-fill" style="--w:42%"></div></div>
-              <div class="bar-value">1,725</div>
+              <div class="bar-value">5,786</div>
             </div>
           </div>
         </article>
@@ -892,27 +923,28 @@
                 <div class="lane-number">1</div>
                 <div>
                   <div class="repo-name">zero-entropy-lab</div>
-                  <div class="repo-role zh">Kernel Execution Lane</div>
-                  <div class="repo-role en">Kernel Execution Lane</div>
+                  <div class="repo-role zh">Integrity and State Core</div>
+                  <div class="repo-role en">Integrity and State Core</div>
                 </div>
               </div>
-              <span class="tag">4,948 min</span>
+              <span class="tag">3,870 min</span>
             </div>
             <div class="lane-body">
               <div class="mini-metrics">
-                <div class="mini"><b>4,079</b><span>job runs</span></div>
+                <div class="mini"><b>3,172</b><span>job runs</span></div>
                 <div class="mini"><b>37s</b><span>avg run</span></div>
                 <div class="mini"><b>2%</b><span>failure</span></div>
               </div>
               <div class="steps">
-                <div class="step"><div><div class="step-main">Cleanup generated state</div><div class="step-sub zh">清理冲突生成物</div><div class="step-sub en">Remove conflicting generated files</div></div><span class="tag">zero only</span></div>
-                <div class="step"><div><div class="step-main">Checkout reality</div><div class="step-sub zh">拉取仓库现实状态</div><div class="step-sub en">Fetch repository reality</div></div><span class="tag">shared</span></div>
-                <div class="step"><div><div class="step-main">Rebuild memory</div><div class="step-sub zh">重建 Cortex 记忆</div><div class="step-sub en">Reconstruct Cortex memory</div></div><span class="tag">shared</span></div>
-                <div class="step"><div><div class="step-main">Ingest self-codebase</div><div class="step-sub zh">扫描自身代码库</div><div class="step-sub en">Map self-code into Cortex</div></div><span class="tag">shared</span></div>
-                <div class="step"><div><div class="step-main">Deep ponder</div><div class="step-sub zh">运行图推理报告</div><div class="step-sub en">Run graph reasoning report</div></div><span class="tag">shared</span></div>
-                <div class="step"><div><div class="step-main">Evolution cycle</div><div class="step-sub zh">生成认知报告与任务简报</div><div class="step-sub en">Generate cognitive report and mission brief</div></div><span class="tag">shared</span></div>
-                <div class="step"><div><div class="step-main">Verification tests</div><div class="step-sub zh">运行测试与服务验证</div><div class="step-sub en">Run tests and service checks</div></div><span class="tag">zero only</span></div>
-                <div class="step"><div><div class="step-main">Sync and commit</div><div class="step-sub zh">同步世界线并提交认知变化</div><div class="step-sub en">Sync world-line and commit cognitive changes</div></div><span class="tag">writeback</span></div>
+                <div class="step"><div><div class="step-main">Verify foundation</div><div class="step-sub zh">编译 30 后端文件 + 7 模块全部通过</div><div class="step-sub en">Compile 30 backend files + 7 modules all OK</div></div><span class="tag">zero only</span></div>
+                <div class="step"><div><div class="step-main">Document hygiene</div><div class="step-sub zh">维护 JSONL 知识库 · 1,687 记录</div><div class="step-sub en">Maintain JSONL knowledge base · 1,687 records</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Harvest signals</div><div class="step-sub zh">收割外部仓库情报 · 4 更新</div><div class="step-sub en">Harvest external signals · 4 updated</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Project mapping</div><div class="step-sub zh">投影文档→仓库关系 · 211 文档</div><div class="step-sub en">Project doc→repo relations · 211 docs</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Canonicalize + prune</div><div class="step-sub zh">规范化 888 实体 · 哈希链验证 · 保护路径裁剪</div><div class="step-sub en">Canonicalize 888 entities · hash chain · prune protected</div></div><span class="tag">zero focus</span></div>
+                <div class="step"><div><div class="step-main">Rebuild + ingest</div><div class="step-sub zh">1,687 记忆重建 + 35 文件映射入 Cortex</div><div class="step-sub en">1,687 memories + 35 files into Cortex</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Ponder</div><div class="step-sub zh">382 节点 · 211 边 · 密度 1.15 · FRAGMENTED</div><div class="step-sub en">382 nodes · 211 edges · density 1.15 · FRAGMENTED</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Evolve</div><div class="step-sub zh">净化 + 每日演化 · 认知报告 + 任务简报</div><div class="step-sub en">Purification + daily cycle · cognitive report</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Re-verify + commit</div><div class="step-sub zh">全部 7 模块重验 → 11 文件 · +1,477 −268</div><div class="step-sub en">7 modules re-verified → 11 files · +1,477 −268</div></div><span class="tag">writeback</span></div>
               </div>
             </div>
           </article>
@@ -923,27 +955,28 @@
                 <div class="lane-number">2</div>
                 <div>
                   <div class="repo-name">welcome-to-github</div>
-                  <div class="repo-role zh">Harvester And Ledger Lane</div>
-                  <div class="repo-role en">Harvester And Ledger Lane</div>
+                  <div class="repo-role zh">Harvester and Public Surface</div>
+                  <div class="repo-role en">Harvester and Public Surface</div>
                 </div>
               </div>
-              <span class="tag">2,038 min</span>
+              <span class="tag">7,045 min</span>
             </div>
             <div class="lane-body">
               <div class="mini-metrics">
-                <div class="mini"><b>1,725</b><span>job runs</span></div>
+                <div class="mini"><b>5,786</b><span>job runs</span></div>
                 <div class="mini"><b>42s</b><span>avg run</span></div>
                 <div class="mini"><b>2%</b><span>failure</span></div>
               </div>
               <div class="steps">
-                <div class="step"><div><div class="step-main">Checkout reality</div><div class="step-sub zh">拉取 main 分支现实状态</div><div class="step-sub en">Fetch main branch reality</div></div><span class="tag">shared</span></div>
-                <div class="step"><div><div class="step-main">Rebuild memory</div><div class="step-sub zh">从 schema 重建数据库</div><div class="step-sub en">Rebuild database from schema</div></div><span class="tag">shared</span></div>
-                <div class="step"><div><div class="step-main">Harvest external facts</div><div class="step-sub zh">扫描外部 AI 仓库信号</div><div class="step-sub en">Scan external AI repository signals</div></div><span class="tag">welcome only</span></div>
-                <div class="step"><div><div class="step-main">Ingest self-codebase</div><div class="step-sub zh">把自身文件映射进 Cortex</div><div class="step-sub en">Map self files into Cortex</div></div><span class="tag">shared</span></div>
-                <div class="step"><div><div class="step-main">Deep ponder</div><div class="step-sub zh">主动推理与 PageRank 中心性观察</div><div class="step-sub en">Active inference and PageRank centrality observation</div></div><span class="tag">shared</span></div>
-                <div class="step"><div><div class="step-main">Sandbox evolution</div><div class="step-sub zh">AST 变异沙盒和信任网关验证</div><div class="step-sub en">AST mutation sandbox and trust gateway verification</div></div><span class="tag">welcome focus</span></div>
-                <div class="step"><div><div class="step-main">Ledger and dashboard</div><div class="step-sub zh">追加量化账本并渲染仪表盘</div><div class="step-sub en">Append quantitative ledger and render dashboard</div></div><span class="tag">welcome only</span></div>
-                <div class="step"><div><div class="step-main">Sync, resolve, commit</div><div class="step-sub zh">同步, 处理 stash 冲突, 提交认知变化</div><div class="step-sub en">Sync, resolve stash conflicts, commit cognitive changes</div></div><span class="tag">writeback</span></div>
+                <div class="step"><div><div class="step-main">Verify foundation</div><div class="step-sub zh">编译 15 生命周期文件 + 34 测试全部通过</div><div class="step-sub en">Compile 15 lifecycle files + 34 tests OK</div></div><span class="tag">welcome only</span></div>
+                <div class="step"><div><div class="step-main">Document hygiene</div><div class="step-sub zh">维护 JSONL 知识库 · 1,350 记录</div><div class="step-sub en">Maintain JSONL knowledge base · 1,350 records</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Harvest external facts</div><div class="step-sub zh">扫描外部 AI 仓库信号 · 全部已最新</div><div class="step-sub en">Scan external AI repos · all current</div></div><span class="tag">welcome only</span></div>
+                <div class="step"><div><div class="step-main">Project mapping</div><div class="step-sub zh">投影文档→仓库关系 · 20 文档</div><div class="step-sub en">Project doc→repo relations · 20 docs</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Canonicalize + prune</div><div class="step-sub zh">规范化 692 实体 · 保护路径裁剪</div><div class="step-sub en">Canonicalize 692 entities · prune protected</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Rebuild + ingest</div><div class="step-sub zh">Schema 重建 + 16 文件映射入 Cortex</div><div class="step-sub en">Rebuild from schema + 16 files into Cortex</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Ponder</div><div class="step-sub zh">PageRank 中心性 · 结构直觉 · 自驱目标</div><div class="step-sub en">PageRank centrality · structural intuition · self-driven goal</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Evolve</div><div class="step-sub zh">AST 变异沙盒通过 · 信任网关活跃 · 量化仪表盘</div><div class="step-sub en">AST sandbox passed · Trust Gateway · quantitative dashboard</div></div><span class="tag">welcome focus</span></div>
+                <div class="step"><div><div class="step-main">Re-verify + commit</div><div class="step-sub zh">34 测试重验通过 → 4 文件 · +90 −15</div><div class="step-sub en">34 tests re-verified → 4 files · +90 −15</div></div><span class="tag">writeback</span></div>
               </div>
             </div>
           </article>
@@ -958,10 +991,10 @@
             <div class="section-kicker">Step Comparison Matrix</div>
             <h2><span class="zh">步骤对比矩阵</span><span class="en">Step comparison matrix</span></h2>
             <p class="section-desc zh">
-              shared 表示两边共同存在, zero only 表示内核线专属, welcome only 表示外部信号与账本线专属
+              两边共同拥有相同的 NEXUS 生命周期阶段, 但实施方式不同 — 比较同一阶段在不同仓库如何执行
             </p>
             <p class="section-desc en">
-              shared means both lanes contain the step, zero only means kernel-specific, welcome only means external-signal or ledger-specific
+              Both lanes share the same NEXUS life-cycle stages but implement them differently — comparing how each stage executes across repositories
             </p>
           </div>
         </div>
@@ -973,49 +1006,64 @@
             <div class="matrix-cell">2 · welcome</div>
           </div>
           <div class="matrix-row">
-            <div class="matrix-cell">Cleanup</div>
-            <div class="matrix-cell yes">yes · cleanup generated state</div>
-            <div class="matrix-cell no">not primary</div>
+            <div class="matrix-cell">Compile & Verify</div>
+            <div class="matrix-cell yes">30 backend files compiled · 7 test modules all OK</div>
+            <div class="matrix-cell yes">15 lifecycle files compiled · 34 tests OK</div>
           </div>
           <div class="matrix-row">
-            <div class="matrix-cell">Checkout</div>
-            <div class="matrix-cell yes">yes</div>
-            <div class="matrix-cell yes">yes</div>
+            <div class="matrix-cell">Document hygiene</div>
+            <div class="matrix-cell yes">1,687 records · 11 files · 0 duplicates</div>
+            <div class="matrix-cell yes">1,350 records · 10 files · 0 duplicates</div>
           </div>
           <div class="matrix-row">
-            <div class="matrix-cell">Rebuild memory</div>
-            <div class="matrix-cell yes">yes · src/kernel/protocol/nexus.py rebuild</div>
-            <div class="matrix-cell yes">yes · docs/brain/nexus.py rebuild</div>
+            <div class="matrix-cell">Harvest</div>
+            <div class="matrix-cell yes">0 failed · 4 updated</div>
+            <div class="matrix-cell yes">0 failed · 0 updated (all current)</div>
           </div>
           <div class="matrix-row">
-            <div class="matrix-cell">External harvest</div>
-            <div class="matrix-cell warn">inside evolve signals</div>
-            <div class="matrix-cell yes">yes · harvest external facts</div>
+            <div class="matrix-cell">Project</div>
+            <div class="matrix-cell yes">211 docs · 39 repos · 211 relations</div>
+            <div class="matrix-cell yes">20 docs · 15 repos · 20 relations</div>
           </div>
           <div class="matrix-row">
-            <div class="matrix-cell">Self ingestion</div>
-            <div class="matrix-cell yes">yes · 42 files in example log</div>
-            <div class="matrix-cell yes">yes · 14 files in example log</div>
+            <div class="matrix-cell">Canonicalize</div>
+            <div class="matrix-cell yes">888 entities · 799 relations · hash chain verified</div>
+            <div class="matrix-cell yes">692 entities · 658 relations · 0 dangling</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Prune protected</div>
+            <div class="matrix-cell yes">aegis-cortex, ballast, index.html, assets/**</div>
+            <div class="matrix-cell yes">horizon-cortex, parallax</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Rebuild</div>
+            <div class="matrix-cell yes">1,687 memories restored from knowledge fragments</div>
+            <div class="matrix-cell yes">from schemas + JSONL fragments</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Ingest</div>
+            <div class="matrix-cell yes">35 files mapped into Cortex</div>
+            <div class="matrix-cell yes">16 files mapped into Cortex</div>
           </div>
           <div class="matrix-row">
             <div class="matrix-cell">Ponder</div>
-            <div class="matrix-cell yes">yes · graph analysis</div>
-            <div class="matrix-cell yes">yes · active inference</div>
+            <div class="matrix-cell yes">382 nodes · 211 edges · density 1.15 · FRAGMENTED</div>
+            <div class="matrix-cell yes">PageRank centrality · isolation risk · self-driven goal</div>
           </div>
           <div class="matrix-row">
-            <div class="matrix-cell">Evolution</div>
-            <div class="matrix-cell yes">yes · cognitive report</div>
-            <div class="matrix-cell yes">yes · sandbox evolution</div>
+            <div class="matrix-cell">Evolve</div>
+            <div class="matrix-cell yes">purification · daily cycle · cognitive report</div>
+            <div class="matrix-cell yes">AST sandbox passed · Trust Gateway · quantitative dashboard</div>
           </div>
           <div class="matrix-row">
-            <div class="matrix-cell">Verification</div>
-            <div class="matrix-cell yes">yes · tests OK</div>
-            <div class="matrix-cell warn">sandbox verification</div>
+            <div class="matrix-cell">Re-verify</div>
+            <div class="matrix-cell yes">7 modules all OK · foundation verification passed</div>
+            <div class="matrix-cell yes">34 tests re-verified · canonicalize + rebuild OK</div>
           </div>
           <div class="matrix-row">
-            <div class="matrix-cell">Writeback</div>
-            <div class="matrix-cell yes">10 files changed, 545 insertions</div>
-            <div class="matrix-cell yes">15 files changed, 230 insertions</div>
+            <div class="matrix-cell">Commit</div>
+            <div class="matrix-cell yes">11 files · +1,477 −268 · cognitive update</div>
+            <div class="matrix-cell yes">4 files · +90 −15 · archive + ledger</div>
           </div>
         </div>
       </div>
@@ -1028,10 +1076,10 @@
             <div class="section-kicker">Run Log Evidence</div>
             <h2><span class="zh">运行日志证据</span><span class="en">Run-log evidence</span></h2>
             <p class="section-desc zh">
-              下面不是实时 API 拉取, 是把你提供的 run log 摘成页面样例, 用来证明每条 lane 的具体行为
+              以下数据来自 2026-08-07 最新一次两仓同步运行, 不是样例, 是可验证的公开记录
             </p>
             <p class="section-desc en">
-              This is not a live API fetch, it is a summarized sample from your provided run logs, used to show the concrete behavior of each lane
+              The following data is from the August 7, 2026 synchronized run — not a sample, but a verifiable public record
             </p>
           </div>
         </div>
@@ -1039,21 +1087,53 @@
         <div class="terminal">
           <div class="terminal-head">
             <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-            <div>RUN LOG CONSOLE · 2026-06-28 EXAMPLE</div>
+            <div>CURRENT · 2026-08-07</div>
           </div>
           <div class="terminal-body">
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>verify</strong> 30 backend files compiled, 7 test modules, all OK</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>hygiene</strong> 1,687 records, 11 knowledge files, 0 duplicates</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>harvest</strong> 0 failed, 4 updated</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>project</strong> 211 docs, 39 repositories, 211 relations mapped</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>canonicalize</strong> 888 entities, 799 relations, hash chain verified (0 broken)</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>prune</strong> protected: aegis-cortex · ballast · index.html · assets · scripts · styles</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>rebuild</strong> 1,687 memories restored from knowledge fragments</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>ingest</strong> 35 files mapped into Cortex</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>ponder</strong> 382 nodes, 211 edges, FRAGMENTED_3_ORPHANS, density 1.15</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>evolve</strong> purification complete, cognitive report + 2 missions generated</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>re-verify</strong> 7 test modules all OK, foundation verification passed</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>commit</strong> 11 files, +1,477 −268, cognitive update pushed</div>
+            <div class="log-line sep"></div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>verify</strong> 15 lifecycle files compiled, 34 tests OK</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>hygiene</strong> 1,350 records, 10 knowledge files, 0 duplicates</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>harvest</strong> 0 failed, 0 updated (all sources current)</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>project</strong> 20 docs, 15 repositories, 20 relations mapped</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>canonicalize</strong> 692 entities, 658 relations, 0 duplicates, 0 dangling</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>prune</strong> protected: horizon-cortex · parallax</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>rebuild</strong> from schemas + JSONL fragments</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>ingest</strong> 16 files mapped into Cortex</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>ponder</strong> PageRank centrality: NEXUS System, isolation risk, self-driven goal</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>evolve</strong> AST sandbox passed, Trust Gateway active, quantitative dashboard rendered</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>re-verify</strong> 34 tests re-verified, canonicalize + rebuild OK</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>commit</strong> 4 files, +90 −15, archive + ledger updated</div>
+          </div>
+        </div>
+
+        <details class="terminal archive-terminal">
+          <summary class="archive-summary">HISTORICAL ARCHIVE · 2026-06-28 (click to expand)</summary>
+          <div class="terminal-body" style="margin-top:0.75rem">
             <div class="log-line"><b class="zero-text">[zero]</b> <strong>rebuild</strong> Reconstruction Complete, 49397 memories restored</div>
             <div class="log-line"><b class="zero-text">[zero]</b> <strong>ingest</strong> 42 files mapped into Cortex</div>
             <div class="log-line"><b class="zero-text">[zero]</b> <strong>ponder</strong> nodes 70, topology HIGHLY_STRUCTURED_ZERO_ORPHANS, graph density 3.54</div>
             <div class="log-line"><b class="zero-text">[zero]</b> <strong>tests</strong> tests OK, MCP and server checks passed</div>
             <div class="log-line"><b class="zero-text">[zero]</b> <strong>commit</strong> 10 files changed, 545 insertions, cognitive report created</div>
+            <div class="log-line sep"></div>
             <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>harvest</strong> transformers, nexent, astron-agent, vllm, dify, mediapipe, markitdown, python-genai</div>
             <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>ingest</strong> 14 files mapped into Cortex</div>
             <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>ponder</strong> isolation risk, structural intuition, PageRank centrality, self-driven goal</div>
             <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>evolve</strong> AST sandbox passed, Trust Gateway Active, quantitative ledger rendered</div>
             <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>commit</strong> 15 files changed, 230 insertions, archive and ledger updated</div>
           </div>
-        </div>
+        </details>
       </div>
     </section>
 
@@ -1089,7 +1169,7 @@
             <h3 class="zh">什么是 total minutes</h3>
             <h3 class="en">What are total minutes</h3>
             <p class="zh">total minutes 表示工作流在 runner 上消耗的总运行时间, 数字越高, 说明这一条 lane 年度执行负载越重</p>
-            <p class="en">Total minutes means the total runner time consumed by workflows, the higher the number, the heavier the yearly execution load</p>
+            <p class="en">Total minutes means the total runner time consumed by workflows — the higher the number, the greater the yearly execution volume</p>
           </article>
           <article class="card explain-card">
             <h3 class="zh">为什么看 queue time</h3>
@@ -1117,8 +1197,8 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <div>
-        <span class="zh">© 2026 NEXUS FLOW · 2026-06-26 数据例子 · single-file homepage</span>
-        <span class="en">© 2026 NEXUS FLOW · 2026-06-26 data example · single-file homepage</span>
+        <span class="zh">© 2026 NEXUS FLOW · 2026-02-12 → 2026-08-07 · single-file homepage</span>
+        <span class="en">© 2026 NEXUS FLOW · 2026-02-12 → 2026-08-07 · single-file homepage</span>
       </div>
       <div>
         <a href="#top">Back to top</a>
