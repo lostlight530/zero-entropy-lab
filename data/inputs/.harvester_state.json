@@ -25,7 +25,7 @@
           "tree_sha": "c61089666ef5c7d4db82b8b86c5bd6ef3659a9c5"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:43.033853+00:00"
+      "last_checked_at": "2026-08-08T22:16:05.787137+00:00"
     },
     "ModelEngine-Group/fit-framework": {
       "documents": {
@@ -39,7 +39,7 @@
           "tree_sha": "dbea5e59116491b7a4fd39a7a978ab0afb93d7e8"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:29.231735+00:00"
+      "last_checked_at": "2026-08-08T22:15:52.389991+00:00"
     },
     "MoonshotAI/kimi-agent-sdk": {
       "documents": {
@@ -53,7 +53,7 @@
           "tree_sha": "b25de1df3ad75c8c90bdf41bd6d90e108a8bd324"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:30.590149+00:00"
+      "last_checked_at": "2026-08-08T22:15:53.680187+00:00"
     },
     "NVIDIA/TensorRT-LLM": {
       "documents": {
@@ -67,7 +67,7 @@
           "tree_sha": "c7127e852a047725e249137228ef088c4926335e"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:34.539746+00:00"
+      "last_checked_at": "2026-08-08T22:15:57.355279+00:00"
     },
     "OpenHands/software-agent-sdk": {
       "documents": {
@@ -81,7 +81,7 @@
           "tree_sha": "7e2c9fcff54e188949668ad33b9433bd0d71abf5"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:25.776750+00:00"
+      "last_checked_at": "2026-08-08T22:15:49.437613+00:00"
     },
     "OpenSPG/KAG": {
       "documents": {
@@ -95,7 +95,7 @@
           "tree_sha": "7eb4854da7de039f01f85066700f123ef58e0e76"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:45.016239+00:00"
+      "last_checked_at": "2026-08-08T22:16:07.837323+00:00"
     },
     "QwenLM/Qwen-Agent": {
       "documents": {
@@ -109,7 +109,7 @@
           "tree_sha": "ac1c4a6bca0eb3a7a0fc759519049af54ecf80f4"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:26.514310+00:00"
+      "last_checked_at": "2026-08-08T22:15:50.048219+00:00"
     },
     "TencentCloud/TencentDB-Agent-Memory": {
       "documents": {
@@ -132,7 +132,7 @@
           "tree_sha": "9c3d07a67e163e084acb9678af35fe812e074a2b"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:45.600714+00:00"
+      "last_checked_at": "2026-08-08T22:16:08.424158+00:00"
     },
     "TencentCloudADP/youtu-agent": {
       "documents": {
@@ -218,7 +218,7 @@
           "tree_sha": "6b428218ed42677c837c8b9c4e73257a88820407"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:29.879001+00:00"
+      "last_checked_at": "2026-08-08T22:15:53.000317+00:00"
     },
     "a2aproject/A2A": {
       "documents": {
@@ -241,7 +241,7 @@
           "tree_sha": "71eb3e3e49c74c17de374268080f999e217369c5"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:19.443962+00:00"
+      "last_checked_at": "2026-08-08T22:15:43.278759+00:00"
     },
     "a2aproject/a2a-python": {
       "documents": {
@@ -264,7 +264,7 @@
           "tree_sha": "cee33d84b61b0174b4d30ae523ccac7c753cd824"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:20.161488+00:00"
+      "last_checked_at": "2026-08-08T22:15:43.956265+00:00"
     },
     "agentclientprotocol/agent-client-protocol": {
       "documents": {
@@ -287,7 +287,7 @@
           "tree_sha": "f0ba014baa23f3e5f8701da24a43464e21d2cbaf"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:20.801668+00:00"
+      "last_checked_at": "2026-08-08T22:15:44.578711+00:00"
     },
     "agentscope-ai/agentscope": {
       "documents": {
@@ -301,7 +301,7 @@
           "tree_sha": "d3fd971a8aac8f77f9f4b0aa556da16cad8b9395"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:27.601322+00:00"
+      "last_checked_at": "2026-08-08T22:15:50.735894+00:00"
     },
     "agentskills/agentskills": {
       "documents": {
@@ -315,7 +315,7 @@
           "tree_sha": "a711d61ff20d609562123d6fe23e16d080ac68a1"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:17.061827+00:00"
+      "last_checked_at": "2026-08-08T22:15:41.168047+00:00"
     },
     "cloudwego/eino": {
       "documents": {
@@ -329,7 +329,7 @@
           "tree_sha": "ff35074a808996688da312b01f7dc1146854154a"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:28.317229+00:00"
+      "last_checked_at": "2026-08-08T22:15:51.494148+00:00"
     },
     "deepseek-ai/3FS": {
       "documents": {
@@ -343,7 +343,7 @@
           "tree_sha": "a00271c47d5be489e7482e67d465e02088f99ebc"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:37.734586+00:00"
+      "last_checked_at": "2026-08-08T22:16:00.543239+00:00"
     },
     "deepseek-ai/DeepEP": {
       "documents": {
@@ -357,7 +357,7 @@
           "tree_sha": "b385fecc3105afac74e0f7c0bf6a90b15bf9b336"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:35.860010+00:00"
+      "last_checked_at": "2026-08-08T22:15:58.613353+00:00"
     },
     "deepseek-ai/DeepGEMM": {
       "documents": {
@@ -371,7 +371,7 @@
           "tree_sha": "f46738f1b136fc704028b6c38433f3297c6bde6e"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:37.032971+00:00"
+      "last_checked_at": "2026-08-08T22:15:59.884026+00:00"
     },
     "deepseek-ai/FlashMLA": {
       "documents": {
@@ -385,7 +385,7 @@
           "tree_sha": "88b56b47dc6bd1bfc00694121cae6cb3317cf933"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:36.443140+00:00"
+      "last_checked_at": "2026-08-08T22:15:59.236528+00:00"
     },
     "deepset-ai/haystack": {
       "documents": {
@@ -408,7 +408,7 @@
           "tree_sha": "3f878408dfc104778d25a6c4973793cbcd9ec448"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:41.733582+00:00"
+      "last_checked_at": "2026-08-08T22:16:04.505465+00:00"
     },
     "ggml-org/llama.cpp": {
       "documents": {
@@ -422,7 +422,7 @@
           "tree_sha": "98aec796f6897bee410115f923564277d91d2657"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:35.242413+00:00"
+      "last_checked_at": "2026-08-08T22:15:58.065987+00:00"
     },
     "google/adk-python": {
       "documents": {
@@ -445,7 +445,7 @@
           "tree_sha": "d9cafcff8ff0e5842f305400d080d9b999705997"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:22.828906+00:00"
+      "last_checked_at": "2026-08-08T22:15:46.045213+00:00"
     },
     "huggingface/smolagents": {
       "documents": {
@@ -459,7 +459,7 @@
           "tree_sha": "dad1a21e572d4af8685294901722663501e78b63"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:39.029655+00:00"
+      "last_checked_at": "2026-08-08T22:16:01.736029+00:00"
     },
     "huggingface/transformers": {
       "documents": {
@@ -473,7 +473,7 @@
           "tree_sha": "66b017734a517c4177e786f6a7713fe527ae5f40"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:31.580469+00:00"
+      "last_checked_at": "2026-08-08T22:15:54.514636+00:00"
     },
     "langchain-ai/langgraph": {
       "documents": {
@@ -487,7 +487,7 @@
           "tree_sha": "5bfd87898cfd703d9b723bcec5dd8e1f8e694020"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:24.398011+00:00"
+      "last_checked_at": "2026-08-08T22:15:47.555783+00:00"
     },
     "mem0ai/mem0": {
       "documents": {
@@ -501,7 +501,7 @@
           "tree_sha": "d135a9b0f57415fb781beb11373960f30dd64e4e"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:42.342428+00:00"
+      "last_checked_at": "2026-08-08T22:16:05.161156+00:00"
     },
     "microsoft/agent-framework": {
       "documents": {
@@ -902,7 +902,7 @@
           "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:23.666523+00:00"
+      "last_checked_at": "2026-08-08T22:15:46.938231+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
@@ -916,7 +916,7 @@
           "tree_sha": "ae5afebf04550f5956ad463e32400eec952dfdf3"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:17.858335+00:00"
+      "last_checked_at": "2026-08-08T22:15:41.904191+00:00"
     },
     "modelcontextprotocol/python-sdk": {
       "documents": {
@@ -930,7 +930,7 @@
           "tree_sha": "46218dda78760890a1ee06cf3566aab80f2affaf"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:18.694974+00:00"
+      "last_checked_at": "2026-08-08T22:15:42.602774+00:00"
     },
     "modelcontextprotocol/servers": {
       "documents": {
@@ -944,7 +944,7 @@
           "tree_sha": "749952ee07834faea4119cb1132b0b836acde72d"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:38.403933+00:00"
+      "last_checked_at": "2026-08-08T22:16:01.139682+00:00"
     },
     "openai/openai-agents-python": {
       "documents": {
@@ -1642,21 +1642,21 @@
           "tree_sha": "6619014cb5e3c71b86bae8fa1b2514c9d73d8f76"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:21.529372+00:00"
+      "last_checked_at": "2026-08-08T22:15:45.296381+00:00"
     },
     "pydantic/pydantic-ai": {
       "documents": {
         "README.md": {
-          "blob_sha": "21273ef4e258695597b59874615743183bd1c5b8",
-          "commit_sha": "855a8e6cb71e25d4a240bfd6e04944fc20d831b9",
-          "content_hash": "c85099b5de5f7a5c7acd809dafaf9a8110bca5110841e3c0ff863fb78af5916f",
+          "blob_sha": "0e705c5b82a4c82ca674effe137984de85b50720",
+          "commit_sha": "fc6a3ac506513150e2016ee5ba9785d792795150",
+          "content_hash": "f11e2d092120c3795e07fb0d2b7cb5db5e2a0b7f339a74ebb762fd6ad3acda76",
           "entity_id": "external_doc_pydantic_pydantic_ai_readme_md",
-          "output": "current/agent-runtime/pydantic_pydantic_ai/README.md__21273ef4e258__855a8e6cb71e.md",
-          "sha": "21273ef4e258695597b59874615743183bd1c5b8",
-          "tree_sha": "932149cc06e8ef3ea6203db5dbcd4df88d03ea28"
+          "output": "current/agent-runtime/pydantic_pydantic_ai/README.md__0e705c5b82a4__fc6a3ac50651.md",
+          "sha": "0e705c5b82a4c82ca674effe137984de85b50720",
+          "tree_sha": "950d55b571f0de4d5e6788b621cb9a2b3da03b3d"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:25.095425+00:00"
+      "last_checked_at": "2026-08-08T22:15:48.684118+00:00"
     },
     "run-llama/llama_index": {
       "documents": {
@@ -1679,7 +1679,7 @@
           "tree_sha": "840e47212adc7c23e9132f1e66c8fa4afa80ac14"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:40.617770+00:00"
+      "last_checked_at": "2026-08-08T22:16:03.370419+00:00"
     },
     "sgl-project/sglang": {
       "documents": {
@@ -1693,7 +1693,7 @@
           "tree_sha": "89c2131bf1cfe135301461e39a0c37d385146b4e"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:33.483898+00:00"
+      "last_checked_at": "2026-08-08T22:15:56.367455+00:00"
     },
     "stanfordnlp/dspy": {
       "documents": {
@@ -1707,7 +1707,7 @@
           "tree_sha": "32c5b1ac8a0c259b9f933144575f3a8bac9cb291"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:39.608154+00:00"
+      "last_checked_at": "2026-08-08T22:16:02.377732+00:00"
     },
     "stepfun-ai/StepDeepResearch": {
       "documents": {
@@ -1721,7 +1721,7 @@
           "tree_sha": "ce26c30f08ba900339214de6848712963029340a"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:44.254643+00:00"
+      "last_checked_at": "2026-08-08T22:16:07.057054+00:00"
     },
     "vllm-project/vllm": {
       "documents": {
@@ -2077,7 +2077,7 @@
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:32.423556+00:00"
+      "last_checked_at": "2026-08-08T22:15:55.357536+00:00"
     },
     "volcengine/verl": {
       "documents": {
@@ -2091,7 +2091,7 @@
           "tree_sha": "1bb9d3d04d8d6e9beee0b3bc496b9ca5e4b0c27a"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:46.613034+00:00"
+      "last_checked_at": "2026-08-08T22:16:09.564827+00:00"
     },
     "zai-org/Open-AutoGLM": {
       "documents": {
@@ -2105,7 +2105,7 @@
           "tree_sha": "8ee1217deb8a7efe257747efd644aa9e20f89180"
         }
       },
-      "last_checked_at": "2026-08-07T22:23:43.569360+00:00"
+      "last_checked_at": "2026-08-08T22:16:06.365546+00:00"
     }
   },
   "schema_version": 4
