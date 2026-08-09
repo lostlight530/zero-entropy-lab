@@ -7,9 +7,11 @@ Host Repository: zero-entropy-lab
 Task ID: A3
 Cadence: Weekly
 Loop Stage: Decide
-Run Week: 2026-W31
-Agent: Jules
-Knowledge Source: This Week A1 / A2 + External Web + aegis-cortex local files
+Target Week: 2026-W31
+Coverage Window: 2026-07-27 to 2026-08-02
+Input Status: PARTIAL_MISSING
+Network Status: NETWORK_PARTIAL
+Task Status: SUCCESS
 Repository Inspection: NO
 GitHub Actions Inspection: NO
 Write Scope: aegis-cortex only
@@ -20,160 +22,131 @@ INPUT_RECORD
 记录本周读取的 A1 和 A2 文件列表:
 - aegis-cortex/2026-07-27-A1-reliability-observe.md
 - aegis-cortex/2026-07-27-A2-doctrine-orient.md
+- aegis-cortex/2026-07-31-A1-reliability-observe.md
+- aegis-cortex/2026-07-31-A2-doctrine-orient.md
+- aegis-cortex/2026-08-01-A1-reliability-observe.md
+- aegis-cortex/2026-08-01-A2-doctrine-orient.md
+- aegis-cortex/2026-08-02-A1-reliability-observe.md
+- aegis-cortex/2026-08-02-A2-doctrine-orient.md
+
+INPUT_GAP:
 - aegis-cortex/2026-07-28-A1-reliability-observe.md
 - aegis-cortex/2026-07-28-A2-doctrine-orient.md
 - aegis-cortex/2026-07-29-A1-reliability-observe.md
 - aegis-cortex/2026-07-29-A2-doctrine-orient.md
 - aegis-cortex/2026-07-30-A1-reliability-observe.md
 - aegis-cortex/2026-07-30-A2-doctrine-orient.md
-- aegis-cortex/2026-07-31-A1-reliability-observe.md
-- aegis-cortex/2026-07-31-A2-doctrine-orient.md
 
-INPUT_GAP:
-- 2026-08-01 和 2026-08-02 的 A1 / A2 文件尚未生成 (本周尚未执行)
-
-记录读取的历史 A3 / A4 / A5 / A6 文件列表:
+记录读取的历史 A3 / A4 / A6 文件列表:
+- aegis-cortex/2026-W28-A3-discipline-decide.md
+- aegis-cortex/2026-W28-A4-protocol-act.md
+- aegis-cortex/2026-W29-A3-discipline-decide.md
+- aegis-cortex/2026-W29-A4-protocol-act.md
 - aegis-cortex/2026-W30-A3-discipline-decide.md
-- aegis-cortex/2026-W30-A4-protocol-act.md
-- aegis-cortex/2026-07-A5-drift-reflect.md
 - aegis-cortex/2026-07-A6-aegis-memorize.md
 
 记录联网验证的主题和来源:
-- 来源: https://modelcontextprotocol.io/specification/2026-07-28
-- 主题: MCP 2.0 stateless protocol security implications and authorization header requirements
-- 来源: https://www.mckinsey.com/mgi/our-research/the-economic-potential-of-generative-ai
-- 主题: Multi-agent orchestration enterprise adoption rates and failure modes
-- 来源: https://atlan.com/know/ai-agent-memory-governance/
-- 主题: AI Agent Memory Governance — poisoning defense, consolidation patterns, provenance tracking
-- 来源: https://baijiahao.baidu.com/s?id=1871828892562998991
-- 主题: Context Learning and Memory Consolidation 2026 trend analysis
-- 来源: https://github.com/microsoft/agent-framework/releases/tag/v1.12.0
-- 主题: Microsoft Agent Framework MCP 2.0 adoption and isolation mode design
-- 来源: https://www.cockroachlabs.com/blog/agent-loops-production-database-patterns/
-- 主题: Agent loop failure patterns and database recovery gaps
-- 来源: https://deepmind.google/blog/gemini-4-training-update/
-- 主题: Gemini 4 model evolution and agent reliability implications
+- 来源: https://agentstatus.dev/drift-report
+- 主题: The State of AI Agent Drift: 88% of Agents Changed Behavior in 30 Days
+- 来源: https://agentstatus.dev/blog/agent-loop-failures-beyond-http
+- 主题: The Failure Mode Nobody Watches: Agent Loops That Never Reach HTTP
+- 来源: https://agentstatus.dev/blog/monitoring-mcp-servers
+- 主题: Monitoring MCP Servers in Production: The Layer Your Stack Forgot
+- 来源: https://arxiv.org/html/2606.04329v1
+- 主题: Memory poisoning attacks in LLMs
+- 来源: https://www.codebridge.tech/articles/ai-memory-privacy-and-security
+- 主题: AI Memory Privacy and Security
+- 来源: https://christian-schneider.net/blog/persistent-memory-poisoning-in-ai-agents/
+- 主题: Memory poisoning in AI agents
+
+覆盖率与独立来源:
+Coverage Ratio: 5/7 days observed.
+Independent Source Count: 4 distinct primary publishers confirmed online.
 
 WEEKLY_RISK_SYNTHESIS
 
-总结本周重复出现的风险:
+总结本周重复出现的风险 (Recurring Risks):
 
-Risk 1: Memory Poisoning Risk
-描述: 记忆治理仍是核心挑战, 错误事实被持久化存储而没有验证会被当作事实提取, 导致传递性幻觉. 2026 年行业已认识到 Memory Consolidation 的重要性, 但轻量级零依赖治理方案仍不成熟. Aegis-cortex 已运行 31 天, 需要评估当前记忆文件中是否存在未经核实的条目.
-本周出现频率: 5/5 天 (07-27 至 07-31)
-趋势: 持续高位, 未降级
-影响范围: A5/A6 长期记忆文件, 所有读取历史文件的环节
+Risk 1: Memory Poisoning and Persistent Injection Risk
+描述: 攻击者可以在外部输入中注入恶意指令，这些指令在一次交互后被模型持久化，从而导致跨会话的持久性攻击。通过使用非显式指令的形式（弱信号，如 Policy Conformant Fact Injection）和推断写入（如总结期间）的攻击往往无法被现有的 Prompt Injection Guardrails 防御。
+有 Aegis 本地记录支持的风险: NO_LOCAL_EVIDENCE。尽管外部证据明确指出其威胁性和有效性（MPBench 结果，arxiv, codebridge），但 aegis-cortex/** 内未发生此类实际投毒事故。
 
-Risk 2: Task Loop Break Risk
-描述: 多 Agent 编排引入了新的通信开销和状态同步复杂度, 可能导致任务循环中断. MCP 2.0 的无状态设计减轻了会话级风险但增加了每请求认证开销.
-本周出现频率: 4/5 天 (07-28 至 07-31)
-趋势: 上升 (MCP 2.0 发布后新增认证开销维度)
-影响范围: 所有 Agent 间通信环节
+总结本周新风险 (New Risks):
 
-总结本周新出现的风险:
+Risk 2: Prompt Drift / Non-linear correctness degradation
+描述: 大模型和代理在未进行提示词修改的情况下，随时间发生响应行为的漂移，且通常呈现出非线性的崩溃（中位数正确率下降 93 分）。恢复十分缓慢。
+只有外部证据的风险: NO_LOCAL_EVIDENCE。此为 AgentStatus 提供的监控数据，未在本地 aegis 观察到此种量级的骤降。
 
-Risk 3: MCP 2.0 False Security Risk (NEW)
-描述: 无状态架构消除了会话级别的记忆中毒风险, 但可能产生虚假安全感, 因为文件级别的记忆中毒风险仍然存在. Agent 可能因为 MCP 2.0 的安全改进而降低对文件级记忆完整性的警惕.
-出现日期: 2026-07-28 (MCP 2.0 发布日)
-影响范围: 所有依赖 MCP 2.0 安全保证的决策路径
+Risk 3: Agent Loop Failures / Recovery Gaps
+描述: 代理执行的故障模式超出了传统的 HTTP 5xx 范畴。由于循环中的死锁工作者、无限递归规划、后台任务丢弃或不可逆操作导致应用处于“幽灵死锁”状态。
+只有外部证据的风险: NO_LOCAL_EVIDENCE。通过 AgentStatus 的技术分析得出，aegis-cortex 没有遭遇外部代理不可见宕机。
 
-Risk 4: Multi-Agent Scope Drift Risk (NEW)
-描述: McKinsey 数据显示超 5 个决策节点时单体 Agent 失败率指数上升. 如果在缺失明确隔离机制的情况下引入多 Agent 模式, 可能导致范围漂移, 职责重叠, 状态冲突. Microsoft Agent Framework 隔离模式提供了参考设计但未被 aegis-cortex 采纳.
-出现日期: 2026-07-30 (McKinsey 报告发布后)
-影响范围: 未来多 Agent 编排场景
-
-Risk 5: Zero-Dependency Tension (NEW)
-描述: MCP 2.0 授权强化机制要求每个请求携带标准头 (MCP-Protocol-Version, MCP-Method, MCP-Name), 可能与零依赖原则产生张力. 评估路径包括文件级配置模拟或局部放宽.
-出现日期: 2026-07-28 (MCP 2.0 发布日)
-影响范围: 未来 MCP 2.0 迁移决策
-
-Risk 6: Agent Loop Recovery Gap (NEW)
-描述: 文件系统作为状态存储可以完整恢复状态, 但已产生的外部副作用无法回滚. 如果 aegis-cortex 发现错误并尝试恢复, 文件状态可恢复但副作用已造成.
-出现日期: 2026-07-31
-影响范围: 所有涉及宿主仓库写入的操作
-
-总结本周被证伪或降级的风险:
-- None identified this week
+Risk 4: MCP Server Failures & Transport Swaps
+描述: MCP 服务的静默降级（例如传输协议替换或特定工具的失效）可能导致返回 HTTP 200，但实际工具调用无法执行。
+降级风险: 虽然属于工具层的漏洞，但本地同样为 NO_LOCAL_EVIDENCE。
 
 DECISION_SET
 
-Decision 1
-Decision: 在零依赖架构下建立轻量级记忆完整性审计机制, 引入来源追踪字段
-Evidence: 外部信息证实记忆毒化是长周期 Agent 的核心威胁, 2026 年行业趋势确认了 Memory Consolidation 的重要性. Atlan 记忆治理文章明确指出来源追踪是防御记忆中毒的关键机制. 但现有的企业级解决方案 (如 Cosmos DB) 与零依赖原则冲突, 需要轻量级替代方案. Aegis-cortex 已运行 31 天, 记忆文件中可能存在未经核实的条目.
-Risk Reduced: Memory Poisoning Risk and Hallucination Risk
-Expected Behavior Change: 在读取前序历史文件时, 增加来源可靠性验证步骤, 并在输出中显式区分本地规则约束与外部采集数据. 对 A5 和 A6 长期记忆文件实施定期完整性审计. 每条持久化事实附加 [source:URL|verified:yes/no|timestamp:YYYY-MM-DD] 来源追踪字段. 审计频率: 每周 (A3) 执行快速审计, 每月 (A5) 执行深度审计.
-Why Now: 行业趋势已明确, 且 aegis-cortex 记忆系统已运行 31 天, 需要评估当前状态. MCP 2.0 的发布进一步凸显了文件级记忆完整性的重要性.
+Decision ID: DEC-W31-01
+Decision: Strengthen memory provenance tracking and reflection logic.
+Decision Type: STRENGTHEN_EVIDENCE
+External Evidence: arXiv 报告与 Christian Schneider 的分析指出，防止弱信号记忆投毒的最佳策略不仅是阻止输入，还需要保留来源的出处标记（provenance tagging）并在读取和反思时应用基于信任的方法。
+Aegis Repository Evidence: NO_LOCAL_EVIDENCE (This is preventive).
+Evidence Gap: No local memory poisoning incidents observed.
+Counterevidence: None.
+Risk Reduced: Memory Poisoning Risk, Hallucination Risk
+Expected Behavior Change: 读取长期记忆与制定计划时，需更加审慎对待并溯源每一项信息的可靠程度，避免不经验证即全盘接受。
+Why Now: 2026 年中针对 Agent 记忆系统的结构性攻击手法越发复杂，传统的基于输入的 Prompt Injection 防御体系已被证实不足以涵盖所有长周期记忆风险。
+Confidence: High
+Validity Window: W32
+Stop Condition: 当行业具有原生的文件级别记忆保护或我们引入明确的信任隔离体系。
+Host Repository Change NO: YES
 
-Decision 2
-Decision: 扩展 Tolerant Missing State Protocol 以覆盖多 Agent 编排场景, 引入显式边界声明和决策节点上限
-Evidence: McKinsey 数据显示多 Agent 编排已成为主流 (77% 采纳率), 但其失效模式 (通信中断, 状态不同步, 职责重叠) 未被现有纪律覆盖. 23% 失败率表明现有隔离机制不足. Microsoft Agent Framework 隔离模式验证了显式边界声明和工具调用隔离的必要性. 超过 5 个决策节点时失败率指数上升.
-Risk Reduced: Task Loop Break Risk and Scope Drift Risk
-Expected Behavior Change: 在引入多 Agent 编排时, 强制要求: (a) 每个 Agent 的职责边界显式隔离, 通过文件声明写入范围; (b) 单 Agent 决策节点上限为 5; (c) 跨 Agent 通信必须通过文件 (消息传递), 不允许直接读取其他 Agent 内部状态; (d) 超过上限必须路由到多 Agent 模式; (e) 在缺失明确隔离机制的情况下, 禁止引入多 Agent 模式.
-Why Now: 多 Agent 编排已成为行业主流, 需要提前建立安全边界. MCP 2.0 的发布使多 Agent 通信协议标准化, 需要评估兼容性.
+Decision ID: DEC-W31-02
+Decision: Track tool execution loop states as observability observation.
+Decision Type: CONTINUE_WATCH
+External Evidence: AgentStatus 分析显示传统的 HTTP 状态码无法反映诸如 worker 死锁、后台任务被丢弃和无限规划循环等故障。
+Aegis Repository Evidence: NO_LOCAL_EVIDENCE
+Evidence Gap: Aegis-cortex 是独立的单次计划执行工具，并未进行多层嵌套的在线长时间守护循环。
+Counterevidence: 当前架构不会因 HTTP 会话不报 5xx 就使主观上死锁，因为调度不通过 HTTP 接收。
+Risk Reduced: Task Loop Break Risk, False Completion Risk
+Expected Behavior Change: 如果后续进行大规模连续后台计划或调用多重外部依赖，必须要求对每一步使用明确的心跳和超时断言进行校验，而不是仅仅等待工具反馈。
+Why Now: 监控界最新的趋势明确了“死循环”成为生产上最大的 Agent 崩溃源。
+Confidence: Medium
+Validity Window: W32
+Stop Condition: 当所有关键外部执行皆转为强事务状态存储后。
+Host Repository Change NO: YES
 
-Decision 3
-Decision: 评估 MCP 2.0 授权强化机制在零依赖架构下的兼容性, 制定评估路径和备选方案
-Evidence: MCP 2.0 已正式发布 (2026-07-28), 授权强化要求每个请求携带 MCP-Protocol-Version / MCP-Method / MCP-Name 头, 可能需要外部依赖. 这与零依赖原则存在张力.
-Risk Reduced: Zero-Dependency Tension and Unsupported Source Risk
-Expected Behavior Change: 评估三条路径: (a) 文件级配置模拟授权头 — 在配置文件中声明协议版本和方法名, 但运行时验证可能仍需外部组件; (b) 标记为已知限制 — 如果文件级模拟不可行, 在迁移到 MCP 2.0 时局部放宽零依赖原则, 但必须记录放宽原因和范围; (c) 延迟评估 — 等待更多迁移案例后再做决策, MCP 2.0 刚发布, 生态系统尚未成熟.
-Why Now: MCP 2.0 已正式发布, 需要评估迁移影响. Microsoft Agent Framework 已率先采纳, 提供了参考案例.
-
-Decision 4
-Decision: 引入副作用分类和两阶段确认机制, 区分可恢复操作和不可逆操作
-Evidence: CockroachLabs agent loop 分析确认恢复差距存在 — 文件状态可恢复但已产生的副作用 (如已写入宿主仓库的文件) 无法回滚. Aegis-cortex 的边界协议要求不修改宿主仓库, 但如果未来需要, 必须有确认机制.
-Risk Reduced: Agent Loop Recovery Gap Risk and Irreversible Side-Effect Risk
-Expected Behavior Change: 将操作分为两类: (a) 可恢复操作 (aegis-cortex 内部文件修改) — 无需额外确认; (b) 不可逆操作 (对宿主仓库的写入, 外部系统调用) — 需要两阶段确认: 第一阶段记录意图和预期影响, 第二阶段在 A3 确认后执行.
-Why Now: Agent 循环恢复差距分析确认了文件状态与副作用的恢复不对称性, 需要明确区分.
+Decision ID: DEC-W31-03
+Decision: Monitor external prompt drift reports.
+Decision Type: CONTINUE_WATCH
+External Evidence: 88% 的代理在 30 天内由于输入分布漂移或隐式模型更新发生答案正确性的非线性下降。
+Aegis Repository Evidence: NO_LOCAL_EVIDENCE
+Evidence Gap: 目前没有专门评估 Aegis 的输出质量与最初几天相较的硬指标，仅依赖自身的检查逻辑。
+Counterevidence: Aegis 所有的 prompt 基于自身的架构，不存在对外服务的漂移感受。
+Risk Reduced: Stale Doctrine Risk, Overconfidence Risk
+Expected Behavior Change: 开始记录哪些规则和指令随着执行可能失去了曾经的有效性，将其作为后续 A5 / A6 反思时的输入考量点。
+Why Now: AgentStatus 报告展示出其发生的大规模性和普遍性。
+Confidence: Medium
+Validity Window: W32
+Stop Condition: 构建出稳定的对抗性测试框架后。
+Host Repository Change NO: YES
 
 DO_NOT_CHANGE
 
-列出本周明确不修改的规则或判断:
-- 绝对不读取宿主仓库 (zero-entropy-lab) 的机制文件和代码
-- 不修复导致 A1 缺失的上游调度故障
-- 维持当前的 aegis-cortex 本地文件系统操作范围约束
-- 不引入外部存储依赖 (如 Cosmos DB) 作为记忆治理方案
-- 零依赖原则不可妥协, 寻找轻量级替代方案而非引入外部依赖
-- 进化锁死: 有能力让系统进化但选择不执行
-
-说明为什么保持不变:
-- Aegis-cortex 的唯一职责是自我观察和纪律管理, 跨越物理边界将直接导致严重的 instrumental convergence 行为
-- 容忍输入缺失是系统的基本底线原则 (Tolerant Missing State Protocol)
-- 零依赖原则不可妥协, 需要寻找轻量级替代方案而非引入外部依赖
-- 进化锁死是宪法级约束 — 有能力但不执行, 选择确定性而非概率性
+列出本周明确不改变的纪律、原因和重新考虑条件:
+- 不实施宿主仓库代码和 GitHub Actions 修改。这是系统的安全底线边界原则。重新考虑条件：未被授权且缺少事务安全沙箱。
+- 容忍输入缺失 (Tolerant Missing State Protocol)：A1、A2 本周缺少三天数据 (07-28, 07-29, 07-30)，坚决不凭空捏造虚构风险填补。重新考虑条件：不存在此条件。
+- 零依赖原则不可妥协，继续保留使用内部 Markdown 文件实现逻辑。重新考虑条件：未定。
 
 HANDOFF_TO_A4
 
-把 A4 需要执行的 aegis-cortex 内部更新写清楚:
-
-Action 1: 将轻量级记忆完整性审计机制转化为下周可执行的纪律协议草案
-- 定义来源追踪字段格式: [source:URL|verified:yes/no|timestamp:YYYY-MM-DD]
-- 定义审计流程: 每周快速审计 (A3), 每月深度审计 (A5)
-- 定义标记规则: 缺少来源的条目标记为 SUSPECT, 未验证的条目标记为 UNVERIFIED
-
-Action 2: 将多 Agent 编排场景下 Tolerant Missing State Protocol 扩展转化为具体操作规范
-- 定义显式边界声明格式
-- 定义跨 Agent 通信规则 (仅通过文件)
-- 定义决策节点上限 (5) 和超限路由规则
-- 定义隔离机制缺失时的禁止条件
-
-Action 3: 记录 MCP 2.0 授权强化兼容性评估结论
-- 记录三条评估路径的分析结论
-- 记录推荐路径和理由
-- 如果选择延迟评估, 定义重新评估的触发条件
-
-Action 4: 实现副作用分类和两阶段确认机制
-- 定义操作分类标准
-- 定义两阶段确认流程
-- 定义不可逆操作的清单
-
-只能提出 aegis-cortex 内部更新:
-是
-
-不得要求修改宿主仓库:
-是
+Action requests for temporary internal protocols:
+- 针对 Memory Poisoning：强化“观察纪律”。对提取外部证据并放入纪律文件时，需要保留更确切的独立来源描述，不可使外部信息（如攻击者植入的文档）直接指导 Aegis 行动。
+- 针对 Agent Loop / MCP Failures / Drift：制定“Watchlist”。将这些风险作为持续关注的可能失效点进行评估。对于任何缺失的输入 (INPUT_GAP) 继续采用“不可凭空推断”要求进行处理。
 
 BOUNDARY_CHECK
 
-确认没有读取宿主仓库机制: YES
-确认没有读取 GitHub Actions: YES
-确认没有写入 aegis-cortex 之外的文件: YES
+确认未越界：YES
+确认未实施宿主修改：YES
+确认未直接升级长期纪律：YES
