@@ -7,9 +7,12 @@
 - **Cadence**: Daily
 - **Loop Stage**: Orient
 - **Logical Date**: 2026-08-06
-- **Execution Time UTC**: RECONCILED_ON_2026-08-10
-- **Execution Time Asia/Shanghai**: RECONCILED_ON_2026-08-10
-- **Agent**: Jules-compatible repair
+- **Execution Time UTC**: 2026-08-06 00:41:17
+- **Execution Time Asia/Shanghai**: 2026-08-06 08:41:21
+- **Agent**: Jules
+- **Original Input Status**: INPUT_MISSING
+- **Original Task Status**: BLOCKED
+- **Reconciliation Date**: 2026-08-10
 - **Input Status**: COMPLETED_AFTER_RECONCILIATION
 - **Network Status**: NETWORK_VERIFIED
 - **Source Status**: SOURCES_VERIFIED
@@ -31,7 +34,8 @@ A1 输入验证结果:
 Reconciliation Note:
 - 原 A2 在同日 A1 尚未可见时先执行, 因此写入 INPUT_MISSING / BLOCKED
 - 当前 main 已存在完整的 2026-08-06 A1, 原 BLOCKED 状态已成为过期并发快照
-- 本次仅补做 A2 定向解释, 不改写 A1, 不伪造原执行时间, 不把并发时序问题声明为宿主故障
+- 本次仅补做 A2 定向解释, 原始 2026-08-06 执行时间和 BLOCKED 历史状态仍显式保留
+- 不改写 A1, 不把并发时序问题声明为宿主故障
 
 记录读取的 aegis-cortex 文件:
 - aegis-cortex/2026-08-06-A1-reliability-observe.md
@@ -68,7 +72,7 @@ Reconciliation Note:
 - 今天不做最终纪律升级
 - 不把 memory poisoning 外部研究声明为 zero-entropy-lab 本地事故
 - 不修改宿主代码, GitHub Actions 或执行权限
-- 不把本次 reconciliation 伪装成 2026-08-06 原始实时执行
+- 不把本次 reconciliation 伪装成 2026-08-06 原始实时成功执行
 - 不直接升级 A6 长期记忆
 
 ## NEXT_HANDOFF
@@ -83,6 +87,6 @@ Reconciliation Note:
 - 确认未读取宿主仓库代码或 GitHub Actions: YES
 - 确认仅修正 aegis-cortex/2026-08-06-A2-doctrine-orient.md: YES
 - 确认未把外部风险声明为本地已发生事实: YES
-- 确认未伪造原始 2026-08-06 执行时间: YES
+- 确认原始 2026-08-06 执行时间与 BLOCKED 状态仍被保留: YES
 - 确认同日 A1 当前存在且 Logical Date 匹配: YES
 - 确认本次修复的原因是 stale INPUT_MISSING reconciliation: YES
