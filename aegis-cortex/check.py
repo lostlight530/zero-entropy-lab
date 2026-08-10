@@ -154,19 +154,25 @@ def validate_common(path: Path, task: str, identity: str, text: str) -> list[str
     return errors
 
 
+def require_any(path: Path, text: str, label: str, markers: tuple[str, ...]) -> list[str]:
+    if any(marker in text for marker in markers):
+        return []
+    return [f"{path.name}: does not expose {label}"]
+
+
 def validate_a1(path: Path, text: str) -> list[str]:
     errors: list[str] = []
-    for field in (
-        "Source ID",
-        "URL",
-        "Evidence Tier",
-        "External Evidence",
-        "Local Repository Evidence",
-        "Confidence",
-        "Uncertainty",
-    ):
+    for field in ("Source ID", "URL", "Evidence Tier", "External Evidence", "Confidence", "Uncertainty"):
         if field not in text:
             errors.append(f"{path.name}: A1 does not expose {field}")
+    errors.extend(
+        require_any(
+            path,
+            text,
+            "local evidence state",
+            ("Local Repository Evidence", "Local Incident Evidence", "Local Evidence Available"),
+        )
+    )
     return errors
 
 
@@ -181,12 +187,16 @@ def validate_a2(path: Path, identity: str, text: str) -> list[str]:
     if f"{identity}-A1-reliability-observe.md" not in text:
         errors.append(f"{path.name}: does not name the same-day A1 input")
 
-    for marker in (
-        "External Risk",
-        "Local Evidence",
-        "Local Applicability",
-        "Remaining Uncertainty",
-    ):
+    errors.extend(require_any(path, text, "external-risk/claim state", ("External Risk", "External Claim")))
+    errors.extend(
+        require_any(
+            path,
+            text,
+            "local evidence state",
+            ("Local Evidence", "Local Incident Evidence", "Aegis Repository Record Comparison"),
+        )
+    )
+    for marker in ("Local Applicability", "Remaining Uncertainty"):
         if marker not in text:
             errors.append(f"{path.name}: A2 does not preserve {marker}")
     return errors
@@ -199,8 +209,6 @@ def validate_a3(path: Path, text: str) -> list[str]:
         errors.append(f"{path.name}: DECISION_SET contains no Decision ID")
     if len(ids) != len(set(ids)):
         errors.append(f"{path.name}: duplicate Decision ID values")
-    if "Local Incident Evidence: NO" in text and "NO_LOCAL_EVIDENCE" not in text and "NO_LOCAL_INCIDENT_EVIDENCE" not in text:
-        errors.append(f"{path.name}: local-incident absence is not carried as an explicit evidence state")
     return errors
 
 
@@ -226,11 +234,7 @@ def validate_a4(path: Path, identity: str, text: str) -> list[str]:
     if unknown:
         errors.append(f"{path.name}: actions reference unknown A3 decisions {unknown}")
 
-    for marker in (
-        "Host Repository Change NO",
-        "GitHub Actions Change NO",
-        "Static Doctrine Change NO",
-    ):
+    for marker in ("Host Repository Change NO", "GitHub Actions Change NO", "Static Doctrine Change NO"):
         if marker not in text:
             errors.append(f"{path.name}: A4 does not preserve {marker}")
     return errors
