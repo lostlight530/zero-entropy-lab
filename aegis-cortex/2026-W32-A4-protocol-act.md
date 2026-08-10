@@ -92,12 +92,12 @@ Static Doctrine Change NO: YES
 
 Action ID: ACT-W32-04
 Action Type: TIME_BOUNDARY_REQUIREMENT
-Action: 所有 Aegis 周产物的 Logical Week 统一按 Asia/Shanghai 自然周归属, Monday 00:00 through Sunday 23:59:59, 周闭合后生成对应 ISO week; 不使用运行环境默认美国时区决定 Target Week
-Reason: 2026-08-09 周任务发生 W31/W32 归属错位, 而同系统日任务已显式记录 Asia/Shanghai 时间
+Action: 所有 Aegis 周产物的 Logical Week 统一按 Asia/Shanghai 自然周归属, Monday 00:00 through Sunday 23:59:59, 周闭合后生成对应 ISO week; 不使用未显式声明的运行环境时区决定 Target Week
+Reason: 截至 Asia/Shanghai 2026-08-10, 2026-W32 已完整闭合而 W32 A3/A4 仍缺失, 因此 target-week resolution 必须显式绑定 canonical timezone; 默认美国时区是否为外部调度器具体根因无法仅凭仓库证据证明
 Source Decision ID: DEC-W32-01
 External Evidence Preserved: NONE
-Aegis Repository Evidence: week-boundary mismatch observed in automation outputs
-Expected Behavior Change: 目标周与上海逻辑日期一致, 避免周日跨时区运行重复上一周
+Aegis Repository Evidence: W32 missing after the Shanghai week boundary and daily records already carry Asia/Shanghai logical timestamps
+Expected Behavior Change: 目标周与明确的上海逻辑日期一致, 避免跨时区或未声明时区导致的周号歧义
 Risk Reduced: stale week risk, duplicate weekly synthesis risk
 Validity Window: DURABLE
 Stop Condition: 用户明确改变 canonical timezone
@@ -126,5 +126,6 @@ Static Doctrine Change NO: YES
 - 确认 A4 只映射 W32 A3 决策: YES
 - 确认 2026-08-06 stale A2 已在本分支先完成 reconciliation: YES
 - 确认 W32 按 Asia/Shanghai 覆盖 2026-08-03 至 2026-08-09: YES
+- 确认未把默认美国时区猜测写成已证实根因: YES
 - 确认未改写 W31 历史记录: YES
 - 确认未越界: YES
