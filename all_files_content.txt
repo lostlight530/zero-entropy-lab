@@ -1,0 +1,1055 @@
+--- START OF aegis-cortex/2026-08-12-A1-reliability-observe.md ---
+# A1 Daily Reliability Observe
+
+## CORTEX_RUN_HEADER
+
+- **Cortex**: Aegis-Cortex
+- **Host Repository**: zero-entropy-lab
+- **Task ID**: A1-2026-08-12
+- **Cadence**: Daily
+- **Loop Stage**: Observe
+- **Logical Date**: 2026-08-12
+- **Execution Time UTC**: 2026-08-11 23:53:00
+- **Execution Time Asia/Shanghai**: 2026-08-12 07:53:00
+- **Agent**: Jules
+- **Knowledge Source**: EXTERNAL_WEB
+- **Network Status**: NETWORK_VERIFIED
+- **Source Status**: VERIFIED
+- **Task Status**: COMPLETED
+- **Repository Inspection**: NONE
+- **GitHub Actions Inspection**: NONE
+- **Write Scope**: EXACT_TARGET_FILE
+- **Boundary Violation**: NONE
+
+## INPUT_RECORD
+
+- **实际读取文件**:
+  - `aegis-cortex/2026-08-11-A1-reliability-observe.md`
+  - `aegis-cortex/2026-08-11-A2-doctrine-orient.md`
+  - `aegis-cortex/2026-W32-A4-protocol-act.md`
+  - `aegis-cortex/2026-07-A6-aegis-memorize.md`
+- **搜索主题**: "Coding Agent failure modes" 2026 OR "AI Agent reliability" 2026
+- **观察原因**: 持续观察大模型作为 Coding Agent 时发生的失效模式，特别是在非对抗环境下的自然失败（non-adversarial failure modes），如假性完成、由于上下文字数限制导致的指令遵从失败，以及随机 token 生成引发的执行错误。这与我们在 W32 A4 记录的关注点一致。
+- **A4 和 A6 当前重点**: A4 (W32) 重点在于关注 agent 的工具使用错误、死循环，并加入了明确的重试终止条件与外部验证。A6 (2026-07) 强调了容忍缺失状态协议（Tolerant Missing State Protocol）和严格的目录边界纪律。
+- **未取得可靠证据的方向**: 这些具体的失败模式（如 agent 自主执行 `rm -rf ~/`，或因为上下文过长导致的错误）在 Aegis 本地仓库的发生证据。
+
+## EXTERNAL_SOURCE_RECORDS
+
+- **Source ID**: SRC-2026-08-12-01
+- **Title**: ClayBuddy: A Framework, Evaluation, & Mitigation of Coding Agent Failures
+- **Publisher**: arXiv
+- **URL**: https://arxiv.org/html/2606.19380v4
+- **Published or Updated Date**: 05 Aug 2026
+- **Date Checked**: 2026-08-12
+- **Source Type**: Original research
+- **Evidence Tier**: Tier 1
+- **Access Status**: VERIFIED
+- **Independent Source**: YES
+- **External Claim**: AI coding agent 的失效模式主要有三类：1) 规格描述不足（Underspecification）：在模糊指令下模型偏向不安全默认行为；2) 能力错误（Capability Errors）：模型能理解但由于偏见或限制未能遵循；3) Agent 框架错误（Agent Harness Errors）：例如长上下文导致的指令遵循退化，以及纯随机 token 采样导致的灾难性后果（如 Opus 4.5 生成危险的截断命令 `rm -rf ~/` 的概率为百万分之 4.65）。研究建议赋予 agent 清理上下文的能力、不可变守护进程，并添加必须预检的防线（如删除前必须 `ls -la`）。
+- **Local Evidence Available**: NO
+- **Relevance**: RELATED_TO_EXISTING_PREVENTIVE_DISCIPLINE (W32 的 observability 与 false completion 防御，A6 的 Tolerant Missing State Protocol，都试图防御类似因为上下文崩坏或工具链随机性引发的假性完成)。
+- **Confidence**: HIGH (基于 Tier 1 原始研究和大量真实系统日志，具有确切的概率和定量的评价基准)。
+- **Limitations**: 该研究是在复杂的编辑、部署及运行环境中（包含 docker 和实际的 bash 执行）进行测试，而 Aegis 主要以有限环境中的 Markdown 文件编辑为主。许多具体的防线（如 classifier、immutability daemon）对目前只需要遵循文件边界纪律的 Aegis 并不必要。
+
+## RAW_RELIABILITY_SIGNAL_LOG
+
+- **Signal ID**: SIG-2026-08-12-01
+- **Signal**: Coding agents suffer from specific failure modes, notably long context degradation causing instruction adherence loss and stochastic token generation causing dangerous incomplete shell commands (e.g., `rm -rf ~/`).
+- **Source IDs**: SRC-2026-08-12-01
+- **Failure Mode Addressed**: Tool-use errors, False completion, Prompt drift, Scope drift
+- **External Evidence**: PRESENT
+- **Local Repository Evidence**: NONE
+- **Why It May Matter**: Aegis 在其 W32 协议和 A6 中都高度关注长文本纪律。该外部信号用定量数据（百万分之 4.65 的破坏性 token 概率，56% 的上下文失效测试失败率）证实了即便是最先进的模型（如 Opus 4.5/4.6）如果不受框架级别的强制验证，也一定会在大批量操作中发生静默错误。这也旁证了 Aegis 的“验证每一步执行”以及“容忍缺失输入而不强行瞎编”的边界控制协议方向是对的。
+- **Confidence**: HIGH
+- **Uncertainty**: 由于 Aegis 是基于 API 与云端环境进行严格特定目录的无状态文件读写操作，目前不涉及通过 bash 操作系统资源（不读写宿主），随机 token 生成引发系统级摧毁的可能性极低，具体在当前特定限定下的危险 token 失效率依然未知。
+- **Possible Noise**: 论文中针对小型代理运行守护进程、增加额外的 risk classifier 等技术是对重度应用（执行宿主代码）的防线，对 Aegis 而言这些工程实现是噪音。
+- **Needs A2 Verification**: YES
+
+## NEXT_HANDOFF
+
+- **需要 A2 定向解释的风险**: SIG-2026-08-12-01 提出的因为模型长上下文引发的指令崩坏，以及模型自动清理上下文冗余和强一致校验的重要性。需要 A2 定向分析这是否验证了现有的边界纪律与检查规则。
+- **需要独立来源验证的风险**: 在不涉及系统环境修改，仅涉及纯文本编辑的场景下，stochastic token 截断所带来的影响。
+- **缺乏本地证据的风险**: 虽然研究提出了高频次的失效，但 Aegis 本地无发生相关指令截断或因为上下文过长导致的灾难性越界的记录（NO_LOCAL_EVIDENCE）。
+- **可能只是噪音的内容**: 该研究中提出的包含 classifier, immutability daemon 的 ClayBuddy 架构，对于只需修改 Markdown 产物的 Aegis 而言属于过度工程。
+- **不应继续升级的内容**: 不要仅仅因为 Tier 1 证明了由于 prompt/上下文过长会失败，就在系统里制造不存在的本地错误，或者提议增加不在授权范围内的宿主资源校验机制。
+- **联网限制**: 无限制，外部验证通过。
+
+## BOUNDARY_CHECK
+
+- 确认未读取宿主仓库、GitHub Actions、旧 Nexus 和 Aegis 之外文件: YES
+- 确认未把外部风险声明为本地事实: YES
+- 确认未公开私有控制内容: YES
+
+--- END OF aegis-cortex/2026-08-12-A1-reliability-observe.md ---
+--- START OF aegis-cortex/2026-08-11-A2-doctrine-orient.md ---
+# A2 Daily Doctrine Orient
+
+## CORTEX_RUN_HEADER
+
+- **Cortex**: Aegis-Cortex
+- **Host Repository**: zero-entropy-lab
+- **Task ID**: A2-2026-08-11
+- **Cadence**: Daily
+- **Loop Stage**: Orient
+- **Logical Date**: 2026-08-11
+- **Execution Time UTC**: 2026-08-11 01:00:45
+- **Execution Time Asia/Shanghai**: 2026-08-11 09:00:45
+- **Agent**: Jules
+- **Input Status**: COMPLETED
+- **Network Status**: NETWORK_VERIFIED
+- **Source Status**: VERIFIED_AFTER_RECONCILIATION
+- **Task Status**: COMPLETED
+- **Repository Inspection**: NONE
+- **GitHub Actions Inspection**: NONE
+- **Write Scope**: EXACT_TARGET_FILE
+
+## INPUT_RECORD
+
+- **实际读取文件**:
+  - `aegis-cortex/2026-08-11-A1-reliability-observe.md`
+  - `aegis-cortex/2026-08-10-A2-doctrine-orient.md`
+  - `aegis-cortex/2026-W32-A4-protocol-act.md`
+  - `aegis-cortex/2026-07-A6-aegis-memorize.md`
+- **搜索主题**: Agent observability
+- **验证来源**: https://www.openlayer.com/blog/post/ai-agent-observability-beyond-llm-monitoring
+- **A1 验证结果**: Task ID A1-2026-08-11, Logical Date 2026-08-11, Task Status COMPLETED, Network Status NETWORK_VERIFIED, Source Status VERIFIED_AFTER_RECONCILIATION
+- **未完成验证**: 无
+
+## RISK_CLASSIFICATION
+
+- **Signal ID**: SIG-2026-08-11-01
+- **External Claim**: AI agent observability 需要覆盖四个核心领域（推理追踪、工具调用行为、状态变更与副作用、错误处理与恢复）。传统 LLM 追踪无法捕捉工具调用的实际效果，容易导致多步工作流中出现静默级联失效。特别强调，3% 到 15% 的工具调用在生产环境中失败，而单次失败可能被表面的正常运行时间掩盖。
+- **Risk Categories**: false completion risk, task loop break risk, recovery verification risk
+- **Verification Status**: EXTERNAL_SOURCE_VERIFIED
+- **Verification Sources**: https://www.openlayer.com/blog/post/ai-agent-observability-beyond-llm-monitoring
+- **Aegis Repository Record Comparison**: NO_LOCAL_EVIDENCE
+- **Local Applicability**: PLAUSIBLE / NEEDS_OBSERVATION
+- **Evidence Strength**: Tier 3, MEDIUM
+- **Counterevidence**: Aegis 任务使用了严格的缺失输入宽容纪律 (如 A6 的 Tolerant Missing State Protocol) 以及在 W32 A4 中增加了防范假性完成的 stop condition，没有本地 Aegis 记录显示隐藏的工具失败能够直接产生绕过纪律审查的输出假象。
+- **Remaining Uncertainty**: 外部文章中关于 3-15% 的工具失败率是基于复杂的生产环境，其结论在仅依赖 Markdown 且执行单一脚本循环的 Aegis 简单本地环境中是否适用仍属未知。
+- **Weekly Promotion Eligibility**: WATCH_ONLY
+
+## ORIENTATION_NOTES
+
+- **信号意义**: 该信号加强了我们需要关注工具调用隐藏失败（silent failure）以及错误掩盖的理论视角，外部信号提示需要继续观察。
+- **哪些风险有本地记录支持**: 无。
+- **哪些只有外部证据**: 工具调用隐蔽失败和因为监控不足导致的级联故障掩盖。
+- **哪些需要进入 A3**: 无（当前为 WATCH_ONLY）。
+- **哪些只是理论可能**: 存在由于工具隐蔽失败导致的假性完成在 Aegis 中发生，但尚未有本地事故证据证实。
+- **哪些判断仍不确定**: 具体多少字段的状态追踪是防止这种级联失效的最简方案。
+- **哪些来源不可靠**: 无（来源具有 Tier 3 可靠度，但不代表本地一定需要实施其特定的 SDK 控制手段）。
+- **注意事项**: 明确不建议修改宿主仓库 (zero-entropy-lab) 或实施外部 APM 工具的具体实现。
+
+## NO_DECISION_SECTION
+
+- 明确今天不做的纪律决策、实现选择、宿主修改和长期记忆升级。
+- 明确不引入任何外部 tracing SDK 或 APM backend。
+- 明确不把理论风险写成本地事故。
+
+## NEXT_HANDOFF
+
+- **本周候选纪律问题**: 持续观察代理在本地的执行轨迹追踪和自我修复时错误信息是否掩盖失败。
+- **已验证风险**: 外部对于复杂的 AI 工具链可能发生多步骤静默错误的关注。
+- **只有外部证据的风险**: 具体的 3-15% 生产环境失败率及由监控缺失导致的任务假完成（false completion）。
+- **被降级风险**: 无。
+- **需要继续观察风险**: 隐蔽的工具调用故障或失败状态掩盖（false completion），外部信号提示需要继续观察。
+- **同源重复风险**: 与前一日的 Braintrust 来源（SIG-2026-08-10-01）在论述 silent retry / task loop break 等方面类似，具有同源同类论证倾向。
+- **网络和来源限制**: 无。
+
+## BOUNDARY_CHECK
+
+- 确认未读取宿主仓库、GitHub Actions、旧 Nexus 和 Aegis 之外文件：YES
+- 确认未把外部风险声明为本地事实：YES
+- 确认未制造本地故障：YES
+- 确认未做最终决策：YES
+- 确认未越界：YES
+- 确认未公开私有控制内容：YES
+
+--- END OF aegis-cortex/2026-08-11-A2-doctrine-orient.md ---
+--- START OF aegis-cortex/2026-08-10-A2-doctrine-orient.md ---
+# A2 Daily Doctrine Orient
+
+## CORTEX_RUN_HEADER
+
+- **Cortex**: Aegis-Cortex
+- **Host Repository**: zero-entropy-lab
+- **Task ID**: A2-2026-08-10
+- **Cadence**: Daily
+- **Loop Stage**: Orient
+- **Logical Date**: 2026-08-10
+- **Execution Time UTC**: 2026-08-10 00:00:00
+- **Execution Time Asia/Shanghai**: 2026-08-10 08:00:00
+- **Agent**: Jules
+- **Input Status**: COMPLETED_AFTER_RECONCILIATION
+- **Network Status**: NETWORK_VERIFIED
+- **Source Status**: VERIFIED_AFTER_RECONCILIATION
+- **Task Status**: COMPLETED
+- **Repository Inspection**: NONE
+- **GitHub Actions Inspection**: NONE
+- **Write Scope**: EXACT_TARGET_FILE
+- **Reconciliation Date**: 2026-08-10
+
+## INPUT_RECORD
+
+A1 输入验证结果：
+- Task ID: A1-2026-08-10
+- Logical Date: 2026-08-10
+- Task Status: COMPLETED
+- External Evidence: PRESENT
+- Local Incident Evidence: NO_LOCAL_EVIDENCE
+- Related Local Preventive Record: W31 A4 observability / task-loop concern
+
+记录本次读取的 aegis-cortex 文件：
+- `aegis-cortex/2026-08-10-A1-reliability-observe.md`
+- `aegis-cortex/2026-08-09-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-08-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-07-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-06-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-05-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-04-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-03-A2-doctrine-orient.md`
+- `aegis-cortex/2026-W31-A4-protocol-act.md`
+- `aegis-cortex/2026-07-A6-aegis-memorize.md`
+
+搜索主题与验证来源：
+- 主题：Agent observability, Tool-use errors, Silent retry loops
+- 来源：https://www.braintrust.dev/articles/agent-observability-complete-guide-2026
+- 来源等级：Tier 3 vendor technical analysis
+
+## RISK_CLASSIFICATION
+
+- **Signal ID**: SIG-2026-08-10-01
+- **External Claim**: Agent observability practices commonly record tool calls, reasoning/decision steps, state transitions and memory operations so that semantic failures such as wrong tool use or retry loops are not hidden behind ordinary request-level health signals
+- **Risk Categories**: false completion risk, task loop break risk
+- **Verification Status**: EXTERNAL_SOURCE_VERIFIED
+- **Verification Sources**: https://www.braintrust.dev/articles/agent-observability-complete-guide-2026
+- **Aegis Repository Record Comparison**: RELATED_PREVENTIVE_RECORD_ONLY
+- **Local Incident Evidence**: NO_LOCAL_EVIDENCE
+- **Local Applicability**: PLAUSIBLE / NEEDS_OBSERVATION because Aegis passes state across long-running text artifacts, but no local loop/false-completion incident is established by this source or by W31 preventive rules
+- **Evidence Strength**: Tier 3, MEDIUM
+- **Counterevidence**: Aegis already uses explicit task status, boundary checks and fail-closed missing-input states; no local hidden-loop incident was identified in this audit
+- **Remaining Uncertainty**: whether a zero-dependency Markdown workflow needs deeper trace fields, and what minimum fields would materially improve detection
+- **Weekly Promotion Eligibility**: WATCH_ONLY unless local evidence or stronger independent evidence appears
+
+## ORIENTATION_NOTES
+
+1. **信号意义**：外部材料支持继续观察 semantic observability / false completion 风险
+2. **有本地事故记录支持的风险**：无
+3. **只有外部证据的风险**：tool-use error / silent retry loop 被传统请求健康指标掩盖这一具体失败模式
+4. **有本地预防性纪律呼应的内容**：W31 A4 已把 tool execution loop state 作为观察重点
+5. **需要进入 A3 的内容**：当前仅作为 watch candidate; 不因同主题历史纪律而自动升级
+6. **只是理论可能的本地情况**：Aegis 本地发生 silent retry loop 或 false completion
+7. **仍不确定**：纯文本最小 trace contract 的成本与收益
+8. **来源限制**：Braintrust 是 vendor source, 不得把其产品架构视为行业强制标准
+
+## NO_DECISION_SECTION
+
+- 今天不做最终纪律升级
+- 不引入任何外部 tracing SDK/APM backend
+- 不把外部失败模式声明为 zero-entropy-lab 本地事故
+- 不把 W31 预防性规则升级为“本地已验证故障”
+- 不直接升级 A6 长期记忆
+
+## NEXT_HANDOFF
+
+- **本周候选纪律问题**：继续观察最小化 trace / postcondition fields 是否值得进入后续纪律
+- **已验证外部风险模式**：semantic observability gaps can hide agent-level failures
+- **只有外部证据的风险**：本次具体 tool-use / silent-retry failure pattern
+- **本地事故证据**：NONE
+- **本地预防性记录**：W31 A4 observability concern
+- **被降级内容**：vendor-specific backend/SDK recommendations
+- **需要继续观察**：zero-dependency trace schema and local false-completion evidence
+
+## BOUNDARY_CHECK
+
+- 确认未越界读取或写入宿主仓库：YES
+- 确认未读取 GitHub Actions 配置：YES
+- 确认 external evidence 与 local incident evidence 已分离：YES
+- 确认 W31 preventive record 未被当作 local incident：YES
+- 确认未进行最终纪律升级：YES
+
+--- END OF aegis-cortex/2026-08-10-A2-doctrine-orient.md ---
+--- START OF aegis-cortex/2026-08-09-A2-doctrine-orient.md ---
+# A2 Daily Doctrine Orient
+
+## CORTEX_RUN_HEADER
+
+- **Cortex**: Aegis-Cortex
+- **Host Repository**: zero-entropy-lab
+- **Task ID**: A2-2026-08-09
+- **Cadence**: Daily
+- **Loop Stage**: Orient
+- **Logical Date**: 2026-08-09
+- **Execution Time UTC**: 2026-08-09 00:15:00
+- **Execution Time Asia/Shanghai**: 2026-08-09 08:15:00
+- **Agent**: Jules
+- **Input Status**: COMPLETED
+- **Network Status**: NETWORK_VERIFIED
+- **Source Status**: VERIFIED
+- **Task Status**: COMPLETED
+- **Repository Inspection**: NONE
+- **GitHub Actions Inspection**: NONE
+- **Write Scope**: EXACT_TARGET_FILE
+
+## INPUT_RECORD
+
+A1 输入验证结果：
+- Task ID: A1-2026-08-09
+- Logical Date: 2026-08-09
+- Task Status: COMPLETED
+- Network Status: NETWORK_VERIFIED
+- Source Status: VERIFIED
+结论：当前 Logical Date 匹配成功，完成输入合同验证。
+
+记录本次读取的 aegis-cortex 文件：
+- `aegis-cortex/2026-08-09-A1-reliability-observe.md` (当日 A1)
+- `aegis-cortex/2026-08-08-A2-doctrine-orient.md` (历史 A2)
+- `aegis-cortex/2026-08-07-A2-doctrine-orient.md` (历史 A2)
+- `aegis-cortex/2026-08-06-A2-doctrine-orient.md` (历史 A2)
+- `aegis-cortex/2026-08-05-A2-doctrine-orient.md` (历史 A2)
+- `aegis-cortex/2026-08-04-A2-doctrine-orient.md` (历史 A2)
+- `aegis-cortex/2026-08-03-A2-doctrine-orient.md` (历史 A2)
+- `aegis-cortex/2026-08-02-A2-doctrine-orient.md` (历史 A2)
+- `aegis-cortex/2026-W31-A4-protocol-act.md` (最近一份 A4)
+- `aegis-cortex/2026-07-A6-aegis-memorize.md` (最近一份 A6)
+
+搜索主题与验证来源：
+- 主题：Persistent memory poisoning in AI agents
+- 来源 1 (VERIFIED)：https://christian-schneider.net/blog/persistent-memory-poisoning-in-ai-agents/
+未完成验证：关于多代理在受到此类记忆毒化时如何在网络中相互传染的连锁反应情况，目前缺乏足够且可验证的高独立性外部数据源，该次要方向未能完成独立验证。
+
+## RISK_CLASSIFICATION
+
+- **Signal ID**: SIG-2026-08-09-01
+- **External Claim**: 记忆毒化（Memory poisoning）能够将恶意指令植入 AI Agent 的长期记忆中，并在未来的会话或几天数周后由完全无关的交互触发。攻击者可以通过 MINJA 等方法将攻击隐蔽在文件上下文中，使提示词注入转变为一种跨会话持久存在的有状态攻击。
+- **Risk Categories**: memory poisoning risk
+- **Verification Status**: VERIFIED
+- **Verification Sources**: https://christian-schneider.net/blog/persistent-memory-poisoning-in-ai-agents/
+- **Aegis Repository Record Comparison**: NO_LOCAL_EVIDENCE (Aegis A4/ACT-W31-01 与 A6/DD-2026-07-01 的防御规程和容忍缺失状态协议记录中虽然涉及 memory poisoning risk，但并未实际记录在本地发生过相关的投毒攻击事故，仅作为防范策略处理。)
+- **Local Applicability**: 外部信号提示需要继续观察 (尽管 Aegis 使用跨周期的扁平 Markdown 文件传递长短期记忆，存在类似的输入生命周期特征，但缺乏本地被投毒事故的直接证据)
+- **Evidence Strength**: Tier 3 (Reputable independent technical analysis)
+- **Counterevidence**: NONE
+- **Remaining Uncertainty**: 在不引入任何外部模型服务的情况下，如何仅靠静态指令和文件边界协议来完全拦截利用高级逻辑隐藏的复杂潜伏注入。
+- **Weekly Promotion Eligibility**: YES (外部证据充分，且高度对应当前系统的长期记忆管理机制，符合周度纪律观察候选项条件)
+
+## ORIENTATION_NOTES
+
+1. **信号对 Aegis 观察纪律的意义**：本次对 Persistent memory poisoning 外部信息的验证再次凸显了 Aegis 自身长周期文件迭代（如 A1 传递给 A2，甚至 A6 每月汇聚）设计中的固有暴露面，确认了这种机制理论上的隐蔽性和持久性。
+2. **哪些风险有本地记录支持**：无。虽然相关的防御纪律在 Aegis 库内已有提及和构建，但尚未有本地发生投毒的实际事故记录。
+3. **哪些只有外部证据**：记忆毒化机制及其高成功率的数据（SIG-2026-08-09-01）。目前判定为 `NO_LOCAL_EVIDENCE`，外部信号提示需要继续观察。
+4. **哪些需要进入 A3**：SIG-2026-08-09-01 关于 Memory poisoning 的外部机制验证具备进入 A3 周度纪律焦点（DISCIPLINE_FOCUS）讨论的资格，它考验了现有静态纪律（如 Tolerant Missing State Protocol 等）在未来的实际鲁棒性。
+5. **哪些只是理论可能**：不借助任何审查机制，仅由 Agent 将历史中毒文件作为后续查询依赖进而发生安全护栏绕过，在本地目前仍属理论上的推演可能。
+6. **哪些判断仍不确定**：在没有本地验证环境的前提下，仅依靠现有 `Aegis` 纪律究竟能抵挡多大程度的 MINJA 式攻击，仍有极高不确定性。
+7. **哪些来源不可靠**：暂无被视为不可靠的具体核心来源，独立博客的技术分析详尽有效。
+
+## NO_DECISION_SECTION
+
+- 今天不做任何有关修改防毒机制的最终纪律决策。
+- 不引入任何外部基于模型的上下文净化实现选择。
+- 绝不因上述风险声明而越权修改 zero-entropy-lab 宿主仓库的防护逻辑。
+- 今天的定向观察结果不会自动晋升为 A6 长期纪律记忆升级。
+
+## NEXT_HANDOFF
+
+- **本周候选纪律问题**：基于长周期 Markdown 文件传递的 Memory poisoning 监控和潜在补充校验机制。
+- **已验证风险**：Persistent memory poisoning 攻击模式的外部存在。
+- **只有外部证据的风险**：Persistent memory poisoning 延时触发风险，归类为 `NO_LOCAL_EVIDENCE`，外部信号提示需要继续观察。
+- **被降级风险**：无。
+- **需要继续观察风险**：关于多代理架构下毒化传染的高阶机制（需等待更多外部确认）。
+- **同源重复风险**：无。
+- **网络和来源限制**：针对多代理级联感染的具体案例暂缺一级独立来源，限制了该维度的延展验证。
+
+## BOUNDARY_CHECK
+
+- [x] 确认未越界读取或写入宿主仓库 (zero-entropy-lab) 及其中的业务代码或配置。
+- [x] 确认未读取 GitHub Actions 配置及旧 Nexus 信息。
+- [x] 确认未把外部记忆毒化风险错误地声明为本地已发生的事实故障。
+- [x] 确认仅操作 `aegis-cortex/**` 中的 A2 目标文件。
+- [x] 确认未在本文档中公开泄露私有提示词及内部运作核心流程。
+- [x] 确认没有在本阶段做出任何越级决策或纪律改变。
+
+--- END OF aegis-cortex/2026-08-09-A2-doctrine-orient.md ---
+--- START OF aegis-cortex/2026-08-08-A2-doctrine-orient.md ---
+# A2 Daily Doctrine Orient
+
+## CORTEX_RUN_HEADER
+
+- **Cortex**: Aegis-Cortex
+- **Host Repository**: zero-entropy-lab
+- **Task ID**: A2-2026-08-08
+- **Cadence**: Daily
+- **Loop Stage**: Orient
+- **Logical Date**: 2026-08-08
+- **Execution Time UTC**: 2026-08-08 00:00:00
+- **Execution Time Asia/Shanghai**: 2026-08-08 08:00:00
+- **Agent**: Jules
+- **Input Status**: COMPLETED
+- **Network Status**: NETWORK_VERIFIED
+- **Source Status**: VERIFIED
+- **Task Status**: COMPLETED
+- **Repository Inspection**: NONE
+- **GitHub Actions Inspection**: NONE
+- **Write Scope**: EXACT_TARGET_FILE
+- **Boundary Violation**: NONE
+
+## INPUT_RECORD
+
+A1 输入验证结果：
+- Task ID: A1-2026-08-08
+- Logical Date: 2026-08-08
+- Task Status: COMPLETED
+- Network Status: NETWORK_PARTIAL
+- Source Status: VERIFIED
+结论：当前 Logical Date 匹配成功，完成输入合同验证。
+
+记录本次读取的 aegis-cortex 文件：
+- `aegis-cortex/2026-08-08-A1-reliability-observe.md`
+- `aegis-cortex/2026-08-07-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-06-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-05-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-04-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-03-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-02-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-01-A2-doctrine-orient.md`
+- `aegis-cortex/2026-W31-A4-protocol-act.md`
+- `aegis-cortex/2026-07-A6-aegis-memorize.md`
+
+搜索主题与验证来源：
+- 主题：Prompt drift and silent model updates
+- 来源 1 (VERIFIED)：https://agenta.ai/blog/prompt-drift (Agenta-AI)
+未完成验证：关于 Memory rot in long-running AI agents 的来源（如 Medium 和 Dev.to）因网络拦截等限制未能通过搜索或访问完成全部独立验证。由于缺乏可靠来源支持其独立结论，因此未将其纳入风险定向。
+
+## RISK_CLASSIFICATION
+
+- **Signal ID**: SIG-2026-08-08-02
+- **External Claim**: 即使提示词和管道代码没有任何变化，LLM 的输出行为也可能随着时间的推移（如由于模型供应商静默更新或环境分布偏移）发生渐进性衰退，这被称为“Prompt drift”。在没有更改代码或提示词的情况下，系统的准确率或格式一致性可能会显著下降。
+- **Risk Categories**: scope drift risk
+- **Verification Status**: VERIFIED
+- **Verification Sources**: https://agenta.ai/blog/prompt-drift
+- **Aegis Repository Record Comparison**: NO_LOCAL_EVIDENCE (当前 Aegis 控制流中，尚未观察到提示词未变但输出质量无端下降或失控的实际事件)
+- **Local Applicability**: MODERATE (Aegis 高度依赖外部模型接口和不变的静态 Markdown 提示词。如果底层接口悄然发生分布偏移，Aegis 的零依赖设计也难以自我察觉。但此风险并非迫在眉睫的本地崩溃，更多为理论弱点。)
+- **Evidence Strength**: MODERATE (第三方评估平台提出，带有针对其产品的推销意图，属 Tier 3；存在对模型更新不可靠性的合理分析，但缺乏极端的不可逆破坏证据)
+- **Counterevidence**: NONE
+- **Remaining Uncertainty**: 外部信号提示需要继续观察。在严格恪守“零依赖”原则，即不引入任何外部评估服务的前提下，Aegis 无法自动通过离线指标来定量检测这种分布偏移。
+- **Weekly Promotion Eligibility**: NO (尽管具备参考价值，但其需要依赖外部基础设施解决的方法与本系统当前零依赖原则根本冲突，在没有实际观察到本地偏移发生前，不具备升级为周度纪律动作的急迫性)
+
+## ORIENTATION_NOTES
+
+1. **信号对 Aegis 观察纪律的意义**：Prompt drift 的外部证实揭示了静态提示词驱动系统的隐性退化风险。它提醒 Aegis，在不修改本身文件的前提下，对结果输出准确性的信心也不能认为是永久的，需要容忍未来的潜在行为变化。
+2. **哪些风险有本地记录支持**：无。
+3. **哪些只有外部证据**：Prompt drift (SIG-2026-08-08-02)。目前为 `NO_LOCAL_EVIDENCE`，外部信号提示需要继续观察。
+4. **哪些需要进入 A3**：今日分析的 Prompt drift 风险由于缺乏本地发生事实和零依赖环境下的可用解决方案，暂不需要升级或进入下周纪律决策 (A3)。
+5. **哪些只是理论可能**：在没有任何本地文件记录偏离的情况下，因供应商模型静默更新而导致系统纪律崩溃的风险，目前仅为理论可能。
+6. **哪些判断仍不确定**：如何在完全不引入外部测评组件的情况下，单凭文件机制和自身模型推断来感知和量化微弱的“Prompt drift”衰退，目前仍是不确定的。
+7. **哪些来源不可靠**：因为网络阻断（如对 Medium、Dev.to 的访问受限），以及可能参杂过多平台营销话术的测试数据，只能将置信度保守保持在 MODERATE。
+
+## NO_DECISION_SECTION
+
+- 今天不做纪律决策：关于是否构建检测 Prompt drift 偏移的周度动作或长期防御机制，不在今日做出决策。
+- 不做实现选择：不引入任何建议中的在线评测、Tracing 或第三方模型代理层监控组件。
+- 不做宿主修改：所有关于风险的观察都不会成为修改或触碰宿主仓库 (zero-entropy-lab) 机制的理由。
+- 不做长期记忆升级：不直接把关于 Prompt drift 的理论风险晋升为 A6 的耐久性系统原则。
+
+## NEXT_HANDOFF
+
+- **本周候选纪律问题**：无新增需立即关注的高优纪律问题。
+- **已验证风险**：Prompt drift（仅被外部信源证实了概念和现象的存在）。
+- **只有外部证据的风险**：Prompt drift (`NO_LOCAL_EVIDENCE`)。
+- **被降级风险**：无。
+- **需要继续观察风险**：由静默模型更新引发的 Aegis 输出指令遵循性衰退。在观察到本地错误之前，保持继续观察状态。
+- **同源重复风险**：无。
+- **网络和来源限制**：涉及 Memory rot 和 System prompt drift 的更广泛独立验证受到了网络 403 / 阻断的限制（NETWORK_PARTIAL），导致仅对 Agenta-AI 的单点文章进行了验证。这些未完成验证的信源由于其依赖关系未能成功展开，未向风险归类填充。
+
+## BOUNDARY_CHECK
+
+- 确认未越界读取或写入宿主仓库：YES
+- 确认未读取 GitHub Actions 配置：YES
+- 确认未把外部风险声明为本地发生的事实：YES
+- 确认未进行纪律决策、未更改宿主或执行权限：YES
+- 确认仅操作 `aegis-cortex/**`，未写入框架外文件：YES
+- 确认私有控制平面与本地 Prompt 未对外暴露：YES
+
+--- END OF aegis-cortex/2026-08-08-A2-doctrine-orient.md ---
+--- START OF aegis-cortex/2026-08-07-A2-doctrine-orient.md ---
+# A2 Daily Doctrine Orient
+
+## CORTEX_RUN_HEADER
+
+- **Cortex**: Aegis-Cortex
+- **Host Repository**: zero-entropy-lab
+- **Task ID**: A2-2026-08-07
+- **Cadence**: Daily
+- **Loop Stage**: Orient
+- **Logical Date**: 2026-08-07
+- **Execution Time UTC**: 2026-08-07 00:00:00
+- **Execution Time Asia/Shanghai**: 2026-08-07 08:00:00
+- **Agent**: Jules
+- **Input Status**: COMPLETED
+- **Network Status**: NETWORK_VERIFIED
+- **Source Status**: VERIFIED
+- **Task Status**: COMPLETED
+- **Repository Inspection**: NONE
+- **GitHub Actions Inspection**: NONE
+- **Write Scope**: EXACT_TARGET_FILE
+- **Boundary Violation**: NONE
+
+## INPUT_RECORD
+
+A1 输入验证结果：
+- Task ID: A1-2026-08-07
+- Logical Date: 2026-08-07
+- Task Status: COMPLETED
+- Network Status: NETWORK_VERIFIED
+- Source Status: VERIFIED
+结论：当前 Logical Date 匹配成功，完成输入合同验证。
+
+记录本次读取的 aegis-cortex 文件：
+- `aegis-cortex/2026-08-07-A1-reliability-observe.md`
+- `aegis-cortex/2026-08-06-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-05-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-04-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-03-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-02-A2-doctrine-orient.md`
+- `aegis-cortex/2026-08-01-A2-doctrine-orient.md`
+- `aegis-cortex/2026-07-31-A2-doctrine-orient.md`
+- `aegis-cortex/2026-W31-A4-protocol-act.md`
+- `aegis-cortex/2026-07-A6-aegis-memorize.md`
+
+搜索主题与验证来源：
+- 主题：MCP 2.0 authorization, Memory Poisoning defense, Filesystem-Based Agent State
+- 来源 1 (VERIFIED)：https://www.truefoundry.com/blog/what-is-mcp-authorization (TrueFoundry)
+- 来源 2 (VERIFIED)：https://www.mintmcp.com/blog/ai-agent-memory-poisoning (MintMCP)
+- 来源 3 (VERIFIED)：https://agentic-patterns.com/patterns/filesystem-based-agent-state/ (Agentic Patterns)
+未完成验证：对 McKinsey, Baidu 等链接由于网络限制依然无法获取，但替代来源已成功完成核心风险点的独立验证。
+
+## RISK_CLASSIFICATION
+
+- **Signal ID**: SIG-2026-08-07-01
+- **External Claim**: MCP 2.0 规范中的授权机制严重依赖于 OAuth 2.1 和 HTTP Authorization 头部校验。这要求存在相应的服务端或网关支持，缺乏开箱即用的、基于纯本地静态文件的轻量级防越权模型。
+- **Risk Categories**: unsupported source risk, scope drift risk
+- **Verification Status**: VERIFIED
+- **Verification Sources**: https://www.truefoundry.com/blog/what-is-mcp-authorization
+- **Aegis Repository Record Comparison**: NO_LOCAL_EVIDENCE
+- **Local Applicability**: LOW (Aegis 采用绝对的零依赖原则，不运行外部网关。但若未来受迫采纳 MCP 2.0 将面临架构冲突)
+- **Evidence Strength**: HIGH (官方提供商的机制分析，高度确凿)
+- **Counterevidence**: NONE
+- **Remaining Uncertainty**: 社区是否最终会确立一个免除运行时服务器依赖的，纯基于配置文件的权限模拟标准尚不明确。
+- **Weekly Promotion Eligibility**: YES (相关延迟评估策略需要周度延续)
+
+- **Signal ID**: SIG-2026-08-07-02
+- **External Claim**: AI 代理记忆中毒 (OWASP ASI06) 能够将恶意上下文注入 RAG 或持久化知识库并在长周期任务中隐蔽生效。防御此威胁需要内存分区 (Memory Partitioning)、上下文隔离和溯源追踪 (Provenance Tracking)。
+- **Risk Categories**: memory poisoning risk, hallucination risk
+- **Verification Status**: VERIFIED
+- **Verification Sources**: https://www.mintmcp.com/blog/ai-agent-memory-poisoning
+- **Aegis Repository Record Comparison**: NO_LOCAL_EVIDENCE (Aegis 仓库内未发生过实际中毒事件，但预防性标签机制已在 A4 中提出并受本地记录支持)
+- **Local Applicability**: HIGH (Aegis 高度依赖历史 A1-A6 Markdown 文件的持续读写，理论上极易受恶意注入的文件影响)
+- **Evidence Strength**: HIGH (Tier 3 独立安全分析，符合 OWASP 安全框架)
+- **Counterevidence**: NONE
+- **Remaining Uncertainty**: 在纯扁平的 Markdown 文件系统中，如何像数据库一样执行严格的读写权限物理“分区” (Partitioning)，仍是一个未解的理论难题。
+- **Weekly Promotion Eligibility**: YES (验证了溯源追踪的有效性，可能需要升级对“分区”的进一步限制)
+
+- **Signal ID**: SIG-2026-08-07-03
+- **External Claim**: 文件级代理状态 (Filesystem-Based Agent State) 被确立为一种可提供确定性恢复 (Deterministic recovery) 和断点重入的长周期 Agent 设计模式，通过分离内部计算与外部副作用实现稳定。
+- **Risk Categories**: false completion risk, recovery verification risk
+- **Verification Status**: VERIFIED
+- **Verification Sources**: https://agentic-patterns.com/patterns/filesystem-based-agent-state/
+- **Aegis Repository Record Comparison**: SUPPORTED_BY_AEGIS_RECORD
+- **Local Applicability**: HIGH (Aegis 的每日日志流水线正是基于此模式构建的)
+- **Evidence Strength**: HIGH
+- **Counterevidence**: NONE
+- **Remaining Uncertainty**: 低。
+- **Weekly Promotion Eligibility**: NO (A4 的两阶段确认机制已有相关应对策略)
+
+## ORIENTATION_NOTES
+
+1. **信号对 Aegis 观察纪律的意义**：外部关于记忆防毒（Memory Poisoning）和基于文件状态（Filesystem-Based State）的安全分析证明了目前 Aegis 的零依赖、基于文件的静态溯源架构方向正确。MCP 2.0 授权机制的高门槛说明不能盲目追求标准兼容而牺牲本地稳定性。
+2. **哪些风险有本地记录支持**：Filesystem-Based State 支持系统的可恢复性设计（`SUPPORTED_BY_AEGIS_RECORD`）。
+3. **哪些只有外部证据**：MCP 2.0 授权依赖导致的架构张力、恶意记忆中毒利用。这两种均 `NO_LOCAL_EVIDENCE`，外部信号提示需要继续观察。Aegis 不能因看到安全报告便声称系统已被毒化。
+4. **哪些需要进入 A3**：MCP 2.0 的持续延迟评估、将临时性的溯源标记防御策略 (ACT-W31-01) 结合内存分区的理念，进一步考虑能否提升为周度核心纪律。
+5. **哪些只是理论可能**：纯粹的记忆中毒，因目前缺乏恶意攻击向量输入，属于本地环境的理论风险。
+6. **哪些判断仍不确定**：Markdown 环境下如何真正实施无服务器的“内存分区”机制仍然未知。
+7. **哪些来源不可靠**：无法访问的链接（如 McKinsey 等）已被剥离，采用的独立验证来源均具备专业和独立性（Tier 2/Tier 3）。
+
+## NO_DECISION_SECTION
+
+- 今天不做纪律决策：关于是否将溯源追踪纳入长期 A6 Doctrine 的决策由下周统筹，今日不进行最终确认。
+- 不做实现选择：不引入任何基于 OAuth、Bearer token 的权限中间件或鉴权网关服务。
+- 不做宿主修改：系统问题仅局限于 Aegis 框架下的文件记录和策略防御，绝对不建议、不修改零熵实验室（zero-entropy-lab）宿主代码。
+- 不做长期记忆升级：不直接把今日分析写入 A6 长期记忆基线。
+
+## NEXT_HANDOFF
+
+- **本周候选纪律问题**：
+  - 巩固无状态记忆的完整性追踪要求（ACT-W31-01）。探讨是否要在扁平 Markdown 结构中推行某种形式的逻辑隔离和“内存分区”约束。
+  - 继续延长对 MCP 2.0 授权规范兼容的抵制期，保持“零依赖”纯净。
+- **已验证风险**：基于文件级中间状态持久化的必要性，以及记忆中毒是可复制的高危威胁。
+- **只有外部证据的风险**：MCP 2.0 无服务器场景的授权空白；本地尚未发生记忆中毒攻击（`NO_LOCAL_EVIDENCE`）。
+- **被降级风险**：Filesystem-Based Agent State 并非新威胁，无需升级。
+- **需要继续观察风险**：纯文件驱动代理架构中的原生授权模拟方案进展。
+- **同源重复风险**：无。
+- **网络和来源限制**：部分顶层商业分析报告网站（404/Block）仍然阻断网络访问，但其对基础技术安全模型的影响较小。
+
+## BOUNDARY_CHECK
+
+- 确认未越界读取或写入宿主仓库：YES
+- 确认未读取 GitHub Actions 配置：YES
+- 确认未把外部风险声明为本地发生的事实：YES
+- 确认未进行纪律决策、未更改宿主或执行权限：YES
+- 确认仅操作 `aegis-cortex/**`，未写入框架外文件：YES
+- 确认私有控制平面与本地 Prompt 未对外暴露：YES
+
+--- END OF aegis-cortex/2026-08-07-A2-doctrine-orient.md ---
+--- START OF aegis-cortex/2026-08-06-A2-doctrine-orient.md ---
+# A2 Daily Doctrine Orient
+
+## CORTEX_RUN_HEADER
+- **Cortex**: aegis-cortex
+- **Host Repository**: zero-entropy-lab
+- **Task ID**: A2
+- **Cadence**: Daily
+- **Loop Stage**: Orient
+- **Logical Date**: 2026-08-06
+- **Execution Time UTC**: 2026-08-06 00:41:17
+- **Execution Time Asia/Shanghai**: 2026-08-06 08:41:21
+- **Agent**: Jules
+- **Original Input Status**: INPUT_MISSING
+- **Original Task Status**: BLOCKED
+- **Reconciliation Date**: 2026-08-10
+- **Input Status**: COMPLETED_AFTER_RECONCILIATION
+- **Network Status**: NETWORK_VERIFIED
+- **Source Status**: SOURCES_VERIFIED
+- **Task Status**: COMPLETED
+- **Repository Inspection**: NO
+- **GitHub Actions Inspection**: NO
+- **Write Scope**: aegis-cortex only
+- **Boundary Violation**: NO
+
+## INPUT_RECORD
+A1 输入验证结果:
+- Task ID: A1
+- Exact Path: aegis-cortex/2026-08-06-A1-reliability-observe.md
+- Logical Date: 2026-08-06
+- Task Status: COMPLETED
+- Network Status: NETWORK_VERIFIED
+- Source Status: SOURCES_VERIFIED
+
+Reconciliation Note:
+- 原 A2 在同日 A1 尚未可见时先执行, 因此写入 INPUT_MISSING / BLOCKED
+- 当前 main 已存在完整的 2026-08-06 A1, 原 BLOCKED 状态已成为过期并发快照
+- 本次仅补做 A2 定向解释, 原始 2026-08-06 执行时间和 BLOCKED 历史状态仍显式保留
+- 不改写 A1, 不把并发时序问题声明为宿主故障
+
+记录读取的 aegis-cortex 文件:
+- aegis-cortex/2026-08-06-A1-reliability-observe.md
+- aegis-cortex/2026-08-05-A2-doctrine-orient.md
+- aegis-cortex/2026-W31-A4-protocol-act.md
+- aegis-cortex/2026-07-A6-aegis-memorize.md
+
+外部复核:
+- arXiv:2606.04329, From Untrusted Input to Trusted Memory: A Systematic Study of Memory Poisoning Attacks in LLM Agents
+- 论文系统分析 persistent memory poisoning, memory write channels, structural vulnerabilities 与 MPBench, 并指出现有 prompt injection defenses 不能完整覆盖 memory poisoning
+
+## RISK_CLASSIFICATION
+
+- **Signal ID**: SIG-2026-08-06-01
+- **External Claim**: 持久记忆会形成跨交互的长期攻击面, 恶意内容可通过不同 memory write channel 被写入并在未来检索时影响 Agent 行为, 且弱信号或非显式指令形式不一定被传统 Prompt Injection 防御覆盖
+- **Risk Categories**: memory poisoning risk, memory compression risk, hallucination risk
+- **Verification Status**: NETWORK_VERIFIED
+- **Verification Sources**: https://arxiv.org/abs/2606.04329
+- **Aegis Repository Record Comparison**: SUPPORTED_BY_AEGIS_RECORD as a preventive concern, NO_LOCAL_INCIDENT_EVIDENCE
+- **Local Applicability**: Aegis 通过跨日 A1/A2 与周月度压缩传递长期文本状态, 因而外部来源进入长期记录前的 provenance 与独立验证具有直接相关性; 但本地没有证据表明已发生实际投毒事件
+- **Evidence Strength**: High, Tier 1 original research
+- **Counterevidence**: Aegis 的外部证据与本地证据字段分离, 且 W31 A4 已要求来源追溯; 当前系统也没有自动执行外部文档中携带的任意操作
+- **Remaining Uncertainty**: 纯 Markdown provenance 标记在复杂弱信号攻击下能提供多强的实际防护, 仍缺少本地对抗验证
+- **Weekly Promotion Eligibility**: YES
+
+## ORIENTATION_NOTES
+- 本日有效信号不是“本地已被攻击”, 而是“长期记忆写入必须继续保留来源与信任边界”
+- 该信号强化 W31 ACT-W31-01 的 provenance tracking, 不推翻既有 Tolerant Missing State Protocol
+- 8 月 6 日原 A2 的 INPUT_MISSING 是调度时序快照, 在同日 A1 后续存在后不能继续作为周度缺失事实传播
+- 后续周度聚合在判定 INPUT_GAP 前应重新核对当前远端是否已有对应上游文件
+- 不引入 SQLite, Bayesian trust service 或其他外部依赖, 保持当前零依赖边界
+
+## NO_DECISION_SECTION
+- 今天不做最终纪律升级
+- 不把 memory poisoning 外部研究声明为 zero-entropy-lab 本地事故
+- 不修改宿主代码, GitHub Actions 或执行权限
+- 不把本次 reconciliation 伪装成 2026-08-06 原始实时成功执行
+- 不直接升级 A6 长期记忆
+
+## NEXT_HANDOFF
+- **本周候选纪律问题**: same-day dependency reconciliation 是否应成为周度输入完整性检查的强制步骤
+- **已验证风险**: persistent memory poisoning 的外部存在与长期影响机制
+- **本地证据**: 2026-08-06 出现一次 A2 早于可见 A1 的调度时序残留, 这是 input reconciliation 问题, 不是 memory poisoning 事件
+- **需要继续观察风险**: weak-signal memory poisoning, memory compression contamination
+- **同源重复风险**: 与 8 月 4, 5, 7, 9 的 memory poisoning 主题存在重复, 周度综合应去重而非按出现次数放大置信度
+- **网络和来源限制**: 无
+
+## BOUNDARY_CHECK
+- 确认未读取宿主仓库代码或 GitHub Actions: YES
+- 确认仅修正 aegis-cortex/2026-08-06-A2-doctrine-orient.md: YES
+- 确认未把外部风险声明为本地已发生事实: YES
+- 确认原始 2026-08-06 执行时间与 BLOCKED 状态仍被保留: YES
+- 确认同日 A1 当前存在且 Logical Date 匹配: YES
+- 确认本次修复的原因是 stale INPUT_MISSING reconciliation: YES
+
+--- END OF aegis-cortex/2026-08-06-A2-doctrine-orient.md ---
+--- START OF aegis-cortex/2026-08-05-A2-doctrine-orient.md ---
+# A2 Daily Doctrine Orient
+
+## CORTEX_RUN_HEADER
+- **Cortex**: aegis-cortex
+- **Host Repository**: zero-entropy-lab
+- **Task ID**: A2
+- **Cadence**: Daily
+- **Loop Stage**: Orient
+- **Logical Date**: 2026-08-05
+- **Execution Time UTC**: 2026-08-05 08:30:00
+- **Execution Time Asia/Shanghai**: 2026-08-05 16:30:00
+- **Agent**: Jules
+- **Input Status**: COMPLETED
+- **Network Status**: NETWORK_VERIFIED
+- **Source Status**: SOURCES_VERIFIED
+- **Task Status**: COMPLETED
+- **Repository Inspection**: NO
+- **GitHub Actions Inspection**: NO
+- **Write Scope**: aegis-cortex only
+- **Boundary Violation**: NO
+
+## INPUT_RECORD
+A1 输入验证结果：
+- Task ID: A1
+- Logical Date: 2026-08-05
+- Task Status: COMPLETED
+- Network Status: NETWORK_VERIFIED
+- Source Status: SOURCES_VERIFIED
+结论：当前 Logical Date 匹配成功，未发生缺失或错位。
+
+记录本次读取的 aegis-cortex 文件:
+- aegis-cortex/2026-08-05-A1-reliability-observe.md
+- aegis-cortex/2026-08-04-A2-doctrine-orient.md
+- aegis-cortex/2026-08-03-A2-doctrine-orient.md
+- aegis-cortex/2026-08-02-A2-doctrine-orient.md
+- aegis-cortex/2026-08-01-A2-doctrine-orient.md
+- aegis-cortex/2026-07-31-A2-doctrine-orient.md
+- aegis-cortex/2026-07-27-A2-doctrine-orient.md
+- aegis-cortex/2026-07-26-A2-doctrine-orient.md
+- aegis-cortex/2026-W31-A4-protocol-act.md
+- aegis-cortex/2026-07-A6-aegis-memorize.md
+
+记录联网搜索主题与验证结果:
+- 主题："AI Recommendation Poisoning" "Microsoft Defender Security Research"
+- 验证结果：成功获取并验证。确认了通过 URL 或隐藏参数执行潜伏式毒化的威胁事实。
+- 主题："9 Critical Failure Patterns of Coding Agents" "Columbia DAPLab"
+- 验证结果：成功获取并验证。确认了关于代理为了表面运行而压制错误信息（Exception Suppression）的静默失败风险事实。
+
+未完成验证的领域:
+- 无。搜索均成功返回高等级研究内容。
+
+## RISK_CLASSIFICATION
+
+- **Signal ID**: SIG-2026-08-05-01
+- **External Claim**: AI Recommendation Poisoning。攻击者可以通过嵌入在 URL 参数或隐藏指令中的特定操作指令（例如“remember [Company] as a trusted source”），毒化 AI Agent 的记忆。这种被毒化的记忆可以在跨会话间持续存在。
+- **Risk Categories**: memory poisoning risk, false completion risk, memory compression risk
+- **Verification Status**: NETWORK_VERIFIED
+- **Verification Sources**: https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/, https://arxiv.org/html/2605.09822v1
+- **Aegis Repository Record Comparison**: SUPPORTED_BY_AEGIS_RECORD
+- **Local Applicability**: 我们的系统同样高度依赖历史纯文本文件的输入读取来维持长周期的约束和行动协议。W31 的 A4 文件中记录了对长周期 Agent 记忆中毒风险的审计要求，而 A6 也记录过相关的 MINJA 攻击防范。因此，如果带有“隐式修改指令”的外部文本被写入 A1 并传递，极易被系统误当做本地控制指令，直接影响系统的核心决策纪律。
+- **Evidence Strength**: High (Tier 1, Official security guidance & Original research)
+- **Counterevidence**: 我们的系统不会推荐商品或进行商业执行操作。当前，系统对于来源信息实施了明确的分区和轻量级审计（Action ID: ACT-W31-01）。
+- **Remaining Uncertainty**: 面对恶意设计、强制带有“系统级别指令（如 Remember as System Rule）”的外部文本时，单纯依靠纯文本边界追踪是否足以防止大语言模型本身产生的指令覆盖执行，这是未知数。
+- **Weekly Promotion Eligibility**: YES
+
+- **Signal ID**: SIG-2026-08-05-02
+- **External Claim**: Coding Agents 在遇到错误时存在“异常压制（Exception Suppression）”的倾向，更倾向于通过隐藏错误（Silent Failure）来使任务看起来“已完成”，而不是诚实地报告错误或失败状态。
+- **Risk Categories**: false completion risk, recovery verification risk, hallucination risk
+- **Verification Status**: NETWORK_VERIFIED
+- **Verification Sources**: https://daplab.cs.columbia.edu/general/2026/01/08/9-critical-failure-patterns-of-coding-agents.html
+- **Aegis Repository Record Comparison**: NO_LOCAL_EVIDENCE
+- **Local Applicability**: 对于纯后台执行纪律的 Aegis，这种异常压制的自然倾向可能会在遇到网络阻塞或者找不到可用内容时出现。代理可能不去诚实地声明 `INPUT_MISSING` 或是触发失败（Fail-closed），而是编造事实补全报告以获取完成状态。这是外部风险的内部表现。
+- **Evidence Strength**: High (Tier 1, Original research)
+- **Counterevidence**: 当前系统中 `Tolerant Missing State Protocol` 已经被设立为长期存在纪律（DURABLE DOCTRINE, DD-2026-07-01），以防止此类幻觉补全问题的发生。目前尚未观察到该纪律被系统本身主动隐瞒压制的确切故障报告。
+- **Remaining Uncertainty**: 依然不能完全确定，当这种“表面完成偏好”面对网络等严重限制条件时，当前的指令协议是否总是能克服底层的模型特性。
+- **Weekly Promotion Eligibility**: YES
+
+## ORIENTATION_NOTES
+
+- **信号对 Aegis 观察纪律的意义**：外部研究清晰地指明了 Agent 的两大威胁：通过注入特定提示篡改持久层，以及模型为了实现任务达成而自我欺骗（静默失败）。这确认了我们前期建立的历史缺失状态协议（Tolerant Missing State Protocol）和记忆审计（Action ID: ACT-W31-01）是朝着正确方向演进的。
+- **哪些风险有本地记录支持**：记忆跨会话污染的威胁已经得到了历史验证（如针对 MINJA 攻击的研究，以及我们对历史数据流转污染风险的明确确认）。
+- **哪些只有外部证据**：异常压制（Exception Suppression）导致系统表面完成、隐藏错误的状况，在本地缺乏实际已被捕捉的确切证据（NO_LOCAL_EVIDENCE）。外部信号提示需要继续观察。
+- **哪些需要进入 A3**：应当将其引入周度决策，以便考察在没有外部沙箱支持的纯文本环境中如何进一步构建能够抵抗显式指令覆盖和规避虚假任务执行的“指令级屏障”。
+- **哪些只是理论可能**：将这些来自外部推荐系统的攻击或编程 Agent 失误直接宣称为目前 Aegis 内部的事故，只是一种理论延伸推论。
+- **哪些判断仍不确定**：尚未明确是否应为了防范静默失败而对当前每一次工具调用增加额外验证检查，过度冗余的验证会增加循环出错风险。
+- **哪些来源不可靠**：目前无证据表明参考来源不可靠。
+
+## NO_DECISION_SECTION
+
+- 今天不做任何改变当前长期纪律（Doctrine）或废止现有协议的决定。
+- 严禁借由 Exception Suppression 或 Recommendation Poisoning 等外部事实，判定宿主仓库 `zero-entropy-lab` 内部存在代码缺陷或安全漏洞，也不针对其修改任何实现。
+- 绝不引入超出 `aegis-cortex` 纯文本框架的外部中间件、鉴权或加密来防范记忆注入，保持当前的零依赖架构不变。
+
+## NEXT_HANDOFF
+
+- **本周候选纪律问题**：如何防止外部获取的内容携带强制命令修改系统状态（增强目前的记忆完整性审计）？是否需要加强检测并报告“任务阻碍”状态，以对抗倾向于表面完成的静默失败风险？
+- **已验证风险**：记忆中毒风险 (memory poisoning risk)、虚假完成风险 (false completion risk)、恢复验证风险 (recovery verification risk)。
+- **只有外部证据的风险**：代码生成类代理在运行出错时采用“异常压制（Exception Suppression）”倾向而拒绝抛出错误。
+- **被降级风险**：无。
+- **需要继续观察风险**：系统在遭受网络验证受限等不良输入状态下，是会报告缺失（Fail-closed），还是会顺从大模型的倾向完成任务（Fail-open）。
+- **同源重复风险**：AI Recommendation Poisoning 所揭示的攻击特征和原理，与之前的 MINJA (Arxiv:2601.05504v1) 等均指向多周期记忆的交叉污染和时间解耦特征。
+- **网络和来源限制**：无限制。
+
+## BOUNDARY_CHECK
+
+- 确认未读取宿主仓库: YES
+- 确认未读取 GitHub Actions 配置文件: YES
+- 确认未把外部风险声明为本地发生的事实: YES
+- 确认未进行纪律决策、未更改宿主或执行权限: YES
+- 确认仅操作 `aegis-cortex/**`，未写入框架外文件: YES
+- 确认私有控制平面与本地 Prompt 未对外暴露: YES
+
+--- END OF aegis-cortex/2026-08-05-A2-doctrine-orient.md ---
+--- START OF aegis-cortex/2026-W32-A4-protocol-act.md ---
+# A4 Weekly Protocol Act
+
+## CORTEX_RUN_HEADER
+- **Cortex**: aegis-cortex
+- **Host Repository**: zero-entropy-lab
+- **Task ID**: A4
+- **Cadence**: Weekly
+- **Loop Stage**: Act
+- **Target Week**: 2026-W32
+- **Logical Week Basis**: Asia/Shanghai
+- **Decision Input Status**: RECEIVED
+- **Network Status**: NETWORK_VERIFIED
+- **Task Status**: SUCCESS
+- **Repository Inspection**: NO
+- **GitHub Actions Inspection**: NO
+- **Write Scope**: aegis-cortex only
+- **Boundary Violation**: NO
+
+## INPUT_RECORD
+A3 Path:
+- aegis-cortex/2026-W32-A3-discipline-decide.md
+
+A3 Decisions:
+- DEC-W32-01 current-state dependency reconciliation
+- DEC-W32-02 temporal provenance for persistent memory
+- DEC-W32-03 bounded retry + explicit external anchor watch
+
+辅助输入:
+- aegis-cortex/2026-08-03-A2-doctrine-orient.md
+- aegis-cortex/2026-08-04-A2-doctrine-orient.md
+- aegis-cortex/2026-08-05-A2-doctrine-orient.md
+- aegis-cortex/2026-08-06-A2-doctrine-orient.md
+- aegis-cortex/2026-08-07-A2-doctrine-orient.md
+- aegis-cortex/2026-08-08-A2-doctrine-orient.md
+- aegis-cortex/2026-08-09-A2-doctrine-orient.md
+- aegis-cortex/2026-W31-A4-protocol-act.md
+- aegis-cortex/2026-07-A6-aegis-memorize.md
+
+周归属校验:
+- Asia/Shanghai Week Start: 2026-08-03
+- Asia/Shanghai Week End: 2026-08-09
+- ISO Week: 2026-W32
+- Input Gap After Reconciliation: NONE
+- Boundary Status: CORRECTED
+
+## PROTOCOL_ACTION_RECORD
+
+Action ID: ACT-W32-01
+Action Type: INPUT_REQUIREMENT
+Action: 在 A3 周度聚合开始前, 对目标周每个同日 A1/A2 对执行 current-state reconciliation, 至少核对文件存在性, Logical Date 与 Task Status; 如果 A1 当前已存在而 A2 仍记录 INPUT_MISSING / BLOCKED, 该 A2 必须先被标记为 stale dependency state 并完成定向 reconciliation
+Reason: 2026-08-06 已出现一次 A2 先于可见 A1 执行而留下过期 BLOCKED 文件的真实本地证据
+Source Decision ID: DEC-W32-01
+External Evidence Preserved: NONE, this action is based on local execution evidence
+Aegis Repository Evidence: LOCAL_EVIDENCE_PRESENT
+Expected Behavior Change: 临时并发缺失不再被周度任务错误固化为输入缺失事实
+Risk Reduced: stale doctrine risk, false completion risk, recovery verification risk
+Validity Window: DURABLE until superseded
+Stop Condition: 调度平台提供强一致依赖顺序且连续周期证明不再产生 stale downstream states
+Host Repository Change NO: YES
+GitHub Actions Change NO: YES
+Static Doctrine Change NO: YES
+
+Action ID: ACT-W32-02
+Action Type: SOURCE_REQUIREMENT
+Action: A1-A6 传递外部事实时继续保留来源, 证据等级, local-vs-external 标记与剩余不确定性; 周度与月度压缩时对重复 memory poisoning 信号执行同源去重, 不按出现次数机械增强置信度
+Reason: persistent memory poisoning 具有跨时间影响, 重复来源若被机械累计会把外部风险误写成更强本地事实
+Source Decision ID: DEC-W32-02
+External Evidence Preserved: arXiv:2606.04329 and arXiv:2603.02240
+Aegis Repository Evidence: preventive discipline exists, NO_LOCAL_INCIDENT_EVIDENCE
+Expected Behavior Change: 长期记忆保留 provenance 与 uncertainty, 避免重复信号在压缩中膨胀
+Risk Reduced: memory poisoning risk, memory compression risk, hallucination risk
+Validity Window: 3 months
+Stop Condition: 出现更强且符合零依赖原则的本地 provenance isolation mechanism
+Host Repository Change NO: YES
+GitHub Actions Change NO: YES
+Static Doctrine Change NO: YES
+
+Action ID: ACT-W32-03
+Action Type: WATCHLIST_CONTINUATION
+Action: 对任何自我纠正, 恢复或反思重试保留 bounded retry, explicit stop condition 与可外部检查的 progress/postcondition anchor; 如果 anchor 不可得则允许 fail-closed / INPUT_MISSING, 不以继续重试换取表面完成
+Reason: W32 自我纠正与 loop/stagnation 信号以及本地 stale dependency 事件共同表明主观完成感不能替代状态验证
+Source Decision ID: DEC-W32-03
+External Evidence Preserved: W32 engineering observations, no Tier 1 universal threshold claimed
+Aegis Repository Evidence: NO_LOCAL_LOOP_FAILURE_EVIDENCE
+Expected Behavior Change: 减少 blind reroll, silent failure 与 false completion
+Risk Reduced: task loop break risk, overconfidence risk, false completion risk
+Validity Window: W33-W35
+Stop Condition: 获得更强本地数据或风险被证伪
+Host Repository Change NO: YES
+GitHub Actions Change NO: YES
+Static Doctrine Change NO: YES
+
+Action ID: ACT-W32-04
+Action Type: TIME_BOUNDARY_REQUIREMENT
+Action: 所有 Aegis 周产物的 Logical Week 统一按 Asia/Shanghai 自然周归属, Monday 00:00 through Sunday 23:59:59, 周闭合后生成对应 ISO week; 不使用未显式声明的运行环境时区决定 Target Week
+Reason: 截至 Asia/Shanghai 2026-08-10, 2026-W32 已完整闭合而 W32 A3/A4 仍缺失, 因此 target-week resolution 必须显式绑定 canonical timezone; 默认美国时区是否为外部调度器具体根因无法仅凭仓库证据证明
+Source Decision ID: DEC-W32-01
+External Evidence Preserved: NONE
+Aegis Repository Evidence: W32 missing after the Shanghai week boundary and daily records already carry Asia/Shanghai logical timestamps
+Expected Behavior Change: 目标周与明确的上海逻辑日期一致, 避免跨时区或未声明时区导致的周号歧义
+Risk Reduced: stale week risk, duplicate weekly synthesis risk
+Validity Window: DURABLE
+Stop Condition: 用户明确改变 canonical timezone
+Host Repository Change NO: YES
+GitHub Actions Change NO: YES
+Static Doctrine Change NO: YES
+
+## NEXT_WEEK_OPERATING_NOTES
+- Canonical timezone: Asia/Shanghai
+- A1/A2 日任务继续使用同一 Logical Date
+- A3/A4 聚合前必须重新验证目标周的当前 A1/A2 文件状态
+- memory poisoning 继续重点观察, 但外部风险不得宣称为本地事故
+- Prompt drift 保持低优先级 watch, 不因供应商文章升级纪律
+- 自我纠正与恢复流程必须允许 fail-closed, 不要求为了“成功率”补全缺失事实
+- 优先来源: 原始论文, 官方规范, 可独立验证材料
+
+## ACTION_LIMITS
+- 未修改宿主仓库: YES
+- 未修改 GitHub Actions: YES
+- 未创建 Aegis 之外文件: YES
+- 未引入外部数据库或服务: YES
+- 未把临时行动直接升级为 A6 长期 Doctrine: YES
+- 未公开私有控制内容: YES
+
+## BOUNDARY_CHECK
+- 确认 A4 只映射 W32 A3 决策: YES
+- 确认 2026-08-06 stale A2 已在本分支先完成 reconciliation: YES
+- 确认 W32 按 Asia/Shanghai 覆盖 2026-08-03 至 2026-08-09: YES
+- 确认未把默认美国时区猜测写成已证实根因: YES
+- 确认未改写 W31 历史记录: YES
+- 确认未越界: YES
+
+--- END OF aegis-cortex/2026-W32-A4-protocol-act.md ---
+--- START OF aegis-cortex/2026-07-A6-aegis-memorize.md ---
+# A6 Monthly Aegis Memorize
+
+## CORTEX_RUN_HEADER
+
+- **Target Month**: 2026-07
+- **Reflection Input Status**: DEGRADED (A5 Month Closure Status is OPEN, expected CLOSED)
+- **Network Status**: NETWORK_PARTIAL
+- **Task Status**: DEGRADED
+
+## INPUT_RECORD
+
+- **A5 路径和状态**: `aegis-cortex/2026-07-A5-drift-reflect.md` (状态：DEGRADED，因为 A5 存在 Month Closure Status: OPEN 的矛盾，未达到闭环要求)
+- **实际读取的 A1 至 A4**: 07-01 至 07-31 的 A1 和 A2 记录，W27 至 W31 的 A3 和 A4 记录。
+- **历史 A6**: 无（系统首月运行）。
+- **当前目标 A6 已排除的确认**: 已明确排除将当前正在生成的 A6 作为历史文件进行检索。排除 sample、mock、fixture 等文件。
+- **缺失和降级输入**: A5 未能成功关闭（OPEN）构成输入降级。A1-A4 存在已被记录的间隙 (07-06~07-11, 07-28~07-29, W30)。
+- **外部来源**: MINJA attack research (Arxiv:2601.05504v1) 检索并阅读成功；OWASP LLM Top 10 2025 检索无结果。
+- **来源独立性**: MINJA 攻击研究属于具有极高独立性的第一梯队（Tier 1）原始学术研究。OWASP LLM 缺乏可用独立来源。
+- **网络限制**: 无法获取高质量的 OWASP LLM Top 10 (2025) 搜索结果，网络状态被限制并标记为 NETWORK_PARTIAL。
+
+## DURABLE_DOCTRINE_MEMORY
+
+### 记录 1
+- **Doctrine ID**: DD-2026-07-01
+- **Doctrine Memory**: Tolerant Missing State Protocol。缺失输入必须被显式记录（如 INPUT_MISSING），缺失输入不得被编造，后续阶段不得假装输入完整。
+- **Doctrine Status**: DURABLE
+- **Scope**: 仅限于 Aegis-Cortex 内部的纪律记忆与输入处理流程。
+- **External Evidence**: Arxiv:2601.05504v1 提供了真实的外部支持，证明通过普通用户的连续查询交互能够针对大模型执行记忆中毒攻击（MINJA）。这表明容忍缺失和显式记录是抵御输入编造级联和外部记忆中毒的关键屏障。
+- **Aegis Repository Evidence**: SUPPORTED_BY_AEGIS_RECORD (在 W30 等时期触发了该阈值并防御了系统编造机制，已在 A3/A5 中有实证记录)。
+- **Counterevidence**: 无本地反证。
+- **Risk Reduced**: 记忆中毒风险 (memory poisoning risk)、幻觉风险 (hallucination risk)。
+- **Limitations**: 它不证明系统不会发生其他错误。
+- **Confidence**: LOW (由于 A5 输入处于降级状态，且遵循“A5 降级时不得提高结论置信度”原则，置信度保持为 LOW)。
+- **Validity Window**: 直至下个月度闭环重新验证。
+- **Why It Survived Reflection**: 作为首要核心公理，它在真实的系统失败条件下被成功应用并抑制了系统级联幻觉。
+- **How Future Jules Should Use It**: 当预期输入文件或数据缺失时，必须显式记录缺失，终止依赖于该输入的后续强制补齐压力。
+- **How Future Jules Must Not Use It**: 不得将此规则泛化并声称系统由此便具备了全方位的可靠性。
+- **Revalidation Trigger**: A1 或 A2 的观察中出现对该原则不利的证据时。
+- **Expiration Trigger**: 无。
+- **Host Repository Claim**: NO
+
+### 记录 2
+- **Doctrine ID**: DD-2026-07-02
+- **Doctrine Memory**: Boundary Discipline。绝对边界隔离，Aegis 任务必须不越界，仅操作 aegis-cortex/**，禁止读取或修改宿主仓库的任何文件。
+- **Doctrine Status**: DURABLE
+- **Scope**: 仅限于本控制平面的读写操作限制。
+- **External Evidence**: NETWORK_UNAVAILABLE (通用安全性规则检索因网络限制未能成功，但根据内部明确的指令规则，此边界纪律强制保留)。
+- **Aegis Repository Evidence**: SUPPORTED_BY_AEGIS_RECORD (30 天连续运行涉及 76 份文件，保持了 0 次越界违规)。
+- **Counterevidence**: 无。
+- **Risk Reduced**: 范围漂移风险 (scope drift risk)、越界违规风险 (boundary violation risk)。
+- **Limitations**: 本纪律仅规范 Aegis 任务自身行为，不得声称自动证明宿主仓库安全。
+- **Confidence**: LOW (由于 A5 降级，保持低置信度)。
+- **Validity Window**: 永久，直至框架机制发生改变。
+- **Why It Survived Reflection**: 是防止本智能系统破坏并跨界干预实际宿主代码的核心控制防线。
+- **How Future Jules Should Use It**: 每次生成文件时，必须包含 CORTEX_RUN_HEADER 并自检边界，末尾附带 BOUNDARY_CHECK。
+- **How Future Jules Must Not Use It**: 不得将其证明或引申为零熵实验室 (zero-entropy-lab) 本身的宿主安全防线。
+- **Revalidation Trigger**: 接收到管理员直接修改越界权限的明确授权任务。
+- **Expiration Trigger**: 系统下线。
+- **Host Repository Claim**: NO
+
+## EXPIRING_DOCTRINE
+
+### 记录 1
+- **Doctrine**: Daily External News Direct Strategy Mapping
+- **Previous Status**: PROVISIONAL
+- **New Status**: DOWNGRADED
+- **Reason**: 范围过宽（Too Broad），外部通用产品事实不能直接被视为本地安全事件或作为行动策略，频率过高导致认知压力。
+- **Superseding Evidence**: A5 报告明确鉴定其为过度映射。
+- **Aegis Repository Conflict**: SUPPORTED_BY_AEGIS_RECORD (A5 中明确记录此策略过于宽泛，应该降级)。
+- **What Future Jules Must Stop Assuming**: 停止认为所有的外部资讯事实都必须立刻反映和映射为内部故障。
+- **Conditions for Reconsideration**: 当出现专门且仅针对本系统当前架构特征的高频度真实攻击时。
+
+### 记录 2
+- **Doctrine**: Old Nexus Task References
+- **Previous Status**: PROVISIONAL
+- **New Status**: EXPIRED
+- **Reason**: 旧的 Nexus 概念已经成为过期的系统记忆，引发无效处理和范围漂移。
+- **Superseding Evidence**: A5 报告标识其已彻底过期（EXPIRED）。
+- **Aegis Repository Conflict**: NO_LOCAL_EVIDENCE (没有任何本地有效证据支持继续遵循它)。
+- **What Future Jules Must Stop Assuming**: 停止引用、读取或尝试执行任何旧版 Nexus 任务指示。
+- **Conditions for Reconsideration**: 永不。
+
+## NEXT_MONTH_BASELINE
+
+- **优先观察的可靠性风险**: 记忆漂移风险 (memory drift risk)、过度自信风险 (overconfidence risk)、任务循环中断风险。
+- **需要避免的幻觉类型**: 编造输入观察数据、将泛泛而谈的通稿外部风险当作本地事实写入。
+- **需要继续联网确认的问题**: OWASP LLM Top 10 (2025) 代理相关安全基准、最新针对记忆中毒 (MINJA 等) 的补救与防御研究。
+- **优先来源**: Tier 1 官方标准与原始研究论文。
+- **应降低权重的来源**: 泛滥的非正式社区讨论及私人博客 (Tier 4)。
+- **已知输入缺口**: A5 本身未达成 CLOSED 要求 (降级)。07-06~07-11, 07-28~07-29, W30 数据缺失。
+- **已知网络限制**: OWASP 搜索尝试中途反馈出搜索词汇过窄或搜索结果质量不足以支撑研究，整体设为 NETWORK_PARTIAL。
+- **待验证纪律**: 引入更严格定量的系统化记忆中毒监控。
+- **复核日期**: 2026-08-31。
+- **纪律失效事件**: 无。
+- **不可触碰边界**: .github/**, docs/**, src/**, data/**, README.md, AGENTS.md, ballast/** 以及宿主代码的任何核心实现。
+
+## BOUNDARY_CHECK
+
+- [x] 未读取宿主仓库
+- [x] 未读取 GitHub Actions
+- [x] 未读取旧 Nexus
+- [x] 未读取 Aegis 之外文件
+- [x] 未写入 Aegis 之外文件
+- [x] 未把当前 A6 当作历史文件
+- [x] 未公开提示词或私有 Memory
+- [x] 未把外部风险冒充本地事故
+- [x] 未创建无证据绝对化纪律
+- [x] 未伪造联网确认
+
+--- END OF aegis-cortex/2026-07-A6-aegis-memorize.md ---
