@@ -291,7 +291,7 @@ class HarvesterContracts(unittest.TestCase):
             with patch.dict(os.environ, {"HARVESTER_BOOTSTRAP": "1"}):
                 harvester = Harvester(root)
 
-            self.assertEqual(harvester.state["schema_version"], 4)
+            self.assertEqual(harvester.state["schema_version"], 5)
             self.assertEqual(harvester.state["repositories"], {})
 
     def test_corrupt_state_fails_closed(self):
