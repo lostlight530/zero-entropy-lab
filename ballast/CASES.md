@@ -183,5 +183,19 @@
 - 检查: credential 自身有效时是否仍核对当前任务状态, introspection 是否只证明 token 状态, 已完成 intent 重放是否零新增写入.
 - 强反例: introspection 返回 ACTIVE、请求成功且只执行一次, 但 CANCELLED 任务仍产生副作用.
 
+## B-28 批准恢复中的动作与相关状态陈旧化
+
+- 输入: 已批准的具体 action、call identity、相关权威状态投影与无关 metadata.
+- 变化: 批准后分别改变 action 参数、相关权威状态和仅无关 metadata, 再让旧批准重新进入原生产入口.
+- 检查: 工具级批准是否跨 action 误用, action-bound 批准是否遗漏相关状态变化, state-bound 批准是否只在真实依赖变化时失效, 完成后重放是否零新增写入.
+- 强反例: call identity 与 action 字节完全不变, 但相关权威状态已经改变, 仅绑定 action 的旧批准仍产生副作用.
+
+## B-29 迟到恢复中的未知副作用结果
+
+- 输入: 任务 identity、相关状态 generation、completion 记录与可查询的 effect identity.
+- 变化: 在 effect 已提交但 completion 尚未持久化时中断, 随后让同一任务重新经过生产入口; 另只改变无关 metadata 作为过度围栏反例.
+- 检查: 相关状态变化是否关闭旧执行权限, completion 缺失时是否先核对 effect evidence, unknown-result replay 是否产生第二次副作用, 无关变化是否被整体 revision 误拒绝.
+- 强反例: effect 已真实发生但 completion 记录缺失, 仅按任务完成状态恢复会再次执行; 正常 completed replay 却仍表现为零新增写入.
+
 ## 扩展规则
 新案例必须来自真实失败机制并包含可复验条件. 单纯改写已有问题不构成新案例.
