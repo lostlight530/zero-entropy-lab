@@ -31,6 +31,7 @@
 - **搜索主题**:
   - "MINJA memory poisoning defense LLM agent"
   - "OWASP Top 10 for Agentic Applications 2026" 和 "ASI06"
+  - "AI Agent" "failure modes" "reliability" OR "tool-calling errors" 2026
 - **观察原因**: 根据 A6 中提示的历史待查事项以及当前大模型 Agent 安全最新进展，补充关于代理专属安全基准和记忆注入（记忆中毒）的外部事实。
 - **未取得可靠证据的方向**: 无。所有特定搜索词均获取到有效正文信息。
 
@@ -70,6 +71,24 @@
 - **Confidence**: HIGH
 - **Limitations**: 外部通用的框架和风险指导，不代表本地代码库存在配置失误或安全事件。
 
+
+### Record 3
+- **Source ID**: SRC-20260814-03
+- **Title**: AI Agent Failure Modes: Tool-Calling Errors, Infinite Loops & Propagation (July 2026)
+- **Publisher**: Openlayer / NHIMG
+- **URL**: https://www.openlayer.com/blog/ai-agent-failure-modes-tool-calling-loops-propagation
+- **Published or Updated Date**: 2026-07-21
+- **Date Checked**: 2026-08-14
+- **Source Type**: Reputable independent technical analysis
+- **Evidence Tier**: Tier 3
+- **Access Status**: SUCCESS
+- **Independent Source**: YES
+- **External Claim**: AI agents experience 3 to 15% tool-calling failure rates in production. Crucially, they suffer from "silent failures" where APIs return HTTP 200 with empty payloads, causing infinite retry loops or error propagation down multi-agent chains without raising detectable exceptions.
+- **Local Evidence Available YES or NO**: NO
+- **Relevance**: 呼应并加强了 Aegis 针对假性完成（false completion）和状态截断（context degradation）进行严格内容断点验证的防御纪律。
+- **Confidence**: MODERATE
+- **Limitations**: 基于通用开放 API 调用的生产数据统计，不直接代表 Aegis Cortex 在无网络本地文件交互时的错误率基线。
+
 ## RAW_RELIABILITY_SIGNAL_LOG
 
 ### Signal 1
@@ -98,13 +117,28 @@
 - **Possible Noise**: 无显著噪音。
 - **Needs A2 Verification**: YES
 
+
+### Signal 3
+- **Signal ID**: SIG-20260814-03
+- **Signal**: AI agents produce silent failures, infinite loops, and compounding error propagation in production.
+- **Source IDs**: SRC-20260814-03
+- **Failure Mode Addressed**: Tool-use errors / False completion / Scope drift
+- **External Evidence**: 实际生产数据和评估指出，代理经常在无明确报错 (如返回 HTTP 200) 的情况下错误调用工具。如果没有严格的验证机制，代理会因重试循环耗尽资源，或者将错误的状态传递给后续步骤导致级联崩溃。
+- **Local Repository Evidence**: NONE
+- **Why It May Matter**: 此外部观测充分证实了 Aegis 当前执行框架中必须执行结果自检与硬性重试边界（bounded retry）的必要性，传统基础设施监控（如检查返回码）无法保证代理任务真实完成。
+- **Confidence**: HIGH
+- **Uncertainty**: 外部研究针对具有高频外部 API 交互的代理架构，而在本地单一文件处理环境中，隐蔽工具错误的发生频度和具体呈现方式尚未有本地实证数据支持。
+- **Possible Noise**: 外部文章中推荐的拦截网关等防御手段对于本地任务属于过度工程。
+- **Needs A2 Verification**: YES
+
 ## NEXT_HANDOFF
 
 - **需要 A2 定向解释的风险**:
   1. Memory poisoning (MINJA / 推理记忆注入)。需要 A2 明确该理论攻击对现有记忆流转和压缩过程的影响。
   2. OWASP ASI06，评估其作为官方指导依据如何支撑既有的安全纪律。
+  3. AI Agent Failure Modes (静默失败与级联错误)。验证其作为 Tier 3 证据如何支持现有的断点检查和 Bounded Retry 纪律。
 - **需要独立来源验证的风险**: 无，当前两项核心风险均已具备高质量外部信源。
-- **缺乏本地证据的风险**: SIG-20260814-01 和 SIG-20260814-02 均 **缺乏本地发生证据**，仅为外部通用风险。A2 定向时不可将其曲解为 Aegis 发生过漏洞或攻击事件。
+- **缺乏本地证据的风险**: SIG-20260814-01, SIG-20260814-02 和 SIG-20260814-03 均 **缺乏本地发生证据**，仅为外部通用风险。A2 定向时不可将其曲解为 Aegis 发生过漏洞或攻击事件。
 - **可能只是噪音的内容**: 无。
 - **不应继续升级的内容**: 无。
 - **联网限制**: 无限制，相关搜索均获取了完整截断。
