@@ -23,7 +23,7 @@
 ## INPUT_RECORD
 
 A1 输入验证结果：
-- Task ID: A1-2026-08-10
+- Task ID: A2-2026-08-10
 - Logical Date: 2026-08-10
 - Task Status: COMPLETED
 - External Evidence: PRESENT
