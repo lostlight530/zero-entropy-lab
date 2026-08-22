@@ -60,3 +60,24 @@
 限制: 尚未覆盖真实并发租约、续约确认丢失、时钟漂移、远端索引延迟、跨服务事务、不可逆副作用和验证器完全独立实现. 7 月 30 日只模拟单文件原子可见性, 不证明断电持久性. 7 月 31 日使用确定性事件交错, 不证明真实线程调度与网络取消语义. 零副作用是本组受控重放结果, 不是所有重试都应跳过的通用规则.
 
 复验: 使用并发执行者、独立事实服务或不可逆远端副作用继续攻击本结论. 如果绑定当前状态后仍遗漏必要操作或错误跳过, 保留本条并标记失效.
+
+## 未知结果恢复中的缺失证据不能把不可判定历史降级为未执行
+
+状态: 发现
+
+适用边界: 受控非幂等 unknown-outcome 恢复, 覆盖 authoritative receipt 或 effect history 查询、query outage、stale replica、retention expiry、current resource deletion 与 history pruning.
+
+结论: 在重新执行非幂等 effect 前, negative prior-effect evidence 只有在 exact effect identity、provenance、read freshness 与 retention 或 lifecycle coverage 同时成立时, 才能支持 `never-executed` 判断. query error、stale miss、expired receipt、current live absence 与 pruned history 都属于 `unknown`, 不能自动降级为未执行. current execution permission 仍需独立满足, permission valid 不能修复无效的历史证据.
+
+证据:
+
+- [2026-08-19](records/2026-08-19.md) 中 prior effect 已存在时, receipt query error 被折叠为 miss 或回退 stale negative cache 都产生第二次 effect, tri-state-safe 在 error 时停止并在查询恢复后从 receipt hit 恢复 completion.
+- [2026-08-20](records/2026-08-20.md) 中 receipt 已在 primary 提交而 replica 仍落后时, eventual miss 与 pre-attempt watermark 都产生第二次 effect, 能覆盖当前提交的读取保持单次 effect.
+- [2026-08-21](records/2026-08-21.md) 中 receipt 查询成功且读取足够新鲜, 但 retention 在合法恢复前过期时 authoritative miss 仍导致第二次 effect, horizon-bound retention 与 exact identity fallback 保持单次 effect.
+- [2026-08-22](records/2026-08-22.md) 中 effect 已发生后当前资源被删除, live absence 直接重放产生第二次 effect, exact version history 可恢复 completion, history 被清理后 version miss 再次失去证明能力.
+
+独立性: 四项实验分布在四个独立执行日期, 分别改变证据可用性、读取一致性、证据保留期与资源历史生命周期. 每项都包含正常基线、effect-before-completion crash-window、completed replay 与强反例. 强反例分别覆盖 no-prior 查询恢复、无关 global revision、无关 task marker、无关 delete marker 与 history pruning.
+
+限制: 四项实验均为标准库受控状态机, Python 与 awk verifier 虽实现独立但仍共享事件字段语义和运行环境. 尚未覆盖真实多区域存储、quorum 故障、compaction、生命周期删除延迟、不可逆业务副作用与无法查询历史 effect 的第三方系统.
+
+复验: 使用真实支持条件读取或版本历史的存储继续攻击 query classification、freshness、retention 与 lifecycle 组合. 如果在完整 validity 条件成立后仍出现 duplicate effect 或 false completion, 保留本条并标记失效.
