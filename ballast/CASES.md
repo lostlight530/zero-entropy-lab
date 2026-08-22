@@ -197,5 +197,40 @@
 - 检查: 相关状态变化是否关闭旧执行权限, completion 缺失时是否先核对 effect evidence, unknown-result replay 是否产生第二次副作用, 无关变化是否被整体 revision 误拒绝.
 - 强反例: effect 已真实发生但 completion 记录缺失, 仅按任务完成状态恢复会再次执行; 正常 completed replay 却仍表现为零新增写入.
 
+## B-30 恢复接管后的旧副作用未知
+
+- 输入: unknown-outcome 任务、可过期 ownership claim、递增 epoch 与可查询 prior-effect evidence
+- 变化: 旧 holder 在 effect 后 completion 前中断, claim 过期后新 holder 合法接管
+- 检查: 新 epoch 是否只解决当前所有权, takeover 后是否独立核验旧 effect, completed replay 是否掩盖 crash-window
+- 强反例: 新 holder 合法获得 epoch 2 且 current permission 有效, 仍因未查旧 effect 产生第二次副作用
+
+## B-31 receipt 查询错误与缺失折叠
+
+- 输入: 已存在 prior effect 与 receipt、暂时不可用的 authoritative query、可选 stale negative cache
+- 变化: 比较 error-as-miss, negative-cache fallback 与显式 hit, miss, unknown 三态
+- 检查: query error 是否产生新 effect, 查询恢复后是否从真实 hit 或 miss 继续, safe stop 是否永久遗漏必要操作
+- 强反例: prior effect 已存在时 query error 被折叠为 miss 或旧负缓存后产生第二次 effect, 而 no-prior 场景恢复后真实 miss 仍能执行必要 effect
+
+## B-32 滞后读取造成的 receipt 假缺失
+
+- 输入: primary 已提交 receipt、滞后 replica、pre-attempt watermark 与可验证读取 freshness
+- 变化: 比较 eventual miss, pre-attempt watermark, global freshness 与覆盖当前提交的读取
+- 检查: successful miss 是否足够新鲜, watermark 是否覆盖 attempt 自身提交, global revision 是否因无关更新过度围栏
+- 强反例: replica revision 已满足 pre-attempt watermark 但仍早于 receipt commit, miss 后产生第二次 effect
+
+## B-33 receipt 保留期短于恢复窗口
+
+- 输入: 有限 receipt retention、task valid_until、exact action 与 target identity、可查询 remote effect evidence
+- 变化: receipt 在合法恢复前过期, 比较直接 replay, horizon-bound retention, broad marker 与 exact identity fallback
+- 检查: expired miss 是否被误当 never-executed, retention 是否覆盖合法恢复窗口, fallback 是否保持完整 effect identity
+- 强反例: receipt authoritative miss 后直接重试产生第二次 effect, broad task marker 又在无关 action 与 target 历史中产生零写入假完成
+
+## B-34 当前资源删除与历史副作用缺失
+
+- 输入: 已发生 effect、completion 缺失、live resource 删除、delete marker、version history 与独立 receipt
+- 变化: 比较 live-only, marker, exact history identity 与 independent receipt, 再清理历史版本
+- 检查: current absence 是否被误当 historical absence, marker 是否绑定完整 identity, history pruning 后 miss 是否回到 unknown
+- 强反例: live absent 后直接 replay 产生第二次 effect, 同名无关 delete marker 形成假完成, exact history 被清理后 history miss 再次重复
+
 ## 扩展规则
 新案例必须来自真实失败机制并包含可复验条件. 单纯改写已有问题不构成新案例.

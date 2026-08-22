@@ -99,3 +99,14 @@
 ## 记录节奏
 
 日报使用 `templates/daily.md`, 特殊专题使用 `templates/special.md`, 周期审计使用 `templates/weekly.md`, 月度整理使用 `templates/monthly.md`.
+
+## Prior-effect evidence 有效性
+
+- unknown outcome 恢复在执行新的非幂等 effect 前, 把 prior-effect 结果分类为 `hit`, `authoritative miss` 或 `unknown`
+- query error, timeout, unavailable, stale cache, 未证明 freshness 的 replica miss, 已过 retention 的缺失与被清理历史都属于 `unknown`, 不得降级为 never-executed
+- `authoritative miss` 只有在证据通道同时满足 exact effect identity, provenance, freshness 与 retention 或 lifecycle coverage 时才允许作为重新执行依据
+- exact effect identity 至少绑定稳定 operation 或 task identity, normalized action 与真实 target incarnation 或 effect set, 仅逻辑名称, correlation marker, delete marker 或 tombstone 只能作为线索
+- freshness 需要覆盖旧 attempt 可能成功提交 effect 或 receipt 的时间窗口, pre-attempt watermark 不能证明 attempt 之后的历史缺失, whole-store global revision 又可能因无关变化过度围栏
+- retention 与 lifecycle 需要覆盖仍允许恢复的窗口, 或提供生命周期更长且可权威查询的独立 effect evidence, current live absence 不能证明 historical occurrence absence
+- 任一维度无法建立时安全停止或进入 reconciliation, 不写 completion, 不执行新的非幂等 effect
+- current execution permission 仍是独立门, permission valid 不能修复无效的 prior-effect evidence
