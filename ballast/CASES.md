@@ -232,5 +232,12 @@
 - 检查: current absence 是否被误当 historical absence, marker 是否绑定完整 identity, history pruning 后 miss 是否回到 unknown
 - 强反例: live absent 后直接 replay 产生第二次 effect, 同名无关 delete marker 形成假完成, exact history 被清理后 history miss 再次重复
 
+## B-35 历史 effect receipt 与当前完成语义分离
+
+- 输入: exact historical receipt、可逆 stateful effect、completion 缺失、compensation 或其他合法 reversal 与 current postcondition
+- 变化: effect 与 receipt 提交后在 completion 前中断, 分别由 exact compensation 和 ledger 外合法状态变化反转, 再进入同一 production entry
+- 检查: receipt hit 是否只证明 occurrence, compensation ledger 是否覆盖全部 reversal, completion 前是否重新核对 current authoritative postcondition, 需要恢复 effect 时是否先重新确认 current permission
+- 强反例: exact receipt 真实且 compensation ledger miss, 但当前状态已被 ledger 外合法变化恢复为未完成, receipt-only 与 ledger 路径错误 completed, current postcondition 路径识别并恢复
+
 ## 扩展规则
 新案例必须来自真实失败机制并包含可复验条件. 单纯改写已有问题不构成新案例.
