@@ -12,9 +12,9 @@
 
 状态: 发现
 
-适用边界: 受控本地文件产物、结构化输入、分页集合、批量单项结果、发布路径与异步任务, 覆盖固定字节、结构化单文件清单、绑定事实源代际的多文件结果、重复字段歧义、跨页身份完整性、批量部分成功、验证后替换和终态产物分裂.
+适用边界: 受控本地文件产物、结构化输入、分页集合、批量单项结果、发布路径、异步任务与可逆 stateful effect 恢复, 覆盖固定字节、结构化单文件清单、绑定事实源代际的多文件结果、重复字段歧义、跨页身份完整性、批量部分成功、验证后替换、终态产物分裂、后置条件 revision 竞态、合法 reversal 与 stale positive current-state read.
 
-结论: 命令成功、文件存在或生产结果内部自洽都不能独立证明有效完成. 后置验证需要回读当前权威输入并检查任务级内容、结构或语义约束.
+结论: 命令成功、文件存在、生产结果内部自洽、historical receipt hit 或一次成功的 current-state read 都不能独立证明有效完成. 后置验证需要回读当前权威输入并检查任务级内容、结构或语义约束; 对要求当前状态持续成立的 completion contract, 还需要把 postcondition evidence 绑定到真实目标、足够 freshness、被验证 revision 或等价线性化边界与可核验判定时点.
 
 证据:
 
@@ -26,12 +26,15 @@
 - [2026-08-04](records/2026-08-04.md) 中批量响应为 HTTP 200 且返回条目数与输入相同, 传输验证通过, 单项与权威副作用验证因 B 失败和缺失将其拒绝.
 - [2026-08-05](records/2026-08-05.md) 中候选路径初始验证与后续发布命令均退出 0, 发布后摘要与必需身份验证因路径内容在两阶段之间被替换而拒绝.
 - [2026-08-06](records/2026-08-06.md) 中状态资源为 Succeeded 且操作与意图正确, 最终产物缺失, 任务级验证将其拒绝.
+- [2026-08-10](records/2026-08-10.md) 中单次后置条件读取在读取后 revision 已推进时仍返回 `already_satisfied`, 绑定 verified revision 的路径识别 `verification_stale`.
+- [2026-08-23](records/2026-08-23.md) 中 exact receipt 真实证明 historical effect 已发生, 但 effect 被 compensation 或其他合法 reversal 后 receipt-only 仍错误 completed, current authoritative postcondition 将其拒绝并恢复目标状态.
+- [2026-08-24](records/2026-08-24.md) 中 exact receipt 已命中且 postcondition 查询成功, eventual replica 仍返回旧 satisfied value 并形成 completed 1 与 authoritative value `clean` 的假完成, freshness fence 或 authoritative current read 将其拒绝.
 
-独立性: 八项实验分布在八个时间窗口, 使用不同产物结构、故障位置、输入歧义、集合变化与验证方式. 后六项分别提供内部一致性通过、共享解析验证通过、数量验证通过、批量传输验证通过、验证后路径替换和异步终态缺失产物的强反例.
+独立性: 十一项实验分布在十一个执行日期, 使用不同产物结构、故障位置、输入歧义、集合变化、验证方式、状态 reversal 与读取一致性. 强反例覆盖内部一致性通过、共享解析验证通过、数量验证通过、批量传输验证通过、验证后路径替换、异步终态缺失产物、判定前 revision 漂移、truthful receipt 后合法 reversal 与 successful read 返回 stale positive.
 
-限制: 尚未覆盖真实远端分页快照、远端副作用、并发写入、不可逆操作和开放式语义质量. 分页实验使用确定性集合模型, 验证器仍可能与生产器共享错误模式.
+限制: 尚未覆盖真实远端分页快照、真实 Saga engine、真实多区域副作用、跨资源 postcondition、不可逆 occurrence-only effect 与 postcondition read 到 completion commit 之间的新 TOCTOU 窗口. 受控 verifier 仍可能共享场景语义错误, relevant-state projection 的依赖完整性也未在复杂真实任务中证明.
 
-复验: 使用外部副作用或并发状态继续攻击本结论. 新证据推翻时保留本条并标记失效.
+复验: 使用真实支持 eventual 与 strong read 的远端状态服务、跨资源 postcondition 或 compare-and-commit 边界继续攻击本结论. 新证据推翻时保留本条并标记失效.
 
 ## 当前状态绑定的有效完成可以使同输入重放保持零副作用
 

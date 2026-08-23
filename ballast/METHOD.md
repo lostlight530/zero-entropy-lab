@@ -110,3 +110,14 @@
 - retention 与 lifecycle 需要覆盖仍允许恢复的窗口, 或提供生命周期更长且可权威查询的独立 effect evidence, current live absence 不能证明 historical occurrence absence
 - 任一维度无法建立时安全停止或进入 reconciliation, 不写 completion, 不执行新的非幂等 effect
 - current execution permission 仍是独立门, permission valid 不能修复无效的 prior-effect evidence
+
+## Current completion evidence 有效性
+
+- 对要求当前状态持续满足的 persistent-state completion contract, historical receipt 或 effect evidence 只证明 occurrence, 不能单独证明当前 postcondition 仍成立
+- compensation、回滚、人工修正或其他合法状态推进可能在 receipt 保持真实的同时使 current completion 失效, 恢复 completion 前重新核对当前任务后置条件
+- successful postcondition read 不等价于 fresh current evidence, eventual replica、cache 或未证明版本边界的 satisfied value 都可能是 stale positive
+- current completion evidence 至少绑定真实 target incarnation 或 effect set、任务语义依赖、被验证 revision 或等价 freshness boundary 与可核验判定时点
+- relevant-state projection 可以减少无关 global revision 导致的 over-fencing, 但必须保守覆盖所有会改变 completion semantics 的字段, 无法证明完整时使用更强 current read、整体 revision 围栏或安全停止
+- postcondition read 只能证明其线性化点或被验证 revision 上的当前事实, 如果 completion commit 或后续动作仍依赖该事实, 携带 revision 或把 compare 与受保护提交放入同一原子边界
+- current postcondition 不满足且需要重新执行 effect 时, 仍先独立通过 current execution permission, 不能因为 historical receipt 真实或旧任务曾获授权而跳过当前权限检查
+- occurrence-only 不可逆 effect 与 persistent-state effect 可能需要不同 completion contract, 未建立具体任务语义前不能把本节规则机械外推为所有副作用都必须维持相同当前状态
