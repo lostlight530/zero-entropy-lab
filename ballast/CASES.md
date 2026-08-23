@@ -239,5 +239,12 @@
 - 检查: receipt hit 是否只证明 occurrence, compensation ledger 是否覆盖全部 reversal, completion 前是否重新核对 current authoritative postcondition, 需要恢复 effect 时是否先重新确认 current permission
 - 强反例: exact receipt 真实且 compensation ledger miss, 但当前状态已被 ledger 外合法变化恢复为未完成, receipt-only 与 ledger 路径错误 completed, current postcondition 路径识别并恢复
 
+## B-36 当前后置条件的滞后正向命中
+
+- 输入: exact historical receipt、authoritative target state、可能滞后的 postcondition replica、target-state revision 与 global revision
+- 变化: effect 与 receipt 提交后在 completion 前中断, authoritative target 被合法反转, replica 仍显示旧 satisfied state; 另只推进无关 global revision
+- 检查: receipt hit 后 current postcondition 是否具有 freshness 证明, relevant target-state projection 是否阻止 stale positive, whole-store fence 是否因无关状态 over-fence
+- 强反例: receipt hit 与 postcondition read 都成功, 但 replica 返回旧 satisfied value 并保存 completion, 此时 authoritative state 已不满足任务; completed replay 仍表现为安全
+
 ## 扩展规则
 新案例必须来自真实失败机制并包含可复验条件. 单纯改写已有问题不构成新案例.
