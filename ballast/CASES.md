@@ -246,5 +246,12 @@
 - 检查: receipt hit 后 current postcondition 是否具有 freshness 证明, relevant target-state projection 是否阻止 stale positive, whole-store fence 是否因无关状态 over-fence
 - 强反例: receipt hit 与 postcondition read 都成功, 但 replica 返回旧 satisfied value 并保存 completion, 此时 authoritative state 已不满足任务; completed replay 仍表现为安全
 
+## B-37 后置条件读取到 completion 提交的 TOCTOU
+
+- 输入: exact historical receipt、当前满足的 target postcondition、target revision、global revision 与 completion record
+- 变化: 最后一次普通 postcondition read 后、completion commit 前推进 target state, 再比较普通读取、完成前重读、global compare-and-complete 与 target compare-and-complete
+- 检查: 最后一次读取后 target reversal 是否仍能形成假完成, compare 与 completion 是否共享原子边界, compare conflict 后是否重新读取 current state 并在 effect 前重新确认 permission, whole-store compare 是否因无关 global change 过度冲突
+- 强反例: 第二次普通读取真实看到 satisfied state, 但随后 target 被反转后仍保存 completion; target revision compare 拒绝旧完成声明, 而只改变无关 global state 时 global compare 额外冲突、target compare 不冲突
+
 ## 扩展规则
 新案例必须来自真实失败机制并包含可复验条件. 单纯改写已有问题不构成新案例.
