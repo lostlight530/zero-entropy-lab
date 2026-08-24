@@ -3,11 +3,94 @@
 Status: independent post-hoc interpretation policy
 Maintenance calibration: 2026-08-24
 
-This file documents how maintainers interpret committed A1–A6 artifacts. It is not a Jules prompt, repository memory entry, scheduler rule, CI gate, GitHub Action, Ballast control rule, or host-repository instruction.
+This file documents how committed A1–A6 artifacts are interpreted against the repository that actually exists. It is descriptive repository research, not an instruction surface for artifact producers or the host runtime.
 
-## 1. Checker boundary
+## 1. Repository architecture grounding
 
-`aegis-cortex/check.py` verifies deterministic artifact contracts such as sections, date/week identity, A1→A2 and A3→A4 handoffs, decision/action IDs, evidence-state fields, and repository-boundary markers.
+Zero-Entropy Lab has a concrete implementation topology under `src/kernel/` and `data/`. Aegis is a separate research/evidence surface and must not be treated as if it were the runtime itself.
+
+### Kernel topology
+
+The current runtime is divided into explicit modules:
+
+- `src/kernel/memory/` — SQLite-backed graph/memory state and linked JSONL persistence
+- `src/kernel/sensory/` — harvesting, document hygiene, report hygiene, and repository/source structure extraction
+- `src/kernel/cognitive/` — pure-Python retrieval/reranking and graph-derived reasoning utilities
+- `src/kernel/orchestration/` — local evolution/lifecycle orchestration
+- `src/kernel/protocol/` — local command/server/protocol experiments and transition declarations
+- `data/inputs/` — external/source inputs and archive material
+- `data/knowledge/` — graph/ledger knowledge records
+- `data/memories/` — generated memory/report artifacts
+- `index.html` — independent presentation surface
+
+These domains are related by repository code but are not interchangeable evidence classes.
+
+### Memory and ledger boundary
+
+`src/kernel/memory/cortex.py` uses SQLite as the local query/state store and writes canonical linked JSONL records for knowledge persistence.
+
+The implementation exposes several distinct integrity surfaces:
+
+- SQLite row/state presence
+- FTS5 retrieval state
+- linked JSONL `prev_hash` / `hash` continuity
+- HMAC record signatures
+- application-level journal/state records
+
+These prove only the properties actually checked.
+
+In particular:
+
+- a hash chain is a content/linkage integrity mechanism, not proof of source truth or authorship
+- an HMAC row signature is a consistency/authenticity check relative to the configured key, not an external authorization or identity proof
+- the presence of a fallback local key means the signature mechanism must not be described as a hardened secret-management boundary
+- SQLite presence does not prove an external effect occurred
+- successful retrieval does not prove semantic correctness
+
+Use:
+
+`LOCAL_STORAGE_INTEGRITY_SIGNAL / EXTERNAL_TRUTH_NOT_ESTABLISHED`.
+
+### Retrieval and reasoning boundary
+
+`src/kernel/memory/cortex.py` performs FTS5 candidate retrieval and graph expansion, then `src/kernel/cognitive/nlp.py` can rerank the candidates. `src/kernel/cognitive/reason.py` computes local structural/reasoning outputs over repository state.
+
+Those operations are deterministic/pure-Python repository mechanisms where implemented. They are not a foundation-model inference service and do not make a retrieved proposition true.
+
+Use:
+
+`LOCAL_RETRIEVAL_OR_GRAPH_SIGNAL / CLAIM_TRUTH_NOT_ESTABLISHED`.
+
+### Sensory boundary
+
+`src/kernel/sensory/harvester.py`, `document_hygiene.py`, `report_hygiene*.py`, and `scholar.py` handle source acquisition, normalization/hygiene, and structural extraction.
+
+A source becoming locally available or structurally admissible does not establish:
+
+- primary-source authority
+- semantic correctness
+- local incident occurrence
+- local runtime impact
+
+### Protocol and declaration boundary
+
+`src/kernel/protocol/transition_contract.py` defines a canonical `TransitionDeclaration` containing actor, current state, intent, preconditions, effects, evidence, and rollback information. It validates and fingerprints the declaration but intentionally has **no execution side effects**.
+
+Therefore:
+
+`VALID_TRANSITION_DECLARATION != TRANSITION_EXECUTED`.
+
+Likewise, `mcp.py`, `nexus_mcp.py`, `hive.py`, and `nexus.py` are repository-local protocol/command experiments. Their existence does not establish universal MCP semantics, external interoperability, or production deployment.
+
+### Aegis and Ballast separation
+
+`aegis-cortex/` and `ballast/` are separate research/evidence surfaces. Neither directory automatically governs `src/kernel/**`, `data/**`, or the presentation layer.
+
+This policy does not publish or encode private maintenance reasoning, hidden prompts, future automation strategy, or unpublished control logic.
+
+## 2. Checker boundary
+
+`aegis-cortex/check.py` verifies artifact contracts such as sections, date/week identity, A1→A2 and A3→A4 handoffs, decision/action IDs, evidence-state fields, and repository-boundary markers.
 
 It intentionally does **not** determine whether an external reliability/security claim is true, whether a semantic conclusion is correct, or whether an external side effect occurred.
 
@@ -23,7 +106,7 @@ Therefore:
 
 A reference to `check.py` is structural evidence only unless a separate retained result establishes a stronger claim.
 
-## 2. Reliability evidence classes
+## 3. Reliability evidence classes
 
 Keep these independent:
 
@@ -33,6 +116,7 @@ Keep these independent:
 - `LOCAL_ARCHITECTURE_RECORD`
 - `LOCAL_REPOSITORY_INCIDENT`
 - `LOCAL_STRUCTURAL_CONTRACT_RESULT`
+- `LOCAL_STORAGE_INTEGRITY_SIGNAL`
 - `LOCAL_RUNTIME_OUTCOME`
 - `AUTHORITATIVE_EXTERNAL_EFFECT`
 - `UNRESOLVED`
@@ -49,9 +133,7 @@ and:
 
 `LOCAL_ARCHITECTURE_RECORD != LOCAL_INCIDENT_EVIDENCE`.
 
-A repeated external failure mode can justify continued observation without becoming local incident evidence or a universal failure-rate estimate.
-
-## 3. Source authority is claim-specific
+## 4. Source authority is claim-specific
 
 Keep source reachability, identity, authority, and claim support separate:
 
@@ -69,7 +151,7 @@ Examples:
 
 - an official protocol specification can establish normative protocol semantics
 - a gateway/vendor article can describe its MCP authorization interpretation or deployment practice, but is not the MCP specification
-- a Palo Alto or Auth0 article discussing an OWASP category remains secondary analysis of the OWASP standard; exact OWASP category semantics should prefer the OWASP primary source
+- a Palo Alto or Auth0 article discussing an OWASP category remains secondary analysis; exact standard/category semantics should prefer the primary source
 - an original paper can establish its own bounded experiment/result, not a universal local failure probability
 
 Use:
@@ -80,7 +162,7 @@ and:
 
 `SECONDARY_STANDARD_ANALYSIS != PRIMARY_STANDARD`.
 
-## 4. Source independence and repetition
+## 5. Source independence and repetition
 
 Repeated URLs, repeated metrics, multiple pages from the same publisher, or Daily→Weekly restatement do not automatically create independent corroboration.
 
@@ -96,7 +178,7 @@ Use:
 
 `SAME_SOURCE_OR_PUBLISHER_REPETITION / NOT_INDEPENDENT_CORROBORATION`.
 
-## 5. Temporal provenance and causality
+## 6. Temporal provenance and causality
 
 An observation cannot be treated as validly checked before the cited source/version/event existed according to the timestamps recorded in the artifact.
 
@@ -118,29 +200,24 @@ Current interpretation:
 
 Do not silently rewrite the historical Daily files. Do not use the conflicting item as same-day verified evidence unless stronger timestamp/version evidence resolves the chronology.
 
-## 6. Completion semantics
+## 7. Completion semantics
 
-A success return, file existence, generated text, or checker pass cannot independently prove intended effect completion.
+A success return, file existence, generated text, declaration fingerprint, ledger hash, signature result, or checker pass cannot independently prove intended effect completion.
 
-Where task semantics require consequential effects, stronger evidence may include:
-
-- expected content/postcondition verification
-- authoritative target-state readback
-- effect identity / operation identity
-- revision/freshness boundary
-- prior-effect reconciliation after unknown outcomes
-
-Keep these surfaces distinct:
+Where task semantics require consequential effects, keep these surfaces distinct:
 
 - status/return evidence
 - artifact-structure evidence
+- storage-integrity evidence
 - expected-content evidence
 - semantic/claim evidence
 - authoritative external-effect evidence
 
-Aegis itself remains a Markdown research stream and does not claim to implement those runtime controls.
+`TransitionDeclaration.fingerprint()` proves stable identity of the canonical declaration bytes. It does not prove the declared transition occurred.
 
-## 7. Historical delivery states
+Aegis itself remains a Markdown research stream and does not claim to implement external effect verification.
+
+## 8. Historical delivery states
 
 Keep generation, delivery, snapshot visibility, current path presence, and execution status separate.
 
@@ -164,11 +241,11 @@ For August:
 - 2026-08-16 A1 is currently present, while the retained A2 historical `INPUT_MISSING / BLOCKED` execution state remains valid
 - 2026-08-24 A1/A2 are currently present and form a complete current Daily pair
 
-## 8. Memory/context claims
+## 9. Memory/context claims
 
-OWASP and original research support memory/context poisoning as a real external risk class for agentic systems. That does not establish a local Aegis incident.
+Memory/context poisoning is a supported external agentic risk class. That does not establish a local Aegis incident.
 
-Conversely, constrained Markdown scope does not prove that memory/context poisoning is impossible. Any trusted carry-forward context can become an evidence problem if its provenance, authority, freshness, or interpretation is wrong.
+Conversely, constrained Markdown scope, local hashing, signatures, or structural validation do not prove that poisoned or stale context is impossible. Any trusted carry-forward context can become an evidence problem if provenance, authority, freshness, or interpretation is wrong.
 
 A historical A-file that merely discussed memory poisoning does not count as local poisoning evidence.
 
@@ -176,7 +253,7 @@ Use:
 
 `EXTERNAL_RISK_SUPPORTED / LOCAL_INCIDENT_NOT_ESTABLISHED`.
 
-## 9. Benchmark and cross-domain generalization
+## 10. Benchmark and cross-domain generalization
 
 A bounded benchmark, model/harness study, vendor production statistic, or cross-domain agent study does not automatically establish Aegis-local probability or a universal law.
 
@@ -193,9 +270,9 @@ Use:
 - `VENDOR_EXTERNAL_RATE / LOCAL_RATE_NOT_ESTABLISHED`
 - `CROSS_DOMAIN_ANALOGY / LOCAL_GENERALIZATION_NOT_ESTABLISHED`
 
-Avoid `always`, `inevitable`, `extremely likely`, or equivalent probability wording without a defined population, denominator, and applicable measurement.
+Avoid probability language such as `always`, `inevitable`, or `extremely likely` without a defined population, denominator, and applicable measurement.
 
-## 10. W31–W34 calibration rule
+## 11. W31–W34 calibration rule
 
 ### W31
 
@@ -227,49 +304,29 @@ Use:
 
 `REPEATED_EXTERNAL_RISK_SIGNAL / NO_LOCAL_INCIDENT_EVIDENCE`.
 
-`check.py` should be described as a structural contract validator, not as proof that false completion is suppressed at the control-plane or runtime level.
+`check.py` is a structural contract validator, not proof that false completion is suppressed at the control-plane or runtime level.
 
-A W34 instruction such as “prefer current task prompt over historical detail” is a control-hierarchy rule only where the actual authorized task/control contract establishes that precedence. It is not evidence that the current prompt is factually correct, fresh, or semantically superior to all historical evidence.
+A control-precedence statement is not evidence that newer text is factually superior to older evidence.
 
 Use:
 
 `CONTROL_PRECEDENCE != EVIDENCE_TRUTH_PRECEDENCE`.
 
-## 11. Self-correction and independent feedback
+## 12. Independent-feedback boundary
 
-External research can support the proposition that intrinsic self-correction without new evidence/feedback may fail or degrade.
+External research can support the proposition that self-correction without new evidence or feedback may fail or degrade.
 
-For Aegis:
-
-- `check.py` adds an independent **structural constraint**
-- retained source re-fetching or authoritative readback can add independent evidence for the specific thing checked
-- another LLM pass over the same information boundary is not automatically independent verification
-- a historical statement that “Python tests” or a “plan validation” exists does not count as test evidence unless the specific command/environment/result is retained
+For Aegis, a structurally independent check only establishes the structure it actually checks. Re-reading the same information through another reasoning pass is not automatically independent verification.
 
 Use:
 
 `STRUCTURAL_EXTERNAL_CONSTRAINT / SEMANTIC_INDEPENDENCE_NOT_ESTABLISHED`.
 
-## 12. GPT/Ballast quality transfer
+## 13. External evaluation references
 
-Ballast remains a separate GPT-maintained research stream, but its current method provides useful reviewer-side reliability distinctions:
+Current external agent-evaluation/tracing guidance can be used as `REFERENCE_ONLY` vocabulary for separating trajectory/transcript, final outcome, grader result, and authoritative state.
 
-- task permission versus prior-effect evidence
-- transport success versus authoritative side effect
-- historical receipt versus current completion state
-- timeout/cancel versus proof of effect absence
-- current revision/freshness versus stale positive reads
-- facts, inference, and unverified evidence as separate states
-
-These distinctions may improve Aegis **interpretation** without changing Aegis automation, prompts, or host runtime.
-
-A reviewer-side policy or Ballast method does not prove Jules consumed or enforced it during generation.
-
-## 13. External 2026 evaluation references
-
-Anthropic's 2026 agent-evaluation guidance distinguishes transcript/trajectory from final outcome and recommends end-state verification where appropriate. OpenAI Agents SDK tracing similarly treats a trace as a hierarchy of operation spans rather than as proof of successful task outcome.
-
-These are `REFERENCE_ONLY` evidence models, not dependencies or local implementations.
+Those references are not dependencies or local implementations.
 
 ## 14. Historical correction method
 
@@ -287,6 +344,4 @@ Current interpretation may supersede an over-broad historical claim without eras
 
 ## 15. Boundary
 
-No host code, frontend, Jules prompt/memory/cadence, Ballast/GPT control, Actions, CI, deployment, runtime, production gate, dependency, or scheduler is changed by this policy.
-
-Tests not run — documentation/evidence only.
+This policy is documentation/evidence maintenance only. It changes no host code, public presentation behavior, kernel runtime behavior, dependency set, deployment state, or artifact-production configuration.
