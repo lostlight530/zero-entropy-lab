@@ -21,9 +21,16 @@
 
 ## INPUT_RECORD
 - **A1 路径**: aegis-cortex/2026-08-25-A1-reliability-observe.md (INPUT_MISSING)
-- **历史 A2**: INPUT_MISSING
-- **A4**: INPUT_MISSING
-- **A6**: INPUT_MISSING
+- **历史 A2**:
+  - aegis-cortex/2026-08-24-A2-doctrine-orient.md
+  - aegis-cortex/2026-08-23-A2-doctrine-orient.md
+  - aegis-cortex/2026-08-22-A2-doctrine-orient.md
+  - aegis-cortex/2026-08-21-A2-doctrine-orient.md
+  - aegis-cortex/2026-08-20-A2-doctrine-orient.md
+  - aegis-cortex/2026-08-19-A2-doctrine-orient.md
+  - aegis-cortex/2026-08-18-A2-doctrine-orient.md
+- **A4**: aegis-cortex/2026-W34-A4-protocol-act.md
+- **A6**: aegis-cortex/2026-07-A6-aegis-memorize.md
 - **搜索主题**: INPUT_MISSING
 - **验证来源**: INPUT_MISSING
 - **未完成验证**: INPUT_MISSING
