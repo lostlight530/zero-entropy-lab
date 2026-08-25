@@ -253,5 +253,12 @@
 - 检查: 最后一次读取后 target reversal 是否仍能形成假完成, compare 与 completion 是否共享原子边界, compare conflict 后是否重新读取 current state 并在 effect 前重新确认 permission, whole-store compare 是否因无关 global change 过度冲突
 - 强反例: 第二次普通读取真实看到 satisfied state, 但随后 target 被反转后仍保存 completion; target revision compare 拒绝旧完成声明, 而只改变无关 global state 时 global compare 额外冲突、target compare 不冲突
 
+## B-38 多资源后置条件的 fractured view
+
+- 输入: exact historical receipt、两个共同构成 completion contract 的相关资源 A/B、各自 revision、global revision 与 completion record
+- 变化: 在分离读取 A/B 之间原子切换互斥状态, 再用多次分离重读、共同 snapshot、最后采样 global revision compare 与逐资源 revision compare 比较
+- 检查: 单项 fresh read 是否被错误合成为从未存在的共同状态, 多次重读是否仍可被交错变化欺骗, compare evidence 是否真正绑定全部 earlier observations, 无关 global change 是否造成额外 conflict
+- 强反例: A 与 B 的每次单独读取都返回 satisfied, 但任一权威时点都至少有一个资源不满足; 最后采样的 global revision compare 仍可成功, 逐资源 revision compare 检出 earlier A observation 已失效
+
 ## 扩展规则
 新案例必须来自真实失败机制并包含可复验条件. 单纯改写已有问题不构成新案例.
