@@ -119,5 +119,8 @@
 - current completion evidence 至少绑定真实 target incarnation 或 effect set、任务语义依赖、被验证 revision 或等价 freshness boundary 与可核验判定时点
 - relevant-state projection 可以减少无关 global revision 导致的 over-fencing, 但必须保守覆盖所有会改变 completion semantics 的字段, 无法证明完整时使用更强 current read、整体 revision 围栏或安全停止
 - postcondition read 只能证明其线性化点或被验证 revision 上的当前事实, 如果 completion commit 或后续动作仍依赖该事实, 携带 revision 或把 compare 与受保护提交放入同一原子边界
+- 多资源 completion contract 中, 多个单项 authoritative read 只有在共享同一可核验 snapshot identity 时才能直接组合. 无共同 snapshot 时, completion commit 需要原子复核全部相关 observation identity 与 revision, 最后一次 global revision 不能追溯绑定更早的单项读取
+- atomic compare 只保护实际比较的字段. compare set 从 task semantics 推导并覆盖全部 relevant identity 与 freshness dependency; concrete-incarnation task 绑定不可混淆实体 identity 与 incarnation 内 freshness, selector-bound task 按 selector 与 current predicate 定义 identity, 不能机械要求 UID 相等
+- 完整判断链为 `task semantics -> relevant identity set -> coherent snapshot or freshness -> atomic compare-and-protected-commit`. 任一依赖集无法证明完整时使用更强 snapshot、transaction 或安全停止
 - current postcondition 不满足且需要重新执行 effect 时, 仍先独立通过 current execution permission, 不能因为 historical receipt 真实或旧任务曾获授权而跳过当前权限检查
 - occurrence-only 不可逆 effect 与 persistent-state effect 可能需要不同 completion contract, 未建立具体任务语义前不能把本节规则机械外推为所有副作用都必须维持相同当前状态
