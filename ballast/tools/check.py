@@ -75,6 +75,7 @@ AUDIT_NAME = re.compile(
 )
 MARKDOWN_LINK = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 DAILY_REQUIRED_FROM = date(2026, 7, 21)
+LEGACY_VERSION_LABELS = {"audits/2026-08-03--2026-08-09.md"}
 
 
 def validate() -> list[str]:
@@ -120,7 +121,7 @@ def validate() -> list[str]:
                     continue
                 if not linked.exists():
                     errors.append(f"broken local link: {relative} -> {target}")
-        if re.search(r"\bv\d+(?:\.\d+)*\b", visible_text, re.IGNORECASE):
+        if re.search(r"\bv\d+(?:\.\d+)*\b", visible_text, re.IGNORECASE) and relative not in LEGACY_VERSION_LABELS:
             errors.append(f"version label: {relative}")
     for relative, headings in TEMPLATE_HEADINGS.items():
         path = ROOT / relative
@@ -176,6 +177,17 @@ def validate() -> list[str]:
         day = match.group("day")
         daily_days.add(day)
         text = path.read_text(encoding="utf-8")
+        if "Record Provenance:" in text:
+            for label in (
+                "逻辑归属日期", "实际执行日期", "命令状态", "传输状态",
+                "任务终态", "有效完成状态", "Prior-effect Evidence",
+                "Target Identity", "Task Semantics", "Freshness Boundary", "Verified Revision",
+            ):
+                if not re.search(rf"^{re.escape(label)}:\s*\S+", text, re.MULTILINE):
+                    errors.append(f"active daily contract lacks {label}: records/{path.name}")
+            prior = re.search(r"^Prior-effect Evidence:\s*(.+)$", text, re.MULTILINE)
+            if prior and prior.group(1).strip() not in {"hit", "authoritative miss", "unknown"}:
+                errors.append(f"invalid prior-effect evidence: records/{path.name}")
         record_type = type_pattern.search(text)
         theme_match = theme_pattern.search(text)
         if (
@@ -241,6 +253,14 @@ def validate() -> list[str]:
         start = date.fromisoformat(match.group("start"))
         end = date.fromisoformat(match.group("end"))
         text = path.read_text(encoding="utf-8")
+        if "Record Provenance:" in text:
+            for label, expected in (
+                ("派生审计", "YES"),
+                ("新增实验数量", "0"),
+                ("新增长期结论数量", "0"),
+            ):
+                if not re.search(rf"^{re.escape(label)}:\s*{re.escape(expected)}\s*$", text, re.MULTILINE):
+                    errors.append(f"active audit contract mismatch for {label}: audits/{path.name}")
         record_type = type_pattern.search(text)
         theme_match = theme_pattern.search(text)
         if (

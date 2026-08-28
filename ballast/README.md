@@ -34,3 +34,13 @@ python ballast/tools/check.py
 ```
 
 检查器只使用 Python 标准库, 不修改文件, 并检查日报连续性、主题唯一性、特殊专题与周期审计结构、相互链接及月度索引关系.
+
+## 活动维护合同
+
+- 命令成功,传输成功,任务终态和有效完成分别记录
+- prior-effect evidence 只允许 `hit`,`authoritative miss`,`unknown` 三态
+- 当前完成证据绑定目标 identity,任务语义,freshness 和 revision
+- 多资源验证使用共同 snapshot,或在提交前原子复核完整 compare set
+- unknown outcome 重试前先核对权威副作用
+- 周期审计只覆盖连续 6 或 7 个日报,不增加实验或长期结论数量
+- 历史日报不回写,旧结构缺口只做精确兼容
