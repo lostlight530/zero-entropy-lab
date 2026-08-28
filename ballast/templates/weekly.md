@@ -2,10 +2,16 @@
 
 类型: 周期审计
 主题: 记录本周期的明确审计主题
+Record Provenance: NATIVE, SUBSTITUTE, or RECONSTRUCTION
+派生审计: YES
+新增实验数量: 0
+新增长期结论数量: 0
 
 ## 覆盖区间
 
 记录开始日期、结束日期、审计日期与时区.
+
+只允许连续 6 或 7 个日报.
 
 ## 纳入记录
 

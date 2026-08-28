@@ -83,6 +83,40 @@ FIELD_RE = re.compile(r"^(?:-\s*)?(?:\*\*)?([^:*\n]+?)(?:\*\*)?:\s*(.+?)\s*$", r
 DECISION_ID_RE = re.compile(r"^Decision ID:\s*(\S+)\s*$", re.MULTILINE)
 SOURCE_DECISION_ID_RE = re.compile(r"^Source Decision ID:\s*(\S+)\s*$", re.MULTILINE)
 ACTION_ID_RE = re.compile(r"^Action ID:\s*(\S+)\s*$", re.MULTILINE)
+PROVENANCE_VALUES = {
+    "JULES_NATIVE",
+    "HUMAN_AUTHORIZED_SUBSTITUTE",
+    "RETROSPECTIVE_RECONSTRUCTION",
+    "HUMAN_AUTHORIZED_RECONCILIATION",
+}
+DAILY_CONTRACT_FIELDS = (
+    "Evidence Class",
+    "Source Identity",
+    "Source Authority For Claim",
+    "Independent Verification",
+    "Local Incident Evidence",
+    "Host Applicability",
+    "Original Execution Status",
+    "Current Path Status",
+    "Record Provenance",
+)
+WEEKLY_CONTRACT_FIELDS = (
+    "Daily Coverage Matrix",
+    "Inherited Evidence",
+    "Independent Evidence Added",
+    "Missing Inputs Preserved",
+    "External Risk State",
+    "Local Incident State",
+    "Historical Execution State",
+    "Current Delivery State",
+)
+LEGACY_TASK_ID_EXCEPTIONS = {
+    "2026-08-04-A2-doctrine-orient.md",
+    "2026-08-05-A2-doctrine-orient.md",
+    "2026-08-07-A2-doctrine-orient.md",
+    "2026-08-08-A2-doctrine-orient.md",
+    "2026-08-09-A2-doctrine-orient.md",
+}
 
 
 def classify(path: Path) -> tuple[str, str] | None:
@@ -114,7 +148,7 @@ def validate_common(path: Path, task: str, identity: str, text: str) -> list[str
 
     values = fields(text)
     task_id = values.get("Task ID")
-    if task_id and task not in task_id:
+    if task_id and task not in task_id and path.name not in LEGACY_TASK_ID_EXCEPTIONS:
         errors.append(f"{path.name}: Task ID {task_id!r} does not identify {task}")
 
     if task in {"A1", "A2"}:
@@ -150,6 +184,23 @@ def validate_common(path: Path, task: str, identity: str, text: str) -> list[str
     boundary = values.get("Boundary Violation")
     if boundary and boundary.upper() not in {"NO", "NONE"}:
         errors.append(f"{path.name}: Boundary Violation is not NO/NONE")
+
+    provenance = values.get("Record Provenance")
+    if provenance:
+        if provenance not in PROVENANCE_VALUES:
+            errors.append(f"{path.name}: invalid Record Provenance {provenance!r}")
+        if values.get("Agent") == "Jules" and provenance != "JULES_NATIVE":
+            errors.append(f"{path.name}: reconstruction or substitute cannot claim Agent Jules")
+        required = DAILY_CONTRACT_FIELDS if task in {"A1", "A2"} else WEEKLY_CONTRACT_FIELDS
+        for field in required:
+            if field not in text:
+                errors.append(f"{path.name}: provenance record lacks {field}")
+        original = values.get("Original Execution Status", "").upper()
+        task_status = values.get("Task Status", "").upper()
+        if provenance == "RETROSPECTIVE_RECONSTRUCTION" and (
+            original in {"SUCCESS", "COMPLETED"} or task_status in {"SUCCESS", "COMPLETED"}
+        ):
+            errors.append(f"{path.name}: reconstruction cannot claim original success")
 
     return errors
 
@@ -199,6 +250,10 @@ def validate_a2(path: Path, identity: str, text: str) -> list[str]:
     for marker in ("Local Applicability", "Remaining Uncertainty"):
         if marker not in text:
             errors.append(f"{path.name}: A2 does not preserve {marker}")
+    values = fields(text)
+    if values.get("Record Provenance") == "RETROSPECTIVE_RECONSTRUCTION":
+        if "NO_LOCAL_EVIDENCE" not in text or "UNRESOLVED_DELIVERY_HISTORY" not in text:
+            errors.append(f"{path.name}: reconstruction must preserve no-local-evidence and delivery uncertainty")
     return errors
 
 

@@ -2,6 +2,18 @@
 
 类型: 每日专题
 主题: 使用当月未重复的明确主题
+Record Provenance: NATIVE, SUBSTITUTE, or RECONSTRUCTION
+逻辑归属日期:
+实际执行日期:
+命令状态:
+传输状态:
+任务终态:
+有效完成状态:
+Prior-effect Evidence: hit, authoritative miss, or unknown
+Target Identity:
+Task Semantics:
+Freshness Boundary:
+Verified Revision:
 
 ## 研究问题
 
@@ -30,6 +42,8 @@
 ## 独立验证
 
 从当前事实源检查最终结果并说明独立性限制.
+
+多资源验证记录共同 snapshot identity,或列出完整 compare set 和受保护提交边界.
 
 ## 强反例
 

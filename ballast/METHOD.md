@@ -124,3 +124,14 @@
 - 完整判断链为 `task semantics -> relevant identity set -> coherent snapshot or freshness -> atomic compare-and-protected-commit`. 任一依赖集无法证明完整时使用更强 snapshot、transaction 或安全停止
 - current postcondition 不满足且需要重新执行 effect 时, 仍先独立通过 current execution permission, 不能因为 historical receipt 真实或旧任务曾获授权而跳过当前权限检查
 - occurrence-only 不可逆 effect 与 persistent-state effect 可能需要不同 completion contract, 未建立具体任务语义前不能把本节规则机械外推为所有副作用都必须维持相同当前状态
+
+## 活动记录的完成分层
+
+- 命令成功只证明进程或命令层返回
+- 传输成功只证明请求或响应到达定义边界
+- 任务终态只证明状态机进入终态
+- 有效完成还需要目标 identity,任务语义,freshness,revision 和内容后置条件共同成立
+- prior-effect evidence 使用 `hit`,`authoritative miss`,`unknown` 三态,无法证明权威缺失时保持 unknown 并安全停止
+- 多资源完成必须共享可核验 snapshot,或在受保护提交前比较完整 relevant set
+- 周期审计覆盖连续 6 或 7 日,是派生复核,不增加实验或长期结论数量
+- 历史日报保持原文,后续证据只建立新关系

@@ -1,7 +1,7 @@
 # Aegis Cortex Evidence Policy
 
 Status: current repository evidence policy  
-Calibration: 2026-08-27
+Calibration: 2026-08-28
 
 This file defines how committed Aegis A1–A6 artifacts are interpreted against the implementation and evidence that actually exist in `zero-entropy-lab`.
 
@@ -257,6 +257,18 @@ See `2026-W35-partial-reconciliation.md`.
 ## 17. Monthly A5/A6 SOP
 
 Formal August A5/A6 remains `OPEN` until the natural monthly lifecycle has actual evidence.
+
+## 16. Active daily and weekly record contract
+
+New A1 and A2 records identify evidence class, source identity, claim-specific authority, independent verification, local incident evidence, host applicability, original execution status, current path status, and record provenance.
+
+New A3 and A4 records provide a Daily coverage matrix, inherited and newly independent evidence, preserved missing inputs, external-risk state, local-incident state, historical execution state, and current delivery state.
+
+Reconstruction records cannot claim original success. External risk cannot be mapped directly to a local incident. Current path presence cannot rewrite an earlier missing or blocked execution snapshot.
+
+`EXTERNAL_RISK != LOCAL_INCIDENT`.
+
+`DECLARATION_PRESENT != TRANSITION_EXECUTED`.
 
 A stage audit cannot create 2026-08-28 through 2026-08-31 evidence or pre-author the final preserve/downgrade/expire/reverify decisions.
 
