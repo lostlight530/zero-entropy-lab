@@ -11,7 +11,7 @@ Grok Bot 在 2026-08-11 的初始发布中被定义为 always-on agents, 每个 
 
 同一时期 xAI 还把 Grok Automations 定义为每次运行都是 fresh request, 使用相同 instructions 与 current data, 并把 Grok 4.6 定位于 long-running agents
 
-2026-08-24 至 2026-08-28 的 Ballast 日报连续研究 current completion evidence 的 freshness、read-to-commit 原子性、多资源共同状态、target incarnation 与 compare-set completeness
+2026-08-24 至 2026-08-30 的 Ballast 日报连续研究 current completion evidence 的 freshness、read-to-commit 原子性、多资源共同状态、target incarnation、fixed compare-set completeness 与 dynamic selector membership
 
 因此建立本专题, 只讨论 always-on delegation 扩大后这些现实产品语义与 Ballast completion evidence 的可迁移问题
 
@@ -31,7 +31,7 @@ Grok Bot 在 2026-08-11 的初始发布中被定义为 always-on agents, 每个 
 - 2026-07-16, xAI 发布 Grok Automations, 说明任务可按 schedule 或 email trigger 自主运行, 每次 run 是 fresh request, 使用相同 instructions 与 current data
 - 2026-08-11, xAI 发布 Grok Bot early beta, 定义其为 always-on agents, 每个 Bot 有自己的 cloud computer, 跨 apps、tools 与 websites 工作并持续到任务完成或需要用户 judgment
 - 2026-08-12, xAI 发布 Grok 4.6, 强调 long-running agents 与多步骤复杂任务
-- 2026-08-24 至 2026-08-28, Ballast 连续攻击 current completion evidence 的 freshness、atomicity、snapshot、identity 与 compare-set completeness
+- 2026-08-24 至 2026-08-30, Ballast 连续攻击 current completion evidence 的 freshness、atomicity、snapshot、identity、fixed compare set 与 dynamic membership completeness
 - 2026-08-26, xAI 扩大 Grok Bot 可用计划范围, 同日 xAI 与 Microsoft 宣布 Grok 4.6 进入 Microsoft Foundry, Microsoft 将其描述为面向 long-horizon reasoning 与 complex workflows
 
 ## 来源矩阵
@@ -57,6 +57,8 @@ xAI 产品线共同扩大了长期委派、后台持续执行、跨应用动作�
 - [2026-08-26](../records/2026-08-26.md) 证明多个资源各自 authoritative read 可以拼出从未存在的 fractured completion, 对跨 apps、inboxes 与 tools 的多资源任务直接相关
 - [2026-08-27](../records/2026-08-27.md) 证明同名目标重建并复用 local revision 时 current completion 需要按 task semantics 解释 target incarnation
 - [2026-08-28](../records/2026-08-28.md) 证明 atomic compare 本身不补齐遗漏的业务 identity, compare set 需要从 task semantics 推导
+- [2026-08-29](../records/2026-08-29.md) 证明固定 multi-resource task 即使比较全部成员 local revision, 仍需要完整 target incarnation identity set
+- [2026-08-30](../records/2026-08-30.md) 证明 dynamic selector task 即使完整比较首次观察成员, 仍可能漏掉 completion 前新进入 current relevant set 的成员, 需要 membership 或 predicate witness
 
 专题不把 Grok Bot 的 own computer、approval 或 current data 文案当作这些日报机制的复验
 
@@ -68,7 +70,8 @@ xAI 产品线共同扩大了长期委派、后台持续执行、跨应用动作�
 4. 用户 approval 发生后目标资源被别人修改、删除或重建时, approval 是否仍绑定原 action 与 target identity
 5. automation 所称 current data 的 freshness、provenance 与 snapshot contract 如何表达, 成功读取是否可能仍是 stale positive
 6. concrete-instance task 与 selector-bound task 如何定义不同 target identity, 避免机械 UID fencing 或 identity under-binding
-7. Agent 的 cloud computer 持久存在是否会扩大 stale local state、cached credential 与 old completion evidence 的存活窗口
+7. selector 或搜索条件定义的动态任务集合在 long-running execution 中增删成员时, completion evidence 如何证明 current membership 本身没有变化
+8. Agent 的 cloud computer 持久存在是否会扩大 stale local state、cached credential 与 old completion evidence 的存活窗口
 
 ## 已验证事实
 
@@ -76,7 +79,7 @@ xAI 产品线共同扩大了长期委派、后台持续执行、跨应用动作�
 - xAI 官方把 Grok Bot 描述为 always-on agents, 每个 Bot 有自己的 cloud computer, 可以跨 apps 与 tools 持续工作
 - xAI 官方说明 Grok Automations 的每次 run 是 fresh request, 使用相同 instructions 与 current data
 - xAI 与 Microsoft 在 2026-08-26 都公开 Grok 4.6 进入 Microsoft Foundry, 并把长时 Agent 或 long-horizon workflow 作为适用方向
-- 08-24 至 08-28 五个 Ballast 日报分别保存 current completion freshness、atomicity、multi-resource coherence、incarnation identity 与 compare-set binding 的受控结果
+- 08-24 至 08-30 七个 Ballast 日报分别保存 current completion freshness、atomicity、multi-resource coherence、incarnation identity、fixed identity set 与 dynamic membership 的受控结果
 - 上述厂商事实没有参与 Ballast 实验数量计算
 
 ## 基于证据的推断
@@ -85,15 +88,15 @@ always-on Agent 把工作从一次请求延长到跨时间、跨应用和跨人�
 
 这种产品形态会扩大 observation 与最终副作用之间外部状态发生变化的机会, 但不能据此断言某个具体产品一定存在 stale completion bug
 
-Ballast 五日证据说明, 即使一个 Agent 具备 durable computer、fresh run、approval 与 atomic compare 等局部能力, completion correctness 仍取决于这些能力是否绑定任务真实语义
+Ballast 七日证据说明, 即使一个 Agent 具备 durable computer、fresh run、approval 与 atomic compare 等局部能力, completion correctness 仍取决于这些能力是否绑定任务真实语义、current relevant membership 与完整 identity set
 
-更完整的应用级链条是 `task semantics -> relevant identity set -> coherent snapshot or freshness -> atomic compare-and-protected-commit`
+更完整的应用级链条是 `task semantics -> current relevant membership and identity set -> coherent snapshot or freshness -> predicate-complete atomic protected completion`
 
 对跨应用 long-running Agent, current execution permission 与 prior-effect evidence 仍是独立门, completion evidence 不能替代它们
 
 ## 未验证事项
 
-- Grok Bot 内部是否保存可核验 task generation、action identity、target incarnation 或 completion revision
+- Grok Bot 内部是否保存可核验 task generation、action identity、target incarnation、dynamic membership witness 或 completion revision
 - 用户 approval 到真实外部副作用 commit 之间是否有再次授权或状态复核
 - Grok Bot 多 Agent 之间 handoff 是否传播单调 owner generation 或等价 fencing evidence
 - Grok Automations 的 current data 在不同 connector、website 或 app 中具体具有什么 consistency contract
@@ -107,4 +110,5 @@ Ballast 五日证据说明, 即使一个 Agent 具备 durable computer、fresh r
 - 构造 fresh run 但 connector 返回 stale cached data 的夹具, 分开产品 run freshness 与 evidence freshness
 - 构造 durable worker 恢复时 task 已取消或 intent 已变化的夹具, 检查 current execution permission 是否重新建立
 - 构造 concrete-instance 与 selector-bound 两类 Bot 任务, 验证 identity contract 不被机械统一
+- 构造 dynamic selector 在 Agent 执行期间加入或替换 required target 的夹具, 检查 membership witness 与 completion boundary
 - 特殊专题本身不升级 METHOD 或 NOTES, 后续只有新的受控实验满足结论门槛时才参与晋级
