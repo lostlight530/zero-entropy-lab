@@ -121,7 +121,9 @@
 - postcondition read 只能证明其线性化点或被验证 revision 上的当前事实, 如果 completion commit 或后续动作仍依赖该事实, 携带 revision 或把 compare 与受保护提交放入同一原子边界
 - 多资源 completion contract 中, 多个单项 authoritative read 只有在共享同一可核验 snapshot identity 时才能直接组合. 无共同 snapshot 时, completion commit 需要原子复核全部相关 observation identity 与 revision, 最后一次 global revision 不能追溯绑定更早的单项读取
 - atomic compare 只保护实际比较的字段. compare set 从 task semantics 推导并覆盖全部 relevant identity 与 freshness dependency; concrete-incarnation task 绑定不可混淆实体 identity 与 incarnation 内 freshness, selector-bound task 按 selector 与 current predicate 定义 identity, 不能机械要求 UID 相等
-- 完整判断链为 `task semantics -> relevant identity set -> coherent snapshot or freshness -> atomic compare-and-protected-commit`. 任一依赖集无法证明完整时使用更强 snapshot、transaction 或安全停止
+- selector-bound dynamic set 的 relevant identity set 还包含 current membership 或 predicate witness, 不能冻结为首次观察成员. 新增、删除或替换匹配成员会使旧 membership proof 失效, 除非任务语义明确允许该变化
+- 普通 relist 只能移动最终观察时点. 如果 membership 在 relist 后仍可变化, completion commit 需要把 membership witness 与全部相关 member identity/freshness 放入同一 protected decision boundary, 或使用等价 serializable/predicate guarantee
+- 完整判断链为 `task semantics -> current relevant membership and identity set -> coherent snapshot or freshness -> predicate-complete atomic protected completion`. 任一依赖集无法证明完整时使用更强 snapshot、transaction 或安全停止
 - current postcondition 不满足且需要重新执行 effect 时, 仍先独立通过 current execution permission, 不能因为 historical receipt 真实或旧任务曾获授权而跳过当前权限检查
 - occurrence-only 不可逆 effect 与 persistent-state effect 可能需要不同 completion contract, 未建立具体任务语义前不能把本节规则机械外推为所有副作用都必须维持相同当前状态
 
@@ -132,6 +134,6 @@
 - 任务终态只证明状态机进入终态
 - 有效完成还需要目标 identity,任务语义,freshness,revision 和内容后置条件共同成立
 - prior-effect evidence 使用 `hit`,`authoritative miss`,`unknown` 三态,无法证明权威缺失时保持 unknown 并安全停止
-- 多资源完成必须共享可核验 snapshot,或在受保护提交前比较完整 relevant set
+- 多资源完成必须共享可核验 snapshot,或在受保护提交前比较完整 current relevant set; selector-bound dynamic set 还需要绑定 membership 或 predicate witness
 - 周期审计覆盖连续 6 或 7 日,是派生复核,不增加实验或长期结论数量
 - 历史日报保持原文,后续证据只建立新关系

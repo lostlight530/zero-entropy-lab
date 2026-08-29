@@ -40,7 +40,8 @@ python ballast/tools/check.py
 - 命令成功,传输成功,任务终态和有效完成分别记录
 - prior-effect evidence 只允许 `hit`,`authoritative miss`,`unknown` 三态
 - 当前完成证据绑定目标 identity,任务语义,freshness 和 revision
-- 多资源验证使用共同 snapshot,或在提交前原子复核完整 compare set
+- 多资源验证使用共同 snapshot,或在提交前原子复核完整 current relevant set
+- selector-bound dynamic set 还需要绑定 membership 或 predicate witness,不能把首次观察成员冻结成永久完整集合
 - unknown outcome 重试前先核对权威副作用
 - 周期审计只覆盖连续 6 或 7 个日报,不增加实验或长期结论数量
 - 历史日报不回写,旧结构缺口只做精确兼容

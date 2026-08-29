@@ -260,5 +260,12 @@
 - 检查: 单项 fresh read 是否被错误合成为从未存在的共同状态, 多次重读是否仍可被交错变化欺骗, compare evidence 是否真正绑定全部 earlier observations, 无关 global change 是否造成额外 conflict
 - 强反例: A 与 B 的每次单独读取都返回 satisfied, 但任一权威时点都至少有一个资源不满足; 最后采样的 global revision compare 仍可成功, 逐资源 revision compare 检出 earlier A observation 已失效
 
+## B-39 动态 selector membership 的 phantom completion
+
+- 输入: selector-bound dynamic target set、当前成员 UID/revision、membership 或 predicate witness、completion record
+- 变化: 在最后一次普通 list 或 relist 后让新的 required member 加入 selector, 再比较 frozen member compare、普通 relist、whole-store global compare 与 membership-aware protected compare
+- 检查: 完整比较已观察成员是否遗漏新成员, relist 与 completion 是否仍有 membership race, membership witness 是否同时覆盖成员增删与既有成员 revision drift, whole-store revision 是否因 selector 外变化过度冲突
+- 强反例: A/B 的 UID 与 revision 全部未变且 frozen compare 原子成功, 但 clean C 已加入 selector, 路径仍 completed; C 在最后一次 relist 后加入时普通 relist 同样 false complete
+
 ## 扩展规则
 新案例必须来自真实失败机制并包含可复验条件. 单纯改写已有问题不构成新案例.
