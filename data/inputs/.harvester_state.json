@@ -28,7 +28,7 @@
           "tree_sha": "c61089666ef5c7d4db82b8b86c5bd6ef3659a9c5"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:57.640642+00:00"
+      "last_checked_at": "2026-08-29T23:41:08.051110+00:00"
     },
     "ModelEngine-Group/fit-framework": {
       "documents": {
@@ -45,7 +45,7 @@
           "tree_sha": "dbea5e59116491b7a4fd39a7a978ab0afb93d7e8"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:43.541729+00:00"
+      "last_checked_at": "2026-08-29T23:40:39.879053+00:00"
     },
     "MoonshotAI/kimi-agent-sdk": {
       "documents": {
@@ -62,7 +62,7 @@
           "tree_sha": "b25de1df3ad75c8c90bdf41bd6d90e108a8bd324"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:44.777930+00:00"
+      "last_checked_at": "2026-08-29T23:40:42.443878+00:00"
     },
     "NVIDIA/TensorRT-LLM": {
       "documents": {
@@ -72,14 +72,14 @@
           "content_hash": "709ac5abc50bcec16380b5304c395f2eb824204fafe1a8d44eb661b1ca5a7950",
           "entity_id": "external_doc_nvidia_tensorrt_llm_readme_md",
           "observed_blob_sha": "d94ad93c9b26a35c732d4c55f01ed495e68dbb06",
-          "observed_commit_sha": "1acd695759a2e09ea13680ed1736f2007fd9de49",
-          "observed_tree_sha": "c8ca019fd209994f7fcd1b771e00ba5eba1b09e4",
+          "observed_commit_sha": "77cc14538426726e3d9fef287ad78a67c4745bf1",
+          "observed_tree_sha": "b6553ff77184db3339d22ffb4951b1aa7422ac3e",
           "output": "current/serving-inference/nvidia_tensorrt_llm/README.md__e1324129fd92__d6a2d25c7a74.md",
           "sha": "e1324129fd928a221a916af247d83422770d1146",
           "tree_sha": "d8e2d73d5021a8d4bdfce0257974b8a8f1b14d94"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:48.968263+00:00"
+      "last_checked_at": "2026-08-29T23:40:50.729645+00:00"
     },
     "OpenHands/software-agent-sdk": {
       "documents": {
@@ -96,7 +96,7 @@
           "tree_sha": "df86ef1a885d9427930b43ef1eb49c3068613660"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:40.697639+00:00"
+      "last_checked_at": "2026-08-29T23:40:34.029777+00:00"
     },
     "OpenSPG/KAG": {
       "documents": {
@@ -113,7 +113,7 @@
           "tree_sha": "7eb4854da7de039f01f85066700f123ef58e0e76"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:59.694357+00:00"
+      "last_checked_at": "2026-08-29T23:41:11.858324+00:00"
     },
     "QwenLM/Qwen-Agent": {
       "documents": {
@@ -130,7 +130,7 @@
           "tree_sha": "ac1c4a6bca0eb3a7a0fc759519049af54ecf80f4"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:41.267081+00:00"
+      "last_checked_at": "2026-08-29T23:40:35.272303+00:00"
     },
     "TencentCloud/TencentDB-Agent-Memory": {
       "documents": {
@@ -159,7 +159,7 @@
           "tree_sha": "4c5c2f2a65f6d34d539758ed7ac526be83b854c5"
         }
       },
-      "last_checked_at": "2026-08-29T03:25:00.289323+00:00"
+      "last_checked_at": "2026-08-29T23:41:13.295443+00:00"
     },
     "TencentCloudADP/youtu-agent": {
       "documents": {
@@ -272,7 +272,7 @@
           "tree_sha": "6b428218ed42677c837c8b9c4e73257a88820407"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:44.169434+00:00"
+      "last_checked_at": "2026-08-29T23:40:41.146663+00:00"
     },
     "a2aproject/A2A": {
       "documents": {
@@ -301,7 +301,7 @@
           "tree_sha": "b6a71168198fb632b3873a52381aa3d0d1f3c810"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:33.951564+00:00"
+      "last_checked_at": "2026-08-29T23:40:21.860085+00:00"
     },
     "a2aproject/a2a-python": {
       "documents": {
@@ -330,7 +330,7 @@
           "tree_sha": "cee33d84b61b0174b4d30ae523ccac7c753cd824"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:34.691412+00:00"
+      "last_checked_at": "2026-08-29T23:40:23.209572+00:00"
     },
     "agentclientprotocol/agent-client-protocol": {
       "documents": {
@@ -340,8 +340,8 @@
           "content_hash": "28dab1d2bbe65b313f43df70a8b4ddbde94a42e60c068ddc2d1dc5a0317b2d54",
           "entity_id": "external_doc_agentclientprotocol_agent_client_protocol_changelog_md",
           "observed_blob_sha": "3b57c2240f4ec9de1b57f661122b76d86085cb0d",
-          "observed_commit_sha": "9e6f550706b94705e8080b69f7cf46ca3cdb7614",
-          "observed_tree_sha": "93e92ac566a8c4bfcc5524631447f4906f016ddf",
+          "observed_commit_sha": "9c211e286c29c563cf55a7ec577915bf816926a5",
+          "observed_tree_sha": "e2699d661914cd601a7d2ffee58683bfa864fe37",
           "output": "current/protocols/agentclientprotocol_agent_client_protocol/CHANGELOG.md__3b57c2240f4e__61307a4f86fa.md",
           "sha": "3b57c2240f4ec9de1b57f661122b76d86085cb0d",
           "tree_sha": "c99ae99fe18f93d0ad1d848823f465f5603967b2"
@@ -352,14 +352,14 @@
           "content_hash": "101f71ceb6f783d2534e0bc65ea7a39353e04acbcd9773108a1754b6ad5fe3dc",
           "entity_id": "doc_agentclientprotocol_agent_client_protocol_readme_md_1b4fbc172daa",
           "observed_blob_sha": "1b4fbc172daae9b829cf8337bd92d99b2855e721",
-          "observed_commit_sha": "9e6f550706b94705e8080b69f7cf46ca3cdb7614",
-          "observed_tree_sha": "93e92ac566a8c4bfcc5524631447f4906f016ddf",
+          "observed_commit_sha": "9c211e286c29c563cf55a7ec577915bf816926a5",
+          "observed_tree_sha": "e2699d661914cd601a7d2ffee58683bfa864fe37",
           "output": "current/protocols/agentclientprotocol_agent_client_protocol/README.md__1b4fbc172daa__3fcb97d7e686.md",
           "sha": "1b4fbc172daae9b829cf8337bd92d99b2855e721",
           "tree_sha": "f0ba014baa23f3e5f8701da24a43464e21d2cbaf"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:35.378785+00:00"
+      "last_checked_at": "2026-08-29T23:40:24.386527+00:00"
     },
     "agentscope-ai/agentscope": {
       "documents": {
@@ -376,7 +376,7 @@
           "tree_sha": "5cdd9d7cecd15645da93eeba2e173895eff6ce44"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:41.883759+00:00"
+      "last_checked_at": "2026-08-29T23:40:36.670319+00:00"
     },
     "agentskills/agentskills": {
       "documents": {
@@ -393,7 +393,7 @@
           "tree_sha": "a711d61ff20d609562123d6fe23e16d080ac68a1"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:31.825334+00:00"
+      "last_checked_at": "2026-08-29T23:40:17.358485+00:00"
     },
     "cloudwego/eino": {
       "documents": {
@@ -410,7 +410,7 @@
           "tree_sha": "ff35074a808996688da312b01f7dc1146854154a"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:42.677278+00:00"
+      "last_checked_at": "2026-08-29T23:40:37.994618+00:00"
     },
     "deepseek-ai/3FS": {
       "documents": {
@@ -427,7 +427,7 @@
           "tree_sha": "a00271c47d5be489e7482e67d465e02088f99ebc"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:52.163580+00:00"
+      "last_checked_at": "2026-08-29T23:40:57.403832+00:00"
     },
     "deepseek-ai/DeepEP": {
       "documents": {
@@ -444,7 +444,7 @@
           "tree_sha": "b385fecc3105afac74e0f7c0bf6a90b15bf9b336"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:50.377966+00:00"
+      "last_checked_at": "2026-08-29T23:40:53.501135+00:00"
     },
     "deepseek-ai/DeepGEMM": {
       "documents": {
@@ -461,7 +461,7 @@
           "tree_sha": "f46738f1b136fc704028b6c38433f3297c6bde6e"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:51.556672+00:00"
+      "last_checked_at": "2026-08-29T23:40:56.005840+00:00"
     },
     "deepseek-ai/FlashMLA": {
       "documents": {
@@ -478,7 +478,7 @@
           "tree_sha": "88b56b47dc6bd1bfc00694121cae6cb3317cf933"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:50.946710+00:00"
+      "last_checked_at": "2026-08-29T23:40:54.632099+00:00"
     },
     "deepset-ai/haystack": {
       "documents": {
@@ -488,8 +488,8 @@
           "content_hash": "886d09b5d17215cf7bd7cef61c476cff3365ea60f975c8a539a92f93194788dc",
           "entity_id": "external_doc_deepset_ai_haystack_migration_md",
           "observed_blob_sha": "3aea49b890c5c08d244d00eba41c3e57347fed3c",
-          "observed_commit_sha": "30d7506d0b692dd1ac67eae62a77f50fdc9bd4db",
-          "observed_tree_sha": "21e688dda483df7e7866515629e06a984938dbf0",
+          "observed_commit_sha": "e318778c9bf60a1963e3b5f451359655dd696c30",
+          "observed_tree_sha": "72a97da29acefb796f4423b5e95a40351d2e6734",
           "output": "current/memory-context-sandbox/deepset_ai_haystack/MIGRATION.md__3aea49b890c5__6f75d437343d.md",
           "sha": "3aea49b890c5c08d244d00eba41c3e57347fed3c",
           "tree_sha": "3f878408dfc104778d25a6c4973793cbcd9ec448"
@@ -500,14 +500,14 @@
           "content_hash": "c93dc21bdc1307b276f32fe30bc71f9be4b19cb5b8bd860f48b812152dafdf4f",
           "entity_id": "external_doc_deepset_ai_haystack_readme_md",
           "observed_blob_sha": "655d86279a370068993a14f0fc9d4a0690ff7cf7",
-          "observed_commit_sha": "30d7506d0b692dd1ac67eae62a77f50fdc9bd4db",
-          "observed_tree_sha": "21e688dda483df7e7866515629e06a984938dbf0",
+          "observed_commit_sha": "e318778c9bf60a1963e3b5f451359655dd696c30",
+          "observed_tree_sha": "72a97da29acefb796f4423b5e95a40351d2e6734",
           "output": "current/memory-context-sandbox/deepset_ai_haystack/README.md__655d86279a37__6f75d437343d.md",
           "sha": "655d86279a370068993a14f0fc9d4a0690ff7cf7",
           "tree_sha": "3f878408dfc104778d25a6c4973793cbcd9ec448"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:56.311534+00:00"
+      "last_checked_at": "2026-08-29T23:41:05.396301+00:00"
     },
     "ggml-org/llama.cpp": {
       "documents": {
@@ -517,14 +517,14 @@
           "content_hash": "f3b07bab53b21f746ede9db62b717776a9f8a61e2d24fd4ff001388352cb41f9",
           "entity_id": "external_doc_ggml_org_llama.cpp_readme_md",
           "observed_blob_sha": "0b5598c6e5bd9a8130136ee5009cbc500729c953",
-          "observed_commit_sha": "d7bd3bfcad3e29c7e49fd26f38c79ee3e9a3fd6b",
-          "observed_tree_sha": "0305b6324cd1a82af31270e87f40cdd54d475746",
+          "observed_commit_sha": "c841aeeb8bb2fe417038dadfa9b007cf1a9ef950",
+          "observed_tree_sha": "4d66c4a3e77e7b72f6aab0ac7ec8bc26e745e8e1",
           "output": "current/serving-inference/ggml_org_llama.cpp/README.md__0b5598c6e5bd__c060ca974c77.md",
           "sha": "0b5598c6e5bd9a8130136ee5009cbc500729c953",
           "tree_sha": "1e6240a2b7065d828b817793a35f5f39a4f369fc"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:49.732689+00:00"
+      "last_checked_at": "2026-08-29T23:40:52.425887+00:00"
     },
     "google/adk-python": {
       "documents": {
@@ -534,8 +534,8 @@
           "content_hash": "66664fbbf6c728820560207a49a4569c7d552cf443bba171be0abaad49dbe5d4",
           "entity_id": "external_doc_google_adk_python_changelog_md",
           "observed_blob_sha": "1c670709eac8210223489474d32594033b4cb950",
-          "observed_commit_sha": "c3d3730250b64156129508354b45120372f95334",
-          "observed_tree_sha": "2778efda831bff890343161a7b4241a9e47567b0",
+          "observed_commit_sha": "8cdbbb158c70d22c414bd943ad29ec080d1a52b6",
+          "observed_tree_sha": "b34bc0294394bc70929aa40cb66a542eb7d831e7",
           "output": "current/agent-runtime/google_adk_python/CHANGELOG.md__1c670709eac8__c3d3730250b6.md",
           "sha": "1c670709eac8210223489474d32594033b4cb950",
           "tree_sha": "2778efda831bff890343161a7b4241a9e47567b0"
@@ -546,14 +546,14 @@
           "content_hash": "59214b7b692403501522ae41f0a2cb1f12e5d85db1bff5fa0df4cebb3be70d0e",
           "entity_id": "external_doc_google_adk_python_readme_md",
           "observed_blob_sha": "eaafa0a802b7fd5ae488054a3e3ada714dbfc985",
-          "observed_commit_sha": "c3d3730250b64156129508354b45120372f95334",
-          "observed_tree_sha": "2778efda831bff890343161a7b4241a9e47567b0",
+          "observed_commit_sha": "8cdbbb158c70d22c414bd943ad29ec080d1a52b6",
+          "observed_tree_sha": "b34bc0294394bc70929aa40cb66a542eb7d831e7",
           "output": "current/agent-runtime/google_adk_python/README.md__eaafa0a802b7__d6954946df8b.md",
           "sha": "eaafa0a802b7fd5ae488054a3e3ada714dbfc985",
           "tree_sha": "9120ae1fdd8e3e0702727b12f93eb3a6ac5d89e1"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:37.404377+00:00"
+      "last_checked_at": "2026-08-29T23:40:27.531720+00:00"
     },
     "huggingface/smolagents": {
       "documents": {
@@ -570,7 +570,7 @@
           "tree_sha": "dad1a21e572d4af8685294901722663501e78b63"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:53.325121+00:00"
+      "last_checked_at": "2026-08-29T23:40:59.690313+00:00"
     },
     "huggingface/transformers": {
       "documents": {
@@ -580,14 +580,14 @@
           "content_hash": "8e03e343ba4603903335fdef23852b0549df63ca4ea1d448fd3f8e978de27d0b",
           "entity_id": "doc_huggingface_transformers_readme_md_4fe7136d2529",
           "observed_blob_sha": "730084a5a55486821a1d600d8084beb9069f805b",
-          "observed_commit_sha": "805a9e939fa8c1bff8d8ffdf041c051b71a914aa",
-          "observed_tree_sha": "9f3338efca281349e2521ebc6df192c8524240d5",
+          "observed_commit_sha": "42ca97014c85d71a88ad60d55f08cb9fb4d26e2c",
+          "observed_tree_sha": "b401c4707cfb606790c8b17343aa0dc0955601a6",
           "output": "current/serving-inference/huggingface_transformers/README.md__730084a5a554__f9b76f2dfc44.md",
           "sha": "730084a5a55486821a1d600d8084beb9069f805b",
           "tree_sha": "bcaad131b1f7af4c1e1905ff2b45edac0e8445a5"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:45.654954+00:00"
+      "last_checked_at": "2026-08-29T23:40:44.368533+00:00"
     },
     "langchain-ai/langgraph": {
       "documents": {
@@ -604,7 +604,7 @@
           "tree_sha": "5bfd87898cfd703d9b723bcec5dd8e1f8e694020"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:38.966752+00:00"
+      "last_checked_at": "2026-08-29T23:40:30.741204+00:00"
     },
     "mem0ai/mem0": {
       "documents": {
@@ -621,7 +621,7 @@
           "tree_sha": "d135a9b0f57415fb781beb11373960f30dd64e4e"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:56.950506+00:00"
+      "last_checked_at": "2026-08-29T23:41:06.846766+00:00"
     },
     "microsoft/agent-framework": {
       "documents": {
@@ -1178,7 +1178,7 @@
           "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:38.349782+00:00"
+      "last_checked_at": "2026-08-29T23:40:29.362847+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
@@ -1188,14 +1188,14 @@
           "content_hash": "392aaf5607d50fb8550eaa1595d773bd501e214596c58728a94a4c7cff149c3c",
           "entity_id": "doc_modelcontextprotocol_modelcontextprotocol_readme_md_4e4811014ee7",
           "observed_blob_sha": "4e4811014ee7abd43b8cfc4730bd3f9b8dd2aaca",
-          "observed_commit_sha": "d8fdc88fb970313247d8a180ac1ec3f6a10a8885",
-          "observed_tree_sha": "34c34052f73e18668c18df84bcfd800640570f04",
+          "observed_commit_sha": "ca4ab3027f7c844cd3039c956438d72e8253f7f5",
+          "observed_tree_sha": "33fa47e0df65a17ad357cb52dae86be5d9c180b3",
           "output": "current/protocols/modelcontextprotocol_modelcontextprotocol/README.md__4e4811014ee7__7d6c7b86eb2f.md",
           "sha": "4e4811014ee7abd43b8cfc4730bd3f9b8dd2aaca",
           "tree_sha": "ae5afebf04550f5956ad463e32400eec952dfdf3"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:32.537043+00:00"
+      "last_checked_at": "2026-08-29T23:40:18.813992+00:00"
     },
     "modelcontextprotocol/python-sdk": {
       "documents": {
@@ -1212,7 +1212,7 @@
           "tree_sha": "159b2a3ac1a24280b34169409f3772324d2774a4"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:33.266068+00:00"
+      "last_checked_at": "2026-08-29T23:40:20.560296+00:00"
     },
     "modelcontextprotocol/servers": {
       "documents": {
@@ -1229,7 +1229,7 @@
           "tree_sha": "749952ee07834faea4119cb1132b0b836acde72d"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:52.723220+00:00"
+      "last_checked_at": "2026-08-29T23:40:58.519394+00:00"
     },
     "openai/openai-agents-python": {
       "documents": {
@@ -2158,7 +2158,7 @@
           "tree_sha": "6619014cb5e3c71b86bae8fa1b2514c9d73d8f76"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:36.061191+00:00"
+      "last_checked_at": "2026-08-29T23:40:25.778893+00:00"
     },
     "pydantic/pydantic-ai": {
       "documents": {
@@ -2168,14 +2168,14 @@
           "content_hash": "49b7d40cb98c339613c9bc97614515abb0304acb9ce36e85e8249b5bac6e195c",
           "entity_id": "external_doc_pydantic_pydantic_ai_readme_md",
           "observed_blob_sha": "c52cebff671dd44b39090a3c142eff81b14994c6",
-          "observed_commit_sha": "6aee1c09bd065725ff14f21a15f731b0c3c88e0c",
-          "observed_tree_sha": "a3a015edc32e77f75aa8568f751cdb58d14f11a2",
+          "observed_commit_sha": "56dfd88a297b4c818e36995bf4c889de0d8d248f",
+          "observed_tree_sha": "55f8b95117180c36c16b0cbe17824685340c0b0c",
           "output": "current/agent-runtime/pydantic_pydantic_ai/README.md__c52cebff671d__6aee1c09bd06.md",
           "sha": "c52cebff671dd44b39090a3c142eff81b14994c6",
           "tree_sha": "a3a015edc32e77f75aa8568f751cdb58d14f11a2"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:40.057856+00:00"
+      "last_checked_at": "2026-08-29T23:40:32.556301+00:00"
     },
     "run-llama/llama_index": {
       "documents": {
@@ -2185,8 +2185,8 @@
           "content_hash": "0f7033510e933ac3059c5d73ee9e75b251c42a2308d78b926580ac40f00d2879",
           "entity_id": "doc_run_llama_llama_index_changelog_md_2983f3183db5",
           "observed_blob_sha": "709b35dce3b017daeee122b091306b82f0e82fe1",
-          "observed_commit_sha": "39f481fc41d1da26cf511ef697762b3b0a93636d",
-          "observed_tree_sha": "2f206444ede6110d7cbe01e79a73d77e9e10f65e",
+          "observed_commit_sha": "f87a57bb2b95a7ca9923b4e5029cb6d7ea6e28fe",
+          "observed_tree_sha": "4b6a8a80371835297b15e5c42e63682fed114e68",
           "output": "current/memory-context-sandbox/run_llama_llama_index/CHANGELOG.md__709b35dce3b0__9ba74b862871.md",
           "sha": "709b35dce3b017daeee122b091306b82f0e82fe1",
           "tree_sha": "67a2151bbd5ca01b46e869507a1917eedae8bb64"
@@ -2197,14 +2197,14 @@
           "content_hash": "353281492b93a5c3c96f9e09c2516eaf5850735f04bf16b19baa9be8c036607d",
           "entity_id": "doc_run_llama_llama_index_readme_md_c1c7af8256b4",
           "observed_blob_sha": "c1c7af8256b4d278748ea9b5c8b1a5da1858e691",
-          "observed_commit_sha": "39f481fc41d1da26cf511ef697762b3b0a93636d",
-          "observed_tree_sha": "2f206444ede6110d7cbe01e79a73d77e9e10f65e",
+          "observed_commit_sha": "f87a57bb2b95a7ca9923b4e5029cb6d7ea6e28fe",
+          "observed_tree_sha": "4b6a8a80371835297b15e5c42e63682fed114e68",
           "output": "current/memory-context-sandbox/run_llama_llama_index/README.md__c1c7af8256b4__199e9b5b130b.md",
           "sha": "c1c7af8256b4d278748ea9b5c8b1a5da1858e691",
           "tree_sha": "840e47212adc7c23e9132f1e66c8fa4afa80ac14"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:55.245927+00:00"
+      "last_checked_at": "2026-08-29T23:41:03.399505+00:00"
     },
     "sgl-project/sglang": {
       "documents": {
@@ -2214,14 +2214,14 @@
           "content_hash": "b04864e81c6b4456ffbe48d65793fc014485da9fc0aa0945f5f099cec53b5d6a",
           "entity_id": "doc_sgl_project_sglang_readme_md_e5cfd3d65b13",
           "observed_blob_sha": "37b81417513c3c4c0fcbb818c513cc2162b2a8de",
-          "observed_commit_sha": "505228823f14d995c85d65b99efd67bb88cccf50",
-          "observed_tree_sha": "9b22d120ea85ffa64eaa98d2cebb1f5e990c1ad2",
+          "observed_commit_sha": "00fbb6e8ace34a5bbbf5c60681e39706199975b6",
+          "observed_tree_sha": "30445fbf0ff1a17ef99615835372031e3a728b1a",
           "output": "current/serving-inference/sgl_project_sglang/README.md__37b81417513c__eec794bce080.md",
           "sha": "37b81417513c3c4c0fcbb818c513cc2162b2a8de",
           "tree_sha": "9f810c4dd4d0b4cd71b35de6ca734178f0bf05ae"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:47.487893+00:00"
+      "last_checked_at": "2026-08-29T23:40:48.458041+00:00"
     },
     "stanfordnlp/dspy": {
       "documents": {
@@ -2238,7 +2238,7 @@
           "tree_sha": "32c5b1ac8a0c259b9f933144575f3a8bac9cb291"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:54.205113+00:00"
+      "last_checked_at": "2026-08-29T23:41:00.882849+00:00"
     },
     "stepfun-ai/StepDeepResearch": {
       "documents": {
@@ -2255,7 +2255,7 @@
           "tree_sha": "ce26c30f08ba900339214de6848712963029340a"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:58.941602+00:00"
+      "last_checked_at": "2026-08-29T23:41:10.361974+00:00"
     },
     "vllm-project/vllm": {
       "documents": {
@@ -2265,8 +2265,8 @@
           "content_hash": "7e43b6384fcea9da1e1d6b0b73f0b60cb5a764b73c3c262db9bfe13f1d6f0a37",
           "entity_id": "external_doc_vllm_project_vllm_readme_md",
           "observed_blob_sha": "ca31a8cce94d828b38dbb9d206c12e4c69a92052",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/README.md__ca31a8cce94d__5ed3faa43ddf.md",
           "sha": "ca31a8cce94d828b38dbb9d206c12e4c69a92052",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2277,8 +2277,8 @@
           "content_hash": "474600b55599c3cd97b57e227ffb618722d063b78ccde7e35f8b4949943d7bc7",
           "entity_id": "doc_vllm_project_vllm_docs_design_arch_overview_md_c19ea49d96db",
           "observed_blob_sha": "711e9a2668eb44ae6999cce30aae6472698c734f",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__arch_overview.md__711e9a2668eb__c205726108df.md",
           "sha": "711e9a2668eb44ae6999cce30aae6472698c734f",
           "tree_sha": "886bca9db9a5326826622621397505f9b70949f3"
@@ -2289,8 +2289,8 @@
           "content_hash": "db9d2fbf15fc5dde0b3adbe2c625062f4d3c1ae5c521538e271cae7ed4ca7c5f",
           "entity_id": "external_doc_vllm_project_vllm_docs_design_attention_backends_md",
           "observed_blob_sha": "f0f363223ffc99c2f05a650f4da1427d52240e71",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__attention_backends.md__f0f363223ffc__2dc53bae1743.md",
           "sha": "f0f363223ffc99c2f05a650f4da1427d52240e71",
           "tree_sha": "c1c068bed24b03cb3cad19592caea4752ba444b3"
@@ -2301,8 +2301,8 @@
           "content_hash": "07f9a5fe36ca32f4ca42b1e59f6a1f41c3dab0db9660ca6e7396eaf16fa5a209",
           "entity_id": "doc_vllm_project_vllm_docs_design_cuda_graphs_md_e274b68c7021",
           "observed_blob_sha": "e274b68c70213a1c89fd48683f5a857ff7795b01",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__cuda_graphs.md__e274b68c7021__5ed3faa43ddf.md",
           "sha": "e274b68c70213a1c89fd48683f5a857ff7795b01",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2313,8 +2313,8 @@
           "content_hash": "09fd4c63b620dede48153788bc31fc6bf0abe97f5a27b01ceada942de74e5f57",
           "entity_id": "external_doc_vllm_project_vllm_docs_design_cuda_graphs_multimodal_md",
           "observed_blob_sha": "0fbb6801e44e5eaa312965cd470f5cb30ab375da",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__cuda_graphs_multimodal.md__0fbb6801e44e__455edc022b45.md",
           "sha": "0fbb6801e44e5eaa312965cd470f5cb30ab375da",
           "tree_sha": "6eac720c8de587d4a905e0dce3e5d6beac5cf1a8"
@@ -2325,8 +2325,8 @@
           "content_hash": "ab072efb0b0c9c6217924b5c11487ca75a968a80ec5efaea1f58114f0c8b79dd",
           "entity_id": "external_doc_vllm_project_vllm_docs_design_custom_op_md",
           "observed_blob_sha": "f99c8043fa04aa2441dfd6aa56d8de20873c8481",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__custom_op.md__f99c8043fa04__5ed3faa43ddf.md",
           "sha": "f99c8043fa04aa2441dfd6aa56d8de20873c8481",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2337,8 +2337,8 @@
           "content_hash": "52410045e528f42687033d99be059f821735329e3d445982052e3987e46dba3f",
           "entity_id": "doc_vllm_project_vllm_docs_design_dbo_md_43b3ce0bb5a7",
           "observed_blob_sha": "43b3ce0bb5a734941a84e3d1c17dd6555fc51332",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__dbo.md__43b3ce0bb5a7__5ed3faa43ddf.md",
           "sha": "43b3ce0bb5a734941a84e3d1c17dd6555fc51332",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2349,8 +2349,8 @@
           "content_hash": "5cbca2d00c3597207741a4866af1c9e424bdec7669a0bde3933afacf8aac4e8c",
           "entity_id": "doc_vllm_project_vllm_docs_design_debug_vllm_compile_md_7edda6fa6476",
           "observed_blob_sha": "7edda6fa6476c8ce847c096d8a7a3fc159dbf382",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__debug_vllm_compile.md__7edda6fa6476__5ed3faa43ddf.md",
           "sha": "7edda6fa6476c8ce847c096d8a7a3fc159dbf382",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2361,8 +2361,8 @@
           "content_hash": "98da4390e703455fb8e61023793b0711f13b1b9ba972c2ab68a09bf590d50a62",
           "entity_id": "doc_vllm_project_vllm_docs_design_endpoint_plugins_md_9f38fe5da188",
           "observed_blob_sha": "98b755788e2ea32ea38c0b6ab23b4a137db66b2c",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__endpoint_plugins.md__98b755788e2e__c205726108df.md",
           "sha": "98b755788e2ea32ea38c0b6ab23b4a137db66b2c",
           "tree_sha": "886bca9db9a5326826622621397505f9b70949f3"
@@ -2373,8 +2373,8 @@
           "content_hash": "5b23f432ef19c31851743075cefe741bd3bf8fdd1345048dc07f2a8ca5bb9795",
           "entity_id": "external_doc_vllm_project_vllm_docs_design_fused_moe_modular_kernel_md",
           "observed_blob_sha": "4be5ff1de63efd830826ab9724f1d0fbc969b819",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__fused_moe_modular_kernel.md__4be5ff1de63e__0033211c0bcf.md",
           "sha": "4be5ff1de63efd830826ab9724f1d0fbc969b819",
           "tree_sha": "a691359bb8d12e766caa9cfec228c5a5b9975d11"
@@ -2385,8 +2385,8 @@
           "content_hash": "24f6412f8fa00a4e53f739e1041e20e4b8ed98f13a00b0df2ed83f1bd68ad33a",
           "entity_id": "external_doc_vllm_project_vllm_docs_design_fusions_md",
           "observed_blob_sha": "002984c113a138ebb517a78193d4f16c4a41bf3d",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__fusions.md__002984c113a1__5ed3faa43ddf.md",
           "sha": "002984c113a138ebb517a78193d4f16c4a41bf3d",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2397,8 +2397,8 @@
           "content_hash": "2c5f79fd21457292386bf289f90b31652d41f3edf34f1deb0f7c0ed212c7c6fa",
           "entity_id": "doc_vllm_project_vllm_docs_design_huggingface_integration_md_c3937d15db89",
           "observed_blob_sha": "c3937d15db895aebbf1876d04f6996a88beba616",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__huggingface_integration.md__c3937d15db89__5ed3faa43ddf.md",
           "sha": "c3937d15db895aebbf1876d04f6996a88beba616",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2409,8 +2409,8 @@
           "content_hash": "6d896299dcc344ef2c242914b587a10b4eede496133c068bdb7b9635521dc7a2",
           "entity_id": "doc_vllm_project_vllm_docs_design_hybrid_kv_cache_manager_md_82d54e9b5c1e",
           "observed_blob_sha": "9891c82f97c97d9183ca6b370b9def1e5612490b",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__hybrid_kv_cache_manager.md__9891c82f97c9__c205726108df.md",
           "sha": "9891c82f97c97d9183ca6b370b9def1e5612490b",
           "tree_sha": "886bca9db9a5326826622621397505f9b70949f3"
@@ -2421,8 +2421,8 @@
           "content_hash": "dd8ab0e1462341b80d849232cd26a195f43f2194d1671931c513315ea2cc0def",
           "entity_id": "doc_vllm_project_vllm_docs_design_io_processor_plugins_md_68b532108672",
           "observed_blob_sha": "68b5321086724cff7e4737d9790927d05b83c8e8",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__io_processor_plugins.md__68b532108672__5ed3faa43ddf.md",
           "sha": "68b5321086724cff7e4737d9790927d05b83c8e8",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2433,8 +2433,8 @@
           "content_hash": "e160639280d75f778236aa971c2a96207ca9ce3c7adb06184273874e48cce844",
           "entity_id": "doc_vllm_project_vllm_docs_design_logits_processors_md_980001156d3b",
           "observed_blob_sha": "980001156d3b0f33f30ab103530b9e261494b1f5",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__logits_processors.md__980001156d3b__5ed3faa43ddf.md",
           "sha": "980001156d3b0f33f30ab103530b9e261494b1f5",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2445,8 +2445,8 @@
           "content_hash": "2526597c7665f562b3f94ff94f06d7afd44f3bd09cab1dda685066cb7d23df82",
           "entity_id": "doc_vllm_project_vllm_docs_design_lora_resolver_plugins_md_019c4eef93d9",
           "observed_blob_sha": "019c4eef93d962960042b72cff36dbcdd22112be",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__lora_resolver_plugins.md__019c4eef93d9__5ed3faa43ddf.md",
           "sha": "019c4eef93d962960042b72cff36dbcdd22112be",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2457,8 +2457,8 @@
           "content_hash": "9e19c9018eece6c9d65a4f13bab174b61618d335d0571c51f2af8b7cd4db363a",
           "entity_id": "doc_vllm_project_vllm_docs_design_metrics_md_7b463b8750c7",
           "observed_blob_sha": "c7bc85756e0d5e89b34d8d7d5d7527246f7cf701",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__metrics.md__c7bc85756e0d__0b37d8389f4b.md",
           "sha": "c7bc85756e0d5e89b34d8d7d5d7527246f7cf701",
           "tree_sha": "e95d3837f886fad5dd8643983c0d1cb1f0a85d74"
@@ -2469,8 +2469,8 @@
           "content_hash": "b2bce15af38218939454f71278c2b56fdfaf5511809f37aa7a585bdd76af4233",
           "entity_id": "doc_vllm_project_vllm_docs_design_mm_processing_md_18d6c947e649",
           "observed_blob_sha": "a2112a2922edb005b5cae5f151ac9937b85c45ff",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__mm_processing.md__a2112a2922ed__a014e35f38c8.md",
           "sha": "a2112a2922edb005b5cae5f151ac9937b85c45ff",
           "tree_sha": "1030931932e8a94b1c4c2ca064a302009d375a95"
@@ -2481,8 +2481,8 @@
           "content_hash": "f68ac239f352d26c3fe5fcebae7c9848d69520e7a0592d6c4af48da76ec57e3a",
           "entity_id": "doc_vllm_project_vllm_docs_design_model_runner_v2_md_fb40d51ee7b7",
           "observed_blob_sha": "cabc3526b19e6cd7df4f7ad4b51e3ea29925feb5",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__model_runner_v2.md__cabc3526b19e__a367cdbca082.md",
           "sha": "cabc3526b19e6cd7df4f7ad4b51e3ea29925feb5",
           "tree_sha": "95a668295f963830823c52940eb586deb966ea65"
@@ -2493,8 +2493,8 @@
           "content_hash": "5c4e7375f2e8833e8887026f1c931075265e50bf45022fa0cd9fe373303138cd",
           "entity_id": "doc_vllm_project_vllm_docs_design_moe_kernel_features_md_07d2a5398013",
           "observed_blob_sha": "0b1a9151ec692fa0843d57f1d43d49b68fafe1da",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__moe_kernel_features.md__0b1a9151ec69__5f7a20b3162e.md",
           "sha": "0b1a9151ec692fa0843d57f1d43d49b68fafe1da",
           "tree_sha": "4f3e1f5da41fed35802af5bb90e84fc0fbd7877d"
@@ -2505,8 +2505,8 @@
           "content_hash": "7e36b3a6e435595b3d9406bf97dc0d5153c038d73353244535cc1c274c4bcd62",
           "entity_id": "doc_vllm_project_vllm_docs_design_multiprocessing_md_d34b6fa86f30",
           "observed_blob_sha": "d34b6fa86f3032c01669c1b6e0849f6ac978fd77",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__multiprocessing.md__d34b6fa86f30__5ed3faa43ddf.md",
           "sha": "d34b6fa86f3032c01669c1b6e0849f6ac978fd77",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2517,8 +2517,8 @@
           "content_hash": "6519d6ebb7f230eec36fcbe4bf95059c1f8ab8715343f4e724a793f31ef40efa",
           "entity_id": "external_doc_vllm_project_vllm_docs_design_nixl_kv_cache_lease_md",
           "observed_blob_sha": "35018aca22f23a560ff41ead7f003c251d9b7c09",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__nixl_kv_cache_lease.md__35018aca22f2__5ed3faa43ddf.md",
           "sha": "35018aca22f23a560ff41ead7f003c251d9b7c09",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2529,8 +2529,8 @@
           "content_hash": "717947f40d538f2c4eea830fa6b8dee942cd701e264554e8ccae21e1f7102b3b",
           "entity_id": "external_doc_vllm_project_vllm_docs_design_nixl_kv_push_connector_md",
           "observed_blob_sha": "6f66be5eb9f57fbef5afc24c261d4ce56297ae92",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__nixl_kv_push_connector.md__6f66be5eb9f5__5ed3faa43ddf.md",
           "sha": "6f66be5eb9f57fbef5afc24c261d4ce56297ae92",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2541,8 +2541,8 @@
           "content_hash": "87d1988cb5ecd666904d3c035934bfa529874091868e12e90d1f8ca8ac45a337",
           "entity_id": "doc_vllm_project_vllm_docs_design_optimization_levels_md_3261aed74794",
           "observed_blob_sha": "3261aed747948e3008b6af6abc6a1f458bc3e636",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__optimization_levels.md__3261aed74794__5ed3faa43ddf.md",
           "sha": "3261aed747948e3008b6af6abc6a1f458bc3e636",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2553,8 +2553,8 @@
           "content_hash": "01856594e376d7032030a4fb610a57988c6801527ba44e95e451ed7bf916498b",
           "entity_id": "doc_vllm_project_vllm_docs_design_paged_attention_md_f4742c7faaa4",
           "observed_blob_sha": "f4742c7faaa45697c9d1fd45743814f1b114932b",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__paged_attention.md__f4742c7faaa4__5ed3faa43ddf.md",
           "sha": "f4742c7faaa45697c9d1fd45743814f1b114932b",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2565,8 +2565,8 @@
           "content_hash": "88b6fe88475fe9fd2d35fefaa108be02a4dd24be948b0ac88f382c21e6afaee8",
           "entity_id": "doc_vllm_project_vllm_docs_design_plugin_system_md_dd49df0ef2f5",
           "observed_blob_sha": "dd49df0ef2f556914413af96c4a2c037fb013c1f",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__plugin_system.md__dd49df0ef2f5__5ed3faa43ddf.md",
           "sha": "dd49df0ef2f556914413af96c4a2c037fb013c1f",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2577,8 +2577,8 @@
           "content_hash": "20bb1fca27262f1324a84de9dd595e6b21f46c33bb8486c24b73cbc91e6e9d23",
           "entity_id": "doc_vllm_project_vllm_docs_design_prefix_caching_md_f783f4a1bc85",
           "observed_blob_sha": "f783f4a1bc85a7ee15e00ed736a473f3ef3f896c",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__prefix_caching.md__f783f4a1bc85__5ed3faa43ddf.md",
           "sha": "f783f4a1bc85a7ee15e00ed736a473f3ef3f896c",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2589,8 +2589,8 @@
           "content_hash": "80b60dc14548c28e86fdbf4eb9c292ddd235b7c0121462af9d9cb716febee74d",
           "entity_id": "doc_vllm_project_vllm_docs_design_torch_compile_md_4dc0da0c7d65",
           "observed_blob_sha": "4dc0da0c7d659be9923017db73a3aeff67c99728",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__torch_compile.md__4dc0da0c7d65__5ed3faa43ddf.md",
           "sha": "4dc0da0c7d659be9923017db73a3aeff67c99728",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2601,8 +2601,8 @@
           "content_hash": "7fc461fa734d6160ea524cee1051106fb7239fdafc80acb444e8c49a968b3fb8",
           "entity_id": "doc_vllm_project_vllm_docs_design_torch_compile_multimodal_md_bb30de56bc14",
           "observed_blob_sha": "bb30de56bc147ef1008a15baaefc1abfe98744d6",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__torch_compile_multimodal.md__bb30de56bc14__5ed3faa43ddf.md",
           "sha": "bb30de56bc147ef1008a15baaefc1abfe98744d6",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2613,8 +2613,8 @@
           "content_hash": "773e62a32bdff045dc23cd4f5269d4689df7ec94ef5bf91225c5fc7b7ba13f69",
           "entity_id": "doc_vllm_project_vllm_docs_design_vllm_ir_md_82628f3762fe",
           "observed_blob_sha": "82628f3762fe7b715579fe1437ffd092c55f526c",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/docs__design__vllm_ir.md__82628f3762fe__5ed3faa43ddf.md",
           "sha": "82628f3762fe7b715579fe1437ffd092c55f526c",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2625,8 +2625,8 @@
           "content_hash": "f67e76bc4e6a6ef91d1a64c210b6802ecd247bb7a62303bc088858fbcfd55a60",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_readme_md_026c7ec994eb",
           "observed_blob_sha": "026c7ec994eb29d9168f831ed4310d692fdd6319",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__README.md__026c7ec994eb__5ed3faa43ddf.md",
           "sha": "026c7ec994eb29d9168f831ed4310d692fdd6319",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2637,8 +2637,8 @@
           "content_hash": "26d1d648e0fece08b6e771d30d2a342bc0d1d763ef2c842538b039d9ed048b6d",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_basic_py_78bfda9bcf4e",
           "observed_blob_sha": "78bfda9bcf4e3c5b8fbe7843e4be8b5b10dcec24",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__basic.py__78bfda9bcf4e__5ed3faa43ddf.md",
           "sha": "78bfda9bcf4e3c5b8fbe7843e4be8b5b10dcec24",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2649,8 +2649,8 @@
           "content_hash": "69c9b8284e27cd62bb65cec8fa144303ed8b29f299a3088c9b41ecfe3c4a3ba4",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_chat_py_bca962597c6b",
           "observed_blob_sha": "bca962597c6bad025f646e944093ce7ee2cdd39a",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__chat.py__bca962597c6b__5ed3faa43ddf.md",
           "sha": "bca962597c6bad025f646e944093ce7ee2cdd39a",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2661,8 +2661,8 @@
           "content_hash": "9b14770f7d769be8b338c591ec0e15582f2421e0e52e879379e7aab1ae066b9a",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_classify_py_b72ddde1fb55",
           "observed_blob_sha": "b72ddde1fb55366f3f2a60d14b6c38d80f4bf962",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__classify.py__b72ddde1fb55__5ed3faa43ddf.md",
           "sha": "b72ddde1fb55366f3f2a60d14b6c38d80f4bf962",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2673,8 +2673,8 @@
           "content_hash": "f289a77b25118de7152423e764f6e5b59696cc2ebf441ad82c7bdb81b076e658",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_embed_py_626c070c1cfd",
           "observed_blob_sha": "626c070c1cfd8270dde6e1216e1e97dca2032e6f",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__embed.py__626c070c1cfd__5ed3faa43ddf.md",
           "sha": "626c070c1cfd8270dde6e1216e1e97dca2032e6f",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2685,8 +2685,8 @@
           "content_hash": "ef720fb26a47dca0333d5633c51c856c21acc45f2f39a8c8dad935f1c693ca8e",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_generate_py_9650dcfe967b",
           "observed_blob_sha": "9650dcfe967b3a5ef6716be3d2bbc1e24b1c0d1d",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__generate.py__9650dcfe967b__5ed3faa43ddf.md",
           "sha": "9650dcfe967b3a5ef6716be3d2bbc1e24b1c0d1d",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2697,8 +2697,8 @@
           "content_hash": "42c9582694f8378bdc4804ea7eaa671f01f7b0168c48a007ae4b146ee01abbb7",
           "entity_id": "doc_vllm_project_vllm_examples_basic_offline_inference_score_py_36f028515302",
           "observed_blob_sha": "36f028515302a643d5aefd1ffaee3d7dc862e31c",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/examples__basic__offline_inference__score.py__36f028515302__5ed3faa43ddf.md",
           "sha": "36f028515302a643d5aefd1ffaee3d7dc862e31c",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2709,8 +2709,8 @@
           "content_hash": "be52371f5d32b9ae54ec5b9612390a9413cd398651f4da42e6a3d49d617d0291",
           "entity_id": "doc_vllm_project_vllm_examples_basic_online_serving_openai_chat_completion_client_py_def95deb0c95",
           "observed_blob_sha": "def95deb0c95d8954fce642cbc9b2a5875236d75",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/examples__basic__online_serving__openai_chat_completion_client.py__def95deb0c95__5ed3faa43ddf.md",
           "sha": "def95deb0c95d8954fce642cbc9b2a5875236d75",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
@@ -2721,14 +2721,14 @@
           "content_hash": "a91d3ef619274b99e78b7d76d760350fe27c4045283b4054118c8dfcf2e7926c",
           "entity_id": "doc_vllm_project_vllm_examples_basic_online_serving_openai_completion_client_py_df6e4e942965",
           "observed_blob_sha": "df6e4e9429650b7db914f585f4ccadb643d9c887",
-          "observed_commit_sha": "738bc8811ae31b733a7806adbc7a580d55729329",
-          "observed_tree_sha": "fa00c976d8d36e9a3686d2015d70d52088cd83ee",
+          "observed_commit_sha": "6cddad414ee46796f21aaf7b8643a6e7a00c09b5",
+          "observed_tree_sha": "764324b33b073c24b5cbe1a3f925248e6fafc2d3",
           "output": "current/serving-inference/vllm_project_vllm/examples__basic__online_serving__openai_completion_client.py__df6e4e942965__5ed3faa43ddf.md",
           "sha": "df6e4e9429650b7db914f585f4ccadb643d9c887",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:46.530719+00:00"
+      "last_checked_at": "2026-08-29T23:40:46.293691+00:00"
     },
     "volcengine/verl": {
       "documents": {
@@ -2745,7 +2745,7 @@
           "tree_sha": "40a5a4d5128a1356ac7909a7d0b5cffdf5dd66b4"
         }
       },
-      "last_checked_at": "2026-08-29T03:25:02.102009+00:00"
+      "last_checked_at": "2026-08-29T23:41:15.564845+00:00"
     },
     "zai-org/Open-AutoGLM": {
       "documents": {
@@ -2762,7 +2762,7 @@
           "tree_sha": "8ee1217deb8a7efe257747efd644aa9e20f89180"
         }
       },
-      "last_checked_at": "2026-08-29T03:24:58.234197+00:00"
+      "last_checked_at": "2026-08-29T23:41:09.148125+00:00"
     }
   },
   "schema_version": 5
