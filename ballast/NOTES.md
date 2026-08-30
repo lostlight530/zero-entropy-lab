@@ -34,8 +34,9 @@
 - [2026-08-28](records/2026-08-28.md) 中 revision-only atomic compare 在同名新 incarnation 复用 local revision 时仍错误 completed, contract-aware identity predicate 将 concrete-instance completion 拒绝.
 - [2026-08-29](records/2026-08-29.md) 中固定 A/B pair 的两个 local revision compare 全部成功时仍可遗漏单目标 reincarnation, complete UID+revision identity set 将其拒绝.
 - [2026-08-30](records/2026-08-30.md) 中 A/B 的 UID 与 revision 全部未变且 frozen compare 原子成功, clean C 已进入 dynamic selector 时仍 completed, membership-aware protected compare 识别 phantom member 并恢复 current contract.
+- [2026-08-31](records/2026-08-31.md) 中 count 保持 2 的 `{A,B}` 到 `{A,C}` clean replacement 让 count witness 错误 completed, 同名 B1 到 B2 clean recreate 又让 logical-name set witness 错误 completed, current UID-set witness 识别 membership identity drift 并恢复 current contract.
 
-独立性: 十六项实验分布在十六个执行日期, 使用不同产物结构、故障位置、输入歧义、集合变化、验证方式、状态 reversal、读取一致性、并发 decision boundary、target identity 与 dynamic membership. 强反例覆盖内部一致性通过、共享解析验证通过、数量验证通过、批量传输验证通过、验证后路径替换、异步终态缺失产物、判定前 revision 漂移、truthful receipt 后合法 reversal、successful read 返回 stale positive、fresh reread 后 TOCTOU、fractured multi-resource view、atomic compare under-binding、fixed identity-set alias 与 dynamic selector phantom.
+独立性: 十七项实验分布在十七个执行日期, 使用不同产物结构、故障位置、输入歧义、集合变化、验证方式、状态 reversal、读取一致性、并发 decision boundary、target identity、dynamic membership 与 membership identity replacement. 强反例覆盖内部一致性通过、共享解析验证通过、数量验证通过、批量传输验证通过、验证后路径替换、异步终态缺失产物、判定前 revision 漂移、truthful receipt 后合法 reversal、successful read 返回 stale positive、fresh reread 后 TOCTOU、fractured multi-resource view、atomic compare under-binding、fixed identity-set alias、dynamic selector phantom 与 count/name-set equality 下的 membership identity alias.
 
 限制: 尚未覆盖真实远端分页快照、真实 Saga engine、真实多区域副作用、不可逆 occurrence-only effect、真实 predicate transaction、真实 dynamic selector 高 churn 与 target/completion 无共享事务的跨服务恢复. 受控 verifier 仍可能共享场景语义错误, relevant-state projection、membership witness 与 compare predicate 的依赖完整性也未在复杂真实任务中证明.
 
@@ -68,8 +69,9 @@
 - [2026-08-25](records/2026-08-25.md) 将 postcondition observation 与 completion commit 绑定 protected compare boundary, completed replay 四条路径保持零新增 effect.
 - [2026-08-29](records/2026-08-29.md) 将固定 multi-resource completion 绑定完整 target UID+revision set, completed replay 保持零新增 effect.
 - [2026-08-30](records/2026-08-30.md) 将 selector-bound completion 绑定 current membership witness 与 member identity/freshness, completed replay 四条路径均 effect_count 0.
+- [2026-08-31](records/2026-08-31.md) 将 selector-bound completion 绑定 current UID-set witness 与 per-member freshness, same-count 与 same-name replacement 均先识别 identity conflict 并重新绑定 current set, completed replay 四条路径均 effect_count 0.
 
-独立性: 十七项实验分布在十七个时间窗口, 分别改变事实源、非幂等意图、去重保留期、共同故障、分区恢复、租约接管、副作用收据双写、超时后的迟到提交、批量部分成功、验证后路径替换、异步终态产物分裂、unknown outcome、current postcondition freshness、read-to-commit atomicity、fixed identity set 与 dynamic membership. 强反例覆盖旧事实源自洽、同键不同意图、同标识不同资源、聚合恢复误导、全局熔断过早关闭、过期持有者覆盖、幽灵成功收据、取消后旧结果覆盖、整批重试重复已成功项、已验证路径发布不同字节与局部 completion evidence 假成功.
+独立性: 十八项实验分布在十八个时间窗口, 分别改变事实源、非幂等意图、去重保留期、共同故障、分区恢复、租约接管、副作用收据双写、超时后的迟到提交、批量部分成功、验证后路径替换、异步终态产物分裂、unknown outcome、current postcondition freshness、read-to-completion atomicity、fixed identity set 与 dynamic membership 与 membership identity replacement. 强反例覆盖旧事实源自洽、同键不同意图、同标识不同资源、聚合恢复误导、全局熔断过早关闭、过期持有者覆盖、幽灵成功收据、取消后旧结果覆盖、整批重试重复已成功项、已验证路径发布不同字节、局部 completion evidence 假成功与 membership witness under-binding.
 
 限制: 尚未覆盖真实并发租约、续约确认丢失、时钟漂移、远端索引延迟、跨服务事务、不可逆副作用、真实 dynamic selector 与验证器完全独立实现. 7 月 30 日只模拟单文件原子可见性, 不证明断电持久性. 7 月 31 日及 8 月后续并发窗口主要使用确定性事件交错, 不证明真实线程调度、网络取消、predicate transaction 或 watch delivery 语义. 零副作用是本组受控重放结果, 不是所有重试都应跳过的通用规则.
 
