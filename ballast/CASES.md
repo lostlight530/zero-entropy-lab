@@ -262,10 +262,10 @@
 
 ## B-39 动态 selector membership 的 phantom completion
 
-- 输入: selector-bound dynamic target set、当前成员 UID/revision、membership 或 predicate witness、completion record
-- 变化: 在最后一次普通 list 或 relist 后让新的 required member 加入 selector, 再比较 frozen member compare、普通 relist、whole-store global compare 与 membership-aware protected compare
-- 检查: 完整比较已观察成员是否遗漏新成员, relist 与 completion 是否仍有 membership race, membership witness 是否同时覆盖成员增删与既有成员 revision drift, whole-store revision 是否因 selector 外变化过度冲突
-- 强反例: A/B 的 UID 与 revision 全部未变且 frozen compare 原子成功, 但 clean C 已加入 selector, 路径仍 completed; C 在最后一次 relist 后加入时普通 relist 同样 false complete
+- 输入: selector-bound task、读取时 membership identity set、每个成员的 incarnation identity/revision、completion record 与可验证 selector membership witness
+- 变化: 分别在 completion 前新增 required member、删除一个成员并加入新成员保持 count 不变、同逻辑名称删除重建 member, 再比较 frozen-member、count、logical-name set、whole-store global 与 membership-identity compare
+- 检查: count、logical-name set 与已观察 member compare 是否遗漏 membership identity drift, 普通 relist 后是否仍存在 membership-to-commit 窗口, global compare 是否因 selector 外变化 over-fence, membership witness 与 member identity/state 是否共同进入 protected completion
+- 强反例: A/B 满足目标后, `{A,B}` 变为 `{A,C}` 且 C clean 时 count 仍为 2, count compare 错误 completion; B1 被同名 B2 替换且 B2 clean 时 logical-name set 仍为 `{job-a,job-b}`, name-set compare 仍错误 completion
 
 ## 扩展规则
 新案例必须来自真实失败机制并包含可复验条件. 单纯改写已有问题不构成新案例.
