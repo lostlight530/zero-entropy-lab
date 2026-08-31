@@ -1,143 +1,181 @@
 name: NEXUS CORTEX Life Cycle
+
 on:
   schedule:
     - cron: '0 22 * * *'
   push:
     paths: ['.github/workflows/nexus-life-cycle.yml', 'data/inputs/**', 'data/knowledge/**', 'src/**', 'tests/**']
+  pull_request:
+    paths: ['.github/workflows/nexus-life-cycle.yml', 'data/inputs/**', 'data/knowledge/**', 'src/**', 'tests/**']
   workflow_dispatch:
+    inputs:
+      apply:
+        description: Apply a verified lifecycle candidate to main
+        required: false
+        default: false
+        type: boolean
+
 concurrency:
   group: nexus-life-cycle-${{ github.repository }}-${{ github.ref }}
   cancel-in-progress: false
+
 env:
   GITHUB_DEPENDENCY_GRAPH_ENABLED: 'false'
   PYTHONDONTWRITEBYTECODE: '1'
   PYTHONUTF8: '1'
+
 jobs:
-  consciousness:
-    name: Stream of Consciousness
+  validate:
+    name: Read-only lifecycle validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout reality
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          clean: true
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.10'
+      - name: Validate runtime contracts
+        run: |
+          python -c "from pathlib import Path; files=sorted(Path('src/kernel').rglob('*.py')) + sorted(Path('tests').glob('*.py')); [compile(path.read_bytes(), str(path), 'exec') for path in files]; print(f'compiled {len(files)} backend Python files')"
+          python tests/run_tests.py
+      - name: Validate active ledgers without rewriting
+        run: python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import maintain_jsonl; result=maintain_jsonl('data/knowledge'); print(result); assert result['invalid']==0"
+      - name: Verify read-only boundary
+        run: |
+          test -z "$(git status --porcelain)"
+          git diff --check
+
+  apply:
+    name: Scheduled candidate and guarded apply
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      (github.event_name == 'schedule' ||
+      (github.event_name == 'workflow_dispatch' && inputs.apply == true))
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
       contents: write
     steps:
-      - name: Checkout Reality
-        uses: actions/checkout@v5
+      - name: Checkout base world-line
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
         with:
           clean: true
           fetch-depth: 0
+          ref: main
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
         with:
           python-version: '3.10'
-      - name: Validate Runtime Contracts
+      - name: Record base world-line
+        id: base
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Validate runtime contracts
         run: |
           python -c "from pathlib import Path; files=sorted(Path('src/kernel').rglob('*.py')) + sorted(Path('tests').glob('*.py')); [compile(path.read_bytes(), str(path), 'exec') for path in files]; print(f'compiled {len(files)} backend Python files')"
           python tests/run_tests.py
-      - name: Validate Existing Ledgers
-        run: python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import maintain_jsonl; print(maintain_jsonl('data/knowledge'))"
-      - name: Harvest Approved External Documents
+      - name: Validate existing ledgers without rewriting
+        run: python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import maintain_jsonl; result=maintain_jsonl('data/knowledge'); print(result); assert result['invalid']==0"
+      - name: Harvest approved external documents
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python src/kernel/protocol/nexus.py harvest
-      - name: Project External Evidence
+      - name: Project external evidence
         run: python src/kernel/protocol/nexus.py project
-      - name: Canonicalize Active Ledgers
-        run: python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import canonicalize_ledger; print(canonicalize_ledger('data/knowledge', hash_chain=True))"
-      - name: Remove Protected Sources from Active Graph
-        run: python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import prune_generated_paths; print(prune_generated_paths('data/knowledge', ('aegis-cortex', 'ballast', 'index.html', 'src/assets', 'src/scripts', 'src/styles'), hash_chain=True))"
-      - name: Rebuild Memory
-        run: python src/kernel/protocol/nexus.py rebuild
-      - name: Ingest Self-Codebase
-        run: python src/kernel/protocol/nexus.py ingest
-      - name: Re-prune Protected Sources
-        run: python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import prune_generated_paths; print(prune_generated_paths('data/knowledge', ('aegis-cortex', 'ballast', 'index.html', 'src/assets', 'src/scripts', 'src/styles'), hash_chain=True))"
-      - name: Validate Canonical Graph
-        run: python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import canonicalize_ledger, verify_hash_chain; repaired=canonicalize_ledger('data/knowledge', hash_chain=True); clean=canonicalize_ledger('data/knowledge', hash_chain=True); h=verify_hash_chain('data/knowledge'); print(repaired); print(clean); print(h); assert clean['duplicate_entities']==0 and clean['duplicate_relations']==0 and clean['dangling_relations']==0 and h['broken']==0"
-      - name: Rebuild Validated Memory
-        run: python src/kernel/protocol/nexus.py rebuild
-      - name: Deep Ponder
-        run: python src/kernel/protocol/nexus.py ponder
-      - name: Run Evolution Cycle
-        run: python src/kernel/protocol/nexus.py evolve
-      - name: Render Human-Readable Reports
-        run: python src/kernel/sensory/report_hygiene.py zero data/memories
-      - name: Validate Post-Evolution Graph
-        run: python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import canonicalize_ledger, verify_hash_chain; repaired=canonicalize_ledger('data/knowledge', hash_chain=True); clean=canonicalize_ledger('data/knowledge', hash_chain=True); h=verify_hash_chain('data/knowledge'); print(repaired); print(clean); print(h); assert clean['duplicate_entities']==0 and clean['duplicate_relations']==0 and clean['dangling_relations']==0 and h['broken']==0"
-      - name: Rebuild Post-Evolution Memory
-        run: python src/kernel/protocol/nexus.py rebuild
-      - name: Final Verification
-        run: python tests/run_tests.py
-      - name: Verify Lifecycle Write Boundary
+      - name: Canonicalize and isolate active graph
         run: |
-          python - <<'PY'
-          import subprocess
-
-          allowed = (
-              "data/memories/",
-              "data/inputs/",
-              "data/knowledge/",
-          )
-          commands = (
-              ("git", "diff", "--name-only"),
-              ("git", "ls-files", "--others", "--exclude-standard"),
-          )
-          changed = {
-              path
-              for command in commands
-              for path in subprocess.check_output(command, text=True).splitlines()
-              if path
-          }
-          unexpected = sorted(path for path in changed if not path.startswith(allowed))
-          if unexpected:
-              raise SystemExit(f"unexpected lifecycle paths: {unexpected}")
-          PY
-          git diff --check
-      - name: Sync World-Line
-        if: github.ref == 'refs/heads/main'
+          python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import canonicalize_ledger; print(canonicalize_ledger('data/knowledge', hash_chain=True))"
+          python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import prune_generated_paths; print(prune_generated_paths('data/knowledge', ('aegis-cortex', 'ballast', 'index.html', 'src/assets', 'src/scripts', 'src/styles'), hash_chain=True))"
+      - name: Rebuild and ingest memory
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin main
-          core_changes="$(git diff --name-only "$GITHUB_SHA..origin/main" | grep -Ev '^(data/(memories|inputs|knowledge)/|aegis-cortex/|ballast/|src/(assets|scripts|styles)/|index\.html$)' || true)"
-          if [ -n "$core_changes" ]; then
-            echo "Core files changed on main while this run was active:"
-            echo "$core_changes"
-            exit 1
-          fi
-          git pull --rebase --autostash origin main
-      - name: Verify Rebased World-Line
-        if: github.ref == 'refs/heads/main'
+          python src/kernel/protocol/nexus.py rebuild
+          python src/kernel/protocol/nexus.py ingest
+          python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import prune_generated_paths; print(prune_generated_paths('data/knowledge', ('aegis-cortex', 'ballast', 'index.html', 'src/assets', 'src/scripts', 'src/styles'), hash_chain=True))"
+      - name: Validate canonical graph and hash chain
         run: |
-          python -c "from pathlib import Path; files=sorted(Path('src/kernel').rglob('*.py')) + sorted(Path('tests').glob('*.py')); [compile(path.read_bytes(), str(path), 'exec') for path in files]; print(f'compiled {len(files)} backend Python files')"
+          python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import canonicalize_ledger, verify_hash_chain; repaired=canonicalize_ledger('data/knowledge', hash_chain=True); clean=canonicalize_ledger('data/knowledge', hash_chain=True); chain=verify_hash_chain('data/knowledge'); print(repaired); print(clean); print(chain); assert clean['duplicate_entities']==0 and clean['duplicate_relations']==0 and clean['dangling_relations']==0 and chain['broken']==0"
+          python src/kernel/protocol/nexus.py rebuild
+      - name: Produce bounded lifecycle projections
+        run: |
+          python src/kernel/protocol/nexus.py ponder
+          python src/kernel/protocol/nexus.py evolve
+          python src/kernel/sensory/report_hygiene.py zero data/memories
+      - name: Final graph and runtime verification
+        run: |
+          python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import canonicalize_ledger, verify_hash_chain; repaired=canonicalize_ledger('data/knowledge', hash_chain=True); clean=canonicalize_ledger('data/knowledge', hash_chain=True); chain=verify_hash_chain('data/knowledge'); print(repaired); print(clean); print(chain); assert clean['duplicate_entities']==0 and clean['duplicate_relations']==0 and clean['dangling_relations']==0 and chain['broken']==0"
+          python src/kernel/protocol/nexus.py rebuild
           python tests/run_tests.py
-          python -c "import sys; sys.path.insert(0, 'src/kernel/sensory'); from document_hygiene import canonicalize_ledger, verify_hash_chain; repaired=canonicalize_ledger('data/knowledge', hash_chain=True); clean=canonicalize_ledger('data/knowledge', hash_chain=True); h=verify_hash_chain('data/knowledge'); print(repaired); print(clean); print(h); assert clean['duplicate_entities']==0 and clean['duplicate_relations']==0 and clean['dangling_relations']==0 and h['broken']==0"
+      - name: Verify lifecycle write boundary
+        run: |
           python - <<'PY'
           import subprocess
-
-          allowed = (
-              "data/memories/",
-              "data/inputs/",
-              "data/knowledge/",
-          )
-          commands = (
-              ("git", "diff", "--name-only"),
-              ("git", "ls-files", "--others", "--exclude-standard"),
-          )
-          changed = {
-              path
-              for command in commands
-              for path in subprocess.check_output(command, text=True).splitlines()
-              if path
-          }
+          allowed = ("data/memories/", "data/inputs/", "data/knowledge/")
+          commands = (("git", "diff", "--name-only"), ("git", "ls-files", "--others", "--exclude-standard"))
+          changed = {path for command in commands for path in subprocess.check_output(command, text=True).splitlines() if path}
           unexpected = sorted(path for path in changed if not path.startswith(allowed))
           if unexpected:
               raise SystemExit(f"unexpected lifecycle paths: {unexpected}")
           PY
           git diff --check
-      - name: Commit Cognitive Changes
-        if: github.ref == 'refs/heads/main'
-        uses: stefanzweifel/git-auto-commit-action@v7
+      - name: Compare base world-line
+        id: world_line
+        env:
+          BASE_SHA: ${{ steps.base.outputs.sha }}
+        run: |
+          git fetch origin main
+          remote_sha="$(git rev-parse origin/main)"
+          python src/kernel/orchestration/lifecycle_guard.py world-line --base-sha "$BASE_SHA" --remote-sha "$remote_sha"
+      - name: Build lifecycle manifest
+        id: manifest
+        env:
+          BASE_SHA: ${{ steps.base.outputs.sha }}
+        run: |
+          python src/kernel/orchestration/lifecycle_guard.py manifest --repository "$GITHUB_REPOSITORY" --mode apply --base-sha "$BASE_SHA" --event-name "$GITHUB_EVENT_NAME" --output "$RUNNER_TEMP/lifecycle-manifest.json"
+      - name: Commit only a stable meaningful candidate
+        id: apply_candidate
+        env:
+          WORLD_LINE: ${{ steps.world_line.outputs.outcome }}
+          CANDIDATE_COUNT: ${{ steps.manifest.outputs.candidate_count }}
+        run: |
+          outcome="NO_MEANINGFUL_DELTA"
+          if [ "$WORLD_LINE" != "WORLD_LINE_STABLE" ]; then
+            outcome="CONFLICTED_WORLD_LINE_NO_APPLY"
+            echo "::warning::Main changed during this run. Candidate was not applied."
+          elif [ "$CANDIDATE_COUNT" != "0" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/memories data/inputs data/knowledge
+            if ! git diff --cached --quiet; then
+              git commit -m "lifecycle: apply verified cognitive delta [skip ci]"
+              if git push origin HEAD:main; then outcome="APPLIED"; else outcome="CONFLICTED_WORLD_LINE_NO_APPLY"; echo "::warning::Main advanced before push. Local candidate was not applied."; fi
+            fi
+          fi
+          echo "outcome=$outcome" >> "$GITHUB_OUTPUT"
+      - name: Finalize lifecycle manifest and summary
+        env:
+          APPLY_OUTCOME: ${{ steps.apply_candidate.outputs.outcome }}
+        run: |
+          python src/kernel/orchestration/lifecycle_guard.py finalize --manifest "$RUNNER_TEMP/lifecycle-manifest.json" --outcome "$APPLY_OUTCOME"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          manifest = json.loads((Path(os.environ["RUNNER_TEMP"]) / "lifecycle-manifest.json").read_text(encoding="utf-8"))
+          with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a", encoding="utf-8") as summary:
+              summary.write("# Lifecycle result\n\n")
+              summary.write(f"- Outcome: `{manifest['outcome']}`\n- Logical cycle: `{manifest['logical_cycle_time']}`\n- Idempotency key: `{manifest['idempotency_key']}`\n- Candidate paths: `{len(manifest['candidate_paths'])}`\n- Hash-chain derived paths: `{manifest['deltas']['hash_chain_derived']}`\n")
+          PY
+      - name: Preserve lifecycle manifest
+        if: always()
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4
         with:
-          commit_message: "lifecycle: verified cognitive update [skip ci]"
-          branch: main
-          file_pattern: "data/memories/** data/inputs/** data/knowledge/**"
+          name: zero-lifecycle-manifest-${{ github.run_id }}
+          path: ${{ runner.temp }}/lifecycle-manifest.json
+          if-no-files-found: warn
+          retention-days: 30
