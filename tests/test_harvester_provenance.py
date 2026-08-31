@@ -63,7 +63,7 @@ class HarvesterProvenanceContracts(unittest.TestCase):
             "primary_owner": "zero",
         }
 
-    def test_normalized_noise_only_advances_observed_provenance(self):
+    def test_normalized_noise_does_not_mutate_persisted_provenance(self):
         with tempfile.TemporaryDirectory() as tmp:
             harvester = Harvester.__new__(Harvester)
             harvester.inputs = Path(tmp)
@@ -133,12 +133,12 @@ class HarvesterProvenanceContracts(unittest.TestCase):
                     document["observed_tree_sha"],
                     document["observed_blob_sha"],
                 ),
-                (new_commit, new_tree, new_blob),
+                (old_commit, old_tree, old_blob),
             )
             self.assertTrue(snapshot.exists())
             self.assertFalse((harvester.inputs / "archive").exists())
 
-    def test_unchanged_blob_advances_only_observed_commit_and_tree(self):
+    def test_unchanged_blob_does_not_mutate_persisted_document_state(self):
         harvester = Harvester.__new__(Harvester)
         blob_sha = "c" * 40
         old_commit, old_tree = "a" * 40, "b" * 40
@@ -195,7 +195,7 @@ class HarvesterProvenanceContracts(unittest.TestCase):
                 document["observed_tree_sha"],
                 document["observed_blob_sha"],
             ),
-            (new_commit, new_tree, blob_sha),
+            (old_commit, old_tree, blob_sha),
         )
 
     def test_schema_four_recovers_snapshot_provenance_once(self):

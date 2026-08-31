@@ -353,20 +353,23 @@ class HarvesterContracts(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "invalid graph"):
                 evolver._incubate_ideas()
 
-    def test_branch_runs_enforce_write_boundary_before_sync(self):
+    def test_apply_enforces_write_boundary_before_world_line_decision(self):
         workflow = (
             Path(__file__).parents[1]
             / ".github"
             / "workflows"
             / "nexus-life-cycle.yml"
         ).read_text(encoding="utf-8")
-        self.assertIn("- name: Verify Lifecycle Write Boundary", workflow)
-        boundary = workflow.index("- name: Verify Lifecycle Write Boundary")
-        sync = workflow.index("- name: Sync World-Line")
-        boundary_block = workflow[boundary:sync]
+        self.assertIn("- name: Verify lifecycle write boundary", workflow)
+        boundary = workflow.index("- name: Verify lifecycle write boundary")
+        comparison = workflow.index("- name: Compare base world-line")
+        boundary_block = workflow[boundary:comparison]
 
-        self.assertLess(boundary, sync)
+        self.assertLess(boundary, comparison)
         self.assertNotIn("if: github.ref == 'refs/heads/main'", boundary_block)
+        self.assertNotIn("pull --rebase", workflow)
+        self.assertNotIn("autostash", workflow)
+        self.assertNotIn("git-auto-commit-action", workflow)
 
     def test_profiles_are_approved_and_zero_owned(self):
         h = Harvester(Path(__file__).parents[1])
