@@ -626,16 +626,16 @@
     "microsoft/agent-framework": {
       "documents": {
         "README.md": {
-          "blob_sha": "ac7041a813d715158b0ec55cd1d5c62d205e3db6",
-          "commit_sha": "c6a0e90250a3a195c3994a06f56c9dcb9a5a2b37",
-          "content_hash": "77de2e1ea3396e704e399acbf0cd5b4ed41a86f615898bdaedeb259b31f551d9",
+          "blob_sha": "fad86ea1d439bfb11df19b9e5d14c0b493b79ae0",
+          "commit_sha": "6a0773ba2180e8036d138dbb9794ae64ec2d978b",
+          "content_hash": "5fee34116753f051e0bfa87bd961a6f28197c3587461faf6632432563f2d395b",
           "entity_id": "doc_microsoft_agent_framework_readme_md_f1e82d81a897",
-          "observed_blob_sha": "ac7041a813d715158b0ec55cd1d5c62d205e3db6",
-          "observed_commit_sha": "edfe115ea06bca57ae5a123d0fac5b3fdda13603",
-          "observed_tree_sha": "453055ec74e2528c6bd5d33c6a3f80b9baf7355e",
-          "output": "current/agent-runtime/microsoft_agent_framework/README.md__ac7041a813d7__c6a0e90250a3.md",
-          "sha": "ac7041a813d715158b0ec55cd1d5c62d205e3db6",
-          "tree_sha": "3f3cc2a553ee0f122af500f4bef5d8c9495d09ef"
+          "observed_blob_sha": "fad86ea1d439bfb11df19b9e5d14c0b493b79ae0",
+          "observed_commit_sha": "6a0773ba2180e8036d138dbb9794ae64ec2d978b",
+          "observed_tree_sha": "69007e15cd1b3a7d9194aedfae0758a245785c3c",
+          "output": "current/agent-runtime/microsoft_agent_framework/README.md__fad86ea1d439__6a0773ba2180.md",
+          "sha": "fad86ea1d439bfb11df19b9e5d14c0b493b79ae0",
+          "tree_sha": "69007e15cd1b3a7d9194aedfae0758a245785c3c"
         },
         "docs/decisions/0001-agent-run-response.md": {
           "blob_sha": "68626cb1818eb077e9dd9d51ab286b3fba520ed5",
@@ -829,18 +829,6 @@
           "sha": "776df1e926800a1ba11702372adc2cd7ef558fd6",
           "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
         },
-        "docs/decisions/0016-structured-output.md": {
-          "blob_sha": "4fdae3c77ee67dc4e5d623274dd1680df9b442b2",
-          "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
-          "content_hash": "9f5d89f14b99be59b7705e32f8a11409265271a7e2b640a7dda566bd23ad9eec",
-          "entity_id": "doc_microsoft_agent_framework_docs_decisions_0016_structured_output_md_4fdae3c77ee6",
-          "observed_blob_sha": "4fdae3c77ee67dc4e5d623274dd1680df9b442b2",
-          "observed_commit_sha": "edfe115ea06bca57ae5a123d0fac5b3fdda13603",
-          "observed_tree_sha": "453055ec74e2528c6bd5d33c6a3f80b9baf7355e",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0016-structured-output.md__4fdae3c77ee6__7b6d2579884b.md",
-          "sha": "4fdae3c77ee67dc4e5d623274dd1680df9b442b2",
-          "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
-        },
         "docs/decisions/0017-agent-additional-properties.md": {
           "blob_sha": "8531a9bd2bd6be0902fb48d49211a444e4e7c9db",
           "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
@@ -889,18 +877,6 @@
           "sha": "03d43f64ac5e30dc72cbc8796472ff5d01725aaf",
           "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
         },
-        "docs/decisions/0021-agent-skills-design.md": {
-          "blob_sha": "d63f38c734616987dabdfee74738c361d7e8dc62",
-          "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
-          "content_hash": "faf549819051505e0c2124e74361fc0c98d352b8fbb15d9e5d991a48f7212b18",
-          "entity_id": "doc_microsoft_agent_framework_docs_decisions_0021_agent_skills_design_md_d63f38c73461",
-          "observed_blob_sha": "d63f38c734616987dabdfee74738c361d7e8dc62",
-          "observed_commit_sha": "edfe115ea06bca57ae5a123d0fac5b3fdda13603",
-          "observed_tree_sha": "453055ec74e2528c6bd5d33c6a3f80b9baf7355e",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0021-agent-skills-design.md__d63f38c73461__7b6d2579884b.md",
-          "sha": "d63f38c734616987dabdfee74738c361d7e8dc62",
-          "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
-        },
         "docs/decisions/0021-provider-leading-clients.md": {
           "blob_sha": "d019db314960b4254292af7ba5f8ac993aff6e0e",
           "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
@@ -935,18 +911,6 @@
           "observed_tree_sha": "453055ec74e2528c6bd5d33c6a3f80b9baf7355e",
           "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0023-foundry-evals-integration.md__e2534020871b__7b6d2579884b.md",
           "sha": "e2534020871b9d0ff05b36dc9eb0403c8cf2474d",
-          "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
-        },
-        "docs/decisions/0024-codeact-integration.md": {
-          "blob_sha": "b83af6a17e9de21c8ef7a4f88d00e0aa3d744dd2",
-          "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
-          "content_hash": "67eee68c2ef5daa937ccfb4deeb47609c42c45019dd2321442fdd74b2e4ad18a",
-          "entity_id": "doc_microsoft_agent_framework_docs_decisions_0024_codeact_integration_md_b83af6a17e9d",
-          "observed_blob_sha": "b83af6a17e9de21c8ef7a4f88d00e0aa3d744dd2",
-          "observed_commit_sha": "edfe115ea06bca57ae5a123d0fac5b3fdda13603",
-          "observed_tree_sha": "453055ec74e2528c6bd5d33c6a3f80b9baf7355e",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0024-codeact-integration.md__b83af6a17e9d__7b6d2579884b.md",
-          "sha": "b83af6a17e9de21c8ef7a4f88d00e0aa3d744dd2",
           "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
         },
         "docs/decisions/0024-prompt-injection-defense.md": {
@@ -1129,6 +1093,42 @@
           "sha": "2f57ac194f324fb87d8ed1901b43aa0f8d1cd6ac",
           "tree_sha": "b868f7e2829a5ff5a62d4faf08bce6ff7260cfa2"
         },
+        "docs/decisions/0036-structured-output.md": {
+          "blob_sha": "4fdae3c77ee67dc4e5d623274dd1680df9b442b2",
+          "commit_sha": "6a0773ba2180e8036d138dbb9794ae64ec2d978b",
+          "content_hash": "9f5d89f14b99be59b7705e32f8a11409265271a7e2b640a7dda566bd23ad9eec",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0036_structured_output_md",
+          "observed_blob_sha": "4fdae3c77ee67dc4e5d623274dd1680df9b442b2",
+          "observed_commit_sha": "6a0773ba2180e8036d138dbb9794ae64ec2d978b",
+          "observed_tree_sha": "69007e15cd1b3a7d9194aedfae0758a245785c3c",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0036-structured-output.md__4fdae3c77ee6__6a0773ba2180.md",
+          "sha": "4fdae3c77ee67dc4e5d623274dd1680df9b442b2",
+          "tree_sha": "69007e15cd1b3a7d9194aedfae0758a245785c3c"
+        },
+        "docs/decisions/0037-agent-skills-design.md": {
+          "blob_sha": "d63f38c734616987dabdfee74738c361d7e8dc62",
+          "commit_sha": "6a0773ba2180e8036d138dbb9794ae64ec2d978b",
+          "content_hash": "faf549819051505e0c2124e74361fc0c98d352b8fbb15d9e5d991a48f7212b18",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0037_agent_skills_design_md",
+          "observed_blob_sha": "d63f38c734616987dabdfee74738c361d7e8dc62",
+          "observed_commit_sha": "6a0773ba2180e8036d138dbb9794ae64ec2d978b",
+          "observed_tree_sha": "69007e15cd1b3a7d9194aedfae0758a245785c3c",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0037-agent-skills-design.md__d63f38c73461__6a0773ba2180.md",
+          "sha": "d63f38c734616987dabdfee74738c361d7e8dc62",
+          "tree_sha": "69007e15cd1b3a7d9194aedfae0758a245785c3c"
+        },
+        "docs/decisions/0038-codeact-integration.md": {
+          "blob_sha": "b83af6a17e9de21c8ef7a4f88d00e0aa3d744dd2",
+          "commit_sha": "6a0773ba2180e8036d138dbb9794ae64ec2d978b",
+          "content_hash": "67eee68c2ef5daa937ccfb4deeb47609c42c45019dd2321442fdd74b2e4ad18a",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0038_codeact_integration_md",
+          "observed_blob_sha": "b83af6a17e9de21c8ef7a4f88d00e0aa3d744dd2",
+          "observed_commit_sha": "6a0773ba2180e8036d138dbb9794ae64ec2d978b",
+          "observed_tree_sha": "69007e15cd1b3a7d9194aedfae0758a245785c3c",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0038-codeact-integration.md__b83af6a17e9d__6a0773ba2180.md",
+          "sha": "b83af6a17e9de21c8ef7a4f88d00e0aa3d744dd2",
+          "tree_sha": "69007e15cd1b3a7d9194aedfae0758a245785c3c"
+        },
         "docs/decisions/README.md": {
           "blob_sha": "55c48a7089dde103d2ec7bc3c9d16412989fe2e7",
           "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
@@ -1178,7 +1178,7 @@
           "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
         }
       },
-      "last_checked_at": "2026-08-31T00:00:15.180485+00:00"
+      "last_checked_at": "2026-08-31T11:56:27.206583+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
