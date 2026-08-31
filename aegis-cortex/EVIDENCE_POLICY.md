@@ -293,4 +293,24 @@ Later reconciliation preserves original state and records stronger current inter
 
 Current August stage authority: `2026-08-through-27-stage-audit.md`.
 
-Formal August A5/A6: `OPEN`.
+Formal August A5/A6: closed by the authorized month-end A5/A6 pair after all 31 Daily pairs became present.
+
+## 20. August closure and forward contract
+
+The 2026-08-01 through 2026-08-31 Daily surface contains 31 A1/A2 pairs.
+
+The files from 2026-08-29 through 2026-08-31 and the W35 A3/A4 pair were generated after the active provenance contract was defined but do not contain its fields. They remain immutable point-in-time records and are calibrated by `2026-08-month-end-reconciliation.md`.
+
+Beginning with logical date 2026-09-01 and logical week 2026-W36, the checker requires the active contract even when a generator omits `Record Provenance` entirely.
+
+A missing A3 is acceptable only when A4 explicitly records `DECISION_INPUT_MISSING`, `BLOCKED`, `NO_ACTIONABLE_DECISION`, and no state change.
+
+Monthly A5/A6 records require Daily and Weekly coverage matrices, inherited and independent evidence separation, preserved missing inputs, external-risk and local-incident separation, proof-boundary calibration, execution and path state separation, and real provenance.
+
+A5 closes evidence review only after every calendar-day A1/A2 pair exists. A6 must name the same-month A5 and may retain only bounded doctrine that survived A5 calibration.
+
+`EXTERNAL_RISK_SUPPORTED != LOCAL_INCIDENT_ESTABLISHED`.
+
+`VALID_DECLARATION != TRANSITION_EXECUTED`.
+
+`MONTHLY_COMPRESSION != NEW_INDEPENDENT_EVIDENCE`.
