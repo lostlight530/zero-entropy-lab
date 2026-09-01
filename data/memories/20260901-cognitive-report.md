@@ -11,7 +11,7 @@
 
 | 指标 | 值 |
 | --- | --- |
-| 存储 MB | `0.76` |
+| 存储 MB | `0.75` |
 | Journal 行数 | `0` |
 | 图密度 | `0.83_SPARSE` |
 
@@ -27,7 +27,7 @@
 ```text
 # NEXUS CORTEX: Cognitive Report
 
-DATE: 2026-09-01 00:52:37 (UTC)
+DATE: 2026-09-01 23:39:24 (UTC)
 
 ## 系统状态基线 (System Status Baseline)
 STATUS: ONLINE
@@ -37,7 +37,7 @@ TOPOLOGY: FRAGMENTED_3_ORPHANS
 TASK_SUGGESTION: RELATION_MAPPING_RECOMMENDED
 
 ## 物理层性能遥测 (Physical Telemetry)
-STORAGE_MB: 0.76
+STORAGE_MB: 0.75
 JOURNAL_ROWS: 0
 GRAPH_DENSITY: 0.83_SPARSE
 
