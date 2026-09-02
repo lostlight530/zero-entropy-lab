@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import re
 import sys
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -79,7 +79,7 @@ REQUIRED_SECTIONS = {
     ),
 }
 
-FIELD_RE = re.compile(r"^(?:-\s*)?(?:\*\*)?([^:*\n]+?)(?:\*\*)?:\s*(.+?)\s*$", re.MULTILINE)
+FIELD_RE = re.compile(r"^(?:-[ \t]*)?(?:\*\*)?([^:*\r\n]+?)(?:\*\*)?:[ \t]*([^\r\n]*)$", re.MULTILINE)
 DECISION_ID_RE = re.compile(r"^Decision ID:\s*(\S+)\s*$", re.MULTILINE)
 SOURCE_DECISION_ID_RE = re.compile(r"^Source Decision ID:\s*(\S+)\s*$", re.MULTILINE)
 ACTION_ID_RE = re.compile(r"^Action ID:\s*(\S+)\s*$", re.MULTILINE)
@@ -163,6 +163,57 @@ def fields(text: str) -> dict[str, str]:
     return result
 
 
+def validate_monthly_maintenance(path: str, text: str) -> list[str]:
+    """Check the declared repair ledger, not the truth of its evidence."""
+    pattern = re.compile(r"^(?:-[ \t]*)?(?:\*\*)?([^:*\r\n]+?)(?:\*\*)?:[ \t]*([^\r\n]*)$", re.MULTILINE)
+    pairs = [(key.strip(), value.strip()) for key, value in pattern.findall(text)]
+    statuses = [value for key, value in pairs if key == "Monthly Maintenance Status"]
+    if not statuses:
+        return []  # Legacy records are not retroactively certified or upgraded.
+    errors = []
+    if len(statuses) != 1 or statuses[0] not in {"NOT_RUN", "PARTIAL", "COMPLETED"}:
+        errors.append(f"{path}: invalid or duplicate Monthly Maintenance Status")
+    for key in ("Maintenance Coverage", "Maintenance Change Log",
+                "Maintenance Validation", "Maintenance Unresolved"):
+        values = [value for name, value in pairs if name == key]
+        if len(values) != 1 or not values[0]:
+            errors.append(f"{path}: requires one nonempty {key}")
+    values = dict(pairs)
+    if statuses == ["COMPLETED"]:
+        if values.get("Maintenance Unresolved") != "NONE":
+            errors.append(f"{path}: complete maintenance cannot have unresolved work")
+        for key in ("Maintenance Coverage", "Maintenance Change Log", "Maintenance Validation"):
+            if values.get(key, "").upper() in {"", "NONE", "NOT_RUN", "UNKNOWN", "TODO"}:
+                errors.append(f"{path}: completed maintenance lacks {key} evidence")
+    return errors
+
+
+def validate_month_calendar(path: Path, identity: str, text: str) -> list[str]:
+    """Calendar closure is independent of task success and content quality."""
+    values = fields(text)
+    status = values.get("Month Closure Status")
+    if status not in {"OPEN", "CLOSED", "BLOCKED"}:
+        return [f"{path.name}: invalid Month Closure Status"]
+    if status != "CLOSED":
+        if not values.get("Missing Inputs Preserved"):
+            return [f"{path.name}: open calendar snapshot must preserve missing inputs"]
+        return []
+    stamp = values.get("Execution Time Asia/Shanghai")
+    if not stamp and identity < "2026-09":
+        return []  # Legacy timestamp unknown; never invent an execution time.
+    try:
+        executed = datetime.fromisoformat((stamp or "").replace(" CST", "+08:00").replace(" +08:00", "+08:00"))
+        if executed.utcoffset() != timedelta(hours=8):
+            raise ValueError("Shanghai offset required")
+        year, month = map(int, identity.split("-"))
+        end = datetime(year + (month == 12), month % 12 + 1, 1, tzinfo=timezone(timedelta(hours=8)))
+        if executed < end:
+            return [f"{path.name}: calendar month has not ended at execution"]
+    except ValueError:
+        return [f"{path.name}: calendar closure needs valid Execution Time Asia/Shanghai with +08:00"]
+    return []
+
+
 def iso_week_window(week: str) -> tuple[date, date]:
     year_text, week_text = week.split("-W")
     start = date.fromisocalendar(int(year_text), int(week_text), 1)
@@ -194,7 +245,8 @@ def validate_common(path: Path, task: str, identity: str, text: str) -> list[str
             errors.append(f"{path.name}: missing section {section}")
 
     values = fields(text)
-    task_id = values.get("Task ID")
+    # Input records can legitimately contain the upstream task's metadata.
+    task_id = fields(text.split("INPUT_RECORD", 1)[0]).get("Task ID")
     if task_id and task not in task_id and path.name not in LEGACY_TASK_ID_EXCEPTIONS:
         errors.append(f"{path.name}: Task ID {task_id!r} does not identify {task}")
 
@@ -361,8 +413,9 @@ def validate_a5(path: Path, identity: str, text: str) -> list[str]:
     values = fields(text)
     if values.get("Run Month") != identity:
         errors.append(f"{path.name}: Run Month does not match {identity}")
+    errors.extend(validate_month_calendar(path, identity, text))
     if values.get("Month Closure Status") != "CLOSED":
-        errors.append(f"{path.name}: Month Closure Status must be CLOSED")
+        return errors
     expected_days = 31 if identity.endswith(("-01", "-03", "-05", "-07", "-08", "-10", "-12")) else 30
     if identity.endswith("-02"):
         year = int(identity[:4])
@@ -376,12 +429,15 @@ def validate_a5(path: Path, identity: str, text: str) -> list[str]:
 
 
 def validate_a6(path: Path, identity: str, text: str) -> list[str]:
-    a5 = AEGIS / f"{identity}-A5-drift-reflect.md"
-    if not a5.exists():
-        return [f"{path.name}: same-month A5 input is missing"]
-    if a5.name not in text:
-        return [f"{path.name}: does not name the same-month A5 input"]
-    return []
+    errors = validate_month_calendar(path, identity, text)
+    if fields(text).get("Month Closure Status") != "CLOSED":
+        return errors
+    upstream = AEGIS / f"{identity}-A5-drift-reflect.md"
+    if not upstream.exists():
+        errors.append(f"{path.name}: same-month input absent locally; remote delivery unverified")
+    elif upstream.name not in text:
+        errors.append(f"{path.name}: does not name the same-month A5 input")
+    return errors
 
 
 def validate_path(path: Path) -> list[str]:
@@ -402,6 +458,7 @@ def validate_path(path: Path) -> list[str]:
     if not task_validation_required(task, identity):
         return []
     errors = validate_common(path, task, identity, text)
+    errors.extend(validate_monthly_maintenance(path.name, text))
     if task == "A1":
         errors.extend(validate_a1(path, text))
     elif task == "A2":

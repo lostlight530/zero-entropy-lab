@@ -103,12 +103,10 @@ All exact read paths:
 - aegis-cortex/2026-07-A6-aegis-memorize.md
 
 Inherited Evidence: W31 to W35 A3/A4 decisions and corresponding W31-W35 input A1/A2 context. Previous A5 (2026-07-A5-drift-reflect.md) and A6 (2026-07-A6-aegis-memorize.md).
-Independent Evidence Added:
-- arXiv search: all:"agent drift" OR all:"memory poisoning"
-- arXiv search: all:"false completion" OR all:"silent loop break"
-Missing Inputs Preserved: No missing W31-W35 A3/A4 files. Missing 2026-06 A5/A6 (before inception).
+Independent Evidence Added: NOT_ESTABLISHED. Search queries identify discovery activity, not independently verified papers or new supporting evidence.
+Missing Inputs Preserved: W31-W35 A3/A4 paths are present, but path presence does not establish original input availability. Aug 15 A1/A2 are retrospective reconstructions; Aug 16 A2 retains its original blocked state. W36 crosses the month boundary and was not complete at this cutoff. The original execution timestamp is not recorded.
 External Risk State: Supported external risk classes for memory poisoning (W31) and false completion/silent loop break (W33-W35).
-Local Incident State: NO_LOCAL_INCIDENT_EVIDENCE (Aegis Repository Evidence consistently shows no local silent loop break or memory poisoning incidents).
+Local Incident State: NO_LOCAL_INCIDENT_EVIDENCE. The reviewed records do not establish a local incident; they do not prove that none ever occurred.
 Proof Boundary Calibration: Preventive records do not establish local incident existence.
 
 RELIABILITY_REVIEW
@@ -143,7 +141,7 @@ Originating Files: 2026-W33-A3-discipline-decide.md, 2026-W34-A3-discipline-deci
 External Source Set: arXiv research on false positive completion and quantitative goal persistence in LLM agents.
 Aegis Repository Evidence: NO_LOCAL_EVIDENCE
 Local Applicability: APPLICABLE (preventive)
-Counterevidence: Check.py provides strict outer boundary constraint that mitigates complete text loop breaks.
+Counterevidence: NONE_ESTABLISHED. check.py validates document structure, not runtime isolation or prevention of false completion.
 Classification: effective
 Scope Correction: 3-15% external failure rate does not apply to local repository.
 Confidence: MODERATE
@@ -172,7 +170,7 @@ Scope Limit: Only applicable to explicitly passed control context, not general L
 Confidence: MODERATE
 Validity Window: 2026-09
 Revalidation Trigger: Monthly Review
-Reason: Preventive measure effectively addresses complex structural attacks.
+Reason: Retain a scoped preventive proposal; measured attack resistance is not established by these records.
 
 Candidate ID: CAND-08-02
 Proposed Treatment: PRESERVE
@@ -187,22 +185,23 @@ Revalidation Trigger: Monthly Review
 Reason: Grounded in local Aegis evidence.
 
 Candidate ID: CAND-08-03
-Proposed Treatment: DOWNGRADE
+Proposed Treatment: PRESERVE_AS_PREVENTIVE_REQUIREMENT
 Doctrine or Risk Claim: Double layer verification (status + content) for critical tasks.
 External Evidence: Literature on false completion.
 Aegis Repository Evidence: NO_LOCAL_EVIDENCE
-Counterevidence: `check.py` provides strong structural sandbox constraints.
+Counterevidence: NONE_ESTABLISHED. A structural checker is not a sandbox and cannot replace content/postcondition verification.
 Scope Limit: A4 execution validation points.
 Confidence: LOW
 Validity Window: 2026-09
 Revalidation Trigger: Monthly Review
-Reason: No local evidence justifies treating this as a high-confidence permanent discipline, though it remains a useful watch item.
+Reason: Downgrade unsupported claims of local incident rates or proven effectiveness, not the need to verify task content. Absence of local incident evidence is not evidence that content checks are unnecessary.
 
 HANDOFF_TO_A6
 
 A6 may retain:
 - Provenance tagging discipline for long-term memory reads.
 - Current-state dependency reconciliation requirement before A3 weekly synthesis.
+- Separate status and content/postcondition checks as preventive requirements, without claiming measured local effectiveness.
 
 A6 must not retain:
 - Any claim that the repository locally suffers from a 3-15% false completion rate.
@@ -210,3 +209,15 @@ A6 must not retain:
 
 BOUNDARY_CHECK
 Boundary Violation: NO
+
+## Current maintenance review
+
+Correction Date: 2026-09-02
+Correction Agent: Codex
+Monthly Maintenance Status: PARTIAL
+Maintenance Coverage: See 2026-09-02-maintenance-log.md for scoped paths and limits.
+Maintenance Change Log: 2026-09-02-maintenance-log.md
+Maintenance Validation: See the dated log for actual checks and their limits.
+Maintenance Unresolved: Full per-claim monthly propagation and all-source replay are not certified by this pass.
+
+The header retains the original author and execution facts. Corrections below or in the body are current review, not a replay of the original task.
