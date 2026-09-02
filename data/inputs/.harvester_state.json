@@ -1129,6 +1129,18 @@
           "sha": "b83af6a17e9de21c8ef7a4f88d00e0aa3d744dd2",
           "tree_sha": "69007e15cd1b3a7d9194aedfae0758a245785c3c"
         },
+        "docs/decisions/0039-python-refusal-content.md": {
+          "blob_sha": "5f8dd9a6f99c8599eb0b60e5179516f34297b02f",
+          "commit_sha": "ed8fc04f665c65a8491e43e3c422d917be71fa41",
+          "content_hash": "94bd94867532c680d31550f7fa792ecda34ab71514bdec926781c19069f2370e",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0039_python_refusal_content_md",
+          "observed_blob_sha": "5f8dd9a6f99c8599eb0b60e5179516f34297b02f",
+          "observed_commit_sha": "ed8fc04f665c65a8491e43e3c422d917be71fa41",
+          "observed_tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0039-python-refusal-content.md__5f8dd9a6f99c__ed8fc04f665c.md",
+          "sha": "5f8dd9a6f99c8599eb0b60e5179516f34297b02f",
+          "tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4"
+        },
         "docs/decisions/README.md": {
           "blob_sha": "55c48a7089dde103d2ec7bc3c9d16412989fe2e7",
           "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
@@ -1166,19 +1178,19 @@
           "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
         },
         "docs/design/python-package-setup.md": {
-          "blob_sha": "1c7afbad1a0f494855e2c29669001d90f01c7722",
-          "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
-          "content_hash": "b2fe753df5ffff0da969593f7422aa46b1f0d5a2e2107efd434f2d412a4757d7",
+          "blob_sha": "0c32c7481ee1f2fbcf4fdc7773463c67ff24b435",
+          "commit_sha": "ed8fc04f665c65a8491e43e3c422d917be71fa41",
+          "content_hash": "d1afcef06cee111a886ba8c6fe05a7fc45bcdec1ea581c3c364f2b8fba14a3e9",
           "entity_id": "doc_microsoft_agent_framework_docs_design_python_package_setup_md_1c7afbad1a0f",
-          "observed_blob_sha": "1c7afbad1a0f494855e2c29669001d90f01c7722",
-          "observed_commit_sha": "edfe115ea06bca57ae5a123d0fac5b3fdda13603",
-          "observed_tree_sha": "453055ec74e2528c6bd5d33c6a3f80b9baf7355e",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__design__python-package-setup.md__1c7afbad1a0f__7b6d2579884b.md",
-          "sha": "1c7afbad1a0f494855e2c29669001d90f01c7722",
-          "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
+          "observed_blob_sha": "0c32c7481ee1f2fbcf4fdc7773463c67ff24b435",
+          "observed_commit_sha": "ed8fc04f665c65a8491e43e3c422d917be71fa41",
+          "observed_tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__design__python-package-setup.md__0c32c7481ee1__ed8fc04f665c.md",
+          "sha": "0c32c7481ee1f2fbcf4fdc7773463c67ff24b435",
+          "tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4"
         }
       },
-      "last_checked_at": "2026-08-31T11:56:27.206583+00:00"
+      "last_checked_at": "2026-09-02T23:40:01.399797+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
