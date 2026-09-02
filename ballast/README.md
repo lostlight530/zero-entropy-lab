@@ -44,4 +44,10 @@ python ballast/tools/check.py
 - selector-bound dynamic set 还需要绑定 membership 或 predicate witness,不能把首次观察成员冻结成永久完整集合
 - unknown outcome 重试前先核对权威副作用
 - 周期审计只覆盖连续 6 或 7 个日报,不增加实验或长期结论数量
-- 历史日报不回写,旧结构缺口只做精确兼容
+- 历史执行事实不回写,正文错误通过有依据的最小修正和日志处理,旧结构缺口只做精确兼容
+
+## 月度维护
+
+月度整理不只是写汇总. 按 [方法](METHOD.md#monthly-maintenance-and-correction) 完整检查当月每日、周期审计、月度索引及相关专题,纠正正文后同步受影响的结论和引用.
+
+使用 [月度模板](templates/monthly.md),记录覆盖清单、改动日志、验证结果与未完成项. 本轮边界与进展见 [维护日志](2026-09-02-maintenance-log.md). 不新增调度或接入宿主运行链.

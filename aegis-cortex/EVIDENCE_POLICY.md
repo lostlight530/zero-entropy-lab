@@ -1,7 +1,7 @@
 # Aegis Cortex Evidence Policy
 
 Status: current repository evidence policy  
-Calibration: 2026-08-28
+Calibration: 2026-09-02
 
 This file defines how committed Aegis A1–A6 artifacts are interpreted against the implementation and evidence that actually exist in `zero-entropy-lab`.
 
@@ -289,17 +289,17 @@ A success string, declaration fingerprint, hash, HMAC result, checker pass, or f
 
 Historical A1–A4 artifacts remain point-in-time evidence.
 
-Later reconciliation preserves original state and records stronger current interpretation without silently rewriting history.
+Later reconciliation preserves original state and records stronger current interpretation without silently rewriting history. Authorized minimal prose corrections require a dated before/after log and preserve original execution facts.
 
-Current August stage authority: `2026-08-through-27-stage-audit.md`.
+The Aug 27 stage audit is an as-of snapshot, not the final authority for later delivery or correction. See `2026-09-02-maintenance-log.md` for this pass and its limits.
 
-Formal August A5/A6: closed by the authorized month-end A5/A6 pair after all 31 Daily pairs became present.
+August A5/A6 paths are present. Calendar closure and Daily path completeness do not establish that every monthly conclusion is valid or that maintenance is complete.
 
 ## 20. August closure and forward contract
 
 The 2026-08-01 through 2026-08-31 Daily surface contains 31 A1/A2 pairs.
 
-The files from 2026-08-29 through 2026-08-31 and the W35 A3/A4 pair were generated after the active provenance contract was defined but do not contain its fields. They remain immutable point-in-time records and are calibrated by `2026-08-month-end-reconciliation.md`.
+The files from 2026-08-29 through 2026-08-31 and the W35 A3/A4 pair were generated after the active provenance contract was defined but do not contain its fields. Their original execution facts remain point-in-time evidence and are calibrated by `2026-08-month-end-reconciliation.md`.
 
 Beginning with logical date 2026-09-01 and logical week 2026-W36, the checker requires the active contract even when a generator omits `Record Provenance` entirely.
 
@@ -307,10 +307,37 @@ A missing A3 is acceptable only when A4 explicitly records `DECISION_INPUT_MISSI
 
 Monthly A5/A6 records require Daily and Weekly coverage matrices, inherited and independent evidence separation, preserved missing inputs, external-risk and local-incident separation, proof-boundary calibration, execution and path state separation, and real provenance.
 
-A5 closes evidence review only after every calendar-day A1/A2 pair exists. A6 must name the same-month A5 and may retain only bounded doctrine that survived A5 calibration.
+A5 may claim complete coverage only after the Shanghai calendar month ends and every calendar-day A1/A2 input has an explicitly reviewed delivery and quality state. File presence alone is insufficient. A6 must name the same-month A5 and may retain only bounded doctrine that survived A5 calibration.
 
 `EXTERNAL_RISK_SUPPORTED != LOCAL_INCIDENT_ESTABLISHED`.
 
 `VALID_DECLARATION != TRANSITION_EXECUTED`.
 
 `MONTHLY_COMPRESSION != NEW_INDEPENDENT_EVIDENCE`.
+
+## Monthly maintenance and correction
+
+A monthly summary is not a completed maintenance pass. Calendar closure, input delivery, original execution and current content quality are separate states.
+
+Within this maintenance surface only:
+
+1. Inventory every logical date, intersecting ISO week, monthly record and cited special/audit in the review window. Identify each input by path and immutable commit or PR head. Record delivered-but-unmerged separately from absent and unknown. A cross-month week keeps its full natural-week boundary and an explicit as-of cutoff.
+2. Check actual source access, publication time, claim authority, publisher independence and local applicability. Repeated Daily, Weekly and Monthly wording does not add evidence. A search query, abstract or retrieval hash does not prove a full-text review or an experiment.
+3. Correct confirmed wording, arithmetic, links and unsupported promotions in the original document with the smallest scoped edit. Preserve original author, logical date, execution timestamps, provenance and blocked state. Record the old claim, corrected claim, evidence, original commit, reviewer and real correction time in the maintenance log. Never make a later source look available to an earlier run.
+4. Trace each corrected claim through downstream daily handoffs, weekly decisions, monthly synthesis, durable findings and indexes. Update affected current interpretations and mark remaining dependencies unresolved. Do not silently repair a missing historical Decision ID by inventing a decision.
+5. Adjust active rules, templates and offline checks only for demonstrated recurring defects. Recheck unchanged boundaries. This process does not authorize host runtime, data, frontend, Actions or scheduler changes.
+6. Run the existing checks and proportionate regression tests. Log commands, results, skipped checks and remaining evidence gaps. No blanket completion from file counts, a green checker or an old audit alone.
+
+New monthly records use the following compact ledger. A NOT_RUN or PARTIAL result is valid and must not be promoted by the next summarizer.
+
+- `Monthly Maintenance Status`: NOT_RUN, PARTIAL or COMPLETED.
+- `Maintenance Coverage`: an exact path inventory and per-file disposition, including weekly/monthly dependencies.
+- `Maintenance Change Log`: the dated log, with original identity and before/after reasoning, or an explicitly documented no-change review.
+- `Maintenance Validation`: actual commands/results and semantic review limits.
+- `Maintenance Unresolved`: precise outstanding items, or NONE only after all scoped work is resolved.
+
+COMPLETED requires the complete scoped inventory, correction propagation, logged validation and no unresolved items. It does not certify universal correctness. A calendar month may be CLOSED while the review task remains BLOCKED or maintenance remains PARTIAL.
+
+Calendar closure uses the original Shanghai execution time, not the date a file was later merged or corrected. Before the first instant of the following month, use OPEN for the as-of snapshot. Missing legacy timestamps remain unknown, not fabricated.
+
+The offline checker validates declared ledger structure, not whether the linked evidence is true, independent or sufficient. The maintainer must read that evidence.

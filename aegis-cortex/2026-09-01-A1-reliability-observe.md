@@ -22,7 +22,7 @@
 - **Evidence Class**: EXTERNAL_AND_LOCAL_OBSERVATION
 - **Source Identity**: arXiv APIs
 - **Source Authority For Claim**: HIGH
-- **Independent Verification**: YES
+- **Independent Verification**: NOT_ESTABLISHED_BY_TWO_DIFFERENT_TOPICS
 - **Local Incident Evidence**: NO_LOCAL_INCIDENT_EVIDENCE
 - **Host Applicability**: OUT_OF_SCOPE
 - **Original Execution Status**: COMPLETED
@@ -48,9 +48,9 @@
 - **Date Checked**: 2026-09-01
 - **Source Type**: Original Research
 - **Evidence Tier**: Tier 1
-- **Access Status**: ACCESSED_FULL
+- **Access Status**: ABSTRACT_ACCESS_RECORDED_FULLTEXT_AT_EXECUTION_UNVERIFIED
 - **Independent Source**: YES
-- **External Claim**: Changing the testing harness (context window management, truncation logic) directly changes agent success rates and introduces potential hidden truncation failures without changing the model weights.
+- **External Claim**: The paper evaluates a combined harness treatment under fixed model/task conditions; it does not isolate truncation as a cause of false completion.
 - **Local Evidence Available YES or NO**: NO
 - **Relevance**: Direct impact on coding agent reliability and hidden truncation during tool use.
 - **Confidence**: High
@@ -64,7 +64,7 @@
 - **Date Checked**: 2026-09-01
 - **Source Type**: Original Research
 - **Evidence Tier**: Tier 1
-- **Access Status**: ACCESSED_FULL
+- **Access Status**: ABSTRACT_ACCESS_RECORDED_FULLTEXT_AT_EXECUTION_UNVERIFIED
 - **Independent Source**: YES
 - **External Claim**: Shallow binary success states in agent evaluations conflate actual tool-use capability/exploitation with memorization or unsupported shortcut guessing. Trace-level verification is needed to prove reliable tool use over false completion.
 - **Local Evidence Available YES or NO**: NO
@@ -77,10 +77,10 @@
 - **Signal ID**: SIG-2026-09-01-01
 - **Signal**: Testing harness manipulations implicitly alter agent tool-use capabilities and context awareness.
 - **Source IDs**: EXT-2026-09-01-01
-- **Failure Mode Addressed**: Tool-use errors and false completions due to unobserved output truncation.
+- **Failure Mode Addressed**: Harness configuration effects; a truncation-specific failure mechanism is not established.
 - **External Evidence**: 2608.26218v1 demonstrates that manipulating the harness (e.g., mechanically shortening older tool results) changes completion rates independent of the model.
 - **Local Repository Evidence**: NONE
-- **Why It May Matter**: Aegis and code agents operate under strict output limits (e.g., 1000 characters for bash wrapper); hidden truncation in the harness can lead to false completion if the agent relies on partial output.
+- **Why It May Matter**: The harness is a relevant evaluation variable. This record has no local measurement establishing a 1000-character failure threshold or local applicability.
 - **Confidence**: High
 - **Uncertainty**: The exact point at which truncation causes critical failure vs graceful degradation in standard development environments is highly variable.
 - **Possible Noise**: It is unclear if these effects linearly map to the exact internal Aegis harness constraints.
@@ -99,15 +99,22 @@
 - **Needs A2 Verification**: YES
 
 ## NEXT_HANDOFF
-- **需要 A2 定向解释的风险**: 外部代理在测试线束 (Harness) 和多步验证中的截断机制和“捷径漏洞”可能导致本地 Aegis 系统产生假性完成 (False Completion)。
-- **需要独立来源验证的风险**: 无，所引用的两篇 arXiv 原始研究具备充分独立性。
-- **缺乏本地证据的风险**: Harness 截断失败和无痕验证在 `zero-entropy-lab` 中尚未发现任何对应的实际本地故障证据 (NONE)。
-- **可能只是噪音的内容**: CTF 中的特定越权捷径可能在常规代码环境无法直接复现。
-- **不应继续升级的内容**: 任何关于宿主仓库 `zero-entropy-lab` 需要立即更改代码结构或开发环境配置的主张，因为理论风险不得转为本地事实。
-- **联网限制**: 成功访问了 Crossref/ArXiv API，获得了原始文献摘要，无网络降级。
+- **需要 A2 定向解释的风险**: 区分外部组合干预结果、独立截断效应与本地故障,不把它们连成未经验证的因果链.
+- **需要独立来源验证的风险**: 两篇不同主题的论文不自动相互验证同一命题,仍需按各自研究对象核验.
+- **缺乏本地证据的风险**: Harness 截断失败和无痕验证在 `zero-entropy-lab` 中尚未发现任何对应的实际本地故障证据 (NONE).
+- **可能只是噪音的内容**: CTF 中的特定越权捷径可能在常规代码环境无法直接复现.
+- **不应继续升级的内容**: 任何关于宿主仓库 `zero-entropy-lab` 需要立即更改代码结构或开发环境配置的主张，因为理论风险不得转为本地事实.
+- **联网限制**: 成功访问了 Crossref/ArXiv API，获得了原始文献摘要，无网络降级.
 
 ## BOUNDARY_CHECK
 - **确认未读取宿主仓库**: YES
 - **确认未读取 GitHub Actions 等受限目录**: YES
 - **确认未把外部风险声明为本地事实**: YES
 - **确认未公开私有控制内容**: YES
+
+## 2026-09-02 正文修正
+
+Correction Agent: Codex
+Correction Log: 2026-09-02-maintenance-log.md
+
+本次读取 [论文全文第 3.1 节](https://arxiv.org/html/2608.26218v1#S3.SS1) 进行校准. 论文报告组合干预收益,不识别单项截断规则的独立因果效应. 原记录末尾仅记录 API 摘要访问,不冒认原执行已读全文.
