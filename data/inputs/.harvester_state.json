@@ -67,19 +67,19 @@
     "NVIDIA/TensorRT-LLM": {
       "documents": {
         "README.md": {
-          "blob_sha": "48a0da791cf1203d566404e896f742b2de35f288",
-          "commit_sha": "d70260a14b23a9bab76195ebcd63f69463bf8ff4",
-          "content_hash": "41a0855a60f0a3abe440bb42e2392a91878cbd3b66f075d539580a834f38576b",
+          "blob_sha": "f36926afc608608a295eb87493ac3597965e5d72",
+          "commit_sha": "3503e3f9bbf2673e019da6737ab008c58567ae32",
+          "content_hash": "9718300d78bdba231be7e18b26735857a631713d7b0e0191e4b99b318e76836b",
           "entity_id": "external_doc_nvidia_tensorrt_llm_readme_md",
-          "observed_blob_sha": "48a0da791cf1203d566404e896f742b2de35f288",
-          "observed_commit_sha": "d70260a14b23a9bab76195ebcd63f69463bf8ff4",
-          "observed_tree_sha": "a87e37311e23917f120316656b1326d15a9952a0",
-          "output": "current/serving-inference/nvidia_tensorrt_llm/README.md__48a0da791cf1__d70260a14b23.md",
-          "sha": "48a0da791cf1203d566404e896f742b2de35f288",
-          "tree_sha": "a87e37311e23917f120316656b1326d15a9952a0"
+          "observed_blob_sha": "f36926afc608608a295eb87493ac3597965e5d72",
+          "observed_commit_sha": "3503e3f9bbf2673e019da6737ab008c58567ae32",
+          "observed_tree_sha": "f8820620b4766ecd1f5730e3517de25de3427aa4",
+          "output": "current/serving-inference/nvidia_tensorrt_llm/README.md__f36926afc608__3503e3f9bbf2.md",
+          "sha": "f36926afc608608a295eb87493ac3597965e5d72",
+          "tree_sha": "f8820620b4766ecd1f5730e3517de25de3427aa4"
         }
       },
-      "last_checked_at": "2026-09-01T00:52:21.491771+00:00"
+      "last_checked_at": "2026-09-03T23:39:02.151439+00:00"
     },
     "OpenHands/software-agent-sdk": {
       "documents": {
@@ -374,9 +374,45 @@
           "output": "current/agent-runtime/agentscope_ai_agentscope/README.md__209ac1ab0b64__e90f1c759289.md",
           "sha": "209ac1ab0b64a33ab16a2edef7168867b008fc44",
           "tree_sha": "5cdd9d7cecd15645da93eeba2e173895eff6ce44"
+        },
+        "examples/a2a/README.md": {
+          "blob_sha": "1c4871904136de38b1dd6e1d890fc01c7302483d",
+          "commit_sha": "10eaaac269101e25ad9f808353c45e305c6d7231",
+          "content_hash": "be21539af4d8afca46b47335ecde779c5351e5d4a6dca554e16652bb13b33aca",
+          "entity_id": "external_doc_agentscope_ai_agentscope_examples_a2a_readme_md",
+          "observed_blob_sha": "1c4871904136de38b1dd6e1d890fc01c7302483d",
+          "observed_commit_sha": "10eaaac269101e25ad9f808353c45e305c6d7231",
+          "observed_tree_sha": "577a34b06ea4ef9406b86c0dd59dfed5fc2b78ae",
+          "output": "current/agent-runtime/agentscope_ai_agentscope/examples__a2a__README.md__1c4871904136__10eaaac26910.md",
+          "sha": "1c4871904136de38b1dd6e1d890fc01c7302483d",
+          "tree_sha": "577a34b06ea4ef9406b86c0dd59dfed5fc2b78ae"
+        },
+        "examples/a2a/client.py": {
+          "blob_sha": "e774796f4805991edf6d6f680efaf25f45f5ec27",
+          "commit_sha": "10eaaac269101e25ad9f808353c45e305c6d7231",
+          "content_hash": "7e0948e36cc7fd5c1b2d15ce94ae5c7ca6470b3617083dad8e6edf1e7ee1f93c",
+          "entity_id": "external_doc_agentscope_ai_agentscope_examples_a2a_client_py",
+          "observed_blob_sha": "e774796f4805991edf6d6f680efaf25f45f5ec27",
+          "observed_commit_sha": "10eaaac269101e25ad9f808353c45e305c6d7231",
+          "observed_tree_sha": "577a34b06ea4ef9406b86c0dd59dfed5fc2b78ae",
+          "output": "current/agent-runtime/agentscope_ai_agentscope/examples__a2a__client.py__e774796f4805__10eaaac26910.md",
+          "sha": "e774796f4805991edf6d6f680efaf25f45f5ec27",
+          "tree_sha": "577a34b06ea4ef9406b86c0dd59dfed5fc2b78ae"
+        },
+        "examples/a2a/server.py": {
+          "blob_sha": "cf24d385e63ea2583a5ff9facbd9b52d446c87f4",
+          "commit_sha": "10eaaac269101e25ad9f808353c45e305c6d7231",
+          "content_hash": "4f51872a39215cd819048834bb138992eb73cf3f6c50c81aa715730566b1e3d3",
+          "entity_id": "external_doc_agentscope_ai_agentscope_examples_a2a_server_py",
+          "observed_blob_sha": "cf24d385e63ea2583a5ff9facbd9b52d446c87f4",
+          "observed_commit_sha": "10eaaac269101e25ad9f808353c45e305c6d7231",
+          "observed_tree_sha": "577a34b06ea4ef9406b86c0dd59dfed5fc2b78ae",
+          "output": "current/agent-runtime/agentscope_ai_agentscope/examples__a2a__server.py__cf24d385e63e__10eaaac26910.md",
+          "sha": "cf24d385e63ea2583a5ff9facbd9b52d446c87f4",
+          "tree_sha": "577a34b06ea4ef9406b86c0dd59dfed5fc2b78ae"
         }
       },
-      "last_checked_at": "2026-08-31T00:00:24.087474+00:00"
+      "last_checked_at": "2026-09-03T23:38:50.111403+00:00"
     },
     "agentskills/agentskills": {
       "documents": {
@@ -512,19 +548,19 @@
     "ggml-org/llama.cpp": {
       "documents": {
         "README.md": {
-          "blob_sha": "0b5598c6e5bd9a8130136ee5009cbc500729c953",
-          "commit_sha": "c060ca974c773c7c3d17fd1b66dc9d312bc292c0",
-          "content_hash": "f3b07bab53b21f746ede9db62b717776a9f8a61e2d24fd4ff001388352cb41f9",
+          "blob_sha": "7361c69e7f63a02683a0b44ae4dbf9f022887692",
+          "commit_sha": "d230ddd763ffe27781c7ffd237ea78b639b36b6d",
+          "content_hash": "925abc28e5f488deea721b94a0fc75fb0521d9bf5f0c7aa8576ab7d54ea1693d",
           "entity_id": "external_doc_ggml_org_llama.cpp_readme_md",
-          "observed_blob_sha": "0b5598c6e5bd9a8130136ee5009cbc500729c953",
-          "observed_commit_sha": "9723942adc518b43c4b95dc4dce6906903eb5e09",
-          "observed_tree_sha": "bc56f1c35c6f4f2af8972997d8356088dca768cc",
-          "output": "current/serving-inference/ggml_org_llama.cpp/README.md__0b5598c6e5bd__c060ca974c77.md",
-          "sha": "0b5598c6e5bd9a8130136ee5009cbc500729c953",
-          "tree_sha": "1e6240a2b7065d828b817793a35f5f39a4f369fc"
+          "observed_blob_sha": "7361c69e7f63a02683a0b44ae4dbf9f022887692",
+          "observed_commit_sha": "d230ddd763ffe27781c7ffd237ea78b639b36b6d",
+          "observed_tree_sha": "f93419f6661c9591a8d2d7c590be36b18774dc30",
+          "output": "current/serving-inference/ggml_org_llama.cpp/README.md__7361c69e7f63__d230ddd763ff.md",
+          "sha": "7361c69e7f63a02683a0b44ae4dbf9f022887692",
+          "tree_sha": "f93419f6661c9591a8d2d7c590be36b18774dc30"
         }
       },
-      "last_checked_at": "2026-08-31T00:00:40.079661+00:00"
+      "last_checked_at": "2026-09-03T23:39:05.464639+00:00"
     },
     "google/adk-python": {
       "documents": {
@@ -1129,6 +1165,18 @@
           "sha": "b83af6a17e9de21c8ef7a4f88d00e0aa3d744dd2",
           "tree_sha": "69007e15cd1b3a7d9194aedfae0758a245785c3c"
         },
+        "docs/decisions/0039-python-foundry-hosting-history-source.md": {
+          "blob_sha": "a8845b3814b2efcea5331d10295799cd5f4c1e43",
+          "commit_sha": "02e68f939f73d510fdf6047ddff011cd4121bc02",
+          "content_hash": "cc73a51f63fd5a6dff08afe66757ddfe946513e2d966988a26a5ac7d710977b7",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0039_python_foundry_hosting_history_source_md",
+          "observed_blob_sha": "a8845b3814b2efcea5331d10295799cd5f4c1e43",
+          "observed_commit_sha": "02e68f939f73d510fdf6047ddff011cd4121bc02",
+          "observed_tree_sha": "af20eb75745d99cf6933e46da7dced5ca5ccead0",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0039-python-foundry-hosting-history-source.md__a8845b3814b2__02e68f939f73.md",
+          "sha": "a8845b3814b2efcea5331d10295799cd5f4c1e43",
+          "tree_sha": "af20eb75745d99cf6933e46da7dced5ca5ccead0"
+        },
         "docs/decisions/0039-python-refusal-content.md": {
           "blob_sha": "5f8dd9a6f99c8599eb0b60e5179516f34297b02f",
           "commit_sha": "ed8fc04f665c65a8491e43e3c422d917be71fa41",
@@ -1190,7 +1238,7 @@
           "tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4"
         }
       },
-      "last_checked_at": "2026-09-02T23:40:01.399797+00:00"
+      "last_checked_at": "2026-09-03T23:38:41.829498+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
