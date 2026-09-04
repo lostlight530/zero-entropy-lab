@@ -364,16 +364,16 @@
     "agentscope-ai/agentscope": {
       "documents": {
         "README.md": {
-          "blob_sha": "209ac1ab0b64a33ab16a2edef7168867b008fc44",
-          "commit_sha": "e90f1c7592896cc95f6e5ee506194f533378247d",
-          "content_hash": "8853eaa68cecfd9944b596cfb6a26e4656ede909ef2b507706ed17779d39096f",
+          "blob_sha": "70bcec8a7baf8714947f3ce108a240d81600f242",
+          "commit_sha": "41ba0216b3291b085d964bbf1c52d05a9b9d4c41",
+          "content_hash": "6326ad99c2185627b6fd7e5e175326ac4f1985a6e265ab2644b4b271e3c35904",
           "entity_id": "doc_agentscope_ai_agentscope_readme_md_4415c1cedff4",
-          "observed_blob_sha": "209ac1ab0b64a33ab16a2edef7168867b008fc44",
-          "observed_commit_sha": "e90f1c7592896cc95f6e5ee506194f533378247d",
-          "observed_tree_sha": "5cdd9d7cecd15645da93eeba2e173895eff6ce44",
-          "output": "current/agent-runtime/agentscope_ai_agentscope/README.md__209ac1ab0b64__e90f1c759289.md",
-          "sha": "209ac1ab0b64a33ab16a2edef7168867b008fc44",
-          "tree_sha": "5cdd9d7cecd15645da93eeba2e173895eff6ce44"
+          "observed_blob_sha": "70bcec8a7baf8714947f3ce108a240d81600f242",
+          "observed_commit_sha": "41ba0216b3291b085d964bbf1c52d05a9b9d4c41",
+          "observed_tree_sha": "d98215d3cbcf1c204a15f094e23b83d6ee362c27",
+          "output": "current/agent-runtime/agentscope_ai_agentscope/README.md__70bcec8a7baf__41ba0216b329.md",
+          "sha": "70bcec8a7baf8714947f3ce108a240d81600f242",
+          "tree_sha": "d98215d3cbcf1c204a15f094e23b83d6ee362c27"
         },
         "examples/a2a/README.md": {
           "blob_sha": "1c4871904136de38b1dd6e1d890fc01c7302483d",
@@ -412,7 +412,7 @@
           "tree_sha": "577a34b06ea4ef9406b86c0dd59dfed5fc2b78ae"
         }
       },
-      "last_checked_at": "2026-09-03T23:38:50.111403+00:00"
+      "last_checked_at": "2026-09-04T23:31:18.150388+00:00"
     },
     "agentskills/agentskills": {
       "documents": {
@@ -548,19 +548,19 @@
     "ggml-org/llama.cpp": {
       "documents": {
         "README.md": {
-          "blob_sha": "7361c69e7f63a02683a0b44ae4dbf9f022887692",
-          "commit_sha": "d230ddd763ffe27781c7ffd237ea78b639b36b6d",
-          "content_hash": "925abc28e5f488deea721b94a0fc75fb0521d9bf5f0c7aa8576ab7d54ea1693d",
+          "blob_sha": "aae3bcd35ad9c2ba3e914750a36e125fec0b5355",
+          "commit_sha": "427291b5b34cd914a31b3fd3b61a68f6184f4b9f",
+          "content_hash": "cea0faf91838387d5fa62b7860c4175fc2ad8e773a60cb0ed43ee6453e6a2969",
           "entity_id": "external_doc_ggml_org_llama.cpp_readme_md",
-          "observed_blob_sha": "7361c69e7f63a02683a0b44ae4dbf9f022887692",
-          "observed_commit_sha": "d230ddd763ffe27781c7ffd237ea78b639b36b6d",
-          "observed_tree_sha": "f93419f6661c9591a8d2d7c590be36b18774dc30",
-          "output": "current/serving-inference/ggml_org_llama.cpp/README.md__7361c69e7f63__d230ddd763ff.md",
-          "sha": "7361c69e7f63a02683a0b44ae4dbf9f022887692",
-          "tree_sha": "f93419f6661c9591a8d2d7c590be36b18774dc30"
+          "observed_blob_sha": "aae3bcd35ad9c2ba3e914750a36e125fec0b5355",
+          "observed_commit_sha": "427291b5b34cd914a31b3fd3b61a68f6184f4b9f",
+          "observed_tree_sha": "2fc7ddb637dc53634ef5125d8f7551619505d3a9",
+          "output": "current/serving-inference/ggml_org_llama.cpp/README.md__aae3bcd35ad9__427291b5b34c.md",
+          "sha": "aae3bcd35ad9c2ba3e914750a36e125fec0b5355",
+          "tree_sha": "2fc7ddb637dc53634ef5125d8f7551619505d3a9"
         }
       },
-      "last_checked_at": "2026-09-03T23:39:05.464639+00:00"
+      "last_checked_at": "2026-09-04T23:31:36.025676+00:00"
     },
     "google/adk-python": {
       "documents": {
@@ -2223,19 +2223,19 @@
     "pydantic/pydantic-ai": {
       "documents": {
         "README.md": {
-          "blob_sha": "c52cebff671dd44b39090a3c142eff81b14994c6",
-          "commit_sha": "6aee1c09bd065725ff14f21a15f731b0c3c88e0c",
-          "content_hash": "49b7d40cb98c339613c9bc97614515abb0304acb9ce36e85e8249b5bac6e195c",
+          "blob_sha": "53e043292cdf85410fb00a9857b5e30a4e108e8a",
+          "commit_sha": "c10e8e6d68a40d032b55e60536a514a2bf0cd2cc",
+          "content_hash": "7bed49a687ae5ab2e90549c2410d8fbd6f373176fae30131d54e3e784f27f213",
           "entity_id": "external_doc_pydantic_pydantic_ai_readme_md",
-          "observed_blob_sha": "c52cebff671dd44b39090a3c142eff81b14994c6",
-          "observed_commit_sha": "22b3d6a4dc9e409c5a581e4657311b0dfff16256",
-          "observed_tree_sha": "9d78cd4367db2ccd113472936fe16458f63f3c33",
-          "output": "current/agent-runtime/pydantic_pydantic_ai/README.md__c52cebff671d__6aee1c09bd06.md",
-          "sha": "c52cebff671dd44b39090a3c142eff81b14994c6",
-          "tree_sha": "a3a015edc32e77f75aa8568f751cdb58d14f11a2"
+          "observed_blob_sha": "53e043292cdf85410fb00a9857b5e30a4e108e8a",
+          "observed_commit_sha": "c10e8e6d68a40d032b55e60536a514a2bf0cd2cc",
+          "observed_tree_sha": "82fec3700809022f650e5f5aeea9ee80e1c00964",
+          "output": "current/agent-runtime/pydantic_pydantic_ai/README.md__53e043292cdf__c10e8e6d68a4.md",
+          "sha": "53e043292cdf85410fb00a9857b5e30a4e108e8a",
+          "tree_sha": "82fec3700809022f650e5f5aeea9ee80e1c00964"
         }
       },
-      "last_checked_at": "2026-08-31T00:00:18.310510+00:00"
+      "last_checked_at": "2026-09-04T23:31:13.055370+00:00"
     },
     "run-llama/llama_index": {
       "documents": {
