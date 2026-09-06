@@ -1,13 +1,17 @@
 # Jules source/content contract reconciliation — 2026-09-06
 
-Status: `ACTIVE_AEGIS_CONTENT_REVIEWED / JULY_HISTORY_RECONCILED / SOURCE_IDENTITY_ERRORS_RETAINED / CURRENT_PROMOTION_CALIBRATED`
+Status: `ACTIVE_AEGIS_CONTENT_REVIEWED / JULY_HISTORY_RECONCILED / AUGUST_RECONSTRUCTION_LINEAGE_RECONCILED / SOURCE_IDENTITY_ERRORS_RETAINED / CURRENT_PROMOTION_CALIBRATED`
 
 Review date: 2026-09-06
 Target agent: `Jules` only
 Repository: `lostlight530/zero-entropy-lab`
-Authority: current `aegis-cortex/EVIDENCE_POLICY.md`, retained A1/A2/A3/A4/A5/A6 records, merged Jules commit/PR chronology, and existing dated reconciliation records.
+Authority: current `aegis-cortex/EVIDENCE_POLICY.md`, retained A1/A2/A3/A4/A5/A6 records, repository-visible Jules commit/PR chronology, existing dated reconciliation records, and operator context that recurring Daily / Weekly / Monthly tasks exist even where outputs were not tested or merged.
 
-This content review is separate from the cadence inventory. Original Jules task execution, current path retention, later rewrite, source access, source identity, claim authority, independent verification, local incident evidence, host applicability and Weekly promotion eligibility remain separate states.
+This content review is separate from the cadence inventory. Task existence, original Jules task execution, PR/branch delivery, merge status, current path retention, later rewrite/reconstruction, source access, source identity, claim authority, independent verification, local incident evidence, host applicability and Weekly promotion eligibility remain separate states.
+
+`CURRENT_PATH_MISSING != TASK_NOT_RUN`
+
+`CURRENT_PATH_PRESENT != ORIGINAL_JULES_EXECUTION`
 
 No outside web/GPT recertification was performed. Findings are based on repository records and the current Aegis evidence contract, including its explicit warning that Crossref/SSRN metadata access does not establish underlying-paper/full-text/theorem verification.
 
@@ -179,11 +183,55 @@ Jules generated August A5 and A6 on 2026-09-01 after natural month closure. Thei
 
 A5/A6 must preserve the 08-03/08-15/08-16 temporal states, source-lineage independence limits, external-risk/local-incident separation, and any Daily source-quality correction. A monthly checker pass or 31/31 current path count cannot erase those limitations.
 
+### AEGIS-HISTORY-13 — current 08-15 A1/A2 are Codex retrospective reconstructions, not recovered Jules-native executions
+
+Current main now contains both 2026-08-15 paths, but their headers explicitly state:
+
+- `Reconstruction Time UTC: 2026-08-28 06:22:01 UTC`;
+- `Agent: Codex`;
+- `Record Provenance: RETROSPECTIVE_RECONSTRUCTION`;
+- `Original Execution Status: UNKNOWN`;
+- `Historical Delivery Status: UNRESOLVED_DELIVERY_HISTORY`;
+- `Current Path Status: PRESENT_AS_RECONSTRUCTION`;
+- `Task Status: RECONSTRUCTED_WITHOUT_SUCCESS_CLAIM`.
+
+The earlier W33 reconciliation had correctly concluded that the repository evidence available then did not establish a recoverable 08-15 Jules artifact and explicitly avoided creating a synthetic Daily run. The later Codex reconstruction supplies a current documentary placeholder with bounded external source review; it does not resolve the original Jules execution/delivery history.
+
+Current classification:
+
+`CURRENT_08_15_PATHS_PRESENT / PRODUCER_CODEX / RETROSPECTIVE_RECONSTRUCTION / ORIGINAL_JULES_EXECUTION_STATUS_UNKNOWN`
+
+Operator context confirms the recurring task existed; repository-side execution/delivery proof remains unresolved unless a Jules PR, commit, branch or other recoverable artifact is later identified.
+
+### AEGIS-HISTORY-14 — August A5/A6 contain a path-completeness versus provenance-completeness compression conflict
+
+The current August A5 explicitly recognizes that 08-15 A1/A2 are retrospective reconstructions and that 08-16 A2 retains its original blocked execution. A6 also records these limitations in its next-month known-input-gap section.
+
+At the same time, A6 header/body language includes:
+
+- `Reflection Input Status: COMPLETE`;
+- a 31 A1 / 31 A2 current-path coverage statement;
+- `Missing Inputs Preserved: No missing W31-W35 A3/A4 files`;
+- a separate statement equivalent to `缺失和降级输入: 无`.
+
+Read literally across the whole artifact, these phrases can collapse current documentary path completeness into original provenance/input-quality completeness, which conflicts with the same artifact's retained 08-15 reconstruction and 08-16 blocked facts.
+
+Current interpretation:
+
+`CURRENT_PATH_COMPLETE != ORIGINAL_PROVENANCE_COMPLETE`
+
+`RETROSPECTIVE_RECONSTRUCTION_PRESENT != NO_DEGRADED_INPUT`
+
+`BLOCKED_AT_EXECUTION_PRESENT != ALL_INPUTS_SUBSTANTIVELY_COMPLETE`
+
+The August Monthly task itself remains a valid post-natural-month Jules run; this calibration narrows only the meaning of its completeness wording.
+
 ## W36 propagation
 
 Cadence state remains:
 
-- A3: missing;
+- recurring A3 task existence: operator-confirmed;
+- repository-visible completed W36 A3 artifact: not identified in this pass;
 - A4: real Jules fail-closed `DECISION_INPUT_MISSING / BLOCKED / NO_ACTIONABLE_DECISION`.
 
 Therefore:
@@ -195,7 +243,7 @@ Therefore:
 
 W36 content state:
 
-`NO_COMPLETED_A3 / NO_VALID_WEEKLY_PROMOTION / A4_BLOCKED_PRESERVED`
+`NO_REPOSITORY_VISIBLE_COMPLETED_A3 / NO_VALID_WEEKLY_PROMOTION / A4_BLOCKED_PRESERVED`
 
 ## Monthly propagation
 
@@ -213,6 +261,9 @@ Performed:
 - 07-12 through 07-18 bulk source rewrite inspected;
 - July A5/A6 execution ordering inspected;
 - 08-16 original/later delivery ordering and later fail-closed contract correction inspected;
+- current 08-15 A1/A2 producer/provenance headers inspected;
+- W33 reconciliation compared with later 08-15 Codex reconstruction;
+- August A5/A6 completeness wording compared with retained 08-15/08-16 negative evidence;
 - same-source lineage for arXiv:2606.24322 checked against current policy;
 - W36 A3/A4 state cross-checked with cadence reconciliation.
 
@@ -226,4 +277,4 @@ Not performed:
 
 ## Current verdict
 
-`JULY_CURRENT_RETENTION_IS_NOT_JULES_EXECUTION_HISTORY / 07_08_COMMIT_LEVEL_BOUNDARY_VIOLATION_CONFIRMED / 07_12_18_SOURCE_IDENTITY_DEGRADATION_RETAINED / JULY_FINAL_A6_PRECEDES_LATER_FINAL_A5 / AUGUST_NEGATIVE_TEMPORAL_STATES_PRESERVED / SEPTEMBER_METADATA_IDENTITY_AND_INDEPENDENCE_DRIFT / W36_BLOCKED / SEPTEMBER_OPEN`
+`JULY_CURRENT_RETENTION_IS_NOT_JULES_EXECUTION_HISTORY / 07_08_COMMIT_LEVEL_BOUNDARY_VIOLATION_CONFIRMED / 07_12_18_SOURCE_IDENTITY_DEGRADATION_RETAINED / JULY_FINAL_A6_PRECEDES_LATER_FINAL_A5 / AUGUST_08_15_CURRENT_PATHS_ARE_CODEX_RETROSPECTIVE_RECONSTRUCTION_WITH_ORIGINAL_JULES_STATUS_UNKNOWN / AUGUST_MONTHLY_PATH_COMPLETE_LANGUAGE_REQUIRES_PROVENANCE_QUALITY_CALIBRATION / SEPTEMBER_METADATA_IDENTITY_AND_INDEPENDENCE_DRIFT / W36_BLOCKED / SEPTEMBER_OPEN`
