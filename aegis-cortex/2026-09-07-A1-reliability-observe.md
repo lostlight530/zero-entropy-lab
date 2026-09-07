@@ -12,21 +12,21 @@
 - **Agent**: Jules
 - **Knowledge Source**: EXTERNAL_AND_LOCAL
 - **Network Status**: NETWORK_VERIFIED
-- **Source Status**: COMPLETE
+- **Source Status**: SINGLE_SOURCE_LINEAGE
 - **Task Status**: COMPLETED
 - **Repository Inspection**: NO
 - **GitHub Actions Inspection**: NO
 - **Write Scope**: EXACT_TARGET_ONLY
 - **Boundary Violation**: NO
 - **Record Provenance**: JULES_NATIVE
-- **Evidence Class**: EXTERNAL_FAILURE_MODE_EVIDENCE
-- **Source Identity**: KNOWN_PUBLIC
-- **Source Authority For Claim**: PRIMARY_RESEARCH
-- **Independent Verification**: YES
-- **Local Incident Evidence**: NO
+- **Evidence Class**: EXTERNAL_RISK_CLASS
+- **Source Identity**: arXiv:2606.22916v3
+- **Source Authority For Claim**: ORIGINAL_RESEARCH_PREPRINT_FOR_ITS_OWN_METHOD_AND_EVALUATION
+- **Independent Verification**: NO — one external source lineage only
+- **Local Incident Evidence**: NO_LOCAL_EVIDENCE
 - **Host Applicability**: UNKNOWN
 - **Original Execution Status**: COMPLETED_NATIVE
-- **Current Path Status**: PRESENT
+- **Current Path Status**: PRESENT_ON_PR_BRANCH
 
 ## INPUT_RECORD
 - **实际读取文件**:
@@ -35,51 +35,71 @@
   - `aegis-cortex/2026-W36-A4-protocol-act.md`
   - `aegis-cortex/2026-08-A6-aegis-memorize.md`
 - **搜索主题**: `all:"LLM Agent" AND all:"tool-use"`, `all:"Cloud Coding Agent reliability"`, `all:"tool authorization" AND all:"agent"`, `all:"Prompt drift" AND all:agent`
-- **观察原因**: 执行每日 A1 可靠性知识观察，检测云端智能体在长周期任务中可能面临的工具授权 (tool authorization)、工具滥用 (tool-use errors) 等失效模式。
+- **观察原因**: 执行每日 A1 可靠性知识观察，检测云端智能体在长周期任务中可能面临的工具授权、工具滥用等外部失效模式。
 - **A4 和 A6 当前重点**:
-  - 当前 A4 (W36) 由于上游缺失（DECISION_INPUT_MISSING）被阻塞（BLOCKED），没有提出新的优先观察点。W35 A4 的关注点是假性完成、任务中断、长期记忆投毒。
-  - 当前 A6 重点强调出处字段追踪执行以及隔离纯外部纪律。
-- **未取得可靠证据的方向**: 关于 `Cloud Coding Agent reliability` 的外部搜索未能返回具体匹配的学术文献。
+  - 当前 A4 (W36) 因上游缺失（DECISION_INPUT_MISSING）被阻塞（BLOCKED），没有提出新的可执行纪律决定。
+  - 当前 A6 仅提供既有 research-memory 背景；A5/A6 research memory 不等于 host runtime memory，也不构成本地 incident evidence。
+- **未取得可靠证据的方向**: 关于 `Cloud Coding Agent reliability` 的搜索未取得可独立验证的具体匹配研究；本轮也未取得第二条独立 source lineage 来复核 tool-authorization 风险。
 
 ## EXTERNAL_SOURCE_RECORDS
 - **Source ID**: SRC-2026-09-07-01
+- **Canonical Identity**: arXiv:2606.22916v3
 - **Title**: Intent-Governed Tool Authorization for AI Agents
-- **Publisher**: arXiv
-- **URL**: http://arxiv.org/abs/2606.22916v3
+- **Publisher / Surface**: arXiv preprint surface
+- **URL**: https://arxiv.org/abs/2606.22916v3
 - **Published or Updated Date**: 2026-06-22T06:55:57Z
 - **Date Checked**: 2026-09-07
-- **Source Type**: RESEARCH_PAPER
-- **Evidence Tier**: Tier 1
+- **Source Type**: ORIGINAL_RESEARCH_PREPRINT
+- **Evidence Tier**: Tier 1 task-local label; authority remains claim-specific
 - **Access Status**: ACCESSED
-- **Independent Source**: YES
-- **External Claim**: 使用工具的 AI 代理通常在集成凭据下操作，其静态权限超出了用户当前的请求。缺乏受限和意图驱动的授权可能会导致代理被利用进行超出预期的破坏性操作（如恶意修改或越权访问）。
+- **Full-text / theorem review**: NOT_ESTABLISHED_BY_THIS_RECORD
+- **Independent Source**: NO — this is the only retained external source lineage in this A1
+- **External Claim**: The paper argues that agents operating with broad integrated credentials can exceed the authority needed for the user's current intent, motivating intent-scoped authorization controls.
 - **Local Evidence Available YES or NO**: NO
-- **Relevance**: 高度相关。Aegis Cortex 的 Jules 代理具备文件读写和命令执行能力，工具授权机制的缺陷可能导致代理执行未经授权的修改。
-- **Confidence**: High Confidence
-- **Limitations**: 该主张讨论了基于意图的动态授权机制，但其实际防御效果和性能开销是基于作者的特定评估平台（OpenPort），其具体机制可能无法直接迁移至当前仅受提示词和脚本约束的 Aegis 沙盒环境中。
+- **Relevance**: Potentially relevant as an external risk class for tool-capable agent workflows.
+- **Confidence**: HIGH for the paper's stated proposition; LOCAL_APPLICABILITY_UNKNOWN
+- **Limitations**: The defense/evaluation is specific to the authors' system and evaluation setup. This record did not reproduce it, establish peer-review status beyond the arXiv surface, or verify transfer to Aegis/host runtime.
 
 ## RAW_RELIABILITY_SIGNAL_LOG
 - **Signal ID**: SIG-2026-09-07-01
-- **Signal**: 代理工具使用权限如未根据用户意图进行动态限制，存在被误用或被越权调用的风险。
+- **Signal**: Agent workflows with broader tool credentials than a particular user intent may face an authorization-overbreadth risk; intent-scoped authorization is one proposed mitigation class.
 - **Source IDs**: SRC-2026-09-07-01
-- **Failure Mode Addressed**: Tool authorization
-- **External Evidence**: 源自 arXiv 2606.22916v3 的研究强调，静态授予 AI 代理工具执行权限而不根据特定请求动态收缩，会导致不必要的暴露风险。
+- **Failure Mode Addressed**: Tool authorization / authority scope
+- **External Evidence**: Single original-research preprint lineage, arXiv:2606.22916v3.
 - **Local Repository Evidence**: NONE
-- **Why It May Matter**: Jules 在处理 Aegis 任务时具备 Bash 执⾏和文件修改权限。如果发生指令漂移或上下文污染，它可能错误地使用这些工具修改 Aegis 范围之外的文件，尽管在我们的提示词中明令禁止。
-- **Confidence**: High Confidence
-- **Uncertainty**: 目前的防御措施主要依靠提示词边界指令，尚未观察到直接无视规则破坏其它目录（如 `src/` 或 `.github/`）的实例，该理论风险发生的概率未知。
-- **Possible Noise**: 外部论文探讨了复杂的鉴权架构，对于单次任务触发的沙盒化 Jules Agent 来说可能过于复杂。
+- **Why It May Matter**: Aegis tasks operate in an agent-mediated environment, but this record did not inspect host authorization mechanisms or reproduce a local misuse case. The signal is therefore a research risk to orient, not a local incident or required implementation.
+- **Confidence**: MEDIUM_HIGH for external relevance; local applicability UNKNOWN
+- **Uncertainty**: No Aegis-local misuse, host authorization failure, or applicable local rate was observed. The probability of this failure mode in the repository environment is unknown.
+- **Possible Noise**: The paper's authorization architecture may not map directly onto a scoped scheduled research task.
 - **Needs A2 Verification**: YES
 
 ## NEXT_HANDOFF
-- **需要 A2 定向解释的风险**: 探讨外部文献中关于工具授权边界（Tool authorization）的风险对当前 Aegis 任务（仅限于读取和写入指定 markdown 文件）的本地适用性。
-- **需要独立来源验证的风险**: 无
-- **缺乏本地证据的风险**: 代理越权滥用工具导致宿主环境被破坏的风险。
-- **可能只是噪音的内容**: “Prompt drift” 和多智能体博弈相关的边缘文献，对本控制流意义不大。
-- **不应继续升级的内容**: 针对其他领域的云编码产品具体实现的可靠性讨论。
-- **联网限制**: 搜索“Cloud Coding Agent reliability”未能返回相关 arXiv 学术结果，但我们依靠现有的高质量文献完成了观察。
+- **需要 A2 定向解释的风险**: 判断 tool-authorization 外部风险是否与 Aegis documentary task boundary 有可验证的本地映射；若无本地证据，保持 `EXTERNAL_RISK_SUPPORTED / LOCAL_INCIDENT_NOT_ESTABLISHED`。
+- **需要独立来源验证的风险**: YES — 在晋升为 Weekly evidence 前，应寻找独立标准、另一项原始研究或可验证实现证据；A2 重复 A1 不增加独立性。
+- **缺乏本地证据的风险**: Agent 越权或错误使用工具导致宿主环境被修改。
+- **可能只是噪音的内容**: 与当前 scoped Aegis task 无直接映射的复杂授权实现细节。
+- **不应继续升级的内容**: 不把外部论文转成 Aegis-local incident、host-required implementation 或本地概率。
+- **联网限制**: 当前只有一个 retained external source lineage；没有独立 corroboration。
 
 ## BOUNDARY_CHECK
 - **确认未读取宿主仓库、GitHub Actions、旧 Nexus 和 Aegis 之外文件**: YES
 - **确认未把外部风险声明为本地事实**: YES
 - **确认未公开私有控制内容**: YES
+
+## GPT 网页端独立维护复核
+
+- **Review Date**: 2026-09-07
+- **Review Agent**: GPT Web Independent Maintainer
+- **Review Type**: PRE_MERGE_SCIENTIFIC_CORRECTION
+- **Original Producer**: Jules
+- **Original Task-Time Status Preserved**: COMPLETED_NATIVE
+
+本复核保留 Jules 原始执行身份，但按当前 `aegis-cortex/EVIDENCE_POLICY.md` 修正了 source identity、单一来源独立性、external-risk/local-incident 分离和 host applicability 语言。
+
+四项质量检查:
+- Template / Contract Completeness: REVIEWED
+- Source / Evidence Quality: CORRECTED
+- Temporal / Provenance Fidelity: PRESERVED
+- Verification / Boundary Discipline: CORRECTED
+
+本 GPT 复核未执行 `aegis-cortex/check.py`, 未复现论文实验，也未建立本地 incident。
