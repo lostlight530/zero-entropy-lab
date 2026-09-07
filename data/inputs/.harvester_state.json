@@ -135,16 +135,16 @@
     "TencentCloud/TencentDB-Agent-Memory": {
       "documents": {
         "CHANGELOG.md": {
-          "blob_sha": "d3e52592955cc93ac2c7bafd77dd1e4739ebdd0e",
-          "commit_sha": "06414ac10766b9bd61e4a69f3cf0ea414afb6d4f",
-          "content_hash": "a506d013446e75f7b7ad7e7b11e5d6e2e5de2c6586c75d19348f16731e28b19e",
+          "blob_sha": "cdeebb2fac8ab4ad87ddaf039a27b32dff26c2a4",
+          "commit_sha": "220af62226221d7ea07f95aa61eb7c0486cb407a",
+          "content_hash": "6e7ed8b15985b6951ca68903da6c54a2f0a64e969fbfd71a197d4ea6fd23c6ab",
           "entity_id": "doc_tencentcloud_tencentdb_agent_memory_changelog_md_1df12b353dc5",
-          "observed_blob_sha": "d3e52592955cc93ac2c7bafd77dd1e4739ebdd0e",
-          "observed_commit_sha": "5299c00aaf65481703c180fd69df066d11254eb7",
-          "observed_tree_sha": "43c8abce0298dd1f502d7776f1191bc65343e057",
-          "output": "current/memory-context-sandbox/tencentcloud_tencentdb_agent_memory/CHANGELOG.md__d3e52592955c__06414ac10766.md",
-          "sha": "d3e52592955cc93ac2c7bafd77dd1e4739ebdd0e",
-          "tree_sha": "4c5c2f2a65f6d34d539758ed7ac526be83b854c5"
+          "observed_blob_sha": "cdeebb2fac8ab4ad87ddaf039a27b32dff26c2a4",
+          "observed_commit_sha": "220af62226221d7ea07f95aa61eb7c0486cb407a",
+          "observed_tree_sha": "f0ca2c935b1decec0d1c6829a2ee7188cecf05e6",
+          "output": "current/memory-context-sandbox/tencentcloud_tencentdb_agent_memory/CHANGELOG.md__cdeebb2fac8a__220af6222622.md",
+          "sha": "cdeebb2fac8ab4ad87ddaf039a27b32dff26c2a4",
+          "tree_sha": "f0ca2c935b1decec0d1c6829a2ee7188cecf05e6"
         },
         "README.md": {
           "blob_sha": "159e8ed0d7c06a1230e590198f7e4b1bcc3de25f",
@@ -159,7 +159,7 @@
           "tree_sha": "4c5c2f2a65f6d34d539758ed7ac526be83b854c5"
         }
       },
-      "last_checked_at": "2026-08-31T00:01:01.511646+00:00"
+      "last_checked_at": "2026-09-07T23:51:09.509083+00:00"
     },
     "TencentCloudADP/youtu-agent": {
       "documents": {
@@ -1082,16 +1082,16 @@
           "tree_sha": "1459056938ec4f929522656cd609ba2c1c24ee06"
         },
         "docs/decisions/0033-feature-usage-bitmask-user-agent.md": {
-          "blob_sha": "059f521c69a30fb5de63139f49c95e906a0f6e25",
-          "commit_sha": "4a7af303afffe00b6a2970550a48a44ad97314e0",
-          "content_hash": "d4993645fa4f3da8fbfeb4fab7f9d70e9cce7337bce95c2bac51636094fcd09d",
+          "blob_sha": "9a0b0b14e8bb5a920c65861ada321534c5fdc905",
+          "commit_sha": "2ca7b029971528c07929ae542dcb60f5aced3320",
+          "content_hash": "8ca809061e8aebf78707d686ea0490f75a7d3e69d13897bb34173213831383e2",
           "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0033_feature_usage_bitmask_user_agent_md",
-          "observed_blob_sha": "059f521c69a30fb5de63139f49c95e906a0f6e25",
-          "observed_commit_sha": "edfe115ea06bca57ae5a123d0fac5b3fdda13603",
-          "observed_tree_sha": "453055ec74e2528c6bd5d33c6a3f80b9baf7355e",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0033-feature-usage-bitmask-user-agent.md__059f521c69a3__4a7af303afff.md",
-          "sha": "059f521c69a30fb5de63139f49c95e906a0f6e25",
-          "tree_sha": "bd58f227e597ac8bc316f8e54519bfa0462564cc"
+          "observed_blob_sha": "9a0b0b14e8bb5a920c65861ada321534c5fdc905",
+          "observed_commit_sha": "2ca7b029971528c07929ae542dcb60f5aced3320",
+          "observed_tree_sha": "0dbbfbfc31bc0b2ae5de19f01aa88a75e67df74a",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0033-feature-usage-bitmask-user-agent.md__9a0b0b14e8bb__2ca7b0299715.md",
+          "sha": "9a0b0b14e8bb5a920c65861ada321534c5fdc905",
+          "tree_sha": "0dbbfbfc31bc0b2ae5de19f01aa88a75e67df74a"
         },
         "docs/decisions/0034-python-session-store-serialization.md": {
           "blob_sha": "0795ac6c58922601bb1e7410e59895bb4335565a",
@@ -1238,7 +1238,7 @@
           "tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4"
         }
       },
-      "last_checked_at": "2026-09-03T23:38:41.829498+00:00"
+      "last_checked_at": "2026-09-07T23:50:35.590640+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
@@ -2074,16 +2074,16 @@
           "tree_sha": "6619014cb5e3c71b86bae8fa1b2514c9d73d8f76"
         },
         "examples/memory/dapr_session_example.py": {
-          "blob_sha": "3a5a777a4a24de5e5adc490cd83052d03380bfda",
-          "commit_sha": "bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1",
-          "content_hash": "556ff36427bbfa502f633c6b405ce7f7f5e3a3fd40e955f5755d04deda812c95",
+          "blob_sha": "80a002d36f32e4f0ba3d9e097b3adbd739c3e74c",
+          "commit_sha": "cb808dfaee4f5f6bc256abc4f6f021a4693c397c",
+          "content_hash": "77e2fc740eebd408e69600dfc9f021a07c459a021e5052fcfd5b54dba5fc1839",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_dapr_session_example_py_3a5a777a4a24",
-          "observed_blob_sha": "3a5a777a4a24de5e5adc490cd83052d03380bfda",
-          "observed_commit_sha": "89c02c828ee8510fe9a84ee6675608193aa13b02",
-          "observed_tree_sha": "e2e417c0e5497a6cc868ab5c029282cd341b87ba",
-          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__dapr_session_example.py__3a5a777a4a24__bb3d64e74d9b.md",
-          "sha": "3a5a777a4a24de5e5adc490cd83052d03380bfda",
-          "tree_sha": "6619014cb5e3c71b86bae8fa1b2514c9d73d8f76"
+          "observed_blob_sha": "80a002d36f32e4f0ba3d9e097b3adbd739c3e74c",
+          "observed_commit_sha": "cb808dfaee4f5f6bc256abc4f6f021a4693c397c",
+          "observed_tree_sha": "4ae3512167e21ca6f5a73aec084709f2c86c65a9",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__dapr_session_example.py__80a002d36f32__cb808dfaee4f.md",
+          "sha": "80a002d36f32e4f0ba3d9e097b3adbd739c3e74c",
+          "tree_sha": "4ae3512167e21ca6f5a73aec084709f2c86c65a9"
         },
         "examples/memory/encrypted_session_example.py": {
           "blob_sha": "d3d9a9e747056d79d5a1dc178146074e9ed8c5e8",
@@ -2218,7 +2218,7 @@
           "tree_sha": "6619014cb5e3c71b86bae8fa1b2514c9d73d8f76"
         }
       },
-      "last_checked_at": "2026-08-31T00:00:11.544798+00:00"
+      "last_checked_at": "2026-09-07T23:50:32.614668+00:00"
     },
     "pydantic/pydantic-ai": {
       "documents": {
