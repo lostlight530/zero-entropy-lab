@@ -26,7 +26,7 @@
 - **Local Incident Evidence**: NO_LOCAL_EVIDENCE
 - **Host Applicability**: UNKNOWN_DUE_TO_INPUT_MISSING
 - **Original Execution Status**: BLOCKED
-- **Current Path Status**: PRESENT_ON_PR_BRANCH
+- **Current Path Status**: PRESENT
 
 ## INPUT_RECORD
 - **A1**: `aegis-cortex/2026-09-07-A1-reliability-observe.md` — INPUT_MISSING on the A2 task base/main snapshot.
@@ -85,3 +85,12 @@ INPUT_MISSING
 - Verification / Boundary Discipline: CORRECTED
 
 本 GPT 复核未执行 `aegis-cortex/check.py`, 未进行替代 A2 外部研究, 不声称 checker PASS。
+
+## POST_MERGE_CURRENT_STATE_CORRECTION
+
+- **Correction Date**: 2026-09-07
+- **Correction Agent**: GPT Web Independent Maintainer
+- **Correction Type**: CURRENT_PATH_RECONCILIATION
+- **Related Delivery**: PR #418 merged
+
+PR #418 已完成合并，因此 `Current Path Status` 从 pre-merge 的 `PRESENT_ON_PR_BRANCH` 更新为当前事实 `PRESENT`。本修正只更新 delivery/current-path 状态；Jules 原始 `BLOCKED`、task-time `INPUT_MISSING`、`Network Status: NOT_RUN` 与未运行替代 Orientation 的历史事实全部保持不变。

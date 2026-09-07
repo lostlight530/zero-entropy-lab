@@ -26,7 +26,7 @@
 - **Local Incident Evidence**: NO_LOCAL_EVIDENCE
 - **Host Applicability**: UNKNOWN
 - **Original Execution Status**: COMPLETED_NATIVE
-- **Current Path Status**: PRESENT_ON_PR_BRANCH
+- **Current Path Status**: PRESENT
 
 ## INPUT_RECORD
 - **实际读取文件**:
@@ -103,3 +103,12 @@
 - Verification / Boundary Discipline: CORRECTED
 
 本 GPT 复核未执行 `aegis-cortex/check.py`, 未复现论文实验，也未建立本地 incident。
+
+## POST_MERGE_CURRENT_STATE_CORRECTION
+
+- **Correction Date**: 2026-09-07
+- **Correction Agent**: GPT Web Independent Maintainer
+- **Correction Type**: CURRENT_PATH_RECONCILIATION
+- **Related Delivery**: PR #417 merged
+
+PR #417 已完成合并，因此 `Current Path Status` 从 pre-merge 的 `PRESENT_ON_PR_BRANCH` 更新为当前事实 `PRESENT`。本修正只更新 delivery/current-path 状态；Jules 原始 `COMPLETED_NATIVE`、单一来源证据边界与本地适用性未知均保持不变。
