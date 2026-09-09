@@ -364,16 +364,16 @@
     "agentscope-ai/agentscope": {
       "documents": {
         "README.md": {
-          "blob_sha": "7390bcb40aec76229b43e0ed226b79b59f258576",
-          "commit_sha": "c7d8e31bfd0a2f85e67b6235bd44c09fce259106",
-          "content_hash": "3366684ffcffa21a119c5fbd676a642055e98b0b2c1a38de5389e46926ffaec4",
+          "blob_sha": "45bee233c84e0fe96e5e6b84baf387536e8f590b",
+          "commit_sha": "033a3613401a3e6cbd39608321579481f6bd0953",
+          "content_hash": "f97a3822757f2d501dc92ecf7c66dfc4264d638cc336ad58d4250809c4da9a0b",
           "entity_id": "doc_agentscope_ai_agentscope_readme_md_4415c1cedff4",
-          "observed_blob_sha": "7390bcb40aec76229b43e0ed226b79b59f258576",
-          "observed_commit_sha": "c7d8e31bfd0a2f85e67b6235bd44c09fce259106",
-          "observed_tree_sha": "8715bfd08ac85543d7682afe40cc790ae2df7f74",
-          "output": "current/agent-runtime/agentscope_ai_agentscope/README.md__7390bcb40aec__c7d8e31bfd0a.md",
-          "sha": "7390bcb40aec76229b43e0ed226b79b59f258576",
-          "tree_sha": "8715bfd08ac85543d7682afe40cc790ae2df7f74"
+          "observed_blob_sha": "45bee233c84e0fe96e5e6b84baf387536e8f590b",
+          "observed_commit_sha": "033a3613401a3e6cbd39608321579481f6bd0953",
+          "observed_tree_sha": "7d9fadad732713720578ac5278f525b797b0b81e",
+          "output": "current/agent-runtime/agentscope_ai_agentscope/README.md__45bee233c84e__033a3613401a.md",
+          "sha": "45bee233c84e0fe96e5e6b84baf387536e8f590b",
+          "tree_sha": "7d9fadad732713720578ac5278f525b797b0b81e"
         },
         "examples/a2a/README.md": {
           "blob_sha": "1c4871904136de38b1dd6e1d890fc01c7302483d",
@@ -412,7 +412,7 @@
           "tree_sha": "577a34b06ea4ef9406b86c0dd59dfed5fc2b78ae"
         }
       },
-      "last_checked_at": "2026-09-08T23:44:27.091801+00:00"
+      "last_checked_at": "2026-09-09T23:37:53.049375+00:00"
     },
     "agentskills/agentskills": {
       "documents": {
@@ -577,19 +577,19 @@
           "tree_sha": "2778efda831bff890343161a7b4241a9e47567b0"
         },
         "README.md": {
-          "blob_sha": "eaafa0a802b7fd5ae488054a3e3ada714dbfc985",
-          "commit_sha": "d6954946df8b156ab27554ca02d2d6234c8595a1",
-          "content_hash": "59214b7b692403501522ae41f0a2cb1f12e5d85db1bff5fa0df4cebb3be70d0e",
+          "blob_sha": "c4dedf6e761c9d6c9c1b26352a63ebc1eddc43de",
+          "commit_sha": "d9b57bf4be34b34fce5f5bf71be7d6d5667b61ec",
+          "content_hash": "ce19ad0ac15842fcc8bcc2efd93361914e0ecf3393dfca0927e9c4a3ef45e9a9",
           "entity_id": "external_doc_google_adk_python_readme_md",
-          "observed_blob_sha": "eaafa0a802b7fd5ae488054a3e3ada714dbfc985",
-          "observed_commit_sha": "ed1306f58796648a58b5ee2f99f80e81e92cd7de",
-          "observed_tree_sha": "ba009a58d76a6a13b63252447a43063201e874ef",
-          "output": "current/agent-runtime/google_adk_python/README.md__eaafa0a802b7__d6954946df8b.md",
-          "sha": "eaafa0a802b7fd5ae488054a3e3ada714dbfc985",
-          "tree_sha": "9120ae1fdd8e3e0702727b12f93eb3a6ac5d89e1"
+          "observed_blob_sha": "c4dedf6e761c9d6c9c1b26352a63ebc1eddc43de",
+          "observed_commit_sha": "d9b57bf4be34b34fce5f5bf71be7d6d5667b61ec",
+          "observed_tree_sha": "48c13ba97c5b177b0cc3dfd5db06d740cbdd458a",
+          "output": "current/agent-runtime/google_adk_python/README.md__c4dedf6e761c__d9b57bf4be34.md",
+          "sha": "c4dedf6e761c9d6c9c1b26352a63ebc1eddc43de",
+          "tree_sha": "48c13ba97c5b177b0cc3dfd5db06d740cbdd458a"
         }
       },
-      "last_checked_at": "2026-08-31T00:00:13.079653+00:00"
+      "last_checked_at": "2026-09-09T23:37:43.629737+00:00"
     },
     "huggingface/smolagents": {
       "documents": {
@@ -662,16 +662,16 @@
     "microsoft/agent-framework": {
       "documents": {
         "README.md": {
-          "blob_sha": "fad86ea1d439bfb11df19b9e5d14c0b493b79ae0",
-          "commit_sha": "6a0773ba2180e8036d138dbb9794ae64ec2d978b",
-          "content_hash": "5fee34116753f051e0bfa87bd961a6f28197c3587461faf6632432563f2d395b",
+          "blob_sha": "dd6565de539f1bda5f2d712dce0dd55bfc793505",
+          "commit_sha": "5e0536c731a6f581835e1d0c671928d4d2b286b6",
+          "content_hash": "673942fdd678e469ce4edaaf4cae314d5284d3b157a2eeccfce8ff06eeba3eeb",
           "entity_id": "doc_microsoft_agent_framework_readme_md_f1e82d81a897",
-          "observed_blob_sha": "fad86ea1d439bfb11df19b9e5d14c0b493b79ae0",
-          "observed_commit_sha": "6a0773ba2180e8036d138dbb9794ae64ec2d978b",
-          "observed_tree_sha": "69007e15cd1b3a7d9194aedfae0758a245785c3c",
-          "output": "current/agent-runtime/microsoft_agent_framework/README.md__fad86ea1d439__6a0773ba2180.md",
-          "sha": "fad86ea1d439bfb11df19b9e5d14c0b493b79ae0",
-          "tree_sha": "69007e15cd1b3a7d9194aedfae0758a245785c3c"
+          "observed_blob_sha": "dd6565de539f1bda5f2d712dce0dd55bfc793505",
+          "observed_commit_sha": "5e0536c731a6f581835e1d0c671928d4d2b286b6",
+          "observed_tree_sha": "64545515db9bb2e4b7cc74b276bb40bc4df35fcc",
+          "output": "current/agent-runtime/microsoft_agent_framework/README.md__dd6565de539f__5e0536c731a6.md",
+          "sha": "dd6565de539f1bda5f2d712dce0dd55bfc793505",
+          "tree_sha": "64545515db9bb2e4b7cc74b276bb40bc4df35fcc"
         },
         "docs/decisions/0001-agent-run-response.md": {
           "blob_sha": "68626cb1818eb077e9dd9d51ab286b3fba520ed5",
@@ -1189,6 +1189,18 @@
           "sha": "5f8dd9a6f99c8599eb0b60e5179516f34297b02f",
           "tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4"
         },
+        "docs/decisions/0040-isolate-python-lab-workspace.md": {
+          "blob_sha": "1c9903e90aeca72ddd03039bd22e59cf8f074a82",
+          "commit_sha": "5e0536c731a6f581835e1d0c671928d4d2b286b6",
+          "content_hash": "a8ff8ec9626efa13d949594d1612962d3b69e027724c117b56c2d1e4c5adff58",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0040_isolate_python_lab_workspace_md",
+          "observed_blob_sha": "1c9903e90aeca72ddd03039bd22e59cf8f074a82",
+          "observed_commit_sha": "5e0536c731a6f581835e1d0c671928d4d2b286b6",
+          "observed_tree_sha": "64545515db9bb2e4b7cc74b276bb40bc4df35fcc",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0040-isolate-python-lab-workspace.md__1c9903e90aec__5e0536c731a6.md",
+          "sha": "1c9903e90aeca72ddd03039bd22e59cf8f074a82",
+          "tree_sha": "64545515db9bb2e4b7cc74b276bb40bc4df35fcc"
+        },
         "docs/decisions/README.md": {
           "blob_sha": "55c48a7089dde103d2ec7bc3c9d16412989fe2e7",
           "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
@@ -1238,7 +1250,7 @@
           "tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4"
         }
       },
-      "last_checked_at": "2026-09-07T23:50:35.590640+00:00"
+      "last_checked_at": "2026-09-09T23:37:45.660852+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
