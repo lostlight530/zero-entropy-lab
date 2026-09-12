@@ -674,16 +674,16 @@
           "tree_sha": "64545515db9bb2e4b7cc74b276bb40bc4df35fcc"
         },
         "docs/decisions/0001-agent-run-response.md": {
-          "blob_sha": "68626cb1818eb077e9dd9d51ab286b3fba520ed5",
-          "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
-          "content_hash": "6fb8f3ce163c26a37bdd2fa065ed7dffeb940317e0efc2e24026f4b9ec32d97c",
+          "blob_sha": "e8a5ac0776ad301c7cd368cec34e8dd1098c930a",
+          "commit_sha": "3c670707766a8455da6491a9049cc9d575e019f0",
+          "content_hash": "67f51a9b0a3d44c05d93f6bbe0702f23a8e86ac1c5d81be42b2453617b89e32c",
           "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0001_agent_run_response_md",
-          "observed_blob_sha": "68626cb1818eb077e9dd9d51ab286b3fba520ed5",
-          "observed_commit_sha": "edfe115ea06bca57ae5a123d0fac5b3fdda13603",
-          "observed_tree_sha": "453055ec74e2528c6bd5d33c6a3f80b9baf7355e",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0001-agent-run-response.md__68626cb1818e__7b6d2579884b.md",
-          "sha": "68626cb1818eb077e9dd9d51ab286b3fba520ed5",
-          "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
+          "observed_blob_sha": "e8a5ac0776ad301c7cd368cec34e8dd1098c930a",
+          "observed_commit_sha": "3c670707766a8455da6491a9049cc9d575e019f0",
+          "observed_tree_sha": "c84a44533c2e8383c712d6ea7a414a3d6e742d90",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0001-agent-run-response.md__e8a5ac0776ad__3c670707766a.md",
+          "sha": "e8a5ac0776ad301c7cd368cec34e8dd1098c930a",
+          "tree_sha": "c84a44533c2e8383c712d6ea7a414a3d6e742d90"
         },
         "docs/decisions/0002-agent-tools.md": {
           "blob_sha": "0f0cb85abfd6a63f08a92b0e3c69599f3cff3844",
@@ -734,16 +734,16 @@
           "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
         },
         "docs/decisions/0006-userapproval.md": {
-          "blob_sha": "a2e24c76fdd19dbebcbc12057c2ed5afc43a0f1a",
-          "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
-          "content_hash": "d636e7d3ffe77ea7186eee981917412ddd8e01cc59a64a3c8b493d3bc8a50a9e",
+          "blob_sha": "4b59b104f8c31781d5bc56425e11d799bae33527",
+          "commit_sha": "3c670707766a8455da6491a9049cc9d575e019f0",
+          "content_hash": "af8e13d5adab8ee0694399cfb33219e985890ffff0aa1cf7148ad0b98737b530",
           "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0006_userapproval_md",
-          "observed_blob_sha": "a2e24c76fdd19dbebcbc12057c2ed5afc43a0f1a",
-          "observed_commit_sha": "edfe115ea06bca57ae5a123d0fac5b3fdda13603",
-          "observed_tree_sha": "453055ec74e2528c6bd5d33c6a3f80b9baf7355e",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0006-userapproval.md__a2e24c76fdd1__7b6d2579884b.md",
-          "sha": "a2e24c76fdd19dbebcbc12057c2ed5afc43a0f1a",
-          "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
+          "observed_blob_sha": "4b59b104f8c31781d5bc56425e11d799bae33527",
+          "observed_commit_sha": "3c670707766a8455da6491a9049cc9d575e019f0",
+          "observed_tree_sha": "c84a44533c2e8383c712d6ea7a414a3d6e742d90",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0006-userapproval.md__4b59b104f8c3__3c670707766a.md",
+          "sha": "4b59b104f8c31781d5bc56425e11d799bae33527",
+          "tree_sha": "c84a44533c2e8383c712d6ea7a414a3d6e742d90"
         },
         "docs/decisions/0007-agent-filtering-middleware.md": {
           "blob_sha": "4fd3b57727a5f048ddc316562922a1468bfb9172",
@@ -890,16 +890,16 @@
           "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
         },
         "docs/decisions/0019-python-context-compaction-strategy.md": {
-          "blob_sha": "8fffb185d1a89894b44a9104c9c1efacf1b25dfe",
-          "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
-          "content_hash": "be22f25ab702402ae5ce83792d2e21f2eb149f38bb5efb365ee9400e6870f760",
+          "blob_sha": "1cdd15bb02108543728850f8ed75b03c3b838768",
+          "commit_sha": "3c670707766a8455da6491a9049cc9d575e019f0",
+          "content_hash": "67a3c97e5c8fb3895e7ea539e9b02e6f53508e2fcc87ede614b261fc4d4261a4",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0019_python_context_compaction_strategy_md_8fffb185d1a8",
-          "observed_blob_sha": "8fffb185d1a89894b44a9104c9c1efacf1b25dfe",
-          "observed_commit_sha": "edfe115ea06bca57ae5a123d0fac5b3fdda13603",
-          "observed_tree_sha": "453055ec74e2528c6bd5d33c6a3f80b9baf7355e",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0019-python-context-compaction-strategy.md__8fffb185d1a8__7b6d2579884b.md",
-          "sha": "8fffb185d1a89894b44a9104c9c1efacf1b25dfe",
-          "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
+          "observed_blob_sha": "1cdd15bb02108543728850f8ed75b03c3b838768",
+          "observed_commit_sha": "3c670707766a8455da6491a9049cc9d575e019f0",
+          "observed_tree_sha": "c84a44533c2e8383c712d6ea7a414a3d6e742d90",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0019-python-context-compaction-strategy.md__1cdd15bb0210__3c670707766a.md",
+          "sha": "1cdd15bb02108543728850f8ed75b03c3b838768",
+          "tree_sha": "c84a44533c2e8383c712d6ea7a414a3d6e742d90"
         },
         "docs/decisions/0020-foundry-agent-type-naming.md": {
           "blob_sha": "03d43f64ac5e30dc72cbc8796472ff5d01725aaf",
@@ -1250,7 +1250,7 @@
           "tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4"
         }
       },
-      "last_checked_at": "2026-09-09T23:37:45.660852+00:00"
+      "last_checked_at": "2026-09-12T23:31:46.048395+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
@@ -2463,6 +2463,18 @@
           "sha": "002984c113a138ebb517a78193d4f16c4a41bf3d",
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
         },
+        "docs/design/hisparse.md": {
+          "blob_sha": "965ab81d8da143a9026dd344030d5a07184d773b",
+          "commit_sha": "ebe1dec2da16ac559e40446a4c6e06a73c9efe00",
+          "content_hash": "a198beb53dd651a5adc4f6fd384fee4707588f0015bb2bdb8bed3771cff94006",
+          "entity_id": "external_doc_vllm_project_vllm_docs_design_hisparse_md",
+          "observed_blob_sha": "965ab81d8da143a9026dd344030d5a07184d773b",
+          "observed_commit_sha": "ebe1dec2da16ac559e40446a4c6e06a73c9efe00",
+          "observed_tree_sha": "b28978dbe579190a99ef801d58c13adeeda54265",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__hisparse.md__965ab81d8da1__ebe1dec2da16.md",
+          "sha": "965ab81d8da143a9026dd344030d5a07184d773b",
+          "tree_sha": "b28978dbe579190a99ef801d58c13adeeda54265"
+        },
         "docs/design/huggingface_integration.md": {
           "blob_sha": "c3937d15db895aebbf1876d04f6996a88beba616",
           "commit_sha": "5ed3faa43ddf075f24482396b634edc33e047a40",
@@ -2812,7 +2824,7 @@
           "tree_sha": "cfeb3173928b2b51eb943c8f1dacbc9c3ebf57b4"
         }
       },
-      "last_checked_at": "2026-09-10T23:31:26.941639+00:00"
+      "last_checked_at": "2026-09-12T23:31:58.711192+00:00"
     },
     "volcengine/verl": {
       "documents": {
