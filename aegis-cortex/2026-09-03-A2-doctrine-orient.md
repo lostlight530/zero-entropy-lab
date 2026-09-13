@@ -112,3 +112,11 @@
 - 确认未读取宿主仓库或 GitHub Actions。
 - 确认未制造本地故障。
 - 确认未做最终决策，并未针对宿主仓库做纪律决策或修改。
+
+## CURRENT_RECONCILIATION_2026-09-13
+
+- **Reconciliation Treatment**: SOURCE_IDENTITY_AND_ACCESS_DEPTH_CALIBRATION
+- **Historical State Preserved**: YES
+- **Current Interpretation**: A1 当日记录了具体 arXiv 论文身份；A2 的 Crossref 搜索则返回了与若干 A1 目标并不相同的标题/研究对象。尤其 `Subsea Accumulators – Are they a False Reliance?` 不能作为 A1 中 agent false-completion 论文的 exact-source corroboration。原 A2 搜索行为保留为相关发现/检索历史，但不再把这些命中继承成对 A1 原论文身份的精确 `VERIFIED`。
+- **Access Depth**: 本日 A2 自身也明确写了“通过 Crossref API 获取相近文本，未能直接爬取原始内容”；因此当前 weekly promotion 必须按 `RELATED_DISCOVERY / METADATA-LEVEL` 处理这些 Crossref 结果，而不是 `FULL_PRIMARY_RESEARCH_VERIFICATION`。
+- **Local Boundary**: W35 preventive record 证明 Aegis 已讨论相关防线，不证明本地发生了 false completion 或 memory poisoning 事故。
