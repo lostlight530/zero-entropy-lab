@@ -19,8 +19,12 @@
 - **Boundary Violation**: NO
 - **Record Provenance**: HUMAN_AUTHORIZED_RECONCILIATION
 - **Evidence Class**: EXTERNAL_RUNTIME_BOUNDARY_EVIDENCE
+- **Source Identity**: GitHub Docs — Copilot cloud agent / MCP
+- **Source Authority For Claim**: OFFICIAL_PRODUCT_DOCUMENTATION_FOR_GITHUB_COPILOT_CLOUD_AGENT
+- **Independent Verification**: NO — H2 rechecks the same GitHub vendor/product lineage and does not add a second independent source
 - **Local Incident Evidence**: NO_LOCAL_EVIDENCE
 - **Host Applicability**: UNKNOWN
+- **Original Execution Status**: NO_DELIVERED_TARGET_FILE_ON_BASE_MAIN
 - **Current Path Status**: PRESENT_ON_RECONCILIATION_BRANCH
 
 ## INPUT_RECORD
