@@ -24,6 +24,7 @@
 - **Independent Verification**: RUN_LEVEL_TWO_LINEAGES; EACH_SIGNAL_HAS_ONE_PRIMARY_LINEAGE
 - **Local Incident Evidence**: NO_LOCAL_EVIDENCE
 - **Host Applicability**: UNKNOWN
+- **Original Execution Status**: NO_DELIVERED_TARGET_FILE_ON_BASE_MAIN
 - **Current Path Status**: PRESENT_ON_RECONCILIATION_BRANCH
 
 ## INPUT_RECORD
