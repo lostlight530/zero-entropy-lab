@@ -45,7 +45,7 @@ Action ID: NO_ACTIONABLE_DECISION
 Action Type: MISSING_INPUT_GUARD
 Action: DECISION_INPUT_MISSING
 Reason: Same-week A3 input is missing.
-Source Decision ID: NO_ACTIONABLE_DECISION
+Historical Source Decision ID: NO_ACTIONABLE_DECISION
 External Evidence Preserved: NONE
 Aegis Repository Evidence: NO_LOCAL_EVIDENCE
 Expected Behavior Change: NONE
@@ -97,8 +97,9 @@ Current A3 Decision IDs:
 - DEC-W36-03 — memory-poisoning/provenance-laundering remains external risk unless local evidence exists
 
 ### ACT-W36-R01
+Action ID: ACT-W36-R01
+Source Decision ID: DEC-W36-01
 - **Action Type**: SOURCE_REQUIREMENT
-- **Source Decision ID**: DEC-W36-01
 - **Action**: high-confidence external claims must retain exact source identity and material access depth (`FULL_TEXT`, `ABSTRACT`, `METADATA`, `SECONDARY`) through weekly/monthly promotion.
 - **Expected Behavior Change**: metadata/search discovery is not described as full-text verification; related but different papers are not treated as exact corroboration of an A1 paper identity.
 - **Validity Window**: W37-W44
@@ -108,8 +109,9 @@ Current A3 Decision IDs:
 - **Static Doctrine Change NO**: YES
 
 ### ACT-W36-R02
+Action ID: ACT-W36-R02
+Source Decision ID: DEC-W36-02
 - **Action Type**: VERIFICATION_REQUIREMENT
-- **Source Decision ID**: DEC-W36-02
 - **Action**: keep status+content/postcondition checks where the authorized task exposes an observable postcondition; when it does not, record UNKNOWN/UNVERIFIED rather than expanding a tool/status success into semantic completion.
 - **Expected Behavior Change**: stronger proof boundaries without importing external failure rates as local rates.
 - **Validity Window**: W37-W40
@@ -119,8 +121,9 @@ Current A3 Decision IDs:
 - **Static Doctrine Change NO**: YES
 
 ### ACT-W36-R03
+Action ID: ACT-W36-R03
+Source Decision ID: DEC-W36-03
 - **Action Type**: UNCERTAINTY_GUARD
-- **Source Decision ID**: DEC-W36-03
 - **Action**: preserve memory-poisoning/provenance-laundering as an external watch category and retain source lineage/local-vs-external state through compression.
 - **Expected Behavior Change**: no same-source confidence inflation and no local-compromise claim without local evidence.
 - **Validity Window**: W37-W44
