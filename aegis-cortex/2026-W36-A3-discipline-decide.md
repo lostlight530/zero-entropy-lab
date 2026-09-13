@@ -21,6 +21,14 @@
 - **Boundary Violation**: NO
 - **Original W36 A3 Delivery State**: NO_CANONICAL_FILE_ON_BASE_MAIN
 - **Current Path Status**: PRESENT_ON_RECONCILIATION_BRANCH
+- **Daily Coverage Matrix**: 7 A1 + 7 A2 / COMPLETE
+- **Inherited Evidence**: W36 Daily A1/A2 plus prior weekly and historical monthly context; inherited repetition does not add independence
+- **Independent Evidence Added**: current weekly reconciliation adds no new local incident evidence; external recertification is used only where explicitly named
+- **Missing Inputs Preserved**: NONE in W36 Daily paths; original W36 A4 task-time A3 absence remains preserved in A4
+- **External Risk State**: SOURCE_BOUNDED_EXTERNAL_RISK_ONLY
+- **Local Incident State**: NO_LOCAL_INCIDENT_EVIDENCE
+- **Historical Execution State**: NO_CANONICAL_W36_A3_ON_BASE_MAIN
+- **Current Delivery State**: PRESENT_ON_RECONCILIATION_BRANCH
 
 ## INPUT_RECORD
 
@@ -100,7 +108,8 @@ Remaining uncertainty:
 
 ## DECISION_SET
 
-### Decision ID: DEC-W36-01
+### DEC-W36-01
+Decision ID: DEC-W36-01
 - **Decision**: Preserve exact claim-to-source identity and access depth before promoting external evidence from Daily to Weekly.
 - **Decision Type**: STRENGTHEN_EVIDENCE
 - **External Evidence**: supporting provenance research exists, but the decision is primarily motivated by the W36 record set itself.
@@ -115,7 +124,8 @@ Remaining uncertainty:
 - **Stop Condition**: deterministic source-identity/access-depth validation supersedes prose handling.
 - **Host Repository Change NO**: YES
 
-### Decision ID: DEC-W36-02
+### DEC-W36-02
+Decision ID: DEC-W36-02
 - **Decision**: Continue status+content/postcondition verification as a bounded preventive discipline, while prohibiting projection of external failure rates into local incident claims.
 - **Decision Type**: CONTINUE_WATCH
 - **External Evidence**: multiple original research/engineering lineages across W34-W36.
@@ -130,7 +140,8 @@ Remaining uncertainty:
 - **Stop Condition**: task-specific deterministic proof or contrary local evidence changes the treatment.
 - **Host Repository Change NO**: YES
 
-### Decision ID: DEC-W36-03
+### DEC-W36-03
+Decision ID: DEC-W36-03
 - **Decision**: Continue watching memory-poisoning/provenance-laundering as an external risk; preserve source lineage through compression and do not promote the risk into a local incident without local evidence.
 - **Decision Type**: CONTINUE_WATCH
 - **External Evidence**: multiple original-research lineages across the recent record set.
