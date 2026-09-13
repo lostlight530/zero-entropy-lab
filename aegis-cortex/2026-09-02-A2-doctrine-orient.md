@@ -105,3 +105,11 @@
 - **确认未制造本地故障**: YES
 - **确认未做最终纪律决策**: YES
 - **确认未越界访问非许可文件**: YES
+
+## CURRENT_RECONCILIATION_2026-09-13
+
+- **Reconciliation Treatment**: ACCESS_DEPTH_CALIBRATION
+- **Historical State Preserved**: YES
+- **Current Interpretation**: 本日 Crossref API 调用可靠支持 DOI/题名/元数据存在与文献发现，但仅凭 Crossref metadata 不应继续被解释为已读取并验证论文完整方法、实验与结论。原风险主题可保留为外部研究线索；`High Confidence (Tier 1 Primary Research)` 的当前继承强度应限定为 bibliographic/source-identity discovery，除非后续记录明确打开并核对全文或至少摘要内容。
+- **Local Boundary**: `NO_LOCAL_EVIDENCE` 继续有效；外部论文风险不转换成 zero-entropy-lab 本地故障。
+- **Weekly Use**: W36 A3 使用此记录时应保留 `METADATA/DISCOVERY != FULL_TEXT_VERIFICATION`，不把原标签静默当作 full-content evidence。

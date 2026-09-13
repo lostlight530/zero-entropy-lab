@@ -45,7 +45,7 @@ Action ID: NO_ACTIONABLE_DECISION
 Action Type: MISSING_INPUT_GUARD
 Action: DECISION_INPUT_MISSING
 Reason: Same-week A3 input is missing.
-Source Decision ID: NO_ACTIONABLE_DECISION
+Historical Source Decision ID: NO_ACTIONABLE_DECISION
 External Evidence Preserved: NONE
 Aegis Repository Evidence: NO_LOCAL_EVIDENCE
 Expected Behavior Change: NONE
@@ -79,3 +79,57 @@ Static Doctrine Change NO: YES
 - **确认只读范围限制于 aegis-cortex/**: YES
 - **确认仅在明确指定的输出文件范围写入内容**: YES
 - **确认未制造假事故 (分离了外部研究风险与本地 Aegis 记录)**: YES
+
+## CURRENT_STATE_RECONCILIATION_2026-09-13
+
+- **Reconciliation Agent**: GPT Web Independent Maintainer
+- **Reconciliation Type**: LATER_CURRENT_STATE_ACTION_MAPPING
+- **Original Jules Execution Status Preserved**: YES
+- **Original `DECISION_INPUT_MISSING / BLOCKED` Status Preserved**: YES
+
+The original A4 execution remains a valid task-time record: same-week A3 was unavailable to that execution. This section does not replay or replace it.
+
+A later human-authorized reconciliation has now produced `aegis-cortex/2026-W36-A3-discipline-decide.md` from the complete W36 Daily set. The current action mapping below is a later current-state layer only.
+
+Current A3 Decision IDs:
+- DEC-W36-01 — exact claim/source identity and access-depth calibration
+- DEC-W36-02 — bounded status+content/postcondition verification without local-rate projection
+- DEC-W36-03 — memory-poisoning/provenance-laundering remains external risk unless local evidence exists
+
+### ACT-W36-R01
+Action ID: ACT-W36-R01
+Source Decision ID: DEC-W36-01
+- **Action Type**: SOURCE_REQUIREMENT
+- **Action**: high-confidence external claims must retain exact source identity and material access depth (`FULL_TEXT`, `ABSTRACT`, `METADATA`, `SECONDARY`) through weekly/monthly promotion.
+- **Expected Behavior Change**: metadata/search discovery is not described as full-text verification; related but different papers are not treated as exact corroboration of an A1 paper identity.
+- **Validity Window**: W37-W44
+- **Stop Condition**: deterministic source-identity/access-depth validation supersedes prose handling.
+- **Host Repository Change NO**: YES
+- **GitHub Actions Change NO**: YES
+- **Static Doctrine Change NO**: YES
+
+### ACT-W36-R02
+Action ID: ACT-W36-R02
+Source Decision ID: DEC-W36-02
+- **Action Type**: VERIFICATION_REQUIREMENT
+- **Action**: keep status+content/postcondition checks where the authorized task exposes an observable postcondition; when it does not, record UNKNOWN/UNVERIFIED rather than expanding a tool/status success into semantic completion.
+- **Expected Behavior Change**: stronger proof boundaries without importing external failure rates as local rates.
+- **Validity Window**: W37-W40
+- **Stop Condition**: stronger task-specific deterministic proof replaces this temporary discipline.
+- **Host Repository Change NO**: YES
+- **GitHub Actions Change NO**: YES
+- **Static Doctrine Change NO**: YES
+
+### ACT-W36-R03
+Action ID: ACT-W36-R03
+Source Decision ID: DEC-W36-03
+- **Action Type**: UNCERTAINTY_GUARD
+- **Action**: preserve memory-poisoning/provenance-laundering as an external watch category and retain source lineage/local-vs-external state through compression.
+- **Expected Behavior Change**: no same-source confidence inflation and no local-compromise claim without local evidence.
+- **Validity Window**: W37-W44
+- **Stop Condition**: applicability is disproven or materially changed by local evidence.
+- **Host Repository Change NO**: YES
+- **GitHub Actions Change NO**: YES
+- **Static Doctrine Change NO**: YES
+
+Current-state note: these reconciled actions do not imply A3 was available to the original A4 run and do not change the historical BLOCKED status.

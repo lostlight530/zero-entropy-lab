@@ -94,3 +94,10 @@ INPUT_MISSING
 - **Related Delivery**: PR #418 merged
 
 PR #418 已完成合并，因此 `Current Path Status` 从 pre-merge 的 `PRESENT_ON_PR_BRANCH` 更新为当前事实 `PRESENT`。本修正只更新 delivery/current-path 状态；Jules 原始 `BLOCKED`、task-time `INPUT_MISSING`、`Network Status: NOT_RUN` 与未运行替代 Orientation 的历史事实全部保持不变。
+
+## CURRENT_RECONCILIATION_2026-09-13
+
+- **Reconciliation Treatment**: PRESERVE_ORIGINAL_BLOCKED_STATE
+- **Historical State Preserved**: YES
+- **Current Interpretation**: 9 月 7 日 A2 的 `INPUT_MISSING / BLOCKED / NOT_RUN` 继续作为完整有效历史事实保留。当前 main/branch 上同日 A1 的后来存在、后续周/月阶段汇总和本次 13-day reconciliation 都不改变“原 A2 执行时不可见”的事实。
+- **Current Use**: 后续 W36/W37 或 September month-to-date 汇总可以读取当前完整路径，但不得把新的可见性倒写成 9 月 7 日 A2 原始 SUCCESS，也不得补造当日未执行的联网 Orientation。
