@@ -50,8 +50,10 @@ Uncompleted verification:
 ## EXTERNAL_SOURCE_RECORDS
 
 ### SRC-2026-09-13-01
+- **Source ID**: SRC-2026-09-13-01
 - **Title**: About GitHub Copilot cloud agent
 - **Publisher**: GitHub Docs
+- **URL**: https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent
 - **Date Checked**: 2026-09-13
 - **Source Type**: OFFICIAL_PRODUCT_DOCUMENTATION
 - **Evidence Tier**: Tier 1 for named product behavior
@@ -64,8 +66,10 @@ Uncompleted verification:
 - **Limitations**: vendor/product-specific runtime behavior.
 
 ### SRC-2026-09-13-02
+- **Source ID**: SRC-2026-09-13-02
 - **Title**: Model Context Protocol (MCP) and GitHub Copilot cloud agent
 - **Publisher**: GitHub Docs
+- **URL**: https://docs.github.com/en/copilot/concepts/agents/cloud-agent/mcp-and-cloud-agent
 - **Date Checked**: 2026-09-13
 - **Source Type**: OFFICIAL_PRODUCT_DOCUMENTATION
 - **Evidence Tier**: Tier 1 for named product behavior
