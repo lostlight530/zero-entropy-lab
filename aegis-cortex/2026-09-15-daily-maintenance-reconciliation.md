@@ -6,7 +6,7 @@ System: `aegis-cortex`
 Maintenance type: `INCREMENTAL_TWO_DAY_MAINTENANCE`
 Audit window: `2026-09-14` through `2026-09-15` Asia/Shanghai
 Base main at maintenance start: `02f1f9936b11e5c28a7a8d692320b6644363ab0e`
-Predecessor maintenance record: `aegis-cortex/2026-09-13-full-sop-reconciliation.md`
+Predecessor maintenance record: `historical-audits/05-maintenance-and-reconciliation/2026-09-13--sep-01-13--maintenance-reconciliation.md`
 Historical rewrite policy: preserve task-time execution state; minimally correct current source/evidence semantics; identify substitute producers explicitly.
 
 ## Scope boundary
