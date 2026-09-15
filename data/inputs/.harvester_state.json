@@ -1046,28 +1046,28 @@
           "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
         },
         "docs/decisions/0031-hosted-per-user-session-storage-isolation.md": {
-          "blob_sha": "f7ca09a46e1a31c33687db1c1ede6b482dac16af",
-          "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
-          "content_hash": "9a447b7ea847bb069108673a7205eea0fb0875007551ca233adbc87c24fd7b73",
+          "blob_sha": "beb6942c48994f02b8c9a6b389b096e16f116904",
+          "commit_sha": "6ad7ba2f62dd3da5cb7c1d31ef195cee9f6b915f",
+          "content_hash": "431b8060acbc60a45eec9bda594cc4984021748dbbbbd6486bd4087cd45f3328",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0031_hosted_per_user_session_storage_isolation_md_f7ca09a46e1a",
-          "observed_blob_sha": "f7ca09a46e1a31c33687db1c1ede6b482dac16af",
-          "observed_commit_sha": "edfe115ea06bca57ae5a123d0fac5b3fdda13603",
-          "observed_tree_sha": "453055ec74e2528c6bd5d33c6a3f80b9baf7355e",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0031-hosted-per-user-session-storage-isolation.md__f7ca09a46e1a__7b6d2579884b.md",
-          "sha": "f7ca09a46e1a31c33687db1c1ede6b482dac16af",
-          "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
+          "observed_blob_sha": "beb6942c48994f02b8c9a6b389b096e16f116904",
+          "observed_commit_sha": "6ad7ba2f62dd3da5cb7c1d31ef195cee9f6b915f",
+          "observed_tree_sha": "abee421356202f73e5d6e653f9c0ec851b1379de",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0031-hosted-per-user-session-storage-isolation.md__beb6942c4899__6ad7ba2f62dd.md",
+          "sha": "beb6942c48994f02b8c9a6b389b096e16f116904",
+          "tree_sha": "abee421356202f73e5d6e653f9c0ec851b1379de"
         },
         "docs/decisions/0032-dotnet-hosting-protocol-helpers.md": {
-          "blob_sha": "907410e1cc30cecd5aeff19b3e1088baccb94df6",
-          "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
-          "content_hash": "78b4ec17765a46958a397f2182f83875208eb422b93875290c39dd82c55b6b67",
+          "blob_sha": "bc3d36adf38b6964a28cbd424d713ed7176ff527",
+          "commit_sha": "6ad7ba2f62dd3da5cb7c1d31ef195cee9f6b915f",
+          "content_hash": "b567549a06861b5ac13b971d6b0fea57efb8b3b24d7f17d257e43cd586f69018",
           "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0032_dotnet_hosting_protocol_helpers_md",
-          "observed_blob_sha": "907410e1cc30cecd5aeff19b3e1088baccb94df6",
-          "observed_commit_sha": "edfe115ea06bca57ae5a123d0fac5b3fdda13603",
-          "observed_tree_sha": "453055ec74e2528c6bd5d33c6a3f80b9baf7355e",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0032-dotnet-hosting-protocol-helpers.md__907410e1cc30__7b6d2579884b.md",
-          "sha": "907410e1cc30cecd5aeff19b3e1088baccb94df6",
-          "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
+          "observed_blob_sha": "bc3d36adf38b6964a28cbd424d713ed7176ff527",
+          "observed_commit_sha": "6ad7ba2f62dd3da5cb7c1d31ef195cee9f6b915f",
+          "observed_tree_sha": "abee421356202f73e5d6e653f9c0ec851b1379de",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0032-dotnet-hosting-protocol-helpers.md__bc3d36adf38b__6ad7ba2f62dd.md",
+          "sha": "bc3d36adf38b6964a28cbd424d713ed7176ff527",
+          "tree_sha": "abee421356202f73e5d6e653f9c0ec851b1379de"
         },
         "docs/decisions/0032-durable-azure-functions-extraction.md": {
           "blob_sha": "893cfe64bf1e33673f87afd24f0546bcd0a3ccb0",
@@ -1189,6 +1189,18 @@
           "sha": "5f8dd9a6f99c8599eb0b60e5179516f34297b02f",
           "tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4"
         },
+        "docs/decisions/0039-shared-agent-session-store.md": {
+          "blob_sha": "a6616e5e2b434de51eee6aecdfbb8c772eea8c76",
+          "commit_sha": "6ad7ba2f62dd3da5cb7c1d31ef195cee9f6b915f",
+          "content_hash": "925aaecb039d2c31db1e510f27aa1bffa70fe05672d8d28699a97f23df07987c",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0039_shared_agent_session_store_md",
+          "observed_blob_sha": "a6616e5e2b434de51eee6aecdfbb8c772eea8c76",
+          "observed_commit_sha": "6ad7ba2f62dd3da5cb7c1d31ef195cee9f6b915f",
+          "observed_tree_sha": "abee421356202f73e5d6e653f9c0ec851b1379de",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0039-shared-agent-session-store.md__a6616e5e2b43__6ad7ba2f62dd.md",
+          "sha": "a6616e5e2b434de51eee6aecdfbb8c772eea8c76",
+          "tree_sha": "abee421356202f73e5d6e653f9c0ec851b1379de"
+        },
         "docs/decisions/0040-isolate-python-lab-workspace.md": {
           "blob_sha": "1c9903e90aeca72ddd03039bd22e59cf8f074a82",
           "commit_sha": "5e0536c731a6f581835e1d0c671928d4d2b286b6",
@@ -1250,7 +1262,7 @@
           "tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4"
         }
       },
-      "last_checked_at": "2026-09-15T00:03:25.513614+00:00"
+      "last_checked_at": "2026-09-15T23:48:16.211709+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
@@ -2264,19 +2276,19 @@
           "tree_sha": "67a2151bbd5ca01b46e869507a1917eedae8bb64"
         },
         "README.md": {
-          "blob_sha": "a4843486784507814c54083dbc7ea0e8a6e3b2d7",
-          "commit_sha": "7169bcd0dca2e16aecc8e0247f34e50079d9c0d5",
-          "content_hash": "d0c80496bc28fbdde3f3130b820e67b750fec8352ed8dd2e821e368e65e45c5d",
+          "blob_sha": "e84044a23aec447e38dc24c6553546d74a7c024f",
+          "commit_sha": "fd4a517ad6490f0c8464a13fdf133760b696434a",
+          "content_hash": "e8af0596a013381d81f8c828e95d2131f00e8913c2e3286c0a9f6113d173a06c",
           "entity_id": "doc_run_llama_llama_index_readme_md_c1c7af8256b4",
-          "observed_blob_sha": "a4843486784507814c54083dbc7ea0e8a6e3b2d7",
-          "observed_commit_sha": "7169bcd0dca2e16aecc8e0247f34e50079d9c0d5",
-          "observed_tree_sha": "e5eadb00d23627f1e0ace3c7b06f3168dc5deb34",
-          "output": "current/memory-context-sandbox/run_llama_llama_index/README.md__a48434867845__7169bcd0dca2.md",
-          "sha": "a4843486784507814c54083dbc7ea0e8a6e3b2d7",
-          "tree_sha": "e5eadb00d23627f1e0ace3c7b06f3168dc5deb34"
+          "observed_blob_sha": "e84044a23aec447e38dc24c6553546d74a7c024f",
+          "observed_commit_sha": "fd4a517ad6490f0c8464a13fdf133760b696434a",
+          "observed_tree_sha": "cf8e53eb8c71903d4f344d77bd869a69a157b61c",
+          "output": "current/memory-context-sandbox/run_llama_llama_index/README.md__e84044a23aec__fd4a517ad649.md",
+          "sha": "e84044a23aec447e38dc24c6553546d74a7c024f",
+          "tree_sha": "cf8e53eb8c71903d4f344d77bd869a69a157b61c"
         }
       },
-      "last_checked_at": "2026-09-11T23:39:13.107934+00:00"
+      "last_checked_at": "2026-09-15T23:48:53.301961+00:00"
     },
     "sgl-project/sglang": {
       "documents": {
@@ -2536,16 +2548,16 @@
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
         },
         "docs/design/metrics.md": {
-          "blob_sha": "c7bc85756e0d5e89b34d8d7d5d7527246f7cf701",
-          "commit_sha": "0b37d8389f4b8378adab0d3dfa1beffbb152e303",
-          "content_hash": "9e19c9018eece6c9d65a4f13bab174b61618d335d0571c51f2af8b7cd4db363a",
+          "blob_sha": "3d108890d7021e0cba25f00d997e8ebdaf216d10",
+          "commit_sha": "031f5810c1957b6ec2a7666f65a3fe68c1f7e534",
+          "content_hash": "4bb70016f5e8a909610b536c0728cd2f0904e9f555d38325070e1ccb6a64ac0a",
           "entity_id": "doc_vllm_project_vllm_docs_design_metrics_md_7b463b8750c7",
-          "observed_blob_sha": "c7bc85756e0d5e89b34d8d7d5d7527246f7cf701",
-          "observed_commit_sha": "c92b29a1d40644da710209f862b1be0ebd5c2e74",
-          "observed_tree_sha": "cd04483714f646260128f47800f095ed49cc7fa3",
-          "output": "current/serving-inference/vllm_project_vllm/docs__design__metrics.md__c7bc85756e0d__0b37d8389f4b.md",
-          "sha": "c7bc85756e0d5e89b34d8d7d5d7527246f7cf701",
-          "tree_sha": "e95d3837f886fad5dd8643983c0d1cb1f0a85d74"
+          "observed_blob_sha": "3d108890d7021e0cba25f00d997e8ebdaf216d10",
+          "observed_commit_sha": "031f5810c1957b6ec2a7666f65a3fe68c1f7e534",
+          "observed_tree_sha": "e469f93371abb572790eca0ca8ecf7c86d8a60e4",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__metrics.md__3d108890d702__031f5810c195.md",
+          "sha": "3d108890d7021e0cba25f00d997e8ebdaf216d10",
+          "tree_sha": "e469f93371abb572790eca0ca8ecf7c86d8a60e4"
         },
         "docs/design/mm_processing.md": {
           "blob_sha": "a2112a2922edb005b5cae5f151ac9937b85c45ff",
@@ -2608,16 +2620,16 @@
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
         },
         "docs/design/nixl_kv_push_connector.md": {
-          "blob_sha": "6f66be5eb9f57fbef5afc24c261d4ce56297ae92",
-          "commit_sha": "5ed3faa43ddf075f24482396b634edc33e047a40",
-          "content_hash": "717947f40d538f2c4eea830fa6b8dee942cd701e264554e8ccae21e1f7102b3b",
+          "blob_sha": "a6debd7dba8167c7fac6cd5b066f3622ad6b855f",
+          "commit_sha": "031f5810c1957b6ec2a7666f65a3fe68c1f7e534",
+          "content_hash": "974ff7e808570dc16f6feb3bb3d71cd10570424d3edbdb7ed46916d7065798a0",
           "entity_id": "external_doc_vllm_project_vllm_docs_design_nixl_kv_push_connector_md",
-          "observed_blob_sha": "6f66be5eb9f57fbef5afc24c261d4ce56297ae92",
-          "observed_commit_sha": "c92b29a1d40644da710209f862b1be0ebd5c2e74",
-          "observed_tree_sha": "cd04483714f646260128f47800f095ed49cc7fa3",
-          "output": "current/serving-inference/vllm_project_vllm/docs__design__nixl_kv_push_connector.md__6f66be5eb9f5__5ed3faa43ddf.md",
-          "sha": "6f66be5eb9f57fbef5afc24c261d4ce56297ae92",
-          "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
+          "observed_blob_sha": "a6debd7dba8167c7fac6cd5b066f3622ad6b855f",
+          "observed_commit_sha": "031f5810c1957b6ec2a7666f65a3fe68c1f7e534",
+          "observed_tree_sha": "e469f93371abb572790eca0ca8ecf7c86d8a60e4",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__nixl_kv_push_connector.md__a6debd7dba81__031f5810c195.md",
+          "sha": "a6debd7dba8167c7fac6cd5b066f3622ad6b855f",
+          "tree_sha": "e469f93371abb572790eca0ca8ecf7c86d8a60e4"
         },
         "docs/design/optimization_levels.md": {
           "blob_sha": "3261aed747948e3008b6af6abc6a1f458bc3e636",
@@ -2824,7 +2836,7 @@
           "tree_sha": "cfeb3173928b2b51eb943c8f1dacbc9c3ebf57b4"
         }
       },
-      "last_checked_at": "2026-09-13T23:44:38.193348+00:00"
+      "last_checked_at": "2026-09-15T23:48:35.158233+00:00"
     },
     "volcengine/verl": {
       "documents": {
