@@ -364,16 +364,16 @@
     "agentscope-ai/agentscope": {
       "documents": {
         "README.md": {
-          "blob_sha": "5c9a63fcbeae0c04d24571659bdda109f8e94472",
-          "commit_sha": "b82253ba1b680a67091c4de32f074477c30ba416",
-          "content_hash": "3efae64a58595e4a439a8aae0fdc9b9e80376260bcc572b2a1ca8864d01f938b",
+          "blob_sha": "623af38d8893d2c42d5af0e80d01f24f02f58937",
+          "commit_sha": "0727cbf912c3ad03fe9cfa6d4de04a049897a8d6",
+          "content_hash": "25c65a958e452ca3da07fdaffa7e26b6a9b10619698065e59fe6c21a3088c381",
           "entity_id": "doc_agentscope_ai_agentscope_readme_md_4415c1cedff4",
-          "observed_blob_sha": "5c9a63fcbeae0c04d24571659bdda109f8e94472",
-          "observed_commit_sha": "b82253ba1b680a67091c4de32f074477c30ba416",
-          "observed_tree_sha": "934d70cbb85eae7e90cbfe87d0998836c4e0ac8b",
-          "output": "current/agent-runtime/agentscope_ai_agentscope/README.md__5c9a63fcbeae__b82253ba1b68.md",
-          "sha": "5c9a63fcbeae0c04d24571659bdda109f8e94472",
-          "tree_sha": "934d70cbb85eae7e90cbfe87d0998836c4e0ac8b"
+          "observed_blob_sha": "623af38d8893d2c42d5af0e80d01f24f02f58937",
+          "observed_commit_sha": "0727cbf912c3ad03fe9cfa6d4de04a049897a8d6",
+          "observed_tree_sha": "30492219ee770cc0fbec87e0da354f45e84d6b03",
+          "output": "current/agent-runtime/agentscope_ai_agentscope/README.md__623af38d8893__0727cbf912c3.md",
+          "sha": "623af38d8893d2c42d5af0e80d01f24f02f58937",
+          "tree_sha": "30492219ee770cc0fbec87e0da354f45e84d6b03"
         },
         "examples/a2a/README.md": {
           "blob_sha": "1c4871904136de38b1dd6e1d890fc01c7302483d",
@@ -412,7 +412,7 @@
           "tree_sha": "577a34b06ea4ef9406b86c0dd59dfed5fc2b78ae"
         }
       },
-      "last_checked_at": "2026-09-11T23:38:56.535599+00:00"
+      "last_checked_at": "2026-09-15T00:03:29.979752+00:00"
     },
     "agentskills/agentskills": {
       "documents": {
@@ -698,16 +698,16 @@
           "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
         },
         "docs/decisions/0003-agent-opentelemetry-instrumentation.md": {
-          "blob_sha": "863387b5cbd6a097bd250777bfff0c05813330cd",
-          "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
-          "content_hash": "fcdeabb90567b984d4a25272a223116b4df978d52a87d486d75642fbb5dc7624",
+          "blob_sha": "527f364792a7a4c172e7138b93b9ec2aeaf09cfa",
+          "commit_sha": "61d6c2c23db5d435eaa8c70fa8e5d8770b70720d",
+          "content_hash": "44b35fc0798e5990b2deb6d87db23703e38743b0bdbbf4d36a868453b0349d59",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0003_agent_opentelemetry_instrumentation_md_863387b5cbd6",
-          "observed_blob_sha": "863387b5cbd6a097bd250777bfff0c05813330cd",
-          "observed_commit_sha": "edfe115ea06bca57ae5a123d0fac5b3fdda13603",
-          "observed_tree_sha": "453055ec74e2528c6bd5d33c6a3f80b9baf7355e",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0003-agent-opentelemetry-instrumentation.md__863387b5cbd6__7b6d2579884b.md",
-          "sha": "863387b5cbd6a097bd250777bfff0c05813330cd",
-          "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
+          "observed_blob_sha": "527f364792a7a4c172e7138b93b9ec2aeaf09cfa",
+          "observed_commit_sha": "61d6c2c23db5d435eaa8c70fa8e5d8770b70720d",
+          "observed_tree_sha": "38cb30f37762df680fff9cef3fa45c69cdf5aee0",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0003-agent-opentelemetry-instrumentation.md__527f364792a7__61d6c2c23db5.md",
+          "sha": "527f364792a7a4c172e7138b93b9ec2aeaf09cfa",
+          "tree_sha": "38cb30f37762df680fff9cef3fa45c69cdf5aee0"
         },
         "docs/decisions/0004-foundry-sdk-extensions.md": {
           "blob_sha": "b4f030802883fd2c8c76bbbc62f38bce8f6e2a00",
@@ -1250,7 +1250,7 @@
           "tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4"
         }
       },
-      "last_checked_at": "2026-09-13T23:44:25.878325+00:00"
+      "last_checked_at": "2026-09-15T00:03:25.513614+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
