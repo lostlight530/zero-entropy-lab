@@ -12,7 +12,7 @@
 - **Agent**: Jules
 - **Knowledge Source**: EXTERNAL_AND_AEGIS_RECORDS
 - **Network Status**: NETWORK_VERIFIED
-- **Source Status**: VERIFIED_INDEPENDENT_SOURCES
+- **Source Status**: SINGLE_SOURCE_LINEAGE
 - **Task Status**: SUCCESS
 - **Repository Inspection**: AEGIS_ONLY
 - **GitHub Actions Inspection**: NO
@@ -21,8 +21,8 @@
 - **Record Provenance**: JULES_NATIVE
 - **Evidence Class**: EXTERNAL_FAILURE_MODE_EVIDENCE
 - **Source Identity**: Academic paper
-- **Source Authority For Claim**: PRIMARY_RESEARCH
-- **Independent Verification**: YES
+- **Source Authority For Claim**: ORIGINAL_RESEARCH_FOR_ITS_OWN_MODEL_AND_REPORTED_SIMULATION_RESULTS
+- **Independent Verification**: NO
 - **Local Incident Evidence**: NO_LOCAL_EVIDENCE
 - **Host Applicability**: UNKNOWN
 - **Original Execution Status**: NATIVE_JULES_EXECUTION
@@ -45,17 +45,17 @@
 - **Title**: Latent Boundary Negotiation in Adaptive Workflows: Modeling Decision Drift in Multi-Agent Configurations
 - **Publisher**: Journal of Innovation in Governance and Business Practices
 - **URL**: https://jigbp.com/index.php/jigbp/article/download/7/6
-- **Published or Updated Date**: 2025-05-10
+- **Published or Updated Date**: PUBLICATION_DATE_NOT_EXPLICIT_IN_ACCESSED_PDF; accepted 2025-05-10
 - **Date Checked**: 2026-09-15
 - **Source Type**: ORIGINAL_RESEARCH
 - **Evidence Tier**: Tier 1
 - **Access Status**: ACCESSED
-- **Independent Source**: YES
+- **Independent Source**: NO
 - **External Claim**: In multi-agent systems facing blurred task borders and unexpected behaviors, decision drift occurs. Modeling latent boundary negotiation improves task coherence, decreases agent interference, and stabilizes workflow performance under ambiguous conditions.
 - **Local Evidence Available YES or NO**: NO
 - **Relevance**: Addresses scope drift and boundary negotiation among agents in adaptive workflows.
-- **Confidence**: HIGH
-- **Limitations**: Discusses simulated workflows in a theoretical framework, rather than local Aegis operation.
+- **Confidence**: HIGH for the article's own reported simulation findings
+- **Limitations**: Discusses simulated workflows in a theoretical framework, rather than local Aegis operation. A single source lineage does not independently corroborate the claim.
 
 ## RAW_RELIABILITY_SIGNAL_LOG
 
@@ -64,17 +64,18 @@
 - **Signal**: Multi-agent workflows suffer from decision drift without latent boundary negotiation to handle blurred task borders.
 - **Source IDs**: SRC-2026-09-15-01
 - **Failure Mode Addressed**: Decision drift, scope drift, boundary erosion.
-- **External Evidence**: Agent interference and performance degradation under ambiguous boundary conditions.
+- **External Evidence**: Agent interference and performance degradation under ambiguous boundary conditions as reported by the source's simulation study.
 - **Local Repository Evidence**: NONE
 - **Why It May Matter**: W36 emphasizes strict boundaries for verification vs execution; decision drift highlights the need for explicit boundary retention as tasks adapt.
-- **Confidence**: HIGH
-- **Uncertainty**: Whether Aegis single-agent or limited multi-agent workflows experience similar boundary erosion locally.
+- **Confidence**: HIGH for the source-specific report; UNKNOWN for broader generalization and local applicability
+- **Uncertainty**: Whether Aegis single-agent or limited multi-agent workflows experience similar boundary erosion locally; independent corroboration is not established in this run.
 - **Possible Noise**: Simulation results from external environments might not map to isolated sandbox architectures.
 - **Needs A2 Verification**: YES
 
 ## NEXT_HANDOFF
 - A2 should consider the risk of "decision drift" in the context of boundary validation.
 - Continue to separate external theoretical simulation risks from actual local occurrence. NO_LOCAL_EVIDENCE remains strict.
+- A2 must not count reopening or restating this same article as independent corroboration.
 - Do not assume that zero-entropy-lab is currently suffering from multi-agent decision drift.
 
 ## BOUNDARY_CHECK
@@ -83,3 +84,13 @@
 - External findings clearly marked as external (NO_LOCAL_EVIDENCE): YES
 - No private control plane memory disclosed: YES
 - No Github Actions inspected: YES
+
+## CURRENT_MAINTENANCE_CORRECTION_2026-09-15
+
+Correction Agent: GPT Independent Maintainer / HUMAN_AUTHORIZED_MAINTENANCE
+Correction Scope: source-lineage, claim-authority, and publication-date calibration only; original Jules execution facts preserved
+Original current-path fields included `Source Status: VERIFIED_INDEPENDENT_SOURCES`, `Independent Verification: YES`, and source-level `Independent Source: YES` even though the record contains only `SRC-2026-09-15-01`.
+Corrected interpretation: `SINGLE_SOURCE_LINEAGE / INDEPENDENT_CORROBORATION_NOT_ESTABLISHED`. The article is authoritative only for its own model and reported simulation results; local Aegis applicability remains `UNKNOWN` and local incident evidence remains `NO_LOCAL_EVIDENCE`.
+Publication metadata correction: the accessed article text identifies 2025-05-10 as the acceptance date; it does not explicitly establish that date as publication/update date. The current source field therefore preserves the known accepted date without relabeling it as publication time.
+External recheck on 2026-09-15: the direct JIGBP article was opened and the title, author/article identity, accepted date, and source-specific simulation claim were rechecked. No second independent source was admitted as corroboration.
+Original logical date, execution time, Jules producer identity, task status, provenance, and network state are unchanged.

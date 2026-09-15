@@ -1,6 +1,7 @@
 # Aegis September Maintenance Reconciliation — 2026-09-01 through 2026-09-13
 
-Status: CURRENT_MAINTENANCE_RECORD
+Status: HISTORICAL_MAINTENANCE_RECORD
+Superseded as current entry point by: `aegis-cortex/2026-09-15-daily-maintenance-reconciliation.md`
 Repository: `lostlight530/zero-entropy-lab`
 System: `aegis-cortex`
 Audit window: `2026-09-01` through `2026-09-13` Asia/Shanghai
@@ -9,7 +10,7 @@ Historical rewrite policy: preserve task-time execution state and existing dated
 
 ## Maintenance shape
 
-This is the single current audit/reconciliation record for the 2026-09-13 maintenance pass. The split Daily/Weekly/Monthly audit files and preliminary acceptance record created by the earlier same-day pass are superseded and removed from the current tree; their commits remain in Git history.
+This was the single current audit/reconciliation record for the 2026-09-13 maintenance pass. The split Daily/Weekly/Monthly audit files and preliminary acceptance record created by the earlier same-day pass are superseded and removed from the current tree; their commits remain in Git history.
 
 The audit is consolidated here. Where an earlier dated correction already governs a source/access/provenance issue, that correction remains authoritative instead of rewriting the original task-time artifact again.
 
@@ -97,3 +98,7 @@ No unrun check is reported as PASS.
 ## Maintenance result
 
 `SEP_01_13_REVIEWED / CORRECTION_LINEAGE_RETAINED / SINGLE_CURRENT_AUDIT_RECORD / MONTH_OPEN`
+
+## Successor note — 2026-09-15
+
+This file remains the authoritative point-in-time record for the 2026-09-01 through 2026-09-13 pass. It is no longer the current maintenance entry point after the 2026-09-15 incremental Daily maintenance. No 2026-09-13 finding is withdrawn by that status change.
