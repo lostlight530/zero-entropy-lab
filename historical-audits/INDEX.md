@@ -9,7 +9,6 @@ Not archived here:
 - `ballast/**` periodic GPT/Codex Agent artifacts
 - active repository contracts, policies, architecture, schemas, checkers, or workflows
 - current external-maintenance procedure/templates
-- the current maintenance entry point `aegis-cortex/2026-09-15-daily-maintenance-reconciliation.md`
 
 ## Archive classes
 
@@ -37,5 +36,12 @@ Not archived here:
 | Jules content-contract reconciliation | `05-maintenance-and-reconciliation/2026-09-06--jules-content-contract--reconciliation.md` | `aegis-cortex/2026-09-06-jules-content-contract-reconciliation.md` |
 | September ten-day successor reconciliation | `05-maintenance-and-reconciliation/2026-09-10--sep-01-10--cadence-reconciliation.md` | `aegis-cortex/2026-09-10-ten-day-cadence-reconciliation.md` |
 | September 1-13 maintenance predecessor | `05-maintenance-and-reconciliation/2026-09-13--sep-01-13--maintenance-reconciliation.md` | `aegis-cortex/2026-09-13-full-sop-reconciliation.md` |
+| September 14-15 incremental maintenance reconciliation | `05-maintenance-and-reconciliation/2026-09-15--sep-14-15--maintenance-reconciliation.md` | no live file at the former current-entry path on `main` |
+
+## Current recovery note
+
+As of 2026-09-15, `05-maintenance-and-reconciliation/2026-09-15--sep-14-15--maintenance-reconciliation.md` is the latest completed independent maintenance record preserved in this archive. Its internal `CURRENT_MAINTENANCE_RECORD` label describes the record's write-time role; the archived copy is not a current production entry point.
+
+Current Aegis production authority remains with the active Aegis contracts and policies, including `aegis-cortex/EVIDENCE_POLICY.md`, together with the current Aegis production artifacts. No current file should be inferred at `aegis-cortex/2026-09-15-daily-maintenance-reconciliation.md`.
 
 The old paths remain recoverable through Git history. Empty archive classes are intentionally left empty rather than populated with unrelated Agent artifacts. This archive is historical storage, not current task or maintenance authority.
