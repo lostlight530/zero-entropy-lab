@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this repository in your work, please cite it using the metadata below."
+title: "Zero-Entropy Lab"
+authors:
+  - alias: lostlight530
+    url: https://github.com/lostlight530
+repository-code: "https://github.com/lostlight530/zero-entropy-lab"
+license: MIT
+abstract: >-
+  A standard-library research laboratory for deterministic state, explicit
+  evidence handling, reproducible ledgers, and edge-native execution with
+  bounded trust and security assumptions.
+keywords:
+  - research software
+  - deterministic state
+  - evidence
+  - reproducibility
+  - sqlite
+  - edge ai
