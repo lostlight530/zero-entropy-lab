@@ -1,38 +1,28 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
-
+about: Report a reproducible defect in the current Aegis/Nexus repository state
+title: "[Bug] "
+labels: ""
+assignees: ""
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## Affected path and revision
+Identify the current path, component, or public surface and the commit SHA or `main` state observed.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## Minimal reproduction
+Provide the smallest reproducible sequence, input, state, or command.
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## Expected result
+Describe the observable result expected from the current contract.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+## Actual result
+Describe the observed behavior with sanitized evidence where useful.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## State and evidence boundary
+Distinguish runtime observation, persisted state, generated artifacts, external source material, and inference. Unknown remains unknown.
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+## Historical impact
+If a historical or archived artifact is involved, explain whether it should remain immutable and be accompanied by a correction or reconciliation.
 
-**Additional context**
-Add any other context about the problem here.
+## Security and privacy
+Do not include credentials, private data, or exploit details. Follow `SECURITY.md` for sensitive reports.
