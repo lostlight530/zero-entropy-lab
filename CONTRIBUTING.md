@@ -1,64 +1,53 @@
-# 贡献指南 (CONTRIBUTING)
+# Contributing
 
-## 1 基本原则 (Fundamental Principles)
+Contributions are welcome when they improve the current repository while preserving Aegis/Nexus state boundaries, evidence discipline, provenance, and historical auditability.
 
-This repository follows five engineering philosophies
-1 Stability outweighs chaos
-2 Protocol outweighs feature stacking
-3 Bug first patch later
-4 Zero promotion let code speak
-5 Append-only auditable trajectory
+## Before proposing a change
 
-All contributions must adhere to these principles
+- Start from the current `main` revision and read the relevant current repository documents before relying on historical snapshots or archived source material.
+- Keep runtime observation, persisted state, generated artifacts, external source material, and inference distinct.
+- Prefer a small, reviewable change with explicit compatibility and rollback.
+- Do not bundle unrelated architecture, cadence, metadata, or archive cleanup into one pull request.
 
-## 2 贡献方式 (Contribution Methods)
+## Issues
 
-### 2_1 议题 (Issue)
+Use the repository Issue templates:
 
-Welcome to submit bug reports improvement suggestions and architecture discussions
-Please provide minimum reproduction or clear context
-All discussions default to entering the auditable trajectory
+- **Bug report** for a reproducible defect in current code, state, or repository surfaces.
+- **Proposal** for a bounded improvement with explicit non-goals and acceptance criteria.
+- **Evidence or governance correction** for a state description, claim, metadata, governance, recovery, or provenance mismatch.
 
-### 2_2 拉取请求 (Pull Request)
+Security-sensitive reports belong in the private route described by `SECURITY.md`, not in a public issue.
 
-PRs must satisfy
-Single responsibility
-Testable reusable maintainable
-Introduce no unnecessary dependencies
-Do not break protocol boundaries
-Clear description focusing only on What and Why
+## Pull requests
 
-Evaluation criteria
-Does it improve stability
-Does it reduce complexity
-Does it enhance protocol clarity
-Does it conform to the zero-dependency principle
+Use a feature branch and the pull-request template. A useful PR identifies:
 
-## 3 代码规范 (Code Conventions)
+- the base revision and exact scope
+- code/state-contract surfaces affected
+- evidence and provenance boundaries
+- checks actually performed and their results
+- relevant checks intentionally left unrun
+- historical and archived-source impact
+- security/privacy impact where applicable
+- a practical rollback
 
-Follow existing project style
-Clear searchable file naming
-Avoid clever code maintain readability
-New logic must be auditable
+Never report an unrun check as passed. Do not silently rewrite historical execution or archived external evidence to match later knowledge; use a forward correction or reconciliation where the original record must remain auditable.
 
-## 4 不接受的贡献 (Unacceptable Contributions)
+## Style and scope
 
-Feature stacking and show-off implementations
-Unnecessary dependencies
-Breaking protocol boundaries or stability
-Content unrelated to repository positioning
-Purely cosmetic PRs
+Follow existing repository conventions. Prefer clear, inspectable, maintainable changes over feature accumulation or decorative complexity. New dependencies or authority surfaces require an explicit reason and boundary.
 
-## 5 行为准则 (Code of Conduct)
+Third-party archived or referenced material is not automatically part of the repository-owned implementation surface and must retain its source provenance and licensing.
 
-This repository follows the default Contributor Covenant
-Discussions must remain professional restrained and focused on issues
+## Conduct
 
-## 6 许可 (License)
+Keep discussion professional, specific, evidence-aware, and focused on the repository. Do not publish credentials, private information, or sensitive exploit details.
 
-Submitting contributions means agreeing to release under the current LICENSE
+## License and attribution
 
-## 7 贡献者署名 (Contributor Attribution)
+Contributions to repository-owned work are submitted under the repository's current `LICENSE`. Third-party material retains its own attribution and licensing where applicable.
 
-Respect contributor attribution rights
-Will be added collectively after reaching a certain contribution threshold
+Contributor credit should reflect actual contribution history. `AUTHORS` identifies the primary author/maintainer and does not erase Git commit or pull-request attribution.
+
+The repository owner retains final review and merge authority.
