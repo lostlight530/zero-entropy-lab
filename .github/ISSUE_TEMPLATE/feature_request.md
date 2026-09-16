@@ -1,20 +1,25 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
-
+name: Proposal
+about: Propose a bounded improvement to Aegis, Nexus, or the repository's public surfaces
+title: "[Proposal] "
+labels: ""
+assignees: ""
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## Problem or user outcome
+Describe the concrete problem or outcome without assuming a particular implementation.
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+## Proposed change
+Define the smallest useful change and the protocol/state boundary it would affect.
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## Evidence and alternatives
+Separate current repository facts from assumptions, preferences, and external claims. Note meaningful alternatives.
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+## Affected surfaces
+List code, state contracts, evidence records, documentation, metadata, governance, recovery, or archived-source boundaries that would actually change.
+
+## Acceptance criteria
+State observable criteria for completion. Do not invent CI or merge-gate requirements unrelated to the scope.
+
+## Non-goals and risks
+State what remains unchanged, including historical/third-party material where relevant.
