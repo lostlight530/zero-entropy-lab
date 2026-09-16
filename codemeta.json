@@ -1,0 +1,24 @@
+{
+  "@context": "https://w3id.org/codemeta/3.1",
+  "@type": "SoftwareSourceCode",
+  "name": "Zero-Entropy Lab",
+  "description": "A standard-library research laboratory for deterministic state, explicit evidence handling, reproducible ledgers, and edge-native execution with bounded trust and security assumptions.",
+  "codeRepository": "https://github.com/lostlight530/zero-entropy-lab",
+  "license": "https://spdx.org/licenses/MIT.html",
+  "author": {
+    "@type": "Person",
+    "name": "lostlight530",
+    "url": "https://github.com/lostlight530"
+  },
+  "applicationCategory": "Research Software",
+  "isAccessibleForFree": true,
+  "programmingLanguage": "Python",
+  "keywords": [
+    "research software",
+    "deterministic state",
+    "evidence",
+    "reproducibility",
+    "sqlite",
+    "edge ai"
+  ]
+}
