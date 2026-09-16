@@ -1,5 +1,7 @@
 # Zero-Entropy Lab
 
+[![DOI](https://zenodo.org/badge/1180528645.svg)](https://zenodo.org/badge/latestdoi/1180528645)
+
 > **"Restraint is the ultimate form of digital violence."**
 
 A standard-library research laboratory for deterministic state, evidence, and edge-native execution.
