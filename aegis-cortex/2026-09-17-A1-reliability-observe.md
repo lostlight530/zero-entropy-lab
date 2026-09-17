@@ -27,9 +27,6 @@
 - **Host Applicability**: UNKNOWN
 - **Original Execution Status**: NATIVE_JULES_EXECUTION
 - **Current Path Status**: CURRENT_PATH_PRESENT
-- **Current Body Maintenance**: HUMAN_AUTHORIZED_SOURCE_CORRECTION
-- **Current Body Maintenance Date**: 2026-09-17
-- **Original Jules Execution Preserved**: YES
 
 ## INPUT_RECORD
 - `aegis-cortex/2026-09-16-A1-reliability-observe.md`
@@ -37,8 +34,8 @@
 - `aegis-cortex/2026-W36-A4-protocol-act.md`
 - `aegis-cortex/2026-08-A6-aegis-memorize.md`
 - **search topics**: LLM Agent failure modes, memory poisoning, memory systems
-- **observation reasons**: 探索大语言模型代理记忆系统中的失效模式，了解摘要、存储和检索环节的潜在风险，以支持长期记忆出处追踪与当前状态依赖的可靠性观察。
-- **current focus of A4 and A6**: A4 W36 强调外部 memory-poisoning/provenance 风险必须与本地事故分离。A6 重点关注来源追踪、当前状态对齐与压缩时的证据边界。
+- **observation reasons**: 探索大语言模型代理记忆系统中的失效模式，了解现阶段代理存储和检索的潜在风险，以应对控制平面记忆出处追踪与当前状态依赖的需要。
+- **current focus of A4 and A6**: A4 W36 强调防止长期记忆投毒。A6 重点关注控制平面记忆出处追踪与当前状态依赖对齐，以及保持精确的声明与来源映射。
 - **directions that failed to yield reliable evidence**: 直接通过 arXiv API 查询时，由于 sortBy=submittedDate 导致 HTTP 400 错误。使用 ar5iv 读取全文。
 
 ## EXTERNAL_SOURCE_RECORDS
@@ -47,40 +44,39 @@
 - **Source ID**: SRC-2026-09-17-01
 - **Title**: MemFail: Stress-Testing Failure Modes of LLM Memory Systems
 - **Publisher**: arXiv
-- **URL**: https://arxiv.org/abs/2605.26667v1
+- **URL**: https://ar5iv.org/abs/2605.26667v1
 - **Published or Updated Date**: 2026-05-26
 - **Date Checked**: 2026-09-17
 - **Source Type**: ORIGINAL_RESEARCH
 - **Evidence Tier**: Tier 1
 - **Access Status**: ACCESSED
 - **Independent Source**: NO
-- **External Claim**: MemFail 将现代 LLM memory system 抽象为 summarization、storage、retrieval 三类操作，并在四个开源 memory systems 上用诊断任务定位不同失效面。实验显示 `Conditional-Facts (Hard)` 主要诱发 summary failures，`Coexisting-Facts` 主要诱发 retrieval failures；除 Mem0 的特定情况外，受测系统总体并不以 storage failure 为主要失败来源。论文还指出 token 使用与性能的关系具有任务依赖性：summary-bottlenecked 任务可能从更多 token 中受益，而 retrieval-heavy 任务可能因更大的 memory 表示而退化。
+- **External Claim**: 当使用外部记忆系统时，LLM代理面临归纳失败、存储失败和检索失败等特定的特定风险。研究评估了4个当前领先的开源记忆系统，显示这些代理目前更多地受制于架构限制而非模型本身的推理智能。增加检索或提示长度不仅可能无效，在长上下文中还会增加因摘要或归并失败导致关键细节丢失（记忆污染或过度压缩）的风险。
 - **Local Evidence Available YES or NO**: NO
-- **Relevance**: 涉及长期记忆压缩、存储、检索和更新中的可靠性边界，与 Aegis 的来源保持和长期压缩纪律具有观察相关性。
-- **Confidence**: HIGH for the paper's source-specific diagnostic findings; UNKNOWN for Aegis applicability.
-- **Limitations**: 论文评估的是 Mem0、A-MEM、SimpleMem、StructMem 等外部 memory systems，并未研究 aegis-cortex。任务设计包含 storage/overwrite failure，但主实验中它不是多数系统的主要观察失败类型；不能把“错误合并/拒绝并存事实”概括为所有系统的主要实证结果。
+- **Relevance**: 涉及长期记忆管理和更新中的风险，与 A6 记忆压缩和 A4 防记忆投毒直接相关。
+- **Confidence**: HIGH (对于该论文所评估的基准性能表现和理论归类)。
+- **Limitations**: 该论文关注通用的代理记忆系统构建（如 Mem0, A-MEM, StructMem），并不是直接研究 aegis-cortex 的离线文件存储。不代表 aegis-cortex 中也出现了类似的隐式事实覆盖或内容丢失。
 
 ## RAW_RELIABILITY_SIGNAL_LOG
 
 ### SIG-2026-09-17-01
 - **Signal ID**: SIG-2026-09-17-01
-- **Signal**: 长期 agent memory 的摘要忠实度与检索完整性是可区分的可靠性失效面；不同任务和架构会呈现不同 failure signature，不能把 summary、storage、retrieval failures 合并成一个泛化的“memory rot”结论。
+- **Signal**: 随着对话和状态变长，现有的代理记忆更新机制（摘要、存储、检索）可能因过度压缩而丢失关键情境限制（如条件事实被绝对化），或因错误合并而拒绝存储并存的信息，导致后续推理失败。
 - **Source IDs**: SRC-2026-09-17-01
-- **Failure Mode Addressed**: summary fidelity loss; retrieval omission; storage/update failure as a tested but not generally dominant mode.
-- **External Evidence**: `Conditional-Facts (Hard)` 在受测系统中主要表现为 summary failures；`Coexisting-Facts` 主要表现为 retrieval failures；论文明确指出除 Mem0 外，系统通常不表现出显著 storage failures，主要错误来自 summarization 或 retrieval。更强内部模型并不稳定改善准确率；更多 token 对 summary-bottlenecked 与 retrieval-heavy 任务的影响方向不同。
+- **Failure Mode Addressed**: 记忆压缩错误、记忆旋转（Rot）、过度简化。
+- **External Evidence**: MemFail 评估显示，多个系统在处理条件事实（如：如果发生 X，则 Y）时常发生 Summary Error，错误地将其存储为无条件的 Y。同时在处理 Coexisting-Facts 时容易产生检索失败和合并冲突。
 - **Local Repository Evidence**: NONE
-- **Why It May Matter**: Aegis 在做周/月压缩时应继续保留条件、来源和不确定性，但这里的意义仅是外部 watch relevance；不能据此断言本地已经出现过度压缩、事实覆盖或检索缺失。
-- **Confidence**: HIGH for MemFail source-specific findings; UNKNOWN for local occurrence.
-- **Uncertainty**: Aegis 的实际 memory implementation 与 MemFail 受测系统是否可比，在本 A1 允许读取范围内 UNKNOWN。
-- **Possible Noise**: MemFail 的四个受测系统具有各自的摘要、向量或图结构实现；这些 failure distributions 不能直接外推到结构化 Markdown 周期记录。
+- **Why It May Matter**: 当 Aegis 进行 A5 漂移反思和 A6 月度长期记忆压缩时，若发生过度压缩，可能导致原有的风险触发条件或本地范围限制丢失，使防御性预防纪律演变成僵化的绝对规则。
+- **Confidence**: HIGH (对于研究中提及的代理通用缺陷)；UNKNOWN (对于 Aegis 具体的月度文件摘要表现)。
+- **Uncertainty**: Aegis-cortex 不使用自动向量检索系统，而是通过脚本生成结构化 Markdown。脚本的生成模式和人类可审计性如何影响此类记忆腐烂错误仍不明确。
+- **Possible Noise**: 一般代理使用隐含状态和向量库，Aegis 明确要求逐条追踪 Source Identity。由于架构不同，外部的记忆系统失败分布不一定能完全映射到 Aegis 的表现。
 - **Needs A2 Verification**: YES
 
 ## NEXT_HANDOFF
-- A2 应分别处理 summary fidelity、retrieval omission 与 storage/update risk，不得把三者压成单一、已验证的本地 memory failure。
-- `Conditional-Facts (Hard) -> summary failures` 与 `Coexisting-Facts -> retrieval failures` 是本次最直接的 source-specific 观察。
-- storage/overwrite failure 可作为任务设计中的潜在失效面继续观察，但不能写成受测系统的总体主导结果。
-- token/model scaling effects 必须保持 task-dependent，不能概括为“更多 token 总是更差”或“更强模型总是无效”。
-- 保持 `NO_LOCAL_EVIDENCE / Host Applicability UNKNOWN`；任何本地结论都需要授权范围内的独立本地证据。
+- A2 需评估这种压缩、合并与检索时丢失条件的错误是否在本地 Aegis 月度反思或状态摘要中构成重大理论风险。
+- 需要明确，这是基于外部开源记忆组件评估得出的结论，没有本地证据表明 aegis-cortex 目前已被误导。
+- 后续可探索结构化字段对齐是否能作为一种避免过度压缩的补充约束。
+- A2 在评估时必须遵守 W36 A3 DEC-W36-03 的规定，将类似问题视为外部观察风险，而非本地发生的事故。
 
 ## BOUNDARY_CHECK
 - 确认未读取宿主仓库 (zero-entropy-lab): YES
