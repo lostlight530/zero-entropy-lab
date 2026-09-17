@@ -24,6 +24,7 @@ Zero dependency is an implementation constraint. It is not a claim that inputs, 
 
 The repository separates implementation, external-source evidence, local state, and research interpretation.
 
+- [`governance/SOURCE_AUTHORITY.md`](./governance/SOURCE_AUTHORITY.md) defines the repository-wide source identity, revision, freshness, lineage, claim-support, negative-evidence, and conflict-recovery contract.
 - [`aegis-cortex/README.md`](./aegis-cortex/README.md) is the durable guide to the Aegis reliability/evidence research surface and separates its long-lived policy from time-scoped A1–A6 artifacts.
 - [`aegis-cortex/EVIDENCE_POLICY.md`](./aegis-cortex/EVIDENCE_POLICY.md) defines the current reliability-evidence vocabulary and the boundary between external risk, local preventive records, local incidents, execution evidence, and unresolved state.
 - [`data/inputs/ARCHIVE_AND_HARVESTER.md`](./data/inputs/ARCHIVE_AND_HARVESTER.md) defines current snapshot, archive, ledger, cache, and ingestion semantics for repository-owned external inputs.
@@ -33,6 +34,7 @@ The repository separates implementation, external-source evidence, local state, 
 Keep these distinctions explicit:
 
 ```text
+source identity != source truth
 external risk != local incident
 transition declaration != transition execution
 hash or HMAC result != source truth or authorization
