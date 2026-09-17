@@ -1,166 +1,473 @@
 # 方法
 
+## 研究定位
+
+Ballast 是 recovery, completion, evidence validity, authorization freshness, temporal evidence 与 action integrity 的受控研究系统.
+
+它不研究简单的 `命令是否返回 success`. 它研究长期任务在 interruption, retry, ownership handoff, approval drift, target drift, membership drift, distributed visibility, idempotency retention, key lifecycle 与 uncertain time 下, 如何证明一个 autonomous action 仍然合法且完整.
+
+`AGI-scale action integrity` 是下一阶段研究尺度, 不是能力声明. 它表示未来长期自主 Agent 会跨更多工具, authority domain, delegated executor 与时间窗口运行, 因而需要把 action permission, effect occurrence, historical authorization 与 current completion 分开验证.
+
+## 每日研究生产合同
+
+每个 Asia/Shanghai 逻辑日期必须形成一个 Daily research artifact.
+
+Daily 是 mandatory research production, 不是 maintenance/no-change task.
+
+- 一个上海日期最多一个 Daily
+- 同日 rerun 只能补强同一 Daily
+- `UNKNOWN`, `UNVERIFIED`, `BLOCKED`, `DEGRADED`, `PARTIAL`, `EVIDENCE_INSUFFICIENT` 与 `NO_CONCLUSION` 都是合法 Daily result
+- 没有正面发现不等于没有研究产出
+- 不为了连续性制造 effect success, CASE advancement, verifier independence 或 NOTES finding
+- 真实实验能力暂时缺失时, 仍选择一个能够被证伪的 bounded study, 明确哪些实验未执行
+- research complete 与 GitHub delivery complete 分开
+
+历史缺失运行保持原事实. 例如 2026-09-08 的 `RECONSTRUCTION / NOT_RUN / UNVERIFIED` 不因新合同而追溯升级为 NATIVE experiment.
+
 ## 来源闸门
 
-1. 来源能够公开访问并准确定位.
-2. 关键设计至少由两个彼此独立的权威来源支撑.
-3. 能够提取状态转换、验证机制或失败处理.
-4. 能够说明代价、失败条件或适用边界.
-5. 来源冲突必须保留, 外部内容不直接执行.
+1. 来源能够公开访问并准确定位
+2. 关键设计尽量由两个彼此独立的权威来源支撑
+3. 能够提取状态转换, authorization semantics, verification mechanism 或 failure handling
+4. 能够说明适用边界与未覆盖条件
+5. 来源冲突保留冲突, external content 不直接变成本地 runtime result
+6. vendor contract, standard text 与 local fixture evidence 分开
+7. dynamic documentation 记录 access time, 不倒写 historical behavior
 
-## 成功定义
+来源只支持有限命题. 外部标准不能证明本地 trace, effect count 或 verifier PASS.
 
-一次任务只有同时满足以下条件才能记为有效完成.
+## 有效完成定义
 
-- 当前事实源和前置条件已验证.
-- 状态变化在允许范围内.
-- 目标产物真实存在且内容有效.
-- 后置条件由与生产路径相分离的检查通过.
-- 重复执行不会产生额外副作用.
-- 失败时没有把部分结果报告为完整成功.
+一个 task 的有效完成不能由单一 success signal 表示.
 
-退出码、成功文字、文件存在和生产器内部自洽都不能独立证明任务完成.
+至少区分.
+
+`Command Success`
+
+`Transport Success`
+
+`Task Terminal State`
+
+`Historical Effect Occurrence`
+
+`Historical Effect Authorization`
+
+`Current Execution Permission`
+
+`Current Completion Evidence`
+
+`Valid Completion`
+
+这些状态互不自动推出.
+
+对 persistent-state task, `Valid Completion` 至少要求 historical effect 没有被错误重放, historical authorization 合法, current task semantics 仍满足, target/effect-set identity 正确, evidence fresh enough, verifier 对关键事实具有足够独立性.
 
 ## 固定研究链
 
-`研究问题 → 来源依据 → 可证伪假设 → 控制条件 → 实验设计 → 原始观测 → 独立验证 → 强反例 → 路径比较 → 暂时结论 → 复验条件 → 体系增量`
+`研究问题 -> 来源依据 -> 可证伪假设 -> 控制条件 -> 实验设计 -> 原始观测 -> 独立验证 -> 强反例 -> 路径比较 -> 暂时结论 -> 复验条件 -> 体系增量`
 
-环境失败、任务失败、验证失败和证据不足分别标记. 已验证事实、基于证据的推断与未验证事项分别记录.
+环境失败, task failure, verification failure 与 evidence insufficiency 分开.
 
-## 事实与派生视图
+已验证事实, evidence-based inference 与 unknown 分开.
 
-- 每日专题保存当日不可替代的受控实验、状态转换和验证结果.
-- 特殊专题保存现实事件的来源、时间线、事实边界与未知项, 不占用每日专题.
-- 月度记录分别索引每日专题、特殊专题与周期审计, 只保存覆盖变化与结论状态.
-- 产物记录所使用事实源的代际或摘要, 以便识别过期基准.
-- 验证器回读当前事实源, 不能只信任生产器保存的期望值.
-- 生产器与验证器共享脚本、进程、模式或输入时说明独立性限制.
-- 非幂等操作结果未知时, 重试前先查询原操作是否已生效.
-- 去重标识需要绑定当前意图, 相同标识承载不同意图时安全停止.
-- 去重服务的保留窗口不是永久完成证明, 迟到恢复在重放前回读权威副作用, 同时核对关联标识、原请求标识和当前意图.
-- 真实副作用与去重收据必须在同一原子可见边界内提交, 无法共享事务时恢复器先协调权威副作用, 不能只凭收据存在或缺失决定跳过或重试.
-- 客户端超时或取消只表示等待状态变化, 不证明旧尝试已经停止. 新尝试接管后, 每次提交重新核对单调尝试代际, 拒绝旧代际的迟到结果.
-- 多个任务共享同一外部依赖时, 相关失败使用共享重试预算或熔断边界, 不让每个任务独立无限重试.
-- 供应商聚合状态只作为恢复线索, 每个执行上下文仍需通过当前调用与任务级结果验证.
-- 依赖不可用时保存可验证检查点但不写完成产物, 复发时先验证已有结果再决定是否重新调用.
-- 半开探针必须与实际故障域对齐, 一个上下文成功不能关闭覆盖其他上下文的全局熔断器.
-- 恢复阶段先限制探针数量, 再逐个验证上下文产物, 未恢复上下文保持打开且不得写占位完成结果.
-- 探针租约持有者在中断恢复后提交前重新读取当前所有权, 结果接受端使用单调令牌拒绝已经过期或被接管的提交.
-- 验证器保留并回读规范化前的原始事实源, 生产器与验证器共享解析器或规范化规则时不能把一致结果视为独立证据.
-- 云端写入使用不可伪造的当前校验标识或非强制引用更新约束. 响应丢失后的重试被前置条件拒绝时, 回读远端当前内容与稳定操作意图, 已生效则确认完成, 内容冲突则安全停止.
-- 验证读取记录实际经过的缓存与源站边界, 并绑定预期对象代际和意图. 请求成功、载荷相同或发送请求侧绕缓存指令都不能替代当前代际证明.
-- 多页集合读取把继续位置与集合视图身份分开记录. 页数、最终数量或普通游标不能证明跨页完整, 完成验证核对快照或等价代际、唯一身份集合与预期边界.
-- 批量请求把传输结果、单项结果与权威副作用分层记录. 整体成功或结果条目齐全不能证明每项完成, 恢复时只重试已确认失败或未生效的意图, 最终按唯一意图、内容与副作用计数验证.
-- 验证结果绑定实际内容摘要与任务意图, 不能只绑定可变路径名. 发布前重新确认待用字节与验证摘要一致, 使用同一已验证字节完成原子替换, 发布后从目标重新计算摘要和语义约束.
+每个 Trial 明确保持条件和改变条件. 多个变量同时变化时不做单因果归因.
 
-- 异步接受回执、执行终态和任务完成分别记录. 202 或 Succeeded 只推进状态机, 最终完成回读当前状态和结果资源, 绑定操作身份与意图, 并验证任务级内容后才允许重放跳过.
+## Action-integrity state model
 
-## 执行权限新鲜度
+高风险 autonomous action 至少考虑以下状态面.
 
-- 迟到、恢复、重试、所有权交接和显式取消后的每次副作用尝试, 都重新确认当前执行授权, 不把任务开始时的权限缓存为永久布尔值.
-- 执行授权至少区分当前事实源或 revision、当前规范化意图、当前所有权 generation、任务有效期、当前任务状态与 credential 状态. 任一维度变化都触发重新同步、重新规划或安全停止.
-- `already_complete`、generation conflict、lease deadline、sink 已见最大 generation、`Retry-After`、transport deadline 和 active credential 都只证明各自局部合同, 不能单独续期任务级副作用权限.
-- 后置条件参与完成判断时, 完成证据绑定被验证 revision 和可核验判定时点. 后续动作继续依赖该事实时, 携带 revision 或把 compare 与受保护动作合并进原子边界.
-- 如果后续合法写入可能把最终值恢复正确, 验证不能只看最终值, 还核对副作用身份、计数、事件顺序或等价线性化边界, 防止历史 stale side effect 被覆盖后漏报.
-- 凭据、sandbox、网络 allowlist、人工批准或自动 safety decision 只约束各自能力边界. 任务是否仍 RUNNING、意图是否仍相同和当前 owner 是否仍有权提交, 需要在最终副作用边界独立保持当前性.
-- 暂停后恢复人工批准时, 批准证据绑定具体 action identity 与影响该副作用授权或语义的相关权威状态投影. action 或相关状态变化时重新批准、重新规划或安全停止; 只有无关 metadata 变化时不应仅因全局 revision 改变而自动失效.
-- 相关状态投影需要显式列出依赖字段并保守覆盖全部授权与语义前提. 无法证明投影完整时使用更强的整体 revision 围栏或安全停止, 不能为了减少冲突而漏掉真实依赖.
-- 恢复判断把“当前是否仍有执行权限”和“上一次未知结果是否已经产生副作用”分开. completion 记录缺失不能证明 effect 未发生; 非幂等或外部副作用在重试前查询可核验 effect identity、收据或等价权威证据.
-- 完成后重放只能验证 completed 状态下的幂等性, 不能替代 effect 已发生但 completion 尚未持久化的中断恢复测试. 对存在该窗口的路径必须单独注入中断并检查副作用总数.
+`INTENT_ID`
+
+`TASK_ID`
+
+`OWNER_GENERATION`
+
+`TASK_STATUS`
+
+`TASK_VALIDITY_WINDOW`
+
+`CREDENTIAL_SUBJECT`
+
+`CREDENTIAL_STATE`
+
+`APPROVAL_ID`
+
+`APPROVAL_ACTION_IDENTITY`
+
+`APPROVAL_VALIDITY_INTERVAL`
+
+`AUTHORITY_GENERATION`
+
+`TARGET_INCARCATION`
+
+`EFFECT_SET_IDENTITY`
+
+`MEMBERSHIP_OR_PREDICATE_WITNESS`
+
+`EFFECT_ID`
+
+`EFFECT_TIME_OR_INTERVAL`
+
+`PRIOR_EFFECT_EVIDENCE`
+
+`CURRENT_COMPLETION_EVIDENCE`
+
+`VERIFIER_AUTHORITY`
+
+`WORLD_OR_RESOURCE_REVISION`
+
+不是每个实验都需要全部字段, 但不能用未建模字段的缺失换取更漂亮的成功路径.
+
+## 三个核心恢复问题
+
+### Current execution permission
+
+问题是 `现在是否允许产生新的 effect`.
+
+至少区分 current normalized intent, owner generation, task validity, task status, credential state, approval state 与所有真正影响本次 action 的 authority dependency.
+
+任务开始时 permission valid 不等于 effect commit 时仍 valid.
+
+普通 pre-effect reread 只能缩短 stale window, 不能消除 `read -> authority change -> effect` TOCTOU.
+
+需要 version, relevant projection, compare-and-effect, transactional predicate 或等价 protected boundary.
+
+Relevant projection 可以减少 unrelated global revision 的 over-fencing, 但必须保守覆盖全部真实 authorization 与 semantic dependency. 无法证明 projection 完整时, 使用 stronger fence 或安全停止.
+
+### Historical prior-effect evidence
+
+问题是 `上一次 unknown attempt 是否已经产生 effect`.
+
+分类只有.
+
+`hit`
+
+`authoritative miss`
+
+`unknown`
+
+Query error, timeout, unavailable, stale cache, uncovered replica MISS, expired retention, pre-attempt watermark 与 unproven cleanup 都属于 `unknown`.
+
+`authoritative miss` 至少需要.
+
+`classification + exact effect identity + provenance + freshness + retention/lifecycle coverage`
+
+Exact effect identity 必须绑定稳定 operation/task identity, normalized action 与真实 target incarnation 或 effect set. Logical name, correlation marker 或 tombstone 只能是线索.
+
+Completion missing 不能证明 effect missing.
+
+Current permission invalid 只阻止新的 effect, 不应该阻止只读 historical reconciliation.
+
+### Current completion evidence
+
+问题是 `当前任务要求现在是否仍满足`.
+
+Historical receipt 或 effect proof 只证明 occurrence.
+
+Persistent-state completion 还需要 current target incarnation/effect set, task semantic dependencies, freshness/revision 与 verifiable decision time.
+
+Compensation, rollback, manual correction, member replacement 或 subsequent legitimate write 可以让 historical effect 仍真实, 但 current completion 已失效.
+
+## Dynamic membership and predicate completeness
+
+Selector-bound, query-bound 或 predicate-bound task 不能把第一次观察到的成员冻结成永久完整集合.
+
+Current completion 对动态集合至少需要.
+
+- current membership or predicate witness
+- stable member incarnation identity
+- freshness/collection revision or equivalent boundary
+- postcondition state for all current relevant members
+- protected compare or transaction if membership can change before completion
+
+Watch gap, stale resourceVersion, page cursor, list count equality 与 same logical name 都不能单独证明 current membership completeness.
+
+Authoritative relist 只重新建立 relist 时点的 current truth. Relist 到 completion 之间仍存在 TOCTOU, 需要 protected compare, predicate transaction 或 equivalent fence.
+
+## Approval binding
+
+Approval 不应只绑定 action string.
+
+对动态或高风险 action, approval 至少绑定真正影响本次授权与语义的 relevant projection.
+
+可能包括.
+
+- action identity
+- target incarnation
+- effect-set membership
+- object policy
+- environment state
+- credential scope
+- subject lifecycle state
+- approval valid_until
+- owner generation
+
+9 月实验表明, `action + UID + policy` 仍可能漏掉 environment, credential scope 或 subject lifecycle state.
+
+不同 verifier 实现如果共享同一个漏字段 specification, 可以共同稳定 PASS 一个 unauthorized effect. 因此 implementation diversity 不等于 semantic independence.
+
+## Verifier semantic independence
+
+Verifier strength 至少从三个维度描述.
+
+1. implementation independence
+2. data/evidence-source independence
+3. semantic-contract independence
+
+不同 Python 文件, 不同算法或不同进程只能证明 implementation separation.
+
+如果 producer 与 verifier 都从相同错误 field schema 或同一不完整 natural-language spec 派生判断, 它们仍存在 common-mode semantic failure.
+
+更强 verifier 应尽量从 raw authority state, 独立 snapshot, independent evaluator authority 或 independently derived schema 重建关键合同.
+
+任何 verifier 仍共享 scenario vocabulary, TSV field semantics, fixtures 或 runtime environment 时明确披露.
+
+## Unknown outcome and idempotency
+
+非幂等 effect 响应未知时不盲目 retry.
+
+Stable idempotency token 可以抑制 duplicate, 但不能自动证明 historical occurrence time.
+
+两个不同历史可能经过 token replay 后收敛到相同 final state 和 result identity.
+
+因此.
+
+`duplicate suppression != historical occurrence proof`
+
+Idempotency retention window 也不是永久历史记忆.
+
+Token 保留过期后, 同一 token string 不能继续承担原去重保证. 恢复需要 authoritative receipt, exact sink identity, durable operation record 或 equivalent historical evidence.
+
+## Distributed visibility and receipt coverage
+
+跨服务 effect sink 与 receipt authority 不共享事务时, receipt MISS 需要证明它的 visibility coverage 已经覆盖旧 attempt 可能成功的边界.
+
+Applied-through watermark, sequence number, commit index, generation 或 equivalent coverage 可以用于说明 MISS 的 authority range.
+
+如果 coverage 尚未覆盖 old attempt, MISS 保持 UNKNOWN.
+
+固定等待次数不等于 coverage proof.
+
+若 sink 支持 exact effect identity historical query, 它可以作为竞争性 prior-effect authority, 但仍必须说明 retention and freshness.
+
+## Temporal authorization
+
+Authorization 在某个时点有效不等于永久有效.
+
+Current permission, historical authorization 与 historical occurrence 是不同事实.
+
+### Approval expiry
+
+Resume time approval valid 不等于 effect-time approval valid.
+
+当 approval 有 `valid_until`, 需要在 effect linearization boundary 或等价 protected boundary 验证.
+
+### Historical effect authorization
+
+Prior HIT 只证明 occurrence.
+
+要恢复 valid completion, 还需要验证 effect 当时处于合法 authorization interval.
+
+Current approval expired 不能抹掉一个 earlier legally authorized effect. 反过来, receipt HIT 也不能合法化一个 effect-time 已越权的 historical effect.
+
+### Signing-key generation
+
+Historical signed approval 绑定 historical `kid` 或 key generation.
+
+Current issuer key 不应替代 historical signing key identity.
+
+Legitimate key rotation 后, current JWKS-only verification 可能 false reject earlier valid approval. Approval presence-only 又可能 false accept 从未受信任的 historical key.
+
+需要 historical key identity 与 historical trust evidence.
+
+### Revocation and invalidity
+
+Current revoked 不自动表示所有过去 action 都无效.
+
+Revocation processing time, revocation reason 与 historical invalidity boundary 分开.
+
+Compromise 场景可能具有早于 revocation publication 的 invalidity time. Historical verification 应使用 claim-specific boundary, 不能只比较 notice time.
+
+### Timestamp semantic coverage
+
+Timestamp presence 不等于 timestamp 正确覆盖要证明的对象.
+
+Payload timestamp 不自动证明 approval signature creation time.
+
+需要明确 timestamp message imprint or semantic coverage 对应 signature/effect/approval 中哪个对象.
+
+### Timestamp uncertainty and ordering
+
+Nominal `genTime` 的数值顺序不自动构成 strict historical order.
+
+若 timestamp 带 accuracy interval, 只有 uncertainty intervals 能够支持严格分离, 或存在 explicit trusted ordering evidence, 才建立对应顺序.
+
+Same-TSA `ordering=true` 可以提供与 interval separation 不同的 ordering evidence, 但仍不能伪造不存在的 point precision.
+
+## Current completion after replay
+
+Completed replay 用于验证已完成状态下的 idempotent short circuit.
+
+它不能替代 crash-window recovery.
+
+必须分别测试.
+
+- effect committed, completion missing
+- receipt delayed
+- membership changed before completion
+- permission changed before effect
+- approval expired before effect
+- target reincarnated after read
+- historical effect occurred under invalid authorization
+
+## Irreversible occurrence effects
+
+Persistent-state completion 并不适用于所有 side effect.
+
+发送消息, 发布 artifact, 支付, 外部通知或其他 irreversible occurrence 可能没有一个可以长期保持的 persistent postcondition.
+
+下一阶段研究必须把至少两类 effect 分开.
+
+1. occurrence proof and authorization of occurrence
+2. durable current-state completion
+
+不能强迫 occurrence-only action 使用一个虚假的 persistent-state contract.
+
+## Real-system research frontier
+
+以下方向优先于重复本地 fixture.
+
+### Real Kubernetes controller
+
+研究 list/watch, resourceVersion, UID, 410 Gone, relist, same-count replacement 与 post-relist membership drift.
+
+### Real database predicate transaction
+
+研究 serializable predicate, phantom, dynamic selector 与 count-preserving replacement.
+
+### Cross-service authorization and effect recovery
+
+把 permission authority, approval authority, receipt authority, effect sink 与 completion store 放在无 shared transaction 环境中.
+
+### Real idempotency retention
+
+跨真实 documented retention window, 检查 same token 是返回 historical identity 还是创建新 effect.
+
+### Real issuer rotation and revocation
+
+使用 OIDC/JWKS 或 equivalent system 保留 historical key generation, 再测试 current discovery 不再列出 old key 后的 recovery.
+
+### Real RFC 3161 TSA
+
+测试 payload-only timestamp, signature-covering timestamp, overlapping accuracy interval, `ordering=true` 与 ordering false.
+
+### Protected approval boundary
+
+在 compare 后, effect commit 前改变 credential subject, owner, approval state 或 dynamic effect set, 确认真正 protected authorization boundary.
+
+### Delegated multi-agent authority
+
+研究 planner, approver, executor, sub-agent 与 effect sink 各自持有部分 authority 时, authorization 如何组合, 如何失效, 如何在 handoff 后恢复.
 
 ## 记录类型
 
-- 每日专题必须具有日期、唯一主题、完整研究链、独立验证和结论等级.
-- 同一天重复运行只能完善同一每日专题, 不得增加第二份日报.
-- 特殊专题用于跨日事件、外部事故或证据冲突, 使用独立文件和来源矩阵.
-- 特殊专题可以触发每日研究, 但事件事实与实验观测必须分开保存.
-- 特殊专题本身不计作独立实验, 只有其中产生的可复验实验才能参与结论升级.
-- 月度视图必须分别列出每日专题、特殊专题与周期审计, 不得用派生记录填补日报缺口.
-- 周期审计是日报、特殊专题与实验输出的派生复核, 不替代事实来源, 不增加独立实验数量.
-- 周期审计至少检查日期覆盖、来源缺口、强反例、验证独立性、重放副作用、临时清理和结论门槛.
-- 周期审计发现证据缺口时保留缺口, 不以后续资料倒填成当日事实.
-- 周期审计覆盖连续 6 或 7 日, 新日报距已审计区间超过 6 日时视为审计逾期.
+### Daily
+
+Primary controlled research for one Shanghai logical date.
+
+One date -> one Daily unit.
+
+Same-day rerun strengthens the same file.
+
+### Special
+
+Reality/vendor/event mapping. Special 不替代 Daily, 不自动计 experiment.
+
+### Audit
+
+Derived review only. Audit 增加 0 experiment, 0 independent execution window, 0 long-term finding.
+
+### Monthly
+
+Rolling research control view. 索引 Daily, Special, actual execution coverage, CASE state, NOTES promotion, current unknown 与 research frontier. 不替代 Daily evidence.
 
 ## 结论状态
 
-- 观察: 只出现一次.
-- 候选: 在独立条件下重复出现, 但尚未完成跨时复验.
-- 发现: 至少三个独立实验、跨两个时间窗口并完成强反例检查.
-- 失效: 新证据推翻旧结论, 保留历史并写明原因与日期.
+- 观察: 一个研究批次
+- 候选: 至少两个独立研究批次或实质不同条件, 且完成 counterexample check
+- 发现: 至少三个独立实验, 跨至少两个实际执行窗口, 完成 strong counterexample coverage
+- 失效: 新证据推翻原结论, 保留历史, invalidation date, replacement evidence 与 impact scope
 
-只有发现可以进入 `NOTES.md`. 独立实验在输入、故障位置、执行路径或验证方式中至少有一项实质差异.
+只有发现进入 `NOTES.md`.
 
-## 比较维度
+Different code, algorithm, file, process or Agent identity 不自动建立 experiment independence. Independence 需要说明输入, failure location, authority, execution path, evidence representation 或 verifier semantics 的实质差异.
 
-分别记录有效完成、重放一致、幂等通过、中断恢复、假成功、无效操作、重试次数、人工介入、结果质量和验证后的有效耗时.
+## 历史保真
 
-操作数量下降只有在结果质量和验证强度不下降时才视为改进. 有效耗时覆盖最终断言与清理检查.
+Current truth 不删除 old truth.
+
+Later completion 不证明 earlier completion.
+
+Later authorization 不证明 historical authorization.
+
+Current path presence 不证明 original run success.
+
+New method 不追溯把 historical `RECONSTRUCTION`, `NOT_RUN`, `UNVERIFIED`, `UNKNOWN` 或 `BLOCKED` 改写成成功.
+
+若发现真实 historical defect, correction 必须保留原记录身份和 original execution fact.
 
 ## 记录节奏
 
-日报使用 `templates/daily.md`, 特殊专题使用 `templates/special.md`, 周期审计使用 `templates/weekly.md`, 月度整理使用 `templates/monthly.md`.
+Daily 使用 `templates/daily.md`.
 
-## Prior-effect evidence 有效性
+Special 使用 `templates/special.md`.
 
-- unknown outcome 恢复在执行新的非幂等 effect 前, 把 prior-effect 结果分类为 `hit`, `authoritative miss` 或 `unknown`
-- query error, timeout, unavailable, stale cache, 未证明 freshness 的 replica miss, 已过 retention 的缺失与被清理历史都属于 `unknown`, 不得降级为 never-executed
-- `authoritative miss` 只有在证据通道同时满足 exact effect identity, provenance, freshness 与 retention 或 lifecycle coverage 时才允许作为重新执行依据
-- exact effect identity 至少绑定稳定 operation 或 task identity, normalized action 与真实 target incarnation 或 effect set, 仅逻辑名称, correlation marker, delete marker 或 tombstone 只能作为线索
-- freshness 需要覆盖旧 attempt 可能成功提交 effect 或 receipt 的时间窗口, pre-attempt watermark 不能证明 attempt 之后的历史缺失, whole-store global revision 又可能因无关变化过度围栏
-- retention 与 lifecycle 需要覆盖仍允许恢复的窗口, 或提供生命周期更长且可权威查询的独立 effect evidence, current live absence 不能证明 historical occurrence absence
-- 任一维度无法建立时安全停止或进入 reconciliation, 不写 completion, 不执行新的非幂等 effect
-- current execution permission 仍是独立门, permission valid 不能修复无效的 prior-effect evidence
+Derived audit 使用 `templates/weekly.md`.
 
-## Current completion evidence 有效性
+Monthly research synthesis 使用 `templates/monthly.md`.
 
-- 对要求当前状态持续满足的 persistent-state completion contract, historical receipt 或 effect evidence 只证明 occurrence, 不能单独证明当前 postcondition 仍成立
-- compensation、回滚、人工修正或其他合法状态推进可能在 receipt 保持真实的同时使 current completion 失效, 恢复 completion 前重新核对当前任务后置条件
-- successful postcondition read 不等价于 fresh current evidence, eventual replica、cache 或未证明版本边界的 satisfied value 都可能是 stale positive
-- current completion evidence 至少绑定真实 target incarnation 或 effect set、任务语义依赖、被验证 revision 或等价 freshness boundary 与可核验判定时点
-- relevant-state projection 可以减少无关 global revision 导致的 over-fencing, 但必须保守覆盖所有会改变 completion semantics 的字段, 无法证明完整时使用更强 current read、整体 revision 围栏或安全停止
-- postcondition read 只能证明其线性化点或被验证 revision 上的当前事实, 如果 completion commit 或后续动作仍依赖该事实, 携带 revision 或把 compare 与受保护提交放入同一原子边界
-- 多资源 completion contract 中, 多个单项 authoritative read 只有在共享同一可核验 snapshot identity 时才能直接组合. 无共同 snapshot 时, completion commit 需要原子复核全部相关 observation identity 与 revision, 最后一次 global revision 不能追溯绑定更早的单项读取
-- atomic compare 只保护实际比较的字段. compare set 从 task semantics 推导并覆盖全部 relevant identity 与 freshness dependency; concrete-incarnation task 绑定不可混淆实体 identity 与 incarnation 内 freshness, selector-bound task 按 selector 与 current predicate 定义 identity, 不能机械要求 UID 相等
-- selector-bound dynamic set 的 relevant identity set 还包含 current membership 或 predicate witness, 不能冻结为首次观察成员. 新增、删除或替换匹配成员会使旧 membership proof 失效, 除非任务语义明确允许该变化
-- 普通 relist 只能移动最终观察时点. 如果 membership 在 relist 后仍可变化, completion commit 需要把 membership witness 与全部相关 member identity/freshness 放入同一 protected decision boundary, 或使用等价 serializable/predicate guarantee
-- 完整判断链为 `task semantics -> current relevant membership and identity set -> coherent snapshot or freshness -> predicate-complete atomic protected completion`. 任一依赖集无法证明完整时使用更强 snapshot、transaction 或安全停止
-- current postcondition 不满足且需要重新执行 effect 时, 仍先独立通过 current execution permission, 不能因为 historical receipt 真实或旧任务曾获授权而跳过当前权限检查
-- occurrence-only 不可逆 effect 与 persistent-state effect 可能需要不同 completion contract, 未建立具体任务语义前不能把本节规则机械外推为所有副作用都必须维持相同当前状态
+`CASES.md` 只记录真实执行过的 reusable mechanism.
 
-## 活动记录的完成分层
+`NOTES.md` 只记录满足长期发现门槛的 durable result.
 
-- 命令成功只证明进程或命令层返回
-- 传输成功只证明请求或响应到达定义边界
-- 任务终态只证明状态机进入终态
-- 有效完成还需要目标 identity,任务语义,freshness,revision 和内容后置条件共同成立
-- prior-effect evidence 使用 `hit`,`authoritative miss`,`unknown` 三态,无法证明权威缺失时保持 unknown 并安全停止
-- 多资源完成必须共享可核验 snapshot,或在受保护提交前比较完整 current relevant set; selector-bound dynamic set 还需要绑定 membership 或 predicate witness
-- 周期审计覆盖连续 6 或 7 日,是派生复核,不增加实验或长期结论数量
-- 历史执行事实保持不变. 正文错误允许有依据地原位微调,日志保留原始版本、前后差异和真实修正时间
+## 验证边界
 
-## Monthly maintenance and correction
+`ballast/tools/check.py` 是 structural checker.
 
-A monthly summary is not a completed maintenance pass. Calendar closure, input delivery, original execution and current content quality are separate states.
+Checker PASS 不等于 action-integrity truth PASS.
 
-Within this maintenance surface only:
+最终研究声明还需要回答.
 
-1. Inventory every logical date, intersecting ISO week, monthly record and cited special/audit in the review window. Identify each input by path and immutable commit or PR head. Record delivered-but-unmerged separately from absent and unknown. A cross-month week keeps its full natural-week boundary and an explicit as-of cutoff.
-2. Check actual source access, publication time, claim authority, publisher independence and local applicability. Repeated Daily, Weekly and Monthly wording does not add evidence. A search query, abstract or retrieval hash does not prove a full-text review or an experiment.
-3. Correct confirmed wording, arithmetic, links and unsupported promotions in the original document with the smallest scoped edit. Preserve original author, logical date, execution timestamps, provenance and blocked state. Record the old claim, corrected claim, evidence, original commit, reviewer and real correction time in the maintenance log. Never make a later source look available to an earlier run.
-4. Trace each corrected claim through downstream daily handoffs, weekly decisions, monthly synthesis, durable findings and indexes. Update affected current interpretations and mark remaining dependencies unresolved. Do not silently repair a missing historical Decision ID by inventing a decision.
-5. Adjust active rules, templates and offline checks only for demonstrated recurring defects. Recheck unchanged boundaries. This process does not authorize host runtime, data, frontend, Actions or scheduler changes.
-6. Run the existing checks and proportionate regression tests. Log commands, results, skipped checks and remaining evidence gaps. No blanket completion from file counts, a green checker or an old audit alone.
+- source authority 是否足够
+- prior-effect evidence 是否覆盖 old attempt
+- current permission 是否在 new effect boundary valid
+- historical authorization 是否在 effect-time valid
+- target/membership identity 是否 current
+- completion evidence 是否 fresh
+- verifier 是否具有足够 semantic independence
+- unknown 是否被诚实保留
 
-New monthly records use the following compact ledger. A NOT_RUN or PARTIAL result is valid and must not be promoted by the next summarizer.
+## Monthly research synthesis
 
-- `Monthly Maintenance Status`: NOT_RUN, PARTIAL or COMPLETED.
-- `Maintenance Coverage`: an exact path inventory and per-file disposition, including weekly/monthly dependencies.
-- `Maintenance Change Log`: the dated log, with original identity and before/after reasoning, or an explicitly documented no-change review.
-- `Maintenance Validation`: actual commands/results and semantic review limits.
-- `Maintenance Unresolved`: precise outstanding items, or NONE only after all scoped work is resolved.
+月度文件首先维护研究事实, 不是 maintenance completion certificate.
 
-COMPLETED requires the complete scoped inventory, correction propagation, logged validation and no unresolved items. It does not certify universal correctness. A calendar month may be CLOSED while the review task remains BLOCKED or maintenance remains PARTIAL.
+至少记录.
 
-Calendar closure uses the original Shanghai execution time, not the date a file was later merged or corrected. Before the first instant of the following month, use OPEN for the as-of snapshot. Missing legacy timestamps remain unknown, not fabricated.
+- Daily file coverage
+- NATIVE / RECONSTRUCTION / other provenance
+- research-unit count
+- independent execution-window count
+- CASE support changes
+- NOTES promotion or no-promotion
+- current unresolved mechanisms
+- next real-system frontier
 
-The offline checker validates declared ledger structure, not whether the linked evidence is true, independent or sufficient. The maintainer must read that evidence.
+自然月结束前只做 as-of synthesis.
+
+## Separate maintenance and correction surface
+
+Maintenance, correction 与 audit 不属于 Daily research production gate.
+
+只有真实 defect 需要修正时才进入对应 surface. 修正不得改写 original execution state.
+
+Monthly maintenance ledger 可以保留, 但其 NOT_RUN/PARTIAL/COMPLETED 不决定每日研究是否产出.
