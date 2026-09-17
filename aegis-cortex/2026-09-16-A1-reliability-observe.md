@@ -88,3 +88,68 @@
 - 确认未写入 Aegis 之外文件: YES
 - 确认未公开提示词或私有 Memory: YES
 - 确认未把外部风险冒充本地事故: YES
+
+## CURRENT_MAINTENANCE_CORRECTION_2026-09-17
+
+> 本节是 2026-09-17 的向前纠正层。上方 2026-09-16 Jules 原始执行记录保持不动；本节不声称以下独立来源在原执行时已被读取，也不把后验核验改写成原始执行证据。
+
+### CORRECTION_RECORD
+- **Correction Producer**: Independent GPT / human-authorized maintenance
+- **Correction Type**: SOURCE_SCOPE_AND_METRIC_RECONCILIATION
+- **Correction Checked At UTC**: 2026-09-17T08:15:12+00:00
+- **Correction Checked At Asia/Shanghai**: 2026-09-17T16:15:12+08:00
+- **Original Jules Status Preserved**: YES
+- **Original Single-Source Status Preserved**: YES
+- **Local Incident State After Correction**: NO_LOCAL_EVIDENCE
+- **Host Applicability After Correction**: UNKNOWN
+
+### SOURCE_SCOPE_CORRECTION
+- `arXiv:2606.20023` 当前可核验版本为 v2，2026-07-07 修订。论文在 544 个模拟场景、11 个模型上研究 least-privilege 选择与 transient failure 后的 privilege escalation。
+- 原始 `External Evidence` 中“11 个受评测模型展示出高达 64.9%”容易被误读为总体或共同失败率。更精确的表述是：6/11 模型的 OPUR 超过 30%；其中 Qwen3-8B 为 64.9%，LLaMA-3.1-8B 为 55.9%；Claude 4.6 Sonnet、GPT-5.2、GLM-5 低于 10%。因此 `64.9%` 是特定模型结果，不是 11 模型总体比例。
+- 论文确实报告 transient tool failures 会放大过度特权选择；该结论仍是 ToolPrivBench 的 source-specific benchmark result，不是 Jules、Aegis 或 zero-entropy-lab 的本地失败率。
+
+### INDEPENDENT_RISK_CLASS_CORROBORATION
+
+#### CORR-SRC-2026-09-16-02
+- **Title**: FORTIS: Benchmarking Over-Privilege in Agent Skills
+- **Publisher**: arXiv
+- **Canonical Identity**: arXiv:2605.09163v3
+- **URL**: https://arxiv.org/abs/2605.09163
+- **Published or Updated Date**: 2026-06-14
+- **Date Checked**: 2026-09-17
+- **Source Type**: ORIGINAL_RESEARCH
+- **Evidence Tier**: Tier 1
+- **Independent Source**: YES
+- **Claim Supported**: 在另一套十个 frontier models、三个 domains 的 skill-selection / execution benchmark 中，也观察到 over-privileged behavior，支持“最小权限选择是独立可靠性风险类别”。
+- **Claim Not Supported**: 不独立复现 ToolPrivBench 的 64.9%、11 模型分布或 transient-failure amplification 的精确结果。
+- **Confidence**: HIGH for FORTIS source-specific findings; MODERATE for cross-benchmark risk-class corroboration.
+
+#### CORR-SRC-2026-09-16-03
+- **Title**: When Context Gets Root: Privilege Escalation in LLM Harnesses
+- **Publisher**: arXiv
+- **Canonical Identity**: arXiv:2608.27299v1
+- **URL**: https://arxiv.org/abs/2608.27299
+- **Published or Updated Date**: 2026-08-27
+- **Date Checked**: 2026-09-17
+- **Source Type**: ORIGINAL_RESEARCH
+- **Evidence Tier**: Tier 1
+- **Independent Source**: YES
+- **Claim Supported**: coding-agent harness 的 context reconstruction 可能提升低级来源内容的 instruction privilege，独立支持“权限边界与来源层级需要显式保留”这一更广风险类别。
+- **Claim Not Supported**: 该论文研究 instruction privilege escalation，不是 ToolPrivBench 的 tool-selection benchmark；不能作为其精确数值或 transient retry behavior 的复现。
+- **Confidence**: HIGH for source-specific harness findings; MODERATE for adjacent boundary-risk corroboration.
+
+### CORRECTED_SIGNAL_INTERPRETATION
+- **Corrected Signal**: 外部研究提供了多条相互独立、但机制并不相同的证据，表明 agent 在 tool/skill/context privilege 边界上存在值得持续观察的 over-privilege 风险。ToolPrivBench 进一步报告 transient failures 可放大其中的 tool-selection escalation。
+- **Exact ToolPrivBench Metric Status**: SINGLE_SOURCE_LINEAGE
+- **Broader Privilege-Risk Class Status**: INDEPENDENTLY_CORROBORATED_BY_ADJACENT_BENCHMARKS
+- **Local Repository Evidence**: `aegis-cortex/2026-W36-A4-protocol-act.md` 与 `aegis-cortex/2026-08-A6-aegis-memorize.md` 仅提供边界、来源与验证纪律的本地 preventive context；它们不是本地 privilege-escalation incident evidence。
+- **Local Applicability**: UNKNOWN
+- **Correction Confidence**: HIGH for source identity and reported benchmark scope; MODERATE for broader cross-benchmark risk-class synthesis; UNKNOWN for Jules/Aegis applicability.
+- **A2 Historical State**: 2026-09-16 A2 已正确把该信号限制为 source-specific external result / CONTINUE_WATCH；本次纠正不升级其历史状态。
+
+### CORRECTION_BOUNDARY_CHECK
+- 未把后验独立来源冒充为 2026-09-16 原始 A1 已读取来源: YES
+- 未把任何外部 benchmark rate 映射为本地失败率: YES
+- 未声明 Jules、Aegis 或 zero-entropy-lab 已发生 privilege escalation: YES
+- 未修改 A2、A4、A6 历史正文: YES
+- 原始负证据 `NO_LOCAL_EVIDENCE` 保留: YES
