@@ -4,9 +4,9 @@
 
 Ballast 是 recovery, completion, evidence validity, authorization freshness, temporal evidence 与 action integrity 的受控研究系统.
 
-它不研究简单的 `命令是否返回 success`. 它研究长期任务在 interruption, retry, ownership handoff, approval drift, target drift, membership drift, distributed visibility, idempotency retention, key lifecycle 与 uncertain time 下, 如何证明一个 autonomous action 仍然合法且完整.
+它不研究简单的 `命令是否返回 success`. 它研究长期自主任务在 interruption, retry, ownership handoff, approval drift, target drift, membership drift, distributed visibility, idempotency retention, key lifecycle 与 uncertain time 下, 如何证明一个 action 曾经合法发生, 现在仍然允许继续, 并且当前任务语义确实完成.
 
-`AGI-scale action integrity` 是下一阶段研究尺度, 不是能力声明. 它表示未来长期自主 Agent 会跨更多工具, authority domain, delegated executor 与时间窗口运行, 因而需要把 action permission, effect occurrence, historical authorization 与 current completion 分开验证.
+`AGI-scale action integrity` 是研究尺度, 不是能力声明. 它表示未来长期自主 Agent 会跨更多工具, authority domain, delegated executor, effect sink 与时间窗口运行, 因而必须把局部 success signal 拆成可独立验证的 action state.
 
 ## 每日研究生产合同
 
@@ -19,7 +19,7 @@ Daily 是 mandatory research production, 不是 maintenance/no-change task.
 - `UNKNOWN`, `UNVERIFIED`, `BLOCKED`, `DEGRADED`, `PARTIAL`, `EVIDENCE_INSUFFICIENT` 与 `NO_CONCLUSION` 都是合法 Daily result
 - 没有正面发现不等于没有研究产出
 - 不为了连续性制造 effect success, CASE advancement, verifier independence 或 NOTES finding
-- 真实实验能力暂时缺失时, 仍选择一个能够被证伪的 bounded study, 明确哪些实验未执行
+- 真实实验能力暂时缺失时, 仍选择可证伪的 bounded study, 并明确哪些实验没有执行
 - research complete 与 GitHub delivery complete 分开
 
 历史缺失运行保持原事实. 例如 2026-09-08 的 `RECONSTRUCTION / NOT_RUN / UNVERIFIED` 不因新合同而追溯升级为 NATIVE experiment.
@@ -31,10 +31,20 @@ Daily 是 mandatory research production, 不是 maintenance/no-change task.
 3. 能够提取状态转换, authorization semantics, verification mechanism 或 failure handling
 4. 能够说明适用边界与未覆盖条件
 5. 来源冲突保留冲突, external content 不直接变成本地 runtime result
-6. vendor contract, standard text 与 local fixture evidence 分开
+6. vendor contract, standard text, local fixture evidence 与 real runtime evidence 分开
 7. dynamic documentation 记录 access time, 不倒写 historical behavior
 
-来源只支持有限命题. 外部标准不能证明本地 trace, effect count 或 verifier PASS.
+来源只支持有限命题. 外部标准不能证明本地 trace, effect count, verifier PASS 或真实服务行为.
+
+## 固定研究链
+
+`研究问题 -> 来源依据 -> 可证伪假设 -> 控制条件 -> 实验设计 -> 原始观测 -> 独立验证 -> 强反例 -> 路径比较 -> 暂时结论 -> 复验条件 -> 体系增量`
+
+环境失败, task failure, verification failure 与 evidence insufficiency 分开.
+
+已验证事实, evidence-based inference 与 unknown 分开.
+
+每个 Trial 明确保持条件和改变条件. 多个变量同时变化时不做单因果归因.
 
 ## 有效完成定义
 
@@ -62,15 +72,7 @@ Daily 是 mandatory research production, 不是 maintenance/no-change task.
 
 对 persistent-state task, `Valid Completion` 至少要求 historical effect 没有被错误重放, historical authorization 合法, current task semantics 仍满足, target/effect-set identity 正确, evidence fresh enough, verifier 对关键事实具有足够独立性.
 
-## 固定研究链
-
-`研究问题 -> 来源依据 -> 可证伪假设 -> 控制条件 -> 实验设计 -> 原始观测 -> 独立验证 -> 强反例 -> 路径比较 -> 暂时结论 -> 复验条件 -> 体系增量`
-
-环境失败, task failure, verification failure 与 evidence insufficiency 分开.
-
-已验证事实, evidence-based inference 与 unknown 分开.
-
-每个 Trial 明确保持条件和改变条件. 多个变量同时变化时不做单因果归因.
+对 occurrence-only effect, current persistent postcondition 可能不存在, 因而 completion contract 必须改为 occurrence identity, authorization, delivery/effect evidence 与后续责任边界, 不能虚构一个永久 current-state predicate.
 
 ## Action-integrity state model
 
@@ -98,7 +100,7 @@ Daily 是 mandatory research production, 不是 maintenance/no-change task.
 
 `AUTHORITY_GENERATION`
 
-`TARGET_INCARCATION`
+`TARGET_INCARNATION`
 
 `EFFECT_SET_IDENTITY`
 
@@ -110,6 +112,8 @@ Daily 是 mandatory research production, 不是 maintenance/no-change task.
 
 `PRIOR_EFFECT_EVIDENCE`
 
+`HISTORICAL_AUTHORIZATION_EVIDENCE`
+
 `CURRENT_COMPLETION_EVIDENCE`
 
 `VERIFIER_AUTHORITY`
@@ -118,7 +122,7 @@ Daily 是 mandatory research production, 不是 maintenance/no-change task.
 
 不是每个实验都需要全部字段, 但不能用未建模字段的缺失换取更漂亮的成功路径.
 
-## 三个核心恢复问题
+## 四个不可坍缩的证明问题
 
 ### Current execution permission
 
@@ -158,6 +162,24 @@ Completion missing 不能证明 effect missing.
 
 Current permission invalid 只阻止新的 effect, 不应该阻止只读 historical reconciliation.
 
+### Historical effect authorization
+
+问题是 `已经发生的 effect 在发生时是否获得合法授权`.
+
+Prior HIT 只证明 occurrence.
+
+Historical authorization 至少可能依赖.
+
+- effect-time approval validity
+- approval action/effect-set identity
+- historical subject and credential state
+- historical issuer/key generation
+- revocation reason and invalidity boundary
+- evidence object coverage
+- trustworthy event ordering
+
+Current permission, current revocation 或 current issuer state 不能自动追溯替代 historical authorization.
+
 ### Current completion evidence
 
 问题是 `当前任务要求现在是否仍满足`.
@@ -184,7 +206,9 @@ Watch gap, stale resourceVersion, page cursor, list count equality 与 same logi
 
 Authoritative relist 只重新建立 relist 时点的 current truth. Relist 到 completion 之间仍存在 TOCTOU, 需要 protected compare, predicate transaction 或 equivalent fence.
 
-## Approval binding
+因此 gap recovery 的目标不是 `relist succeeded`, 而是 `gap -> unknown -> authoritative current snapshot -> protected membership/member-state decision -> completion`.
+
+## Approval binding and dependency completeness
 
 Approval 不应只绑定 action string.
 
@@ -200,27 +224,33 @@ Approval 不应只绑定 action string.
 - credential scope
 - subject lifecycle state
 - approval valid_until
+- issuer generation
 - owner generation
 
-9 月实验表明, `action + UID + policy` 仍可能漏掉 environment, credential scope 或 subject lifecycle state.
+9 月 5 至 7 日实验连续证明, `action + UID + policy` 或其他共享缩减 schema 可以分别漏掉 environment, credential scope 与 subject lifecycle state.
 
-不同 verifier 实现如果共享同一个漏字段 specification, 可以共同稳定 PASS 一个 unauthorized effect. 因此 implementation diversity 不等于 semantic independence.
+Producer 与 verifier 即使使用不同代码和不同算法, 只要共同继承同一漏字段 schema 或 natural-language specification, 仍可共同稳定 PASS 一个 unauthorized effect.
+
+因此 dependency completeness 不能由 implementation agreement 自证.
 
 ## Verifier semantic independence
 
-Verifier strength 至少从三个维度描述.
+Verifier strength 至少从四个维度描述.
 
 1. implementation independence
 2. data/evidence-source independence
 3. semantic-contract independence
+4. authority freshness binding
 
-不同 Python 文件, 不同算法或不同进程只能证明 implementation separation.
+不同 Python 文件, 不同算法, 不同进程或不同 Agent 只能证明 implementation separation.
 
 如果 producer 与 verifier 都从相同错误 field schema 或同一不完整 natural-language spec 派生判断, 它们仍存在 common-mode semantic failure.
 
-更强 verifier 应尽量从 raw authority state, 独立 snapshot, independent evaluator authority 或 independently derived schema 重建关键合同.
+如果 verifier 使用独立生成但 stale 的 authority snapshot, source generation independence 仍不能替代 decision-time freshness.
 
-任何 verifier 仍共享 scenario vocabulary, TSV field semantics, fixtures 或 runtime environment 时明确披露.
+更强 verifier 应尽量从 raw authority state, independent snapshot, current authority channel, independent evaluator authority 或 independently derived schema 重建关键合同.
+
+任何 verifier 仍共享 scenario vocabulary, field semantics, fixtures, approval constants 或 runtime environment 时明确披露.
 
 ## Unknown outcome and idempotency
 
@@ -238,6 +268,8 @@ Idempotency retention window 也不是永久历史记忆.
 
 Token 保留过期后, 同一 token string 不能继续承担原去重保证. 恢复需要 authoritative receipt, exact sink identity, durable operation record 或 equivalent historical evidence.
 
+Local retry budget, fixed wait 或 repeated UNKNOWN 不能自动把 unknown 降级成 MISS.
+
 ## Distributed visibility and receipt coverage
 
 跨服务 effect sink 与 receipt authority 不共享事务时, receipt MISS 需要证明它的 visibility coverage 已经覆盖旧 attempt 可能成功的边界.
@@ -245,6 +277,8 @@ Token 保留过期后, 同一 token string 不能继续承担原去重保证. �
 Applied-through watermark, sequence number, commit index, generation 或 equivalent coverage 可以用于说明 MISS 的 authority range.
 
 如果 coverage 尚未覆盖 old attempt, MISS 保持 UNKNOWN.
+
+Receipt authority 自身的 latest read 不等于对另一个系统历史的完整 coverage.
 
 固定等待次数不等于 coverage proof.
 
@@ -258,17 +292,17 @@ Current permission, historical authorization 与 historical occurrence 是不同
 
 ### Approval expiry
 
-Resume time approval valid 不等于 effect-time approval valid.
+Resume-time approval valid 不等于 effect-time approval valid.
 
 当 approval 有 `valid_until`, 需要在 effect linearization boundary 或等价 protected boundary 验证.
 
 ### Historical effect authorization
 
-Prior HIT 只证明 occurrence.
+Current approval expired 不能抹掉一个 earlier legally authorized effect.
 
-要恢复 valid completion, 还需要验证 effect 当时处于合法 authorization interval.
+反过来, receipt HIT 也不能合法化一个 effect-time 已越权的 historical effect.
 
-Current approval expired 不能抹掉一个 earlier legally authorized effect. 反过来, receipt HIT 也不能合法化一个 effect-time 已越权的 historical effect.
+对 HIT 的 completion recovery 使用 historical boundary. 对 MISS 后的新 effect 才使用 current authorization boundary.
 
 ### Signing-key generation
 
@@ -288,21 +322,25 @@ Revocation processing time, revocation reason 与 historical invalidity boundary
 
 Compromise 场景可能具有早于 revocation publication 的 invalidity time. Historical verification 应使用 claim-specific boundary, 不能只比较 notice time.
 
+如果 invalidity boundary 缺失或 authority evidence 冲突, unknown 保持 unknown.
+
 ### Timestamp semantic coverage
 
 Timestamp presence 不等于 timestamp 正确覆盖要证明的对象.
 
 Payload timestamp 不自动证明 approval signature creation time.
 
-需要明确 timestamp message imprint or semantic coverage 对应 signature/effect/approval 中哪个对象.
+需要明确 timestamp message imprint or semantic coverage 对应 signature, effect 或 approval 中哪个对象.
 
 ### Timestamp uncertainty and ordering
 
 Nominal `genTime` 的数值顺序不自动构成 strict historical order.
 
-若 timestamp 带 accuracy interval, 只有 uncertainty intervals 能够支持严格分离, 或存在 explicit trusted ordering evidence, 才建立对应顺序.
+若 timestamp 带 accuracy interval, 只有 uncertainty intervals 严格分离, 或存在 explicit trusted ordering evidence, 才建立对应顺序.
 
 Same-TSA `ordering=true` 可以提供与 interval separation 不同的 ordering evidence, 但仍不能伪造不存在的 point precision.
+
+不同 TSA 或不同 authority channel 的 nominal timestamps 更不能在没有 uncertainty/ordering contract 时自动形成线性顺序.
 
 ## Current completion after replay
 
@@ -319,6 +357,7 @@ Completed replay 用于验证已完成状态下的 idempotent short circuit.
 - approval expired before effect
 - target reincarnated after read
 - historical effect occurred under invalid authorization
+- verifier authority stale or semantically incomplete
 
 ## Irreversible occurrence effects
 
@@ -332,6 +371,18 @@ Persistent-state completion 并不适用于所有 side effect.
 2. durable current-state completion
 
 不能强迫 occurrence-only action 使用一个虚假的 persistent-state contract.
+
+## AGI-scale delegated action integrity
+
+未来 delegated autonomous system 可能具有如下链条.
+
+`planner intent -> approval authority -> delegated executor -> credential subject -> dynamic target set -> effect sink -> receipt authority -> completion store -> later world state`
+
+这些 surface 可能由不同服务, 不同 Agent 或不同信任域拥有, 没有 shared transaction.
+
+因此系统级 `SUCCESS` 只有在 claim-specific proof 足够时才能建立. 任一局部信号都不能默认升级为全局完成.
+
+下一阶段研究重点是 delegation identity, authority inheritance, revocation, handoff, sub-agent effect identity, cross-agent verifier independence 与 long-horizon world-state drift.
 
 ## Real-system research frontier
 
@@ -368,6 +419,10 @@ Persistent-state completion 并不适用于所有 side effect.
 ### Delegated multi-agent authority
 
 研究 planner, approver, executor, sub-agent 与 effect sink 各自持有部分 authority 时, authorization 如何组合, 如何失效, 如何在 handoff 后恢复.
+
+### Irreversible real effects
+
+研究发送, 发布, 通知, payment-like 或其他 occurrence-only effect, 明确其 completion contract 与 persistent-state task 的差异.
 
 ## 记录类型
 
@@ -444,7 +499,8 @@ Checker PASS 不等于 action-integrity truth PASS.
 - historical authorization 是否在 effect-time valid
 - target/membership identity 是否 current
 - completion evidence 是否 fresh
-- verifier 是否具有足够 semantic independence
+- verifier 是否具有足够 semantic independence 和 authority freshness
+- temporal evidence 是否证明正确对象和正确 ordering
 - unknown 是否被诚实保留
 
 ## Monthly research synthesis
