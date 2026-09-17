@@ -122,6 +122,10 @@ Unknown 保持 unknown. 不为了每日产出制造阳性发现.
 
 ### 未验证事项
 
+## 指标
+
+按需记录 effect count, sink calls, receipt queries, retries, false completion, unauthorized effect, verifier disagreements 与 validated elapsed. 没有合法 metric 时写 `NOT_APPLICABLE`.
+
 ## 验证结果
 
 记录实际执行的 producer, verifier, checker, source verification 与未执行项. Checker PASS 不等于 action-integrity truth PASS.
