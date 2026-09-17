@@ -1,11 +1,12 @@
 # Governance Map — Aegis
 
-Calibration: 2026-09-17
+Calibration: 2026-09-18
 
 This directory is the repository-level maintenance/control-plane router for Zero Entropy Lab. It does not replace Aegis production artifacts, Ballast research, repository code/data, or historical evidence.
 
 ## Current routing
 
+- `SOURCE_AUTHORITY.md` — repository-wide source identity, provenance, freshness, lineage, claim-support, and recovery contract; narrower subject-specific policies still own their domains.
 - `../aegis-cortex/EVIDENCE_POLICY.md` — current Aegis evidence and interpretation boundaries.
 - `../aegis-cortex/` — native Aegis production artifacts; producer identity and task-time state remain attached to each record.
 - `../ballast/` — Ballast's own action-integrity research system and declared audit/correction/maintenance surfaces; not Aegis execution evidence by default.
@@ -15,13 +16,13 @@ This directory is the repository-level maintenance/control-plane router for Zero
 
 ## Authority and history
 
-Recover the current subject from current merged `main` and the most specific active repository contract or implementation surface. Historical audits, dated maintenance records, prior handoffs, and model recollection remain point-in-time or secondary recovery material.
+Recover the current subject from current merged `main` and the most specific active repository contract or implementation surface. Apply `SOURCE_AUTHORITY.md` when source identity, revision, freshness, lineage, claim scope, or conflict handling is material. Historical audits, dated maintenance records, prior handoffs, and model recollection remain point-in-time or secondary recovery material.
 
 ```text
 current merged main / current repository truth
 > current subject-specific policy / implementation
 > observed revision-bound execution evidence
-> current maintenance / governance contract
+> repository-wide source/provenance and maintenance contracts
 > current explanatory / projection surfaces
 > historical maintenance / reconciliation evidence
 > prior handoff / model recollection
