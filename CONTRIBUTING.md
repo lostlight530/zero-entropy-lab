@@ -1,79 +1,77 @@
 # Contributing
 
-Contributions are welcome when they improve the current repository while preserving Aegis/Ballast producer identity, state boundaries, evidence discipline, provenance, and historical auditability.
+Contributions are welcome when they improve Zero-Entropy Lab's implementation, evidence clarity, tests, documentation, metadata, or developer experience while preserving deterministic state and provenance boundaries.
+
+## Repository surfaces
+
+Keep a change with the surface that owns it:
+
+- `src/kernel/` — repository-owned runtime and protocol implementation;
+- `tests/` — executable regression and contract evidence;
+- `data/inputs/` and repository-owned data contracts — external-input lifecycle and reproducible ledgers;
+- `aegis-cortex/` — reliability/evidence interpretation under its current public contracts;
+- root documentation, citation/release metadata, `.github/`, and security files — public repository infrastructure;
+- archived and historical material — point-in-time evidence that should not be rewritten merely to match later state.
 
 ## Before proposing a change
 
-- Start from current merged `main` and the most specific current repository authority before relying on historical snapshots, handoffs, or model memory.
-- For repository maintenance, read `governance/README.md` and `governance/independent-gpt/README.md`.
-- Keep runtime observation, persisted state, generated artifacts, external source material, execution evidence, and inference distinct.
-- Inspect relevant open pull requests and active maintenance branches before writing; use `COORDINATE` when another live change owns the same surface or logical period.
-- Never create or mutate a branch merely to test write permission.
+1. Start from current `main` and identify the implementation, contract, evidence policy, or public document that owns the behavior.
+2. Reproduce an implementation defect at a named revision when possible before changing code.
+3. For state or storage changes, describe the relevant SQLite, JSONL, cache, archive, or transition identity and the expected invariant.
+4. For external-source or reliability claims, separate source identity, external risk, local observation, local incident evidence, and inference.
+5. Add or update proportionate tests for behavior changes.
+6. Keep unrelated cleanup out of the same pull request.
 
-## Producer and plane boundaries
+## Evidence boundaries
+
+Do not collapse distinct evidence surfaces:
 
 ```text
-Aegis native production != Ballast research
-Ballast Daily research production != maintenance/no-change task
-Independent GPT != native producer
-GitHub Actions != research truth
-current path presence != earlier execution
-later success != earlier success
-correction != history rewrite
+external risk != local incident
+local preventive record != incident evidence
+transition declaration != transition execution
+hash identity != authorship or authorization
+checker success != semantic truth
+current path presence != historical execution
+archived publication != later main revision
 ```
 
-Private Jules task prompts, repository memory, credentials, hidden reasoning, and unrelated operator context are not reconstructed into public repository files by default. This repository currently has no public `AGENTS.md`.
+Unknown or unavailable evidence should remain explicit rather than being promoted to success.
 
-Ballast Daily/Special/CASE/NOTES artifacts are research evidence, not routine repository-maintenance edit targets. A separately authorized research correction may own one of those artifacts; ordinary maintenance does not silently rewrite it.
+## Verification
 
-## Maintenance outcome
+Run the repository checks relevant to the changed surface. The primary regression entry point is:
 
-- no confirmed maintenance defect → `NO_CHANGE_REQUIRED`; no activity-only edit, branch, or PR;
-- bounded defect with safe ownership → `REPAIR`;
-- overlapping live ownership → `COORDINATE`;
-- missing authority/current state or unsafe delivery → `BLOCKED`.
+```bash
+python tests/run_tests.py
+```
 
-## Issues
+Additional targeted commands are appropriate when a narrower subsystem owns the change. Record exact commands, interpreter/environment details when material, and observed outcomes in the pull request.
 
-Use the repository Issue templates:
+Do not report an unrun test, workflow, checker, or transition as passed.
 
-- **Bug report** for a reproducible defect in current code, state, or repository surfaces.
-- **Proposal** for a bounded improvement with explicit non-goals and acceptance criteria.
-- **Evidence or governance correction** for a state description, claim, metadata, governance, recovery, producer-identity, maintenance, or provenance mismatch.
+## Data, archive, and provenance
 
-Security-sensitive reports belong in the private route described by `SECURITY.md`.
+Follow `data/inputs/ARCHIVE_AND_HARVESTER.md` for repository-owned external-input lifecycle rules. Do not overwrite archived source bytes or remove provenance merely to simplify current state.
+
+Third-party source material retains its own authorship and licensing. Repository ingestion does not convert external material into repository-owned evidence of truth.
 
 ## Pull requests
 
-Use a bounded branch and the pull-request template. A useful PR identifies:
+Use the repository pull-request template and include:
 
-- exact base `main` revision and delivery head;
-- owning surface and logical period where relevant;
-- overlapping PR/branch state;
-- code/state-contract surfaces affected;
-- changed and deliberately unchanged boundaries;
-- checks actually performed and observed results;
-- relevant checks intentionally left unrun as `NOT_EXECUTED`;
-- historical/archived-source and producer-identity impact;
-- security/privacy impact where applicable;
+- the problem and bounded change;
+- affected code, state, evidence, or documentation surfaces;
+- tests/checks actually run and observed results;
+- known limitations or checks not run;
+- compatibility, migration, archive, or historical impact where relevant;
+- security/privacy implications;
 - a practical rollback.
 
-Before delivery, refresh current `main`, recheck overlap, inspect the aggregate `main...branch` diff, open one Draft PR, and stop for maintainer review unless a different repository-native workflow explicitly applies.
+## Security and privacy
 
-Never report an unrun checker, Ballast check, Aegis check, workflow, or local command as passed. Do not silently rewrite historical execution or archived external evidence to match later knowledge.
+Follow [SECURITY.md](./SECURITY.md) for sensitive reports. Do not place credentials, private data, exploit details requiring coordinated disclosure, or unnecessary external-source payloads in public issues or pull requests.
 
-Do not push directly to `main`, force-push history, or auto-merge maintenance work.
+## Conduct, license, and attribution
 
-## Style, conduct, license, and attribution
-
-Follow existing repository conventions. Prefer clear, inspectable, maintainable changes over feature accumulation or decorative complexity. New dependencies or authority surfaces require an explicit reason and boundary.
-
-Third-party archived/referenced material is not automatically repository-owned implementation and retains source provenance/licensing.
-
-Keep discussion professional, specific, evidence-aware, and focused on the repository. Do not publish credentials, private prompts, private information, or sensitive exploit details.
-
-Contributions to repository-owned work are submitted under the current `LICENSE`; third-party material retains its own attribution and licensing.
-
-Contributor credit reflects actual contribution history. `AUTHORS` does not erase Git/PR attribution.
-
-The repository owner retains final doctrine, review, and merge authority.
+Prefer small, inspectable changes and explicit failure behavior over hidden recovery or decorative complexity. Contributions to repository-owned work are submitted under the current `LICENSE`; third-party material keeps its original attribution and licensing. Git and pull-request history remain the source of contribution attribution.
