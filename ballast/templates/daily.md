@@ -15,7 +15,8 @@ Prior-effect Evidence: hit, authoritative miss, or unknown
 Current Execution Permission:
 Historical Authorization Evidence:
 Current Completion Evidence:
-Target Identity / Incarnation:
+Target Identity:
+Target Incarnation:
 Effect Identity / Effect Set:
 Membership / Predicate Witness:
 Task Semantics:
