@@ -10,6 +10,7 @@ Keep a change with the surface that owns it:
 - `tests/` — executable regression and contract evidence;
 - `data/inputs/` and repository-owned data contracts — external-input lifecycle and reproducible ledgers;
 - `aegis-cortex/` — reliability/evidence interpretation under its current public contracts;
+- `governance/` — repository-wide source/provenance recovery and maintenance/control routing;
 - root documentation, citation/release metadata, `.github/`, and security files — public repository infrastructure;
 - archived and historical material — point-in-time evidence that should not be rewritten merely to match later state.
 
@@ -18,7 +19,7 @@ Keep a change with the surface that owns it:
 1. Start from current `main` and identify the implementation, contract, evidence policy, or public document that owns the behavior.
 2. Reproduce an implementation defect at a named revision when possible before changing code.
 3. For state or storage changes, describe the relevant SQLite, JSONL, cache, archive, or transition identity and the expected invariant.
-4. For external-source or reliability claims, separate source identity, external risk, local observation, local incident evidence, and inference.
+4. For external-source or reliability claims, follow `governance/SOURCE_AUTHORITY.md`: separate source identity, revision, observation time, source time, lineage, claim scope, external risk, local observation, local incident evidence, and inference as applicable.
 5. Add or update proportionate tests for behavior changes.
 6. Keep unrelated cleanup out of the same pull request.
 
@@ -27,6 +28,7 @@ Keep a change with the surface that owns it:
 Do not collapse distinct evidence surfaces:
 
 ```text
+source identity != source truth
 external risk != local incident
 local preventive record != incident evidence
 transition declaration != transition execution
@@ -52,7 +54,7 @@ Do not report an unrun test, workflow, checker, or transition as passed.
 
 ## Data, archive, and provenance
 
-Follow `data/inputs/ARCHIVE_AND_HARVESTER.md` for repository-owned external-input lifecycle rules. Do not overwrite archived source bytes or remove provenance merely to simplify current state.
+Follow `governance/SOURCE_AUTHORITY.md` for repository-wide source identity, freshness, lineage, claim support, and conflict handling. Follow `data/inputs/ARCHIVE_AND_HARVESTER.md` for repository-owned external-input lifecycle rules. Do not overwrite archived source bytes or remove provenance merely to simplify current state.
 
 Third-party source material retains its own authorship and licensing. Repository ingestion does not convert external material into repository-owned evidence of truth.
 
