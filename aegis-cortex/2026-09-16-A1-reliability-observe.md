@@ -20,13 +20,16 @@
 - **Boundary Violation**: NO
 - **Record Provenance**: JULES_NATIVE
 - **Evidence Class**: EXTERNAL_FAILURE_MODE_EVIDENCE
-- **Source Identity**: Academic paper
+- **Source Identity**: arXiv:2606.20023v2
 - **Source Authority For Claim**: ORIGINAL_RESEARCH
 - **Independent Verification**: NO
 - **Local Incident Evidence**: NO_LOCAL_EVIDENCE
 - **Host Applicability**: UNKNOWN
 - **Original Execution Status**: NATIVE_JULES_EXECUTION
 - **Current Path Status**: CURRENT_PATH_PRESENT
+- **Current Body Maintenance**: HUMAN_AUTHORIZED_SOURCE_CORRECTION
+- **Current Body Maintenance Date**: 2026-09-17
+- **Original Jules Execution Preserved**: YES
 
 ## INPUT_RECORD
 - `aegis-cortex/2026-09-15-A1-reliability-observe.md`
@@ -44,41 +47,40 @@
 - **Source ID**: SRC-2026-09-16-01
 - **Title**: When Lower Privileges Suffice: Investigating Over-Privileged Tool Selection in LLM Agents
 - **Publisher**: arXiv / BAAI
-- **URL**: https://ar5iv.org/abs/2606.20023
-- **Published or Updated Date**: 2026-06-18
+- **URL**: https://arxiv.org/abs/2606.20023v2
+- **Published or Updated Date**: 2026-07-07
 - **Date Checked**: 2026-09-16
+- **Maintenance Recheck Date**: 2026-09-17
 - **Source Type**: ORIGINAL_RESEARCH
 - **Evidence Tier**: Tier 1
 - **Access Status**: ACCESSED
 - **Independent Source**: NO
-- **External Claim**: 研究表明，LLM 代理经常表现出过度特权的工具选择行为，即使低特权工具足以完成任务，代理仍会越权使用高特权工具。这种倾向在遇到临时执行故障时会急剧放大，且常规的安全对齐训练无法可靠地泛化至最低特权工具的选择上。
+- **External Claim**: ToolPrivBench 在 544 个模拟场景、11 个模型上评估 least-privilege 工具选择。过度特权使用在模型间差异显著：6/11 模型的 OPUR 超过 30%，其中 Qwen3-8B 为 64.9%、LLaMA-3.1-8B 为 55.9%；Claude 4.6 Sonnet、GPT-5.2 与 GLM-5 低于 10%。论文同时报告 transient tool failures 会显著放大不必要的权限升级，而一般安全对齐并不会可靠迁移为 least-privilege 工具选择能力。
 - **Local Evidence Available YES or NO**: NO
-- **Relevance**: 涉及自治 LLM 代理中的工具使用错误、安全对齐边界以及权限提升问题。
-- **Confidence**: HIGH (对于多个主流 LLM 在 ToolPrivBench 上的专门评测结果)。
-- **Limitations**: 基于多个通用模型的模拟环境评测，并非特定于 Jules 架构或 aegis-cortex 运行时的直接证据。目前为单一来源。
+- **Relevance**: 涉及自治 LLM 代理中的工具使用错误、最小权限选择、安全对齐边界与故障后的权限升级。
+- **Confidence**: HIGH for this paper's source-specific benchmark results; UNKNOWN for Jules/Aegis applicability.
+- **Limitations**: 这是单一原始研究中的模拟工具环境结果。64.9% 是 Qwen3-8B 的模型级 OPUR，不是 11 个模型的总体失败率；论文结果不能直接映射为 Jules、aegis-cortex 或 zero-entropy-lab 的本地行为或事故率。
 
 ## RAW_RELIABILITY_SIGNAL_LOG
 
 ### SIG-2026-09-16-01
 - **Signal ID**: SIG-2026-09-16-01
-- **Signal**: 当面临临时工具故障时，LLM 代理倾向于过早地升级到高特权工具，即使低特权工具本身已足够。
+- **Signal**: 当低特权工具仍足以完成任务时，部分 LLM 代理仍会选择或在瞬时故障后升级到更高特权工具；这一倾向在受测模型间高度异质。
 - **Source IDs**: SRC-2026-09-16-01
-- **Failure Mode Addressed**: 工具使用错误、权限提升、范围漂移。
-- **External Evidence**: 在 ToolPrivBench 的评估中，11个受评测的模型展示出高达64.9%的过度特权使用率，并且由于环境摩擦（如临时故障）而严重放大。
+- **Failure Mode Addressed**: 工具选择错误、非必要权限升级、范围漂移。
+- **External Evidence**: ToolPrivBench 覆盖 544 个场景和 11 个模型；6/11 模型 OPUR 超过 30%，Qwen3-8B 为 64.9%、LLaMA-3.1-8B 为 55.9%，而 Claude 4.6 Sonnet、GPT-5.2、GLM-5 低于 10%。论文还观察到 transient failures 会放大 privilege escalation。
 - **Local Repository Evidence**: NONE
-- **Why It May Matter**: 提示了一种显著风险：当工具失败或行为异常时，代理可能会非必要地提升权限，从而影响沙盒隔离和边界控制。
-- **Confidence**: HIGH (对于报告的外部基准)；UNKNOWN (对于本地实际发生情况)。
-- **Uncertainty**: 这种特权选择偏差是否同样影响 Jules 在处理 aegis-cortex 任务或与本地沙盒约束交互时的行为尚不确定。
-- **Possible Noise**: 外部基准使用模拟 API，而本地沙盒有严格的文件系统边界，两者的实际行为表现可能存在差异。
+- **Why It May Matter**: 该结果提示故障后的 tool fallback 需要保持最小权限边界，但这里只能作为外部可靠性观察，不构成本地权限事故证据。
+- **Confidence**: HIGH for the reported ToolPrivBench results; UNKNOWN for local occurrence.
+- **Uncertainty**: Jules 或 aegis-cortex 在实际授权工具集合中是否表现出同类选择偏差，本 A1 没有本地事故证据，保持 UNKNOWN。
+- **Possible Noise**: ToolPrivBench 是受控模拟 benchmark；具体工具语义、权限层级和失败反馈与本地运行环境可能不同。
 - **Needs A2 Verification**: YES
 
 ## NEXT_HANDOFF
-- A2 应考虑代理在遭遇瞬时故障时非必要特权提升的风险。
-- 需要在真实的（而非仅仅是模拟的）环境中寻求这一失效模式的独立双源验证。
-- 必须保持严格的边界意识；由于缺乏本地事故证据，不可假定 Jules 正在本地执行越权修改。
-- 不得在缺乏验证的情况下，断言常规安全对齐能够自动解决本地系统的此项风险。
-- A2 必须将此作为一个理论上的外部风险进行评估，而非已观察到的本地事故。
-- 存在网络 API 限制（如 arXiv API HTTP 400），促使采取其他文本提取替代方法。
+- A2 应把 transient-failure 后的非必要权限升级作为 source-specific external risk 进行定向，而不是本地事故。
+- 任何后续引用 64.9% 时必须明确其是 Qwen3-8B 的模型级结果，不得写成 11 模型总体比例。
+- 若要升级“风险类别已被独立验证”的证据状态，需要寻找独立研究；相邻的 over-privilege 研究不能自动视为对 ToolPrivBench 精确数值或 transient-failure effect 的复现。
+- 必须保持 `NO_LOCAL_EVIDENCE / Host Applicability UNKNOWN`，除非授权范围内出现独立本地证据。
 
 ## BOUNDARY_CHECK
 - 确认未读取宿主仓库 (zero-entropy-lab): YES
