@@ -26,6 +26,16 @@
 
 单独链接外部事件专题并说明其研究作用. Special 不替代 Daily, 不自动计 experiment.
 
+## 周期审计索引
+
+只索引已经真实存在的 derived audit 与覆盖窗口. Audit 增加 0 experiment, 0 independent execution window, 0 finding, 也不是 Daily research production 的前置条件.
+
+## 运行覆盖
+
+说明本周期实际覆盖的 state transition, interruption/replay, current permission, prior-effect evidence, historical authorization, current completion, dynamic membership, temporal evidence 与 verifier independence.
+
+未执行的真实系统路径保持 NOT_TESTED, 不从 fixture 推断已覆盖.
+
 ## Action-integrity surfaces
 
 按本周期真实研究覆盖总结.
@@ -86,6 +96,18 @@ Historical occurrence 不自动计 current completion.
 保留 UNKNOWN, UNVERIFIED, BLOCKED, DEGRADED, PARTIAL, false completion, duplicate effect, unauthorized effect 与 unverifiable historical order.
 
 这些都是研究结果, 不压缩成一个 FAIL.
+
+## 失效记录
+
+记录被新证据推翻的旧判断, invalidation date, replacement evidence 与 impact scope. 没有失效时明确写 `NONE`.
+
+## 稳定性与质量
+
+分别总结 valid completion, replay consistency, duplicate suppression, false completion, unauthorized effect, semantic independence 与 unresolved evidence gaps.
+
+## 有效速度
+
+只记录完成 producer, verifier, counterexample 与必要 cleanup 后的 validated elapsed 或无效 retry/ops. 不把减少验证当作提速.
 
 ## AGI-scale action-integrity synthesis
 
