@@ -4,26 +4,50 @@
 
 > **"Restraint is the ultimate form of digital violence."**
 
-A standard-library research laboratory for deterministic state, evidence, and edge-native execution.
+A standard-library research laboratory for deterministic state, evidence, reliability boundaries, and edge-native execution.
 
 ## Status
 
 The Python runtime uses the standard library and keeps generated state reproducible from explicit ledgers.
 
-Zero dependency is an implementation constraint. It is not a claim that inputs, network access, or generated results are automatically trusted.
+Zero dependency is an implementation constraint. It is not a claim that inputs, network access, external sources, local state, or generated results are automatically trusted.
 
 ## Architecture
 
-1. **Core (`src/kernel/`)**: SQLite-backed memory and deterministic state processing
-2. **Protocol (`src/kernel/protocol/`)**: Local protocol experiments and lifecycle commands
-3. **Portal (`index.html`)**: Independent presentation surface
-4. **Reasoning (`src/kernel/cognitive/`)**: Graph-based structural analysis
+1. **Core (`src/kernel/`)**: SQLite-backed memory and deterministic state processing.
+2. **Protocol (`src/kernel/protocol/`)**: Local protocol experiments, transition declarations, and lifecycle commands.
+3. **Sensory and data inputs (`src/kernel/sensory/`, `data/inputs/`)**: Explicit source profiles, bounded ingestion, and archive handling.
+4. **Reasoning (`src/kernel/cognitive/`)**: Graph-based structural analysis and local heuristics.
+5. **Portal (`index.html`)**: Independent presentation surface.
+
+## Research and Evidence Surfaces
+
+The repository separates implementation, external-source evidence, local state, and research interpretation.
+
+- [`aegis-cortex/README.md`](./aegis-cortex/README.md) is the durable guide to the Aegis reliability/evidence research surface and separates its long-lived policy from time-scoped A1–A6 artifacts.
+- [`aegis-cortex/EVIDENCE_POLICY.md`](./aegis-cortex/EVIDENCE_POLICY.md) defines the current reliability-evidence vocabulary and the boundary between external risk, local preventive records, local incidents, execution evidence, and unresolved state.
+- [`data/inputs/ARCHIVE_AND_HARVESTER.md`](./data/inputs/ARCHIVE_AND_HARVESTER.md) defines current snapshot, archive, ledger, cache, and ingestion semantics for repository-owned external inputs.
+- [`SECURITY.md`](./SECURITY.md) defines the private security-reporting route and supported disclosure boundary.
+- [`RELEASE_POLICY.md`](./RELEASE_POLICY.md), [`CITATION.cff`](./CITATION.cff), and [`codemeta.json`](./codemeta.json) describe the public software publication and citation surface.
+
+Keep these distinctions explicit:
+
+```text
+external risk != local incident
+transition declaration != transition execution
+hash or HMAC result != source truth or authorization
+checker success != semantic validation
+repository publication != runtime reproduction
+archived publication != later main revision
+```
 
 ## Verification
 
 ```bash
 python tests/run_tests.py
 ```
+
+A passing run is evidence for the tested revision, interpreter, environment, and fixtures. It is not a universal reliability or security proof. Record the exact revision and environment when a result is used as reproducibility evidence.
 
 ## Optional Local Server
 
@@ -46,6 +70,7 @@ A non-loopback bind requires explicit operator opt-in. Do not expose the native 
 - Rate limiting is not authentication.
 - SHA-256 fingerprints prove content identity, not authorship or authorization.
 - Generated graph state must remain reproducible from validated ledgers.
+- Local heuristic labels do not establish semantic truth or production guarantees.
 - Security reports follow the private process in [SECURITY.md](./SECURITY.md).
 
 ## External Synchronization
@@ -55,6 +80,12 @@ External documents are synchronized by `src/kernel/sensory/harvester.py` from ex
 Historical inputs remain byte-preserved under `data/inputs/archive/legacy-through-2026-07-11-1340`.
 
 See `data/inputs/ARCHIVE_AND_HARVESTER.md` for the archive contract.
+
+## Citation and Publication Identity
+
+The DOI above identifies an archived Zero-Entropy Lab software publication. Use an exact Git revision in addition to the DOI when a result depends on a specific implementation state.
+
+A DOI is a stable publication identifier. It does not by itself establish scientific validity, local incident evidence, execution success, semantic equivalence with later `main`, or independent reproduction.
 
 ---
 © Zero-Entropy Lab | Built for the Edge, Built for the Future

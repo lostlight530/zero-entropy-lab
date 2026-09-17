@@ -4,6 +4,8 @@
   "name": "Zero-Entropy Lab",
   "description": "A standard-library research laboratory for deterministic state, explicit evidence handling, reproducible ledgers, and edge-native execution with bounded trust and security assumptions.",
   "codeRepository": "https://github.com/lostlight530/zero-entropy-lab",
+  "identifier": "https://doi.org/10.5281/zenodo.22791081",
+  "datePublished": "2026-09-16",
   "license": "https://spdx.org/licenses/MIT.html",
   "author": {
     "@type": "Person",
