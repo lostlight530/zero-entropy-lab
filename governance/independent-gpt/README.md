@@ -1,14 +1,14 @@
 # Independent GPT Governance — Aegis Blackbox
 
 Status: current public recovery kernel  
-Calibration: 2026-09-17  
+Calibration: 2026-09-18  
 Scope: repository-local maintenance recovery, independent review handoff, reconciliation, and bounded repair
 
 This directory is the public handoff point for a memoryless Independent GPT reviewer. It provides enough structure to recover repository truth from repository-visible evidence without duplicating native producer instructions or exposing private operator context.
 
 ## Recovery order
 
-Recover current state from current merged `main` before using historical narrative. For the maintenance subject under review, prefer current implementation and the current subject-specific contract or policy. Treat dated maintenance/audit records, handoffs, and prior model recollection as point-in-time or secondary recovery evidence.
+Recover current state from current merged `main` before using historical narrative. For the maintenance subject under review, prefer current implementation and the current subject-specific contract or policy. Apply `../SOURCE_AUTHORITY.md` when source identity, revision, freshness, lineage, claim scope, or conflicting evidence is material. Treat dated maintenance/audit records, handoffs, and prior model recollection as point-in-time or secondary recovery evidence.
 
 At start record current date, default branch, exact `main` SHA, relevant open pull requests, active maintenance branches, recent merged changes, and checks actually executed.
 
@@ -17,13 +17,14 @@ At start record current date, default branch, exact `main` SHA, relevant open pu
 Use only the surfaces needed for the question:
 
 1. `README.md`, current source, data, tests, and public files for the present repository surface when relevant.
-2. `aegis-cortex/EVIDENCE_POLICY.md` for Aegis reliability and evidence semantics.
-3. Current dated `aegis-cortex/` artifacts for repository-visible Aegis output.
-4. `ballast/README.md` and `ballast/METHOD.md` for Ballast research-production semantics; Ballast records/CASES/NOTES remain Ballast evidence, not Aegis evidence.
-5. `governance/README.md` for repository-level maintenance/control routing.
-6. `.github/workflows/` plus revision-matched observed workflow runs for GitHub Actions evidence.
-7. `historical-audits/INDEX.md` for corrections, period audits, closure ledgers, maintenance, and reconciliation history.
-8. Git history and open/merged PR chronology when source identity, producer identity, timing, original path, overlap, or historical/current state is disputed.
+2. `governance/SOURCE_AUTHORITY.md` for repository-wide source identity, revision binding, freshness, lineage, claim-support, negative-evidence, and conflict semantics.
+3. `aegis-cortex/EVIDENCE_POLICY.md` for Aegis reliability and evidence semantics.
+4. Current dated `aegis-cortex/` artifacts for repository-visible Aegis output.
+5. `ballast/README.md` and `ballast/METHOD.md` for Ballast research-production semantics; Ballast records/CASES/NOTES remain Ballast evidence, not Aegis evidence.
+6. `governance/README.md` for repository-level maintenance/control routing.
+7. `.github/workflows/` plus revision-matched observed workflow runs for GitHub Actions evidence.
+8. `historical-audits/INDEX.md` for corrections, period audits, closure ledgers, maintenance, and reconciliation history.
+9. Git history and open/merged PR chronology when source identity, producer identity, timing, original path, overlap, or historical/current state is disputed.
 
 ## Task identity and idempotency
 
@@ -105,6 +106,7 @@ A durable handoff should make it possible to recover:
 - maintenance scope and owning files;
 - relevant logical period if any;
 - overlapping PR/branch state;
+- material source identities/revisions and unresolved lineage/freshness questions;
 - checks actually run and checks not run;
 - confirmed defect or `NO_CHANGE_REQUIRED` basis;
 - unresolved items and negative evidence;
