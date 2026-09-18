@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-09-17 timestamp accuracy 重叠与历史事件排序边界](records/2026-09-17.md)
+- 最新 Daily: [2026-09-19 nested delegation history 与 current token authority 双向围栏](records/2026-09-19.md)
 - 当前月度事实源: [2026-09](records/2026-09.md)
 - 当前方法: [METHOD.md](METHOD.md)
 - 控制案例: [CASES.md](CASES.md)
@@ -37,7 +37,11 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 - Daily template: [templates/daily.md](templates/daily.md)
 - Monthly template: [templates/monthly.md](templates/monthly.md)
 
-截至 2026-09-17, 9 月共有 17 个 Daily files, 其中 16 个 NATIVE research units, 1 个透明 RECONSTRUCTION gap. 9 月 8 日不计独立实验或 execution window.
+截至 2026-09-19, 9 月共有 19 个 Daily files, 其中 18 个 NATIVE research units, 1 个透明 RECONSTRUCTION gap. 9 月 8 日继续不计独立实验或 execution window.
+
+> Maintenance annotation — 2026-09-19
+>
+> 当前入口已校准到 main 中真实存在的 2026-09-19 Daily. 下方 `2026-09-17 action-integrity surfaces` 保留为当时阶段快照; 2026-09-18 与 2026-09-19 的 delegated-authority 增量以月度事实源和对应 Daily 为准. 本批注不回写历史 Daily, 也不改变 2026-09-08 的 `RECONSTRUCTION / NOT_RUN / UNVERIFIED`.
 
 ## 2026-09-17 action-integrity surfaces
 
