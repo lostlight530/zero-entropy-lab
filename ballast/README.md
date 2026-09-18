@@ -41,7 +41,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 > Maintenance annotation — 2026-09-19
 >
-> 当前入口已校准到 main 中真实存在的 2026-09-19 Daily. 下方 `2026-09-17 action-integrity surfaces` 保留为当时阶段快照; 2026-09-18 与 2026-09-19 的 delegated-authority 增量以月度事实源和对应 Daily 为准. 本批注不回写历史 Daily, 也不改变 2026-09-08 的 `RECONSTRUCTION / NOT_RUN / UNVERIFIED`.
+> 当前入口已校准到 main 中真实存在的 2026-09-19 Daily. 2026-09-01 至 2026-09-18 的 retrospective maintenance second pass 已记录在月度事实源: 历史 Daily 保留各自 point-in-time provenance 与当时 schema, 不按 2026-09-18 之后模板追溯补栏. 下方 `2026-09-17 action-integrity surfaces` 继续作为当时阶段快照; 2026-09-19 属于 current state, 不属于本次 9/1–9/18 回顾窗口. 2026-09-08 的 `RECONSTRUCTION / NOT_RUN / UNVERIFIED` 保持不变.
 
 ## 2026-09-17 action-integrity surfaces
 
