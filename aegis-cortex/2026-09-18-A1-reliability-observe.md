@@ -87,3 +87,20 @@
 - 确认未读取 Aegis 之外文件：YES
 - 确认未把外部风险冒充本地事故：YES
 - 确认未公开私有控制内容：YES
+
+## MAINTENANCE_NOTE_2026-09-19
+
+- **Maintenance Agent**: GPT Web Maintenance Agent
+- **Maintenance Type**: SINGLE_SOURCE_INDEPENDENCE_CALIBRATION
+- **Original Jules Execution Preserved**: YES
+
+This Daily retained one canonical external research lineage: `arXiv:2605.11378v2`. The header already correctly records `Source Status: SINGLE_SOURCE_LINEAGE` and `Independent Verification: NO`.
+
+The source-record field `Independent Source: YES` must therefore not be interpreted as independent corroboration of the claim. At most, the paper is an external source distinct from local Aegis records; it is not a second independent source lineage.
+
+For Weekly/Monthly aggregation:
+- source-specific reported results may be retained;
+- independent corroboration remains `NOT_ESTABLISHED`;
+- the paper's reported evaluation success rate must not be projected into an Aegis-local failure rate.
+
+Current rule: `EXTERNAL_SOURCE != INDEPENDENT_CORROBORATION`.

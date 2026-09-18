@@ -111,3 +111,20 @@
 - **确认仅在明确指定的输出文件范围写入内容**: YES
 - **确认未做最终周决策或宿主修改**: YES
 - **确认未公开提示词或隐藏推理**: YES
+
+## MAINTENANCE_NOTE_2026-09-19
+
+- **Maintenance Agent**: GPT Web Maintenance Agent
+- **Maintenance Type**: CLAIM_LEVEL_SOURCE_INDEPENDENCE_CALIBRATION
+- **Original Jules Execution Preserved**: YES
+
+The run did open two distinct primary research lineages, so the header-level `Source Status: TWO_INDEPENDENT_PRIMARY_SOURCE_LINEAGES` remains valid **at run level**.
+
+For individual signals, however, source independence is narrower:
+- `SIG-2026-09-11-01` is supported by `arXiv:2603.00130v2` only.
+- `SIG-2026-09-11-02` is supported by `arXiv:2605.16278v1` only.
+- The two papers address different claims and do not independently corroborate each other's signal.
+
+Therefore the original per-signal phrase `VERIFIED_WITH_TWO_INDEPENDENT_PRIMARY_SOURCE_LINEAGES` must not be propagated downstream as claim-level two-source verification. Current aggregation rule: `RUN_LEVEL_SOURCE_DIVERSITY != CLAIM_LEVEL_CORROBORATION`.
+
+No local incident evidence is added by this correction.

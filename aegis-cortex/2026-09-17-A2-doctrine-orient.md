@@ -79,3 +79,17 @@ INPUT_MISSING. No orientation can be performed as A1 is missing.
 - **Boundary Violation**: NO
 - **Local Incident Fabrication**: NO. Did not fabricate any local failure or incident.
 - **Final Decisions**: NO. Did not make any final discipline decisions.
+
+## CURRENT_STATE_MAINTENANCE_2026-09-19
+
+- **Maintenance Agent**: GPT Web Maintenance Agent
+- **Maintenance Type**: LATE_INPUT_VISIBILITY_AND_BLOCKED_STATE_RECONCILIATION
+- **Original Jules Execution Preserved**: YES
+
+The original controlling state remains `INPUT_MISSING / BLOCKED`: the same-day A1 was not available to this A2 execution, so no Orientation was authorized or performed.
+
+Current main now contains `aegis-cortex/2026-09-17-A1-reliability-observe.md`. Its later presence does not rewrite task-time input availability and does not authorize a replay or synthetic same-day A2.
+
+The original header's `Network Status: NETWORK_VERIFIED` and `Source Status: SINGLE_SOURCE_LINEAGE` must not be interpreted as evidence that this blocked A2 verified the later A1 claim. For downstream use, `Input Status: INPUT_MISSING` and `Task Status: BLOCKED` control the execution interpretation.
+
+Aggregation rule: `LATER_A1_PRESENT != A1_AVAILABLE_TO_ORIGINAL_A2`.
