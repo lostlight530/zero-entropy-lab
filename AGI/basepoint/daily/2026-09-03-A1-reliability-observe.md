@@ -202,3 +202,14 @@ Origin Continuity: PRESERVED
 - External source identities and their reported risks are retained at the exact-paper level.
 - Local preventive records show prior defensive attention only; they do not establish false completion or memory-poisoning incidents.
 - Claim support must follow the exact source that actually addresses that claim.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: SOURCE_IDENTITY_SCOPED
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Exact source identity remains required; a related discovery does not become corroboration for a different claim.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.
