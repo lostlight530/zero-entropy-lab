@@ -31,6 +31,8 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 - 最新 Daily: [2026-09-20 sender-constrained token 与 request proof replay freshness](records/2026-09-20.md)
 - 当前月度事实源: [2026-09](records/2026-09.md)
+- 最新完整周期审计: [2026-09-13 至 2026-09-19](audits/2026-09-13--2026-09-19.md)
+- 当前未闭合周期: 2026-09-20 起, 当前 1 日覆盖, 未达到 6/7 日 audit 边界
 - 当前方法: [METHOD.md](METHOD.md)
 - 控制案例: [CASES.md](CASES.md)
 - 长期发现: [NOTES.md](NOTES.md)
