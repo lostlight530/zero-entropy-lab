@@ -45,3 +45,10 @@ As of 2026-09-15, `05-maintenance-and-reconciliation/2026-09-15--sep-14-15--main
 Current Aegis production authority remains with the active Aegis contracts and policies, including `aegis-cortex/EVIDENCE_POLICY.md`, together with the current Aegis production artifacts. No current file should be inferred at `aegis-cortex/2026-09-15-daily-maintenance-reconciliation.md`.
 
 The old paths remain recoverable through Git history. Empty archive classes are intentionally left empty rather than populated with unrelated Agent artifacts. This archive is historical storage, not current task or maintenance authority.
+
+
+## Successor maintenance records
+
+- `05-maintenance-and-reconciliation/2026-09-19--sep-19--maintenance-reconciliation.md` — 2026-09-19 live Jules dependency-visibility and optimistic-lock reconciliation
+
+As of 2026-09-19 this is the latest completed independent maintenance record preserved in the archive. Current Aegis contracts and current repository evidence remain higher authority than this historical maintenance record.
