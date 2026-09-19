@@ -166,3 +166,14 @@ Origin Continuity: PRESERVED
 - This weekly decision surface is a later maintenance recovery and must retain its producer/provenance distinction.
 - It may consolidate current source/local boundaries without rewriting the native cadence history.
 - No external risk becomes a local incident through weekly compression.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: PERIODIC_RECOVERY
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Recovery/reconciliation provenance remains explicit and does not rewrite the original weekly execution.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

@@ -142,3 +142,14 @@ Origin Continuity: PRESERVED
 - The original A4 dependency failure remains historical fact; later reconciled actions do not create a native successful A3→A4 chain in retrospect.
 - Current guardrails may be used prospectively only.
 - External risks remain watch categories unless local evidence establishes an incident.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: ORIGINAL_BLOCKED_WITH_LATER_GUIDANCE
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Recovery/reconciliation provenance remains explicit and does not rewrite the original weekly execution.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.
