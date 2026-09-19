@@ -112,3 +112,12 @@
 - **Related Delivery**: PR #417 merged
 
 PR #417 已完成合并，因此 `Current Path Status` 从 pre-merge 的 `PRESENT_ON_PR_BRANCH` 更新为当前事实 `PRESENT`。本修正只更新 delivery/current-path 状态；Jules 原始 `COMPLETED_NATIVE`、单一来源证据边界与本地适用性未知均保持不变。
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: SINGLE_LINEAGE_EXTERNAL_RISK
+Origin Continuity: PRESERVED
+
+- The external paper supports its own stated risk/method/evaluation only; local applicability remains unknown.
+- A later current-path update does not alter the original producer or evidence scope.
+- One paper lineage is not independent corroboration.

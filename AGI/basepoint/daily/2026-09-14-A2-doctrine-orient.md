@@ -85,3 +85,12 @@
 - 确认外部的一般性风险未被写成 Aegis 已发生的系统漏洞: YES
 - 确认不将无证据外部理论变成系统必然要有的机制: YES
 - 确认所有本地比较只来自允许读取的 Aegis 记录: YES
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: ORIENTATION_SCOPED
+Origin Continuity: PRESERVED
+
+- A2 interpretation does not create additional source independence by reusing A1 evidence.
+- Preventive/local documentary records remain distinct from actual local incident/runtime evidence.
+- Downstream use must preserve source identity, access depth, and local-applicability boundaries.

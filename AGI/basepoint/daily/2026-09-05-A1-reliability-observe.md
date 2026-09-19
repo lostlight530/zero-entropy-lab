@@ -131,3 +131,12 @@
 - 确认未读取 GitHub Actions 配置文件或旧 Nexus 文件。
 - 确认未把外部理论风险声明为已经发生的本地事实。
 - 确认未公开私有控制面内容。
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: EXTERNAL_RISK_SCOPED
+Origin Continuity: PRESERVED
+
+- The file is retained as external failure-mode/risk evidence at the access depth actually recorded.
+- `NO_LOCAL_EVIDENCE` prevents promotion into a zero-entropy-lab incident claim.
+- Source independence is claim-specific; a run or source category does not automatically create corroboration.

@@ -93,3 +93,12 @@ Current main now contains `aegis-cortex/2026-09-17-A1-reliability-observe.md`. I
 The original header's `Network Status: NETWORK_VERIFIED` and `Source Status: SINGLE_SOURCE_LINEAGE` must not be interpreted as evidence that this blocked A2 verified the later A1 claim. For downstream use, `Input Status: INPUT_MISSING` and `Task Status: BLOCKED` control the execution interpretation.
 
 Aggregation rule: `LATER_A1_PRESENT != A1_AVAILABLE_TO_ORIGINAL_A2`.
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: TASK_TIME_BLOCKED
+Origin Continuity: PRESERVED
+
+- The controlling execution state is `INPUT_MISSING / BLOCKED`; auxiliary network/source header values do not override that state.
+- The later A1 path on main does not prove availability to the original A2 run and does not authorize a synthetic replay.
+- Carry forward: `LATER_A1_PRESENT != A1_AVAILABLE_TO_ORIGINAL_A2`.

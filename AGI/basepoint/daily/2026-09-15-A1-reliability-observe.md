@@ -84,3 +84,12 @@
 - External findings clearly marked as external (NO_LOCAL_EVIDENCE): YES
 - No private control plane memory disclosed: YES
 - No Github Actions inspected: YES
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: SINGLE_LINEAGE_EXTERNAL_RISK
+Origin Continuity: PRESERVED
+
+- The risk is supported by one canonical external research lineage.
+- Repeated access in A2 does not add corroboration.
+- No local decision-drift incident is established.

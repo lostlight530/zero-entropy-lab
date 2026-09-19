@@ -102,3 +102,12 @@
 - 确认未读取宿主仓库代码 (src/**)、文档 (docs/**) 或 GitHub Actions 配置。
 - 确认未制造本地故障。
 - 确认未做最终决策，未建议或实施宿主修改。
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: ORIENTATION_SCOPED
+Origin Continuity: PRESERVED
+
+- A2 interpretation does not add source independence merely by reopening or restating A1 material.
+- Local preventive/architecture records are not local incident evidence unless a separate local runtime record establishes an incident.
+- Downstream compression must preserve external-risk, local-applicability and access-depth boundaries.

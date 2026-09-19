@@ -176,3 +176,12 @@ Decision ID: DEC-W36-03
 - External risk declared local incident: NO
 - Long-term doctrine directly upgraded: NO
 - Boundary violation: NO
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: LATER_WEEKLY_RECONCILIATION
+Origin Continuity: PRESERVED
+
+- The weekly discipline may guide current interpretation while preserving the historical cadence/input record.
+- Run-level diversity, claim-level corroboration, access depth, and local-incident state remain separate dimensions.
+- Missing task-time input must stay a valid historical state.

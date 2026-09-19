@@ -115,3 +115,12 @@
 - 确认未越界：仅读取了 `aegis-cortex/**` 目录，并将结果输出到了准确的 `aegis-cortex/2026-09-05-A2-doctrine-orient.md`。未检查 `.github`，`src`，`docs` 等宿主文件。
 - 确认未制造本地故障：对于没有本地 Aegis 证据的风险，只记录了外部建议并声明 `NO_LOCAL_EVIDENCE`。
 - 确认未做最终决策：当前操作仅为 Orient 分析阶段，不改变现有长期纪律或 A4 协议约束。
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: ORIENTATION_SCOPED
+Origin Continuity: PRESERVED
+
+- A2 interpretation does not add source independence merely by reopening or restating A1 material.
+- Local preventive/architecture records are not local incident evidence unless a separate local runtime record establishes an incident.
+- Downstream compression must preserve external-risk, local-applicability and access-depth boundaries.

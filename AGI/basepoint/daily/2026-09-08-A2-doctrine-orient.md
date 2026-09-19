@@ -85,3 +85,12 @@
 - 确认未越界访问 `zero-entropy-lab` 其他内容（宿主仓库及其他未授权文档未读取）。
 - 确认未制造本地故障或捏造事实（已明确标注 `NO_LOCAL_EVIDENCE`）。
 - 确认未做最终纪律决策或采取行动修改。
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: SAME_LINEAGE_ORIENTATION
+Origin Continuity: PRESERVED
+
+- The A1/A2 pair remains external-risk evidence with no local incident established.
+- Reopening/restating the same primary lineage does not create independent corroboration.
+- Repeated memory-risk themes across dates are thematic continuity, not automatically new source independence.

@@ -105,3 +105,12 @@
 - External risk converted into local incident: NO
 - September month closure claimed: NO
 - Boundary violation: NO
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: PERIODIC_RECOVERY
+Origin Continuity: PRESERVED
+
+- This A4 is a later maintenance recovery and remains distinct from the original closed-unmerged Jules attempt.
+- Prospective actions do not rewrite original task-time BLOCKED history.
+- September month closure is not implied.

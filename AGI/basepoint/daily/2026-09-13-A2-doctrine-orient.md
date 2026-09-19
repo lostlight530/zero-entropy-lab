@@ -77,3 +77,12 @@
 - Local incident fabricated: NO
 - Final weekly decision made: NO
 - Host repo implementation read: NO
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: NAMED_PRODUCT_BOUNDARY
+Origin Continuity: PRESERVED
+
+- A2 may use the named GitHub product facts as comparative external evidence only.
+- Vendor/product limits are not local Aegis incidents or Jules execution constraints without separate local evidence.
+- Same-product documentation does not add source independence.

@@ -104,3 +104,12 @@ For Weekly/Monthly aggregation:
 - the paper's reported evaluation success rate must not be projected into an Aegis-local failure rate.
 
 Current rule: `EXTERNAL_SOURCE != INDEPENDENT_CORROBORATION`.
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: SINGLE_SOURCE_INDEPENDENCE_LIMIT
+Origin Continuity: PRESERVED
+
+- The external paper is distinct from local Aegis records but is not a second independent corroborating lineage.
+- `Independent Source: YES` must therefore not be read as claim-level independent corroboration.
+- External evaluation results must not be projected into Aegis-local failure rates.

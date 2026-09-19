@@ -118,3 +118,12 @@ Correction Agent: Codex
 Correction Log: 2026-09-02-maintenance-log.md
 
 本次读取 [论文全文第 3.1 节](https://arxiv.org/html/2608.26218v1#S3.SS1) 进行校准. 论文报告组合干预收益,不识别单项截断规则的独立因果效应. 原记录末尾仅记录 API 摘要访问,不冒认原执行已读全文.
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: CALIBRATED_CAUSAL_SCOPE
+Origin Continuity: PRESERVED
+
+- The external paper supports its reported combined intervention/evaluation; it does not isolate the independent causal effect of a single truncation rule.
+- Local records remain preventive/context evidence, not proof that the studied failure occurred in Aegis.
+- Carry forward: `EXTERNAL_REPORTED_EFFECT != LOCAL_INCIDENT != ISOLATED_CAUSAL_EFFECT`.

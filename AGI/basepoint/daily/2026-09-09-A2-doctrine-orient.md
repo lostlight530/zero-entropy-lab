@@ -86,3 +86,12 @@
 - **确认未越界**: YES。仅修改 `aegis-cortex/2026-09-09-A2-doctrine-orient.md`。
 - **确认未制造本地故障**: YES。明确区分了外部风险研究与本地 Aegis 的执行现状。
 - **确认未做最终决策**: YES。遵守 Orient 阶段的纪律。
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: ORIENTATION_SCOPED
+Origin Continuity: PRESERVED
+
+- A2 interpretation does not create additional source independence by reusing A1 evidence.
+- Preventive/local documentary records remain distinct from actual local incident/runtime evidence.
+- Downstream use must preserve source identity, access depth, and local-applicability boundaries.

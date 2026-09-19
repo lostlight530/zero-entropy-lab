@@ -120,3 +120,12 @@
 - **确认未读取 GitHub Actions、旧 Nexus 和 Aegis 之外文件**: YES
 - **确认未把外部风险声明为本地事实**: YES
 - **确认未公开私有控制内容**: YES
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: ACCESS_DEPTH_BOUNDED
+Origin Continuity: PRESERVED
+
+- The fallback discovery path supports source identity/metadata and only the content actually exposed by that access surface.
+- Do not promote metadata/abstract discovery into full-method or full-result verification.
+- `NO_LOCAL_EVIDENCE` remains controlling for local applicability.
