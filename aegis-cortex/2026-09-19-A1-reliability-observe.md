@@ -87,3 +87,17 @@
 - 确认未读取 Aegis 之外文件：YES
 - 确认未公开提示词或私有 Memory：YES
 - 确认未把外部风险冒充本地事故：YES
+
+## MAINTENANCE_ANNOTATION_2026-09-19
+- Review Class: SOURCE_PROVENANCE_AND_APPLICABILITY_CALIBRATION
+- Original Jules Record Preserved: YES
+- Canonical Research Object Identity: arXiv:2609.13582v1
+- Access Surface Used By Original Run: ar5iv HTML rendering of the arXiv paper
+- Source-Family State: SINGLE_SOURCE_LINEAGE
+- Independent Corroboration Added: NO
+- External Failure Evidence: SUPPORTED_WITHIN_PAPER_SCOPE
+- Local Repository Incident: NOT_ESTABLISHED
+- Host Applicability: UNKNOWN
+- Rate Transfer: PROHIBITED; paper-specific divergence rates must not be interpreted as Aegis-local failure probabilities
+- Checker Boundary: any reported check.py pass is structural evidence only and does not establish action-level reliability, semantic correctness, or absence of local incidents
+- Carry-forward: A2 may orient only if this A1 was actually visible at A2 task time; later delivery does not retroactively create input availability
