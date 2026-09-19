@@ -124,3 +124,14 @@ Origin Continuity: PRESERVED
 - A2 interpretation does not add source independence merely by reopening or restating A1 material.
 - Local preventive/architecture records are not local incident evidence unless a separate local runtime record establishes an incident.
 - Downstream compression must preserve external-risk, local-applicability and access-depth boundaries.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: ORIENTATION_SCOPED
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- External risk/product evidence remains separate from any local incident, local rate, or local capability claim.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

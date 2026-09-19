@@ -129,3 +129,14 @@ Origin Continuity: PRESERVED
 - The fallback discovery path supports source identity/metadata and only the content actually exposed by that access surface.
 - Do not promote metadata/abstract discovery into full-method or full-result verification.
 - `NO_LOCAL_EVIDENCE` remains controlling for local applicability.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: ACCESS_DEPTH_BOUNDED
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Access depth remains controlling; metadata, abstract, or index visibility is not promoted to full-text verification.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

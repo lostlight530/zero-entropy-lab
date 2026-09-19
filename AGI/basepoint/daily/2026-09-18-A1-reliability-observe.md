@@ -113,3 +113,14 @@ Origin Continuity: PRESERVED
 - The external paper is distinct from local Aegis records but is not a second independent corroborating lineage.
 - `Independent Source: YES` must therefore not be read as claim-level independent corroboration.
 - External evaluation results must not be projected into Aegis-local failure rates.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: SINGLE_SOURCE_INDEPENDENCE_LIMIT
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- A single or repeated lineage does not become independent corroboration.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

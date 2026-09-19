@@ -100,3 +100,14 @@ Origin Continuity: PRESERVED
 - The file already encodes the correct rule: run-level two lineages, each signal one primary lineage.
 - That distinction is preserved as the controlling interpretation.
 - No host/local incident inference follows.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: CLAIM_LEVEL_MAPPING_STABLE
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Run-level source diversity is kept separate from claim-level corroboration; claim-to-source mapping remains controlling.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

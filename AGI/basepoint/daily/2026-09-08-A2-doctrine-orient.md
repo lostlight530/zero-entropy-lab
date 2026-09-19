@@ -94,3 +94,14 @@ Origin Continuity: PRESERVED
 - The A1/A2 pair remains external-risk evidence with no local incident established.
 - Reopening/restating the same primary lineage does not create independent corroboration.
 - Repeated memory-risk themes across dates are thematic continuity, not automatically new source independence.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: SAME_LINEAGE_ORIENTATION
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- A single or repeated lineage does not become independent corroboration.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

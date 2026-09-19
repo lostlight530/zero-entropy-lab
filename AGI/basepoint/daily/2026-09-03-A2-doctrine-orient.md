@@ -129,3 +129,14 @@ Origin Continuity: PRESERVED
 - The existing source-identity reconciliation controls downstream use: related Crossref hits are not exact corroboration of the A1 papers.
 - Access remains discovery/metadata-level where full source content was not opened.
 - Preventive records remain distinct from local incident evidence.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: RELATED_DISCOVERY_NOT_EXACT_CORROBORATION
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Exact source identity remains required; a related discovery does not become corroboration for a different claim.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

@@ -127,3 +127,14 @@ Origin Continuity: PRESERVED
 - The external paper supports its reported combined intervention/evaluation; it does not isolate the independent causal effect of a single truncation rule.
 - Local records remain preventive/context evidence, not proof that the studied failure occurred in Aegis.
 - Carry forward: `EXTERNAL_REPORTED_EFFECT != LOCAL_INCIDENT != ISOLATED_CAUSAL_EFFECT`.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: CALIBRATED_CAUSAL_SCOPE
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- External risk/product evidence remains separate from any local incident, local rate, or local capability claim.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

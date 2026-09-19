@@ -110,3 +110,14 @@ Origin Continuity: PRESERVED
 - The observed evidence remains external and bounded to the exact source/method/results actually read.
 - Source-count interpretation is claim-specific rather than inferred from the run as a whole.
 - `NO_LOCAL_EVIDENCE` prevents promotion into a local incident or local failure rate.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: EXTERNAL_RISK_SCOPED
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- External risk/product evidence remains separate from any local incident, local rate, or local capability claim.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.
