@@ -96,3 +96,14 @@ Origin Continuity: PRESERVED
 - The reported ToolPrivBench result is evidence about the paper's evaluated system, not about Aegis-local behavior.
 - ar5iv is an access surface while the canonical identity remains the arXiv paper; reopening it does not add source independence.
 - Carry forward: `EXTERNAL_BENCHMARK_RESULT != LOCAL_FAILURE_RATE`.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: SINGLE_LINEAGE_ORIENTATION
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- A single or repeated lineage does not become independent corroboration.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.
