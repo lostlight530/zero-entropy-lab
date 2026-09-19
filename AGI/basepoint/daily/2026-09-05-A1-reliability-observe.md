@@ -140,3 +140,14 @@ Origin Continuity: PRESERVED
 - The file is retained as external failure-mode/risk evidence at the access depth actually recorded.
 - `NO_LOCAL_EVIDENCE` prevents promotion into a zero-entropy-lab incident claim.
 - Source independence is claim-specific; a run or source category does not automatically create corroboration.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: EXTERNAL_RISK_SCOPED
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- External risk/product evidence remains separate from any local incident, local rate, or local capability claim.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.
