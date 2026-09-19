@@ -137,3 +137,14 @@ Origin Continuity: PRESERVED
 - The existing maintenance note is controlling: each signal has one primary lineage even though the run contains two independent papers.
 - Downstream aggregation must use `RUN_LEVEL_SOURCE_DIVERSITY != CLAIM_LEVEL_CORROBORATION`.
 - No local incident evidence is added.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: CLAIM_LEVEL_INDEPENDENCE_CALIBRATED
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Run-level source diversity is kept separate from claim-level corroboration; claim-to-source mapping remains controlling.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

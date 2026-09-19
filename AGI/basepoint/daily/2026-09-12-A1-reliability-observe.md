@@ -126,3 +126,14 @@ Origin Continuity: PRESERVED
 - Retain the two distinct external lineages at run level while keeping claim-to-source mapping explicit.
 - Two papers in one run do not make every claim independently corroborated.
 - External risk remains separate from local Aegis state.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: RUN_LEVEL_MULTI_SOURCE
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Run-level source diversity is kept separate from claim-level corroboration; claim-to-source mapping remains controlling.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

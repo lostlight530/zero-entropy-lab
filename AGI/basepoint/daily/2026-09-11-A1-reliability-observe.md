@@ -126,3 +126,14 @@ Origin Continuity: PRESERVED
 - Two external papers are distinct lineages at run level, but their separate claims remain separately sourced.
 - Do not interpret the presence of two papers as two-source verification of each individual signal.
 - Local incident evidence remains absent.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: RUN_LEVEL_MULTI_SOURCE
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Run-level source diversity is kept separate from claim-level corroboration; claim-to-source mapping remains controlling.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.
