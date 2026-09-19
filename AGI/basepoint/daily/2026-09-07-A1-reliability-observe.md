@@ -121,3 +121,14 @@ Origin Continuity: PRESERVED
 - The external paper supports its own stated risk/method/evaluation only; local applicability remains unknown.
 - A later current-path update does not alter the original producer or evidence scope.
 - One paper lineage is not independent corroboration.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: SINGLE_LINEAGE_EXTERNAL_RISK
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- A single or repeated lineage does not become independent corroboration.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

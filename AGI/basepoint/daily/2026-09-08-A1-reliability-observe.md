@@ -92,3 +92,14 @@ Origin Continuity: PRESERVED
 - The observed risk remains external and supported by one primary lineage.
 - `Independent Source: NO` is controlling for corroboration count.
 - No local incident or local failure rate is implied.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: SINGLE_LINEAGE_EXTERNAL_RISK
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- A single or repeated lineage does not become independent corroboration.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.
