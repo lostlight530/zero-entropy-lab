@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-09-19 nested delegation history 与 current token authority 双向围栏](records/2026-09-19.md)
+- 最新 Daily: [2026-09-20 sender-constrained token 与 request proof replay freshness](records/2026-09-20.md)
 - 当前月度事实源: [2026-09](records/2026-09.md)
 - 当前方法: [METHOD.md](METHOD.md)
 - 控制案例: [CASES.md](CASES.md)
@@ -37,7 +37,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 - Daily template: [templates/daily.md](templates/daily.md)
 - Monthly template: [templates/monthly.md](templates/monthly.md)
 
-截至 2026-09-19, 9 月共有 19 个 Daily files, 其中 18 个 NATIVE research units, 1 个透明 RECONSTRUCTION gap. 9 月 8 日继续不计独立实验或 execution window.
+截至 2026-09-20, 9 月共有 20 个 Daily files, 其中 19 个 NATIVE research units, 1 个透明 RECONSTRUCTION gap. 9 月 8 日继续不计独立实验或 execution window.
 
 > Maintenance annotation — 2026-09-19
 >
