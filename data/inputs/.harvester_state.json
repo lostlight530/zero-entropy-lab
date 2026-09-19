@@ -2259,19 +2259,19 @@
     "pydantic/pydantic-ai": {
       "documents": {
         "README.md": {
-          "blob_sha": "aa2a2a6b8b3cc0628b77017d93d1850773876d2f",
-          "commit_sha": "e97d6c38ab2a360fdc39a4e127158b47251442f6",
-          "content_hash": "b86c71779c5f157efa7d6a5dfbd15a02ce6f6b0f353f9052977406abb8b331c2",
+          "blob_sha": "7762f1e0a69f8a215ac696906d74812a6deb4562",
+          "commit_sha": "c4898abb54dc25ae6f6aef208a4c0661b30a455e",
+          "content_hash": "b942835e8971647ac66704db79462b6bdc9307c4137e807eb0b3956d157d7868",
           "entity_id": "external_doc_pydantic_pydantic_ai_readme_md",
-          "observed_blob_sha": "aa2a2a6b8b3cc0628b77017d93d1850773876d2f",
-          "observed_commit_sha": "e97d6c38ab2a360fdc39a4e127158b47251442f6",
-          "observed_tree_sha": "c55bc08322723b555e790a0d6c2ceffe837d33da",
-          "output": "current/agent-runtime/pydantic_pydantic_ai/README.md__aa2a2a6b8b3c__e97d6c38ab2a.md",
-          "sha": "aa2a2a6b8b3cc0628b77017d93d1850773876d2f",
-          "tree_sha": "c55bc08322723b555e790a0d6c2ceffe837d33da"
+          "observed_blob_sha": "7762f1e0a69f8a215ac696906d74812a6deb4562",
+          "observed_commit_sha": "c4898abb54dc25ae6f6aef208a4c0661b30a455e",
+          "observed_tree_sha": "85bbb479a2d5bb13a117c653b15c8b2bc1f02993",
+          "output": "current/agent-runtime/pydantic_pydantic_ai/README.md__7762f1e0a69f__c4898abb54dc.md",
+          "sha": "7762f1e0a69f8a215ac696906d74812a6deb4562",
+          "tree_sha": "85bbb479a2d5bb13a117c653b15c8b2bc1f02993"
         }
       },
-      "last_checked_at": "2026-09-18T23:43:40.799133+00:00"
+      "last_checked_at": "2026-09-19T23:44:50.216196+00:00"
     },
     "run-llama/llama_index": {
       "documents": {
