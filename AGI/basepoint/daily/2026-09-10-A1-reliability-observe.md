@@ -120,3 +120,12 @@
 - **确认未根据外部最佳实践推断宿主仓库缺少机制**: YES
 - **确认未公开完整私有提示词、私有 Memory 或隐藏推理**: YES
 - **确认只写本 Logical Date 的指定 A1 目标文件**: YES
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: RUN_LEVEL_MULTI_SOURCE
+Origin Continuity: PRESERVED
+
+- Two distinct research lineages exist at run level, but support must remain mapped to the exact claim each paper addresses.
+- Run-level source diversity must not be projected onto every signal as two-source corroboration.
+- `NO_LOCAL_EVIDENCE` remains controlling for Aegis-local applicability.

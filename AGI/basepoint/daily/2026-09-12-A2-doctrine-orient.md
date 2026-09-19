@@ -91,3 +91,12 @@
 - External risk made into local fact: NO
 - Final weekly decision made: NO
 - Claim-level independence inflated from run-level source count: NO
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: CLAIM_LEVEL_MAPPING_STABLE
+Origin Continuity: PRESERVED
+
+- The file already encodes the correct rule: run-level two lineages, each signal one primary lineage.
+- That distinction is preserved as the controlling interpretation.
+- No host/local incident inference follows.

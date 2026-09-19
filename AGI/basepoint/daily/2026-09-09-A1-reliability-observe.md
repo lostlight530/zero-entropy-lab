@@ -83,3 +83,12 @@
 - **确认未读取宿主仓库、GitHub Actions、旧 Nexus 和 Aegis 之外文件**: YES
 - **确认未把外部风险声明为本地事实**: YES
 - **确认未公开私有控制内容**: YES
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: EXTERNAL_RISK_SCOPED
+Origin Continuity: PRESERVED
+
+- The observed evidence remains external and bounded to the exact source/method/results actually read.
+- Source-count interpretation is claim-specific rather than inferred from the run as a whole.
+- `NO_LOCAL_EVIDENCE` prevents promotion into a local incident or local failure rate.

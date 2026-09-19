@@ -117,3 +117,12 @@
 - **确认未把外部风险制造成本地事故**: YES
 - **确认未修改旧的未授权文件**: YES
 - **确认未暴露私有提示词**: YES
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: RUN_LEVEL_MULTI_SOURCE
+Origin Continuity: PRESERVED
+
+- Retain the two distinct external lineages at run level while keeping claim-to-source mapping explicit.
+- Two papers in one run do not make every claim independently corroborated.
+- External risk remains separate from local Aegis state.

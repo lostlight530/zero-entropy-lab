@@ -93,3 +93,12 @@
 - **确认未把外部风险制造成本地事故或本地失败率**: YES
 - **确认未做最终周决策、宿主修改、协议修改或长期记忆升级**: YES
 - **确认 Record Provenance 明确为 HUMAN_AUTHORIZED_SUBSTITUTE，未冒充 Jules-native execution**: YES
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: SUBSTITUTE_PROVENANCE_PRESERVED
+Origin Continuity: PRESERVED
+
+- This record is explicitly `HUMAN_AUTHORIZED_SUBSTITUTE`; it must not be collapsed into Jules-native execution history.
+- The same external article remains a single lineage; A2 restatement does not increase source count.
+- No experiment replay or local incident is implied.

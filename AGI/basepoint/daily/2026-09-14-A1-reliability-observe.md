@@ -101,3 +101,12 @@
 - External findings clearly marked as external (NO_LOCAL_EVIDENCE): YES
 - No private control plane memory disclosed: YES
 - No Github Actions inspected: YES
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: EXTERNAL_RISK_SCOPED
+Origin Continuity: PRESERVED
+
+- The observed evidence remains external and bounded to the exact source/method/results actually read.
+- Source-count interpretation is claim-specific rather than inferred from the run as a whole.
+- `NO_LOCAL_EVIDENCE` prevents promotion into a local incident or local failure rate.

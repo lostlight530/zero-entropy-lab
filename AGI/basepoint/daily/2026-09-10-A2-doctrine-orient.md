@@ -107,3 +107,12 @@
 - **确认未做最终周决策、宿主修改、协议修改或长期记忆升级**: YES
 - **确认未公开私有控制内容或隐藏推理**: YES
 - **确认只写本 Logical Date 的指定 A2 目标文件**: YES
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: CLAIM_LEVEL_MAPPING_REQUIRED
+Origin Continuity: PRESERVED
+
+- A2 correctly states that repeated access does not add independence.
+- Each claim inherits only the primary lineage(s) that directly support it; orientation does not turn run-level diversity into claim-level corroboration.
+- No external risk is converted into a local incident.

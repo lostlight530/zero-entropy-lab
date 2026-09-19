@@ -128,3 +128,12 @@ For individual signals, however, source independence is narrower:
 Therefore the original per-signal phrase `VERIFIED_WITH_TWO_INDEPENDENT_PRIMARY_SOURCE_LINEAGES` must not be propagated downstream as claim-level two-source verification. Current aggregation rule: `RUN_LEVEL_SOURCE_DIVERSITY != CLAIM_LEVEL_CORROBORATION`.
 
 No local incident evidence is added by this correction.
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: CLAIM_LEVEL_INDEPENDENCE_CALIBRATED
+Origin Continuity: PRESERVED
+
+- The existing maintenance note is controlling: each signal has one primary lineage even though the run contains two independent papers.
+- Downstream aggregation must use `RUN_LEVEL_SOURCE_DIVERSITY != CLAIM_LEVEL_CORROBORATION`.
+- No local incident evidence is added.

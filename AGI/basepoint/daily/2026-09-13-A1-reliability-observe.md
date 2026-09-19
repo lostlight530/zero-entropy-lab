@@ -107,3 +107,12 @@ Uncompleted verification:
 - External product limits declared as Jules facts: NO
 - Local incident fabricated: NO
 - Private control content disclosed: NO
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: NAMED_PRODUCT_BOUNDARY
+Origin Continuity: PRESERVED
+
+- GitHub Copilot cloud-agent documentation supports facts about that named product/runtime only.
+- Pages from the same GitHub product lineage are not independent corroboration.
+- External product limits must not be projected into Jules, Aegis, or zero-entropy-lab runtime limits.
