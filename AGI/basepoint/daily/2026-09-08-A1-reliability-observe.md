@@ -83,3 +83,12 @@
 - **确认未读取宿主仓库、GitHub Actions、旧 Nexus 和 Aegis 之外文件**: YES
 - **确认未把外部风险声明为本地事实**: YES
 - **确认未公开私有控制内容**: YES
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: SINGLE_LINEAGE_EXTERNAL_RISK
+Origin Continuity: PRESERVED
+
+- The observed risk remains external and supported by one primary lineage.
+- `Independent Source: NO` is controlling for corroboration count.
+- No local incident or local failure rate is implied.

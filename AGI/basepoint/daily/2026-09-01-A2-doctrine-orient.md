@@ -110,3 +110,12 @@ Correction Agent: Codex
 Correction Log: 2026-09-02-maintenance-log.md
 
 依据 [原论文研究设计](https://arxiv.org/html/2608.26218v1#S3.SS1) 及同日 A1 修正,本记录不再支持孤立截断因果或本地演练完成的说法. 保留原执行时间、作者与状态,后续周度只能继承校准后的适用边界.
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: CALIBRATED_CAUSAL_SCOPE
+Origin Continuity: PRESERVED
+
+- A2 must inherit the corrected A1 causal boundary rather than restating a stronger isolated-effect claim.
+- A local preventive requirement is evidence of prior concern/discipline, not evidence that a defense drill ran or that an incident occurred.
+- Weekly use must preserve external-risk versus local-record separation.

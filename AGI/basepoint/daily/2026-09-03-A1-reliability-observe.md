@@ -193,3 +193,12 @@
 - 确认未读取 GitHub Actions 配置文件或旧 Nexus 文件。
 - 确认未把外部 AI Agent 理论风险声明为已经发生的本地事实，如 SIG-2026-09-03-03 外部验证仅作为防御参考，并未称本地记忆库已受到此类攻击。
 - 确认未公开私有 Jules 控制面 Prompt 内容。
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: SOURCE_IDENTITY_SCOPED
+Origin Continuity: PRESERVED
+
+- External source identities and their reported risks are retained at the exact-paper level.
+- Local preventive records show prior defensive attention only; they do not establish false completion or memory-poisoning incidents.
+- Claim support must follow the exact source that actually addresses that claim.

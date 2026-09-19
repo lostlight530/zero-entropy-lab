@@ -101,3 +101,12 @@ PR #418 已完成合并，因此 `Current Path Status` 从 pre-merge 的 `PRESEN
 - **Historical State Preserved**: YES
 - **Current Interpretation**: 9 月 7 日 A2 的 `INPUT_MISSING / BLOCKED / NOT_RUN` 继续作为完整有效历史事实保留。当前 main/branch 上同日 A1 的后来存在、后续周/月阶段汇总和本次 13-day reconciliation 都不改变“原 A2 执行时不可见”的事实。
 - **Current Use**: 后续 W36/W37 或 September month-to-date 汇总可以读取当前完整路径，但不得把新的可见性倒写成 9 月 7 日 A2 原始 SUCCESS，也不得补造当日未执行的联网 Orientation。
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: TASK_TIME_BLOCKED
+Origin Continuity: PRESERVED
+
+- The original `INPUT_MISSING / BLOCKED / NOT_RUN` state remains the task-time fact.
+- Later A1 presence cannot be backdated into the original A2 input surface and does not authorize a synthetic orientation.
+- Carry forward: `CURRENT_PATH_PRESENT != ORIGINAL_INPUT_AVAILABLE`.

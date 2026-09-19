@@ -113,3 +113,12 @@
 - **Current Interpretation**: 本日 Crossref API 调用可靠支持 DOI/题名/元数据存在与文献发现，但仅凭 Crossref metadata 不应继续被解释为已读取并验证论文完整方法、实验与结论。原风险主题可保留为外部研究线索；`High Confidence (Tier 1 Primary Research)` 的当前继承强度应限定为 bibliographic/source-identity discovery，除非后续记录明确打开并核对全文或至少摘要内容。
 - **Local Boundary**: `NO_LOCAL_EVIDENCE` 继续有效；外部论文风险不转换成 zero-entropy-lab 本地故障。
 - **Weekly Use**: W36 A3 使用此记录时应保留 `METADATA/DISCOVERY != FULL_TEXT_VERIFICATION`，不把原标签静默当作 full-content evidence。
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: METADATA_NOT_FULL_TEXT
+Origin Continuity: PRESERVED
+
+- The existing reconciliation remains controlling: Crossref discovery is not full-text verification.
+- Primary-research labels must be interpreted together with actual access depth, not source category alone.
+- External risk remains external; no local Aegis incident is established.
