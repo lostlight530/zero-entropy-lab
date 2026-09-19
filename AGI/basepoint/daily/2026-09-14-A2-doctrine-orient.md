@@ -94,3 +94,14 @@ Origin Continuity: PRESERVED
 - A2 interpretation does not create additional source independence by reusing A1 evidence.
 - Preventive/local documentary records remain distinct from actual local incident/runtime evidence.
 - Downstream use must preserve source identity, access depth, and local-applicability boundaries.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: ORIENTATION_SCOPED
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- External risk/product evidence remains separate from any local incident, local rate, or local capability claim.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

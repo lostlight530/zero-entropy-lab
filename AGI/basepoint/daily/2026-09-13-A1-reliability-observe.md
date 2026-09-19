@@ -116,3 +116,14 @@ Origin Continuity: PRESERVED
 - GitHub Copilot cloud-agent documentation supports facts about that named product/runtime only.
 - Pages from the same GitHub product lineage are not independent corroboration.
 - External product limits must not be projected into Jules, Aegis, or zero-entropy-lab runtime limits.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: NAMED_PRODUCT_BOUNDARY
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- External risk/product evidence remains separate from any local incident, local rate, or local capability claim.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

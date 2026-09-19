@@ -86,3 +86,14 @@ Origin Continuity: PRESERVED
 - A2 may use the named GitHub product facts as comparative external evidence only.
 - Vendor/product limits are not local Aegis incidents or Jules execution constraints without separate local evidence.
 - Same-product documentation does not add source independence.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: NAMED_PRODUCT_BOUNDARY
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- External risk/product evidence remains separate from any local incident, local rate, or local capability claim.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.
