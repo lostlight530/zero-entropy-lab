@@ -133,3 +133,12 @@ Source Decision ID: DEC-W36-03
 - **Static Doctrine Change NO**: YES
 
 Current-state note: these reconciled actions do not imply A3 was available to the original A4 run and do not change the historical BLOCKED status.
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: ORIGINAL_BLOCKED_WITH_LATER_GUIDANCE
+Origin Continuity: PRESERVED
+
+- The original A4 dependency failure remains historical fact; later reconciled actions do not create a native successful A3→A4 chain in retrospect.
+- Current guardrails may be used prospectively only.
+- External risks remain watch categories unless local evidence establishes an incident.

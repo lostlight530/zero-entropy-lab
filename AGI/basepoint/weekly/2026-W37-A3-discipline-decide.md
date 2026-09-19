@@ -157,3 +157,12 @@ Local evidence state:
 - Long-term doctrine directly upgraded: NO
 - Original producer/status rewritten: NO
 - Boundary violation: NO
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: PERIODIC_RECOVERY
+Origin Continuity: PRESERVED
+
+- This weekly decision surface is a later maintenance recovery and must retain its producer/provenance distinction.
+- It may consolidate current source/local boundaries without rewriting the native cadence history.
+- No external risk becomes a local incident through weekly compression.

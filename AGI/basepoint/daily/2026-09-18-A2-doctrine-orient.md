@@ -92,3 +92,12 @@
 - 确认未公开私有控制内容：YES
 - 确认未读取 GitHub Actions 且未读取 Aegis 之外文件：YES
 - 确认把外部风险与实际读取的 Aegis 仓库记录比较且没把理论风险写成本地事故：YES
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: SINGLE_LINEAGE_ORIENTATION
+Origin Continuity: PRESERVED
+
+- The source-specific result may be retained, but independent corroboration remains unestablished.
+- Repeated access or multi-step orientation does not increase source count.
+- `NO_LOCAL_EVIDENCE` remains controlling.

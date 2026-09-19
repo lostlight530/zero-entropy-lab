@@ -86,3 +86,12 @@
 - 确认未写入 Aegis 之外文件: YES
 - 确认未公开提示词或私有 Memory: YES
 - 确认未把外部风险冒充本地事故: YES
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: SINGLE_LINEAGE_EXTERNAL_RISK
+Origin Continuity: PRESERVED
+
+- The paper supports an external risk class only; local incident evidence remains absent.
+- One source lineage remains one source lineage even when reused downstream.
+- No host or local applicability conclusion is created.

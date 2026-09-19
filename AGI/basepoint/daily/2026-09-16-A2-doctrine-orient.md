@@ -87,3 +87,12 @@
 
 ## BOUNDARY_CHECK
 - 确认未越界、未制造本地故障、未做最终决策：YES
+
+## AGI_BASEPOINT_2026-09-19
+
+Basepoint State: SINGLE_LINEAGE_ORIENTATION
+Origin Continuity: PRESERVED
+
+- The reported ToolPrivBench result is evidence about the paper's evaluated system, not about Aegis-local behavior.
+- ar5iv is an access surface while the canonical identity remains the arXiv paper; reopening it does not add source independence.
+- Carry forward: `EXTERNAL_BENCHMARK_RESULT != LOCAL_FAILURE_RATE`.
