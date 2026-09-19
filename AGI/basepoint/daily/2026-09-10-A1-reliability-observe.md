@@ -129,3 +129,14 @@ Origin Continuity: PRESERVED
 - Two distinct research lineages exist at run level, but support must remain mapped to the exact claim each paper addresses.
 - Run-level source diversity must not be projected onto every signal as two-source corroboration.
 - `NO_LOCAL_EVIDENCE` remains controlling for Aegis-local applicability.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: RUN_LEVEL_MULTI_SOURCE
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Run-level source diversity is kept separate from claim-level corroboration; claim-to-source mapping remains controlling.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

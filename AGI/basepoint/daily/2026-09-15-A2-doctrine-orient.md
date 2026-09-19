@@ -102,3 +102,14 @@ Origin Continuity: PRESERVED
 - This record is explicitly `HUMAN_AUTHORIZED_SUBSTITUTE`; it must not be collapsed into Jules-native execution history.
 - The same external article remains a single lineage; A2 restatement does not increase source count.
 - No experiment replay or local incident is implied.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: SUBSTITUTE_PROVENANCE_PRESERVED
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Substitute/recovery producer provenance remains explicit and is not converted into original Jules provenance.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

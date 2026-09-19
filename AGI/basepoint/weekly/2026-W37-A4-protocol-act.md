@@ -114,3 +114,14 @@ Origin Continuity: PRESERVED
 - This A4 is a later maintenance recovery and remains distinct from the original closed-unmerged Jules attempt.
 - Prospective actions do not rewrite original task-time BLOCKED history.
 - September month closure is not implied.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: PERIODIC_RECOVERY
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Recovery/reconciliation provenance remains explicit and does not rewrite the original weekly execution.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

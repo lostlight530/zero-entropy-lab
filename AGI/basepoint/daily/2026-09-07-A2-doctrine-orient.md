@@ -110,3 +110,14 @@ Origin Continuity: PRESERVED
 - The original `INPUT_MISSING / BLOCKED / NOT_RUN` state remains the task-time fact.
 - Later A1 presence cannot be backdated into the original A2 input surface and does not authorize a synthetic orientation.
 - Carry forward: `CURRENT_PATH_PRESENT != ORIGINAL_INPUT_AVAILABLE`.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: TASK_TIME_BLOCKED
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Task-time blockage remains controlling; later path presence does not rewrite original input availability.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

@@ -101,3 +101,14 @@ Origin Continuity: PRESERVED
 - The source-specific result may be retained, but independent corroboration remains unestablished.
 - Repeated access or multi-step orientation does not increase source count.
 - `NO_LOCAL_EVIDENCE` remains controlling.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: SINGLE_LINEAGE_ORIENTATION
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- A single or repeated lineage does not become independent corroboration.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

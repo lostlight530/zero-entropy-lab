@@ -99,3 +99,14 @@ Origin Continuity: PRESERVED
 - The external research result remains source-specific and does not establish a local Aegis failure.
 - One canonical paper lineage is not independent corroboration.
 - Local applicability remains unproven.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: SINGLE_LINEAGE_EXTERNAL_RISK
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- A single or repeated lineage does not become independent corroboration.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

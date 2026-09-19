@@ -122,3 +122,14 @@ Origin Continuity: PRESERVED
 - The existing reconciliation remains controlling: Crossref discovery is not full-text verification.
 - Primary-research labels must be interpreted together with actual access depth, not source category alone.
 - External risk remains external; no local Aegis incident is established.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: METADATA_NOT_FULL_TEXT
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Access depth remains controlling; metadata, abstract, or index visibility is not promoted to full-text verification.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

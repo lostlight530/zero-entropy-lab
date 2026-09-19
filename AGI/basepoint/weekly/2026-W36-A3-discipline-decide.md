@@ -185,3 +185,14 @@ Origin Continuity: PRESERVED
 - The weekly discipline may guide current interpretation while preserving the historical cadence/input record.
 - Run-level diversity, claim-level corroboration, access depth, and local-incident state remain separate dimensions.
 - Missing task-time input must stay a valid historical state.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: LATER_WEEKLY_RECONCILIATION
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Recovery/reconciliation provenance remains explicit and does not rewrite the original weekly execution.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

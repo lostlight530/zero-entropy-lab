@@ -102,3 +102,14 @@ Origin Continuity: PRESERVED
 - The controlling execution state is `INPUT_MISSING / BLOCKED`; auxiliary network/source header values do not override that state.
 - The later A1 path on main does not prove availability to the original A2 run and does not authorize a synthetic replay.
 - Carry forward: `LATER_A1_PRESENT != A1_AVAILABLE_TO_ORIGINAL_A2`.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: TASK_TIME_BLOCKED
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Task-time blockage remains controlling; later path presence does not rewrite original input availability.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

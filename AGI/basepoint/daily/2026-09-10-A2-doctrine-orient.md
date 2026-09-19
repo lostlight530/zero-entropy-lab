@@ -116,3 +116,14 @@ Origin Continuity: PRESERVED
 - A2 correctly states that repeated access does not add independence.
 - Each claim inherits only the primary lineage(s) that directly support it; orientation does not turn run-level diversity into claim-level corroboration.
 - No external risk is converted into a local incident.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: CLAIM_LEVEL_MAPPING_REQUIRED
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- Run-level source diversity is kept separate from claim-level corroboration; claim-to-source mapping remains controlling.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

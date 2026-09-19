@@ -119,3 +119,14 @@ Origin Continuity: PRESERVED
 - A2 must inherit the corrected A1 causal boundary rather than restating a stronger isolated-effect claim.
 - A local preventive requirement is evidence of prior concern/discipline, not evidence that a defense drill ran or that an incident occurred.
 - Weekly use must preserve external-risk versus local-record separation.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: CALIBRATED_CAUSAL_SCOPE
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- External risk/product evidence remains separate from any local incident, local rate, or local capability claim.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.

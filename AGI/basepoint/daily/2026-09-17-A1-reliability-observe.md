@@ -95,3 +95,14 @@ Origin Continuity: PRESERVED
 - The paper supports an external risk class only; local incident evidence remains absent.
 - One source lineage remains one source lineage even when reused downstream.
 - No host or local applicability conclusion is created.
+
+
+## AGI_BASEPOINT_CHECKPOINT_2026-09-19
+
+Checkpoint State: CONFIRMED
+Prior Basepoint State: SINGLE_LINEAGE_EXTERNAL_RISK
+Reference Continuity: PRESERVED
+
+- The prior Basepoint state remains controlling for this frozen copy.
+- A single or repeated lineage does not become independent corroboration.
+- No additional local-incident claim, source-independence upgrade, or retroactive execution claim is introduced.
