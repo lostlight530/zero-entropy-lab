@@ -67,3 +67,19 @@ INPUT_MISSING
 - 确认未把理论风险写成本地事故：YES
 - 确认未把历史 A2 推测今日风险：YES
 - 确认所有依赖 A1 的区域写 INPUT_MISSING：YES
+
+## MAINTENANCE_ANNOTATION_2026-09-19
+- Review Class: LATER_INPUT_RECONCILIATION
+- Original Jules Record Preserved: YES
+- Original A1 Availability: INPUT_MISSING
+- Original Task Status: BLOCKED
+- Same-day upstream later delivered at: aegis-cortex/2026-09-19-A1-reliability-observe.md
+- Current Path State: A1_PRESENT_AFTER_ORIGINAL_A2_EXECUTION
+- External Risk: NOT_EVALUATED_AT_ORIGINAL_A2_EXECUTION
+- Local Evidence: NO_LOCAL_EVIDENCE
+- Local Applicability: UNKNOWN
+- Remaining Uncertainty: the later A1 contains external evidence about action-level reliability, but the original A2 did not consume it and no Aegis-local incident is established
+- Replay Performed: NO
+- Doctrine Decision Added: NO
+- Current Interpretation: LATER_PATH_PRESENT != ORIGINAL_TASK_INPUT_AVAILABLE
+- Carry-forward: later A1 evidence may be considered by future Aegis tasks; this historical A2 remains INPUT_MISSING / BLOCKED
