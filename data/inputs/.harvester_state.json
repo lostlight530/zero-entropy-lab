@@ -1641,6 +1641,18 @@
           "sha": "3a465bb7057d69a37fa7e64ff22ae5036d71bce0",
           "tree_sha": "6619014cb5e3c71b86bae8fa1b2514c9d73d8f76"
         },
+        "examples/basic/trace_redaction.py": {
+          "blob_sha": "33beb1931c551a289533542b6e6da841701657cc",
+          "commit_sha": "c641e391429afc1a483772912dd6bb405fcd8932",
+          "content_hash": "47144ede114e4d62f0b643421d11b7aacb83e25f2cd769f7f799bd259f30367c",
+          "entity_id": "external_doc_openai_openai_agents_python_examples_basic_trace_redaction_py",
+          "observed_blob_sha": "33beb1931c551a289533542b6e6da841701657cc",
+          "observed_commit_sha": "c641e391429afc1a483772912dd6bb405fcd8932",
+          "observed_tree_sha": "94dd74f515679d3f0cd3dd9e021a091e614a7087",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__basic__trace_redaction.py__33beb1931c55__c641e391429a.md",
+          "sha": "33beb1931c551a289533542b6e6da841701657cc",
+          "tree_sha": "94dd74f515679d3f0cd3dd9e021a091e614a7087"
+        },
         "examples/basic/usage_tracking.py": {
           "blob_sha": "1425124e838dde7dfd5457be08ea8e0b2f64d9bf",
           "commit_sha": "bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1",
@@ -2254,7 +2266,7 @@
           "tree_sha": "6619014cb5e3c71b86bae8fa1b2514c9d73d8f76"
         }
       },
-      "last_checked_at": "2026-09-07T23:50:32.614668+00:00"
+      "last_checked_at": "2026-09-20T23:40:24.653616+00:00"
     },
     "pydantic/pydantic-ai": {
       "documents": {
