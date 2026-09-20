@@ -137,3 +137,75 @@ Decision ID: DEC-W38-01
 - 确认分离了外部风险和本地事实（Aegis 无相关事故）: YES
 - 确认没有把历史 BLOCKED 推翻或改写: YES
 - 确认未做最终的长期直接纪律升级: YES
+
+
+## CURRENT_MAINTENANCE_COMPLETION_2026-09-20
+
+Maintenance Agent: GPT Web Maintenance Agent
+Maintenance Type: ORIGINAL_FILE_WEEKLY_INPUT_COMPLETION
+Original Jules A3 Preserved: YES
+Original A3 Input Coverage: 6/7
+Original Missing Date: 2026-09-20
+Current Path Coverage: 7/7 A1 + 7/7 A2
+Original A3 Replay: NO
+Current Interpretation: CURRENT_INPUT_SURFACE_COMPLETE_WITH_PRESERVED_BLOCKED_A2_HISTORY
+
+### Later input arrival
+
+The original A3 correctly recorded 2026-09-20 as absent from its authority snapshot
+
+After that execution
+
+- 2026-09-20 A1 entered main through PR #491
+- 2026-09-20 A2 entered main through PR #492
+- A2 remains an original INPUT_MISSING / BLOCKED execution
+- its header-level Original Execution Status: SUCCESS is internally contradictory and is not used as controlling evidence
+- no retroactive A2 Orientation was created
+
+Therefore
+
+~~~text
+ORIGINAL_A3_COVERAGE = 6/7
+CURRENT_PATH_COVERAGE = 7/7
+
+CURRENT_7_OF_7
+!= ORIGINAL_A3_CONSUMED_7_OF_7
+~~~
+
+### W38 day-by-day current baseline
+
+| Date | A1 current state | A2 current state | Provenance / interpretation |
+| --- | --- | --- | --- |
+| 2026-09-14 | SUCCESS / NETWORK_VERIFIED / two external source lineages | SUCCESS / INPUT SUCCESS | Jules-native pair, NO_LOCAL_EVIDENCE |
+| 2026-09-15 | SUCCESS / SINGLE_SOURCE_LINEAGE | SUCCESS | A1 Jules-native, A2 HUMAN_AUTHORIZED_SUBSTITUTE, same source lineage re-opened |
+| 2026-09-16 | SUCCESS / SINGLE_SOURCE_LINEAGE | SUCCESS | Jules-native pair, over-privileged-tool risk remains external |
+| 2026-09-17 | SUCCESS / SINGLE_SOURCE_LINEAGE | INPUT_MISSING / BLOCKED | later A1 current path does not rewrite original A2 |
+| 2026-09-18 | SUCCESS / SINGLE_SOURCE_LINEAGE | SUCCESS | Jules-native pair, agent-evaluation weakness remains external |
+| 2026-09-19 | SUCCESS / SINGLE_SOURCE_LINEAGE | INPUT_MISSING / BLOCKED | later A1 current path preserved separately |
+| 2026-09-20 | SUCCESS / SINGLE_SOURCE_LINEAGE | INPUT_MISSING / BLOCKED | optimistic-lock visibility failure, A2 not replayed |
+
+### Current weekly interpretation
+
+The original A3 Decision Set remains usable as a bounded W38 decision because it was already explicitly degraded by missing inputs and did not claim local incidents
+
+The later 9/20 A1 adds another external reliability source but does not justify strengthening the Decision Set into a local finding
+
+The current completed input surface strengthens only the execution/concurrency lesson
+
+~~~text
+same-day upstream later present
+!= original downstream input available
+~~~
+
+No additional A3 decision is promoted by this maintenance completion
+
+### Current handoff to A4
+
+A4 may now read this A3 current file and its original decisions
+
+A4 must preserve
+
+- original A3 execution coverage was 6/7
+- 9/17, 9/19 and 9/20 A2 remain BLOCKED
+- external risk evidence remains external
+- NO_LOCAL_INCIDENT_EVIDENCE remains the current local state
