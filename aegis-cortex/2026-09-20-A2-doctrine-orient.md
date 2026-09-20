@@ -54,3 +54,72 @@ INPUT_MISSING
 
 ## BOUNDARY_CHECK
 确认未越界、未制造本地故障、未做最终决策
+
+
+## MAINTENANCE_ANNOTATION_2026-09-20
+
+Review Class: LATER_INPUT_VISIBILITY_AND_INTERNAL_STATUS_RECONCILIATION
+Original Jules Record Preserved: YES
+Original Input Status: INPUT_MISSING
+Original Task Status: BLOCKED
+Original Network Status: NOT_RUN
+Original Risk Classification: INPUT_MISSING
+Original Orientation Performed: NO
+Replay Performed: NO
+
+### Internal header contradiction
+
+The original artifact contains these simultaneous fields
+
+~~~text
+Input Status: INPUT_MISSING
+Task Status: BLOCKED
+Original Execution Status: SUCCESS
+~~~
+
+These fields cannot all describe the same execution outcome
+
+The task body also states that A1, historical A2s, A4 target and A6 target were INPUT_MISSING and that no discipline decision was made
+
+Current interpretation therefore uses the task-time dependency and task-state fields as controlling execution evidence
+
+~~~text
+ORIGINAL_A2_EXECUTION_INTERPRETATION = BLOCKED_DUE_TO_INPUT_MISSING
+
+Original Execution Status: SUCCESS
+= INTERNAL_STATUS_FIELD_CONTRADICTION
+~~~
+
+The prior SUCCESS field remains recoverable in Git history and is not treated as proof of successful Orientation
+
+### Later delivery state
+
+- required same-day A1 path: aegis-cortex/2026-09-20-A1-reliability-observe.md
+- original A2 execution could not see that A1 on its authority snapshot
+- A1 later entered main through PR #491
+- this A2 later entered main through PR #492
+- current main now contains both paths
+- the original A2 was not replayed
+
+### Current baseline
+
+~~~text
+CURRENT_A1_PATH_PRESENT = YES
+CURRENT_A2_PATH_PRESENT = YES
+
+ORIGINAL_A1_AVAILABLE_TO_A2 = NO
+ORIGINAL_A2_TASK_STATUS = BLOCKED
+ORIGINAL_A2_ORIENTATION = NOT_PERFORMED
+LOCAL_INCIDENT_EVIDENCE = NO_LOCAL_EVIDENCE
+HOST_APPLICABILITY = UNKNOWN
+~~~
+
+The later A1 may be consumed by current Weekly or Month-to-date synthesis only with the sequencing boundary preserved
+
+~~~text
+LATER_A1_PRESENT
+!= A1_AVAILABLE_TO_ORIGINAL_A2
+
+CURRENT_PATH_COMPLETE
+!= ORIGINAL_DAILY_CHAIN_SUCCESSFUL
+~~~
