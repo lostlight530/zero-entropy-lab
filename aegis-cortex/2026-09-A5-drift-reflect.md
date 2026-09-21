@@ -9,7 +9,7 @@
 - Loop Stage: Reflect
 - Run Month: 2026-09
 - Target Month: 2026-09
-- Coverage Window: 2026-09-01 through 2026-09-20
+- Coverage Window: 2026-09-01 through 2026-09-21
 - Month Closure Status: OPEN
 - Agent: GPT Web Maintenance Agent
 - Record Provenance: HUMAN_AUTHORIZED_MONTH_TO_DATE_BASELINE
@@ -28,7 +28,7 @@ This file establishes the current September month-to-date A5 baseline without pr
 
 It is a canonical monthly task path, not an additional audit file
 
-It records the repository-visible 2026-09-01 through 2026-09-20 state one logical date at a time
+It records the repository-visible 2026-09-01 through 2026-09-21 state one logical date at a time
 
 It preserves all blocked, substitute, rewrite and reconciliation provenance rather than compressing current path presence into a single success count
 
@@ -60,12 +60,13 @@ At natural month end this same file may be extended or revised in-place with an 
 | 2026-09-18 | SUCCESS / SINGLE_SOURCE_LINEAGE | SUCCESS | Jules-native pair | automated-agent-evaluation weakness remains external |
 | 2026-09-19 | SUCCESS / SINGLE_SOURCE_LINEAGE | INPUT_MISSING / BLOCKED | Jules-native | original A2 did not consume later A1 action-level reliability evidence |
 | 2026-09-20 | SUCCESS / SINGLE_SOURCE_LINEAGE | INPUT_MISSING / BLOCKED | Jules-native | A2 header has internal SUCCESS contradiction, controlling interpretation is BLOCKED |
+| 2026-09-21 | SUCCESS / SINGLE_SOURCE_LINEAGE | SUCCESS / SINGLE_SOURCE_LINEAGE | Jules-native pair | one original-research lineage supports source-specific reported results; Independent Verification NO, NO_LOCAL_EVIDENCE, Host Applicability UNKNOWN remain controlling |
 
 ### Current path counts
 
-- A1 current paths through 2026-09-20: 20 / 20
-- A2 current paths through 2026-09-20: 20 / 20
-- Current path pair coverage: 20 / 20
+- A1 current paths through 2026-09-21: 21 / 21
+- A2 current paths through 2026-09-21: 21 / 21
+- Current path pair coverage: 21 / 21
 - Current path completeness is not equivalent to twenty native successful Observe→Orient chains
 
 ### Provenance exceptions that must survive aggregation
@@ -386,6 +387,159 @@ A6 must preserve:
 - NO_LOCAL_INCIDENT_EVIDENCE
 - source-independence limits
 - 9/20 A2 internal status contradiction
+
+## CURRENT_MONTH_TO_DATE_EXTENSION_2026-09-21
+
+Maintenance Agent: GPT Web Maintenance Agent  
+Maintenance Type: FORWARD_MONTH_TO_DATE_RECONCILIATION  
+Original 2026-09-21 Daily Files Modified: NO  
+Month State: OPEN  
+W39 State: IN_PROGRESS  
+Natural-Month Final A5: NOT_DUE  
+Durable Doctrine Promotion: NO
+
+### File-by-file review — 2026-09-21 A1
+
+Reviewed file:
+
+`aegis-cortex/2026-09-21-A1-reliability-observe.md`
+
+Observed state:
+
+- Agent: Jules
+- Record Provenance: JULES_NATIVE
+- Network Status: NETWORK_VERIFIED
+- Source Status: SINGLE_SOURCE_LINEAGE
+- Task Status: SUCCESS
+- Evidence Class: EXTERNAL_FAILURE_MODE_EVIDENCE
+- Source Identity: arXiv:2608.11323v1
+- Source Authority For Claim: ORIGINAL_RESEARCH
+- Independent Verification: NO
+- Local Incident Evidence: NO_LOCAL_EVIDENCE
+- Host Applicability: UNKNOWN
+
+The paper is used for a source-specific observation about long-horizon agent-evaluation reliability
+
+The current A1 correctly does **not** establish that Aegis has locally reproduced the reported variance structure, ranking collapse, or difficult-task reliability failure
+
+Current A5 interpretation:
+
+```text
+SOURCE_SPECIFIC_EXTERNAL_RESULT
+!= LOCAL_AEGIS_FAILURE_RATE
+!= LOCAL_INCIDENT
+!= HOST_APPLICABILITY
+```
+
+The A1 prose contains strong external numeric findings
+
+Those values remain attached to the paper's evaluated environments and are not converted into local probabilities or local task-reliability coefficients
+
+### File-by-file review — 2026-09-21 A2
+
+Reviewed file:
+
+`aegis-cortex/2026-09-21-A2-doctrine-orient.md`
+
+Observed state:
+
+- Input Status: SUCCESS
+- Network Status: NETWORK_VERIFIED
+- Source Status: SINGLE_SOURCE_LINEAGE
+- Task Status: SUCCESS
+- same source identity: arXiv:2608.11323v1
+- Independent Verification: NO
+- Local Incident Evidence: NO_LOCAL_EVIDENCE
+- Host Applicability: UNKNOWN
+- Weekly Promotion Eligibility: CONTINUE_WATCH_ONLY
+
+Current A5 interpretation:
+
+A2 is a legitimate Orientation over the same A1 source lineage
+
+It does not create a second independent source
+
+It does not upgrade external paper evidence into local incident evidence
+
+It also does not authorize a host/runtime change
+
+```text
+A1_SOURCE
++
+A2_INTERPRETATION_OF_SAME_SOURCE
+!= TWO_INDEPENDENT_LINEAGES
+
+CONTINUE_WATCH_ONLY
+!= WEEKLY_DOCTRINE_PROMOTION
+!= LOCAL_IMPLEMENTATION_CHANGE
+```
+
+### Month-to-date reliability delta
+
+The prior current baseline through 2026-09-20 remains intact
+
+2026-09-21 adds a clean same-day A1→A2 chain, but that success does not erase the blocked A2 histories on:
+
+- 2026-09-07
+- 2026-09-17
+- 2026-09-19
+- 2026-09-20
+
+Nor does it erase substitute/reconciliation provenance on earlier dates
+
+Therefore the current September interpretation is:
+
+```text
+2026-09-21_NATIVE_SUCCESS_PAIR
++
+EARLIER_BLOCKED_AND_SUBSTITUTE_HISTORY_PRESERVED
+```
+
+not:
+
+```text
+SEPTEMBER_DAILY_CHAIN_UNIFORMLY_SUCCESSFUL
+```
+
+### W39 state
+
+2026-09-21 is the first logical date of W39
+
+At this reconciliation cut:
+
+- 2026-09-21 A1: PRESENT
+- 2026-09-21 A2: PRESENT
+- W39 A3 final: NOT_DUE
+- W39 A4 final: NOT_DUE
+- W39 Weekly closure: NOT_CLAIMED
+
+No W39 Weekly artifact is created by this pass
+
+### 2026-09-22 review-cut boundary
+
+No Aegis 2026-09-22 A1/A2 current path was observed on the reviewed main at this maintenance cut
+
+This pass does not classify that absence as a historical missed scheduled execution because scheduler due-time state is not reconstructed here
+
+Current label:
+
+`CURRENT_MAIN_PATH_NOT_OBSERVED_AT_REVIEW_CUT`
+
+Historical missing classification:
+
+`NOT_ASSIGNED_BY_THIS_RECONCILIATION`
+
+### A5 current result
+
+```text
+Coverage Window = 2026-09-01..2026-09-21
+A1 Current Paths = 21 / 21
+A2 Current Paths = 21 / 21
+W39 = IN_PROGRESS
+Month = OPEN
+Final A5 = NOT_DUE
+Durable Doctrine Promotion = NO
+```
 
 ## BOUNDARY_CHECK
 
