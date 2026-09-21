@@ -29,22 +29,22 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-09-21 conditional write precondition failure 与 unknown-outcome recovery](records/2026-09-21.md)
+- 最新 Daily: [2026-09-22 representation validator 与 target incarnation identity 分离](records/2026-09-22.md)
 - 当前月度事实源: [2026-09](records/2026-09.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-09-13 至 2026-09-19](audits/2026-09-13--2026-09-19.md)
-- 当前未闭合周期: 2026-09-20 至 2026-09-21, 当前 2 日覆盖, 未达到 6/7 日 audit 边界
+- 当前未闭合周期: 2026-09-20 至 2026-09-22, 当前 3 日覆盖, 未达到 6/7 日 audit 边界
 - 当前方法: [METHOD.md](METHOD.md)
 - 控制案例: [CASES.md](CASES.md)
 - 长期发现: [NOTES.md](NOTES.md)
 - Daily template: [templates/daily.md](templates/daily.md)
 - Monthly template: [templates/monthly.md](templates/monthly.md)
 
-截至 2026-09-21, 9 月共有 21 个 Daily files, 其中 20 个 NATIVE research units, 1 个透明 RECONSTRUCTION gap. 另有 3 个 September reality-mapping Special, 均于 2026-09-20 实际核验, 不计 controlled experiment 或 independent execution window. 9 月 8 日继续不计独立实验或 execution window.
+截至 2026-09-22, 9 月共有 22 个 Daily files, 其中 21 个 NATIVE research units, 1 个透明 RECONSTRUCTION gap. 另有 3 个 September reality-mapping Special, 均于 2026-09-20 实际核验, 不计 controlled experiment 或 independent execution window. 9 月 8 日继续不计独立实验或 execution window.
 
 > Maintenance annotation — 2026-09-19
 >
-> 当前入口已推进到 2026-09-21 Daily. 2026-09-01 至 2026-09-18 的 retrospective maintenance second pass 继续完整保留在月度事实源: 历史 Daily 保留各自 point-in-time provenance 与当时 schema, 不按后续模板追溯补栏. 下方 `2026-09-17 action-integrity surfaces` 继续作为当时阶段快照; 2026-09-19 至 2026-09-21 属于之后自然产生的 current state. 2026-09-08 的 `RECONSTRUCTION / NOT_RUN / UNVERIFIED` 保持不变.
+> 当前入口已推进到 2026-09-22 Daily. 2026-09-01 至 2026-09-18 的 retrospective maintenance second pass 继续完整保留在月度事实源: 历史 Daily 保留各自 point-in-time provenance 与当时 schema, 不按后续模板追溯补栏. 下方 `2026-09-17 action-integrity surfaces` 继续作为当时阶段快照; 2026-09-19 至 2026-09-22 属于之后自然产生的 current state. 2026-09-08 的 `RECONSTRUCTION / NOT_RUN / UNVERIFIED` 保持不变.
 
 ## 2026-09-17 action-integrity surfaces
 
