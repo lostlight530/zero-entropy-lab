@@ -9,7 +9,7 @@
 - Loop Stage: Memorize
 - Run Month: 2026-09
 - Target Month: 2026-09
-- Coverage Window: 2026-09-01 through 2026-09-20
+- Coverage Window: 2026-09-01 through 2026-09-21
 - Month Closure Status: OPEN
 - Agent: GPT Web Maintenance Agent
 - Record Provenance: HUMAN_AUTHORIZED_MONTH_TO_DATE_BASELINE
@@ -39,10 +39,10 @@ A5 current path:
 - status: OPEN / PROVISIONAL_NOT_FINAL
 - provenance: HUMAN_AUTHORIZED_MONTH_TO_DATE_BASELINE
 
-Daily current-path coverage through 2026-09-20:
+Daily current-path coverage through 2026-09-21:
 
-- A1: 20 / 20
-- A2: 20 / 20
+- A1: 21 / 21
+- A2: 21 / 21
 
 Weekly current-path coverage relevant to September:
 
@@ -62,7 +62,7 @@ Reasons:
 
 1. September natural month has not ended
 2. final A5 reflection has not occurred
-3. 9/21–9/30 have not occurred
+3. 2026-09-21 Daily A1/A2 are now retained; 2026-09-22 through 2026-09-30 are not classified by this A6 as completed month inputs
 4. several September Daily records preserve blocked, substitute and reconciliation states
 5. W38 current completion includes later maintenance annotation rather than an all-native task-time chain
 
@@ -173,6 +173,78 @@ Until natural month closure, future A1/A2/A3/A4 may read the following bounded b
 - keep unknown as unknown
 - do not infer original execution from current file presence
 - treat current A5/A6 files as OPEN month-to-date records only
+
+## CURRENT_CARRY_FORWARD_EXTENSION_2026-09-21
+
+Maintenance Agent: GPT Web Maintenance Agent  
+Maintenance Type: FORWARD_A6_OPEN_MONTH_RECONCILIATION  
+Natural Month State: OPEN  
+Final A5: NOT_DUE  
+Final A6: NOT_DUE  
+Durable Doctrine Promotion: NO
+
+### Newly retained Daily input
+
+2026-09-21 now contributes one retained Jules-native A1/A2 pair
+
+The pair is valid current month-to-date evidence for:
+
+- one original-research source lineage
+- source-specific external reliability findings
+- explicit lack of independent second-lineage corroboration
+- NO_LOCAL_EVIDENCE
+- Host Applicability UNKNOWN
+- CONTINUE_WATCH_ONLY
+
+The pair does **not** authorize durable doctrine promotion because:
+
+```text
+ONE_NATIVE_SUCCESS_PAIR
+!= MONTHLY_REPLICATION
+
+ONE_ORIGINAL_RESEARCH_LINEAGE
+!= INDEPENDENT_CORROBORATION
+
+EXTERNAL_RELIABILITY_RESULT
+!= LOCAL_AEGIS_FAILURE_RATE
+
+CONTINUE_WATCH_ONLY
+!= DURABLE_DOCTRINE
+```
+
+### A6 carry-forward update
+
+The existing provisional controls remain candidates only
+
+2026-09-21 strengthens the need to preserve evaluator-scope discipline but does not create a new durable rule
+
+A future final A5/A6 may consider whether evaluation claims need explicit task-slice/domain applicability fields
+
+Current status:
+
+`RETAIN_FOR_FINAL_REVIEW / NOT_PROMOTED`
+
+### W39 and 2026-09-22 boundary
+
+W39 is in progress
+
+No final W39 A3/A4 is due from this A6 layer
+
+No 2026-09-22 A1/A2 path was observed on reviewed main at this cut
+
+That absence is not converted into a historical scheduler-failure claim by this reconciliation
+
+### Updated A6 current baseline
+
+```text
+Coverage Window = 2026-09-01..2026-09-21
+Current A1 Paths = 21 / 21
+Current A2 Paths = 21 / 21
+W39 = IN_PROGRESS
+Month Closure = OPEN
+Durable Doctrine Promotion = NO
+Final A6 = NOT_DUE
+```
 
 ## FINALIZATION_TRIGGER
 
