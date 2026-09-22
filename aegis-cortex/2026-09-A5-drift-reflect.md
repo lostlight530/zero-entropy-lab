@@ -693,3 +693,21 @@ Durable Doctrine Promotion = NO
 - External risks converted into local incidents: NO
 - Historical blocked states rewritten: NO
 - Boundary violation: NO
+
+
+## NIGHTLY_FULL_REVIEW_2026-09-22
+
+Scope: every retained A1/A2 Daily from 2026-09-01 through 2026-09-22, W36/W37/W38, W39 current open state, and September month-to-date interpretation.
+
+File-by-file review confirms that current 22/22 path coverage is heterogeneous provenance rather than twenty-two native successful chains. The controlling exceptions remain 9/7, 9/17, 9/19 and 9/20 blocked A2 executions; 9/10 substitute provenance; 9/12–13 reconciliation provenance; 9/15 A2 substitute provenance; and the 9/20 internal status-field contradiction.
+
+Nightly reconciliation keeps these invariants:
+
+```text
+EXTERNAL_FAILURE_REPORT != LOCAL_REPOSITORY_INCIDENT
+CURRENT_PATH_PRESENT != ORIGINAL_INPUT_AVAILABLE
+SAME_SOURCE_REORIENTATION != INDEPENDENT_CORROBORATION
+COMMAND_OR_CHECKER_SUCCESS != SEMANTIC_COMPLETION
+```
+
+W39 remains IN_PROGRESS. September remains OPEN. Natural-month A5/A6 finalization and durable doctrine promotion remain NOT_DUE / NOT_AUTHORIZED.
