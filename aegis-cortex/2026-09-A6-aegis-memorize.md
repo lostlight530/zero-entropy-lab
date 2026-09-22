@@ -334,3 +334,10 @@ A final A6 section is authorized only after:
 - External risk converted into local incident: NO
 - Current path presence used as original execution proof: NO
 - Boundary violation: NO
+
+
+## NIGHTLY_MEMORY_GATE_2026-09-22
+
+The complete 2026-09-01..2026-09-22 Daily/Weekly retrospective was re-read against current main. No nightly review result authorizes durable A6 promotion while September is open.
+
+Retain the A5 heterogeneous-provenance boundaries, blocked task-time states, external-risk/local-incident separation, source-lineage limits, and the 2026-09-20 internal status contradiction. Nightly maintenance is reconciliation activity only; it does not create new doctrine evidence.
