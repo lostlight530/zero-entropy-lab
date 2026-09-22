@@ -364,16 +364,16 @@
     "agentscope-ai/agentscope": {
       "documents": {
         "README.md": {
-          "blob_sha": "30ab3ec6f2961cba2ed84a7f55856d6e4ccfb13e",
-          "commit_sha": "d425f60a17482744912006d1cc8bdd7ad079a93b",
-          "content_hash": "f7f0204d6ed005415f9477190c720619706dce79c64e819e6af95b1e8bda0d8c",
+          "blob_sha": "71acd4252678b990cd3be0ac80d1ef723e74e33c",
+          "commit_sha": "6d32be1dfcf18ed860df15a9079999fde8a3a9b7",
+          "content_hash": "fd4f1bdad91b00fc434060f7e4399c8b055c7f1b29700ec92ff7c75ade52b02e",
           "entity_id": "doc_agentscope_ai_agentscope_readme_md_4415c1cedff4",
-          "observed_blob_sha": "30ab3ec6f2961cba2ed84a7f55856d6e4ccfb13e",
-          "observed_commit_sha": "d425f60a17482744912006d1cc8bdd7ad079a93b",
-          "observed_tree_sha": "d51d2d801745ea87a1d000d62cb888c6e92d22b8",
-          "output": "current/agent-runtime/agentscope_ai_agentscope/README.md__30ab3ec6f296__d425f60a1748.md",
-          "sha": "30ab3ec6f2961cba2ed84a7f55856d6e4ccfb13e",
-          "tree_sha": "d51d2d801745ea87a1d000d62cb888c6e92d22b8"
+          "observed_blob_sha": "71acd4252678b990cd3be0ac80d1ef723e74e33c",
+          "observed_commit_sha": "6d32be1dfcf18ed860df15a9079999fde8a3a9b7",
+          "observed_tree_sha": "062062a1d6eddd135dae02b02a9086a7b6eb3ce7",
+          "output": "current/agent-runtime/agentscope_ai_agentscope/README.md__71acd4252678__6d32be1dfcf1.md",
+          "sha": "71acd4252678b990cd3be0ac80d1ef723e74e33c",
+          "tree_sha": "062062a1d6eddd135dae02b02a9086a7b6eb3ce7"
         },
         "examples/a2a/README.md": {
           "blob_sha": "1c4871904136de38b1dd6e1d890fc01c7302483d",
@@ -412,7 +412,7 @@
           "tree_sha": "577a34b06ea4ef9406b86c0dd59dfed5fc2b78ae"
         }
       },
-      "last_checked_at": "2026-09-17T23:46:59.427614+00:00"
+      "last_checked_at": "2026-09-22T23:54:06.738099+00:00"
     },
     "agentskills/agentskills": {
       "documents": {
@@ -1225,6 +1225,18 @@
           "sha": "fdefd5a6762d4d1f7f8c98997c4108aada25e0ca",
           "tree_sha": "4efad46714d410205c84d9712d98b4eeb13d0a20"
         },
+        "docs/decisions/0043-python-mcp-runtime-context.md": {
+          "blob_sha": "7bdbb60331a7fdd268d1ef0ca8f10277d3cb5cbe",
+          "commit_sha": "736e838dc61628a6dd4185feaa13d781a23e0a01",
+          "content_hash": "385f64c7471c0e04cd788e9829e2bd048718bb8ece0688c40440171faf802baa",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0043_python_mcp_runtime_context_md",
+          "observed_blob_sha": "7bdbb60331a7fdd268d1ef0ca8f10277d3cb5cbe",
+          "observed_commit_sha": "736e838dc61628a6dd4185feaa13d781a23e0a01",
+          "observed_tree_sha": "c2ff25d3ba0cdc2a38e2ef73ce5d68ae379a3231",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0043-python-mcp-runtime-context.md__7bdbb60331a7__736e838dc616.md",
+          "sha": "7bdbb60331a7fdd268d1ef0ca8f10277d3cb5cbe",
+          "tree_sha": "c2ff25d3ba0cdc2a38e2ef73ce5d68ae379a3231"
+        },
         "docs/decisions/README.md": {
           "blob_sha": "55c48a7089dde103d2ec7bc3c9d16412989fe2e7",
           "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
@@ -1274,7 +1286,7 @@
           "tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4"
         }
       },
-      "last_checked_at": "2026-09-16T23:57:02.098158+00:00"
+      "last_checked_at": "2026-09-22T23:54:02.309097+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
