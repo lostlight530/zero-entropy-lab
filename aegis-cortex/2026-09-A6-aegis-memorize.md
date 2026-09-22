@@ -9,7 +9,7 @@
 - Loop Stage: Memorize
 - Run Month: 2026-09
 - Target Month: 2026-09
-- Coverage Window: 2026-09-01 through 2026-09-21
+- Coverage Window: 2026-09-01 through 2026-09-22
 - Month Closure Status: OPEN
 - Agent: GPT Web Maintenance Agent
 - Record Provenance: HUMAN_AUTHORIZED_MONTH_TO_DATE_BASELINE
@@ -39,10 +39,10 @@ A5 current path:
 - status: OPEN / PROVISIONAL_NOT_FINAL
 - provenance: HUMAN_AUTHORIZED_MONTH_TO_DATE_BASELINE
 
-Daily current-path coverage through 2026-09-21:
+Daily current-path coverage through 2026-09-22:
 
-- A1: 21 / 21
-- A2: 21 / 21
+- A1: 22 / 22
+- A2: 22 / 22
 
 Weekly current-path coverage relevant to September:
 
@@ -62,7 +62,7 @@ Reasons:
 
 1. September natural month has not ended
 2. final A5 reflection has not occurred
-3. 2026-09-21 Daily A1/A2 are now retained; 2026-09-22 through 2026-09-30 are not classified by this A6 as completed month inputs
+3. 2026-09-21 and 2026-09-22 Daily A1/A2 are now retained; 2026-09-23 through 2026-09-30 are not classified by this A6 as completed month inputs
 4. several September Daily records preserve blocked, substitute and reconciliation states
 5. W38 current completion includes later maintenance annotation rather than an all-native task-time chain
 
@@ -240,6 +240,75 @@ That absence is not converted into a historical scheduler-failure claim by this 
 Coverage Window = 2026-09-01..2026-09-21
 Current A1 Paths = 21 / 21
 Current A2 Paths = 21 / 21
+W39 = IN_PROGRESS
+Month Closure = OPEN
+Durable Doctrine Promotion = NO
+Final A6 = NOT_DUE
+```
+
+## CURRENT_CARRY_FORWARD_EXTENSION_2026-09-22
+
+Maintenance Agent: GPT Web Maintenance Agent  
+Maintenance Type: FORWARD_A6_OPEN_MONTH_RECONCILIATION  
+Natural Month State: OPEN  
+Final A5: NOT_DUE  
+Final A6: NOT_DUE  
+Durable Doctrine Promotion: NO
+
+### Newly retained Daily input
+
+2026-09-22 contributes one Jules-native A1/A2 pair
+
+Its current bounded value is:
+
+- source-specific external reliability evidence
+- one source lineage
+- no independent corroboration
+- NO_LOCAL_EVIDENCE
+- Host Applicability UNKNOWN
+- CONTINUE_WATCH_ONLY
+
+The pre-merge A2 wording correction is retained as current evidence discipline
+
+```text
+PAPER_RESULT
+!= LOCAL_PARAMETER
+
+EXTERNAL_RISK
+!= LOCAL_INCIDENT
+
+SOURCE_VALID_FOR_STUDY
+!= LOCAL_TRANSFER_VALIDATED
+```
+
+### Carry-forward effect
+
+2026-09-22 strengthens an existing provisional false-completion / semantic-completion observation discipline
+
+It does not establish a new durable doctrine
+
+It does not establish measured local effectiveness
+
+It does not authorize host/runtime modification
+
+Status:
+
+`RETAIN_FOR_FINAL_REVIEW / NOT_PROMOTED`
+
+### W39
+
+W39 remains IN_PROGRESS
+
+No A3/A4 final is due from this layer
+
+No Weekly closure is created here
+
+### Updated A6 current baseline
+
+```text
+Coverage Window = 2026-09-01..2026-09-22
+Current A1 Paths = 22 / 22
+Current A2 Paths = 22 / 22
 W39 = IN_PROGRESS
 Month Closure = OPEN
 Durable Doctrine Promotion = NO
