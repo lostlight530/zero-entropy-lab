@@ -9,7 +9,7 @@
 - Loop Stage: Reflect
 - Run Month: 2026-09
 - Target Month: 2026-09
-- Coverage Window: 2026-09-01 through 2026-09-21
+- Coverage Window: 2026-09-01 through 2026-09-22
 - Month Closure Status: OPEN
 - Agent: GPT Web Maintenance Agent
 - Record Provenance: HUMAN_AUTHORIZED_MONTH_TO_DATE_BASELINE
@@ -28,7 +28,7 @@ This file establishes the current September month-to-date A5 baseline without pr
 
 It is a canonical monthly task path, not an additional audit file
 
-It records the repository-visible 2026-09-01 through 2026-09-21 state one logical date at a time
+It records the repository-visible 2026-09-01 through 2026-09-22 state one logical date at a time
 
 It preserves all blocked, substitute, rewrite and reconciliation provenance rather than compressing current path presence into a single success count
 
@@ -61,13 +61,14 @@ At natural month end this same file may be extended or revised in-place with an 
 | 2026-09-19 | SUCCESS / SINGLE_SOURCE_LINEAGE | INPUT_MISSING / BLOCKED | Jules-native | original A2 did not consume later A1 action-level reliability evidence |
 | 2026-09-20 | SUCCESS / SINGLE_SOURCE_LINEAGE | INPUT_MISSING / BLOCKED | Jules-native | A2 header has internal SUCCESS contradiction, controlling interpretation is BLOCKED |
 | 2026-09-21 | SUCCESS / SINGLE_SOURCE_LINEAGE | SUCCESS / SINGLE_SOURCE_LINEAGE | Jules-native pair | one original-research lineage supports source-specific reported results; Independent Verification NO, NO_LOCAL_EVIDENCE, Host Applicability UNKNOWN remain controlling |
+| 2026-09-22 | SUCCESS / SINGLE_SOURCE_LINEAGE | SUCCESS / SINGLE_SOURCE_LINEAGE | Jules-native pair; A2 received pre-merge evidence-boundary correction | READY paper results remain source-specific external evidence; no second lineage, NO_LOCAL_EVIDENCE, Host Applicability UNKNOWN, CONTINUE_WATCH_ONLY |
 
 ### Current path counts
 
-- A1 current paths through 2026-09-21: 21 / 21
-- A2 current paths through 2026-09-21: 21 / 21
-- Current path pair coverage: 21 / 21
-- Current path completeness is not equivalent to twenty native successful Observe→Orient chains
+- A1 current paths through 2026-09-22: 22 / 22
+- A2 current paths through 2026-09-22: 22 / 22
+- Current path pair coverage: 22 / 22
+- Current path completeness is not equivalent to twenty-two native successful Observe→Orient chains
 
 ### Provenance exceptions that must survive aggregation
 
@@ -535,6 +536,147 @@ Historical missing classification:
 Coverage Window = 2026-09-01..2026-09-21
 A1 Current Paths = 21 / 21
 A2 Current Paths = 21 / 21
+W39 = IN_PROGRESS
+Month = OPEN
+Final A5 = NOT_DUE
+Durable Doctrine Promotion = NO
+```
+
+## CURRENT_MONTH_TO_DATE_EXTENSION_2026-09-22
+
+Maintenance Agent: GPT Web Maintenance Agent  
+Maintenance Type: FORWARD_MONTH_TO_DATE_RECONCILIATION  
+Original 2026-09-22 A1/A2 Files Modified By This A5 Pass: NO  
+Month State: OPEN  
+W39 State: IN_PROGRESS  
+Final A5: NOT_DUE  
+Durable Doctrine Promotion: NO
+
+### File-by-file review — 2026-09-22 A1
+
+Reviewed file:
+
+`aegis-cortex/2026-09-22-A1-reliability-observe.md`
+
+Observed state:
+
+- Agent: Jules
+- Record Provenance: JULES_NATIVE
+- Network Status: NETWORK_VERIFIED
+- Source Status: SINGLE_SOURCE_LINEAGE
+- Task Status: SUCCESS
+- Source Identity: arXiv:2609.02095v1
+- Source Authority For Claim: ORIGINAL_RESEARCH
+- Independent Verification: NO
+- Local Incident Evidence: NO_LOCAL_EVIDENCE
+- Host Applicability: UNKNOWN
+
+The READY paper supplies source-specific evidence that similar autonomous-performance values can coexist with materially different human-review requirements under the paper's target reliability condition
+
+Current A5 interpretation:
+
+```text
+PAPER_REPORTED_DEPLOYMENT_RELIABILITY_GAP
+!= LOCAL_AEGIS_FAILURE_RATE
+
+HUMAN_REVIEW_COST_IN_PAPER
+!= LOCAL_HUMAN_REVIEW_COST
+
+EXTERNAL_FAILURE_MODE_EVIDENCE
+!= LOCAL_INCIDENT
+```
+
+The numeric values remain paper-scoped
+
+They are not imported as local parameters
+
+### File-by-file review — 2026-09-22 A2
+
+Reviewed file:
+
+`aegis-cortex/2026-09-22-A2-doctrine-orient.md`
+
+Observed state:
+
+- Input Status: SUCCESS
+- Network Status: NETWORK_VERIFIED
+- Source Status: SINGLE_SOURCE_LINEAGE
+- Task Status: SUCCESS
+- Independent Verification: NO
+- Local Incident Evidence: NO_LOCAL_EVIDENCE
+- Host Applicability: UNKNOWN
+- Weekly Promotion Eligibility: CONTINUE_WATCH_ONLY
+
+Before merge, periodic review corrected two evidence-boundary phrases in the owning A2 file
+
+Correction effect 1:
+
+Earlier wording could be read as making a claim about an uninspected local runtime property
+
+Current wording is scoped to:
+
+`within the allowed Aegis record scope, corresponding local human-review-cost or incident evidence was not observed`
+
+Correction effect 2:
+
+The source itself is not labeled unreliable
+
+The controlling limitation is transfer/applicability:
+
+```text
+SOURCE_RELIABLE_FOR_ITS_REPORTED_STUDY
+!= DIRECTLY_TRANSFERABLE_TO_LOCAL_AEGIS
+```
+
+This correction is already part of current main and is carried forward here rather than rewritten again
+
+### Cross-file effect
+
+A1 and A2 remain one external source lineage
+
+A2 interpretation does not create independent corroboration
+
+```text
+A1_SOURCE
++
+A2_ORIENTATION
+!= TWO_INDEPENDENT_SOURCES
+```
+
+The correct W39 effect is:
+
+`CONTINUE_WATCH_ONLY`
+
+not doctrine promotion and not local protocol change
+
+### Updated current counts
+
+A1 current paths through 2026-09-22: 22 / 22
+
+A2 current paths through 2026-09-22: 22 / 22
+
+Current path pair coverage: 22 / 22
+
+Historical blocked/substitute/reconciliation exceptions remain intact
+
+### W39 state
+
+W39 = IN_PROGRESS
+
+Retained dates:
+- 2026-09-21
+- 2026-09-22
+
+A3 final: NOT_DUE
+A4 final: NOT_DUE
+Weekly closure: NOT_CLAIMED
+
+### A5 current result
+
+```text
+Coverage Window = 2026-09-01..2026-09-22
+A1 Current Paths = 22 / 22
+A2 Current Paths = 22 / 22
 W39 = IN_PROGRESS
 Month = OPEN
 Final A5 = NOT_DUE
