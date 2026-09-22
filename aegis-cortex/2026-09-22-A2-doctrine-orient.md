@@ -55,7 +55,7 @@
 - **Risk Categories**: false completion risk, overconfidence risk, task loop break risk
 - **Verification Status**: VERIFIED_FOR_SOURCE_SPECIFIC_REPORTED_RESULTS
 - **Verification Sources**: arXiv:2609.02095v1 via https://ar5iv.org/html/2609.02095v1
-- **Aegis Repository Record Comparison**: NO_LOCAL_EVIDENCE. 当前 Aegis 的全自动化无监督流程尚未统计或度量这种可靠性带来的隐藏人类审查成本。该现象为外部风险，目前没有记录显示本地同样受到由于自主准确率接近而带来巨大不可靠性差距的影响。
+- **Aegis Repository Record Comparison**: NO_LOCAL_EVIDENCE. 在本任务允许读取的 Aegis 记录中未观察到对应的人类审查成本测量或本地事故证据。该现象保持为外部风险，不能据此推断 zero-entropy-lab 或 Aegis 本地存在同样的可靠性差距。
 - **Local Applicability**: 外部信号提示需要继续观察
 - **Evidence Strength**: HIGH for the external paper results on READY benchmark; UNKNOWN for local Aegis applicability.
 - **Counterevidence**: NONE ESTABLISHED WITHIN THE ALLOWED AEGIS RECORD SCOPE. Aegis 尚未报告人类审查频率和准确率的直接对比数据。
@@ -69,7 +69,7 @@
 - **哪些需要进入 A3**: 作为 CONTINUE_WATCH 候选，加入防止假性完成判断的观察清单中，但不引发直接修改协议的决策。
 - **哪些只是理论可能**: 纯粹自动运行且无需人类在环的 Aegis 日常调度中存在类似隐含差距，目前仅为理论可能。
 - **哪些判断仍不确定**: 在不需要外部临床精确度的文档生成操作中，微小的系统性差异是否同样会转化为破坏性的失效或高昂人工成本。
-- **哪些来源不可靠**: arXiv:2609.02095v1 本身提供了详实的数据支持，但特定医疗数据集的 76% 目标和人工审查比例数据绝对不能生搬硬套到本地的判断纪律中，不得直接推测本地具备同样问题。
+- **哪些来源不可靠**: NONE ESTABLISHED。当前问题不是来源失真，而是迁移边界：arXiv:2609.02095v1 的 READY 临床审计案例与 76% 目标属于论文评估条件，不能外推为本地 Aegis 运行参数或本地故障率。
 
 ## NO_DECISION_SECTION
 - 今天不做的纪律决策：不因为自主准确率与可靠性之间的脱节论述而直接更改当前的执行验证标准协议。
