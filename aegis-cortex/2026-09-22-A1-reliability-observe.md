@@ -89,30 +89,21 @@
 - 确认未公开提示词或私有 Memory：YES
 
 
-## MAINTENANCE_CALIBRATION_2026-09-23
+## DUAL_VIEW_MAINTENANCE_2026-09-23
 
-Maintenance scope: n-1 periodic-artifact base repair for the retained 2026-09-22 A1 record.
+### View 1 — N-1 / 2026-09-22 artifact calibration
 
-The READY paper remains one original-research source lineage. Current interpretation is explicitly bounded:
+The READY paper remains one external original-research lineage. Its reported performance/review-cost results are external failure-mode evidence, not Zero-local measurements or incidents. `NO_LOCAL_EVIDENCE` and `Host Applicability: UNKNOWN` remain controlling.
 
-- reported benchmark and review-rate numbers are external study results, not Zero measurements;
-- `Evidence Class: EXTERNAL_FAILURE_MODE_EVIDENCE` remains controlling;
-- `NO_LOCAL_EVIDENCE` and `Host Applicability: UNKNOWN` are not weakened by source quality;
-- the paper supports a failure-mode class concerning metric-to-deployment mismatch, but does not establish a local incident, local failure probability, or local human-review requirement;
-- `SUCCESS` records completion of this A1 observation task, not validation of the paper's universal applicability.
+### View 2 — N / 2026-09-23 current interpretation
+
+Later Aegis/current-main activity does not convert this paper into a local parameter, local incident, or host-runtime prescription. Current repository state may use the bounded risk class for orientation, but cannot inherit unobserved local effectiveness.
 
 ```text
-ORIGINAL_RESEARCH_RESULT
-!= LOCAL_REPOSITORY_MEASUREMENT
-
-EXTERNAL_FAILURE_MODE
+N_MINUS_1_EXTERNAL_EVIDENCE
++
+N_CURRENT_INTERPRETATION
 != LOCAL_INCIDENT
-
-HIGH_SOURCE_CONFIDENCE
-!= HOST_APPLICABILITY
-
-TASK_SUCCESS
-!= UNIVERSAL_CLAIM_VALIDATION
+!= LOCAL_PARAMETER
+!= HISTORY_REWRITE
 ```
-
-No local incident is created and no host/runtime change is authorized.
