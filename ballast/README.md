@@ -183,3 +183,24 @@ Ballast 下一阶段不研究 `Agent 有没有成功跑完` 这一种状态.
 Daily records 是 point-in-time primary evidence. Later understanding 不倒写 historical experiment.
 
 Audit, correction 与 maintenance 是独立治理 surface, 不决定 Daily 是否必须产出. `CASES.md` 与 `NOTES.md` 只有真实门槛满足时才更新, 不为了未来 AGI framing 虚增研究支持.
+
+
+## A2 current-state reconciliation — 2026-09-23
+
+Zero repository main advanced through 2026-09-23 Aegis task delivery. Ballast research credit does not advance from Aegis or host-repository movement.
+
+At this cut the latest retained Ballast primary Daily remains 2026-09-22.
+
+```text
+ZERO_MAIN_ADVANCED
+!= BALLAST_DAILY_EXECUTED
+
+AEGIS_TASK_DELIVERY
+!= BALLAST_EXPERIMENT
+
+DERIVED_POINTER_REVIEW
+!= NEW_EXPERIMENT
+!= NEW_EXECUTION_WINDOW
+```
+
+The Ballast current pointer therefore remains anchored to the latest actual Ballast Daily until a later native Ballast research unit exists.

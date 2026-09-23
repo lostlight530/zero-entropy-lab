@@ -342,6 +342,35 @@ The complete 2026-09-01..2026-09-22 Daily/Weekly retrospective was re-read again
 
 Retain the A5 heterogeneous-provenance boundaries, blocked task-time states, external-risk/local-incident separation, source-lineage limits, and the 2026-09-20 internal status contradiction. Nightly maintenance is reconciliation activity only; it does not create new doctrine evidence.
 
+
+## CURRENT_CARRY_FORWARD_EXTENSION_2026-09-23
+
+Maintenance type: A2 current-state reconciliation.
+Natural month state: OPEN.
+Final A5: NOT_DUE.
+Final A6: NOT_DUE.
+Durable doctrine promotion: NO.
+
+Current retained Daily paths through 2026-09-23:
+
+- A1: 23 / 23
+- A2: 23 / 23
+
+Task-time chain completeness is lower than current-path completeness because the 2026-09-23 A2 record remains `INPUT_MISSING / BLOCKED`.
+
+```text
+23_OF_23_CURRENT_PATHS
+!= TWENTY_THREE_NATIVE_SUCCESSFUL_A1_A2_CHAINS
+
+LATER_UPSTREAM_PRESENCE
+!= EARLIER_INPUT_AVAILABILITY
+
+A6_CURRENT_BASELINE
+!= NATURAL_MONTH_FINAL
+```
+
+W39 remains in progress. No final monthly doctrine promotion or host/runtime modification is authorized.
+
 ## SEPTEMBER_DUAL_CUTOFF_MAINTENANCE_2026-09-23
 
 ### A1 / N-1 cutoff — 2026-09-22
@@ -350,3 +379,10 @@ Retain the A5 heterogeneous-provenance boundaries, blocked task-time states, ext
 - Preserve blocked dependency states, heterogeneous provenance, source-lineage limits, external-risk/local-incident separation, and the 2026-09-20 internal status contradiction.
 - Later A1 delivery never converts an earlier A2 INPUT_MISSING / BLOCKED execution into successful Orientation.
 - September remains OPEN; durable doctrine promotion and final A5/A6 remain NOT_DUE.
+
+### A2 / N cutoff — 2026-09-23
+
+- Current main now retains the 2026-09-23 A1/A2 paths, but later path presence does not rewrite the original A2 authority snapshot or dependency availability.
+- Current path coverage is not equivalent to successful A1→A2 chain coverage.
+- External reliability evidence remains distinct from local incident, local parameter, host applicability, and measured local effectiveness.
+- W39 remains IN_PROGRESS and the month remains OPEN; this note adds current interpretation only.
