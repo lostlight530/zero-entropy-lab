@@ -29,18 +29,18 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-09-22 representation validator 与 target incarnation identity 分离](records/2026-09-22.md)
+- 最新 Daily: [2026-09-24 asynchronous acceptance 与 cross-service effect/completion authority 分离](records/2026-09-24.md)
 - 当前月度事实源: [2026-09](records/2026-09.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-09-13 至 2026-09-19](audits/2026-09-13--2026-09-19.md)
-- 当前未闭合周期: 2026-09-20 至 2026-09-22, 当前 3 日覆盖, 未达到 6/7 日 audit 边界
+- 当前未闭合周期: 2026-09-20 至 2026-09-24, 当前 5 日 calendar coverage, 其中 2026-09-23 为 RECONSTRUCTION / NOT_RUN / UNVERIFIED, 未达到新的 6/7 日 native audit 边界
 - 当前方法: [METHOD.md](METHOD.md)
 - 控制案例: [CASES.md](CASES.md)
 - 长期发现: [NOTES.md](NOTES.md)
 - Daily template: [templates/daily.md](templates/daily.md)
 - Monthly template: [templates/monthly.md](templates/monthly.md)
 
-截至 2026-09-22, 9 月共有 22 个 Daily files, 其中 21 个 NATIVE research units, 1 个透明 RECONSTRUCTION gap. 另有 3 个 September reality-mapping Special, 均于 2026-09-20 实际核验, 不计 controlled experiment 或 independent execution window. 9 月 8 日继续不计独立实验或 execution window.
+截至 2026-09-24, 9 月共有 24 个 Daily files, 其中 22 个 NATIVE research units, 2 个透明 RECONSTRUCTION gaps, 分别为 2026-09-08 与 2026-09-23. 另有 3 个 September reality-mapping Special, 均于 2026-09-20 实际核验, 不计 controlled experiment 或 independent execution window. 9 月 8 日继续不计独立实验或 execution window.
 
 > Maintenance annotation — 2026-09-19
 >
@@ -204,3 +204,24 @@ DERIVED_POINTER_REVIEW
 ```
 
 The Ballast current pointer therefore remains anchored to the latest actual Ballast Daily until a later native Ballast research unit exists.
+
+
+## Ballast current-state advance — 2026-09-24
+
+2026-09-23 is now represented by a transparent `RECONSTRUCTION / NOT_RUN / UNVERIFIED` gap marker. It adds zero research-unit or execution-window credit.
+
+2026-09-24 contributes exactly one new NATIVE research unit on asynchronous acceptance and cross-service effect/completion authority separation.
+
+```text
+HTTP_202_ACCEPTED
+!= HISTORICAL_EFFECT_HIT
+!= CURRENT_COMPLETION
+
+CURRENT_GOAL_SATISFIED
+!= ORIGINAL_ATTEMPT_PROVENANCE
+
+AUTHORITATIVE_MISS
+!= CURRENT_RETRY_PERMISSION
+```
+
+Current native research endpoint is 2026-09-24.
