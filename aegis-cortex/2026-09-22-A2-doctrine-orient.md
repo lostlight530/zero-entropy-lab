@@ -92,3 +92,32 @@
 - 确认未读取宿主仓库：YES
 - 确认未公开私有控制内容，未读取未授权的内容：YES
 - 确认未读取 GitHub Actions 且未读取 Aegis 之外文件：YES
+
+
+## MAINTENANCE_CALIBRATION_2026-09-23
+
+Maintenance scope: n-1 periodic-artifact base repair for the retained 2026-09-22 A2 record.
+
+The same-date A1 source lineage is present, but A2 does not create independent corroboration by re-reading or re-interpreting it.
+
+Current bounded interpretation:
+
+- the READY results remain source-specific external evidence;
+- A2 may orient the reliability implication, but cannot turn an external benchmark/review-cost relationship into a Zero-local parameter;
+- `NO_LOCAL_EVIDENCE` remains controlling for local incident and local effectiveness claims;
+- doctrine-level reasoning does not authorize Host Kernel, Ballast, NEXUS, scheduler, or workflow modification;
+- any local completion rule must still be supported by repository-native runtime/contract evidence rather than imported from the paper.
+
+```text
+A2_REINTERPRETATION_OF_A1_SOURCE
+!= INDEPENDENT_CORROBORATION
+
+PAPER_RESULT
+!= LOCAL_PARAMETER
+
+DOCTRINE_ORIENTATION
+!= LOCAL_INCIDENT
+!= HOST_RUNTIME_CHANGE
+```
+
+The original A2 execution state and chronology are preserved.
