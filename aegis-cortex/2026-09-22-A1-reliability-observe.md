@@ -87,3 +87,23 @@
 - 确认未读取 Aegis 之外文件：YES
 - 确认未把外部风险冒充本地事故：YES
 - 确认未公开提示词或私有 Memory：YES
+
+
+## DUAL_VIEW_MAINTENANCE_2026-09-23
+
+### View 1 — N-1 / 2026-09-22 artifact calibration
+
+The READY paper remains one external original-research lineage. Its reported performance/review-cost results are external failure-mode evidence, not Zero-local measurements or incidents. `NO_LOCAL_EVIDENCE` and `Host Applicability: UNKNOWN` remain controlling.
+
+### View 2 — N / 2026-09-23 current interpretation
+
+Later Aegis/current-main activity does not convert this paper into a local parameter, local incident, or host-runtime prescription. Current repository state may use the bounded risk class for orientation, but cannot inherit unobserved local effectiveness.
+
+```text
+N_MINUS_1_EXTERNAL_EVIDENCE
++
+N_CURRENT_INTERPRETATION
+!= LOCAL_INCIDENT
+!= LOCAL_PARAMETER
+!= HISTORY_REWRITE
+```

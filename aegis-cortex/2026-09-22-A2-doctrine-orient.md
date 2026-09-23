@@ -92,3 +92,22 @@
 - 确认未读取宿主仓库：YES
 - 确认未公开私有控制内容，未读取未授权的内容：YES
 - 确认未读取 GitHub Actions 且未读取 Aegis 之外文件：YES
+
+
+## DUAL_VIEW_MAINTENANCE_2026-09-23
+
+### View 1 — N-1 / 2026-09-22 artifact calibration
+
+Same-date A1 was present and A2 may orient its reliability implication, but re-reading the same paper does not create independent corroboration. External study results remain external; `NO_LOCAL_EVIDENCE` remains controlling for local incident/effectiveness claims.
+
+### View 2 — N / 2026-09-23 current interpretation
+
+Later Aegis/current-main state may preserve this bounded doctrine note, but cannot turn it into a host-runtime rule or claim that the 2026-09-22 external evidence was locally validated.
+
+```text
+N_MINUS_1_DOCTRINE_ORIENTATION
++
+N_CURRENT_INTERPRETATION
+!= INDEPENDENT_CORROBORATION
+!= HOST_RUNTIME_CHANGE
+```
