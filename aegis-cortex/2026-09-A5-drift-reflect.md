@@ -711,3 +711,29 @@ COMMAND_OR_CHECKER_SUCCESS != SEMANTIC_COMPLETION
 ```
 
 W39 remains IN_PROGRESS. September remains OPEN. Natural-month A5/A6 finalization and durable doctrine promotion remain NOT_DUE / NOT_AUTHORIZED.
+
+
+## CURRENT_MONTH_TO_DATE_EXTENSION_2026-09-23
+
+Maintenance type: A2 current-state reconciliation.
+
+Current main contains both 2026-09-23 A1 and A2 paths. The original 2026-09-23 A2 execution remains a fail-closed task-time record because same-date A1 was not available to that A2 execution.
+
+Current interpretation:
+
+```text
+CURRENT_A1_PATH_PRESENT
++
+CURRENT_A2_PATH_PRESENT
+!= A1_AVAILABLE_TO_A2_AT_TASK_TIME
+
+LATER_A1_DELIVERY
+!= RETROACTIVE_A2_ORIENTATION
+
+CURRENT_PATH_COMPLETE
+!= SUCCESSFUL_DAILY_CHAIN
+```
+
+The 2026-09-23 A2 blocked state remains historical evidence and is not promoted to success by later repository completeness.
+
+September remains OPEN. W39 remains IN_PROGRESS. This extension adds no durable doctrine, no local incident, and no host-runtime action.
