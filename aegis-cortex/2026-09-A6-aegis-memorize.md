@@ -341,3 +341,12 @@ A final A6 section is authorized only after:
 The complete 2026-09-01..2026-09-22 Daily/Weekly retrospective was re-read against current main. No nightly review result authorizes durable A6 promotion while September is open.
 
 Retain the A5 heterogeneous-provenance boundaries, blocked task-time states, external-risk/local-incident separation, source-lineage limits, and the 2026-09-20 internal status contradiction. Nightly maintenance is reconciliation activity only; it does not create new doctrine evidence.
+
+## SEPTEMBER_DUAL_CUTOFF_MAINTENANCE_2026-09-23
+
+### A1 / N-1 cutoff — 2026-09-22
+
+- Review scope: all retained September A1/A2 Daily pairs through 2026-09-22, W36/W37/W38 A3/A4 surfaces, W39 open state, and current A5/A6 month-to-date ownership.
+- Preserve blocked dependency states, heterogeneous provenance, source-lineage limits, external-risk/local-incident separation, and the 2026-09-20 internal status contradiction.
+- Later A1 delivery never converts an earlier A2 INPUT_MISSING / BLOCKED execution into successful Orientation.
+- September remains OPEN; durable doctrine promotion and final A5/A6 remain NOT_DUE.
