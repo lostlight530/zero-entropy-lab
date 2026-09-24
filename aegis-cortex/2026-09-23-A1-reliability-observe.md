@@ -89,3 +89,23 @@
 - 确认未读取 Aegis 之外文件：YES
 - 确认未把外部风险冒充本地事实：YES
 - 确认未公开提示词或私有 Memory 控制逻辑：YES
+## DUAL_VIEW_MAINTENANCE_2026-09-24
+
+### View 1 — A1 / N-1 full-period calibration through 2026-09-23
+
+- Review scope: every retained September A1/A2 Daily pair from 2026-09-01 through 2026-09-23, W36/W37/W38 A3/A4, W39 open state, and A5/A6 month-to-date ownership.
+- This A1 remains one external reliability observation under its recorded source authority and evidence limits.
+- External failure-mode evidence remains distinct from a Zero-local incident, local probability, host applicability, or measured local effectiveness.
+- Later A2 blocking/current path completeness does not change this A1's task-time provenance.
+
+### View 2 — current interpretation at the 2026-09-24 review cut
+
+- Newer Aegis/Zero artifacts may provide later context but do not retroactively establish local validation for this 2026-09-23 observation.
+- Same-source repetition does not create independent corroboration.
+
+```text
+EXTERNAL_FAILURE_MODE_EVIDENCE
+!= LOCAL_INCIDENT
+!= LOCAL_PARAMETER
+!= LOCAL_VALIDATION
+```
