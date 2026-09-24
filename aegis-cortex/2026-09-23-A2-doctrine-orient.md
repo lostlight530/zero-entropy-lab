@@ -72,3 +72,24 @@ INPUT_MISSING
 - 确认未把理论风险写成本地事故：YES
 - 确认未把历史 A2 推测今日风险：YES
 - 确认所有依赖 A1 的区域写 INPUT_MISSING：YES
+## DUAL_VIEW_MAINTENANCE_2026-09-24
+
+### View 1 — A1 / N-1 full-period calibration through 2026-09-23
+
+- Review scope includes all September A1→A2 chronology through 2026-09-23 plus every due Weekly and month-to-date A5/A6 surface.
+- Preserve this A2's original fail-closed dependency state: `INPUT_MISSING / BLOCKED`.
+- Later A1 path presence is current repository evidence, not proof that A1 was available to this A2 at task time.
+- External paper evidence is not converted into a local incident or host-runtime doctrine.
+
+### View 2 — current interpretation at the 2026-09-24 review cut
+
+- Later A1/A2 path completeness does not create a successful historical A1→A2 chain for 2026-09-23.
+- Newer doctrine/research may extend current interpretation without rewriting this blocked execution.
+
+```text
+ORIGINAL_A2_BLOCKED
++
+LATER_CURRENT_PATH_COMPLETENESS
+!= RETROACTIVE_ORIENTATION
+!= LOCAL_VALIDATION
+```
