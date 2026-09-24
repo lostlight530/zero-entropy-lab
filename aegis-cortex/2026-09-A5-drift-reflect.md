@@ -737,3 +737,30 @@ CURRENT_PATH_COMPLETE
 The 2026-09-23 A2 blocked state remains historical evidence and is not promoted to success by later repository completeness.
 
 September remains OPEN. W39 remains IN_PROGRESS. This extension adds no durable doctrine, no local incident, and no host-runtime action.
+## A2 / N cutoff — 2026-09-24 current-state reconciliation
+
+The merged A1 full-period review through 2026-09-23 remains controlling history. Current main now adds the 2026-09-24 native A1→A2 pair.
+
+Current 2026-09-24 Aegis state:
+- A1: SUCCESS / NETWORK_VERIFIED / SINGLE_SOURCE_LINEAGE / EXTERNAL_FAILURE_MODE_EVIDENCE.
+- A2: SUCCESS with same-day A1 present.
+- Canonical external source: arXiv:2609.00523v1.
+- Independent second-source corroboration: NO.
+- Local incident evidence: NO_LOCAL_EVIDENCE.
+- Host applicability: UNKNOWN.
+- Weekly promotion: CONTINUE_WATCH_ONLY.
+- The external reported 19.1-point aggregate uplift and 16-percentage-point unseen-configuration result remain paper-scoped.
+- W39 remains IN_PROGRESS; no A3/A4 final or weekly closure is created here.
+
+```text
+EXTERNAL_FAILURE_MODE_EVIDENCE
+!= LOCAL_INCIDENT
+A1_SOURCE
++
+A2_ORIENTATION_OF_SAME_SOURCE
+!= TWO_INDEPENDENT_LINEAGES
+CONTINUE_WATCH_ONLY
+!= DOCTRINE_PROMOTION
+```
+
+The 2026-09-23 blocked A2 and all earlier blocked/substitute/reconciliation histories remain unchanged.

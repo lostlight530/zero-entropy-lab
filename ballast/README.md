@@ -225,3 +225,26 @@ AUTHORITATIVE_MISS
 ```
 
 Current native research endpoint is 2026-09-24.
+## A2 current-state reconciliation — 2026-09-24
+
+Current Ballast state after the merged A1 full-period review:
+
+- 2026-09-08 remains `RECONSTRUCTION / NOT_RUN / UNVERIFIED`.
+- 2026-09-23 remains `RECONSTRUCTION / NOT_RUN / UNVERIFIED`.
+- 2026-09-24 is one NATIVE Daily research unit on asynchronous acceptance, historical occurrence, current completion and current retry permission.
+- The current 2026-09-20..2026-09-24 cycle has 5 calendar dates and does not create a new overlapping 6/7-day audit.
+- No CASE or NOTES promotion is created by this A2 maintenance pass.
+
+```text
+HTTP_202_ACCEPTED
+!= EFFECT_OCCURRED
+!= CURRENT_COMPLETION
+
+AUTHORITATIVE_MISS
+!= CURRENT_RETRY_PERMISSION
+
+RECONSTRUCTION
+!= NATIVE_EXPERIMENT
+```
+
+The A1 through-2026-09-23 annotations remain intact.
