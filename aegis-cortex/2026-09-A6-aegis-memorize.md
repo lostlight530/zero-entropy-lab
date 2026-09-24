@@ -386,3 +386,12 @@ W39 remains in progress. No final monthly doctrine promotion or host/runtime mod
 - Current path coverage is not equivalent to successful A1→A2 chain coverage.
 - External reliability evidence remains distinct from local incident, local parameter, host applicability, and measured local effectiveness.
 - W39 remains IN_PROGRESS and the month remains OPEN; this note adds current interpretation only.
+## SEPTEMBER_DUAL_CUTOFF_MAINTENANCE_2026-09-24
+
+### A1 / N-1 cutoff — full September review through 2026-09-23
+
+- Review scope: all retained September A1/A2 Daily pairs from 2026-09-01 through 2026-09-23, W36/W37/W38 A3/A4, W39 open state, and current A5/A6 month-to-date ownership.
+- Preserve blocked dependency states, heterogeneous provenance, source-lineage limits, external-risk/local-incident separation, negative evidence, and unresolved contradictions already retained by September history.
+- 2026-09-23 current path completeness does not convert its original A2 `INPUT_MISSING / BLOCKED` task-time state into successful Orientation.
+- Later success never fills earlier unavailable input or missing runtime evidence.
+- September remains OPEN; durable doctrine promotion and final A5/A6 remain NOT_DUE.
