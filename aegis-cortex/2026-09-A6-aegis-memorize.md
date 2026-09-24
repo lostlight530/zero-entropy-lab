@@ -395,3 +395,26 @@ W39 remains in progress. No final monthly doctrine promotion or host/runtime mod
 - 2026-09-23 current path completeness does not convert its original A2 `INPUT_MISSING / BLOCKED` task-time state into successful Orientation.
 - Later success never fills earlier unavailable input or missing runtime evidence.
 - September remains OPEN; durable doctrine promotion and final A5/A6 remain NOT_DUE.
+### A2 / N cutoff — 2026-09-24 current-state reconciliation
+
+Current retained September Aegis paths now extend through 2026-09-24.
+
+- 2026-09-24 is a native A1 SUCCESS → A2 SUCCESS pair.
+- 2026-09-23 remains path-complete in current main but its original A2 task-time state remains `INPUT_MISSING / BLOCKED`.
+- Earlier blocked/substitute/reconciliation provenance remains historical.
+- The 2026-09-24 external memory-poisoning paper is one external source lineage and is not local incident evidence.
+- No host/runtime change, local parameter import, or durable doctrine promotion is authorized.
+- W39 remains IN_PROGRESS.
+- September remains OPEN.
+- final A5/A6 remain NOT_DUE.
+
+```text
+CURRENT_PATH_COVERAGE
+!= ALL_NATIVE_SUCCESSFUL_CHAINS
+EXTERNAL_RISK
+!= LOCAL_FAILURE
+MONTH_OPEN
+!= FINAL_DURABLE_DOCTRINE
+```
+
+This section extends the A1 full-period annotation only; it does not rewrite any earlier execution.
