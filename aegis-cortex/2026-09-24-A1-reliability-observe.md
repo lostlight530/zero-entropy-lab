@@ -46,7 +46,8 @@
 - **Source ID**: SRC-2026-09-24-01
 - **Title**: Transferable End-to-End Optimization for Indirect Long-Term Memory Poisoning in LLM Agents
 - **Publisher**: arXiv
-- **URL**: https://ar5iv.org/abs/2609.00523
+- **URL**: https://arxiv.org/abs/2609.00523v1
+- **Access Surface**: https://ar5iv.org/abs/2609.00523 (HTML rendering used for full-text reading; canonical identity remains arXiv:2609.00523v1)
 - **Published or Updated Date**: 2026-09-01
 - **Date Checked**: 2026-09-24
 - **Source Type**: ORIGINAL_RESEARCH
@@ -66,7 +67,7 @@
 - **Signal**: 代理的长期记忆可以成为一种攻击途径，外部不可信内容通过记忆的写入、检索和利用，能够持久地影响代理未来的工具调用或决策。
 - **Source IDs**: SRC-2026-09-24-01
 - **Failure Mode Addressed**: Memory poisoning, Prompt drift, Tool-use errors.
-- **External Evidence**: 研究通过 PipePoison 提出的端到端优化方法，在三种不同的代理框架和四种记忆机制下均成功提升了攻击成功率，并且在即使完全未见过的代理配置上，也能以 16% 的优势超过基线。
+- **External Evidence**: 研究通过 PipePoison 提出的端到端优化方法，在三种不同的代理框架和四种记忆机制下均成功提升了攻击成功率，并且在完全未见过的代理配置上，相比最强基线高出 16 个百分点。
 - **Local Repository Evidence**: NONE
 - **Why It May Matter**: 它突出了长期记忆存储对安全性的潜在破坏作用。如果未经严格验证的外部信息被吸收到持续记忆中，可能会在后续轮次中引发意外的代理行为（如授权漂移或工具滥用），这也呼应了 Aegis 强调“不得在输出或提交中暴露私有 Memory 控制逻辑”的防御思路。
 - **Confidence**: HIGH
