@@ -418,3 +418,22 @@ MONTH_OPEN
 ```
 
 This section extends the A1 full-period annotation only; it does not rewrite any earlier execution.
+
+## 中秋加班维护补充 — A2 / N = 2026-09-24
+
+本段保存 2026-09-24 的 Aegis 月内关系切点, 不把 2026-09-25 后来出现的 A1/A2 结果提前写进这个 snapshot.
+
+A1 已经重新确认 9 月 1 日至 9 月 23 日的历史边界. 在此基础上, 9 月 24 日新增的是一组 native A1 SUCCESS → A2 SUCCESS, 但它不能覆盖 9 月 23 日 A2 原始 `INPUT_MISSING / BLOCKED`. 外部 memory-poisoning 证据仍然只是 external risk lineage, 不转化为 Zero 本地事故或 Host Kernel runtime result.
+
+截至这个逻辑切点, W39 仍然 IN_PROGRESS, September 仍然 OPEN, final A5/A6 与 durable doctrine promotion 都不成立. 中秋加班维护只维护关系连续性, 不制造月末封存.
+
+```text
+A1_HISTORY_THROUGH_2026_09_23
++
+NATIVE_PAIR_2026_09_24
+=
+AEGIS_RELATIONAL_CUT_2026_09_24
+
+LATER_2026_09_25
+!= EARLIER_FINALIZATION
+```
