@@ -437,3 +437,23 @@ AEGIS_RELATIONAL_CUT_2026_09_24
 LATER_2026_09_25
 != EARLIER_FINALIZATION
 ```
+
+
+## 2026-09-25 A1 — September full-coverage maintenance through 2026-09-24
+
+Base revision: `d7855c616da7539c7090c0ba9c7ca14a511eb280`. Cutoff: 2026-09-24 Asia/Shanghai.
+
+Coverage decision summary:
+- 2026-09-01..2026-09-23 Aegis A1/A2, due A3/A4 Weekly surfaces, and month-to-date A5/A6 state were re-read against current main. Prior decisions remain `NO_FOLLOW_UP` except already-recorded correction/reconciliation.
+- 2026-09-24 A1→A2 is retained as a native successful pair. It does not rewrite the 2026-09-23 original A2 `INPUT_MISSING / BLOCKED` state.
+- External reliability and memory-poisoning evidence remains external-risk evidence. It is not a Zero-local incident, Host Kernel runtime result, or measured local probability.
+- W39 remains `NOT_DUE` for closure. September remains OPEN and final A5/A6 promotion remains `NOT_DUE`.
+
+```text
+EXTERNAL_RISK
+!= LOCAL_INCIDENT
+LATER_A1_PATH
+!= EARLIER_A2_INPUT_AVAILABLE
+A1_REVIEW
+!= NEW_RUNTIME_VALIDATION
+```
