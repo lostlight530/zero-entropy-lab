@@ -93,3 +93,22 @@ LATER_CURRENT_PATH_COMPLETENESS
 != RETROACTIVE_ORIENTATION
 != LOCAL_VALIDATION
 ```
+
+## 中秋加班维护补充 — A1 / 2026-09-24
+
+本段属于后续维护关系层, 不替代 2026-09-23 A2 的原始 `INPUT_MISSING / BLOCKED` 记录.
+
+本轮以 2026-09-24 为 N 日, 在中秋加班维护窗口重新复核 9 月 1 日至 9 月 23 日的 Aegis Daily 链、到期 Weekly、月内 A5/A6 关系以及 Ballast 的同期研究边界. 目标不是把所有路径写成成功链, 而是检查后来出现的文件、来源和解释有没有误伤原始时间事实.
+
+对本文件, 后来同日 A1 路径存在不构成当时输入可用证据. 外部可靠性材料也不能因为节日期间重新阅读就升级为 Zero 本地事故、Host Kernel 运行结果或已经验证的恢复能力. Ballast 的研究结论继续只属于其独立研究平面.
+
+这次允许增加更完整的关系说明, 但不会机械改每个旧文件. 只有真正承担时间边界或当前解释的 owning artifact 才追加内容, 原始负状态继续作为有效证据保留.
+
+```text
+MID_AUTUMN_MAINTENANCE
++
+LATER_REPOSITORY_COMPLETENESS
+!= ORIGINAL_A2_INPUT_AVAILABLE
+!= LOCAL_INCIDENT
+!= VALID_COMPLETION_PROOF
+```
