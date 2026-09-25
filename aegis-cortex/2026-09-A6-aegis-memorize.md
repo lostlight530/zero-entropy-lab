@@ -457,3 +457,24 @@ LATER_A1_PATH
 A1_REVIEW
 != NEW_RUNTIME_VALIDATION
 ```
+
+
+## 2026-09-25 A2 — current September relational version
+
+Base revision after merged A1: `3c5f60d52c47a9e4844e1c4f204b25844348a2e9`. N-day input: 2026-09-25.
+
+Current month evolution:
+- The merged A1 cutoff through 2026-09-24 remains intact.
+- 2026-09-25 A1 is Jules-native `SUCCESS`, `NETWORK_VERIFIED`, with evidence class `EXTERNAL_FAILURE_MODE_EVIDENCE`, source lineage arXiv:2608.02645v1, independent verification NO, and `NO_LOCAL_EVIDENCE` for a Zero incident.
+- 2026-09-25 A2 consumed the exact same-date A1 and is `SUCCESS`; the source remains a single lineage and Host Applicability remains `UNKNOWN`.
+- This extends current Aegis chronology but does not convert external evidence into a local incident, local probability, Host Kernel runtime result, or measured local effectiveness.
+- W39 remains OPEN/IN_PROGRESS. September remains OPEN. Final A5/A6 remains `NOT_DUE`.
+
+```text
+EXTERNAL_FAILURE_MODE_EVIDENCE
+!= LOCAL_REPOSITORY_INCIDENT
+SAME_SOURCE_LINEAGE
+!= INDEPENDENT_CORROBORATION
+A1_A2_SUCCESS
+!= HOST_RUNTIME_VALIDATION
+```
