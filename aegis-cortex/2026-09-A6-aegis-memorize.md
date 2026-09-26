@@ -822,3 +822,26 @@ A1_A2_SUCCESS
 - Coverage through 2026-09-25: VERIFIED_IN_CURRENT_OWNER_CHAIN.
 - Historical rewrite required: NO.
 - New runtime or source-independence credit: NONE.
+
+
+## A2_CURRENT_MONTH_RELATION_2026-09-26
+
+- Logical maintenance date: 2026-09-26
+- Current-month relation window: 2026-09-01 through 2026-09-26
+- A1 coverage through 2026-09-25: INHERITED_FROM_MERGED_A1.
+
+### N-day integration — Aegis
+- The 2026-09-26 A1 record is present and reports a successful external reliability observation from one source lineage.
+- The 2026-09-26 A2 record preserves INPUT_MISSING / BLOCKED / NOT_RUN at its task-time authority base.
+- Later A1 visibility does not replay or upgrade the original A2 execution.
+
+### Relation boundary
+- external evidence != local repository incident.
+- one source lineage != independent corroboration.
+- later availability != task-time input availability.
+- W39 and September remain OPEN; natural-month close is NOT_DUE.
+
+### A2 disposition
+- 2026-09-26 Aegis relation: INTEGRATED_WITH_TEMPORAL_AND_SOURCE_BOUNDARY.
+- Historical rewrite: NO.
+- New local-incident/runtime/independence credit: NONE.
