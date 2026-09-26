@@ -29,18 +29,18 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-09-25 status condition freshness versus observed generation and target incarnation](records/2026-09-25.md)
+- 最新 Daily: [2026-09-27 dynamic membership snapshot freshness versus protected completion boundary](records/2026-09-27.md)
 - 当前月度事实源: [2026-09](records/2026-09.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-09-20 至 2026-09-25](audits/2026-09-20--2026-09-25.md)
-- 当前周期: 2026-09-20 至 2026-09-25 已形成 6 日 derived audit, 其中 2026-09-23 为 RECONSTRUCTION / NOT_RUN / UNVERIFIED, audit 增加 0 experiment / window / finding credit
+- 最近完整周期 2026-09-20 至 2026-09-25 已形成 6 日 derived audit. 当前新周期为 2026-09-26 至 2026-09-27, 其中 2026-09-26 为 RECONSTRUCTION / NOT_RUN / UNVERIFIED, 尚未达到新的 6/7 日 audit 边界
 - 当前方法: [METHOD.md](METHOD.md)
 - 控制案例: [CASES.md](CASES.md)
 - 长期发现: [NOTES.md](NOTES.md)
 - Daily template: [templates/daily.md](templates/daily.md)
 - Monthly template: [templates/monthly.md](templates/monthly.md)
 
-截至 2026-09-25, 9 月共有 25 个 Daily files, 其中 23 个 NATIVE research units, 2 个透明 RECONSTRUCTION gaps, 分别为 2026-09-08 与 2026-09-23. 另有 3 个 September reality-mapping Special, 均于 2026-09-20 实际核验, 不计 controlled experiment 或 independent execution window. 9 月 8 日继续不计独立实验或 execution window.
+截至 2026-09-27, 9 月共有 27 个 Daily files, 其中 24 个 NATIVE research units, 3 个透明 RECONSTRUCTION gaps, 分别为 2026-09-08, 2026-09-23 与 2026-09-26. 另有 3 个 September reality-mapping Special, 均于 2026-09-20 实际核验, 不计 controlled experiment 或 independent execution window. 9 月 8 日继续不计独立实验或 execution window.
 
 > Maintenance annotation — 2026-09-19
 >
@@ -268,3 +268,28 @@ CURRENT_STATUS
 ```
 
 Current native research endpoint is 2026-09-25.
+
+
+## Ballast current-state advance — 2026-09-27
+
+2026-09-26 is represented as `RECONSTRUCTION / NOT_RUN / UNVERIFIED` and adds zero experiment, execution-window, CASE or NOTES credit.
+
+2026-09-27 contributes exactly one NATIVE research unit on dynamic membership snapshot freshness versus a protected completion boundary.
+
+```text
+FRESH_LIST
+!= MEMBERSHIP_FRESH_THROUGH_COMPLETION
+
+WATCH_CONTINUITY
+!= CURRENT_EXECUTION_PERMISSION
+
+CURRENT_PREDICATE_SATISFIED
+!= PRIOR_UNKNOWN_RECLASSIFIED
+
+LOGICAL_NAME_EQUALITY
+!= MEMBER_INCARNATION_IDENTITY
+```
+
+The latest complete derived audit remains 2026-09-20..2026-09-25. The new cycle is 2026-09-26..2026-09-27 and no overlapping audit is created.
+
+Current native research endpoint is 2026-09-27.
