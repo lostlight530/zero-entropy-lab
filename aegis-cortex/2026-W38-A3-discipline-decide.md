@@ -29,41 +29,54 @@
 - **Current Delivery State**: FINAL
 
 ## INPUT_RECORD
-A1 current paths:
+本次维护补全实际读取的当前路径:
 - aegis-cortex/2026-09-14-A1-reliability-observe.md
-- aegis-cortex/2026-09-15-A1-reliability-observe.md
-- aegis-cortex/2026-09-16-A1-reliability-observe.md
-- aegis-cortex/2026-09-17-A1-reliability-observe.md
-- aegis-cortex/2026-09-18-A1-reliability-observe.md
-- aegis-cortex/2026-09-19-A1-reliability-observe.md
-缺失路径: 2026-09-20-A1-reliability-observe.md
-
-A2 current paths:
 - aegis-cortex/2026-09-14-A2-doctrine-orient.md
+- aegis-cortex/2026-09-15-A1-reliability-observe.md
 - aegis-cortex/2026-09-15-A2-doctrine-orient.md
+- aegis-cortex/2026-09-16-A1-reliability-observe.md
 - aegis-cortex/2026-09-16-A2-doctrine-orient.md
-- aegis-cortex/2026-09-17-A2-doctrine-orient.md (BLOCKED / INPUT_MISSING at task time)
+- aegis-cortex/2026-09-17-A1-reliability-observe.md
+- aegis-cortex/2026-09-17-A2-doctrine-orient.md
+- aegis-cortex/2026-09-18-A1-reliability-observe.md
 - aegis-cortex/2026-09-18-A2-doctrine-orient.md
-- aegis-cortex/2026-09-19-A2-doctrine-orient.md (BLOCKED / INPUT_MISSING at task time)
-缺失路径: 2026-09-20-A2-doctrine-orient.md
-
-降级输入: 2026-09-20 完全缺失；09-17 和 09-19 的 A2 因为原始执行时同日 A1 未准备好而处于 BLOCKED 状态，即使后续 A1 被补充，原 A2 的历史真实状态仍被保留。
-覆盖率: 6/7 (85%)。
-联网来源: None
-独立来源说明: 本次运行未额外引入新的联网来源，依据现有 A1 和 A2 记录内的外部来源。
-
-Historical weekly context:
-- aegis-cortex/2026-W34-A3-discipline-decide.md
-- aegis-cortex/2026-W35-A3-discipline-decide.md
-- aegis-cortex/2026-W36-A3-discipline-decide.md
+- aegis-cortex/2026-09-19-A1-reliability-observe.md
+- aegis-cortex/2026-09-19-A2-doctrine-orient.md
+- aegis-cortex/2026-09-20-A1-reliability-observe.md
+- aegis-cortex/2026-09-20-A2-doctrine-orient.md
 - aegis-cortex/2026-W37-A3-discipline-decide.md
-- aegis-cortex/2026-W34-A4-protocol-act.md
-- aegis-cortex/2026-W35-A4-protocol-act.md
-- aegis-cortex/2026-W36-A4-protocol-act.md
 - aegis-cortex/2026-W37-A4-protocol-act.md
-
-Prior-month memory:
+- aegis-cortex/2026-W36-A3-discipline-decide.md
+- aegis-cortex/2026-W36-A4-protocol-act.md
+- aegis-cortex/2026-W35-A3-discipline-decide.md
+- aegis-cortex/2026-W35-A4-protocol-act.md
+- aegis-cortex/2026-W34-A3-discipline-decide.md
+- aegis-cortex/2026-W34-A4-protocol-act.md
 - aegis-cortex/2026-08-A6-aegis-memorize.md
+
+原始 A3 执行时缺失路径:
+- aegis-cortex/2026-09-20-A1-reliability-observe.md
+- aegis-cortex/2026-09-20-A2-doctrine-orient.md
+
+当前路径状态:
+- 2026-09-20 A1/A2 现已存在于 main；这只表示 later arrival/current-path completeness，不改写原始 A3 authority snapshot。
+
+降级输入:
+- Original A3: 2026-09-20 pair was absent from its authority snapshot.
+- Current path: 2026-09-20 A1 is present; A2 is present but preserves INPUT_MISSING / BLOCKED task-time execution.
+- 2026-09-17 and 2026-09-19 A2 also retain task-time BLOCKED despite later A1 visibility.
+
+联网来源:
+- 暂无直接使用 crossref 的新来源，全部来源于读取的 A1 外部证据记录（arXiv）。
+
+覆盖率:
+- Original A3 execution coverage: 6/7.
+- Current path coverage at this maintenance read: 7/7 A1 + 7/7 A2 paths.
+- CURRENT_7_OF_7 != ORIGINAL_A3_CONSUMED_7_OF_7.
+
+独立来源说明:
+- 本次维护没有新增独立来源。
+- A1/A2 中的多个外部记录可以提供来源支持，但同一论文/同一来源链的重复读取不增加 independence credit。
 
 ## WEEKLY_RISK_SYNTHESIS
 重复风险:
@@ -103,41 +116,41 @@ Prior-month memory:
 
 ## DECISION_SET
 Decision ID: DEC-W38-01
-- **Decision**: 维持严格的状态和内容双重检查，防范因工具表面执行成功或评分一致带来的假性完成与底层行动发散，但严禁将外部模拟的失败率直接本地化。
-- **Decision Type**: CONTINUE_WATCH
-- **External Evidence**: AutoDev、Copilot session limits、ToolPrivBench、MemFail 以及行动级别不一致（Action-Level Reliability）等多篇学术与官方文档持续指出的多步代理执行边界和评估弱点。
-- **Aegis Repository Evidence**: NO_LOCAL_EVIDENCE。现有的 `check.py` 等硬性静态约束尚未观测到崩溃。
-- **Evidence Gap**: 外部系统通常是通用代码执行或复杂多步骤接口，而 Aegis 当前是单维度的文本操作，两者的失败率传递不可知。
-- **Counterevidence**: 缺乏本地事故记录。
-- **Risk Reduced**: false completion risk, task loop break risk, overconfidence risk, scope drift risk.
-- **Expected Behavior Change**: 不改变现有机制，但在后续核查和报告生成时，依然不能以脚本的一般性无报错代表语义上绝对有效，保持 `UNKNOWN` 和防患未然的克制叙事。
-- **Why Now**: W38 期间大量的学术信号集中在代理评估缺陷与行动级别不一致上。
-- **Confidence**: HIGH for general external theory; UNKNOWN for local.
-- **Validity Window**: W39-W42
-- **Stop Condition**: 获得本地的确凿失败证据或纪律发生上游架构替换。
-- **Host Repository Change NO**: YES
+Decision: 维持严格的状态和内容双重检查，防范因工具表面执行成功或评分一致带来的假性完成与底层行动发散，但严禁将外部模拟的失败率直接本地化。
+Decision Type: CONTINUE_WATCH
+External Evidence: AutoDev、Copilot session limits、ToolPrivBench、MemFail 以及行动级别不一致（Action-Level Reliability）等多篇学术与官方文档持续指出的多步代理执行边界和评估弱点。
+Aegis Repository Evidence: NO_LOCAL_EVIDENCE。现有的 check.py 等硬性静态约束尚未观测到崩溃。
+Evidence Gap: 外部系统通常是通用代码执行或复杂多步骤接口，而 Aegis 当前是单维度的文本操作，两者的失败率传递不可知。
+Counterevidence: 缺乏本地事故记录。
+Risk Reduced: false completion risk, task loop break risk, overconfidence risk, scope drift risk.
+Expected Behavior Change: 不改变现有机制，但在后续核查和报告生成时，依然不能以脚本的一般性无报错代表语义上绝对有效，保持 UNKNOWN 和防患未然的克制叙事。
+Why Now: W38 期间大量的学术信号集中在代理评估缺陷与行动级别不一致上。
+Confidence: HIGH for general external theory; UNKNOWN for local.
+Validity Window: W39-W42
+Stop Condition: 获得本地的确凿失败证据或纪律发生上游架构替换。
+Host Repository Change NO: YES
 
 ## DO_NOT_CHANGE
-- 不得修改 zero-entropy-lab 的宿主代码仓库或 GitHub Actions 配置。
-- 不得将学术论文中诸如 “30% 的失败率” 或 “超过 60% 的工具越权率” 宣称为 Aegis 的已知本地事实。
-- 必须保留 09-17 与 09-19 A2 的历史 BLOCKED 状态，即便当天 A1 后来已存在，也不能修改其在原发生时的真实记录。
+- 纪律: 不得修改 zero-entropy-lab 的宿主代码仓库或 GitHub Actions 配置。
+  原因: Aegis 任务目前没有宿主仓库代码执行授权。
+  重新考虑条件: 获得明确的架构重组需求。
+- 纪律: 必须保留 09-17 与 09-19 A2 的历史 BLOCKED 状态
+  原因: 即便当天 A1 后来已存在，也不能修改其在原发生时的真实记录。
+  重新考虑条件: 永远不重新考虑。
 
 ## HANDOFF_TO_A4
-- **观察纪律**: 瞬态失败后的权限升级以及中间行动发散，作为重点关注外部特征。
-- **验证要求**: 强制执行文件读取核验，针对写操作必须进行实质性的内容对比，以验证内容已真正落实。
-- **来源要求**: 对代理表现出的故障评估与记忆篡改证据需确保来自具有独立性的原始一手文献，如 ArXiv 或高质量 API 来源。
-- **不确定性要求**: 在纯文本文件系统的非运行时环境中，需诚实记录不确定性，不盲目制定不适合 Aegis 沙盒架构的纪律。
-- **叙事防护**: 必须在一切涉及记忆投毒、过度压缩或验证失灵的地方标记为理论的外部警告（EXTERNAL RISK），而非已发生的本地漏洞。
-- **缺失输入处理**: 将 09-20 的缺失及 09-17/09-19 的阻塞记录作为 DEGRADED 对待，如实映射为空白输入并降低该时段置信度，严禁脑补风险。
-- **Watchlist**: false completion, decision drift (boundary erosion), over-privileged tool selection, memory over-compression, action-level divergence.
+- 观察纪律: 瞬态失败后的权限升级以及中间行动发散，作为重点关注外部特征。
+- 验证要求: 强制执行文件读取核验，针对写操作必须进行实质性的内容对比，以验证内容已真正落实。
+- 来源要求: 对代理表现出的故障评估与记忆篡改证据需确保来自具有独立性的原始一手文献，如 ArXiv 或高质量 API 来源。
+- 不确定性要求: 在纯文本文件系统的非运行时环境中，需诚实记录不确定性，不盲目制定不适合 Aegis 沙盒架构的纪律。
+- 缺失输入处理: 将 09-20 的缺失及 09-17/09-19 的阻塞记录作为 DEGRADED 对待，如实映射为空白输入并降低该时段置信度，严禁脑补风险。
+- 叙事防护: 必须在一切涉及记忆投毒、过度压缩或验证失灵的地方标记为理论的外部警告（EXTERNAL RISK），而非已发生的本地漏洞。
+- Watchlist: false completion, decision drift (boundary erosion), over-privileged tool selection, memory over-compression, action-level divergence.
 
 ## BOUNDARY_CHECK
-- 确认未实施宿主修改: YES
-- 确认未越界访问非 aegis-cortex 区域: YES
-- 确认分离了外部风险和本地事实（Aegis 无相关事故）: YES
-- 确认没有把历史 BLOCKED 推翻或改写: YES
-- 确认未做最终的长期直接纪律升级: YES
-
+- 确认未越界：YES
+- 确认未实施宿主修改：YES
+- 确认未直接升级长期纪律：YES
 
 ## CURRENT_MAINTENANCE_COMPLETION_2026-09-20
 
@@ -209,3 +222,4 @@ A4 must preserve
 - 9/17, 9/19 and 9/20 A2 remain BLOCKED
 - external risk evidence remains external
 - NO_LOCAL_INCIDENT_EVIDENCE remains the current local state
+
