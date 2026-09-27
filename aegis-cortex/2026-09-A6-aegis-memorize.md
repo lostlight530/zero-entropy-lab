@@ -845,3 +845,28 @@ A1_A2_SUCCESS
 - 2026-09-26 Aegis relation: INTEGRATED_WITH_TEMPORAL_AND_SOURCE_BOUNDARY.
 - Historical rewrite: NO.
 - New local-incident/runtime/independence credit: NONE.
+
+## A1_MONTH_TO_DATE_REVALIDATION_2026-09-27
+
+- Logical maintenance date: 2026-09-27
+- Cutoff: 2026-09-26
+- Exact base main: `3d522c25afe782e1a8b198c8ef57be647a07307f`
+- Scope: Aegis A1/A2 and due weekly relations plus September A6 owner; 2026-09-27 inputs are reserved for A2.
+- 2026-09-01 through 2026-09-25 prior decisions remain retained and were not rewritten.
+
+### Coverage decisions
+- 2026-09-01 through 2026-09-25: REVIEWED / RETAIN_EXISTING_DECISIONS
+- 2026-09-26 A1: REVIEWED / RETAIN_SUCCESS_WITH_SINGLE_SOURCE_LINEAGE_BOUNDARY
+- 2026-09-26 A2: REVIEWED / RETAIN_INPUT_MISSING_BLOCKED_NOT_RUN
+- Later A1 delivery remains later availability and does not upgrade the original A2 task-time state.
+
+### Boundary
+- external reliability evidence != local incident.
+- one publisher/source lineage != independent corroboration.
+- current path complete != original task-time input available.
+- September remains OPEN / NATURAL_MONTH_CLOSE_NOT_DUE.
+
+### A1 disposition
+- 2026-09-26 Aegis: NO_FOLLOW_UP.
+- Historical rewrite required: NO.
+- New local-incident/runtime/source-independence credit: NONE.
