@@ -2416,16 +2416,16 @@
           "tree_sha": "339dfd9603182bcd3fcf1a267408244b32641483"
         },
         "docs/design/cuda_graphs.md": {
-          "blob_sha": "e274b68c70213a1c89fd48683f5a857ff7795b01",
-          "commit_sha": "5ed3faa43ddf075f24482396b634edc33e047a40",
-          "content_hash": "07f9a5fe36ca32f4ca42b1e59f6a1f41c3dab0db9660ca6e7396eaf16fa5a209",
+          "blob_sha": "abebdd54ae467f828518df527d9acfd067d804d3",
+          "commit_sha": "4be061c5afab75d8f36f83db48097776eb936a34",
+          "content_hash": "830e79186bed3bbc53ac4074b361cdf791bcfe8e10b3b99eed9e674754d2cb40",
           "entity_id": "doc_vllm_project_vllm_docs_design_cuda_graphs_md_e274b68c7021",
-          "observed_blob_sha": "e274b68c70213a1c89fd48683f5a857ff7795b01",
-          "observed_commit_sha": "c92b29a1d40644da710209f862b1be0ebd5c2e74",
-          "observed_tree_sha": "cd04483714f646260128f47800f095ed49cc7fa3",
-          "output": "current/serving-inference/vllm_project_vllm/docs__design__cuda_graphs.md__e274b68c7021__5ed3faa43ddf.md",
-          "sha": "e274b68c70213a1c89fd48683f5a857ff7795b01",
-          "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
+          "observed_blob_sha": "abebdd54ae467f828518df527d9acfd067d804d3",
+          "observed_commit_sha": "4be061c5afab75d8f36f83db48097776eb936a34",
+          "observed_tree_sha": "73fa4e043f8aeb8bf3ffaa09ee99df3c83e19566",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__cuda_graphs.md__abebdd54ae46__4be061c5afab.md",
+          "sha": "abebdd54ae467f828518df527d9acfd067d804d3",
+          "tree_sha": "73fa4e043f8aeb8bf3ffaa09ee99df3c83e19566"
         },
         "docs/design/cuda_graphs_multimodal.md": {
           "blob_sha": "dca200e2de03ad340bb43922b0005c2554faa26c",
@@ -2872,7 +2872,7 @@
           "tree_sha": "cfeb3173928b2b51eb943c8f1dacbc9c3ebf57b4"
         }
       },
-      "last_checked_at": "2026-09-26T00:14:12.896179+00:00"
+      "last_checked_at": "2026-09-27T00:00:30.762902+00:00"
     },
     "volcengine/verl": {
       "documents": {
