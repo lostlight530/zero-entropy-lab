@@ -870,3 +870,27 @@ A1_A2_SUCCESS
 - 2026-09-26 Aegis: NO_FOLLOW_UP.
 - Historical rewrite required: NO.
 - New local-incident/runtime/source-independence credit: NONE.
+
+## A2_CURRENT_MONTH_RELATION_2026-09-27
+
+- Logical maintenance date: 2026-09-27
+- Exact A1-merged base main: `67c2f5933b5c7b0f8430fbba488ebebf771cd4be`
+- Current-month relation window: 2026-09-01 through 2026-09-27
+- A1 coverage through 2026-09-26: INHERITED_FROM_MERGED_A1.
+
+### N-day integration — Aegis
+- 2026-09-27 A1/A2 Daily records are present and retained within their reliability-observation/orientation boundaries.
+- W38 A3 current body was materially rewritten on 2026-09-27 after the original execution window. The current text correctly separates original 6/7 execution coverage from later 7/7 path presence; this maintenance relation records the later rewrite without treating the current body as the original W38 execution artifact.
+- W39 A4 was invoked before same-week A3 decision availability and fail-closed to NOT_DUE / no action. The status semantics are retained, while the ordering is recorded as a scheduler/dependency defect for future correction.
+
+### Relation boundary
+- current body != original execution body.
+- later path completeness != original A3 consumed completeness.
+- A4 NOT_DUE != missing/failed, but A4-before-A3 is not a valid downstream ordering.
+- external reliability evidence != local incident.
+- September remains OPEN / NATURAL_MONTH_CLOSE_NOT_DUE.
+
+### A2 disposition
+- 2026-09-27 Aegis relation: INTEGRATED_WITH_HISTORY_MUTATION_AND_SCHEDULER_BOUNDARIES.
+- Historical rewrite by maintenance: NO.
+- New local-incident/runtime/source-independence credit: NONE.
