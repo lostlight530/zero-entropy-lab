@@ -51,7 +51,7 @@
 
 ### SIG-2026-09-27-01
 - **Signal ID**: SIG-2026-09-27-01
-- **External Claim**: 如果仅依赖可见性过滤来隐藏未授权工具元数据，代理若通过推测或提示词注入获取了工具名称，依然能以高达 94% 的成功率调用被隐藏的敏感工具，确认工具发现控制无法替代调用时的强制权限拦截。
+- **External Claim**: 如果仅依赖可见性过滤来隐藏未授权工具元数据，发现控制仍不能替代调用时授权。论文报告 visibility-only filtering 可被 scripted clients 绕过；在工具名可由 prompt 推断时，模型在最高 94% 的实验设置中会引用隐藏工具名。该 94% 不是“成功执行隐藏工具”的通用成功率。
 - **Risk Categories**: overprivileged tool risk, memory poisoning risk, boundary violation risk, false completion risk
 - **Verification Status**: VERIFIED_FOR_SOURCE_SPECIFIC_REPORTED_RESULTS
 - **Verification Sources**: arXiv:2609.22573v1 via https://ar5iv.org/html/2609.22573v1
@@ -62,14 +62,21 @@
 - **Remaining Uncertainty**: 在没有恶意提示词注入的情况下，仅依靠 A1、A2 等文本记录传承是否会自然产生引发未授权隐匿工具被违规调用的触发条件，仍是不确定的。纯粹因为可见性缺失而受到攻击在单一容器环境的频率仍未知。
 - **Weekly Promotion Eligibility**: CONTINUE_WATCH_ONLY
 
+
+## SOURCE_CLAIM_RECONCILIATION
+- A1 original wording is preserved as the task-time record.
+- Current A2 interpretation corrects one evidence-strength issue: the paper's “up to 94%” result concerns models referencing a hidden tool by name in settings where the name is inferable from the prompt; it is not a general 94% successful hidden-tool execution rate.
+- Scripted-client bypass of visibility-only filtering and model hidden-name reference frequency are distinct reported findings.
+- This correction narrows the external claim only; it adds no local incident evidence and does not replay A1.
+
 ## ORIENTATION_NOTES
 - **信号对 Aegis 观察纪律的意义**: 这提醒我们需要密切关注任何引入的工具调用权限机制。仅仅要求“不要访问特定目录”并不等于具备强制拦截能力。它也再次强调了分离内外证据的原则。
 - **哪些风险有本地记录支持**: 目前没有任何证据支持本地环境由于注入工具名推测引发了越权调用。
-- **哪些只有外部证据**: 仅凭借推测或提示词注入就能以 94% 成功率绕过单纯的可见性隐藏而直接调用隐匿敏感工具，是来源于该研究的外部发现。
+- **哪些只有外部证据**: 论文外部发现包括：visibility-only filtering 对 scripted clients 可被绕过，以及在 prompt 可推断工具名时模型最高可在 94% 的设置中引用隐藏工具名；这两项不能合并解释成 94% 的隐藏工具成功执行率。
 - **哪些需要进入 A3**: 可以在 W39 A3 中作为 CONTINUE_WATCH 候选，与现有的验证记录纪律一起，防止因盲目引入不可信工具指令导致本地安全越界。
 - **哪些只是理论可能**: 假定本地系统被恶意历史纪律成功投毒，代理据此越权执行系统破坏，目前只是一种理论可能。
 - **哪些判断仍不确定**: 论文所述的环境与 Aegis 现有的基础容器运行有着巨大差异，其特定的强制权限绕过机制是否可以在非 MCP 的简单沙箱中复现仍待考证。
-- **哪些来源不可靠**: arXiv:2609.22573v1 是可靠的，但其关于企业 SSO 认证及双重角色的架构缺陷与本地 Aegis 当前关注的范围不匹配，不能把论文描述的架构脆弱性映射为 zero-entropy-lab 的本地隐患。
+- **哪些来源不可靠**: arXiv:2609.22573v1 是本次所引用的原始研究来源，但不是独立 corroboration。其企业 SSO / dual-persona MCP 环境与本地 Aegis 范围不同，不能把论文描述的架构脆弱性或实验率映射为 zero-entropy-lab 的本地风险率。
 
 ## NO_DECISION_SECTION
 - 今天不做的纪律决策：不因为有关可见性发现与调用时拦截的漏洞结论，而改变或增强现行的 A1/A2/A3/A4 工作流程设计。
