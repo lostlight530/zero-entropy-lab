@@ -2206,16 +2206,16 @@
           "tree_sha": "6619014cb5e3c71b86bae8fa1b2514c9d73d8f76"
         },
         "examples/memory/mongodb_session_example.py": {
-          "blob_sha": "f22f4ab9a36cc2b404cc245a3149ea60a0a4060f",
-          "commit_sha": "bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1",
-          "content_hash": "b9805d672df3595fd5f9cf5ab93bd2efc98dd90607ad421f1a52a6212144f50a",
+          "blob_sha": "7504c03622ad0cbbf761ed787c5e155d0a7b387f",
+          "commit_sha": "1335f4e04f0113317a0f54cc7bcbcba5ef704d46",
+          "content_hash": "3563d3a629b842ba85a8c22fb9c83d2782e3bf3207ef2bea38e476e4b17a6f8c",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_mongodb_session_example_py_f22f4ab9a36c",
-          "observed_blob_sha": "f22f4ab9a36cc2b404cc245a3149ea60a0a4060f",
-          "observed_commit_sha": "89c02c828ee8510fe9a84ee6675608193aa13b02",
-          "observed_tree_sha": "e2e417c0e5497a6cc868ab5c029282cd341b87ba",
-          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__mongodb_session_example.py__f22f4ab9a36c__bb3d64e74d9b.md",
-          "sha": "f22f4ab9a36cc2b404cc245a3149ea60a0a4060f",
-          "tree_sha": "6619014cb5e3c71b86bae8fa1b2514c9d73d8f76"
+          "observed_blob_sha": "7504c03622ad0cbbf761ed787c5e155d0a7b387f",
+          "observed_commit_sha": "1335f4e04f0113317a0f54cc7bcbcba5ef704d46",
+          "observed_tree_sha": "9b894f334023bd131866e07fd1a759438abf42d2",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__mongodb_session_example.py__7504c03622ad__1335f4e04f01.md",
+          "sha": "7504c03622ad0cbbf761ed787c5e155d0a7b387f",
+          "tree_sha": "9b894f334023bd131866e07fd1a759438abf42d2"
         },
         "examples/memory/openai_session_example.py": {
           "blob_sha": "9254195b3338e4572d669efe765e44314afaafb0",
@@ -2242,16 +2242,16 @@
           "tree_sha": "6619014cb5e3c71b86bae8fa1b2514c9d73d8f76"
         },
         "examples/memory/redis_session_example.py": {
-          "blob_sha": "8d552f5242a9cc21c5d7046597f3cfa12457e243",
-          "commit_sha": "bb3d64e74d9b92831aaa7e10cecbb0bfd6fa50c1",
-          "content_hash": "7c79acc5bc98c5541a1510bcc1387a3c008a6bf810b507002e330962aec351bd",
+          "blob_sha": "47a7b069df519dfa06d797d35210037460d04ee2",
+          "commit_sha": "1335f4e04f0113317a0f54cc7bcbcba5ef704d46",
+          "content_hash": "e5b5cf588eb501d8f8b91f6fb08ea661ede111c3a7f06681bcba1857d3f2c596",
           "entity_id": "doc_openai_openai_agents_python_examples_memory_redis_session_example_py_8d552f5242a9",
-          "observed_blob_sha": "8d552f5242a9cc21c5d7046597f3cfa12457e243",
-          "observed_commit_sha": "89c02c828ee8510fe9a84ee6675608193aa13b02",
-          "observed_tree_sha": "e2e417c0e5497a6cc868ab5c029282cd341b87ba",
-          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__redis_session_example.py__8d552f5242a9__bb3d64e74d9b.md",
-          "sha": "8d552f5242a9cc21c5d7046597f3cfa12457e243",
-          "tree_sha": "6619014cb5e3c71b86bae8fa1b2514c9d73d8f76"
+          "observed_blob_sha": "47a7b069df519dfa06d797d35210037460d04ee2",
+          "observed_commit_sha": "1335f4e04f0113317a0f54cc7bcbcba5ef704d46",
+          "observed_tree_sha": "9b894f334023bd131866e07fd1a759438abf42d2",
+          "output": "current/agent-runtime/openai_openai_agents_python/examples__memory__redis_session_example.py__47a7b069df51__1335f4e04f01.md",
+          "sha": "47a7b069df519dfa06d797d35210037460d04ee2",
+          "tree_sha": "9b894f334023bd131866e07fd1a759438abf42d2"
         },
         "examples/memory/sqlalchemy_session_example.py": {
           "blob_sha": "84a6c754f018a4952c63b6746685b38aa435e06e",
@@ -2278,7 +2278,7 @@
           "tree_sha": "6619014cb5e3c71b86bae8fa1b2514c9d73d8f76"
         }
       },
-      "last_checked_at": "2026-09-24T00:05:39.190597+00:00"
+      "last_checked_at": "2026-09-28T00:06:07.771456+00:00"
     },
     "pydantic/pydantic-ai": {
       "documents": {
