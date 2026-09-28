@@ -894,3 +894,28 @@ A1_A2_SUCCESS
 - 2026-09-27 Aegis relation: INTEGRATED_WITH_HISTORY_MUTATION_AND_SCHEDULER_BOUNDARIES.
 - Historical rewrite by maintenance: NO.
 - New local-incident/runtime/source-independence credit: NONE.
+
+## A1_MONTH_TO_DATE_REVALIDATION_2026-09-28
+
+- Logical maintenance date: 2026-09-28
+- Cutoff: 2026-09-27
+- Exact base main: `f9bd8f504a7af99c86a474b862e3ffb547205732`
+- A1 excludes all 2026-09-28 Aegis artifacts already visible on current main and reserves them for A2.
+
+### Coverage decisions
+- 2026-09-01 through 2026-09-26: REVIEWED / RETAIN_MERGED_OWNER_DECISIONS
+- 2026-09-27 A1/A2: REVIEWED / RETAIN_NATIVE_DAILY_RELATION
+- W38 A3 current-body rewrite relation: REVIEWED / RETAIN_ORIGINAL_EXECUTION_VS_LATER_REWRITE_SEPARATION
+- W39 A4: REVIEWED / RETAIN_PREMATURE_DOWNSTREAM_NOT_DUE_AS_SCHEDULER_ORDER_EVIDENCE
+
+### Boundary
+- current body != original execution body.
+- later path completeness != original A3 consumed completeness.
+- A4 NOT_DUE != missing/failed; A4-before-A3 remains ordering evidence.
+- September remains OPEN / NATURAL_MONTH_CLOSE_NOT_DUE.
+
+### A1 disposition
+- Coverage through N-1 = 2026-09-27: VERIFIED_IN_CURRENT_OWNER_CHAIN.
+- Historical rewrite required: NO.
+- 2026-09-28 native inputs consumed by A1: NO.
+- New local-incident/runtime/source-independence credit: NONE.
