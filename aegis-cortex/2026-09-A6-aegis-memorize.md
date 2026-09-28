@@ -919,3 +919,28 @@ A1_A2_SUCCESS
 - Historical rewrite required: NO.
 - 2026-09-28 native inputs consumed by A1: NO.
 - New local-incident/runtime/source-independence credit: NONE.
+## A2_CURRENT_MONTH_RELATION_2026-09-28
+
+- Logical maintenance date: 2026-09-28
+- Exact A1-merged base main: `19e59de5ec0572e837de0a1139c7456462cb1862`
+- Current-month relation window: 2026-09-01 through 2026-09-28
+- A1 coverage through 2026-09-27: INHERITED_FROM_MERGED_A1.
+
+### N-day integration — Aegis
+- 2026-09-28 A1 and A2 are present and share one source lineage: arXiv:2606.24322v1.
+- External memory-poisoning / origin-bound-authority findings are retained as EXTERNAL_FAILURE_MODE_EVIDENCE, not local incident evidence.
+- Reported attack-success figures remain source-specific research results; they are not local Aegis failure rates.
+- Local incident evidence remains NO_LOCAL_EVIDENCE; host applicability remains UNKNOWN.
+- The useful local relation is provenance discipline during summarization/compression: external risk labels should not be washed into local fact, but no implementation change or weekly doctrine decision is manufactured here.
+
+### Current-cut boundary
+- one paper != independent corroboration.
+- external failure report != local repository incident.
+- similar summarization process != demonstrated local exploit path.
+- Any other 2026-09-28 periodic Aegis task not present at this review cut is NOT_YET_OBSERVED_AT_THIS_CHECK, not missing/failed.
+- September remains OPEN / NATURAL_MONTH_CLOSE_NOT_DUE.
+
+### A2 disposition
+- 2026-09-28 Aegis relation: SINGLE_SOURCE_EXTERNAL_RISK_INTEGRATED_WITH_LOCAL_NONINCIDENT_BOUNDARY.
+- Historical rewrite: NO.
+- New local-incident/runtime/source-independence credit: NONE.
