@@ -944,3 +944,29 @@ A1_A2_SUCCESS
 - 2026-09-28 Aegis relation: SINGLE_SOURCE_EXTERNAL_RISK_INTEGRATED_WITH_LOCAL_NONINCIDENT_BOUNDARY.
 - Historical rewrite: NO.
 - New local-incident/runtime/source-independence credit: NONE.
+
+## A1_MONTH_TO_DATE_REVALIDATION_2026-09-29
+
+- Logical maintenance date: 2026-09-29
+- Cutoff: 2026-09-28
+- Exact base main: `d7075ac9854a6087d820fd4cad570a76c9a4d087`
+- A1 excludes all 2026-09-29 Aegis artifacts already visible on current main and reserves them for A2.
+
+### Coverage decisions
+- Through 2026-09-27: REVIEWED / RETAIN_EXISTING_OWNER_DECISIONS.
+- 2026-09-28 A1/A2: REVIEWED / RETAIN_SINGLE_SOURCE_EXTERNAL_RISK_WITH_LOCAL_NONINCIDENT_BOUNDARY.
+- Memory-poisoning/origin-bound-authority claims remain source-specific external research, not local Aegis incidents.
+- Local incident evidence remains NO_LOCAL_EVIDENCE; host applicability remains UNKNOWN.
+
+### Boundary
+- one paper != independent corroboration.
+- external failure report != local repository incident.
+- similar summarization process != demonstrated local exploit path.
+- 2026-09-29 native artifacts visible on current main != A1 evidence eligibility.
+- September remains OPEN / NATURAL_MONTH_CLOSE_NOT_DUE.
+
+### A1 disposition
+- Coverage through N-1 = 2026-09-28: VERIFIED_IN_CURRENT_OWNER_CHAIN.
+- Historical rewrite required: NO.
+- 2026-09-29 native inputs consumed by A1: NO.
+- New local-incident/runtime/source-independence credit: NONE.
