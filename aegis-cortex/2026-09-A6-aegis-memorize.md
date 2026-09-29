@@ -970,3 +970,29 @@ A1_A2_SUCCESS
 - Historical rewrite required: NO.
 - 2026-09-29 native inputs consumed by A1: NO.
 - New local-incident/runtime/source-independence credit: NONE.
+
+## A2_CURRENT_MONTH_RELATION_2026-09-29
+
+- Logical maintenance date: 2026-09-29
+- Exact A1-merged base main: `b6c8f53ae367b5bf9761a61b84982bfa262f8efa`
+- Current-month relation window: 2026-09-01 through 2026-09-29.
+- A1 coverage through 2026-09-28: INHERITED_FROM_MERGED_A1.
+
+### N-day integration — Aegis
+- 2026-09-29 A1/A2 are present and share one source lineage: arXiv:2609.13582v1.
+- The retained external claim is source-specific action-level divergence under repeated runs in a clinical-agent benchmark setting.
+- Independent verification remains NO; local incident evidence remains NO_LOCAL_EVIDENCE; host applicability remains UNKNOWN.
+- The useful reliability relation is methodological: a terminal score or success marker may be insufficient evidence of action-level semantic consistency in systems with internal action sequences.
+- No local Aegis false-completion incident, action-sequence divergence rate, or implementation defect is established.
+
+### Relation boundary
+- ONE_ARXIV_PAPER != INDEPENDENT_CORROBORATION.
+- CLINICAL_AGENT_ACTION_DIVERGENCE != AEGIS_LOCAL_FAILURE_RATE.
+- SAME_FINAL_SCORE != SAME_ACTION_SEQUENCE, but this external result does not prove Aegis exhibits the same failure mode.
+- EXTERNAL_RISK_SIGNAL != LOCAL_INCIDENT.
+
+### A2 disposition
+- 2026-09-29 Aegis relation: SINGLE_SOURCE_ACTION_DIVERGENCE_RISK_INTEGRATED_WITH_LOCAL_NONINCIDENT_BOUNDARY.
+- Historical rewrite: NO.
+- New local-incident/runtime/source-independence credit: NONE.
+- September remains OPEN / NATURAL_MONTH_CLOSE_NOT_DUE.
