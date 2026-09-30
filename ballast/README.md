@@ -29,11 +29,11 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-09-30 coordination identity coverage versus protected completion](records/2026-09-30.md)
-- 当前月度事实源: [2026-09](records/2026-09.md)
+- 最新 Daily: [2026-10-01 preflight validity versus persisted completion under admission and identity drift](records/2026-10-01.md)
+- 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
-- 最新完整周期审计: [2026-09-20 至 2026-09-25](audits/2026-09-20--2026-09-25.md)
-- 最近完整周期 2026-09-20 至 2026-09-25 已形成 6 日 derived audit. 当前新周期为 2026-09-26 至 2026-09-30, 其中 2026-09-26 为 RECONSTRUCTION / NOT_RUN / UNVERIFIED, 当前 5 日 calendar coverage, 尚未达到新的 6/7 日 audit 边界
+- 最新完整周期审计: [2026-09-26 至 2026-10-01](audits/2026-09-26--2026-10-01.md)
+- 2026-09-26 至 2026-10-01 已形成新的 6 日 derived audit, 其中 2026-09-26 为 RECONSTRUCTION / NOT_RUN / UNVERIFIED. 该 audit 仅做派生审计, 新增实验数量 0, 新增长期结论数量 0, 不重复创建重叠 audit
 - 当前方法: [METHOD.md](METHOD.md)
 - 控制案例: [CASES.md](CASES.md)
 - 长期发现: [NOTES.md](NOTES.md)
@@ -374,3 +374,28 @@ The latest complete derived audit remains 2026-09-20..2026-09-25. The current ne
 September is an as-of 2026-09-30 rolling research view. Natural-month finalization is not claimed before the logical day has completed.
 
 Current native research endpoint is 2026-09-30.
+
+
+## Ballast current-state advance — 2026-10-01
+
+2026-10-01 contributes exactly one NATIVE research unit on preflight validity versus persisted completion under admission and identity drift.
+
+The research keeps preflight/admission validity, historical effect occurrence, historical effect-time authorization, current execution permission, persisted target incarnation, membership completeness, verifier independence, temporal ordering and current completion as separate axes.
+
+```text
+PREFLIGHT_VALID
+!= PERSISTED_COMPLETION
+
+DRY_RUN_SUCCESS
+!= STORAGE_SUCCESS
+
+ADMISSION_SUCCESS
+!= DURABLE_EFFECT
+
+PROSPECTIVE_IDENTITY
+!= PERSISTED_INCARNATION
+```
+
+The 2026-09-26..2026-10-01 six-date window now has one derived cycle audit. The audit adds zero experiment, independent execution-window, CASE or NOTES credit and does not rewrite historical Daily evidence.
+
+Current native research endpoint is 2026-10-01.
