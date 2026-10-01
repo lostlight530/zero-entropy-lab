@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-01 preflight validity versus persisted completion under admission and identity drift](records/2026-10-01.md)
+- 最新 Daily: [2026-10-02 deletion acceptance versus cleanup-complete absence under finalizers and cascading ownership](records/2026-10-02.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-09-26 至 2026-10-01](audits/2026-09-26--2026-10-01.md)
@@ -399,3 +399,26 @@ PROSPECTIVE_IDENTITY
 The 2026-09-26..2026-10-01 six-date window now has one derived cycle audit. The audit adds zero experiment, independent execution-window, CASE or NOTES credit and does not rewrite historical Daily evidence.
 
 Current native research endpoint is 2026-10-01.
+
+
+## Ballast current-state advance — 2026-10-02
+
+2026-10-02 contributes exactly one NATIVE research unit on deletion acceptance versus cleanup-complete absence under finalizers and cascading ownership.
+
+```text
+DELETE_ACCEPTED
+!= CLEANUP_COMPLETE
+
+DELETION_TIMESTAMP_SET
+!= OBJECT_ABSENT
+
+OWNER_ABSENT
+!= DEPENDENT_SET_CLEAN
+
+LOGICAL_NAME_REUSED
+!= SAME_TARGET_INCARNATION
+```
+
+The latest complete derived audit remains 2026-09-26..2026-10-01. 2026-10-02 starts the next non-overlapping cycle, so no new audit is created.
+
+Current native research endpoint is 2026-10-02.
