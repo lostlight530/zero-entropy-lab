@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-02 deletion acceptance versus cleanup-complete absence under finalizers and cascading ownership](records/2026-10-02.md)
+- 最新 Daily: [2026-10-03 finalizer release versus independently verified external cleanup under controller provenance and effect-set completeness](records/2026-10-03.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-09-26 至 2026-10-01](audits/2026-09-26--2026-10-01.md)
@@ -422,3 +422,26 @@ LOGICAL_NAME_REUSED
 The latest complete derived audit remains 2026-09-26..2026-10-01. 2026-10-02 starts the next non-overlapping cycle, so no new audit is created.
 
 Current native research endpoint is 2026-10-02.
+
+## Ballast current-state advance — 2026-10-03
+
+2026-10-03 contributes exactly one NATIVE research unit on finalizer release versus independently verified external cleanup under controller provenance and effect-set completeness.
+
+```text
+FINALIZER_RELEASE
+!= INDEPENDENT_EXTERNAL_CLEANUP_PROOF
+
+CONTROL_OBJECT_ABSENT
+!= EXTERNAL_EFFECT_SET_ABSENT
+
+CONTROLLER_PROVENANCE
+!= VERIFIER_SEMANTIC_INDEPENDENCE
+
+PRIMARY_TARGET_GONE
+!= MEMBERSHIP_COMPLETE_CLEANUP
+```
+
+The latest complete derived audit remains 2026-09-26..2026-10-01. The next non-overlapping cycle now contains 2026-10-02..2026-10-03, so no new audit is created.
+
+Current native research endpoint is 2026-10-03.
+
