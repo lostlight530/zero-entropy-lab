@@ -7,8 +7,8 @@
 - **Cadence**: Daily
 - **Loop Stage**: Observe
 - **Logical Date**: 2026-10-02
-- **Execution Time UTC**: 2026-10-02T08:00:00Z
-- **Execution Time Asia/Shanghai**: 2026-10-02T16:00:00+08:00
+- **Execution Time UTC**: UNKNOWN
+- **Execution Time Asia/Shanghai**: UNKNOWN
 - **Agent**: Jules
 - **Knowledge Source**: EXTERNAL_AND_AEGIS_RECORDS
 - **Network Status**: NETWORK_VERIFIED
@@ -27,6 +27,13 @@
 - **Host Applicability**: UNKNOWN
 - **Original Execution Status**: SUCCESS
 - **Current Path Status**: CURRENT_PATH_PRESENT
+
+## PRE_MERGE_PROVENANCE_CORRECTION
+- **Rejected Declared Execution Time UTC**: 2026-10-02T08:00:00Z
+- **Rejected Declared Execution Time Asia/Shanghai**: 2026-10-02T16:00:00+08:00
+- **Repository Delivery Evidence**: original PR head commit `e2da021e3cd22d445e6668acabc4ae1cf8f14792` was authored and committed at `2026-10-01T23:46:42Z`, earlier than the rejected declared execution time.
+- **Corrected Execution-Time State**: UNKNOWN. Repository delivery evidence does not recover the actual task execution instant, so no replacement execution timestamp is invented.
+- **Correction Boundary**: source identity, external research content, evidence class, local-incident boundary, and task result are unchanged by this provenance correction.
 
 ## INPUT_RECORD
 - **aegis-cortex/2026-10-01-A1-reliability-observe.md**: 实际读取。
