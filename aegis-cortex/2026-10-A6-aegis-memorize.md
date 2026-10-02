@@ -93,3 +93,49 @@ MERGED_BLOCKED_A6
 - Historical rewrite: NO
 - Extra audit executed: NO
 - New local-incident, doctrine, runtime, source-independence, or research credit: NONE
+
+
+## A1_FULL_COVERAGE_2026-10-02
+
+- Logical maintenance date: 2026-10-02
+- Exact base main: `8e76dcf553ed22ef087b4b4113d710534431ef03`
+- Coverage window: 2026-10-01
+- Coverage mode: MONTH_START_TO_N_MINUS_1_FULL_COVERAGE
+- A1 rule: REVIEWED != MODIFIED
+- Extra audit executed: NO
+- Runtime/checker replay: NOT_PERFORMED
+- Historical rewrite: NO
+
+### Coverage decisions
+
+| In-scope October-1 surface | Decision | Preserved boundary |
+| --- | --- | --- |
+| `aegis-cortex/2026-10-01-A1-reliability-observe.md` | REVIEWED / NO_FOLLOW_UP | external failure-mode evidence remains distinct from Zero-local incident evidence |
+| `aegis-cortex/2026-10-01-A2-doctrine-orient.md` | REVIEWED / NO_FOLLOW_UP | original `INPUT_MISSING / BLOCKED` task-time state remains historical truth |
+| `ballast/records/2026-10-01.md` | REVIEWED / NO_FOLLOW_UP | native Ballast Daily is one bounded experiment/research unit under its recorded evidence limits |
+| `ballast/audits/2026-09-26--2026-10-01.md` and October Ballast derived owner/index surfaces | REVIEWED / NO_FOLLOW_UP | cycle audit/derived routing does not add experiment or independent-window credit |
+| 2026-10-01 external Independent-GPT review and its source-scope correction | REVIEWED / NO_FOLLOW_UP | audit/correction plane remains separate from Aegis and Ballast native execution |
+
+### A1 disposition
+
+- Coverage completeness: COMPLETE_FOR_2026-10-01
+- Decision completeness: COMPLETE_FOR_2026-10-01
+- Owning-file correction required: NO
+- Original Daily mutation required: NO
+- W40 A3/A4 final: NOT_DUE
+- October A5/A6 natural-month final: NOT_DUE
+- Durable doctrine promotion: NO
+- New local-incident/doctrine/runtime/source-independence credit: NONE
+
+```text
+LATER_A1_PATH_PRESENT
+!= A1_AVAILABLE_TO_ORIGINAL_A2
+
+EXTERNAL_FAILURE_MODE_EVIDENCE
+!= LOCAL_INCIDENT
+
+CYCLE_AUDIT
+!= NEW_EXPERIMENT_CREDIT
+```
+
+A1 result: VERIFIED_FULL_COVERAGE_THROUGH_2026-10-01.
