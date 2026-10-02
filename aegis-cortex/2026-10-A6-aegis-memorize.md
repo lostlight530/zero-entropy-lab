@@ -139,3 +139,76 @@ CYCLE_AUDIT
 ```
 
 A1 result: VERIFIED_FULL_COVERAGE_THROUGH_2026-10-01.
+
+
+## A2_CURRENT_MONTH_RELATION_2026-10-02
+
+- Logical maintenance date: 2026-10-02
+- Exact A1-merged base main: `0f84870e9c88edd400fcf38d8f096bff6c8bfd78`
+- Current month relation window: 2026-10-01 through 2026-10-02
+- A1 coverage through 2026-10-01: INHERITED_FROM_MERGED_A1
+- Month Closure Status: OPEN
+- W40 A3/A4 final: NOT_DUE
+- October A5/A6 natural-month final: NOT_DUE
+- Historical rewrite: NO
+- Extra runtime/checker execution: NOT_PERFORMED
+
+### N-day Aegis relation
+
+- A1 input: `aegis-cortex/2026-10-02-A1-reliability-observe.md` / PR #562
+- A1 retained result: SUCCESS for the external research task
+- A1 evidence class: EXTERNAL_FAILURE_MODE_EVIDENCE
+- A1 local incident evidence: NO_LOCAL_EVIDENCE
+- A1 corrected execution-time state: UNKNOWN
+- Rejected declared execution timestamp remains recorded in the pre-merge provenance correction and is not restored here
+- A2 input: `aegis-cortex/2026-10-02-A2-doctrine-orient.md` / PR #563
+- A2 original task-time state: `INPUT_MISSING / BLOCKED / NOT_RUN`
+- Later A1 path availability: PRESENT_AFTER_ORIGINAL_A2_EXECUTION
+- A2 re-execution: NOT_PERFORMED
+- A2 evidence upgrade: NONE
+
+### N-day Ballast relation
+
+- Native Daily: `ballast/records/2026-10-02.md`
+- Command state: PASS
+- Task terminal state: COMPLETED
+- Valid completion: VERIFIED_WITH_LIMITS
+- Bounded decisions: 32 / 8 scenarios x 4 paths
+- Real external effects: 0
+- Live Kubernetes deletion/finalizer/garbage-collector runtime: NOT_EXECUTED
+- Native Daily increment: 1
+- Bounded modeled execution-window increment: 1
+- New cycle audit: NO
+- CASE / NOTES credit: 0
+
+### Current relation
+
+```text
+OCTOBER_1_FULL_COVERAGE
++
+OCTOBER_2_CURRENT_INPUTS
+=
+CURRENT_MONTH_RELATION_THROUGH_2026_10_02
+
+UNKNOWN_EXECUTION_TIME
+!= INVENTED_REPLACEMENT_TIMESTAMP
+
+LATER_A1_DELIVERY
+!= ORIGINAL_A2_INPUT_AVAILABILITY
+
+DELETE_ACCEPTED
+!= CLEANUP_COMPLETE
+
+BOUNDED_MODEL_MATCH
+!= LIVE_KUBERNETES_RUNTIME
+```
+
+### A2 disposition
+
+- October version state: OPEN
+- Relationship continuity: UPDATED_THROUGH_2026-10-02
+- A2 historical blocked state: PRESERVED
+- A1 temporal provenance correction: PRESERVED
+- Ballast Daily: INTEGRATED_WITH_LIVE_RUNTIME_BOUNDARY
+- Durable doctrine promotion: NO
+- New credit beyond native Ballast Daily/window: NONE
