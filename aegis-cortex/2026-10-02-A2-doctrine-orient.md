@@ -71,6 +71,15 @@ INPUT_MISSING
 - **同源重复风险**: INPUT_MISSING
 - **网络和来源限制**: INPUT_MISSING
 
+## FORWARD_RECONCILIATION
+- **Original A2 Execution Base**: `3745f7757ce4307e536dcd1971c5c7be196b79ad`
+- **Required A1 State At Original Execution**: `INPUT_MISSING`
+- **Later A1 Delivery**: PR `#562` merged at `2026-10-02T02:29:02Z` as merge commit `d1d42037e4298a38df171a473ef701e0c9f719f9`
+- **Current Repository Relationship**: the 2026-10-02 A1 path became available only after this A2 execution had already recorded `BLOCKED`; the merged A1 also contains a pre-merge correction setting its unrecoverable execution timestamp to `UNKNOWN`
+- **Historical Interpretation**: original A2 remains `INPUT_MISSING / BLOCKED`; later A1 delivery does not retroactively create A2 doctrine orientation, source verification, or local applicability evidence
+- **Re-execution Status**: `NOT_PERFORMED`
+- **Evidence Upgrade Basis**: `NONE`
+
 ## BOUNDARY_CHECK
 - 确认未越界、未制造本地故障、未做最终决策：YES
 - 确认把外部风险与实际读取的 Aegis 仓库记录比较，没有把理论风险写成本地事故：YES
