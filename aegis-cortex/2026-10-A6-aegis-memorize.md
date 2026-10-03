@@ -260,3 +260,82 @@ CURRENT_COMPLETION
 NO_FOLLOW_UP
 != NOT_REVIEWED
 ```
+
+
+## A2_CURRENT_MONTH_RELATION_2026-10-03
+
+- Logical maintenance date: 2026-10-03
+- Exact A1-merged base main: `95854cfde3a4420cb4cbb61b41592c6464134c06`
+- Current month relation window: 2026-10-01 through 2026-10-03
+- A1 coverage through 2026-10-02: INHERITED_FROM_MERGED_A1
+- Month Closure Status: OPEN
+- W40 A3/A4 final: NOT_DUE
+- October A5/A6 natural-month final: NOT_DUE
+- Historical rewrite: NO
+- Extra audit executed: NO
+- Extra runtime/checker execution by maintenance: NOT_PERFORMED
+
+### N-day Aegis relation
+
+- A1 input: `aegis-cortex/2026-10-03-A1-reliability-observe.md`
+- A1 task state: SUCCESS
+- Network Status: NETWORK_VERIFIED
+- Source Status: SINGLE_SOURCE_LINEAGE
+- Evidence class: EXTERNAL_FAILURE_MODE_EVIDENCE
+- Local incident evidence: NO_LOCAL_EVIDENCE
+- Signal: aggregate agent reliability can hide hard-task / agent-by-task interaction collapse
+- A2 input: `aegis-cortex/2026-10-03-A2-doctrine-orient.md`
+- A2 Input Status: INPUT_PRESENT
+- A2 task state: SUCCESS
+- Weekly promotion eligibility: ELIGIBLE_FOR_OBSERVATION_ONLY
+- Durable doctrine promotion: NONE
+- Local failure/incident promotion: NONE
+
+### N-day Ballast relation
+
+- Native Daily: `ballast/records/2026-10-03.md`
+- Research question: finalizer/control-plane release versus independently verified external cleanup
+- Bounded decision fixture: EXECUTED
+- Modeled decisions: 32 / 8 scenarios x 4 paths
+- Real external effects: 0
+- Unsafe false-complete decisions across compared paths: 5 / 5 / 3 / 0
+- Verifier expected-label agreement: 8 / 8
+- Live Kubernetes deletion: NOT_EXECUTED
+- Live Crossplane provider reconciliation: NOT_EXECUTED
+- Real cloud-resource cleanup: NOT_EXECUTED
+- Fully semantic-contract-independent verifier: NOT_EXECUTED
+- CASE support increment: 0
+- NOTES findings increment: 0
+- New cycle audit: NO
+
+### Current relation
+
+```text
+OCTOBER_1_TO_2_FULL_COVERAGE
++
+OCTOBER_3_CURRENT_INPUTS
+=
+CURRENT_MONTH_RELATION_THROUGH_2026_10_03
+
+EXTERNAL_AGENT_RELIABILITY_RISK
+!= LOCAL_AEGIS_INCIDENT
+
+AGGREGATE_SUCCESS
+!= HARD_TASK_RELIABILITY
+
+CONTROL_PLANE_DISAPPEARANCE
+!= EXTERNAL_CLEANUP_COMPLETION
+
+BOUNDED_MODEL
+!= LIVE_KUBERNETES_OR_PROVIDER_RUNTIME
+```
+
+### A2 disposition
+
+- October version state: OPEN
+- Relationship continuity: UPDATED_THROUGH_2026-10-03
+- Aegis external-risk/local-incident separation: PRESERVED
+- Ballast 10/3 native Daily: INTEGRATED_WITH_EXTERNAL_CLEANUP_AND_RUNTIME_BOUNDARY
+- W40 settlement: NOT_DUE
+- Durable doctrine promotion: NO
+- New credit beyond native Ballast Daily/window: NONE
