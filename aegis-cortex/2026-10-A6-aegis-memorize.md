@@ -212,3 +212,51 @@ BOUNDED_MODEL_MATCH
 - Ballast Daily: INTEGRATED_WITH_LIVE_RUNTIME_BOUNDARY
 - Durable doctrine promotion: NO
 - New credit beyond native Ballast Daily/window: NONE
+
+
+## A1_FULL_COVERAGE_2026-10-03
+
+- Logical maintenance date: 2026-10-03
+- Exact base main: `15e0647b6cafe44db57c4cdf055516ca5a982fac`
+- Coverage window: 2026-10-01 through 2026-10-02
+- Coverage mode: MONTH_START_TO_N_MINUS_1_FULL_COVERAGE
+- A1 rule: REVIEWED != MODIFIED
+- Historical rewrite: NO
+- Extra audit executed: NO
+- Extra runtime/checker execution: NOT_PERFORMED
+
+### Reviewed October surfaces
+
+| Surface | Decision | Preserved boundary |
+| --- | --- | --- |
+| `aegis-cortex/2026-10-01-A1-reliability-observe.md` | REVIEWED / NO_FOLLOW_UP | external-risk evidence remains separate from local incident evidence |
+| `aegis-cortex/2026-10-01-A2-doctrine-orient.md` | REVIEWED / NO_FOLLOW_UP | original dependency/task-time state remains historical |
+| `aegis-cortex/2026-10-02-A1-reliability-observe.md` | REVIEWED / NO_FOLLOW_UP | source/provenance correction remains forward correction, not history rewrite |
+| `aegis-cortex/2026-10-02-A2-doctrine-orient.md` | REVIEWED / NO_FOLLOW_UP | original `INPUT_MISSING / BLOCKED / NOT_RUN` remains point-in-time truth |
+| `ballast/records/2026-10-01.md` | REVIEWED / NO_FOLLOW_UP | native experiment/window credit remains owned by the Daily |
+| `ballast/records/2026-10-02.md` | REVIEWED / NO_FOLLOW_UP | `DELETE_ACCEPTED != CLEANUP_COMPLETE`; bounded model != live runtime |
+| `ballast/records/2026-10.md` and `ballast/README.md` | REVIEWED / NO_FOLLOW_UP | derived synchronization adds zero experiment/window/CASE/NOTES credit |
+| W40 A3/A4 and October A5/A6 final | NOT_DUE | current week/month remain open |
+
+### A1 disposition
+
+- Coverage completeness: COMPLETE_THROUGH_2026-10-02_AT_THIS_CHECK
+- Decision completeness: COMPLETE_THROUGH_2026-10-02_AT_THIS_CHECK
+- Owning historical Daily mutation required: NO
+- Weekly final mutation required: NO
+- Natural-month final mutation required: NO
+- New local-incident / execution-window / CASE / NOTES / doctrine credit: NONE
+
+```text
+EXTERNAL_RISK
+!= LOCAL_INCIDENT
+
+LATER_PATH_PRESENT
+!= ORIGINAL_INPUT_AVAILABLE
+
+CURRENT_COMPLETION
+!= HISTORICAL_OCCURRENCE
+
+NO_FOLLOW_UP
+!= NOT_REVIEWED
+```
