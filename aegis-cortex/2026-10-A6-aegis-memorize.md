@@ -373,3 +373,44 @@ A1_N_MINUS_1_CUTOFF
 - W40 settlement: NOT_DUE
 - October natural-month final: NOT_DUE
 - A2 dependency: MUST_FRESH_READ_THIS_A1_MERGED_MAIN
+
+
+## A2_SUCCESSOR_CURRENT_MONTH_RELATION_2026-10-03
+
+- Logical maintenance date: 2026-10-03
+- Exact successor A1-merged base main: `ab0d8c485cc38d74ac0a442876e7ce47fcc84f31`
+- Current month relation window: 2026-10-01 through 2026-10-03
+- Successor A1 dependency: PRESENT_ON_BASE_AND_CONSUMED
+- Predecessor same-day A2: PRESERVED_AS_POINT_IN_TIME_HISTORY
+- New repository-native input after predecessor A2: NONE OBSERVED
+- Successor relational outcome: NO_MATERIAL_RELATION_CHANGE
+- Historical rewrite: NO
+- Extra audit/runtime execution by maintenance: NOT_PERFORMED
+
+### Current relation
+
+- Earlier 2026-10-03 Aegis / Ballast A2 relation remains the current substantive N-day interpretation.
+- This successor proves the requested second-round dependency was re-established from merged A1, not that a new native observation occurred.
+- No prior Daily, Weekly, Monthly, Special, CASE, finding, or memory credit is duplicated.
+
+```text
+MERGED_SUCCESSOR_A1
++
+FRESH_MAIN_READ
++
+NO_NEW_NATIVE_INPUT
+=
+NO_MATERIAL_RELATION_CHANGE
+
+A2_SUCCESSOR
+!= NATIVE_TASK_REPLAY
+!= DUPLICATE_EVIDENCE_CREDIT
+```
+
+### Successor A2 disposition
+
+- October version state: OPEN
+- Relationship continuity: RECONFIRMED_THROUGH_2026-10-03
+- W40 settlement: NOT_DUE
+- October natural-month final: NOT_DUE
+- New local-incident/experiment/execution-window/CASE/NOTES/doctrine credit: NONE
