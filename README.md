@@ -2,6 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22791081.svg)](https://doi.org/10.5281/zenodo.22791081)
 
+[Open Research / 开放科研](./OPEN_RESEARCH.md) · [Research Template / 科研模板](./RESEARCH_TEMPLATE.md)
+
 > **"Restraint is the ultimate form of digital violence."**
 
 A standard-library research laboratory for deterministic state, evidence, reliability boundaries, and edge-native execution.
