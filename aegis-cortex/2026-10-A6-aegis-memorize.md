@@ -414,3 +414,163 @@ A2_SUCCESSOR
 - W40 settlement: NOT_DUE
 - October natural-month final: NOT_DUE
 - New local-incident/experiment/execution-window/CASE/NOTES/doctrine credit: NONE
+
+## A1 FULL COVERAGE — 2026-10-04
+
+- Repository: `lostlight530/zero-entropy-lab`
+- Plane: `A1 / FULL_COVERAGE_MAINTENANCE`
+- Logical maintenance date: `2026-10-04`
+- Base main: `fbf6f9b0032a711db275a5becef6016db8ff5913`
+- Coverage window: `2026-10-01..2026-10-03`
+- N-day excluded from A1: `2026-10-04`
+- Owner: `aegis-cortex/2026-10-A6-aegis-memorize.md`
+- System: Aegis / Ballast
+- Historical rewrite: `NO`
+- Native replay: `NO`
+- Extra runtime/test execution: `NOT_PERFORMED`
+- New research credit: `NONE`
+- New execution credit: `NONE`
+
+### Retained maintenance chronology
+
+- 2026-10-01 A1 #559 initialized the October owner; A2 #560 integrated the first October relation.
+- 2026-10-02 A1 #564 and A2 #565 advanced coverage; D30 #566 remained a separate retrospective audit.
+- 2026-10-03 A1 #570 and A2 #571 advanced the relation; successor #572/#573 preserved later visibility without backdating it.
+- Ballast Daily records remain producer-native and separate from maintenance credit.
+- Each PR remains authoritative only for its own review cut.
+- Later paths do not establish earlier availability.
+- Later success does not erase earlier blocked or provisional state.
+- Closed-unmerged PRs are not promoted into current-main evidence.
+
+### 2026-10-01 coverage
+
+- Aegis A1 Daily: PRESENT.
+- Aegis A2 Daily: PRESENT with its task-time dependency state preserved.
+- Ballast Daily: PRESENT.
+- A1 #559 / A2 #560: MERGED.
+- September A5/A6 finality gap remains prior-month history.
+- A1 decision: RETAIN / PRESERVE_BLOCKED_HISTORY.
+- Coverage status: COMPLETE_FOR_DATE.
+- New local-incident credit: NONE.
+- New experiment credit: NONE.
+- New execution-window credit: NONE.
+
+### 2026-10-02 coverage
+
+- Aegis A1/A2 Daily: PRESENT.
+- Ballast Daily: PRESENT.
+- A1 #564 / A2 #565: MERGED.
+- D30 #566: MERGED_AS_RETROSPECTIVE_AUDIT.
+- D30 does not upgrade native reliability evidence.
+- External-risk evidence remains distinct from local incident evidence.
+- A1 decision: RETAIN / AUDIT_SEPARATE.
+- Coverage status: COMPLETE_FOR_DATE.
+- New runtime credit: NONE.
+- New doctrine credit: NONE.
+
+### 2026-10-03 coverage
+
+- Aegis A1/A2 Daily: PRESENT.
+- Ballast Daily: PRESENT.
+- A1 #570 / A2 #571: MERGED.
+- Successor A1 #572 / A2 #573: MERGED.
+- Bounded external-cleanup model remains distinct from live provider behavior.
+- Control-plane disappearance remains distinct from verified external cleanup.
+- A1 decision: RETAIN_CURRENT_RELATION.
+- Coverage status: COMPLETE_FOR_DATE.
+- New CASE credit: NONE.
+- New NOTES credit: NONE.
+
+### Artifact-class review
+
+- Native Daily artifacts: REVIEWED / RETAIN.
+- Native Weekly artifacts: REVIEWED_IF_DUE / RETAIN.
+- Rolling Monthly owner: REVIEWED / APPEND_ONLY.
+- Prior-month monthly artifacts: PRIOR_MONTH_FACT_SOURCE.
+- D30 artifacts: AUDIT_PLANE / RETAIN.
+- Prior A1 sections: POINT_IN_TIME_HISTORY.
+- Prior A2 sections: POINT_IN_TIME_HISTORY.
+- Closed-unmerged PRs: DELIVERY_HISTORY_ONLY.
+- Index/registry surfaces: NO_MECHANICAL_MUTATION.
+- 2026-10-04 producer artifacts: BOUNDARY_ONLY / DEFER_TO_A2.
+
+### 2026-10-04 boundary only
+
+- Ballast 2026-10-04 Daily #574: MERGED.
+- Aegis A1 Daily #575: MERGED.
+- Aegis A2 Daily #576: MERGED but task-time `INPUT_MISSING / BLOCKED` remains controlling.
+- W39 A3 #577: MERGED.
+- W39 A4 #578: MERGED after A3.
+- N-day visibility is used only to define the cutoff.
+- N-day evidence is not consumed into A1.
+- N-day relation is reserved for A2 after this A1 merges.
+
+### Evidence invariants
+
+- `LATER_PATH_PRESENT != ORIGINAL_INPUT_AVAILABLE`
+- `CURRENT_PATH_COMPLETE != HISTORICAL_EXECUTION_COMPLETE`
+- `LATER_SUCCESS != EARLIER_SUCCESS`
+- `CURRENT_REPOSITORY_STATE != TASK_TIME_STATE`
+- `MERGED_ARTIFACT != SUCCESSFUL_EXECUTION`
+- `MERGED_MONTHLY_ARTIFACT != NATURAL_MONTH_CLOSE`
+- `DUE_DATE != EXECUTION`
+- `SCHEDULED != EXECUTED`
+- `SAME_DATE != SAME_STATE`
+- `SOURCE_CODE != EXECUTED_BEHAVIOR`
+- `TEST_SOURCE != TEST_EXECUTION`
+- `NATIVE_TASK_DELIVERY != A1_MAINTENANCE`
+- `A1_MAINTENANCE != A2_RELATIONAL_VERSION`
+- `A2_RELATIONAL_VERSION != PERIODIC_AUDIT`
+- `PERIODIC_AUDIT != DURABLE_GOVERNANCE`
+
+### Repository-specific boundaries
+
+- `EXTERNAL_RISK != LOCAL_INCIDENT`.
+- `BOUNDED_MODEL != LIVE_KUBERNETES_OR_PROVIDER_RUNTIME`.
+- `LATER_A1_PRESENT != A2_ORIGINAL_INPUT_AVAILABLE`.
+- Command success is not transport success, terminal state, or valid completion.
+- Unknown non-idempotent effects must not be blindly retried.
+- September A5 final is not established by an unmerged Draft.
+- September A6 merged-blocked state remains valid.
+
+### Completeness checklist
+
+- 2026-10-01 represented: YES.
+- 2026-10-02 represented: YES.
+- 2026-10-03 represented: YES.
+- N-1 coverage complete: YES.
+- 2026-10-04 excluded from A1 consumption: YES.
+- D30 kept separate where present: YES.
+- Historical task-time states preserved: YES.
+- Closed-unmerged history not promoted: YES.
+- Duplicate research credit: NO.
+- Duplicate execution credit: NO.
+- Runtime execution invented: NO.
+- Test execution invented: NO.
+- Weekly closure invented: NO.
+- Natural-month closure invented: NO.
+- Governance promotion performed: NO.
+- Parallel owner created: NO.
+- A2 allowed before A1 merge: NO.
+
+### A1 disposition
+
+- Coverage completeness: `COMPLETE_THROUGH_2026-10-03_AT_THIS_CHECK`.
+- Decision completeness: `COMPLETE_THROUGH_2026-10-03_AT_THIS_CHECK`.
+- October owner state: `OPEN`.
+- October natural-month final: `NOT_DUE`.
+- New native credit: `NONE`.
+- New runtime credit: `NONE`.
+- New audit credit: `NONE`.
+- New governance credit: `NONE`.
+- A2 dependency: `MUST_MERGE_THIS_A1_THEN_FRESH_READ_MAIN`.
+
+```text
+OCTOBER_1_TO_3_FULL_COVERAGE
++
+HISTORICAL_STATE_PRESERVED
++
+N_DAY_2026_10_04_EXCLUDED
+=
+A1_COMPLETE_FOR_2026_10_04
+```
