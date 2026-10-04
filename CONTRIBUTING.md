@@ -1,5 +1,9 @@
 # Contributing
 
+## Open research contributions
+
+For research-method or positioning changes, start with [`OPEN_RESEARCH.md`](./OPEN_RESEARCH.md). For new bounded research records, use [`RESEARCH_TEMPLATE.md`](./RESEARCH_TEMPLATE.md). Repository-native implementation, evidence, and historical contracts remain authoritative for their own surfaces.
+
 Contributions are welcome when they improve Zero-Entropy Lab's implementation, evidence clarity, tests, documentation, metadata, or developer experience while preserving deterministic state and provenance boundaries.
 
 ## Repository surfaces
