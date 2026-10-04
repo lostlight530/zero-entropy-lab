@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-04 ambiguous external creation recovery versus authoritative prior-effect absence under incomplete external identity](records/2026-10-04.md)
+- 最新 Daily: [2026-10-05 target precondition identity versus authorization and completion under object reincarnation](records/2026-10-05.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-09-26 至 2026-10-01](audits/2026-09-26--2026-10-01.md)
@@ -466,4 +466,26 @@ AUTHORITATIVE_MISS
 The latest complete derived audit remains 2026-09-26..2026-10-01. The next non-overlapping cycle now contains 2026-10-02..2026-10-04, so no new audit is created.
 
 Current native research endpoint is 2026-10-04.
+
+## Ballast current-state advance — 2026-10-05
+
+2026-10-05 contributes exactly one NATIVE research unit on target precondition identity versus authorization and completion under object reincarnation.
+
+```text
+NAME_EQUALITY
+!= INCARNATION_IDENTITY
+
+UID_OR_REVISION_MATCH
+!= CURRENT_EXECUTION_PERMISSION
+
+PRECONDITION_ACCEPTANCE
+!= TASK_COMPLETION
+
+PRIOR_EFFECT_UNKNOWN
+!= SAFE_RETRY
+```
+
+The latest complete derived audit remains 2026-09-26..2026-10-01. The current non-overlapping cycle now contains 2026-10-02..2026-10-05 with four dates, so no new audit is created.
+
+Current native research endpoint is 2026-10-05.
 
