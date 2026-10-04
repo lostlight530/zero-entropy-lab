@@ -574,3 +574,145 @@ N_DAY_2026_10_04_EXCLUDED
 =
 A1_COMPLETE_FOR_2026_10_04
 ```
+
+## A2 CURRENT MONTH RELATION — 2026-10-04
+
+- Repository: `lostlight530/zero-entropy-lab`
+- Plane: `A2 / CURRENT_MONTH_RELATIONAL_VERSION`
+- Logical maintenance date: `2026-10-04`
+- Exact A1-merged base main: `8d7a4ef115b5575adfbf901e177b6117ec74459a`
+- Required predecessor A1: PR #579 / MERGED
+- Fresh-read after A1 merge: YES
+- Current relation window: 2026-10-01..2026-10-04
+- Owner: `aegis-cortex/2026-10-A6-aegis-memorize.md`
+- Systems: Aegis / Ballast
+- Historical rewrite: NO
+- Native replay: NO
+- Extra runtime/test execution: NOT_PERFORMED
+- Duplicate native credit: NONE
+
+### A1 dependency
+- A1 #579 is present on this base.
+- A1 covers 2026-10-01..2026-10-03.
+- A2 consumes 2026-10-04 N-day input.
+- Prior A2 records remain point-in-time history.
+- Later current state does not rewrite prior task-time state.
+
+### Inherited 2026-10-01 relation
+- Month-open Aegis/Ballast relation retained.
+- September A5/A6 finality gap remains prior-month history.
+- Blocked states are not normalized by later paths.
+- No duplicate native credit.
+
+### Inherited 2026-10-02 relation
+- Aegis/Ballast 10/2 relation retained.
+- D30 #566 remains retrospective audit evidence.
+- External-risk evidence remains distinct from local incident evidence.
+- No audit-to-native credit transfer.
+
+### Inherited 2026-10-03 relation
+- Aegis 10/3 external-risk relation retained.
+- Ballast bounded cleanup model retained.
+- Successor A1/A2 chronology retained.
+- Live provider behavior remains unverified.
+
+### 2026-10-04 native relation consumed
+- Ballast Daily #574 is merged.
+- Ballast October state has four native Dailies.
+- Ballast October state has four bounded modeled windows.
+- Live Kubernetes mutation/deletion: NOT_EXECUTED.
+- Live Crossplane reconciliation: NOT_EXECUTED.
+- Real provider cleanup: NOT_EXECUTED.
+- Aegis A1 Daily #575 is merged.
+- Aegis A2 Daily #576 is merged.
+- A2 #576 task-time state remains INPUT_MISSING / BLOCKED.
+- Later A1 path presence does not upgrade A2 #576.
+- W39 A3 #577 is merged.
+- W39 A4 #578 is merged after A3.
+
+### Current relational synthesis
+- Aegis Daily producer state is current through 2026-10-04.
+- A2 10/4 blocked chronology remains preserved.
+- W39 A3 to A4 chain is ordered and current on main.
+- Ballast rolling October owner is current through 2026-10-04.
+- Ballast live external-effect verification remains not executed.
+- October A5/A6 natural-month final remains not due.
+
+### Relation matrix
+| Surface | A2 state | Boundary |
+| --- | --- | --- |
+| 2026-10-01 | RETAINED | point-in-time history |
+| 2026-10-02 | RETAINED | audit chronology preserved |
+| 2026-10-03 | RETAINED | successor chronology preserved |
+| 2026-10-04 | CONSUMED | native N-day relation |
+| Rolling October owner | OPEN / CURRENT | not natural-month final |
+| Prior A1 | CONSUMED | N-1 foundation |
+| Prior A2 | PRESERVED | no overwrite |
+| D30 / periodic audit | SEPARATE | no native-credit substitution |
+| Durable governance | NOT_PROMOTED | no stable repetition basis |
+
+### Evidence invariants
+- LATER_PATH_PRESENT != ORIGINAL_INPUT_AVAILABLE.
+- CURRENT_PATH_COMPLETE != HISTORICAL_EXECUTION_COMPLETE.
+- LATER_SUCCESS != EARLIER_SUCCESS.
+- CURRENT_REPOSITORY_STATE != TASK_TIME_STATE.
+- MERGED_ARTIFACT != SUCCESSFUL_EXECUTION.
+- MERGED_MONTHLY_ARTIFACT != NATURAL_MONTH_CLOSE.
+- DUE_DATE != EXECUTION.
+- SCHEDULED != EXECUTED.
+- SAME_DATE != SAME_STATE.
+- SOURCE_CODE != EXECUTED_BEHAVIOR.
+- TEST_SOURCE != TEST_EXECUTION.
+- NATIVE_TASK_DELIVERY != A1_MAINTENANCE.
+- A1_MAINTENANCE != A2_RELATIONAL_VERSION.
+- A2_RELATIONAL_VERSION != PERIODIC_AUDIT.
+- PERIODIC_AUDIT != DURABLE_GOVERNANCE.
+
+### Repository-specific boundaries
+- EXTERNAL_RISK != LOCAL_INCIDENT.
+- LATER_A1_PRESENT != A2_ORIGINAL_INPUT_AVAILABLE.
+- BOUNDED_MODEL != LIVE_KUBERNETES_OR_PROVIDER_RUNTIME.
+- Command success != transport success != valid completion.
+- Unknown non-idempotent effects must not be blindly retried.
+- September A5 final remains unestablished.
+- September A6 blocked state remains valid.
+
+### Validation checklist
+- A1 merged before A2 branch: YES.
+- Fresh post-A1 base used: YES.
+- 2026-10-01 relation preserved: YES.
+- 2026-10-02 relation preserved: YES.
+- 2026-10-03 relation preserved: YES.
+- 2026-10-04 native relation consumed: YES.
+- Earlier blocked/degraded state rewritten: NO.
+- Closed-unmerged history promoted: NO.
+- Duplicate native credit: NO.
+- Duplicate experiment credit: NO.
+- Duplicate execution-window credit: NO.
+- Runtime execution invented: NO.
+- Test execution invented: NO.
+- Weekly lifecycle rewritten: NO.
+- Natural-month final manufactured: NO.
+- Periodic audit manufactured: NO.
+- Durable governance promoted: NO.
+- Parallel monthly owner created: NO.
+
+### A2 disposition
+- Current October relation: CURRENT_THROUGH_2026-10-04.
+- October version state: OPEN.
+- Natural-month final: NOT_DUE.
+- Historical chronology: PRESERVED.
+- Native producer credit: RETAINED_WITHOUT_DUPLICATION.
+- A2 10/4 blocked state: PRESERVED.
+- W39 A3/A4 chain: CURRENT_AND_ORDERED.
+- New maintenance research credit: NONE.
+- New runtime credit: NONE.
+- New audit credit: NONE.
+- New governance credit: NONE.
+- Next A1 must fresh-read this merged main.
+
+```text
+MERGED_A1 + FRESH_MAIN_READ + 2026_10_04_NATIVE_INPUT
+= CURRENT_MONTH_RELATION_THROUGH_2026_10_04
+CURRENT_MONTH_RELATION != NATURAL_MONTH_FINAL
+```
