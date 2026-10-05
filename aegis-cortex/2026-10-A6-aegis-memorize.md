@@ -716,3 +716,158 @@ MERGED_A1 + FRESH_MAIN_READ + 2026_10_04_NATIVE_INPUT
 = CURRENT_MONTH_RELATION_THROUGH_2026_10_04
 CURRENT_MONTH_RELATION != NATURAL_MONTH_FINAL
 ```
+
+## A1 FULL COVERAGE — 2026-10-05 — AEGIS_BALLAST
+
+- Repository: `lostlight530/zero-entropy-lab`
+- Plane: `A1 / FULL_COVERAGE_MAINTENANCE`
+- Logical maintenance date: `2026-10-05`
+- Exact base main: `58b18810d2aea7b31b012442cbb64043ed0859e8`
+- Coverage window: `2026-10-01..2026-10-04`
+- N-day excluded from A1 consumption: `2026-10-05`
+- Owner: `aegis-cortex/2026-10-A6-aegis-memorize.md`
+- Native system: Aegis / Ballast
+- Historical rewrite: `NO`
+- Native task replay: `NO`
+- Runtime/network/test execution by maintenance: `NOT_PERFORMED`
+- New research credit: `NONE`
+- New execution-window credit: `NONE`
+
+### 1. Prior maintenance chain
+- 10/1–10/4 A1/A2 chain exists in the October A6 owner.
+- A2 10/4 blocked chronology remains preserved.
+- Open Research framework PR #581 merged after the 10/4 A2 cut.
+- 2026-10-04 A1/A2 remain point-in-time maintenance records.
+- 2026-10-04 Special/durable maintenance remains a separate governance plane where present.
+- Later repository state does not rewrite those earlier cuts.
+- Today A1 starts from fresh current main and reviews the complete MonthStart→N-1 window.
+
+### 2. 2026-10-01 coverage
+- Aegis/Ballast month-open relation retained.
+- Decision: RETAIN.
+- Historical-state preservation: REQUIRED.
+- New maintenance credit: NONE.
+
+### 3. 2026-10-02 coverage
+- D30 remains retrospective; external risk remains distinct from local incident.
+- Decision: RETAIN.
+- D30 or retrospective audit remains a separate plane where present.
+- New maintenance credit: NONE.
+
+### 4. 2026-10-03 coverage
+- Bounded external-cleanup model remains distinct from live provider runtime.
+- Decision: RETAIN.
+- Successor/late-delivery chronology remains point-in-time history.
+- New maintenance credit: NONE.
+
+### 5. 2026-10-04 coverage
+- Ballast #574, Aegis A1 #575, blocked A2 #576 and W39 A3/A4 chain remain current historical facts.
+- Later A1 presence still does not upgrade blocked A2 #576.
+- 2026-10-04 native/A2/Special state is now part of N-1 review.
+- 2026-10-04 point-in-time findings remain unchanged unless a verified defect is separately reconciled.
+- Decision: RETAIN_WITH_CURRENT_RELATION.
+- New maintenance credit: NONE.
+
+### 6. Open Research / scholarly-submission framework relation
+- `OPEN_RESEARCH.md` is present on current main.
+- `RESEARCH_TEMPLATE.md` is present on current main.
+- `CONTRIBUTING.md` routes research-method contributions to the open-research contract.
+- `README.md` exposes the open-research entry point.
+- These surfaces were merged after the previous 2026-10-04 A2 cut and therefore belong in today's N-1 repository-state review.
+- Open Research is a repository-level production/positioning guide, not a replacement for native methodology, implementation, evidence, maintenance, or historical authority.
+- The root research template is prospective; it does not retroactively rewrite historical Daily/Weekly/Monthly/Special records.
+- Scholarly metadata discipline is downstream of repository truth.
+- External classification does not define repository identity.
+- Publication metadata consistency does not establish scientific correctness.
+- Citation/DOI presence does not establish reproduction.
+- Shadow classification is optional and must record RUN/NOT_RUN separately.
+- Misclassification may be classifier noise rather than repository defect.
+- A submission/publication surface does not create implementation evidence.
+- A contribution template does not create task execution evidence.
+- Native stricter contracts remain controlling.
+
+### 7. Artifact-class decision matrix
+| Surface | A1 state | Decision boundary |
+| --- | --- | --- |
+| Native Daily / producer artifacts | REVIEWED | retain producer-owned facts |
+| Weekly / settlement artifacts | REVIEWED_IF_DUE | preserve native contract semantics |
+| Rolling Monthly owner | REVIEWED | append-only relation |
+| Special / retrospective audit | REVIEWED_IF_PRESENT | separate plane |
+| Prior A1/A2 | REVIEWED | point-in-time history |
+| OPEN_RESEARCH.md | REVIEWED | durable guide, below native authority |
+| RESEARCH_TEMPLATE.md | REVIEWED | prospective template only |
+| README / CONTRIBUTING routing | REVIEWED | navigation / contribution layer |
+| Scholarly metadata / submission surfaces | REVIEW_BY_RELATION | no scientific-validity promotion |
+| 2026-10-05 native state | BOUNDARY_ONLY | defer to A2 |
+
+### 8. 2026-10-05 N-day boundary
+- Ballast 2026-10-05 PR #582 is merged.
+- Aegis A1 2026-10-05 PR #583 is merged.
+- Aegis A2 2026-10-05 PR #584 is merged.
+- These N-day facts are observed only to establish the cutoff.
+- They are not consumed into this A1 result.
+- Their relation to October is reserved for A2 after this A1 merges.
+
+### 9. Permanent evidence invariants
+- `LATER_PATH_PRESENT != ORIGINAL_INPUT_AVAILABLE`
+- `CURRENT_PATH_COMPLETE != HISTORICAL_EXECUTION_COMPLETE`
+- `LATER_SUCCESS != EARLIER_SUCCESS`
+- `CURRENT_REPOSITORY_STATE != TASK_TIME_STATE`
+- `SAME_DATE != SAME_STATE`
+- `SOURCE_CODE != EXECUTED_BEHAVIOR`
+- `TEST_SOURCE != TEST_EXECUTION`
+- `PUBLICATION != VALIDATION`
+- `CITATION != REPRODUCTION`
+- `EXTERNAL_CLASSIFICATION != REPOSITORY_IDENTITY`
+- `OPEN_RESEARCH_GUIDE != NATIVE_METHOD_CONTRACT`
+- `RESEARCH_TEMPLATE != HISTORICAL_RECORD_REWRITE`
+- `NATIVE_TASK_DELIVERY != A1_MAINTENANCE`
+- `A1_MAINTENANCE != A2_RELATIONAL_VERSION`
+- `A2_RELATIONAL_VERSION != PERIODIC_AUDIT`
+- `PERIODIC_AUDIT != DURABLE_GOVERNANCE`
+
+### 10. Repository-specific boundaries
+- EXTERNAL_RISK != LOCAL_INCIDENT.
+- BOUNDED_MODEL != LIVE_PROVIDER_RUNTIME.
+- Command success != transport success != valid completion.
+- Unknown non-idempotent effects must not be blindly retried.
+
+### 11. Completeness checks
+- 2026-10-01 represented: YES.
+- 2026-10-02 represented: YES.
+- 2026-10-03 represented: YES.
+- 2026-10-04 represented: YES.
+- MonthStart→N-1 coverage complete: YES.
+- Open Research framework relation reviewed: YES.
+- Scholarly/submission boundary reviewed: YES.
+- Historical state rewritten: NO.
+- Closed-unmerged history promoted: NO.
+- Duplicate research credit: NO.
+- Duplicate execution credit: NO.
+- Runtime execution invented: NO.
+- Test execution invented: NO.
+- Publication validity invented: NO.
+- Scientific reproduction invented: NO.
+- Natural-month final manufactured: NO.
+- 2026-10-05 consumed by A1: NO.
+- Parallel maintenance owner created: NO.
+- A2 allowed before A1 merge: NO.
+
+### 12. A1 disposition
+- Coverage completeness: `COMPLETE_THROUGH_2026-10-04_AT_THIS_CHECK`.
+- Current October state: `OPEN`.
+- Open Research framework: `PRESENT / RELATION_REVIEWED`.
+- Scholarly submission/publication relation: `BOUNDED_BY_REPOSITORY_TRUTH`.
+- Natural-month final: `NOT_DUE`.
+- New maintenance research credit: `NONE`.
+- New runtime credit: `NONE`.
+- New publication/reproduction credit: `NONE`.
+- A2 dependency: `MUST_MERGE_THIS_A1_THEN_FRESH_READ_CURRENT_MAIN`.
+
+```text
+OCTOBER_1_TO_4_FULL_COVERAGE
++ OPEN_RESEARCH_RELATION_REVIEWED
++ HISTORICAL_STATE_PRESERVED
++ N_DAY_2026_10_05_EXCLUDED
+= A1_COMPLETE_FOR_2026_10_05
+```
