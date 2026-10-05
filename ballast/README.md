@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-05 target precondition identity versus authorization and completion under object reincarnation](records/2026-10-05.md)
+- 最新 Daily: [2026-10-06 admission webhook side-effect declaration versus persisted effect and completion under later rejection](records/2026-10-06.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-09-26 至 2026-10-01](audits/2026-09-26--2026-10-01.md)
@@ -488,4 +488,26 @@ PRIOR_EFFECT_UNKNOWN
 The latest complete derived audit remains 2026-09-26..2026-10-01. The current non-overlapping cycle now contains 2026-10-02..2026-10-05 with four dates, so no new audit is created.
 
 Current native research endpoint is 2026-10-05.
+
+## Ballast current-state advance — 2026-10-06
+
+2026-10-06 contributes exactly one NATIVE research unit on admission webhook side-effect declaration versus persisted effect and completion under later rejection.
+
+```text
+WEBHOOK_ALLOW
+!= OBJECT_PERSISTED
+
+SIDE_EFFECT_DECLARATION
+!= VALID_EXTERNAL_COMPLETION
+
+EXTERNAL_EFFECT_OCCURRED
+!= HISTORICAL_AUTHORIZATION
+
+PERSISTED_TARGET
+!= RECONCILIATION_COMPLETE
+```
+
+The latest complete derived audit remains 2026-09-26..2026-10-01. The current non-overlapping cycle now contains 2026-10-02..2026-10-06 with five dates, so no new audit is created.
+
+Current native research endpoint is 2026-10-06.
 
