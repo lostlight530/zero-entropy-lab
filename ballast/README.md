@@ -29,10 +29,10 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-06 admission webhook side-effect declaration versus persisted effect and completion under later rejection](records/2026-10-06.md)
+- 最新 Daily: [2026-10-07 admission reinvocation observation versus final-object and task completion proof](records/2026-10-07.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
-- 最新完整周期审计: [2026-09-26 至 2026-10-01](audits/2026-09-26--2026-10-01.md)
+- 最新完整周期审计: [2026-10-02 至 2026-10-07](audits/2026-10-02--2026-10-07.md)
 - 2026-09-26 至 2026-10-01 已形成新的 6 日 derived audit, 其中 2026-09-26 为 RECONSTRUCTION / NOT_RUN / UNVERIFIED. 该 audit 仅做派生审计, 新增实验数量 0, 新增长期结论数量 0, 不重复创建重叠 audit
 - 当前方法: [METHOD.md](METHOD.md)
 - 控制案例: [CASES.md](CASES.md)
@@ -511,3 +511,24 @@ The latest complete derived audit remains 2026-09-26..2026-10-01. The current no
 
 Current native research endpoint is 2026-10-06.
 
+## Ballast current-state advance — 2026-10-07
+
+2026-10-07 contributes exactly one NATIVE research unit on admission reinvocation observation versus final-object and task completion proof.
+
+```text
+REINVOCATION_OBSERVED
+!= FINAL_OBJECT_PROVEN
+
+FINAL_OBJECT_VALID
+!= CURRENT_EXECUTION_PERMISSION
+
+FINAL_OBJECT_VALID
+!= PRIOR_EFFECT_RESOLVED
+
+CALLBACK_REPEATED
+!= TASK_COMPLETION
+```
+
+The 2026-10-02..2026-10-07 six-date window now has one derived cycle audit with zero experiment, independent execution-window, CASE or NOTES credit.
+
+Current native research endpoint is 2026-10-07.
