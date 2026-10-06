@@ -1209,3 +1209,188 @@ OCTOBER_1_TO_5_FULL_COVERAGE
 + N_DAY_2026_10_06_EXCLUDED
 = A1_COMPLETE_FOR_2026_10_06
 ```
+
+
+## A2 CURRENT MONTH RELATION — 2026-10-06 — AEGIS_BALLAST
+
+- Repository: `lostlight530/zero-entropy-lab`
+- Plane: `A2 / CURRENT_MONTH_RELATIONAL_VERSION`
+- Logical maintenance date: `2026-10-06`
+- Exact A1-merged base main: `77b0c0d32bc626a155cca9b38bb107d96bfde732`
+- Required predecessor A1: PR #590 / MERGED
+- Fresh-read after A1 merge: YES
+- Current month relation window: `2026-10-01..2026-10-06`
+- Owner: `aegis-cortex/2026-10-A6-aegis-memorize.md`
+- Native systems: Aegis / Ballast / bounded NEXUS relation
+- Historical rewrite: NO
+- Native task replay: NO
+- Live external provider execution by maintenance: NOT_PERFORMED
+- Duplicate native/research credit: NONE
+- October natural-month final: NOT_DUE
+
+### 1. A1 dependency consumption
+- A1 #590 is present on this exact base.
+- A1 supplies complete MonthStart→2026-10-05 coverage.
+- A2 does not rerun or replace A1.
+- A2 consumes 2026-10-06 Aegis and Ballast producer/current state.
+- Prior Daily, Weekly, Monthly, audit, A1, and A2 records remain point-in-time history.
+- The existing October A6 owner remains the one relational owner.
+- External risk, local preventive record, local incident, and local runtime outcome remain separate evidence classes.
+- No historical Aegis or Ballast artifact is rewritten.
+
+### 2. Inherited 2026-10-01 relation
+- Aegis/Ballast month-open relation is retained.
+- External risk evidence remains distinct from local incident evidence.
+- No new producer, experiment, or execution-window credit is created by inheritance.
+
+### 3. Inherited 2026-10-02 relation
+- D30 and retrospective relation remain separate from Daily producer work.
+- Historical occurrence, current permission, and current completion remain separate axes.
+- No audit-to-native execution credit transfer occurs.
+
+### 4. Inherited 2026-10-03 relation
+- Bounded cleanup/model evidence remains distinct from live-provider runtime.
+- Unknown non-idempotent history remains unknown unless authoritative evidence closes it.
+- No later success rewrites earlier unknown or bounded state.
+
+### 5. Inherited 2026-10-04 relation
+- Blocked Aegis chronology remains historical where it occurred.
+- Weekly discipline relation remains separate from Daily producer evidence.
+- Open Research remains below Aegis/Ballast native authority.
+
+### 6. Inherited 2026-10-05 relation
+- Ballast target-precondition / authorization / completion separation remains retained.
+- Aegis A1/A2 2026-10-05 producer chain remains retained.
+- The prior A2 current relation through 2026-10-05 remains a predecessor state.
+- No new native or experiment credit is created by inheritance.
+
+### 7. 2026-10-06 Ballast native relation
+- Ballast PR #587 is merged and remains producer-owned.
+- Topic: admission webhook side-effect declaration versus persisted effect and completion under later rejection.
+- Command Status is PASS.
+- Transport Status is `LOCAL_CONTROLLED_FIXTURE`.
+- Task Terminal State is COMPLETED.
+- Valid Completion Status is `VERIFIED_WITH_LIMITS`.
+- Prior-effect Evidence remains unknown as a general axis rather than being collapsed to miss.
+- Current permission is modeled independently at the effect boundary.
+- Historical authorization is modeled separately for recovered out-of-band effects.
+- Current completion requires persisted target plus reconciled required external state.
+- Admission request identity is distinct from persisted object identity.
+- Persisted UID is not inferred from admission acceptance.
+- Webhook allow is not a persistence receipt.
+- SideEffects declaration does not prove authorization, reconciliation, or task completion.
+- The bounded fixture executed 8 scenarios × 4 paths = 32 decisions.
+- Strict disagreements are 7 / 6 / 4 / 0 across the four modeled paths.
+- Primitive-field verifier agreement is 8/8.
+- Real state-changing effects are 0.
+- Live Kubernetes mutation, real webhook fault injection, real storage failure, and live reconciliation were NOT_EXECUTED.
+- Full repository checker was NOT_EXECUTED_CONTAINER_DNS_BLOCKED.
+- CASE and NOTES promotion remain 0.
+- This A2 adds no Ballast research credit beyond the producer Daily.
+
+### 8. 2026-10-06 Aegis A1 native relation
+- Aegis A1 PR #588 is merged and remains producer-owned.
+- Network Status is `NETWORK_VERIFIED`.
+- Source Status is `SINGLE_SOURCE_LINEAGE`.
+- Task Status is SUCCESS.
+- Evidence Class is `EXTERNAL_FAILURE_MODE_EVIDENCE`.
+- Source Identity is `arXiv:2609.13582v1`.
+- Source Authority is original research.
+- Local Incident Evidence is `NO_LOCAL_EVIDENCE`.
+- Host Applicability remains UNKNOWN.
+- The external signal concerns action-level reliability divergence and false-completion risk.
+- The producer explicitly states that this does not prove an Aegis local incident.
+- A2 preserves that distinction.
+
+### 9. 2026-10-06 Aegis A2 native relation
+- Aegis A2 PR #589 is merged after A1.
+- Input Status is `INPUT_PRESENT`.
+- Network Status remains `NETWORK_VERIFIED`.
+- Source Status remains `SINGLE_SOURCE_LINEAGE`.
+- Task Status is SUCCESS.
+- Evidence Class remains `EXTERNAL_FAILURE_MODE_EVIDENCE`.
+- Aegis Repository Record Comparison is `NO_LOCAL_EVIDENCE`.
+- Weekly Promotion Eligibility is `ELIGIBLE_FOR_OBSERVATION_ONLY`.
+- A2 does not convert full-text re-access of the same source into a new independent source.
+- A2 does not promote the external failure mode into a local incident.
+- A2 does not trigger a host implementation change or long-term A6 doctrine upgrade.
+
+### 10. 2026-10-06 bounded NEXUS/main relation
+- After Aegis producer merges, bounded NEXUS lifecycle advanced main before A1 began.
+- A1 correctly used that lifecycle-advanced current main.
+- NEXUS lifecycle state remains separate from Aegis reliability research.
+- Ballast controlled research remains separate from NEXUS runtime evidence.
+- The lifecycle commit is not used as proof of external risk applicability.
+- This A2 records the boundary only and creates no host-kernel incident claim.
+
+### 11. Current relation matrix
+| Surface | Current A2 state | Boundary |
+| --- | --- | --- |
+| 10/1 | RETAINED | point-in-time history |
+| 10/2 | RETAINED | audit/recovery axes separate |
+| 10/3 | RETAINED | bounded model / unknown preserved |
+| 10/4 | RETAINED | blocked/weekly chronology preserved |
+| 10/5 | RETAINED | predecessor A2 relation |
+| 10/6 Ballast | CONSUMED | modeled verification with limits |
+| 10/6 Aegis A1 | CONSUMED | external risk / no local incident |
+| 10/6 Aegis A2 | CONSUMED | observation-only orientation |
+| NEXUS lifecycle | BOUNDED_RELATION | separate runtime plane |
+| October owner | OPEN / CURRENT_THROUGH_2026-10-06 | not natural-month final |
+
+### 12. Evidence invariants
+- `AEGIS != BALLAST != HOST_KERNEL != NEXUS`.
+- `EXTERNAL_RISK != LOCAL_INCIDENT`.
+- `NO_LOCAL_EVIDENCE != IMMUNITY`.
+- `SAME_SOURCE_REACCESS != INDEPENDENT_CORROBORATION`.
+- `ADMISSION_ALLOW != PERSISTENCE_RECEIPT`.
+- `SIDE_EFFECTS_DECLARATION != VALID_COMPLETION`.
+- `HISTORICAL_OCCURRENCE != HISTORICAL_AUTHORIZATION`.
+- `HISTORICAL_OCCURRENCE != CURRENT_COMPLETION`.
+- `CURRENT_PERMISSION != HISTORICAL_EFFECT_MISS`.
+- `MODELED_VERIFICATION != LIVE_PROVIDER_RUNTIME`.
+- `COMMAND_SUCCESS != VALID_COMPLETION`.
+- `NATIVE_TASK_DELIVERY != A1_MAINTENANCE`.
+- `A1_MAINTENANCE != A2_RELATIONAL_VERSION`.
+- `CURRENT_MONTH_RELATION != NATURAL_MONTH_FINAL`.
+
+### 13. Validation checklist
+- A1 #590 merged before A2 branch: YES.
+- A2 base equals fresh post-A1 main: YES.
+- 10/1–10/5 A1 coverage retained: YES.
+- 10/6 Ballast consumed with VERIFIED_WITH_LIMITS preserved: YES.
+- 10/6 Aegis A1 consumed: YES.
+- 10/6 Aegis A2 consumed: YES.
+- External risk promoted to local incident: NO.
+- Same source counted twice as independent: NO.
+- Ballast live Kubernetes mutation invented: NO.
+- Ballast real state-changing effect invented: NO.
+- Full repository checker invented as PASS: NO.
+- Unknown prior effect collapsed to authoritative miss: NO.
+- NEXUS lifecycle treated as Aegis evidence: NO.
+- Duplicate research/execution-window credit: NO.
+- Host implementation change invented: NO.
+- Natural-month final manufactured: NO.
+- Parallel owner created: NO.
+
+### 14. A2 disposition
+- Current October relation: `CURRENT_THROUGH_2026-10-06`.
+- October version state: `OPEN`.
+- Ballast 2026-10-06: `VERIFIED_WITH_LIMITS / CONTROLLED_MODEL / REAL_EFFECTS_0`.
+- Aegis 2026-10-06: `EXTERNAL_FAILURE_MODE_EVIDENCE / NO_LOCAL_EVIDENCE`.
+- Promotion: `OBSERVATION_ONLY`.
+- NEXUS relation: `SEPARATE_BOUNDED_RUNTIME_PLANE`.
+- Historical chronology: `PRESERVED`.
+- Native producer credit: `RETAINED_WITHOUT_DUPLICATION`.
+- New maintenance research/runtime/publication credit: `NONE`.
+- Successor dependency: `FUTURE_A1_MUST_FRESH_READ_THIS_MERGED_MAIN`.
+
+```text
+MERGED_A1
++ FRESH_MAIN_READ
++ 2026_10_06_BALLAST_VERIFIED_WITH_LIMITS
++ 2026_10_06_AEGIS_EXTERNAL_RISK_ONLY
++ NO_LOCAL_INCIDENT_PROMOTION
++ NEXUS_PLANE_SEPARATION
+= CURRENT_MONTH_RELATION_THROUGH_2026_10_06
+CURRENT_MONTH_RELATION != NATURAL_MONTH_FINAL
+```
