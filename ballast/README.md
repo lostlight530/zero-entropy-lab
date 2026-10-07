@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-07 admission reinvocation observation versus final-object and task completion proof](records/2026-10-07.md)
+- 最新 Daily: [2026-10-08 watch progress evidence versus membership-complete current state after history loss](records/2026-10-08.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-02 至 2026-10-07](audits/2026-10-02--2026-10-07.md)
@@ -532,3 +532,11 @@ CALLBACK_REPEATED
 The 2026-10-02..2026-10-07 six-date window now has one derived cycle audit with zero experiment, independent execution-window, CASE or NOTES credit.
 
 Current native research endpoint is 2026-10-07.
+
+## Ballast current-state advance — 2026-10-08
+
+2026-10-08 contributes exactly one NATIVE research unit on watch progress evidence versus membership-complete current state after history loss.
+
+The latest complete derived audit remains 2026-10-02..2026-10-07. 2026-10-08 starts the next non-overlapping cycle, so no new audit is created.
+
+Current native research endpoint is 2026-10-08.
