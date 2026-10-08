@@ -2476,16 +2476,16 @@
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
         },
         "docs/design/debug_vllm_compile.md": {
-          "blob_sha": "7edda6fa6476c8ce847c096d8a7a3fc159dbf382",
-          "commit_sha": "5ed3faa43ddf075f24482396b634edc33e047a40",
-          "content_hash": "5cbca2d00c3597207741a4866af1c9e424bdec7669a0bde3933afacf8aac4e8c",
+          "blob_sha": "af9b3f530d4cb65365ddb060aafb4c3af51b5c74",
+          "commit_sha": "8733a21d5517d56fb7ef573b379eaeb7c08e1d03",
+          "content_hash": "791fcdc79bdeb71d4bf46fe285756cfb4343bc8b2889ec135b4bdabe6e19a023",
           "entity_id": "doc_vllm_project_vllm_docs_design_debug_vllm_compile_md_7edda6fa6476",
-          "observed_blob_sha": "7edda6fa6476c8ce847c096d8a7a3fc159dbf382",
-          "observed_commit_sha": "c92b29a1d40644da710209f862b1be0ebd5c2e74",
-          "observed_tree_sha": "cd04483714f646260128f47800f095ed49cc7fa3",
-          "output": "current/serving-inference/vllm_project_vllm/docs__design__debug_vllm_compile.md__7edda6fa6476__5ed3faa43ddf.md",
-          "sha": "7edda6fa6476c8ce847c096d8a7a3fc159dbf382",
-          "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
+          "observed_blob_sha": "af9b3f530d4cb65365ddb060aafb4c3af51b5c74",
+          "observed_commit_sha": "8733a21d5517d56fb7ef573b379eaeb7c08e1d03",
+          "observed_tree_sha": "e111c838c0af083fff4112f8a17b62a154c8ef36",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__debug_vllm_compile.md__af9b3f530d4c__8733a21d5517.md",
+          "sha": "af9b3f530d4cb65365ddb060aafb4c3af51b5c74",
+          "tree_sha": "e111c838c0af083fff4112f8a17b62a154c8ef36"
         },
         "docs/design/endpoint_plugins.md": {
           "blob_sha": "98b755788e2ea32ea38c0b6ab23b4a137db66b2c",
@@ -2884,7 +2884,7 @@
           "tree_sha": "cfeb3173928b2b51eb943c8f1dacbc9c3ebf57b4"
         }
       },
-      "last_checked_at": "2026-10-06T01:58:17.023923+00:00"
+      "last_checked_at": "2026-10-08T01:25:14.922724+00:00"
     },
     "volcengine/verl": {
       "documents": {
