@@ -567,6 +567,6 @@ Current native research endpoint is 2026-10-09.
 
 ## Ballast current-state advance — 2026-10-10
 
-One NATIVE bounded research unit on CronJob scheduling versus external effect completion. Last complete derived audit remains 2026-10-02..2026-10-07; new cycle 2026-10-08..2026-10-10 is three dates, no overlapping audit is due. CASES, METHOD and NOTES unchanged. Monthly and README synchronization adds zero research credit.
+One NATIVE bounded research unit on CronJob scheduling versus external effect completion. Same-day review strengthened the same fixture from 18 cases/72 decisions to 20 cases/80 decisions by rejecting duplicate receipt identities and unexpected receipt members despite count equality; no new Daily or research window is credited. Last complete derived audit remains 2026-10-02..2026-10-07; new cycle 2026-10-08..2026-10-10 is three dates, no overlapping audit is due. CASES, METHOD and NOTES unchanged. Monthly and README synchronization adds zero research credit.
 
 Current native research endpoint is 2026-10-10.
