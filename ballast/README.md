@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-08 watch progress evidence versus membership-complete current state after history loss](records/2026-10-08.md)
+- 最新 Daily: [2026-10-09 indexed Job success criteria versus exact external effect-set completion](records/2026-10-09.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-02 至 2026-10-07](audits/2026-10-02--2026-10-07.md)
@@ -540,3 +540,27 @@ Current native research endpoint is 2026-10-07.
 The latest complete derived audit remains 2026-10-02..2026-10-07. 2026-10-08 starts the next non-overlapping cycle, so no new audit is created.
 
 Current native research endpoint is 2026-10-08.
+
+## Ballast current-state advance — 2026-10-09
+
+2026-10-09 contributes exactly one NATIVE controlled research unit on Kubernetes Indexed Job `SuccessCriteriaMet` / terminal `Complete` versus task-defined external effect-set completion.
+
+```text
+SUCCESS_CRITERIA_MET
+!= TERMINAL_COMPLETE
+
+TERMINAL_COMPLETE
+!= REQUIRED_EXTERNAL_EFFECT_SET_VERIFIED
+
+HISTORICAL_EFFECT_OCCURRENCE
+!= HISTORICAL_AUTHORIZATION
+
+CURRENT_PERMISSION
+!= HISTORICAL_AUTHORIZATION
+```
+
+Thirteen bounded scenarios and four decision paths yield 52 model decisions (11/11/9/0 disagreements with expected labels). Separate-language verifier agreement is 13/13, but semantic independence is limited by shared scenario definitions. Real Kubernetes and external sink effects were NOT_EXECUTED.
+
+The latest complete derived audit remains 2026-10-02..2026-10-07; 2026-10-08..2026-10-09 has not completed its non-overlapping cycle. CASES, NOTES, and METHOD remain unchanged. Monthly/README index updates add zero experiment/window/finding credit.
+
+Current native research endpoint is 2026-10-09.
