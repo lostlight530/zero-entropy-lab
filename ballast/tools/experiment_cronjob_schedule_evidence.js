@@ -22,6 +22,8 @@ const scenarios = [
   scenario('negative-lookup-without-coverage',{receipt_state:'miss',receipt_covered:false,receipts:[],effect_count:0}),
   scenario('history-pruned-external-receipts-valid',{job_present:false,job_complete:false}),
   scenario('duplicate-external-effect',{effect_count:3}),
+  scenario('duplicate-exact-receipt-identity',{receipts:['notify','notify','archive'],effect_count:3}),
+  scenario('unexpected-external-receipt',{receipts:['notify','archive','shadow'],effect_count:3}),
   scenario('historical-authorization-invalid',{historical_auth:false}),
   scenario('permission-revoked-unfinished-effect',{receipts:['notify'],effect_count:1,current_permission:false}),
   scenario('target-recreated-same-name',{target_uid:'target-old'}),
@@ -45,7 +47,8 @@ function decide(x,path) {
   if(x.receipt_state==='unknown' || (x.receipt_state==='miss'&&!x.receipt_covered)) return 'safe-stop-unknown';
   if(x.receipt_state==='hit'&&!x.historical_auth) return 'historically-unauthorized';
   if(x.receipt_state==='hit'&&!x.temporal_order_covered) return 'temporal-unverified';
-  if(x.receipt_state==='hit'&&x.effect_count!==x.receipts.length) return 'duplicate-effect';
+  if(x.receipt_state==='hit'&&(x.effect_count!==x.receipts.length||new Set(x.receipts).size!==x.receipts.length)) return 'duplicate-effect';
+  if(x.receipt_state==='hit'&&x.receipts.some(id=>!x.required.includes(id))) return 'unexpected-effect';
   if(!x.membership_complete) return 'membership-incomplete';
   if(x.receipt_state==='miss'||x.required.some(id=>!x.receipts.includes(id)))
     return x.current_permission?'incomplete-effect-set':'permission-stop';
