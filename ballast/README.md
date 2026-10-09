@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-09 indexed Job success criteria versus exact external effect-set completion](records/2026-10-09.md)
+- 最新 Daily: [2026-10-10 CronJob schedule observation versus exact external occurrence and current completion](records/2026-10-10.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-02 至 2026-10-07](audits/2026-10-02--2026-10-07.md)
@@ -564,3 +564,9 @@ Thirteen bounded scenarios and four decision paths yield 52 model decisions (11/
 The latest complete derived audit remains 2026-10-02..2026-10-07; 2026-10-08..2026-10-09 has not completed its non-overlapping cycle. CASES, NOTES, and METHOD remain unchanged. Monthly/README index updates add zero experiment/window/finding credit.
 
 Current native research endpoint is 2026-10-09.
+
+## Ballast current-state advance — 2026-10-10
+
+One NATIVE bounded research unit on CronJob scheduling versus external effect completion. Last complete derived audit remains 2026-10-02..2026-10-07; new cycle 2026-10-08..2026-10-10 is three dates, no overlapping audit is due. CASES, METHOD and NOTES unchanged. Monthly and README synchronization adds zero research credit.
+
+Current native research endpoint is 2026-10-10.
