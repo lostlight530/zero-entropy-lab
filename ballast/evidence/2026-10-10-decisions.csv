@@ -35,6 +35,14 @@ duplicate-external-effect,duplicate-effect,last-schedule-only,verified,1
 duplicate-external-effect,duplicate-effect,job-presence-only,verified,1
 duplicate-external-effect,duplicate-effect,job-terminal-only,verified,1
 duplicate-external-effect,duplicate-effect,full-integrity,duplicate-effect,0
+duplicate-exact-receipt-identity,duplicate-effect,last-schedule-only,verified,1
+duplicate-exact-receipt-identity,duplicate-effect,job-presence-only,verified,1
+duplicate-exact-receipt-identity,duplicate-effect,job-terminal-only,verified,1
+duplicate-exact-receipt-identity,duplicate-effect,full-integrity,duplicate-effect,0
+unexpected-external-receipt,unexpected-effect,last-schedule-only,verified,1
+unexpected-external-receipt,unexpected-effect,job-presence-only,verified,1
+unexpected-external-receipt,unexpected-effect,job-terminal-only,verified,1
+unexpected-external-receipt,unexpected-effect,full-integrity,unexpected-effect,0
 historical-authorization-invalid,historically-unauthorized,last-schedule-only,verified,1
 historical-authorization-invalid,historically-unauthorized,job-presence-only,verified,1
 historical-authorization-invalid,historically-unauthorized,job-terminal-only,verified,1
