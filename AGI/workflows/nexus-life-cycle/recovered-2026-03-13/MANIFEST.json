@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "record_kind": "RECOVERED_WORKFLOW_GENERATION",
+  "record_status": "FROZEN_REFERENCE",
+  "lineage_role": "ZERO_ENTROPY_INITIAL_GENERATION",
+  "recovery_record_created_date": "2026-10-09",
+  "repository": "lostlight530/zero-entropy-lab",
+  "source_commit_sha": "8d3f27c6440abd3a9eba7d9a1e8717214bdb2dea",
+  "source_commit_time_utc": "2026-03-13T07:17:09Z",
+  "canonical_executable_source": ".github/workflows/nexus-life-cycle.yml",
+  "source_workflow_name": "NEXUS CORTEX Life Cycle",
+  "source_workflow_blob_sha": "102393b79077dd35cbe2de2477bbb365da9f9f70",
+  "source_content_sha256": "498b73f078c22fbc55a2ceeeac87d17cb8af6468fb67cc7f6f8d7b44b4534ec8",
+  "source_line_count": 44,
+  "source_jobs": [
+    "consciousness"
+  ],
+  "source_triggers": [
+    "schedule",
+    "push",
+    "workflow_dispatch"
+  ],
+  "historical_role": "Initial zero-entropy host adaptation of the unified rebuild, ingest, ponder, evolve and persistence lifecycle",
+  "lineage_origin": {
+    "repository": "lostlight530/welcome-to-github",
+    "commit_sha": "51df7db5a81324c7bed52cb098c249dc45685686",
+    "relation": "HOST_SPECIFIC_ADAPTATION"
+  },
+  "successor_record": "AGI/workflows/nexus-life-cycle/recovered-2026-05-21",
+  "agi_contains_executable_copy": false,
+  "executable_from_agi": false,
+  "workflowhub_registered_for_this_generation": false,
+  "recovery_rule": "Resolve source_commit_sha, read canonical_executable_source, verify source_workflow_blob_sha and source_content_sha256, then validate compatibility before any execution or publication claim."
+}
