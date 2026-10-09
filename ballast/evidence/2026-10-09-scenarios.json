@@ -1,0 +1,325 @@
+[
+  {
+    "complete": true,
+    "current_job_uid": "job-1",
+    "current_target_uid": "target-1",
+    "duplicate": false,
+    "failure": false,
+    "historical_auth": true,
+    "job_uid": "job-1",
+    "name": "baseline-all-required-effects",
+    "permission": true,
+    "pods_terminated": true,
+    "postcondition": true,
+    "receipt_covered": true,
+    "receipt_state": "hit",
+    "receipts": [
+      "a",
+      "b"
+    ],
+    "required": [
+      "a",
+      "b"
+    ],
+    "success": true,
+    "target_uid": "target-1"
+  },
+  {
+    "complete": false,
+    "current_job_uid": "job-1",
+    "current_target_uid": "target-1",
+    "duplicate": false,
+    "failure": false,
+    "historical_auth": true,
+    "job_uid": "job-1",
+    "name": "criteria-before-all-pods-terminated",
+    "permission": true,
+    "pods_terminated": false,
+    "postcondition": true,
+    "receipt_covered": true,
+    "receipt_state": "hit",
+    "receipts": [
+      "a",
+      "b"
+    ],
+    "required": [
+      "a",
+      "b"
+    ],
+    "success": true,
+    "target_uid": "target-1"
+  },
+  {
+    "complete": true,
+    "current_job_uid": "job-1",
+    "current_target_uid": "target-1",
+    "duplicate": false,
+    "failure": false,
+    "historical_auth": true,
+    "job_uid": "job-1",
+    "name": "success-policy-subset-missing-required-effect",
+    "permission": true,
+    "pods_terminated": true,
+    "postcondition": true,
+    "receipt_covered": true,
+    "receipt_state": "hit",
+    "receipts": [
+      "a"
+    ],
+    "required": [
+      "a",
+      "b"
+    ],
+    "success": true,
+    "target_uid": "target-1"
+  },
+  {
+    "complete": true,
+    "current_job_uid": "job-1",
+    "current_target_uid": "target-1",
+    "duplicate": true,
+    "failure": false,
+    "historical_auth": true,
+    "job_uid": "job-1",
+    "name": "duplicate-index-effect-occurrence",
+    "permission": true,
+    "pods_terminated": true,
+    "postcondition": true,
+    "receipt_covered": true,
+    "receipt_state": "hit",
+    "receipts": [
+      "a",
+      "b"
+    ],
+    "required": [
+      "a",
+      "b"
+    ],
+    "success": true,
+    "target_uid": "target-1"
+  },
+  {
+    "complete": true,
+    "current_job_uid": "job-1",
+    "current_target_uid": "target-1",
+    "duplicate": false,
+    "failure": false,
+    "historical_auth": true,
+    "job_uid": "job-1",
+    "name": "replacement-target-incarnation",
+    "permission": true,
+    "pods_terminated": true,
+    "postcondition": true,
+    "receipt_covered": true,
+    "receipt_state": "hit",
+    "receipts": [
+      "a",
+      "b"
+    ],
+    "required": [
+      "a",
+      "b"
+    ],
+    "success": true,
+    "target_uid": "target-old"
+  },
+  {
+    "complete": true,
+    "current_job_uid": "job-1",
+    "current_target_uid": "target-1",
+    "duplicate": false,
+    "failure": false,
+    "historical_auth": false,
+    "job_uid": "job-1",
+    "name": "historically-unauthorized-effect",
+    "permission": true,
+    "pods_terminated": true,
+    "postcondition": true,
+    "receipt_covered": true,
+    "receipt_state": "hit",
+    "receipts": [
+      "a",
+      "b"
+    ],
+    "required": [
+      "a",
+      "b"
+    ],
+    "success": true,
+    "target_uid": "target-1"
+  },
+  {
+    "complete": true,
+    "current_job_uid": "job-1",
+    "current_target_uid": "target-1",
+    "duplicate": false,
+    "failure": false,
+    "historical_auth": true,
+    "job_uid": "job-1",
+    "name": "revoked-permission-with-unfinished-work",
+    "permission": false,
+    "pods_terminated": true,
+    "postcondition": true,
+    "receipt_covered": true,
+    "receipt_state": "hit",
+    "receipts": [
+      "a"
+    ],
+    "required": [
+      "a",
+      "b"
+    ],
+    "success": true,
+    "target_uid": "target-1"
+  },
+  {
+    "complete": true,
+    "current_job_uid": "job-1",
+    "current_target_uid": "target-1",
+    "duplicate": false,
+    "failure": false,
+    "historical_auth": true,
+    "job_uid": "job-1",
+    "name": "prior-effect-unknown",
+    "permission": true,
+    "pods_terminated": true,
+    "postcondition": true,
+    "receipt_covered": true,
+    "receipt_state": "unknown",
+    "receipts": [
+      "a",
+      "b"
+    ],
+    "required": [
+      "a",
+      "b"
+    ],
+    "success": true,
+    "target_uid": "target-1"
+  },
+  {
+    "complete": false,
+    "current_job_uid": "job-1",
+    "current_target_uid": "target-1",
+    "duplicate": false,
+    "failure": true,
+    "historical_auth": true,
+    "job_uid": "job-1",
+    "name": "failure-policy-preempts-success",
+    "permission": true,
+    "pods_terminated": false,
+    "postcondition": true,
+    "receipt_covered": true,
+    "receipt_state": "hit",
+    "receipts": [
+      "a",
+      "b"
+    ],
+    "required": [
+      "a",
+      "b"
+    ],
+    "success": true,
+    "target_uid": "target-1"
+  },
+  {
+    "complete": true,
+    "current_job_uid": "job-1",
+    "current_target_uid": "target-1",
+    "duplicate": false,
+    "failure": false,
+    "historical_auth": true,
+    "job_uid": "job-1",
+    "name": "historical-hit-current-state-reversed",
+    "permission": true,
+    "pods_terminated": true,
+    "postcondition": false,
+    "receipt_covered": true,
+    "receipt_state": "hit",
+    "receipts": [
+      "a",
+      "b"
+    ],
+    "required": [
+      "a",
+      "b"
+    ],
+    "success": true,
+    "target_uid": "target-1"
+  },
+  {
+    "complete": true,
+    "current_job_uid": "job-1",
+    "current_target_uid": "target-1",
+    "duplicate": false,
+    "failure": false,
+    "historical_auth": true,
+    "job_uid": "job-1",
+    "name": "negative-receipt-without-watermark",
+    "permission": true,
+    "pods_terminated": true,
+    "postcondition": true,
+    "receipt_covered": false,
+    "receipt_state": "miss",
+    "receipts": [
+      "a",
+      "b"
+    ],
+    "required": [
+      "a",
+      "b"
+    ],
+    "success": true,
+    "target_uid": "target-1"
+  },
+  {
+    "complete": true,
+    "current_job_uid": "job-1",
+    "current_target_uid": "target-1",
+    "duplicate": false,
+    "failure": false,
+    "historical_auth": true,
+    "job_uid": "job-old",
+    "name": "same-name-new-job-uid",
+    "permission": true,
+    "pods_terminated": true,
+    "postcondition": true,
+    "receipt_covered": true,
+    "receipt_state": "hit",
+    "receipts": [
+      "a",
+      "b"
+    ],
+    "required": [
+      "a",
+      "b"
+    ],
+    "success": true,
+    "target_uid": "target-1"
+  },
+  {
+    "complete": true,
+    "current_job_uid": "job-1",
+    "current_target_uid": "target-1",
+    "duplicate": false,
+    "failure": false,
+    "historical_auth": true,
+    "job_uid": "job-1",
+    "name": "revoked-permission-after-valid-effect",
+    "permission": false,
+    "pods_terminated": true,
+    "postcondition": true,
+    "receipt_covered": true,
+    "receipt_state": "hit",
+    "receipts": [
+      "a",
+      "b"
+    ],
+    "required": [
+      "a",
+      "b"
+    ],
+    "success": true,
+    "target_uid": "target-1"
+  }
+]
