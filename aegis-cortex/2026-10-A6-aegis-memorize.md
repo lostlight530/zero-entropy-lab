@@ -2278,3 +2278,123 @@ DUPLICATE_EVIDENCE_CREDIT
 - Exactly one existing monthly owner receives this append-only maintenance section.
 - A2 cannot start from pre-A1 base; fresh main read after ten merges is mandatory.
 - Disposition: N-1 relational owner coverage recorded, not a full independent daily runtime audit.
+
+
+## A2 CURRENT-MONTH RELATION — 2026-10-09
+
+- Owner: `aegis-cortex/2026-10-A6-aegis-memorize.md`; repository: `lostlight530/zero-entropy-lab`.
+- Exact A1-merged main used as this A2 base: `53ac0a9111691fdc8eba805455aa3c7563f0d2c2`.
+- Logical date 2026-10-09; MonthStart→N = 2026-10-01..2026-10-09.
+- Required predecessor A1 #608: merged, N-1 history to 2026-10-08; fresh-read main consumed.
+- Producer planes: Aegis #605/#606, Ballast #604; superseded invalid #607 closed unmerged.
+- Native A2 identity boundary: GPT human-authorized substitute #606, not Jules-native.
+- Month closure OPEN; October A6 natural-month final NOT_DUE.
+- Maintenance audit runtime and independent scientific replay: NOT_PERFORMED.
+- Historical rewrite and new producer/research credit by maintenance: NONE.
+
+### N-1 per-date inherited A1 relation (not a new producer execution)
+
+- 2026-10-01: inherit dated owner/checkpoint evidence from merged A1 #608; no new source asserted.
+- 2026-10-01: preserve original A1→A2 task-time availability and any INPUT_MISSING/BLOCKED state.
+- 2026-10-01: external failure-mode signal is not evidence of a local Zero/Aegis incident.
+- 2026-10-01: Ballast historical bounded executions receive no duplicate trial/CASE/NOTES credit.
+- 2026-10-02: inherit dated owner/checkpoint evidence from merged A1 #608; no new source asserted.
+- 2026-10-02: preserve original A1→A2 task-time availability and any INPUT_MISSING/BLOCKED state.
+- 2026-10-02: external failure-mode signal is not evidence of a local Zero/Aegis incident.
+- 2026-10-02: Ballast historical bounded executions receive no duplicate trial/CASE/NOTES credit.
+- 2026-10-03: inherit dated owner/checkpoint evidence from merged A1 #608; no new source asserted.
+- 2026-10-03: preserve original A1→A2 task-time availability and any INPUT_MISSING/BLOCKED state.
+- 2026-10-03: external failure-mode signal is not evidence of a local Zero/Aegis incident.
+- 2026-10-03: Ballast historical bounded executions receive no duplicate trial/CASE/NOTES credit.
+- 2026-10-04: inherit dated owner/checkpoint evidence from merged A1 #608; no new source asserted.
+- 2026-10-04: preserve original A1→A2 task-time availability and any INPUT_MISSING/BLOCKED state.
+- 2026-10-04: external failure-mode signal is not evidence of a local Zero/Aegis incident.
+- 2026-10-04: Ballast historical bounded executions receive no duplicate trial/CASE/NOTES credit.
+- 2026-10-05: inherit dated owner/checkpoint evidence from merged A1 #608; no new source asserted.
+- 2026-10-05: preserve original A1→A2 task-time availability and any INPUT_MISSING/BLOCKED state.
+- 2026-10-05: external failure-mode signal is not evidence of a local Zero/Aegis incident.
+- 2026-10-05: Ballast historical bounded executions receive no duplicate trial/CASE/NOTES credit.
+- 2026-10-06: inherit dated owner/checkpoint evidence from merged A1 #608; no new source asserted.
+- 2026-10-06: preserve original A1→A2 task-time availability and any INPUT_MISSING/BLOCKED state.
+- 2026-10-06: external failure-mode signal is not evidence of a local Zero/Aegis incident.
+- 2026-10-06: Ballast historical bounded executions receive no duplicate trial/CASE/NOTES credit.
+- 2026-10-07: inherit dated owner/checkpoint evidence from merged A1 #608; no new source asserted.
+- 2026-10-07: preserve original A1→A2 task-time availability and any INPUT_MISSING/BLOCKED state.
+- 2026-10-07: external failure-mode signal is not evidence of a local Zero/Aegis incident.
+- 2026-10-07: Ballast historical bounded executions receive no duplicate trial/CASE/NOTES credit.
+- 2026-10-08: inherit dated owner/checkpoint evidence from merged A1 #608; no new source asserted.
+- 2026-10-08: preserve original A1→A2 task-time availability and any INPUT_MISSING/BLOCKED state.
+- 2026-10-08: external failure-mode signal is not evidence of a local Zero/Aegis incident.
+- 2026-10-08: Ballast historical bounded executions receive no duplicate trial/CASE/NOTES credit.
+
+### Today’s native sources and evidence-grade reconciliation
+
+- Relation 01: 10/09 Jules-native A1 was merged as PR #605 with one cited original research source.
+- Relation 02: A1 Task ID A1, Logical Date 2026-10-09, Task Status SUCCESS.
+- Relation 03: A1 Network Status NETWORK_VERIFIED; Source Status SINGLE_SOURCE_LINEAGE.
+- Relation 04: A1 original research identity: arXiv:2610.04123v1 (2026-10-02 paper).
+- Relation 05: A1 paper proposes an Agent Reliability Profile for financial-services deployments.
+- Relation 06: A1 reports autonomy tier, operational design domain, action class, control envelope.
+- Relation 07: A1 external proposed framework ≠ proven production safety or broad adoption.
+- Relation 08: A1 Source Authority ORIGINAL_RESEARCH ≠ second independent same-claim replication.
+- Relation 09: A1 Local Incident Evidence NO_LOCAL_EVIDENCE and Host Applicability UNKNOWN.
+- Relation 10: A1 stronger local-blocker assertions receive forward interpretation correction, not rewrite.
+- Relation 11: 10/09 A2 PR #606 was merged after exact-date A1 as a human-authorized substitute.
+- Relation 12: A2 Record Provenance HUMAN_AUTHORIZED_SUBSTITUTE, not Jules-native execution.
+- Relation 13: A2 same-day A1 hard gate Task ID/date/status/network/source all passed.
+- Relation 14: A2 compared preceding 7 A2 records, W39 A4, October A6, and earlier A1 references.
+- Relation 15: A2 separately rechecked official arXiv metadata/HTML, within same paper lineage.
+- Relation 16: A2 independent NIST source provides only conceptual agent identity/authorization context.
+- Relation 17: A2 classification scope drift, boundary violation, overconfidence, false completion, unsupported source.
+- Relation 18: A2 does not demonstrate that current Aegis system had a boundary violation.
+- Relation 19: A2 does not demonstrate profile Level 2/3 implementation effectiveness.
+- Relation 20: A2 Weekly Promotion Eligibility ELIGIBLE_FOR_OBSERVATION_ONLY.
+- Relation 21: A2 preserves W39 A4 verify-before-retry as recorded doctrine, not proof of runtime guarantee.
+- Relation 22: A2 does not make A3 final weekly decision or modify A6 durable memory.
+- Relation 23: 10/08 A2 PR #601 remains historical HUMAN_AUTHORIZED_SUBSTITUTE.
+- Relation 24: Later Jules #607 attempted 10/08 target after it was already delivered by #601.
+- Relation 25: PR #607 aggregate diff consisted of root fetch_arxiv.py, paper.txt, read_chunk.py.
+- Relation 26: PR #607 did not modify authorized 10/08 A2 target; CLOSED_UNMERGED / INVALID_SCOPE.
+- Relation 27: Review comment on #607 preserves disallowed artifact review and rationale.
+- Relation 28: PR #607 must not be relabeled as a successful Jules A2 completion.
+- Relation 29: 10/09 Ballast Daily PR #604 was merged before this A2 and owns research evidence.
+- Relation 30: Ballast modeled Kubernetes Indexed Job successPolicy versus task-defined external effects.
+- Relation 31: Ballast success subset differs from exact effects a and b required by task contract.
+- Relation 32: Ballast scenarios 13, compared paths 4, decision cells 52.
+- Relation 33: Ballast criteria-only disagreements 11/13; terminal-only 11/13.
+- Relation 34: Ballast controller-lifecycle disagreements 9/13; strongest full-integrity 0/13.
+- Relation 35: Ballast failure labels and scenario distribution are controlled fixture outcomes.
+- Relation 36: Ballast separate Node verifier reported 13/13 labels and 52/52 decision consistency.
+- Relation 37: Ballast independent implementation only PARTIAL: shared scenario inputs and semantics.
+- Relation 38: Ballast records current exact Job UID and external target UID separately.
+- Relation 39: Ballast historical authorization, new-effect permission and target incarnation are distinct.
+- Relation 40: Ballast current postcondition does not follow from control-plane terminal condition.
+- Relation 41: Ballast unknown prior non-idempotent effect must not be blindly retried.
+- Relation 42: Ballast current permission revocation does not retroactively invalidate valid old effects.
+- Relation 43: Ballast real Kubernetes cluster, external sink, non-idempotent effects NOT_EXECUTED.
+- Relation 44: Ballast Daily creates one native batch and one bounded local execution window only.
+- Relation 45: Ballast CASES/NOTES increments zero; METHOD/Special none; no extra cycle audit.
+- Relation 46: Ballast October derived README and monthly pointers add zero research credit.
+- Relation 47: October A6 owner remains OPEN, PROVISIONAL_NOT_FINAL and durable doctrine promotion NO.
+- Relation 48: September A6 BLOCKED/OPEN and A5 final gap remain historical, not repaired by current path.
+- Relation 49: 10/01 and 10/02 historically blocked A2 evidence remains as originally observed.
+- Relation 50: 10/04 blocked original A2 is preserved even if later A1 became present.
+- Relation 51: Current main has legitimate 10/09 A1/A2 paths; existence not proof of original Jules A2 run.
+- Relation 52: Maintenance itself ran no Aegis stress test, Kubernetes replay, source replication or checker.
+- Relation 53: A1 N-1 was merged as #608; this current A2 consumes precisely post-A1 main.
+- Relation 54: October current relation advances to 10/09 without changing old monthly/history sections.
+
+### Contradiction and evidence gates
+
+- A successful A1 with NETWORK_VERIFIED is not evidence of any Aegis internal permission-enforcer test.
+- An A2 substitute with meaningful external verification is not retroactive Jules execution evidence.
+- A Kubernetes SuccessCriteriaMet milestone is not a proof that every external effect was realized.
+- An Indexed Job terminal Complete condition is not an exact task-defined effect-set witness.
+- Controller progress, historical effect receipts, authority, fresh state and postcondition are separate.
+- Local modeled verifier agreement is not independent production execution.
+- Duplicate/same-lineage arXiv surfaces do not create a new independent scholarly source.
+- Earlier failed/blocked runs remain historical and must be reconciled forward only.
+- Monthly A6 is still OPEN; no implied September A5/A6 historical repair.
+- No off-owner write, host source execution, new A3 decision or durable promotion by maintenance.
+- Final relationship state: UPDATED_THROUGH_2026-10-09 / NO_LOCAL_INCIDENT_PROMOTION.
+- Handoff: retain #607 closed-unmerged invalid evidence and #606 substitute provenance.
