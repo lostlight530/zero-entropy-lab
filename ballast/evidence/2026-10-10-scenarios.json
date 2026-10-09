@@ -249,6 +249,66 @@
     "temporal_order_covered": true
   },
   {
+    "name": "duplicate-exact-receipt-identity",
+    "cronjob_uid": "cron-A",
+    "current_cronjob_uid": "cron-A",
+    "scheduled_at": "2026-10-10T03:00:00+08:00",
+    "ledger_scheduled_at": "2026-10-10T03:00:00+08:00",
+    "job_present": true,
+    "job_complete": true,
+    "job_annotation_at": "2026-10-10T03:00:00+08:00",
+    "last_schedule_observed": true,
+    "receipt_state": "hit",
+    "receipt_covered": true,
+    "effect_count": 3,
+    "required": [
+      "notify",
+      "archive"
+    ],
+    "receipts": [
+      "notify",
+      "notify",
+      "archive"
+    ],
+    "historical_auth": true,
+    "current_permission": true,
+    "target_uid": "target-A",
+    "current_target_uid": "target-A",
+    "membership_complete": true,
+    "postcondition": true,
+    "temporal_order_covered": true
+  },
+  {
+    "name": "unexpected-external-receipt",
+    "cronjob_uid": "cron-A",
+    "current_cronjob_uid": "cron-A",
+    "scheduled_at": "2026-10-10T03:00:00+08:00",
+    "ledger_scheduled_at": "2026-10-10T03:00:00+08:00",
+    "job_present": true,
+    "job_complete": true,
+    "job_annotation_at": "2026-10-10T03:00:00+08:00",
+    "last_schedule_observed": true,
+    "receipt_state": "hit",
+    "receipt_covered": true,
+    "effect_count": 3,
+    "required": [
+      "notify",
+      "archive"
+    ],
+    "receipts": [
+      "notify",
+      "archive",
+      "shadow"
+    ],
+    "historical_auth": true,
+    "current_permission": true,
+    "target_uid": "target-A",
+    "current_target_uid": "target-A",
+    "membership_complete": true,
+    "postcondition": true,
+    "temporal_order_covered": true
+  },
+  {
     "name": "historical-authorization-invalid",
     "cronjob_uid": "cron-A",
     "current_cronjob_uid": "cron-A",
