@@ -2,6 +2,8 @@
 function verify(scenarios, rows) {
   const paths=['last-schedule-only','job-presence-only','job-terminal-only','full-integrity'];
   const failures=[], expectedByName=new Map();
+  if(new Set(scenarios.map(x=>x.name)).size!==scenarios.length) failures.push('duplicate-scenario-name');
+  if(rows.length!==scenarios.length*paths.length) failures.push('decision-row-count');
   for(const x of scenarios) {
     const checks=[
       ['cronjob-incarnation-mismatch',x.cronjob_uid!==x.current_cronjob_uid],
@@ -11,7 +13,8 @@ function verify(scenarios, rows) {
       ['safe-stop-unknown',x.receipt_state==='unknown'||(x.receipt_state==='miss'&&!x.receipt_covered)],
       ['historically-unauthorized',x.receipt_state==='hit'&&!x.historical_auth],
       ['temporal-unverified',x.receipt_state==='hit'&&!x.temporal_order_covered],
-      ['duplicate-effect',x.receipt_state==='hit'&&x.effect_count!==x.receipts.length],
+      ['duplicate-effect',x.receipt_state==='hit'&&(x.effect_count!==x.receipts.length||new Set(x.receipts).size!==x.receipts.length)],
+      ['unexpected-effect',x.receipt_state==='hit'&&x.receipts.some(id=>!x.required.includes(id))],
       ['membership-incomplete',!x.membership_complete],
       [x.current_permission?'incomplete-effect-set':'permission-stop',x.receipt_state==='miss'||x.required.filter(id=>!x.receipts.includes(id)).length>0],
       ['current-postcondition-failed',!x.postcondition]
