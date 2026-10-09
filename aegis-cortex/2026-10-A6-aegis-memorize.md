@@ -2119,3 +2119,162 @@ DUPLICATE_EVIDENCE_CREDIT
 - A future A1 must start from the then-current main and use MonthStart→N-1 for its own logical date.
 - A future A2 must again fresh-read after its A1 merges.
 - Any later correction must be appended or reconciled without erasing this point-in-time record.
+
+
+## A1 FULL-COVERAGE MAINTENANCE — 2026-10-09
+
+- Domain: `AEGIS_BALLAST`.
+- Logical date: `2026-10-09`; A1 cutoff `2026-10-08`.
+- Exact owner: `aegis-cortex/2026-10-A6-aegis-memorize.md`; existing 10月 OPEN owner retained.
+- Evidence surface: existing monthly-owner dated A2 checkpoints; no new producer re-execution.
+- Full-month-to-N-minus-1 window: `2026-10-01..2026-10-08`.
+- A1 does NOT consume any 2026-10-09 native research event.
+- Historical corrections and original blocked states remain intact.
+- Extra runtime/benchmark/stage/source credit: NONE.
+
+### Per-date historical checkpoint audit
+
+#### 2026-10-01: source checkpoint A2_CURRENT_MONTH_RELATION_2026-10-01
+- Retained source detail 1: Current month relation window: 2026-10-01
+- Retained source detail 2: A1 coverage: INHERITED_FROM_MERGED_A1
+- Retained source detail 3: Native A1 input: `aegis-cortex/2026-10-01-A1-reliability-observe.md` / merged via PR #555
+- Retained source detail 4: Native A2 input: `aegis-cortex/2026-10-01-A2-doctrine-orient.md` / merged via PR #556
+- Retained source detail 5: Original A2 task-time state: INPUT_MISSING / BLOCKED
+- Retained source detail 6: Later A1 path presence: PRESENT
+- Retained source detail 7: Interpretation: later A1 presence does not convert the original A2 execution into success
+- Dated scope adjudication: retain 2026-10-01 producer/source assertions at their original evidence tier.
+- Dated chronology adjudication: later main availability does not prove earlier task-time input availability.
+- Dated local applicability adjudication: external/project/synthetic evidence never creates an unrecorded local incident.
+- Dated execution adjudication: this A1 did not rerun the 2026-10-01 checker or experiments.
+- Dated credit adjudication: historical producer results are counted once, index/owner restatement adds zero.
+- Dated correction adjudication: retain prior defects and forward corrections without erasing the observation cut.
+- Dated disposition: RETAIN_AS_RECORDED / NO_NEW_CREDIT / NO_HISTORY_MUTATION.
+
+#### 2026-10-02: source checkpoint A2_CURRENT_MONTH_RELATION_2026-10-02
+- Retained source detail 1: Current month relation window: 2026-10-01 through 2026-10-02
+- Retained source detail 2: A1 coverage through 2026-10-01: INHERITED_FROM_MERGED_A1
+- Retained source detail 3: Month Closure Status: OPEN
+- Retained source detail 4: W40 A3/A4 final: NOT_DUE
+- Retained source detail 5: October A5/A6 natural-month final: NOT_DUE
+- Retained source detail 6: Historical rewrite: NO
+- Retained source detail 7: Extra runtime/checker execution: NOT_PERFORMED
+- Dated scope adjudication: retain 2026-10-02 producer/source assertions at their original evidence tier.
+- Dated chronology adjudication: later main availability does not prove earlier task-time input availability.
+- Dated local applicability adjudication: external/project/synthetic evidence never creates an unrecorded local incident.
+- Dated execution adjudication: this A1 did not rerun the 2026-10-02 checker or experiments.
+- Dated credit adjudication: historical producer results are counted once, index/owner restatement adds zero.
+- Dated correction adjudication: retain prior defects and forward corrections without erasing the observation cut.
+- Dated disposition: RETAIN_AS_RECORDED / NO_NEW_CREDIT / NO_HISTORY_MUTATION.
+
+#### 2026-10-03: source checkpoint A2_SUCCESSOR_CURRENT_MONTH_RELATION_2026-10-03
+- Retained source detail 1: Current month relation window: 2026-10-01 through 2026-10-03
+- Retained source detail 2: Successor A1 dependency: PRESENT_ON_BASE_AND_CONSUMED
+- Retained source detail 3: Predecessor same-day A2: PRESERVED_AS_POINT_IN_TIME_HISTORY
+- Retained source detail 4: New repository-native input after predecessor A2: NONE OBSERVED
+- Retained source detail 5: Successor relational outcome: NO_MATERIAL_RELATION_CHANGE
+- Retained source detail 6: Historical rewrite: NO
+- Retained source detail 7: Extra audit/runtime execution by maintenance: NOT_PERFORMED
+- Dated scope adjudication: retain 2026-10-03 producer/source assertions at their original evidence tier.
+- Dated chronology adjudication: later main availability does not prove earlier task-time input availability.
+- Dated local applicability adjudication: external/project/synthetic evidence never creates an unrecorded local incident.
+- Dated execution adjudication: this A1 did not rerun the 2026-10-03 checker or experiments.
+- Dated credit adjudication: historical producer results are counted once, index/owner restatement adds zero.
+- Dated correction adjudication: retain prior defects and forward corrections without erasing the observation cut.
+- Dated disposition: RETAIN_AS_RECORDED / NO_NEW_CREDIT / NO_HISTORY_MUTATION.
+
+#### 2026-10-04: source checkpoint A2 CURRENT MONTH RELATION — 2026-10-04
+- Retained source detail 1: Required predecessor A1: PR #579 / MERGED
+- Retained source detail 2: Fresh-read after A1 merge: YES
+- Retained source detail 3: Current relation window: 2026-10-01..2026-10-04
+- Retained source detail 4: Historical rewrite: NO
+- Retained source detail 5: Native replay: NO
+- Retained source detail 6: Extra runtime/test execution: NOT_PERFORMED
+- Retained source detail 7: Duplicate native credit: NONE
+- Dated scope adjudication: retain 2026-10-04 producer/source assertions at their original evidence tier.
+- Dated chronology adjudication: later main availability does not prove earlier task-time input availability.
+- Dated local applicability adjudication: external/project/synthetic evidence never creates an unrecorded local incident.
+- Dated execution adjudication: this A1 did not rerun the 2026-10-04 checker or experiments.
+- Dated credit adjudication: historical producer results are counted once, index/owner restatement adds zero.
+- Dated correction adjudication: retain prior defects and forward corrections without erasing the observation cut.
+- Dated disposition: RETAIN_AS_RECORDED / NO_NEW_CREDIT / NO_HISTORY_MUTATION.
+
+#### 2026-10-05: source checkpoint A2 CURRENT MONTH RELATION — 2026-10-05 — AEGIS_BALLAST
+- Retained source detail 1: Required predecessor A1: PR #585 / MERGED
+- Retained source detail 2: Fresh-read after A1 merge: YES
+- Retained source detail 3: Current month relation window: `2026-10-01..2026-10-05`
+- Retained source detail 4: Native system: Aegis / Ballast
+- Retained source detail 5: Historical rewrite: NO
+- Retained source detail 6: Native task replay: NO
+- Retained source detail 7: Runtime/network/test execution by maintenance: NOT_PERFORMED
+- Dated scope adjudication: retain 2026-10-05 producer/source assertions at their original evidence tier.
+- Dated chronology adjudication: later main availability does not prove earlier task-time input availability.
+- Dated local applicability adjudication: external/project/synthetic evidence never creates an unrecorded local incident.
+- Dated execution adjudication: this A1 did not rerun the 2026-10-05 checker or experiments.
+- Dated credit adjudication: historical producer results are counted once, index/owner restatement adds zero.
+- Dated correction adjudication: retain prior defects and forward corrections without erasing the observation cut.
+- Dated disposition: RETAIN_AS_RECORDED / NO_NEW_CREDIT / NO_HISTORY_MUTATION.
+
+#### 2026-10-06: source checkpoint A2 CURRENT MONTH RELATION — 2026-10-06 — AEGIS_BALLAST
+- Retained source detail 1: Required predecessor A1: PR #590 / MERGED
+- Retained source detail 2: Fresh-read after A1 merge: YES
+- Retained source detail 3: Current month relation window: `2026-10-01..2026-10-06`
+- Retained source detail 4: Native systems: Aegis / Ballast / bounded NEXUS relation
+- Retained source detail 5: Historical rewrite: NO
+- Retained source detail 6: Native task replay: NO
+- Retained source detail 7: Live external provider execution by maintenance: NOT_PERFORMED
+- Dated scope adjudication: retain 2026-10-06 producer/source assertions at their original evidence tier.
+- Dated chronology adjudication: later main availability does not prove earlier task-time input availability.
+- Dated local applicability adjudication: external/project/synthetic evidence never creates an unrecorded local incident.
+- Dated execution adjudication: this A1 did not rerun the 2026-10-06 checker or experiments.
+- Dated credit adjudication: historical producer results are counted once, index/owner restatement adds zero.
+- Dated correction adjudication: retain prior defects and forward corrections without erasing the observation cut.
+- Dated disposition: RETAIN_AS_RECORDED / NO_NEW_CREDIT / NO_HISTORY_MUTATION.
+
+#### 2026-10-07: source checkpoint A2 CURRENT MONTH RELATION — 2026-10-07 — AEGIS_BALLAST
+- Retained source detail 1: Required predecessor A1: PR #595 / MERGED
+- Retained source detail 2: Fresh-read after A1 merge: YES
+- Retained source detail 3: Current month relation window: `2026-10-01..2026-10-07`
+- Retained source detail 4: Historical rewrite: NO
+- Retained source detail 5: Native replay: NO
+- Retained source detail 6: Live external provider execution by maintenance: NOT_PERFORMED
+- Retained source detail 7: Duplicate native/experiment credit: NONE
+- Dated scope adjudication: retain 2026-10-07 producer/source assertions at their original evidence tier.
+- Dated chronology adjudication: later main availability does not prove earlier task-time input availability.
+- Dated local applicability adjudication: external/project/synthetic evidence never creates an unrecorded local incident.
+- Dated execution adjudication: this A1 did not rerun the 2026-10-07 checker or experiments.
+- Dated credit adjudication: historical producer results are counted once, index/owner restatement adds zero.
+- Dated correction adjudication: retain prior defects and forward corrections without erasing the observation cut.
+- Dated disposition: RETAIN_AS_RECORDED / NO_NEW_CREDIT / NO_HISTORY_MUTATION.
+
+#### 2026-10-08: source checkpoint A2 CURRENT-MONTH RELATION — 2026-10-08
+- Retained source detail 1: Month start: `2026-10-01`
+- Retained source detail 2: Current relation window: `2026-10-01..2026-10-08`
+- Retained source detail 3: Existing owner: `aegis-cortex/2026-10-A6-aegis-memorize.md`
+- Retained source detail 4: A1 dependency: `PRESENT_ON_BASE_AND_CONSUMED`
+- Retained source detail 5: A1 coverage inherited: `COMPLETE_THROUGH_2026-10-07_AT_A1_CUT`
+- Retained source detail 6: Historical rewrite: `NO`
+- Retained source detail 7: Native replay by maintenance: `NO`
+- Dated scope adjudication: retain 2026-10-08 producer/source assertions at their original evidence tier.
+- Dated chronology adjudication: later main availability does not prove earlier task-time input availability.
+- Dated local applicability adjudication: external/project/synthetic evidence never creates an unrecorded local incident.
+- Dated execution adjudication: this A1 did not rerun the 2026-10-08 checker or experiments.
+- Dated credit adjudication: historical producer results are counted once, index/owner restatement adds zero.
+- Dated correction adjudication: retain prior defects and forward corrections without erasing the observation cut.
+- Dated disposition: RETAIN_AS_RECORDED / NO_NEW_CREDIT / NO_HISTORY_MUTATION.
+
+### Domain-specific evidence contract decisions
+
+- Evidence boundary 1: `EXTERNAL_RISK != LOCAL_AEGIS_INCIDENT`; preserve the narrower meaning instead of promoting authority.
+- Evidence boundary 2: `SINGLE_SOURCE_LINEAGE != INDEPENDENT_CORROBORATION`; preserve the narrower meaning instead of promoting authority.
+- Evidence boundary 3: `HUMAN_AUTHORIZED_SUBSTITUTE != JULES_NATIVE`; preserve the narrower meaning instead of promoting authority.
+- Evidence boundary 4: `Ballast modeled effects != live Kubernetes external effects`; preserve the narrower meaning instead of promoting authority.
+- Evidence boundary 5: `Historical INPUT_MISSING != later recovery execution`; preserve the narrower meaning instead of promoting authority.
+- Evidence boundary 6: `Verify-before-retry remains documentary until executed`; preserve the narrower meaning instead of promoting authority.
+- Preserve original dated status labels even when later delivery makes a file currently present.
+- Preserve negative observations and uncertainty rather than treating them as failure-free runs.
+- No cross-origin or cross-author independent corroboration invented by same owner summaries.
+- No natural-month final or early weekly decision generated.
+- No protected source, runtime, workflow, Daily, archive, or historical ledger touched.
+- Exactly one existing monthly owner receives this append-only maintenance section.
+- A2 cannot start from pre-A1 base; fresh main read after ten merges is mandatory.
+- Disposition: N-1 relational owner coverage recorded, not a full independent daily runtime audit.
