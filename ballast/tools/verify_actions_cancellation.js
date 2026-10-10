@@ -8,6 +8,8 @@ for(const c of d.cases){
  const predicates=[
  [!s.target_ok,'target-incarnation-mismatch'],[!s.membership_ok,'membership-unverified'],
  [!s.binding_ok,'effect-identity-mismatch'],[s.prior==='unknown'||(s.prior==='miss'&&!s.coverage),'safe-stop-unknown'],
+ [s.prior==='miss'&&s.coverage&&s.receipts.length>0,'evidence-conflict'],
+ [s.prior==='hit'&&s.receipts.length===0,'safe-stop-unknown'],
  [new Set(s.receipts).size!==s.receipts.length,'duplicate-effect'],
  [s.receipts.some(x=>!d.required.includes(x)),'unexpected-effect'],
  [s.receipts.length>0&&!s.historical_auth,'historically-unauthorized'],
@@ -27,4 +29,4 @@ for(const c of d.cases){
  }
 }
 console.log(JSON.stringify({scenarios:d.cases.length,rows:lines.length,failures:bad}));
-if(bad||lines.length!==72)throw Error('fixture disagreement');
+if(bad||lines.length!==d.cases.length*4)throw Error('fixture disagreement');
