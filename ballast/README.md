@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-10 CronJob schedule observation versus exact external occurrence and current completion](records/2026-10-10.md)
+- 最新 Daily: [2026-10-11 Actions cancellation and run-attempt identity versus external effect integrity](records/2026-10-11.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-02 至 2026-10-07](audits/2026-10-02--2026-10-07.md)
@@ -570,3 +570,11 @@ Current native research endpoint is 2026-10-09.
 One NATIVE bounded research unit on CronJob scheduling versus external effect completion. Same-day review strengthened the same fixture from 18 cases/72 decisions to 20 cases/80 decisions by rejecting duplicate receipt identities and unexpected receipt members despite count equality; no new Daily or research window is credited. Last complete derived audit remains 2026-10-02..2026-10-07; new cycle 2026-10-08..2026-10-10 is three dates, no overlapping audit is due. CASES, METHOD and NOTES unchanged. Monthly and README synchronization adds zero research credit.
 
 Current native research endpoint is 2026-10-10.
+
+## Ballast current-state advance — 2026-10-11
+
+One NATIVE controlled research Daily on GitHub Actions cancellation/run-attempt evidence versus the externally verified effect set. Same-day review improved the original 18-case / 72-decision fixture to 20 cases / 80 decisions by separating a covered negative prior-effect claim that conflicts with positive receipts from an aggregate hit lacking member-level evidence. Both cases require an evidence stop, not blind non-idempotent replay. Three weak paths show 17/18/14 model-relative label disagreements; the full-integrity path shows 0 against its own bounded reference. Implementation and semantic verification remain limited to synthetic evidence.
+
+The 2026-10-08..2026-10-11 interval has only four days, so the current complete derived audit remains 2026-10-02..2026-10-07. No audit duplication or CASES, METHOD, NOTES promotion. Monthly and README synchronization adds zero research credit. Real GitHub cancellation, independent sink evidence and full semantic independence remain NOT_EXECUTED.
+
+Current native research endpoint is 2026-10-11.

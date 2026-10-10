@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-11",
+  "provenance": "synthetic",
+  "task": "release-17",
+  "run": "401",
+  "target": "target-7",
+  "required": [
+    "publish",
+    "notify"
+  ],
+  "base": {
+    "old_status": "cancelled",
+    "old_attempt": 1,
+    "new_attempt": 2,
+    "prior": "hit",
+    "coverage": true,
+    "receipts": [
+      "publish",
+      "notify"
+    ],
+    "historical_auth": true,
+    "current_permission": true,
+    "target_ok": true,
+    "membership_ok": true,
+    "binding_ok": true,
+    "temporal_ok": true,
+    "postcondition": true
+  },
+  "cases": [
+    {
+      "id": "baseline-valid-cancel-after-completion",
+      "expected": "verified",
+      "overrides": {}
+    },
+    {
+      "id": "cancel-before-any-effect",
+      "expected": "incomplete-effect-set",
+      "overrides": {
+        "prior": "miss",
+        "receipts": [],
+        "postcondition": false
+      }
+    },
+    {
+      "id": "cancel-after-first-effect",
+      "expected": "incomplete-effect-set",
+      "overrides": {
+        "receipts": [
+          "publish"
+        ],
+        "postcondition": false
+      }
+    },
+    {
+      "id": "cancel-unknown-outcome",
+      "expected": "safe-stop-unknown",
+      "overrides": {
+        "prior": "unknown",
+        "receipts": [],
+        "coverage": false,
+        "postcondition": false
+      }
+    },
+    {
+      "id": "negative-query-no-watermark",
+      "expected": "safe-stop-unknown",
+      "overrides": {
+        "prior": "miss",
+        "coverage": false,
+        "receipts": [],
+        "postcondition": false
+      }
+    },
+    {
+      "id": "covered-miss-with-receipts",
+      "expected": "evidence-conflict",
+      "overrides": {
+        "prior": "miss",
+        "coverage": true
+      }
+    },
+    {
+      "id": "historical-hit-without-member-receipts",
+      "expected": "safe-stop-unknown",
+      "overrides": {
+        "prior": "hit",
+        "receipts": [],
+        "postcondition": true
+      }
+    },
+    {
+      "id": "revoked-before-missing-effect",
+      "expected": "permission-stop",
+      "overrides": {
+        "receipts": [
+          "publish"
+        ],
+        "current_permission": false,
+        "postcondition": false
+      }
+    },
+    {
+      "id": "revoked-after-valid-effects",
+      "expected": "verified",
+      "overrides": {
+        "current_permission": false
+      }
+    },
+    {
+      "id": "historically-invalid-effect",
+      "expected": "historically-unauthorized",
+      "overrides": {
+        "historical_auth": false
+      }
+    },
+    {
+      "id": "target-reincarnation",
+      "expected": "target-incarnation-mismatch",
+      "overrides": {
+        "target_ok": false
+      }
+    },
+    {
+      "id": "membership-expanded",
+      "expected": "membership-unverified",
+      "overrides": {
+        "membership_ok": false
+      }
+    },
+    {
+      "id": "duplicate-receipt-identity",
+      "expected": "duplicate-effect",
+      "overrides": {
+        "receipts": [
+          "publish",
+          "publish"
+        ]
+      }
+    },
+    {
+      "id": "unexpected-third-effect",
+      "expected": "unexpected-effect",
+      "overrides": {
+        "receipts": [
+          "publish",
+          "notify",
+          "erase"
+        ]
+      }
+    },
+    {
+      "id": "receipt-wrong-task-binding",
+      "expected": "effect-identity-mismatch",
+      "overrides": {
+        "binding_ok": false
+      }
+    },
+    {
+      "id": "effect-time-unordered",
+      "expected": "temporal-unverified",
+      "overrides": {
+        "temporal_ok": false
+      }
+    },
+    {
+      "id": "postcondition-reversed",
+      "expected": "current-postcondition-failed",
+      "overrides": {
+        "postcondition": false
+      }
+    },
+    {
+      "id": "old-run-completed-valid",
+      "expected": "verified",
+      "overrides": {
+        "old_status": "completed",
+        "new_attempt": 1
+      }
+    },
+    {
+      "id": "pending-replaced-no-effect",
+      "expected": "incomplete-effect-set",
+      "overrides": {
+        "old_status": "pending_replaced",
+        "prior": "miss",
+        "receipts": [],
+        "postcondition": false
+      }
+    },
+    {
+      "id": "late-old-run-effect-invalid-approval",
+      "expected": "historically-unauthorized",
+      "overrides": {
+        "historical_auth": false,
+        "new_attempt": 3
+      }
+    }
+  ]
+}
