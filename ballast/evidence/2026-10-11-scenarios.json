@@ -72,6 +72,23 @@
       }
     },
     {
+      "id": "covered-miss-with-receipts",
+      "expected": "evidence-conflict",
+      "overrides": {
+        "prior": "miss",
+        "coverage": true
+      }
+    },
+    {
+      "id": "historical-hit-without-member-receipts",
+      "expected": "safe-stop-unknown",
+      "overrides": {
+        "prior": "hit",
+        "receipts": [],
+        "postcondition": true
+      }
+    },
+    {
       "id": "revoked-before-missing-effect",
       "expected": "permission-stop",
       "overrides": {
