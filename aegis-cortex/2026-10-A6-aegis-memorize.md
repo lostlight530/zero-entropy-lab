@@ -2398,3 +2398,186 @@ DUPLICATE_EVIDENCE_CREDIT
 - No off-owner write, host source execution, new A3 decision or durable promotion by maintenance.
 - Final relationship state: UPDATED_THROUGH_2026-10-09 / NO_LOCAL_INCIDENT_PROMOTION.
 - Handoff: retain #607 closed-unmerged invalid evidence and #606 substitute provenance.
+
+
+## A1 FULL-COVERAGE MAINTENANCE — 2026-10-10
+
+- Domain: Aegis/Ballast.
+- Exact owner: `aegis-cortex/2026-10-A6-aegis-memorize.md`.
+- Logical date: 2026-10-10 Asia/Shanghai; N-minus-1 window 2026-10-01..2026-10-09.
+- Baseline: latest main after 2026-10-10 native layer delivery.
+- Method: audit dated pre-existing owner A2 checkpoints; only prior-day source facts contribute.
+- Provenance: GPT governance maintenance, not a producer Jules, experiment or new external search.
+- Historical source level: documented owner assertions; original producer runs not replayed in this review.
+- No month final, memory promotion, native task replay or host code changes.
+- An inherited result remains measured only over its originally recorded denominator.
+- Original BLOCKED, UNKNOWN, DEGRADED and source-lineage boundaries remain unchanged.
+
+### 2026-10-01..09 dated evidence ledger (source-anchored)
+
+#### 2026-10-01 / prior owner: A2_CURRENT_MONTH_RELATION_2026-10-01
+- Retained evidence 01 (2026-10-01): Current month relation window: 2026-10-01
+- Retained evidence 02 (2026-10-01): A1 coverage: INHERITED_FROM_MERGED_A1
+- Retained evidence 03 (2026-10-01): Native A1 input: `aegis-cortex/2026-10-01-A1-reliability-observe.md` / merged via PR #555
+- Retained evidence 04 (2026-10-01): Native A2 input: `aegis-cortex/2026-10-01-A2-doctrine-orient.md` / merged via PR #556
+- Retained evidence 05 (2026-10-01): Original A2 task-time state: INPUT_MISSING / BLOCKED
+- Retained evidence 06 (2026-10-01): September A6 PR #558: MERGED / BLOCKED / NO_DURABLE_DOCTRINE_PROMOTION
+- Retained evidence 07 (2026-10-01): September final A5→A6 chain: NOT_ESTABLISHED
+- Retained evidence 08 (2026-10-01): Day-1 integration: COMPLETE_WITH_ORIGINAL_A2_BLOCKED_PRESERVED
+- Retained evidence 09 (2026-10-01): September unresolved monthly chain: CARRY_FORWARD_AS_HISTORY_ONLY
+- Retained evidence 10 (2026-10-01): New local-incident, doctrine, runtime, source-independence, or research credit: NONE
+- Cutoff adjudication: the 2026-10-01 checkpoint is historical N-minus-1 input, not a re-run of a 2026-10-01 producer.
+- Coverage adjudication: owner assertions for 2026-10-01 retain their recorded source, denominator and UNKNOWN limitations.
+- Dependency adjudication: later current-main paths cannot be evidence that same-day inputs existed at an earlier blocked execution cut.
+- Credit adjudication: owner repetition of 2026-10-01 grants no additional research batch, source-independence, task or runtime credit.
+- Disposition: 2026-10-01 RETAIN / ORIGINAL_PROVENANCE / NO_HISTORICAL_MUTATION.
+
+#### 2026-10-02 / prior owner: A2_CURRENT_MONTH_RELATION_2026-10-02
+- Retained evidence 01 (2026-10-02): Current month relation window: 2026-10-01 through 2026-10-02
+- Retained evidence 02 (2026-10-02): A1 coverage through 2026-10-01: INHERITED_FROM_MERGED_A1
+- Retained evidence 03 (2026-10-02): October A5/A6 natural-month final: NOT_DUE
+- Retained evidence 04 (2026-10-02): Extra runtime/checker execution: NOT_PERFORMED
+- Retained evidence 05 (2026-10-02): A1 input: `aegis-cortex/2026-10-02-A1-reliability-observe.md` / PR #562
+- Retained evidence 06 (2026-10-02): Relationship continuity: UPDATED_THROUGH_2026-10-02
+- Retained evidence 07 (2026-10-02): A2 historical blocked state: PRESERVED
+- Retained evidence 08 (2026-10-02): A1 temporal provenance correction: PRESERVED
+- Retained evidence 09 (2026-10-02): Ballast Daily: INTEGRATED_WITH_LIVE_RUNTIME_BOUNDARY
+- Retained evidence 10 (2026-10-02): New credit beyond native Ballast Daily/window: NONE
+- Cutoff adjudication: the 2026-10-02 checkpoint is historical N-minus-1 input, not a re-run of a 2026-10-02 producer.
+- Coverage adjudication: owner assertions for 2026-10-02 retain their recorded source, denominator and UNKNOWN limitations.
+- Dependency adjudication: later current-main paths cannot be evidence that same-day inputs existed at an earlier blocked execution cut.
+- Credit adjudication: owner repetition of 2026-10-02 grants no additional research batch, source-independence, task or runtime credit.
+- Disposition: 2026-10-02 RETAIN / ORIGINAL_PROVENANCE / NO_HISTORICAL_MUTATION.
+
+#### 2026-10-03 / prior owner: A2_SUCCESSOR_CURRENT_MONTH_RELATION_2026-10-03
+- Retained evidence 01 (2026-10-03): Current month relation window: 2026-10-01 through 2026-10-03
+- Retained evidence 02 (2026-10-03): Successor A1 dependency: PRESENT_ON_BASE_AND_CONSUMED
+- Retained evidence 03 (2026-10-03): Predecessor same-day A2: PRESERVED_AS_POINT_IN_TIME_HISTORY
+- Retained evidence 04 (2026-10-03): New repository-native input after predecessor A2: NONE OBSERVED
+- Retained evidence 05 (2026-10-03): Successor relational outcome: NO_MATERIAL_RELATION_CHANGE
+- Retained evidence 06 (2026-10-03): Earlier 2026-10-03 Aegis / Ballast A2 relation remains the current substantive N-day interpretation.
+- Retained evidence 07 (2026-10-03): This successor proves the requested second-round dependency was re-established from merged A1, not that a new native observation occurred.
+- Retained evidence 08 (2026-10-03): No prior Daily, Weekly, Monthly, Special, CASE, finding, or memory credit is duplicated.
+- Retained evidence 09 (2026-10-03): Relationship continuity: RECONFIRMED_THROUGH_2026-10-03
+- Retained evidence 10 (2026-10-03): New local-incident/experiment/execution-window/CASE/NOTES/doctrine credit: NONE
+- Cutoff adjudication: the 2026-10-03 checkpoint is historical N-minus-1 input, not a re-run of a 2026-10-03 producer.
+- Coverage adjudication: owner assertions for 2026-10-03 retain their recorded source, denominator and UNKNOWN limitations.
+- Dependency adjudication: later current-main paths cannot be evidence that same-day inputs existed at an earlier blocked execution cut.
+- Credit adjudication: owner repetition of 2026-10-03 grants no additional research batch, source-independence, task or runtime credit.
+- Disposition: 2026-10-03 RETAIN / ORIGINAL_PROVENANCE / NO_HISTORICAL_MUTATION.
+
+#### 2026-10-04 / prior owner: A2 CURRENT MONTH RELATION — 2026-10-04
+- Retained evidence 01 (2026-10-04): Required predecessor A1: PR #579 / MERGED
+- Retained evidence 02 (2026-10-04): Extra runtime/test execution: NOT_PERFORMED
+- Retained evidence 03 (2026-10-04): Prior A2 records remain point-in-time history.
+- Retained evidence 04 (2026-10-04): Later current state does not rewrite prior task-time state.
+- Retained evidence 05 (2026-10-04): Month-open Aegis/Ballast relation retained.
+- Retained evidence 06 (2026-10-04): Current October relation: CURRENT_THROUGH_2026-10-04.
+- Retained evidence 07 (2026-10-04): Native producer credit: RETAINED_WITHOUT_DUPLICATION.
+- Retained evidence 08 (2026-10-04): W39 A3/A4 chain: CURRENT_AND_ORDERED.
+- Retained evidence 09 (2026-10-04): New maintenance research credit: NONE.
+- Retained evidence 10 (2026-10-04): Next A1 must fresh-read this merged main.
+- Cutoff adjudication: the 2026-10-04 checkpoint is historical N-minus-1 input, not a re-run of a 2026-10-04 producer.
+- Coverage adjudication: owner assertions for 2026-10-04 retain their recorded source, denominator and UNKNOWN limitations.
+- Dependency adjudication: later current-main paths cannot be evidence that same-day inputs existed at an earlier blocked execution cut.
+- Credit adjudication: owner repetition of 2026-10-04 grants no additional research batch, source-independence, task or runtime credit.
+- Disposition: 2026-10-04 RETAIN / ORIGINAL_PROVENANCE / NO_HISTORICAL_MUTATION.
+
+#### 2026-10-05 / prior owner: A2 CURRENT MONTH RELATION — 2026-10-05 — AEGIS_BALLAST
+- Retained evidence 01 (2026-10-05): Required predecessor A1: PR #585 / MERGED
+- Retained evidence 02 (2026-10-05): Current month relation window: `2026-10-01..2026-10-05`
+- Retained evidence 03 (2026-10-05): Runtime/network/test execution by maintenance: NOT_PERFORMED
+- Retained evidence 04 (2026-10-05): A1 supplies complete MonthStart→2026-10-04 coverage.
+- Retained evidence 05 (2026-10-05): A2 consumes 2026-10-05 native/current repository state.
+- Retained evidence 06 (2026-10-05): Open Research framework: `CURRENT / BOUNDED_BY_NATIVE_AUTHORITY`.
+- Retained evidence 07 (2026-10-05): Scholarly submission relation: `CURRENT / NO_VALIDATION_PROMOTION`.
+- Retained evidence 08 (2026-10-05): Native producer credit: `RETAINED_WITHOUT_DUPLICATION`.
+- Retained evidence 09 (2026-10-05): New maintenance research/runtime/publication credit: `NONE`.
+- Retained evidence 10 (2026-10-05): Successor dependency: `FUTURE_A1_MUST_FRESH_READ_THIS_MERGED_MAIN`.
+- Cutoff adjudication: the 2026-10-05 checkpoint is historical N-minus-1 input, not a re-run of a 2026-10-05 producer.
+- Coverage adjudication: owner assertions for 2026-10-05 retain their recorded source, denominator and UNKNOWN limitations.
+- Dependency adjudication: later current-main paths cannot be evidence that same-day inputs existed at an earlier blocked execution cut.
+- Credit adjudication: owner repetition of 2026-10-05 grants no additional research batch, source-independence, task or runtime credit.
+- Disposition: 2026-10-05 RETAIN / ORIGINAL_PROVENANCE / NO_HISTORICAL_MUTATION.
+
+#### 2026-10-06 / prior owner: A2 CURRENT MONTH RELATION — 2026-10-06 — AEGIS_BALLAST
+- Retained evidence 01 (2026-10-06): Required predecessor A1: PR #590 / MERGED
+- Retained evidence 02 (2026-10-06): Current month relation window: `2026-10-01..2026-10-06`
+- Retained evidence 03 (2026-10-06): Native systems: Aegis / Ballast / bounded NEXUS relation
+- Retained evidence 04 (2026-10-06): Live external provider execution by maintenance: NOT_PERFORMED
+- Retained evidence 05 (2026-10-06): Duplicate native/research credit: NONE
+- Retained evidence 06 (2026-10-06): Aegis 2026-10-06: `EXTERNAL_FAILURE_MODE_EVIDENCE / NO_LOCAL_EVIDENCE`.
+- Retained evidence 07 (2026-10-06): NEXUS relation: `SEPARATE_BOUNDED_RUNTIME_PLANE`.
+- Retained evidence 08 (2026-10-06): Native producer credit: `RETAINED_WITHOUT_DUPLICATION`.
+- Retained evidence 09 (2026-10-06): New maintenance research/runtime/publication credit: `NONE`.
+- Retained evidence 10 (2026-10-06): Successor dependency: `FUTURE_A1_MUST_FRESH_READ_THIS_MERGED_MAIN`.
+- Cutoff adjudication: the 2026-10-06 checkpoint is historical N-minus-1 input, not a re-run of a 2026-10-06 producer.
+- Coverage adjudication: owner assertions for 2026-10-06 retain their recorded source, denominator and UNKNOWN limitations.
+- Dependency adjudication: later current-main paths cannot be evidence that same-day inputs existed at an earlier blocked execution cut.
+- Credit adjudication: owner repetition of 2026-10-06 grants no additional research batch, source-independence, task or runtime credit.
+- Disposition: 2026-10-06 RETAIN / ORIGINAL_PROVENANCE / NO_HISTORICAL_MUTATION.
+
+#### 2026-10-07 / prior owner: A2 CURRENT MONTH RELATION — 2026-10-07 — AEGIS_BALLAST
+- Retained evidence 01 (2026-10-07): Required predecessor A1: PR #595 / MERGED
+- Retained evidence 02 (2026-10-07): Current month relation window: `2026-10-01..2026-10-07`
+- Retained evidence 03 (2026-10-07): Live external provider execution by maintenance: NOT_PERFORMED
+- Retained evidence 04 (2026-10-07): Duplicate native/experiment credit: NONE
+- Retained evidence 05 (2026-10-07): A1 #595 is present on this exact base.
+- Retained evidence 06 (2026-10-07): Current October relation: `CURRENT_THROUGH_2026-10-07`.
+- Retained evidence 07 (2026-10-07): Ballast 10/7: `VERIFIED_WITH_LIMITS / REAL_EFFECTS_0`.
+- Retained evidence 08 (2026-10-07): Aegis 10/7: `INDEPENDENT_EXTERNAL_RISK / NO_LOCAL_EVIDENCE`.
+- Retained evidence 09 (2026-10-07): New maintenance research/runtime/publication credit: `NONE`.
+- Retained evidence 10 (2026-10-07): Next A1 must fresh-read this merged main.
+- Cutoff adjudication: the 2026-10-07 checkpoint is historical N-minus-1 input, not a re-run of a 2026-10-07 producer.
+- Coverage adjudication: owner assertions for 2026-10-07 retain their recorded source, denominator and UNKNOWN limitations.
+- Dependency adjudication: later current-main paths cannot be evidence that same-day inputs existed at an earlier blocked execution cut.
+- Credit adjudication: owner repetition of 2026-10-07 grants no additional research batch, source-independence, task or runtime credit.
+- Disposition: 2026-10-07 RETAIN / ORIGINAL_PROVENANCE / NO_HISTORICAL_MUTATION.
+
+#### 2026-10-08 / prior owner: A2 CURRENT-MONTH RELATION — 2026-10-08
+- Retained evidence 01 (2026-10-08): Existing owner: `aegis-cortex/2026-10-A6-aegis-memorize.md`
+- Retained evidence 02 (2026-10-08): A1 dependency: `PRESENT_ON_BASE_AND_CONSUMED`
+- Retained evidence 03 (2026-10-08): A1 coverage inherited: `COMPLETE_THROUGH_2026-10-07_AT_A1_CUT`
+- Retained evidence 04 (2026-10-08): Extra external research by maintenance: `NOT_PERFORMED`
+- Retained evidence 05 (2026-10-08): Extra runtime/test execution by maintenance: `NOT_PERFORMED`
+- Retained evidence 06 (2026-10-08): Unresolved maintenance defect: `NONE_IDENTIFIED_IN_THIS_PASS`.
+- Retained evidence 07 (2026-10-08): Preserve this A2 as the current relation timepoint for 2026-10-08.
+- Retained evidence 08 (2026-10-08): A future A1 must start from the then-current main and use MonthStart→N-1 for its own logical date.
+- Retained evidence 09 (2026-10-08): A future A2 must again fresh-read after its A1 merges.
+- Retained evidence 10 (2026-10-08): Any later correction must be appended or reconciled without erasing this point-in-time record.
+- Cutoff adjudication: the 2026-10-08 checkpoint is historical N-minus-1 input, not a re-run of a 2026-10-08 producer.
+- Coverage adjudication: owner assertions for 2026-10-08 retain their recorded source, denominator and UNKNOWN limitations.
+- Dependency adjudication: later current-main paths cannot be evidence that same-day inputs existed at an earlier blocked execution cut.
+- Credit adjudication: owner repetition of 2026-10-08 grants no additional research batch, source-independence, task or runtime credit.
+- Disposition: 2026-10-08 RETAIN / ORIGINAL_PROVENANCE / NO_HISTORICAL_MUTATION.
+
+#### 2026-10-09 / prior owner: A2 CURRENT-MONTH RELATION — 2026-10-09
+- Retained evidence 01 (2026-10-09): Logical date 2026-10-09; MonthStart→N = 2026-10-01..2026-10-09.
+- Retained evidence 02 (2026-10-09): Required predecessor A1 #608: merged, N-1 history to 2026-10-08; fresh-read main consumed.
+- Retained evidence 03 (2026-10-09): Producer planes: Aegis #605/#606, Ballast #604; superseded invalid #607 closed unmerged.
+- Retained evidence 04 (2026-10-09): Native A2 identity boundary: GPT human-authorized substitute #606, not Jules-native.
+- Retained evidence 05 (2026-10-09): Month closure OPEN; October A6 natural-month final NOT_DUE.
+- Retained evidence 06 (2026-10-09): Earlier failed/blocked runs remain historical and must be reconciled forward only.
+- Retained evidence 07 (2026-10-09): Monthly A6 is still OPEN; no implied September A5/A6 historical repair.
+- Retained evidence 08 (2026-10-09): No off-owner write, host source execution, new A3 decision or durable promotion by maintenance.
+- Retained evidence 09 (2026-10-09): Final relationship state: UPDATED_THROUGH_2026-10-09 / NO_LOCAL_INCIDENT_PROMOTION.
+- Retained evidence 10 (2026-10-09): Handoff: retain #607 closed-unmerged invalid evidence and #606 substitute provenance.
+- Cutoff adjudication: the 2026-10-09 checkpoint is historical N-minus-1 input, not a re-run of a 2026-10-09 producer.
+- Coverage adjudication: owner assertions for 2026-10-09 retain their recorded source, denominator and UNKNOWN limitations.
+- Dependency adjudication: later current-main paths cannot be evidence that same-day inputs existed at an earlier blocked execution cut.
+- Credit adjudication: owner repetition of 2026-10-09 grants no additional research batch, source-independence, task or runtime credit.
+- Disposition: 2026-10-09 RETAIN / ORIGINAL_PROVENANCE / NO_HISTORICAL_MUTATION.
+
+### Domain-specific issue resolution / next gate
+
+- Evidence constraint 1: same-source arXiv recheck != independent corroboration.
+- Evidence constraint 2: HUMAN_AUTHORIZED_SUBSTITUTE != JULES_NATIVE.
+- Evidence constraint 3: Ballast bounded modeled decisions != live Kubernetes external effects.
+- Evidence constraint 4: historic INPUT_MISSING/BLOCKED is not backfilled by later availability.
+- Source-chain reconciliation: publisher identity, observation timestamp, task logical date and merge timestamp are separately authoritative.
+- Native 2026-10-10 inputs are deliberately excluded from this A1; they belong exclusively in post-A1 A2.
+- Independent execution by A1: NOT_PERFORMED; no combined prior native check is relabeled a fresh audit.
+- Review defect disposition: no historical source owner overwritten, and no old degraded state silently upgraded.
+- Month status: OPEN; natural-month final NOT_DUE and durable memory promotion NONE.
+- Next phase requires all 10 A1 merge SHAs plus ten refreshed main reads before 2026-10-10 A2 starts.
+- Correction rule: future contradictory evidence must append correction with its own observation cut.
