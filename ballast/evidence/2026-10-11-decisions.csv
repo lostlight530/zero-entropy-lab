@@ -19,6 +19,14 @@ negative-query-no-watermark,cancellation-only,incomplete-effect-set,safe-stop-un
 negative-query-no-watermark,attempt-advanced-only,verified,safe-stop-unknown,false
 negative-query-no-watermark,receipt-count-only,incomplete-effect-set,safe-stop-unknown,false
 negative-query-no-watermark,full-integrity,safe-stop-unknown,safe-stop-unknown,true
+covered-miss-with-receipts,cancellation-only,incomplete-effect-set,evidence-conflict,false
+covered-miss-with-receipts,attempt-advanced-only,verified,evidence-conflict,false
+covered-miss-with-receipts,receipt-count-only,verified,evidence-conflict,false
+covered-miss-with-receipts,full-integrity,evidence-conflict,evidence-conflict,true
+historical-hit-without-member-receipts,cancellation-only,incomplete-effect-set,safe-stop-unknown,false
+historical-hit-without-member-receipts,attempt-advanced-only,verified,safe-stop-unknown,false
+historical-hit-without-member-receipts,receipt-count-only,incomplete-effect-set,safe-stop-unknown,false
+historical-hit-without-member-receipts,full-integrity,safe-stop-unknown,safe-stop-unknown,true
 revoked-before-missing-effect,cancellation-only,incomplete-effect-set,permission-stop,false
 revoked-before-missing-effect,attempt-advanced-only,verified,permission-stop,false
 revoked-before-missing-effect,receipt-count-only,incomplete-effect-set,permission-stop,false
