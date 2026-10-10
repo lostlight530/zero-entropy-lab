@@ -6,6 +6,8 @@ function full(s) {
   if (!s.membership_ok) return "membership-unverified";
   if (!s.binding_ok) return "effect-identity-mismatch";
   if (s.prior === "unknown" || (s.prior === "miss" && !s.coverage)) return "safe-stop-unknown";
+  if (s.prior === "miss" && s.coverage && s.receipts.length) return "evidence-conflict";
+  if (s.prior === "hit" && !s.receipts.length) return "safe-stop-unknown";
   if (new Set(s.receipts).size !== s.receipts.length) return "duplicate-effect";
   if (s.receipts.some(x => !doc.required.includes(x))) return "unexpected-effect";
   if (s.receipts.length && !s.historical_auth) return "historically-unauthorized";
