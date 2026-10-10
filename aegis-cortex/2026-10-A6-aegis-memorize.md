@@ -2581,3 +2581,185 @@ DUPLICATE_EVIDENCE_CREDIT
 - Month status: OPEN; natural-month final NOT_DUE and durable memory promotion NONE.
 - Next phase requires all 10 A1 merge SHAs plus ten refreshed main reads before 2026-10-10 A2 starts.
 - Correction rule: future contradictory evidence must append correction with its own observation cut.
+
+
+## A2 CURRENT-MONTH RELATION — 2026-10-10
+
+- System Aegis/Ballast, owner `aegis-cortex/2026-10-A6-aegis-memorize.md`.
+- Exact post-A1 current-main dependency: `c3adc3507148ae44f91815162bb159e71311da14`.
+- A1 review covered 2026-10-01..2026-10-09; A2 extends this relation to 2026-10-10.
+- N-day native Ballast Daily PR #611, Aegis A1 PR #612, Aegis A2 PR #613, all retained in main.
+- Aegis same-date A1→A2 contract satisfied, network/source status NETWORK_VERIFIED / SINGLE_SOURCE_LINEAGE.
+- Ballast producer owns one Daily and one bounded modeled execution window; maintenance earns zero duplicate credit.
+- October A6 month OPEN / PROVISIONAL_NOT_FINAL and durable doctrine promotion NO.
+- Original historical BLOCKED, degraded and substitute records remain historical facts, not rewritten.
+- No external Kubernetes runtime, Aegis role-drift experiment, or isolated provider test executed by this A2.
+
+### Historical A1 N-minus-1 inheritance
+
+#### 2026-10-01 retained relationship from merged A1
+- Inherited record 1: Retained evidence 01 (2026-10-01): Current month relation window: 2026-10-01
+- Inherited record 2: Retained evidence 02 (2026-10-01): A1 coverage: INHERITED_FROM_MERGED_A1
+- Inherited record 3: Retained evidence 03 (2026-10-01): Native A1 input: `aegis-cortex/2026-10-01-A1-reliability-observe.md` / merged via PR #555
+- Inherited record 4: Retained evidence 04 (2026-10-01): Native A2 input: `aegis-cortex/2026-10-01-A2-doctrine-orient.md` / merged via PR #556
+- 2026-10-01: no backdated A1→A2 input availability and no synthetic local incident or execution credit.
+#### 2026-10-02 retained relationship from merged A1
+- Inherited record 1: Retained evidence 01 (2026-10-02): Current month relation window: 2026-10-01 through 2026-10-02
+- Inherited record 2: Retained evidence 02 (2026-10-02): A1 coverage through 2026-10-01: INHERITED_FROM_MERGED_A1
+- Inherited record 3: Retained evidence 03 (2026-10-02): October A5/A6 natural-month final: NOT_DUE
+- Inherited record 4: Retained evidence 04 (2026-10-02): Extra runtime/checker execution: NOT_PERFORMED
+- 2026-10-02: no backdated A1→A2 input availability and no synthetic local incident or execution credit.
+#### 2026-10-03 retained relationship from merged A1
+- Inherited record 1: Retained evidence 01 (2026-10-03): Current month relation window: 2026-10-01 through 2026-10-03
+- Inherited record 2: Retained evidence 02 (2026-10-03): Successor A1 dependency: PRESENT_ON_BASE_AND_CONSUMED
+- Inherited record 3: Retained evidence 03 (2026-10-03): Predecessor same-day A2: PRESERVED_AS_POINT_IN_TIME_HISTORY
+- Inherited record 4: Retained evidence 04 (2026-10-03): New repository-native input after predecessor A2: NONE OBSERVED
+- 2026-10-03: no backdated A1→A2 input availability and no synthetic local incident or execution credit.
+#### 2026-10-04 retained relationship from merged A1
+- Inherited record 1: Retained evidence 01 (2026-10-04): Required predecessor A1: PR #579 / MERGED
+- Inherited record 2: Retained evidence 02 (2026-10-04): Extra runtime/test execution: NOT_PERFORMED
+- Inherited record 3: Retained evidence 03 (2026-10-04): Prior A2 records remain point-in-time history.
+- Inherited record 4: Retained evidence 04 (2026-10-04): Later current state does not rewrite prior task-time state.
+- 2026-10-04: no backdated A1→A2 input availability and no synthetic local incident or execution credit.
+#### 2026-10-05 retained relationship from merged A1
+- Inherited record 1: Retained evidence 01 (2026-10-05): Required predecessor A1: PR #585 / MERGED
+- Inherited record 2: Retained evidence 02 (2026-10-05): Current month relation window: `2026-10-01..2026-10-05`
+- Inherited record 3: Retained evidence 03 (2026-10-05): Runtime/network/test execution by maintenance: NOT_PERFORMED
+- Inherited record 4: Retained evidence 04 (2026-10-05): A1 supplies complete MonthStart→2026-10-04 coverage.
+- 2026-10-05: no backdated A1→A2 input availability and no synthetic local incident or execution credit.
+#### 2026-10-06 retained relationship from merged A1
+- Inherited record 1: Retained evidence 01 (2026-10-06): Required predecessor A1: PR #590 / MERGED
+- Inherited record 2: Retained evidence 02 (2026-10-06): Current month relation window: `2026-10-01..2026-10-06`
+- Inherited record 3: Retained evidence 03 (2026-10-06): Native systems: Aegis / Ballast / bounded NEXUS relation
+- Inherited record 4: Retained evidence 04 (2026-10-06): Live external provider execution by maintenance: NOT_PERFORMED
+- 2026-10-06: no backdated A1→A2 input availability and no synthetic local incident or execution credit.
+#### 2026-10-07 retained relationship from merged A1
+- Inherited record 1: Retained evidence 01 (2026-10-07): Required predecessor A1: PR #595 / MERGED
+- Inherited record 2: Retained evidence 02 (2026-10-07): Current month relation window: `2026-10-01..2026-10-07`
+- Inherited record 3: Retained evidence 03 (2026-10-07): Live external provider execution by maintenance: NOT_PERFORMED
+- Inherited record 4: Retained evidence 04 (2026-10-07): Duplicate native/experiment credit: NONE
+- 2026-10-07: no backdated A1→A2 input availability and no synthetic local incident or execution credit.
+#### 2026-10-08 retained relationship from merged A1
+- Inherited record 1: Retained evidence 01 (2026-10-08): Existing owner: `aegis-cortex/2026-10-A6-aegis-memorize.md`
+- Inherited record 2: Retained evidence 02 (2026-10-08): A1 dependency: `PRESENT_ON_BASE_AND_CONSUMED`
+- Inherited record 3: Retained evidence 03 (2026-10-08): A1 coverage inherited: `COMPLETE_THROUGH_2026-10-07_AT_A1_CUT`
+- Inherited record 4: Retained evidence 04 (2026-10-08): Extra external research by maintenance: `NOT_PERFORMED`
+- 2026-10-08: no backdated A1→A2 input availability and no synthetic local incident or execution credit.
+#### 2026-10-09 retained relationship from merged A1
+- Inherited record 1: Retained evidence 01 (2026-10-09): Logical date 2026-10-09; MonthStart→N = 2026-10-01..2026-10-09.
+- Inherited record 2: Retained evidence 02 (2026-10-09): Required predecessor A1 #608: merged, N-1 history to 2026-10-08; fresh-read main consumed.
+- Inherited record 3: Retained evidence 03 (2026-10-09): Producer planes: Aegis #605/#606, Ballast #604; superseded invalid #607 closed unmerged.
+- Inherited record 4: Retained evidence 04 (2026-10-09): Native A2 identity boundary: GPT human-authorized substitute #606, not Jules-native.
+- 2026-10-09: no backdated A1→A2 input availability and no synthetic local incident or execution credit.
+
+### N-day native source ledger `aegis-cortex/2026-10-10-A1-reliability-observe.md`
+- Recorded producer fact 1: - **Execution Time Asia/Shanghai**: 2026-10-10T08:00:00+08:00
+- Recorded producer fact 2: - **Knowledge Source**: EXTERNAL_AND_AEGIS_RECORDS
+- Recorded producer fact 3: - **Evidence Class**: EXTERNAL_FAILURE_MODE_EVIDENCE
+- Recorded producer fact 4: - **Source Authority For Claim**: ORIGINAL_RESEARCH
+- Recorded producer fact 5: - **aegis-cortex/2026-10-09-A1-reliability-observe.md**: 实际读取，记录了操作边界定义与代理越权工具使用的相关风险。
+- Recorded producer fact 6: - **aegis-cortex/2026-10-09-A2-doctrine-orient.md**: 实际读取，记录了缺乏明确边界下范围漂移（scope drift）和越权操作可能带来的后果，并确认未发生本地事故。
+- Recorded producer fact 7: - **aegis-cortex/2026-W39-A4-protocol-act.md**: 实际读取，了解最新的验证要求与临时纪律行动（Verify-before-retry）。
+- Recorded producer fact 8: - **aegis-cortex/2026-10-A6-aegis-memorize.md**: 实际读取，了解月度周期记录处于 OPEN 状态。
+- Recorded producer fact 9: - **search topics**: "LLM agent failure", "Echoing identity failures".
+- Recorded producer fact 10: - **observation reasons**: 继续跟踪多智能体（AxA）交互中出现的动态失效模式，特别是在无人类干预反馈下的行为漂移。
+- Recorded producer fact 11: - **current focus of A4 and A6**: W39 A4 强调验证后重试（verify-before-retry）；A6 处于 OPEN 状态。
+- Recorded producer fact 12: - **Limitations**: 该研究主要针对明确的“买家/卖家”等特定角色对抗或交易妥协场景，尚未涵盖代码合并、审计验证等不同任务类型的纯异步协作流程。
+- Recorded producer fact 13: - **Signal**: 多智能体在自主对话中容易出现“身份回声（Echoing）”，导致放弃初始设定的角色边界及任务目标，而是迎合或重复另一方代理的上下文，此现象并未因增加模型推理计算量（reasoning effort）而消失。
+- Recorded producer fact 14: - **Failure Mode Addressed**: Scope drift, Instruction conflict, Memory poisoning.
+- Recorded producer fact 15: - **External Evidence**: 研究在三类交易场景下观察到了代理角色失效，发现通过提示词工程仅能部分减弱而不能消除此行为。对话轮次越长（一般超过7轮），发生回声丢失身份的概率越高。强制代理在每一轮回复前结构化地声明其角色（Structured Response）能将失效降至 10% 以下。
+- Recorded producer fact 16: - **Why It May Matter**: Aegis 在自动化长期任务中，若存在分工交互（如审核与生成的自我纠正循环），这种动态身份丢失可能导致审核代理妥协并直接接受错误结果，最终产生“虚假完成（False completion）”。
+- Recorded producer fact 17: - **Uncertainty**: 虽指出角色丢失高发，但在缺乏本地长交互日志证据的情况下，尚无法确定在目前短小生命周期的 Aegis 任务管道中是否触发了足够长的上下文以致漂移。
+- Recorded producer fact 18: - **Possible Noise**: 仅限商业交易类的对抗型验证场景，不代表所有类型的任务都会迅速产生回声。
+- Recorded producer fact 19: - **需要 A2 定向解释的风险**: Agent-to-Agent 场景下长对话上下文引发的代理身份（指令）丢失，在当前只有单一异步代理的 Aegis 系统中是否存在转化可能或对应形态。
+- Recorded producer fact 20: - **需要独立来源验证的风险**: “结构化回复声明角色”是否在非商业交易的其他技术协作场景中同样是有效且必要的纪律约束。
+- Recorded producer fact 21: - **缺乏本地证据的风险**: Zero/Aegis 现存所有文档生成与合并任务并未被观测到代理角色的主动转移，没有此类交互失败的本地事实记录。
+- Recorded producer fact 22: - **不应继续升级的内容**: 要求改变现有全部执行器的内部消息格式，将其上升为修改宿主仓库的系统结构。
+
+### N-day native source ledger `aegis-cortex/2026-10-10-A2-doctrine-orient.md`
+- Recorded producer fact 1: - **Execution Time Asia/Shanghai**: 2026-10-10T10:00:00+08:00
+- Recorded producer fact 2: - **Knowledge Source**: EXTERNAL_AND_AEGIS_RECORDS
+- Recorded producer fact 3: - **Evidence Class**: EXTERNAL_FAILURE_MODE_EVIDENCE
+- Recorded producer fact 4: - **Source Authority For Claim**: ORIGINAL_RESEARCH
+- Recorded producer fact 5: - Exact target path: `aegis-cortex/2026-10-10-A1-reliability-observe.md`
+- Recorded producer fact 6: - **Historical A2 (seven most recent strictly before 2026-10-10)**:
+- Recorded producer fact 7: - `aegis-cortex/2026-10-09-A2-doctrine-orient.md`
+- Recorded producer fact 8: - `aegis-cortex/2026-10-08-A2-doctrine-orient.md`
+- Recorded producer fact 9: - `aegis-cortex/2026-10-07-A2-doctrine-orient.md`
+- Recorded producer fact 10: - `aegis-cortex/2026-10-06-A2-doctrine-orient.md`
+- Recorded producer fact 11: - `aegis-cortex/2026-10-05-A2-doctrine-orient.md`
+- Recorded producer fact 12: - `aegis-cortex/2026-10-04-A2-doctrine-orient.md`
+- Recorded producer fact 13: - `aegis-cortex/2026-10-03-A2-doctrine-orient.md`
+- Recorded producer fact 14: - **哪些只有外部证据**: 代理间的上下文回声导致任务妥协（目前只有该论文通过特定的交易/对抗场景实验验证）。
+- Recorded producer fact 15: - **哪些需要进入 A3**: 鉴于没有本地确凿发生的记录，只作为范围漂移的理论背景供后续观察，不需要进入本周强制纪律决策。
+- Recorded producer fact 16: - **哪些只是理论可能**: 认为 Aegis OODA 当前已经发生回声并因此丢失审查目标的担忧只是一种理论可能。
+- Recorded producer fact 17: - **哪些判断仍不确定**: 结构化回复能否有效抵御该问题且其对于编程和纪律执行代理的作用程度均不确定。
+- Recorded producer fact 18: - **明确今天不做的宿主修改**: 不读取也不修改宿主仓库 (zero-entropy-lab) 代码、沙盒及 GitHub Actions。
+- Recorded producer fact 19: - **明确今天不做的长期记忆升级**: 不因此单一来源理论风险向 A6 导入新的持续性原则（Durable Doctrine）。
+- Recorded producer fact 20: - **已验证风险**: 长多轮对话中的 Agent-to-Agent 交互会导致显著的角色遗忘。
+- Recorded producer fact 21: - **被降级风险**: “Aegis 当前受此影响严重”的推断因为缺乏本地事实被降级为理论可能。
+- Recorded producer fact 22: - **需要继续观察风险**: Scope drift 与任务指令混淆导致的假阳性虚假完成（False completion）。
+- Recorded producer fact 23: - **Same-day A1 hard gate verified and logged**: YES
+- Recorded producer fact 24: - **External risk and local incident properly separated**: YES
+- Recorded producer fact 25: - **No external risks written as local truths**: YES
+
+### N-day native source ledger `ballast/records/2026-10-10.md`
+- Recorded producer fact 1: 主题: CronJob schedule observation versus exact external occurrence and current completion
+- Recorded producer fact 2: Research Surface: CronJob scheduling / permission / historical occurrence / historical authorization / schedule identity / incarnation / membership / completion / temporal evidence / verifier independence
+- Recorded producer fact 3: Current Execution Permission: modeled for new effects, not inferred from scheduler state
+- Recorded producer fact 4: Historical Authorization Evidence: modeled effect-time validity, live authority NOT_TESTED
+- Recorded producer fact 5: Current Completion Evidence: exact external receipts and current task postcondition
+- Recorded producer fact 6: Target Identity: CronJob UID, scheduled instant, external ledger identity, external target UID
+- Recorded producer fact 7: Target Incarnation: CronJob and target UID separate from logical name
+- Recorded producer fact 8: Effect Identity / Effect Set: required notify and archive, with occurrence count
+- Recorded producer fact 9: Membership / Predicate Witness: exact required effect membership and current postcondition
+- Recorded producer fact 10: Task Semantics: external task completion is distinct from scheduling and Job terminal status
+- Recorded producer fact 11: Freshness Boundary: modeled receipt coverage and current postcondition at completion decision
+- Recorded producer fact 12: Temporal Evidence: modeled ordering flag, trusted distributed time NOT_TESTED
+- Recorded producer fact 13: Verifier Authority / Independence: separately structured primitive-field recomputation, shared fixture and schema
+- Recorded producer fact 14: Verified Revision: main f4ae369c8ae364bd2c600f69c3c7c9b84ce7b91a
+- Recorded producer fact 15: One bounded deterministic experiment tests CronJob schedule observation, Job presence and Job terminal status against exact external effect completion. Twenty scenarios and four paths produce 80 decisions. A separately structured verifier checks all 72 decisions. No live Kubernetes, external sink or non-idempotent action was executed.
+- Recorded producer fact 16: Can lastScheduleTime, an existing Job or a terminal Job prove that a particular scheduled occurrence produced the exact authorized external effects on the correct target incarnation and that the task predicate is currently satisfied.
+- Recorded producer fact 17: Checked on 2026-10-10 Asia/Shanghai: [Kubernetes CronJob documentation](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) and [CronJob API reference](https://kubernetes.io/docs/reference/kubernetes-api/batch/cron-job-v1/).
+- Recorded producer fact 18: The official docs describe approximate Job creation, possible duplicate or missing Jobs, the scheduled-timestamp annotation for Kubernetes 1.32+, Forbid/Replace concurrency policies, missed schedules and configurable Job history limits. The API reference separately defines lastScheduleTime and lastSuccessfulTime. These are one publisher lineage and do not prove any external effect or local cluster execution.
+- Recorded producer fact 19: H1 lastScheduleTime proves task completion. H2 Job existence proves completion. H3 Job Complete proves completion. H4 exact schedule identity, prior-effect coverage, historical authorization, target incarnation, effect membership, current permission and postcondition checks reject modeled false completion.
+- Recorded producer fact 20: H1 fails if schedule is observed but no effect exists. H2 fails if a Job exists without effects. H3 fails if a completed Job has unknown external effects. H4 fails if the bounded reference oracle accepts any modeled invalid completion.
+- Recorded producer fact 21: The producer and separately structured verifier executed in the JavaScript JavaScript isolate tool runtime. The verifier reconstructs expected labels from primitive fields without calling the producer decision function. Both scripts are Node-compatible but standalone Node CLI execution was NOT_EXECUTED.
+- Recorded producer fact 22: Strict label disagreements against the modeled task-contract reference: schedule-only 17, Job-presence 18, Job-terminal 18, full-integrity 0. Zero full-integrity disagreement is an internal reference-oracle consistency result, not external accuracy validation.
+- Recorded producer fact 23: - [Scenario JSON](../evidence/2026-10-10-scenarios.json)
+- Recorded producer fact 24: - [Decision CSV](../evidence/2026-10-10-decisions.csv)
+- Recorded producer fact 25: - [Producer](../tools/experiment_cronjob_schedule_evidence.js)
+- Recorded producer fact 26: - [Verifier](../tools/verify_cronjob_schedule_evidence.js)
+- Recorded producer fact 27: Real Job creations 0, real sink calls 0, real effects 0, real retries 0.
+- Recorded producer fact 28: Primitive-field verifier agreement: 20/20 expected scenario labels and 80/80 decision rows, failures 0. Implementation independence PARTIAL, data-source independence LIMITED_SHARED_FIXTURE, semantic-contract independence LIMITED_SHARED_TASK_SCHEMA. No independent live authority was queried.
+- Recorded producer fact 29: Schedule-only: 17/20 label disagreements. Job-presence-only: 18/20. Job-terminal-only: 18/20. Full-integrity: 0/20 against its own bounded reference. These are not measured production failure rates or speed gains. More independent evidence queries are needed for stronger completion claims.
+- Recorded producer fact 30: BOUNDED_MODEL_SUPPORTED: scheduling progress, Job existence, Job terminal state, historical external occurrence, effect-time authorization, present execution permission, exact schedule and target identity, membership completeness and current task completion are distinct. No Kubernetes controller defect or production guarantee is claimed.
+- Recorded producer fact 31: Long-running agents may delegate actions to scheduled workers and resume after Job history cleanup. Scheduler metadata cannot replace an authoritative receipt for irreversible external effects. Recovery must preserve exact schedule identity and unknown-outcome safety.
+- Recorded producer fact 32: Kubernetes official docs describe approximate scheduling, concurrency policy, scheduled-timestamp annotation and Job history limits. JavaScript isolate controlled producer-model recomputation and separately structured verifier reconstruction executed: 20 scenarios, 80 decisions, zero verification failures.
+- Recorded producer fact 33: Task-defined completion needs exact external effect and authority evidence rather than only controller lifecycle status.
+- Recorded producer fact 34: Live CronJob scheduling, actual Job pruning, external sink occurrence, authoritative receipt coverage, real effect-time authorization, trusted temporal ordering, protected current-state completion and fully independent semantic verification NOT_EXECUTED.
+- Recorded producer fact 35: 20 scenarios; 4 paths; 80 modeled decisions; disagreements 17/18/18/0; verifier 20/20 and 80/80; real effects 0; retries 0; CASE 0; NOTES 0; execution-window credit 1.
+- Recorded producer fact 36: Official source inspection EXECUTED. JavaScript isolate producer EXECUTED. JavaScript isolate separate predicate-structure verifier EXECUTED_WITH_SHARED_FIXTURE. Standalone Node CLI NOT_EXECUTED. Real cluster and sink NOT_EXECUTED. Full repository ballast/tools/check.py NOT_EXECUTED in this producer stage; structural contract was inspected but this is not a checker PASS.
+
+### Risk, model integrity and present-day relation
+- arXiv:2511.09710v3 Echoing is an external agent-agent role identity study, not a proven Aegis-local incident.
+- Aegis A1 studies agent role mirroring under dialogue pressure; local asynchronous document tasks are a different mechanism and remain UNKNOWN.
+- Aegis A2 inherits the exact logical date 2026-10-10 A1 and does not promote a new forced structured-identity protocol.
+- Aegis A1 source lineage is a single arXiv paper; ar5iv re-renderings add zero independent-source credit.
+- Reported 5–70% and approximately 32.8% in the cited experimental context are not applicable local Aegis error-rate estimates.
+- No verified Aegis impersonation, poisoning or role-mirroring incident is present in the bounded allowed record set.
+- W39 A4 verify-before-retry is a documentary operating discipline, not new evidence of tool sandbox enforcement.
+- Historical Zero #607 invalid out-of-scope draft remains CLOSED_UNMERGED, not a recovered native A2 success.
+- Ballast 10/10 models CronJob lastScheduleTime, Job presence, terminal Complete and full effect-integrity paths separately.
+- Producer-reported final strengthened controlled fixture has 20 scenarios, four paths and 80 decisions.
+- Earlier same-day 18-scenario/72-decision state is preserved as an original review cut, not silently overwritten.
+- Same-day strengthening rejects duplicated receipt IDs and unexpected receipt members despite equal effect_count and receipt-count.
+- Separate primitive verifier 20/20 labels, 80/80 rows in controlled fixture; semantic/data independence LIMITED.
+- Ballast record opening paragraph's older 'all 72 decisions' is a point-in-time inconsistency against its later strengthened 80-row final; use later explicitly labeled corrected cut, preserve both in historical document.
+- CronJob annotation and Job terminal marker cannot by themselves prove exact external task-defined effects.
+- Required notify/archive receipt membership, incarnation, temporal ordering, historical authorization and current postcondition are distinct criteria.
+- Real Kubernetes cluster/sink, live non-idempotent effects, independent production authority and standalone Node CLI NOT_EXECUTED.
+- One new Ballast research batch/window from native Daily; no extra CASE/NOTES/audit credit from A2.
+- Aegis monthly A6 retains OPEN and no durable doctrine promotion; September A5/A6 remains historical unresolved.
+- No host implementation, workflows, historical native file or production verification tools changed by this owner append.
+- A2 disposition: UPDATED_THROUGH_2026_10_10_WITH_EXTERNAL_RISK_LOCAL_EVIDENCE_AND_MODEL_SCOPES_SEPARATED.
