@@ -2983,3 +2983,194 @@ DUPLICATE_EVIDENCE_CREDIT
 - Merge prerequisite for A2: YES
 - A2 may consume 2026-10-11 current-main state only after this A1 merge
 - A1 status: READY_FOR_MAINTAINER_REVIEW
+
+## A2 CURRENT-MONTH RELATION — 2026-10-11
+- Repository: `lostlight530/zero-entropy-lab`
+- Domain: Aegis / Ballast
+- Exact owner: `aegis-cortex/2026-10-A6-aegis-memorize.md`
+- Logical N: 2026-10-11 Asia/Shanghai
+- Relation window: 2026-10-01..2026-10-11
+- Fresh post-A1 base: `96e74892c9a381bf18f1e33b1f8c2dcd3f0b9508`
+- Required predecessor A1: #623 / MERGED / CONSUMED
+- Open PR state at A2 branch cut: 0 observed
+- Producer role: HUMAN_AUTHORIZED_GOVERNANCE_RELATION
+- Historical rewrite: NO
+- Extra external research by A2: NOT_PERFORMED
+- Extra producer execution window by A2: NONE
+- New independent-source credit by A2: NONE
+- Month closure: OPEN
+- Natural-month final: NOT_DUE
+
+### Dependency and relation contract
+- A2 starts from current main only after A1 merge
+- A1 MonthStart→N-1 coverage is consumed as prerequisite, not duplicated as new producer evidence
+- N-day producer/recovery artifacts are integrated only when present on this exact base
+- Later successful recovery cannot rewrite an earlier blocked execution cut
+- Closed-unmerged PR history remains point-in-time evidence
+- REVIEWED / RETAIN / NO_FOLLOW_UP are explicit decisions
+- Current owner update does not create a research batch, runtime run, or local incident
+- Negative/blocked/unknown states remain first-class evidence
+- Future corrections must append a new timepoint
+
+#### 2026-10-01 inherited A1 relation
+- A1 coverage source: merged predecessor #623
+- Dated owner checkpoint: CONSUMED
+- Historical producer provenance: PRESERVED
+- Historical local/external risk classification: PRESERVED
+- Re-execution by A2: NOT_PERFORMED
+- New source-independence credit: NONE
+- New research/window credit: NONE
+- Later 10/11 recovery used to rewrite this date: NO
+- Relation decision: RETAIN_AS_POINT_IN_TIME_HISTORY
+
+#### 2026-10-02 inherited A1 relation
+- A1 coverage source: merged predecessor #623
+- Dated owner checkpoint: CONSUMED
+- Historical producer provenance: PRESERVED
+- Historical local/external risk classification: PRESERVED
+- Re-execution by A2: NOT_PERFORMED
+- New source-independence credit: NONE
+- New research/window credit: NONE
+- Later 10/11 recovery used to rewrite this date: NO
+- Relation decision: RETAIN_AS_POINT_IN_TIME_HISTORY
+
+#### 2026-10-03 inherited A1 relation
+- A1 coverage source: merged predecessor #623
+- Dated owner checkpoint: CONSUMED
+- Historical producer provenance: PRESERVED
+- Historical local/external risk classification: PRESERVED
+- Re-execution by A2: NOT_PERFORMED
+- New source-independence credit: NONE
+- New research/window credit: NONE
+- Later 10/11 recovery used to rewrite this date: NO
+- Relation decision: RETAIN_AS_POINT_IN_TIME_HISTORY
+
+#### 2026-10-04 inherited A1 relation
+- A1 coverage source: merged predecessor #623
+- Dated owner checkpoint: CONSUMED
+- Historical producer provenance: PRESERVED
+- Historical local/external risk classification: PRESERVED
+- Re-execution by A2: NOT_PERFORMED
+- New source-independence credit: NONE
+- New research/window credit: NONE
+- Later 10/11 recovery used to rewrite this date: NO
+- Relation decision: RETAIN_AS_POINT_IN_TIME_HISTORY
+
+#### 2026-10-05 inherited A1 relation
+- A1 coverage source: merged predecessor #623
+- Dated owner checkpoint: CONSUMED
+- Historical producer provenance: PRESERVED
+- Historical local/external risk classification: PRESERVED
+- Re-execution by A2: NOT_PERFORMED
+- New source-independence credit: NONE
+- New research/window credit: NONE
+- Later 10/11 recovery used to rewrite this date: NO
+- Relation decision: RETAIN_AS_POINT_IN_TIME_HISTORY
+
+#### 2026-10-06 inherited A1 relation
+- A1 coverage source: merged predecessor #623
+- Dated owner checkpoint: CONSUMED
+- Historical producer provenance: PRESERVED
+- Historical local/external risk classification: PRESERVED
+- Re-execution by A2: NOT_PERFORMED
+- New source-independence credit: NONE
+- New research/window credit: NONE
+- Later 10/11 recovery used to rewrite this date: NO
+- Relation decision: RETAIN_AS_POINT_IN_TIME_HISTORY
+
+#### 2026-10-07 inherited A1 relation
+- A1 coverage source: merged predecessor #623
+- Dated owner checkpoint: CONSUMED
+- Historical producer provenance: PRESERVED
+- Historical local/external risk classification: PRESERVED
+- Re-execution by A2: NOT_PERFORMED
+- New source-independence credit: NONE
+- New research/window credit: NONE
+- Later 10/11 recovery used to rewrite this date: NO
+- Relation decision: RETAIN_AS_POINT_IN_TIME_HISTORY
+
+#### 2026-10-08 inherited A1 relation
+- A1 coverage source: merged predecessor #623
+- Dated owner checkpoint: CONSUMED
+- Historical producer provenance: PRESERVED
+- Historical local/external risk classification: PRESERVED
+- Re-execution by A2: NOT_PERFORMED
+- New source-independence credit: NONE
+- New research/window credit: NONE
+- Later 10/11 recovery used to rewrite this date: NO
+- Relation decision: RETAIN_AS_POINT_IN_TIME_HISTORY
+
+#### 2026-10-09 inherited A1 relation
+- A1 coverage source: merged predecessor #623
+- Dated owner checkpoint: CONSUMED
+- Historical producer provenance: PRESERVED
+- Historical local/external risk classification: PRESERVED
+- Re-execution by A2: NOT_PERFORMED
+- New source-independence credit: NONE
+- New research/window credit: NONE
+- Later 10/11 recovery used to rewrite this date: NO
+- Relation decision: RETAIN_AS_POINT_IN_TIME_HISTORY
+
+#### 2026-10-10 inherited A1 relation
+- A1 coverage source: merged predecessor #623
+- Dated owner checkpoint: CONSUMED
+- Historical producer provenance: PRESERVED
+- Historical local/external risk classification: PRESERVED
+- Re-execution by A2: NOT_PERFORMED
+- New source-independence credit: NONE
+- New research/window credit: NONE
+- Later 10/11 recovery used to rewrite this date: NO
+- Relation decision: RETAIN_AS_POINT_IN_TIME_HISTORY
+
+### 2026-10-11 current-main integration
+- Current fact 01: Ballast PR #617 is merged and retains one bounded 2026-10-11 Daily research window despite same-day fixture strengthening
+- Current fact 02: Ballast cancellation evidence separates current permission, historical effect occurrence, effect-time authorization, prior-effect coverage, task identity, effect-set membership, temporal witness, and current state
+- Current fact 03: Same-day Ballast independent review adds zero extra research-window, experiment, CASE, NOTES, or audit credit
+- Current fact 04: Aegis A1 PR #618 is merged and records external sandboxing/boundary-control risk without reclassifying it as a local repository incident
+- Current fact 05: Aegis A2 PR #619 is merged and keeps external risk distinct from NO_LOCAL_EVIDENCE while consuming same-day A1 plus prior context
+- Current fact 06: W40 A3 PR #620 is merged and synthesizes false-completion and memory-poisoning risk while preserving degraded/missing daily inputs
+- Current fact 07: Original W40 A4 PR #621 remains closed unmerged with DECISION_INPUT_MISSING/BLOCKED history
+- Current fact 08: Recovered W40 A4 PR #622 is merged after A3 became current-main visible and explicitly preserves #621 as historical blocked evidence
+- Current fact 09: The #622 recovery establishes current canonical A4 delivery only; it does not prove A3 existed at #621 execution time
+- Current fact 10: October A6 remains OPEN and no natural-month doctrine-memory final is created
+- Current-day disposition: INTEGRATED_WITH_RECOVERY_AND_INCIDENT_BOUNDARIES
+- A2-created native Daily count: 0
+- A2-created weekly decision/action count: 0
+- A2-created execution windows: 0
+- Historical #621 promoted: NO
+
+### Evidence boundaries rechecked
+- Boundary 01: Aegis != Ballast
+- Boundary 02: external risk != local incident
+- Boundary 03: NO_LOCAL_EVIDENCE != immunity
+- Boundary 04: same-day Ballast strengthening != second research window
+- Boundary 05: current permission != historical effect authorization
+- Boundary 06: historical effect occurrence != current permission
+- Boundary 07: receipt/effect evidence != completion without contract
+- Boundary 08: A1 observation != A2 orientation
+- Boundary 09: A2 orientation != A3 weekly decision
+- Boundary 10: A3 later availability != original A4 input availability
+- Boundary 11: recovery A4 != original A4 execution
+- Boundary 12: closed #621 != canonical A4
+- Boundary 13: current-main path != earlier task-time path
+- Boundary 14: maintenance relation != native producer run
+- Boundary 15: maintenance relation != independent source
+- Boundary 16: external paper probability != local failure probability
+- Boundary 17: checker/test success != universal correctness
+- Boundary 18: historical BLOCKED remains historical
+- Boundary 19: current completeness != historical completeness
+- Boundary 20: correction is forward and non-destructive
+
+### A2 relation summary
+- Relation-through: 2026-10-11
+- A1 coverage prerequisite: SATISFIED
+- Current-day Aegis/Ballast evidence consumed: YES
+- Original blocked A4 history preserved: YES
+- New research credit from maintenance: NONE
+- New source-independence credit from maintenance: NONE
+- Local incident inferred by maintenance: NO
+- Historical facts rewritten: 0
+- Month final formed: NO
+- Current owner status: UPDATED_THROUGH_2026_10_11_WITH_RECOVERY_BOUNDARIES
+- Future A1 must fresh-read this merged main
+- A2 status: READY_FOR_MAINTAINER_REVIEW
