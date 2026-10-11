@@ -2763,3 +2763,223 @@ DUPLICATE_EVIDENCE_CREDIT
 - Aegis monthly A6 retains OPEN and no durable doctrine promotion; September A5/A6 remains historical unresolved.
 - No host implementation, workflows, historical native file or production verification tools changed by this owner append.
 - A2 disposition: UPDATED_THROUGH_2026_10_10_WITH_EXTERNAL_RISK_LOCAL_EVIDENCE_AND_MODEL_SCOPES_SEPARATED.
+
+## A1 FULL-COVERAGE MAINTENANCE — 2026-10-11
+- Repository: `lostlight530/zero-entropy-lab`
+- Domain: Aegis / Ballast
+- Exact owner: `aegis-cortex/2026-10-A6-aegis-memorize.md`
+- Logical date: 2026-10-11 Asia/Shanghai
+- Coverage cutoff: 2026-10-10
+- Coverage window: 2026-10-01..2026-10-10
+- Exact base revision: `c74b8b4bc21323ff249608f160912d13e1f35934`
+- Previous A1 lineage: #614
+- Previous A2 lineage: #615
+- Producer role: HUMAN_AUTHORIZED_GOVERNANCE_MAINTENANCE
+- Native task replay: NOT_PERFORMED
+- External research replay by maintenance: NOT_PERFORMED
+- Independent source credit added by maintenance: NONE
+- Research batch or execution-window credit added by maintenance: NONE
+- Historical rewrite: NO
+- Month closure: OPEN
+- Natural-month final: NOT_DUE
+
+### Coverage and decision contract
+- Every dated checkpoint in the cutoff window is reviewed as a separate point-in-time state
+- REVIEWED does not imply MODIFIED
+- NO_FOLLOW_UP does not imply NOT_REVIEWED
+- Existing valid reconciliation is reused rather than duplicated
+- Later repository visibility is not substituted for earlier task-time availability
+- Negative, blocked, degraded, partial, unknown, and not-computed states remain valid evidence
+- Maintenance does not manufacture source independence, runtime evidence, benchmark credit, or research output
+- Only the canonical October owner is modified by this A1
+- N-day 2026-10-11 native artifacts are outside the A1 producer cutoff and are handled only as post-cutoff visibility
+- The next A2 must start only after this A1 is merged and current main is freshly read
+
+#### 2026-10-01 full-coverage decision
+- Coverage identity: 2026-10-01 / Aegis / Ballast / current October owner
+- Artifact set decision: REVIEWED
+- Default disposition: NO_FOLLOW_UP unless an explicit current-main contradiction is recorded below
+- Original producer provenance: PRESERVED
+- Historical task status and source/network limits: PRESERVED
+- Current path presence used as historical execution proof: NO
+- Maintenance producer/runtime re-execution: NOT_PERFORMED
+- New independent-source or observation-window credit: NONE
+- Prior A1/A2 relation duplicated as new evidence: NO
+- Later success used to overwrite earlier BLOCKED/DEGRADED/UNKNOWN state: NO
+- Decision completeness: COMPLETE_FOR_THIS_DATE_WITHIN_OWNER_EVIDENCE
+
+#### 2026-10-02 full-coverage decision
+- Coverage identity: 2026-10-02 / Aegis / Ballast / current October owner
+- Artifact set decision: REVIEWED
+- Default disposition: NO_FOLLOW_UP unless an explicit current-main contradiction is recorded below
+- Original producer provenance: PRESERVED
+- Historical task status and source/network limits: PRESERVED
+- Current path presence used as historical execution proof: NO
+- Maintenance producer/runtime re-execution: NOT_PERFORMED
+- New independent-source or observation-window credit: NONE
+- Prior A1/A2 relation duplicated as new evidence: NO
+- Later success used to overwrite earlier BLOCKED/DEGRADED/UNKNOWN state: NO
+- Decision completeness: COMPLETE_FOR_THIS_DATE_WITHIN_OWNER_EVIDENCE
+
+#### 2026-10-03 full-coverage decision
+- Coverage identity: 2026-10-03 / Aegis / Ballast / current October owner
+- Artifact set decision: REVIEWED
+- Default disposition: NO_FOLLOW_UP unless an explicit current-main contradiction is recorded below
+- Original producer provenance: PRESERVED
+- Historical task status and source/network limits: PRESERVED
+- Current path presence used as historical execution proof: NO
+- Maintenance producer/runtime re-execution: NOT_PERFORMED
+- New independent-source or observation-window credit: NONE
+- Prior A1/A2 relation duplicated as new evidence: NO
+- Later success used to overwrite earlier BLOCKED/DEGRADED/UNKNOWN state: NO
+- Decision completeness: COMPLETE_FOR_THIS_DATE_WITHIN_OWNER_EVIDENCE
+
+#### 2026-10-04 full-coverage decision
+- Coverage identity: 2026-10-04 / Aegis / Ballast / current October owner
+- Artifact set decision: REVIEWED
+- Default disposition: NO_FOLLOW_UP unless an explicit current-main contradiction is recorded below
+- Original producer provenance: PRESERVED
+- Historical task status and source/network limits: PRESERVED
+- Current path presence used as historical execution proof: NO
+- Maintenance producer/runtime re-execution: NOT_PERFORMED
+- New independent-source or observation-window credit: NONE
+- Prior A1/A2 relation duplicated as new evidence: NO
+- Later success used to overwrite earlier BLOCKED/DEGRADED/UNKNOWN state: NO
+- Decision completeness: COMPLETE_FOR_THIS_DATE_WITHIN_OWNER_EVIDENCE
+
+#### 2026-10-05 full-coverage decision
+- Coverage identity: 2026-10-05 / Aegis / Ballast / current October owner
+- Artifact set decision: REVIEWED
+- Default disposition: NO_FOLLOW_UP unless an explicit current-main contradiction is recorded below
+- Original producer provenance: PRESERVED
+- Historical task status and source/network limits: PRESERVED
+- Current path presence used as historical execution proof: NO
+- Maintenance producer/runtime re-execution: NOT_PERFORMED
+- New independent-source or observation-window credit: NONE
+- Prior A1/A2 relation duplicated as new evidence: NO
+- Later success used to overwrite earlier BLOCKED/DEGRADED/UNKNOWN state: NO
+- Decision completeness: COMPLETE_FOR_THIS_DATE_WITHIN_OWNER_EVIDENCE
+
+#### 2026-10-06 full-coverage decision
+- Coverage identity: 2026-10-06 / Aegis / Ballast / current October owner
+- Artifact set decision: REVIEWED
+- Default disposition: NO_FOLLOW_UP unless an explicit current-main contradiction is recorded below
+- Original producer provenance: PRESERVED
+- Historical task status and source/network limits: PRESERVED
+- Current path presence used as historical execution proof: NO
+- Maintenance producer/runtime re-execution: NOT_PERFORMED
+- New independent-source or observation-window credit: NONE
+- Prior A1/A2 relation duplicated as new evidence: NO
+- Later success used to overwrite earlier BLOCKED/DEGRADED/UNKNOWN state: NO
+- Decision completeness: COMPLETE_FOR_THIS_DATE_WITHIN_OWNER_EVIDENCE
+
+#### 2026-10-07 full-coverage decision
+- Coverage identity: 2026-10-07 / Aegis / Ballast / current October owner
+- Artifact set decision: REVIEWED
+- Default disposition: NO_FOLLOW_UP unless an explicit current-main contradiction is recorded below
+- Original producer provenance: PRESERVED
+- Historical task status and source/network limits: PRESERVED
+- Current path presence used as historical execution proof: NO
+- Maintenance producer/runtime re-execution: NOT_PERFORMED
+- New independent-source or observation-window credit: NONE
+- Prior A1/A2 relation duplicated as new evidence: NO
+- Later success used to overwrite earlier BLOCKED/DEGRADED/UNKNOWN state: NO
+- Decision completeness: COMPLETE_FOR_THIS_DATE_WITHIN_OWNER_EVIDENCE
+
+#### 2026-10-08 full-coverage decision
+- Coverage identity: 2026-10-08 / Aegis / Ballast / current October owner
+- Artifact set decision: REVIEWED
+- Default disposition: NO_FOLLOW_UP unless an explicit current-main contradiction is recorded below
+- Original producer provenance: PRESERVED
+- Historical task status and source/network limits: PRESERVED
+- Current path presence used as historical execution proof: NO
+- Maintenance producer/runtime re-execution: NOT_PERFORMED
+- New independent-source or observation-window credit: NONE
+- Prior A1/A2 relation duplicated as new evidence: NO
+- Later success used to overwrite earlier BLOCKED/DEGRADED/UNKNOWN state: NO
+- Decision completeness: COMPLETE_FOR_THIS_DATE_WITHIN_OWNER_EVIDENCE
+
+#### 2026-10-09 full-coverage decision
+- Coverage identity: 2026-10-09 / Aegis / Ballast / current October owner
+- Artifact set decision: REVIEWED
+- Default disposition: NO_FOLLOW_UP unless an explicit current-main contradiction is recorded below
+- Original producer provenance: PRESERVED
+- Historical task status and source/network limits: PRESERVED
+- Current path presence used as historical execution proof: NO
+- Maintenance producer/runtime re-execution: NOT_PERFORMED
+- New independent-source or observation-window credit: NONE
+- Prior A1/A2 relation duplicated as new evidence: NO
+- Later success used to overwrite earlier BLOCKED/DEGRADED/UNKNOWN state: NO
+- Decision completeness: COMPLETE_FOR_THIS_DATE_WITHIN_OWNER_EVIDENCE
+
+#### 2026-10-10 full-coverage decision
+- Coverage identity: 2026-10-10 / Aegis / Ballast / current October owner
+- Artifact set decision: REVIEWED
+- Default disposition: NO_FOLLOW_UP unless an explicit current-main contradiction is recorded below
+- Original producer provenance: PRESERVED
+- Historical task status and source/network limits: PRESERVED
+- Current path presence used as historical execution proof: NO
+- Maintenance producer/runtime re-execution: NOT_PERFORMED
+- New independent-source or observation-window credit: NONE
+- Prior A1/A2 relation duplicated as new evidence: NO
+- Later success used to overwrite earlier BLOCKED/DEGRADED/UNKNOWN state: NO
+- Decision completeness: COMPLETE_FOR_THIS_DATE_WITHIN_OWNER_EVIDENCE
+
+### 2026-10-10 cutoff-specific evidence adjudication
+- Cutoff fact 1: 2026-10-10 Aegis external failure-mode evidence remains external evidence and is not a local repository incident
+- Cutoff fact 2: 2026-10-10 Aegis orientation/completion semantics keep command, transport, terminal-state, and valid-completion evidence separate
+- Cutoff fact 3: 2026-10-10 Ballast research remains its own controlled research plane and does not become Aegis producer evidence
+- Cutoff fact 4: Existing blocked, partial, or missing A1/A2 historical states are preserved as point-in-time facts
+- Cutoff fact 5: No local failure probability is inferred from an external benchmark or paper rate
+- Cutoff fact 6: October A6 owner remains OPEN and is not a natural-month final doctrine-memory seal
+- Cutoff decision: NO_FOLLOW_UP on original 2026-10-10 producer facts
+- Relationship action: RETAIN current 2026-10-10 A2 interpretation as point-in-time evidence
+- Historical mutation required: NO
+- New external verification required by A1: NO
+- New runtime verification claimed by A1: NO
+
+### Post-cutoff visibility boundary
+- Post-cutoff item 1: W40 A3 PR #620 merged on 2026-10-11 after this A1 cutoff and is excluded from 2026-10-10 producer credit
+- Post-cutoff item 2: Original W40 A4 PR #621 remains a closed-unmerged BLOCKED attempt and is preserved as history
+- Post-cutoff item 3: Recovered W40 A4 PR #622 was delivered after A3 became visible on main; it establishes current delivery only, not earlier input availability
+- Post-cutoff artifacts are not counted in the A1 2026-10-01..2026-10-10 coverage denominator
+- Post-cutoff current paths may be consumed by A2 only after this A1 merges
+
+### Domain evidence boundaries rechecked
+- Boundary 01: Aegis != Ballast != Zero Host Kernel
+- Boundary 02: EXTERNAL_RISK_CLASS != LOCAL_REPOSITORY_INCIDENT
+- Boundary 03: NO_LOCAL_EVIDENCE != immunity
+- Boundary 04: external benchmark rate != local failure probability
+- Boundary 05: Command Success != Valid Completion
+- Boundary 06: Transport Success != Valid Completion
+- Boundary 07: Task Terminal State != Valid Completion
+- Boundary 08: HTTP success != durable external effect
+- Boundary 09: receipt hit != current completion
+- Boundary 10: current completion != historical authorization
+- Boundary 11: historical effect evidence != current permission
+- Boundary 12: same-source revisit != independent corroboration
+- Boundary 13: current path present != original Jules execution
+- Boundary 14: later A3 availability != original A4 input availability
+- Boundary 15: recovery delivery != replay of original execution
+- Boundary 16: Ballast experiment != Aegis incident evidence
+- Boundary 17: checker pass != universal system correctness
+- Boundary 18: historical BLOCKED/DEGRADED states remain valid
+- Boundary 19: current completeness != historical completeness
+- Boundary 20: correction moves forward and does not rewrite prior execution
+
+### A1 decision summary
+- Reviewed dated checkpoints: 10
+- Cutoff: 2026-10-10
+- Owning artifact modified: current October owner only
+- Historical producer artifacts rewritten: 0
+- New producer Dailies created: 0
+- New Weekly/Monthly/Special research artifacts created: 0
+- New runtime executions claimed: 0
+- New independent-source credit: 0
+- New audit-window credit: 0
+- New durable-memory promotion: 0
+- Current defect requiring owning-artifact correction: NONE beyond the forward boundary notes recorded here
+- Overall A1 disposition: COVERAGE_COMPLETE / DECISION_COMPLETE / HISTORY_PRESERVED
+- Merge prerequisite for A2: YES
+- A2 may consume 2026-10-11 current-main state only after this A1 merge
+- A1 status: READY_FOR_MAINTAINER_REVIEW
