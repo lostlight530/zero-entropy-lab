@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-11 Actions cancellation and run-attempt identity versus external effect integrity](records/2026-10-11.md)
+- 最新 Daily: [2026-10-12 environment approval and OIDC trust versus delegated effect-time authorization](records/2026-10-12.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-02 至 2026-10-07](audits/2026-10-02--2026-10-07.md)
@@ -578,3 +578,9 @@ One NATIVE controlled research Daily on GitHub Actions cancellation/run-attempt 
 The 2026-10-08..2026-10-11 interval has only four days, so the current complete derived audit remains 2026-10-02..2026-10-07. No audit duplication or CASES, METHOD, NOTES promotion. Monthly and README synchronization adds zero research credit. Real GitHub cancellation, independent sink evidence and full semantic independence remain NOT_EXECUTED.
 
 Current native research endpoint is 2026-10-11.
+
+## Ballast current-state advance — 2026-10-12
+
+One NATIVE bounded Daily compares environment admission, OIDC trust and external effect-time authorization. The 22-scenario, four-path model produced 88 decisions with separate-predicate agreement on 22/22 expected labels. Weak-path model disagreements are 18/18/16 versus 0 for full-integrity against its own bounded reference. Live GitHub/AWS and sink evidence remain NOT_EXECUTED. CASES, METHOD and NOTES unchanged. The 2026-10-08..2026-10-12 span has five dates; latest complete audit remains 2026-10-02..2026-10-07. Monthly and README synchronization adds zero research credit.
+
+Current native research endpoint is 2026-10-12.
