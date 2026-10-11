@@ -1,7 +1,7 @@
 scenario,expected,gate_only,oidc_only,count_only,full_integrity
 baseline,verified,verified,verified,verified,verified
 gate-pass-no-effect,incomplete-effect-set,verified,verified,incomplete-effect-set,incomplete-effect-set
-oidc-pass-no-effect,incomplete-effect-set,verified,verified,incomplete-effect-set,incomplete-effect-set
+oidc-pass-no-effect,safe-stop-unknown,verified,verified,incomplete-effect-set,safe-stop-unknown
 gate-denied-after-valid-effect,verified,gate-blocked,verified,verified,verified
 oidc-denied-after-valid-effect,verified,verified,oidc-denied,verified,verified
 approval-invalid-at-effect,historically-unauthorized,verified,verified,verified,historically-unauthorized

@@ -52,7 +52,7 @@
       "workflow": 1,
       "target": 1,
       "receipts": [],
-      "prior": "authoritative miss",
+      "prior": "unknown",
       "coverage": 1,
       "binding": 1,
       "auth": 1,

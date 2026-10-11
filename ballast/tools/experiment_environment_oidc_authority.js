@@ -2,6 +2,8 @@
 const fs=require("fs");
 const root="ballast/evidence/2026-10-12-";
 const input=JSON.parse(fs.readFileSync(root+"scenarios.json","utf8"));
+if(new Set(input.scenarios.map(({id,...s})=>JSON.stringify(s))).size!==input.scenarios.length)throw Error("duplicate primitive vector");
+if(new Set(input.scenarios.map(s=>s.id)).size!==input.scenarios.length)throw Error("duplicate scenario id");
 function classify(s){
  if(!s.repo)return "caller-repo-mismatch";
  if(!s.workflow)return "delegation-mismatch";
