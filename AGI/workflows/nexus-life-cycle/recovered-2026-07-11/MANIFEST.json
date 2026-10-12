@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "record_kind": "RECOVERED_WORKFLOW_GENERATION",
+  "record_status": "FROZEN_REFERENCE",
+  "lineage_role": "APPROVED_DOCUMENT_HARVESTING_GENERATION",
+  "recovery_record_created_date": "2026-10-12",
+  "repository": "lostlight530/zero-entropy-lab",
+  "source_commit_sha": "df3f2cdae58f2c0d5a34d8604aa69d437e5a1f2a",
+  "source_commit_time_utc": "2026-07-11T05:26:03Z",
+  "canonical_executable_source": ".github/workflows/nexus-life-cycle.yml",
+  "source_workflow_name": "NEXUS CORTEX Life Cycle",
+  "source_workflow_blob_sha": "dcc5f1907dd59e573b8d0d031e87962a7ab1b95c",
+  "source_content_sha256": "750ad03ca08bbc5581a9a704262e4930f2ee1e65c6c59c11e284432f62915b0a",
+  "source_line_count": 65,
+  "source_jobs": [
+    "consciousness"
+  ],
+  "source_triggers": [
+    "schedule",
+    "push",
+    "workflow_dispatch"
+  ],
+  "historical_role": "Approved external document harvesting with a focused contract gate and removal of pre-checkout archive cleanup",
+  "predecessor_record": "AGI/workflows/nexus-life-cycle/recovered-2026-05-21",
+  "historical_action_run": {
+    "url": "https://github.com/lostlight530/zero-entropy-lab/actions/runs/29142337330",
+    "conclusion": "success",
+    "scope": "Historical run for the source commit; not a present-day compatibility claim"
+  },
+  "agi_contains_executable_copy": false,
+  "executable_from_agi": false,
+  "workflowhub_registered_for_this_generation": true,
+  "recovery_rule": "Resolve source_commit_sha, read canonical_executable_source, verify source_workflow_blob_sha and source_content_sha256, then validate compatibility before any execution or publication claim.",
+  "workflowhub_version_url": "https://workflowhub.eu/workflows/2334?version=5",
+  "workflowhub_version_doi": "10.48546/workflowhub.workflow.2334.5"
+}
