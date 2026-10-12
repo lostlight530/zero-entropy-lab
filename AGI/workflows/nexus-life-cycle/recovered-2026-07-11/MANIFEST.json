@@ -21,7 +21,7 @@
     "workflow_dispatch"
   ],
   "historical_role": "Approved external document harvesting with a focused contract gate and removal of pre-checkout archive cleanup",
-  "predecessor_record": "AGI/workflows/nexus-life-cycle/recovered-2026-05-21",
+  "predecessor_record": "AGI/workflows/nexus-life-cycle/recovered-2026-06-07",
   "historical_action_run": {
     "url": "https://github.com/lostlight530/zero-entropy-lab/actions/runs/29142337330",
     "conclusion": "success",
