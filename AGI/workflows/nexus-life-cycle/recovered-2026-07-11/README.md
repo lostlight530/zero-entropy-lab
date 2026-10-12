@@ -23,9 +23,9 @@ The canonical executable remains in Git history; this record does not copy or re
 
 ## Predecessor and intervening history
 
-The selected AGI predecessor is the first explicitly verified generation of 2026-05-21
+The previous selected AGI generation is `AGI/workflows/nexus-life-cycle/recovered-2026-06-07`
 
-The 2026-06-07 restricted-persistence generation remains directly recoverable from Git history; this record does not overwrite or relabel it
+The 2026-05-21 explicitly verified generation is a separate earlier AGI record; intervening operational commits remain primary Git history
 
 ## Historical execution evidence
 
