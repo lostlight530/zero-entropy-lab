@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "All historical changes to the named GitHub Actions workflow paths, including the Brain Evolution removal event",
+  "scope": "All main-lineage changes to .github/workflows/nexus-life-cycle.yml in zero-entropy-lab",
   "repository": "lostlight530/zero-entropy-lab",
   "captured_date": "2026-10-12",
   "validation": {

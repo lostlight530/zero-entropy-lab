@@ -1,6 +1,6 @@
-# Complete Historical Workflow Revision Inventory
+# Named Workflow Revision Inventory
 
-This inventory records every commit that changed the named workflow paths, including repairs and the Brain Evolution retirement event
+This inventory records every main-lineage change to `.github/workflows/nexus-life-cycle.yml`, including repairs
 It is intentionally more granular than the selected architecture generations in `AGI/workflows/README.md`
 The source Git commit remains the historical authority; each YAML backup uses the exact source Git blob
 
@@ -40,7 +40,7 @@ The source Git commit remains the historical authority; each YAML backup uses th
 
 ## Interpretation
 
-The welcome-to-github Brain Evolution path has four executable YAML revisions and one removal event on 2026-03-09, when the NEXUS CORTEX workflow path was introduced
+The zero-entropy-lab NEXUS CORTEX path starts with its initial 2026-03-13 repository generation; the 21 listed entries belong to this repository's lifecycle workflow
 The selected 2026-10-07 AGI original baseline is a later capture of the final 2026-08-31 workflow blob, not another workflow-file modification
 WorkflowHub registration order is not the historical Git order, and a registry revision comment does not replace a pinned source file
 The selected generation records provide architecture descriptions; this inventory preserves every intervening file revision without promoting each repair to a new architecture generation
