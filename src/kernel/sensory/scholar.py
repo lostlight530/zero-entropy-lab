@@ -18,6 +18,7 @@ except ImportError:
 class Scholar:
     PROTECTED_ROOTS = (
         "aegis-cortex",
+        "agi/workflows",
         "ballast",
         "index.html",
         "src/assets",
