@@ -33,13 +33,21 @@ The reviewed path history spans 2026-03-13 through 2026-08-31
    - First verified generation with an explicit test gate in the lifecycle
    - Role: lifecycle execution plus repository verification before synchronization and persistence
 
-3. `nexus-life-cycle/original-2026-10-07`
+3. `nexus-life-cycle/recovered-2026-06-07`
+   - First selected restricted-persistence generation
+   - Role: exclude runtime database files from automatic Git persistence
+
+4. `nexus-life-cycle/recovered-2026-07-11`
+   - First selected approved-document harvesting generation
+   - Role: approved external document collection, a focused contract test and removal of pre-checkout archive cleanup
+
+5. `nexus-life-cycle/original-2026-10-07`
    - First baseline formally recorded in the AGI workflow-history surface
    - Role: frozen reference to the mature bounded lifecycle
 
 ## Lineage
 
-`Initial NEXUS CORTEX 2026-03-13` -> operational hardening -> `verified lifecycle 2026-05-21` -> later Git evolution -> `AGI original baseline 2026-10-07`
+`Initial NEXUS CORTEX 2026-03-13` -> operational hardening -> `verified lifecycle 2026-05-21` -> `restricted persistence 2026-06-07` -> `approved-document harvesting 2026-07-11` -> later Git evolution -> `AGI original baseline 2026-10-07`
 
 Intermediate commits remain primary evidence for the transition and are listed in each recovered record
 
@@ -48,6 +56,18 @@ Intermediate commits remain primary evidence for the transition and are listed i
 The 2026-03-13 generation is a host-specific adaptation of the named NEXUS CORTEX generation introduced in `lostlight530/welcome-to-github` on 2026-03-09
 
 The relationship is lineage evidence, not a claim that the repositories shared identical runtime paths or persistence surfaces
+
+## External registration status
+
+As checked on 2026-10-12, the selected 2026-07-11 generation is registered at [WorkflowHub Version 5](https://workflowhub.eu/workflows/2334?version=5), DOI `10.48546/workflowhub.workflow.2334.5`
+
+Earlier WorkflowHub version comments identify the 2026-05-21 verified generation as [Version 3](https://workflowhub.eu/workflows/2334?version=3) and the 2026-06-07 restricted-persistence generation as [Version 4](https://workflowhub.eu/workflows/2334?version=4)
+
+Versions 1 and 2 are earlier external registrations of the 2026-10-07 baseline and do not change the historical chronology
+
+Registration statements in older frozen manifests record their creation-time state; this index reports the later external registration without rewriting those manifests
+
+A WorkflowHub revision comment is an external identity reference, not a replacement for the canonical Git commit and workflow content hash
 
 ## Boundary
 
