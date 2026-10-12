@@ -606,3 +606,5 @@ HISTORICAL_EFFECT_OCCURRED
 The 2026-10-08..2026-10-13 non-overlapping six-date derived audit is now present and contributes zero experiment/window/CASE/NOTES credit. CASES, METHOD and NOTES unchanged. Monthly and README pointer updates are derived navigation only. Real OAuth, sink effects and independent semantic verification NOT_EXECUTED.
 
 Current native research endpoint is 2026-10-13.
+
+Derived index clarification — 2026-10-13: the 2026-10-12 current-state paragraph above is retained as an earlier point-in-time note. The finalized, same-day-hardened 2026-10-12 primary Daily reports 18/18/17/0 (gate-only / OIDC-only / count-only / full-integrity) rather than the earlier 18/18/16/0. This corrects the navigation summary's interpretation without rewriting historical research evidence or adding credit.
