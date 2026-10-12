@@ -42,6 +42,17 @@ const lines=fs.readFileSync(path.join(__dirname,"../evidence/2026-10-13-decision
 assert.strictEqual(lines.shift(),"scenario,path,decision,expected,agreement");
 const rows=lines.map(line=>{const v=line.split(",");assert.strictEqual(v.length,5);return v;});
 const ids=new Set(),vectors=new Set();let checked=0;
-for(const s of fixture.scenarios){assert(!ids.has(s.id));ids.add(s.id);const {id,expected,...primitive}=s;const fingerprint=JSON.stringify(primitive);assert(!vectors.has(fingerprint));vectors.add(fingerprint);assert.strictEqual(independent(s),expected,s.id);const group=rows.filter(r=>r[0]===s.id);assert.strictEqual(group.length,4,s.id);for(const [id,p,d,e,a] of group){assert.strictEqual(e,expected);assert.strictEqual(a,String(d===e));assert(["exchange_only","preflight_introspection_only","actor_trail_only","full_integrity"].includes(p));const reconstructed=p==="exchange_only"?(s.exchange?"verified":"not-verified"):p==="preflight_introspection_only"?(s.preflightActive?"verified":"not-verified"):p==="actor_trail_only"?(s.actorTrail?"verified":"not-verified"):independent(s);assert.strictEqual(d,reconstructed,s.id+":"+p);checked++}}
+for(const s of fixture.scenarios){assert(!ids.has(s.id));ids.add(s.id);const {id,expected,...primitive}=s;const fingerprint=JSON.stringify(primitive);assert(!vectors.has(fingerprint));vectors.add(fingerprint);assert.strictEqual(independent(s),expected,s.id);const group=rows.filter(r=>r[0]===s.id);assert.strictEqual(group.length,4,s.id);assert.strictEqual(new Set(group.map(r=>r[1])).size,4,s.id+':duplicate-path');for(const [id,p,d,e,a] of group){assert.strictEqual(e,expected);assert.strictEqual(a,String(d===e));assert(["exchange_only","preflight_introspection_only","actor_trail_only","full_integrity"].includes(p));const reconstructed=p==="exchange_only"?(s.exchange?"verified":"not-verified"):p==="preflight_introspection_only"?(s.preflightActive?"verified":"not-verified"):p==="actor_trail_only"?(s.actorTrail?"verified":"not-verified"):independent(s);assert.strictEqual(d,reconstructed,s.id+":"+p);checked++}}
 assert.strictEqual(rows.length,fixture.scenarios.length*4);
-console.log(JSON.stringify({scenarios:fixture.scenarios.length,rows:checked,failures:0,independence:"separate predicate implementation; shared fixture and semantic contract"}));
+const baseline=fixture.scenarios[0];
+const metamorphic=[
+[{},"verified"],[{nestedPriorActor:"planner-Z"},"verified"],[{currentPermission:false},"verified"],
+[{historicalAuthorization:"invalid"},"historically-unauthorized"],[{targetUid:"uid8"},"target-incarnation-mismatch"],
+[{receiptIds:["publish@uid7","publish@uid7"]},"duplicate-effect"],[{prior:"unknown",receiptIds:[]},"safe-stop-unknown"],
+[{prior:"authoritative miss",receiptIds:[],currentPermission:false},"permission-stop"],
+[{prior:"authoritative miss",receiptIds:[],currentActor:"worker-B"},"delegation-context-mismatch"],
+[{prior:"authoritative miss",receiptIds:[],activeAtEffect:false},"permission-stop"],
+[{prior:"authoritative miss",receiptIds:[],exchange:false},"delegation-proof-missing"],
+[{prior:"authoritative miss",receiptIds:[],protectedAuthority:false},"unprotected-effect-boundary"]];
+for(const [changes,expected] of metamorphic)assert.strictEqual(independent({...baseline,...changes}),expected,"metamorphic");
+console.log(JSON.stringify({scenarios:fixture.scenarios.length,rows:checked,metamorphic:metamorphic.length,failures:0,independence:"separate predicate implementation; shared fixture and semantic contract"}));
