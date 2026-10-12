@@ -18,6 +18,8 @@ Routine syntax, checkout, autostash, path and race-condition fixes remain visibl
 
 ## Reviewed history
 
+The [complete revision inventory](revisions/README.md) records every historical workflow-file change, including ordinary fixes, exact source blob identities, static syntax results and byte-identical AGI backups
+
 The complete path history reviewed on 2026-10-09 contains 21 commits for `.github/workflows/nexus-life-cycle.yml`
 
 The reviewed path history spans 2026-03-13 through 2026-08-31
@@ -41,15 +43,25 @@ The reviewed path history spans 2026-03-13 through 2026-08-31
    - First selected approved-document harvesting generation
    - Role: approved external document collection, a focused contract test and removal of pre-checkout archive cleanup
 
-5. `nexus-life-cycle/original-2026-10-07`
+5. `nexus-life-cycle/recovered-2026-08-31-deterministic`
+   - First selected read-only validation and guarded apply generation
+   - Role: deterministic candidate and write-boundary contract
+
+6. `nexus-life-cycle/recovered-2026-08-31-receipt`
+   - First selected layered human-receipt generation
+   - Role: baseline capture and human-readable validation/apply receipts
+
+7. `nexus-life-cycle/original-2026-10-07`
    - First baseline formally recorded in the AGI workflow-history surface
    - Role: frozen reference to the mature bounded lifecycle
 
 ## Lineage
 
-`Initial NEXUS CORTEX 2026-03-13` -> operational hardening -> `verified lifecycle 2026-05-21` -> `restricted persistence 2026-06-07` -> `approved-document harvesting 2026-07-11` -> later Git evolution -> `AGI original baseline 2026-10-07`
+`Initial NEXUS CORTEX 2026-03-13` -> operational hardening -> `verified lifecycle 2026-05-21` -> `restricted persistence 2026-06-07` -> `approved-document harvesting 2026-07-11` -> later Git evolution -> `deterministic guarded lifecycle 2026-08-31` -> `layered human receipt 2026-08-31` -> `AGI original baseline 2026-10-07`
 
-Intermediate commits remain primary evidence for the transition and are listed in each recovered record
+The 2026-10-07 original AGI baseline and the 2026-08-31 receipt generation share the same workflow Git blob; the former is a later capture checkpoint, not a new YAML modification
+
+Intermediate commits remain primary evidence for the transition and are listed in the [complete revision inventory](revisions/README.md)
 
 ## Cross-repository origin
 
@@ -70,6 +82,8 @@ Registration statements in older frozen manifests record their creation-time sta
 A WorkflowHub revision comment is an external identity reference, not a replacement for the canonical Git commit and workflow content hash
 
 ## Backup status
+
+The selected-generation backup inventory remains under [`backups`](backups/README.md); the [complete revision inventory](revisions/README.md) preserves every other historical YAML revision without promoting every repair to a new architecture generation
 
 As of 2026-10-12, the selected historical YAML files are also stored under [`AGI/workflows/backups`](backups/README.md), with each backup linked to its source commit, Git blob, SHA-256, description and WorkflowHub registration status
 
