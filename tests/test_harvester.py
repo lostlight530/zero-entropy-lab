@@ -442,6 +442,8 @@ class HarvesterContracts(unittest.TestCase):
     def test_scholar_excludes_parallel_systems_and_frontend(self):
         self.assertFalse(Scholar._is_supported_path(Path("aegis-cortex/owned.py")))
         self.assertFalse(Scholar._is_supported_path(Path("ballast/owned.md")))
+        self.assertFalse(Scholar._is_supported_path(Path("AGI/workflows/revisions/README.md")))
+        self.assertTrue(Scholar._is_supported_path(Path("AGI/checkpoints/2026-10-07/README.md")))
         self.assertFalse(Scholar._is_supported_path(Path("index.html")))
         self.assertFalse(
             Scholar._is_supported_path(Path("src/scripts/translations.js"))
