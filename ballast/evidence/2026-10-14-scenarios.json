@@ -1,0 +1,2692 @@
+{
+  "logical_date": "2026-10-14",
+  "scope": "synthetic-fixture-no-real-effects",
+  "paths": [
+    "ack_only",
+    "id_only",
+    "source_id_seen",
+    "full_integrity"
+  ],
+  "scenarios": [
+    {
+      "case_id": "valid-historical-after-revocation",
+      "expected": "verified",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "transport-ack-lost-after-actual-effects",
+      "expected": "verified",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": false,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "guid-absent-but-exact-effects",
+      "expected": "verified",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "eligible-new-effect-covered-miss",
+      "expected": "eligible-new-effect",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": true,
+        "protected_effect_boundary": true
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "different-source-same-event-id",
+      "expected": "eligible-new-effect",
+      "event": {
+        "source": "/publisher/beta",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": false,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/beta",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/beta",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": true,
+        "protected_effect_boundary": true
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "redelivery-without-sink-effects",
+      "expected": "eligible-new-effect",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": true
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": true,
+        "protected_effect_boundary": true
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "current-permission-revoked-before-new-effect",
+      "expected": "permission-stop",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": true
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "missing-protected-effect-boundary",
+      "expected": "permission-stop",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": true,
+        "protected_effect_boundary": false
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "unknown-prior-effect-no-receipts",
+      "expected": "safe-stop-unknown",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "unknown",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": true,
+        "protected_effect_boundary": true
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "miss-without-query-coverage",
+      "expected": "safe-stop-unknown",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": true,
+        "coverage": false,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": true,
+        "protected_effect_boundary": true
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "miss-without-watermark",
+      "expected": "safe-stop-unknown",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": false,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": true,
+        "protected_effect_boundary": true
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "miss-after-retention-expiry",
+      "expected": "safe-stop-unknown",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": false,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": true,
+        "protected_effect_boundary": true
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "miss-without-exact-effect-scope",
+      "expected": "safe-stop-unknown",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": false,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": true,
+        "protected_effect_boundary": true
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "covered-miss-positive-receipts",
+      "expected": "evidence-conflict",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "aggregate-hit-no-member-receipts",
+      "expected": "receipt-incomplete",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "partial-effect-receipts",
+      "expected": "membership-mismatch",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "duplicate-receipt-with-missing-member",
+      "expected": "duplicate-effect",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "extra-effect-with-complete-required-set",
+      "expected": "membership-mismatch",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "audit@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "same-count-wrong-receipt-member",
+      "expected": "membership-mismatch",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "audit@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "wrong-source-on-receipt",
+      "expected": "identity-mismatch",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/beta",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "wrong-event-id-on-receipt",
+      "expected": "identity-mismatch",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-78",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "wrong-task-on-receipt",
+      "expected": "identity-mismatch",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-other",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "same-name-new-target-incarnation",
+      "expected": "identity-mismatch",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u8",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "historically-unauthorized-receipt",
+      "expected": "historically-unauthorized",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": false,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "missing-temporal-order-proof",
+      "expected": "temporal-unproven",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": false
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "current-postcondition-reversed",
+      "expected": "current-incomplete",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "dynamic-member-added",
+      "expected": "membership-mismatch",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7",
+          "audit@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "same-count-membership-replacement",
+      "expected": "membership-mismatch",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "audit@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "membership-revision-drift",
+      "expected": "membership-stale",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m7",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "completion-commit-unfenced",
+      "expected": "completion-unfenced",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": false,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "untrusted-inbound-event",
+      "expected": "untrusted-event",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": false,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "event-source-binding-mismatch",
+      "expected": "identity-mismatch",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/beta",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "miss-query-other-event",
+      "expected": "safe-stop-unknown",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-other",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": true,
+        "protected_effect_boundary": true
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "miss-query-effect-substitution",
+      "expected": "safe-stop-unknown",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "audit@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": true,
+        "protected_effect_boundary": true
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "miss-query-stale-revision",
+      "expected": "safe-stop-unknown",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m7",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": true,
+        "protected_effect_boundary": true
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "miss-query-duplicate-effect",
+      "expected": "safe-stop-unknown",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": false,
+        "status": "RUNNING"
+      },
+      "prior": {
+        "classification": "authoritative miss",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "publish@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": true,
+        "protected_effect_boundary": true
+      },
+      "receipts": []
+    },
+    {
+      "case_id": "hit-query-other-task",
+      "expected": "safe-stop-unknown",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "other-task",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "hit-query-wrong-target",
+      "expected": "safe-stop-unknown",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": true,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-old",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    },
+    {
+      "case_id": "hit-aggregate-not-exact",
+      "expected": "safe-stop-unknown",
+      "event": {
+        "source": "/publisher/alpha",
+        "id": "evt-77",
+        "subject": "release-17",
+        "delivery_guid": "guid-77",
+        "ack": true,
+        "authenticated": true,
+        "id_seen": true,
+        "source_id_seen": true,
+        "redelivery": false
+      },
+      "task": {
+        "task_id": "task-17",
+        "expected_source": "/publisher/alpha",
+        "expected_event_id": "evt-77",
+        "target_uid": "sink-u7",
+        "required_effects": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "current_membership": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ],
+        "membership_revision": "m8",
+        "completion_revision": "m8",
+        "protected_completion": true,
+        "current_postcondition": true,
+        "status": "COMPLETED"
+      },
+      "prior": {
+        "classification": "hit",
+        "exact_identity": false,
+        "coverage": true,
+        "watermark": true,
+        "retention": true,
+        "scope": {
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "membership_revision": "m8",
+          "effect_ids": [
+            "publish@sink-u7",
+            "notify@sink-u7"
+          ]
+        }
+      },
+      "permission": {
+        "current": false,
+        "protected_effect_boundary": false
+      },
+      "receipts": [
+        {
+          "effect_id": "publish@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        },
+        {
+          "effect_id": "notify@sink-u7",
+          "task_id": "task-17",
+          "source": "/publisher/alpha",
+          "event_id": "evt-77",
+          "target_uid": "sink-u7",
+          "authorized_at_effect": true,
+          "temporal_order_proven": true
+        }
+      ]
+    }
+  ]
+}
