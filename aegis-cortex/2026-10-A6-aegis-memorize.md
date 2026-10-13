@@ -3535,3 +3535,191 @@ DUPLICATE_EVIDENCE_CREDIT
 - Monthly final seal: 0.
 - Relation-through advanced to: 2026-10-12.
 - Status: A2_RELATION_COMPLETE / MONTH_OPEN / HISTORY_PRESERVED
+
+## A1 FULL OCTOBER MAINTENANCE — 2026-10-13
+- Repository: lostlight530/zero-entropy-lab
+- Domain: Aegis / Zero
+- Canonical owner: aegis-cortex/2026-10-A6-aegis-memorize.md
+- Logical date: 2026-10-13 Asia/Shanghai
+- Coverage window: 2026-10-01..2026-10-12
+- Cutoff: N-1 = 2026-10-12
+- Exact current-main base: 5af185fcc9071297ed7c674f4ebc43e160acbf80
+- Producer replay: NOT_PERFORMED
+- Historical rewrite: NO
+- Month state: OPEN
+- Natural-month final: NOT_DUE
+- 2026-10-13 producer visibility: POST_CUTOFF_ONLY
+
+### Month-to-date coverage ledger
+
+#### 2026-10-01
+- Coverage date: 2026-10-01
+- Daily / relevant producer state: REVIEWED_AS_POINT_IN_TIME_EVIDENCE
+- Later path presence used as task-time input proof: NO
+- Later success used to rewrite prior negative state: NO
+- Weekly relation: RETAINED_WITHOUT_BACKDATING
+- Monthly relation: OPEN / NOT_FINAL
+- Independent-source upgrade by A1: NONE
+- Runtime replay by A1: NOT_PERFORMED
+- Decision class: NO_HISTORICAL_REWRITE / RELATION_REVIEWED
+
+#### 2026-10-02
+- Coverage date: 2026-10-02
+- Daily / relevant producer state: REVIEWED_AS_POINT_IN_TIME_EVIDENCE
+- Later path presence used as task-time input proof: NO
+- Later success used to rewrite prior negative state: NO
+- Weekly relation: RETAINED_WITHOUT_BACKDATING
+- Monthly relation: OPEN / NOT_FINAL
+- Independent-source upgrade by A1: NONE
+- Runtime replay by A1: NOT_PERFORMED
+- Decision class: NO_HISTORICAL_REWRITE / RELATION_REVIEWED
+
+#### 2026-10-03
+- Coverage date: 2026-10-03
+- Daily / relevant producer state: REVIEWED_AS_POINT_IN_TIME_EVIDENCE
+- Later path presence used as task-time input proof: NO
+- Later success used to rewrite prior negative state: NO
+- Weekly relation: RETAINED_WITHOUT_BACKDATING
+- Monthly relation: OPEN / NOT_FINAL
+- Independent-source upgrade by A1: NONE
+- Runtime replay by A1: NOT_PERFORMED
+- Decision class: NO_HISTORICAL_REWRITE / RELATION_REVIEWED
+
+#### 2026-10-04
+- Coverage date: 2026-10-04
+- Daily / relevant producer state: REVIEWED_AS_POINT_IN_TIME_EVIDENCE
+- Later path presence used as task-time input proof: NO
+- Later success used to rewrite prior negative state: NO
+- Weekly relation: RETAINED_WITHOUT_BACKDATING
+- Monthly relation: OPEN / NOT_FINAL
+- Independent-source upgrade by A1: NONE
+- Runtime replay by A1: NOT_PERFORMED
+- Decision class: NO_HISTORICAL_REWRITE / RELATION_REVIEWED
+
+#### 2026-10-05
+- Coverage date: 2026-10-05
+- Daily / relevant producer state: REVIEWED_AS_POINT_IN_TIME_EVIDENCE
+- Later path presence used as task-time input proof: NO
+- Later success used to rewrite prior negative state: NO
+- Weekly relation: RETAINED_WITHOUT_BACKDATING
+- Monthly relation: OPEN / NOT_FINAL
+- Independent-source upgrade by A1: NONE
+- Runtime replay by A1: NOT_PERFORMED
+- Decision class: NO_HISTORICAL_REWRITE / RELATION_REVIEWED
+
+#### 2026-10-06
+- Coverage date: 2026-10-06
+- Daily / relevant producer state: REVIEWED_AS_POINT_IN_TIME_EVIDENCE
+- Later path presence used as task-time input proof: NO
+- Later success used to rewrite prior negative state: NO
+- Weekly relation: RETAINED_WITHOUT_BACKDATING
+- Monthly relation: OPEN / NOT_FINAL
+- Independent-source upgrade by A1: NONE
+- Runtime replay by A1: NOT_PERFORMED
+- Decision class: NO_HISTORICAL_REWRITE / RELATION_REVIEWED
+
+#### 2026-10-07
+- Coverage date: 2026-10-07
+- Daily / relevant producer state: REVIEWED_AS_POINT_IN_TIME_EVIDENCE
+- Later path presence used as task-time input proof: NO
+- Later success used to rewrite prior negative state: NO
+- Weekly relation: RETAINED_WITHOUT_BACKDATING
+- Monthly relation: OPEN / NOT_FINAL
+- Independent-source upgrade by A1: NONE
+- Runtime replay by A1: NOT_PERFORMED
+- Decision class: NO_HISTORICAL_REWRITE / RELATION_REVIEWED
+
+#### 2026-10-08
+- Coverage date: 2026-10-08
+- Daily / relevant producer state: REVIEWED_AS_POINT_IN_TIME_EVIDENCE
+- Later path presence used as task-time input proof: NO
+- Later success used to rewrite prior negative state: NO
+- Weekly relation: RETAINED_WITHOUT_BACKDATING
+- Monthly relation: OPEN / NOT_FINAL
+- Independent-source upgrade by A1: NONE
+- Runtime replay by A1: NOT_PERFORMED
+- Decision class: NO_HISTORICAL_REWRITE / RELATION_REVIEWED
+
+#### 2026-10-09
+- Coverage date: 2026-10-09
+- Daily / relevant producer state: REVIEWED_AS_POINT_IN_TIME_EVIDENCE
+- Later path presence used as task-time input proof: NO
+- Later success used to rewrite prior negative state: NO
+- Weekly relation: RETAINED_WITHOUT_BACKDATING
+- Monthly relation: OPEN / NOT_FINAL
+- Independent-source upgrade by A1: NONE
+- Runtime replay by A1: NOT_PERFORMED
+- Decision class: NO_HISTORICAL_REWRITE / RELATION_REVIEWED
+
+#### 2026-10-10
+- Coverage date: 2026-10-10
+- Daily / relevant producer state: REVIEWED_AS_POINT_IN_TIME_EVIDENCE
+- Later path presence used as task-time input proof: NO
+- Later success used to rewrite prior negative state: NO
+- Weekly relation: RETAINED_WITHOUT_BACKDATING
+- Monthly relation: OPEN / NOT_FINAL
+- Independent-source upgrade by A1: NONE
+- Runtime replay by A1: NOT_PERFORMED
+- Decision class: NO_HISTORICAL_REWRITE / RELATION_REVIEWED
+
+#### 2026-10-11
+- Coverage date: 2026-10-11
+- Daily / relevant producer state: REVIEWED_AS_POINT_IN_TIME_EVIDENCE
+- Later path presence used as task-time input proof: NO
+- Later success used to rewrite prior negative state: NO
+- Weekly relation: RETAINED_WITHOUT_BACKDATING
+- Monthly relation: OPEN / NOT_FINAL
+- Independent-source upgrade by A1: NONE
+- Runtime replay by A1: NOT_PERFORMED
+- Decision class: NO_HISTORICAL_REWRITE / RELATION_REVIEWED
+
+#### 2026-10-12
+- Coverage date: 2026-10-12
+- Daily / relevant producer state: REVIEWED_AS_POINT_IN_TIME_EVIDENCE
+- Later path presence used as task-time input proof: NO
+- Later success used to rewrite prior negative state: NO
+- Weekly relation: RETAINED_WITHOUT_BACKDATING
+- Monthly relation: OPEN / NOT_FINAL
+- Independent-source upgrade by A1: NONE
+- Runtime replay by A1: NOT_PERFORMED
+- Decision class: NO_HISTORICAL_REWRITE / RELATION_REVIEWED
+
+### Repository-specific adjudication
+- F01: 2026-10-12 A1 PR #626 and A2 PR #627 merged; external concurrency evidence remained separate from local incident evidence
+- F02: 2026-10-12 archive/governance PRs #628 #629 #630 preserved historical workflow lineage without upgrading historical execution state
+- F03: 2026-10-13 Ballast PR #633 is a separate GPT-Web2 research plane and does not satisfy Aegis A1/A2
+- F04: 2026-10-13 A1 PR #634 merged with arXiv:2610.01256v1, Independent Verification = NO, Local Incident Evidence = NO_LOCAL_EVIDENCE
+- F05: 2026-10-13 A2 is currently not observed as a PR or merged artifact; execution and delivery remain UNVERIFIED
+- F06: Absence of A2 is not replaced by A1 interpretation, Ballast research, or later lifecycle main movement
+- F07: Historical blocked A4 state remains historical even after later recovery
+- F08: External agent failure literature is not local Zero/Aegis incident evidence
+- F09: October A6 remains OPEN and is not a natural-month final
+- F10: No host runtime replay is performed by A1
+- F11: No external source recheck is promoted to independent verification by A1
+- F12: Current lifecycle main does not rewrite producer-time evidence
+
+### Evidence boundaries
+- Native producer delivery != A1 maintenance
+- Current merged main != historical task-time state
+- Current path != original input availability
+- Later lifecycle movement != producer rerun
+- Repetition != independent verification
+- Same publisher lineage != independent source
+- Test pass != exhaustive correctness
+- Archive preservation != historical runtime execution
+- Navigation update != evidence upgrade
+- Correction != history rewrite
+- Missing / blocked / unverified states remain legal results
+- A1 review != external research
+- A1 review != native task execution
+- October month remains OPEN at this cutoff
+
+### A1 disposition
+- Covered dates: 12
+- Coverage completeness: COMPLETE_FOR_2026-10-01_THROUGH_2026-10-12
+- Historical artifacts rewritten: 0
+- Native runs replayed: 0
+- Independent-source credits added: 0
+- Unsupported runtime claims added: 0
+- 2026-10-13 state admitted into A1 cutoff: NO
+- Ready condition: MERGE_A1_THEN_FRESH_READ_MAIN
