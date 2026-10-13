@@ -86,3 +86,21 @@
 - 确认未读取旧 Nexus 和 Aegis 之外文件：YES
 - 确认未把外部风险声明为本地事实：YES
 - 确认未公开提示词或私有控制逻辑：YES
+
+## Forward Correction — 2026-10-13
+
+- Original producer PR: #634
+- Correction scope: SOURCE_INDEPENDENCE_AND_ADMISSION_CLARIFICATION
+- Historical producer execution: PRESERVED
+- Header `Independent Verification: NO`: retained and authoritative for corroboration state
+- Source-record `Independent Source: YES`: means the admitted arXiv paper is an external primary source distinct from repository-local evidence; it does **not** mean a second independent publisher or independent corroborating study was admitted
+- Independent corroborating source count for this Daily: 0
+- Admitted external source records in this Daily: 1
+- Local incident evidence: NO_LOCAL_EVIDENCE
+- Host applicability: UNKNOWN
+- External failure-mode evidence is not promoted to a local Zero/Aegis incident
+- The original handoff request for independent verification remains unresolved
+- The statement that network access reached additional candidate papers is not research credit and does not add admitted-source count because those candidates are not represented as source records in this artifact
+- A2 same-day delivery remained unobserved at the later maintenance cut; this correction does not fabricate or replace the missing Orient-stage artifact
+- No external source was re-fetched and no producer task was rerun by this correction
+
