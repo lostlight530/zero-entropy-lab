@@ -3,13 +3,21 @@
 const fs=require('node:fs')
 const path=require('node:path')
 const EXPECTED_PATHS=['ack_only','id_only','source_id_seen','full_integrity']
+function priorScopeMatches(s){
+  const q=s.prior.scope,t=s.task,e=s.event
+  if(!q||q.task_id!==t.task_id||q.source!==e.source||q.event_id!==e.id||q.target_uid!==t.target_uid||q.membership_revision!==t.membership_revision)return false
+  if(!Array.isArray(q.effect_ids)||!Array.isArray(t.required_effects))return false
+  const a=new Set(q.effect_ids),b=new Set(t.required_effects)
+  return q.effect_ids.length===t.required_effects.length&&a.size===q.effect_ids.length&&b.size===t.required_effects.length&&[...a].every(x=>b.has(x))
+}
 function reference(s){
   const e=s.event,t=s.task,p=s.prior,r=s.receipts,a=s.permission
   if(e.authenticated!==true)return 'untrusted-event'
   if([e.source,e.id].join('\u0000')!==[t.expected_source,t.expected_event_id].join('\u0000'))return 'identity-mismatch'
-  const validMiss=p.classification==='authoritative miss'&&['exact_identity','coverage','watermark','retention'].every(k=>p[k]===true)
+  const validMiss=p.classification==='authoritative miss'&&['exact_identity','coverage','watermark','retention'].every(k=>p[k]===true)&&priorScopeMatches(s)
   if(r.length>0&&validMiss)return 'evidence-conflict'
   if(r.length===0){
+    if(!priorScopeMatches(s)||p.exact_identity!==true)return 'safe-stop-unknown'
     if(p.classification==='hit')return 'receipt-incomplete'
     if(!validMiss)return 'safe-stop-unknown'
     if(a.current===true&&a.protected_effect_boundary===true&&t.status==='RUNNING')return 'eligible-new-effect'
@@ -22,6 +30,7 @@ function reference(s){
   for(const x of r){
     if(x.task_id!==t.task_id||x.source!==e.source||x.event_id!==e.id||x.target_uid!==t.target_uid)return 'identity-mismatch'
   }
+  if(!priorScopeMatches(s)||p.exact_identity!==true)return 'safe-stop-unknown'
   if(!r.every(x=>x.authorized_at_effect===true))return 'historically-unauthorized'
   if(!r.every(x=>x.temporal_order_proven===true))return 'temporal-unproven'
   const equalSets=(left,right)=>left.length===right.length&&new Set(left).size===left.length&&new Set(right).size===right.length&&left.every(x=>right.includes(x))
@@ -79,6 +88,10 @@ function adversarialControls(payload,csvText){
   p=cp(payload);p.scenarios[0].receipts[0].source='/publisher/other';tests.push(['receipt-binding',verify(p,csvText)])
   p=cp(payload);p.scenarios[0].task.current_membership.push('unexpected@sink-u7');tests.push(['extra-member',verify(p,csvText)])
   p=cp(payload);p.scenarios[0].prior.classification='authoritative miss';tests.push(['conflicting-miss',verify(p,csvText)])
+  p=cp(payload);p.scenarios[0].prior.scope.task_id='tampered';tests.push(['hit-prior-scope',verify(p,csvText)])
+  p=cp(payload);p.scenarios.find(x=>x.case_id==='eligible-new-effect-covered-miss').prior.scope.effect_ids[1]='unexpected@sink-u7';tests.push(['miss-prior-scope',verify(p,csvText)])
+  p=cp(payload);p.scenarios.find(x=>x.case_id==='eligible-new-effect-covered-miss').prior.scope.effect_ids[1]=p.scenarios.find(x=>x.case_id==='eligible-new-effect-covered-miss').prior.scope.effect_ids[0];tests.push(['duplicate-query-member',verify(p,csvText)])
+  p=cp(payload);p.scenarios[0].prior.exact_identity=false;tests.push(['aggregate-hit',verify(p,csvText)])
   return tests.map(([name,errors])=>({name,rejected:errors.length>0,errors:errors.slice(0,2)}))
 }
 if(require.main===module){const root=path.resolve(__dirname,'..');const p=JSON.parse(fs.readFileSync(path.join(root,'evidence','2026-10-14-scenarios.json'),'utf8'));const c=fs.readFileSync(path.join(root,'evidence','2026-10-14-decisions.csv'),'utf8');const errors=verify(p,c),adversarial=adversarialControls(p,c);console.log(JSON.stringify({scenario_count:p.scenarios.length,row_count:c.trimEnd().split('\n').length-1,failures:errors.length,negative_controls:adversarial.length,rejected:adversarial.filter(x=>x.rejected).length,errors,adversarial},null,2));if(errors.length||adversarial.some(x=>!x.rejected))process.exitCode=1}

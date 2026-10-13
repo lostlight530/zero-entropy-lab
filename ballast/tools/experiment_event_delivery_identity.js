@@ -8,7 +8,7 @@ const receipt = effect_id => ({effect_id, task_id:'task-17', source:'/publisher/
 const BASE = {
   event:{source:'/publisher/alpha', id:'evt-77', subject:'release-17', delivery_guid:'guid-77', ack:true, authenticated:true, id_seen:true, source_id_seen:true, redelivery:false},
   task:{task_id:'task-17', expected_source:'/publisher/alpha', expected_event_id:'evt-77', target_uid:'sink-u7', required_effects:['publish@sink-u7','notify@sink-u7'], current_membership:['publish@sink-u7','notify@sink-u7'], membership_revision:'m8', completion_revision:'m8', protected_completion:true, current_postcondition:true, status:'COMPLETED'},
-  prior:{classification:'hit', exact_identity:true, coverage:true, watermark:true, retention:true},
+  prior:{classification:'hit', exact_identity:true, coverage:true, watermark:true, retention:true,scope:{task_id:'task-17',source:'/publisher/alpha',event_id:'evt-77',target_uid:'sink-u7',membership_revision:'m8',effect_ids:['publish@sink-u7','notify@sink-u7']}},
   permission:{current:false, protected_effect_boundary:false},
   receipts:[receipt('publish@sink-u7'),receipt('notify@sink-u7')]
 }
@@ -20,7 +20,7 @@ function fixtures(){
   add('transport-ack-lost-after-actual-effects','verified',f=>{f.event.ack=false})
   add('guid-absent-but-exact-effects','verified',f=>{f.event.delivery_guid=''})
   add('eligible-new-effect-covered-miss','eligible-new-effect',newEffect)
-  add('different-source-same-event-id','eligible-new-effect',f=>{newEffect(f);f.event.source='/publisher/beta';f.task.expected_source='/publisher/beta';f.event.source_id_seen=false})
+  add('different-source-same-event-id','eligible-new-effect',f=>{newEffect(f);f.event.source='/publisher/beta';f.task.expected_source='/publisher/beta';f.prior.scope.source='/publisher/beta';f.event.source_id_seen=false})
   add('redelivery-without-sink-effects','eligible-new-effect',f=>{newEffect(f);f.event.redelivery=true})
   add('current-permission-revoked-before-new-effect','permission-stop',f=>{newEffect(f);f.permission.current=false})
   add('missing-protected-effect-boundary','permission-stop',f=>{newEffect(f);f.permission.protected_effect_boundary=false})
@@ -48,14 +48,28 @@ function fixtures(){
   add('completion-commit-unfenced','completion-unfenced',f=>{f.task.protected_completion=false})
   add('untrusted-inbound-event','untrusted-event',f=>{f.event.authenticated=false})
   add('event-source-binding-mismatch','identity-mismatch',f=>{f.task.expected_source='/publisher/beta'})
+  add('miss-query-other-event','safe-stop-unknown',f=>{newEffect(f);f.prior.scope.event_id='evt-other'})
+  add('miss-query-effect-substitution','safe-stop-unknown',f=>{newEffect(f);f.prior.scope.effect_ids[1]='audit@sink-u7'})
+  add('miss-query-stale-revision','safe-stop-unknown',f=>{newEffect(f);f.prior.scope.membership_revision='m7'})
+  add('miss-query-duplicate-effect','safe-stop-unknown',f=>{newEffect(f);f.prior.scope.effect_ids[1]=f.prior.scope.effect_ids[0]})
+  add('hit-query-other-task','safe-stop-unknown',f=>{f.prior.scope.task_id='other-task'})
+  add('hit-query-wrong-target','safe-stop-unknown',f=>{f.prior.scope.target_uid='sink-old'})
+  add('hit-aggregate-not-exact','safe-stop-unknown',f=>{f.prior.exact_identity=false})
   return all
+}
+function priorScopeMatches(s){
+  const q=s.prior.scope,e=s.event,t=s.task
+  if(!q||q.task_id!==t.task_id||q.source!==e.source||q.event_id!==e.id||q.target_uid!==t.target_uid||q.membership_revision!==t.membership_revision)return false
+  const ids=q.effect_ids,required=t.required_effects
+  return Array.isArray(ids)&&Array.isArray(required)&&ids.length===required.length&&new Set(ids).size===ids.length&&new Set(required).size===required.length&&ids.every(x=>required.includes(x))
 }
 function full(s){
   const {event:e,task:t,prior:p,permission:a,receipts:rs}=s
   if(!e.authenticated)return 'untrusted-event'
   if(e.source!==t.expected_source||e.id!==t.expected_event_id)return 'identity-mismatch'
-  if(p.classification==='authoritative miss' && p.exact_identity&&p.coverage&&p.watermark&&p.retention&&rs.length)return 'evidence-conflict'
+  if(p.classification==='authoritative miss' && p.exact_identity&&p.coverage&&p.watermark&&p.retention&&priorScopeMatches(s)&&rs.length)return 'evidence-conflict'
   if(!rs.length){
+    if(!priorScopeMatches(s)||p.exact_identity!==true)return 'safe-stop-unknown'
     if(p.classification==='hit')return 'receipt-incomplete'
     if(p.classification!=='authoritative miss'||!p.exact_identity||!p.coverage||!p.watermark||!p.retention)return 'safe-stop-unknown'
     return a.current&&a.protected_effect_boundary&&t.status==='RUNNING'?'eligible-new-effect':'permission-stop'
@@ -64,6 +78,7 @@ function full(s){
   const ids=rs.map(x=>x.effect_id)
   if(new Set(ids).size!==ids.length)return 'duplicate-effect'
   if(rs.some(x=>x.task_id!==t.task_id||x.source!==e.source||x.event_id!==e.id||x.target_uid!==t.target_uid))return 'identity-mismatch'
+  if(!priorScopeMatches(s)||p.exact_identity!==true)return 'safe-stop-unknown'
   if(rs.some(x=>!x.authorized_at_effect))return 'historically-unauthorized'
   if(rs.some(x=>!x.temporal_order_proven))return 'temporal-unproven'
   const req=new Set(t.required_effects), got=new Set(ids), current=new Set(t.current_membership)
