@@ -29,10 +29,10 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-12 environment approval and OIDC trust versus delegated effect-time authorization](records/2026-10-12.md)
+- 最新 Daily: [2026-10-13 delegated token exchange versus effect-time action authorization](records/2026-10-13.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
-- 最新完整周期审计: [2026-10-02 至 2026-10-07](audits/2026-10-02--2026-10-07.md)
+- 最新完整周期审计: [2026-10-08 至 2026-10-13](audits/2026-10-08--2026-10-13.md)
 - 2026-09-26 至 2026-10-01 已形成新的 6 日 derived audit, 其中 2026-09-26 为 RECONSTRUCTION / NOT_RUN / UNVERIFIED. 该 audit 仅做派生审计, 新增实验数量 0, 新增长期结论数量 0, 不重复创建重叠 audit
 - 当前方法: [METHOD.md](METHOD.md)
 - 控制案例: [CASES.md](CASES.md)
@@ -584,3 +584,27 @@ Current native research endpoint is 2026-10-11.
 One NATIVE bounded Daily compares environment admission, OIDC trust and external effect-time authorization. The 22-scenario, four-path model produced 88 decisions with separate-predicate agreement on 22/22 expected labels. Weak-path model disagreements are 18/18/16 versus 0 for full-integrity against its own bounded reference. Live GitHub/AWS and sink evidence remain NOT_EXECUTED. CASES, METHOD and NOTES unchanged. The 2026-10-08..2026-10-12 span has five dates; latest complete audit remains 2026-10-02..2026-10-07. Monthly and README synchronization adds zero research credit.
 
 Current native research endpoint is 2026-10-12.
+
+## Ballast current-state advance — 2026-10-13
+
+One NATIVE bounded Daily examines OAuth token exchange, preflight introspection and actor-chain evidence versus effect-time delegated action authority and task-defined completion. Thirty distinct synthetic scenarios and four paths yielded 120 model decisions, with 25/25/24/0 reference-label disagreements and 12 passing metamorphic assertions. Shared fixture semantics and absent live authority prevent claims of external verifier independence or production correctness.
+
+```text
+TOKEN_EXCHANGE_ISSUED
+!= EFFECT_TIME_PERMISSION
+
+PREFLIGHT_TOKEN_ACTIVE
+!= PROTECTED_EFFECT_AUTHORIZATION
+
+ACTOR_HISTORY_PRESENT
+!= HISTORICAL_EFFECT_OCCURRENCE
+
+HISTORICAL_EFFECT_OCCURRED
+!= CURRENT_TASK_COMPLETION
+```
+
+The 2026-10-08..2026-10-13 non-overlapping six-date derived audit is now present and contributes zero experiment/window/CASE/NOTES credit. CASES, METHOD and NOTES unchanged. Monthly and README pointer updates are derived navigation only. Real OAuth, sink effects and independent semantic verification NOT_EXECUTED.
+
+Current native research endpoint is 2026-10-13.
+
+Derived index clarification — 2026-10-13: the 2026-10-12 current-state paragraph above is retained as an earlier point-in-time note. The finalized, same-day-hardened 2026-10-12 primary Daily reports 18/18/17/0 (gate-only / OIDC-only / count-only / full-integrity) rather than the earlier 18/18/16/0. This corrects the navigation summary's interpretation without rewriting historical research evidence or adding credit.
