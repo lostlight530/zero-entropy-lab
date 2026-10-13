@@ -3723,3 +3723,199 @@ DUPLICATE_EVIDENCE_CREDIT
 - Unsupported runtime claims added: 0
 - 2026-10-13 state admitted into A1 cutoff: NO
 - Ready condition: MERGE_A1_THEN_FRESH_READ_MAIN
+
+## A2 CURRENT-MAIN OCTOBER MAINTENANCE — 2026-10-13
+- Repository: lostlight530/zero-entropy-lab
+- Domain: Aegis / Zero
+- Canonical owner: aegis-cortex/2026-10-A6-aegis-memorize.md
+- Logical date: 2026-10-13 Asia/Shanghai
+- Coverage window: 2026-10-01..2026-10-13
+- Relation-through: N = 2026-10-13
+- Fresh A1-merged base main: bede7857e49dd5c216e383b355e09e8600565147
+- A1 consumed: YES
+- Native/GPT-Web2 2026-10-13 state consumed where present: YES
+- Producer replay by A2: NOT_PERFORMED
+- Historical rewrite: NO
+- Month state: OPEN
+- Natural-month final: NOT_DUE
+
+### Full October relational ledger
+
+#### 2026-10-01
+- Relation date: 2026-10-01
+- Producer/history object: RETAINED_AS_POINT_IN_TIME_EVIDENCE
+- Later current-main state used as task-time proof: NO
+- Later success used to overwrite negative/unknown state: NO
+- Daily-to-weekly promotion without explicit evidence: NO
+- Weekly-to-monthly-final promotion: NO
+- Independent-source credit created by A2: NONE
+- Runtime/producer replay by A2: NOT_PERFORMED
+- Decision: RELATION_REVIEWED / NO_BACKDATE
+
+#### 2026-10-02
+- Relation date: 2026-10-02
+- Producer/history object: RETAINED_AS_POINT_IN_TIME_EVIDENCE
+- Later current-main state used as task-time proof: NO
+- Later success used to overwrite negative/unknown state: NO
+- Daily-to-weekly promotion without explicit evidence: NO
+- Weekly-to-monthly-final promotion: NO
+- Independent-source credit created by A2: NONE
+- Runtime/producer replay by A2: NOT_PERFORMED
+- Decision: RELATION_REVIEWED / NO_BACKDATE
+
+#### 2026-10-03
+- Relation date: 2026-10-03
+- Producer/history object: RETAINED_AS_POINT_IN_TIME_EVIDENCE
+- Later current-main state used as task-time proof: NO
+- Later success used to overwrite negative/unknown state: NO
+- Daily-to-weekly promotion without explicit evidence: NO
+- Weekly-to-monthly-final promotion: NO
+- Independent-source credit created by A2: NONE
+- Runtime/producer replay by A2: NOT_PERFORMED
+- Decision: RELATION_REVIEWED / NO_BACKDATE
+
+#### 2026-10-04
+- Relation date: 2026-10-04
+- Producer/history object: RETAINED_AS_POINT_IN_TIME_EVIDENCE
+- Later current-main state used as task-time proof: NO
+- Later success used to overwrite negative/unknown state: NO
+- Daily-to-weekly promotion without explicit evidence: NO
+- Weekly-to-monthly-final promotion: NO
+- Independent-source credit created by A2: NONE
+- Runtime/producer replay by A2: NOT_PERFORMED
+- Decision: RELATION_REVIEWED / NO_BACKDATE
+
+#### 2026-10-05
+- Relation date: 2026-10-05
+- Producer/history object: RETAINED_AS_POINT_IN_TIME_EVIDENCE
+- Later current-main state used as task-time proof: NO
+- Later success used to overwrite negative/unknown state: NO
+- Daily-to-weekly promotion without explicit evidence: NO
+- Weekly-to-monthly-final promotion: NO
+- Independent-source credit created by A2: NONE
+- Runtime/producer replay by A2: NOT_PERFORMED
+- Decision: RELATION_REVIEWED / NO_BACKDATE
+
+#### 2026-10-06
+- Relation date: 2026-10-06
+- Producer/history object: RETAINED_AS_POINT_IN_TIME_EVIDENCE
+- Later current-main state used as task-time proof: NO
+- Later success used to overwrite negative/unknown state: NO
+- Daily-to-weekly promotion without explicit evidence: NO
+- Weekly-to-monthly-final promotion: NO
+- Independent-source credit created by A2: NONE
+- Runtime/producer replay by A2: NOT_PERFORMED
+- Decision: RELATION_REVIEWED / NO_BACKDATE
+
+#### 2026-10-07
+- Relation date: 2026-10-07
+- Producer/history object: RETAINED_AS_POINT_IN_TIME_EVIDENCE
+- Later current-main state used as task-time proof: NO
+- Later success used to overwrite negative/unknown state: NO
+- Daily-to-weekly promotion without explicit evidence: NO
+- Weekly-to-monthly-final promotion: NO
+- Independent-source credit created by A2: NONE
+- Runtime/producer replay by A2: NOT_PERFORMED
+- Decision: RELATION_REVIEWED / NO_BACKDATE
+
+#### 2026-10-08
+- Relation date: 2026-10-08
+- Producer/history object: RETAINED_AS_POINT_IN_TIME_EVIDENCE
+- Later current-main state used as task-time proof: NO
+- Later success used to overwrite negative/unknown state: NO
+- Daily-to-weekly promotion without explicit evidence: NO
+- Weekly-to-monthly-final promotion: NO
+- Independent-source credit created by A2: NONE
+- Runtime/producer replay by A2: NOT_PERFORMED
+- Decision: RELATION_REVIEWED / NO_BACKDATE
+
+#### 2026-10-09
+- Relation date: 2026-10-09
+- Producer/history object: RETAINED_AS_POINT_IN_TIME_EVIDENCE
+- Later current-main state used as task-time proof: NO
+- Later success used to overwrite negative/unknown state: NO
+- Daily-to-weekly promotion without explicit evidence: NO
+- Weekly-to-monthly-final promotion: NO
+- Independent-source credit created by A2: NONE
+- Runtime/producer replay by A2: NOT_PERFORMED
+- Decision: RELATION_REVIEWED / NO_BACKDATE
+
+#### 2026-10-10
+- Relation date: 2026-10-10
+- Producer/history object: RETAINED_AS_POINT_IN_TIME_EVIDENCE
+- Later current-main state used as task-time proof: NO
+- Later success used to overwrite negative/unknown state: NO
+- Daily-to-weekly promotion without explicit evidence: NO
+- Weekly-to-monthly-final promotion: NO
+- Independent-source credit created by A2: NONE
+- Runtime/producer replay by A2: NOT_PERFORMED
+- Decision: RELATION_REVIEWED / NO_BACKDATE
+
+#### 2026-10-11
+- Relation date: 2026-10-11
+- Producer/history object: RETAINED_AS_POINT_IN_TIME_EVIDENCE
+- Later current-main state used as task-time proof: NO
+- Later success used to overwrite negative/unknown state: NO
+- Daily-to-weekly promotion without explicit evidence: NO
+- Weekly-to-monthly-final promotion: NO
+- Independent-source credit created by A2: NONE
+- Runtime/producer replay by A2: NOT_PERFORMED
+- Decision: RELATION_REVIEWED / NO_BACKDATE
+
+#### 2026-10-12
+- Relation date: 2026-10-12
+- Producer/history object: RETAINED_AS_POINT_IN_TIME_EVIDENCE
+- Later current-main state used as task-time proof: NO
+- Later success used to overwrite negative/unknown state: NO
+- Daily-to-weekly promotion without explicit evidence: NO
+- Weekly-to-monthly-final promotion: NO
+- Independent-source credit created by A2: NONE
+- Runtime/producer replay by A2: NOT_PERFORMED
+- Decision: RELATION_REVIEWED / NO_BACKDATE
+
+#### 2026-10-13
+- Relation date: 2026-10-13
+- Producer/history object: RETAINED_AS_POINT_IN_TIME_EVIDENCE
+- Later current-main state used as task-time proof: NO
+- Later success used to overwrite negative/unknown state: NO
+- Daily-to-weekly promotion without explicit evidence: NO
+- Weekly-to-monthly-final promotion: NO
+- Independent-source credit created by A2: NONE
+- Runtime/producer replay by A2: NOT_PERFORMED
+- Decision: RELATION_REVIEWED / NO_BACKDATE
+
+### 2026-10-13 current-main adjudication
+- N1: 2026-10-13 Ballast #633 merged as a separate GPT-Web2 research plane with bounded synthetic authority/completion experiments
+- N2: 2026-10-13 Aegis A1 #634 merged with DeFA external research, Independent Verification NO and NO_LOCAL_EVIDENCE
+- N3: 2026-10-13 same-day A2 delivery is not observed at this cut; TASK_EXISTS but EXECUTION/PR/DELIVERY remain UNVERIFIED
+- N4: Ballast does not replace Aegis A2 and A1 does not self-promote into the Orient stage
+- N5: Later lifecycle main movement and A1 maintenance #635 do not fabricate the missing same-day A2 delivery
+- N6: A1 #635 merged from fresh current main and covered 2026-10-01..2026-10-12
+- N7: October A6 remains OPEN and natural-month final is NOT_DUE
+
+### Cross-plane rules applied
+- Jules task state != GPT-Web2 research state
+- GPT-Web2 research does not fill a missing Jules task
+- Lifecycle main movement does not rewrite producer-time availability
+- TASK EXISTS != TASK EXECUTED
+- TASK EXECUTED != PR CREATED
+- PR CREATED != MERGED
+- MERGED != historical input availability
+- Missing / blocked / unverified are legal states
+- Same-source repetition != independent support
+- Test pass != exhaustive correctness
+- Archive/index presence != runtime execution
+- A2 is relationship maintenance, not native producer replay
+- Correction moves forward and does not rewrite history
+- October remains OPEN
+
+### A2 evidence ledger
+- 2026-10-01..2026-10-12 consumed from merged A1
+- 2026-10-13 native / GPT-Web2 producer state consumed where present
+- Historical rewrites: 0
+- Native tasks replayed by A2: 0
+- Independent sources newly credited by A2: 0
+- Unsupported runtime claims added: 0
+- Monthly final seal: 0
+- Relation-through advanced to: 2026-10-13
+- Status: A2_RELATION_COMPLETE / MONTH_OPEN / HISTORY_PRESERVED
