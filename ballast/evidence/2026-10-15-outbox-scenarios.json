@@ -1,0 +1,2112 @@
+[
+  {
+    "scenario_id": "historical-valid-after-revocation",
+    "injection": {},
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "outbox-only-no-external-effects",
+    "injection": {
+      "receipts": [],
+      "prior": "miss",
+      "permission": true,
+      "offset": false
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [],
+    "sink_receipt_rows": [],
+    "prior_query": {
+      "state": "miss",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": true,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "offset-advanced-before-sink-commit",
+    "injection": {
+      "receipts": [],
+      "prior": "miss",
+      "permission": true
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [],
+    "prior_query": {
+      "state": "miss",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": true,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "sink-committed-before-offset-advance",
+    "injection": {
+      "offset": false
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "outbox-rolled-back-after-sink-commit",
+    "injection": {
+      "outbox": false,
+      "offset": false
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [],
+    "local_offset_rows": [],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "duplicate-receipt-count-two",
+    "injection": {
+      "receipts": [
+        "publish@sink-u7",
+        "publish@sink-u7"
+      ]
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "extra-receipt-with-valid-pair",
+    "injection": {
+      "receipts": [
+        "publish@sink-u7",
+        "notify@sink-u7",
+        "audit@sink-u7"
+      ]
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "audit@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "missing-one-external-effect",
+    "injection": {
+      "receipts": [
+        "publish@sink-u7"
+      ]
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "same-count-member-replacement",
+    "injection": {
+      "members": [
+        "publish@sink-u7",
+        "archive@sink-u7"
+      ]
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "archive@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "target-incarnation-replaced",
+    "injection": {
+      "target": "sink-u8"
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u8",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "wrong-receipt-attempt",
+    "injection": {
+      "receipt_attempt": "attempt-0"
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-0",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-0",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "wrong-receipt-run",
+    "injection": {
+      "receipt_run": "run-8"
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-8",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-8",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "historical-effect-unauthorized",
+    "injection": {
+      "auth": false
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 0,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 0,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "temporal-order-unproven",
+    "injection": {
+      "time_proof": false
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 0
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 0
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "current-postcondition-reversed",
+    "injection": {
+      "postcondition": false
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": false
+    }
+  },
+  {
+    "scenario_id": "membership-revision-stale",
+    "injection": {
+      "witness_revision": "m7"
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m7",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "completion-unprotected-toctou",
+    "injection": {
+      "protected_completion": false
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": false,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "prior-hit-scope-substituted",
+    "injection": {
+      "scope_target": "sink-u8"
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u8",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "prior-hit-aggregate-scope",
+    "injection": {
+      "scope_effects": [
+        "*"
+      ]
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "*"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "authoritative-miss-contradicts-receipts",
+    "injection": {
+      "prior": "miss"
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "miss",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "unknown-prior-no-receipts",
+    "injection": {
+      "prior": "unknown",
+      "receipts": [],
+      "permission": true
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [],
+    "prior_query": {
+      "state": "unknown",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": true,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "miss-watermark-pre-attempt",
+    "injection": {
+      "prior": "miss",
+      "receipts": [],
+      "permission": true,
+      "watermark": 9
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [],
+    "prior_query": {
+      "state": "miss",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 9,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": true,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "miss-retention-expired",
+    "injection": {
+      "prior": "miss",
+      "receipts": [],
+      "permission": true,
+      "retention": false
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [],
+    "prior_query": {
+      "state": "miss",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": false,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": true,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "miss-query-failed",
+    "injection": {
+      "prior": "miss",
+      "receipts": [],
+      "permission": true,
+      "query_ok": false
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [],
+    "prior_query": {
+      "state": "miss",
+      "authority": "sink-primary",
+      "query_ok": false,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": true,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "miss-current-permission-revoked",
+    "injection": {
+      "prior": "miss",
+      "receipts": [],
+      "permission": false
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [],
+    "prior_query": {
+      "state": "miss",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "miss-effect-boundary-unprotected",
+    "injection": {
+      "prior": "miss",
+      "receipts": [],
+      "permission": true,
+      "protected_effect": false
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [],
+    "prior_query": {
+      "state": "miss",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": true,
+      "protected_effect": false,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "receipt-task-identity-substituted",
+    "injection": {
+      "receipt_task": "task-53"
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-53",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-53",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  },
+  {
+    "scenario_id": "outbox-event-id-collision",
+    "injection": {
+      "event_id": "evt-52-duplicate"
+    },
+    "task_id": "task-52",
+    "run_id": "run-9",
+    "attempt_id": "attempt-1",
+    "target_uid": "sink-u7",
+    "required_effects": [
+      "publish@sink-u7",
+      "notify@sink-u7"
+    ],
+    "local_outbox_rows": [
+      {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "event_id": "evt-52-duplicate",
+        "target_uid": "sink-u7"
+      }
+    ],
+    "local_offset_rows": [
+      {
+        "consumer": "consumer-A",
+        "offset": 51
+      }
+    ],
+    "sink_receipt_rows": [
+      {
+        "effect_id": "publish@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      },
+      {
+        "effect_id": "notify@sink-u7",
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "authorized": 1,
+        "seq": 10,
+        "time_proof": 1
+      }
+    ],
+    "prior_query": {
+      "state": "hit",
+      "authority": "sink-primary",
+      "query_ok": true,
+      "watermark": 12,
+      "attempt_boundary": 10,
+      "retention_covers": true,
+      "scope": {
+        "task_id": "task-52",
+        "run_id": "run-9",
+        "attempt_id": "attempt-1",
+        "target_uid": "sink-u7",
+        "effect_ids": [
+          "publish@sink-u7",
+          "notify@sink-u7"
+        ]
+      }
+    },
+    "current": {
+      "permission": false,
+      "protected_effect": true,
+      "membership": [
+        "publish@sink-u7",
+        "notify@sink-u7"
+      ],
+      "membership_revision": "m8",
+      "witness_revision": "m8",
+      "protected_completion": true,
+      "postcondition": true
+    }
+  }
+]
