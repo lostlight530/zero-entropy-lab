@@ -4411,3 +4411,187 @@ DUPLICATE_EVIDENCE_CREDIT
 - A1 records producer-reported claims and their source provenance, no effect-time guarantees
 - 2026-10-14 native #644/#645 and correction #646 enter later A2
 - Gate: A1 merge, fresh read, A2 through 10/14
+
+## A2 2026-10-14 October Aegis evidence and incident reconciliation
+- Base: A1-merged main c4920265cf70bcb492f54a1447ba44ff2e39cad3
+- Inherits #647 A1 and 13 per-day source-depth/incident gates
+- N producer inputs: A1 #644 and A2 #645; source-depth correction #646 retained
+- Coverage: October 1–14; weekly A3/A4 does not create another Daily execution
+- Ballast is an independent research plane; Aegis results do not prove Ballast effect delivery
+- Source record is not local incident proof; exact task status is producer-time only
+- Monthly natural close not due; no new A6 permanent doctrine adoption
+
+### 2026-10-01 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-01-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-01-A2-doctrine-orient.md
+- A1 input presence: - A1 Git-tree presence: PRESENT
+- A2 blob: - A2 exact blob: 450bb5e41ba1f4f52f605632a3522797568429c5
+- Producer task result: NOT_RECORDED
+- Reported source lineage: NOT_RECORDED
+- Network/source depth: NOT_RECORDED
+- Local incident assertion: NOT_RECORDED
+- Document correction: retained from N−1 evidence; no producer replay
+- Decision: retain original source/incident boundary and any DEGRADED status
+
+### 2026-10-02 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-02-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-02-A2-doctrine-orient.md
+- A1 input presence: - A1 Git-tree presence: PRESENT
+- A2 blob: - A2 exact blob: c590dffb8dc28fb701174e6dfafe2c3697f97b37
+- Producer task result: NOT_RECORDED
+- Reported source lineage: NOT_RECORDED
+- Network/source depth: NOT_RECORDED
+- Local incident assertion: NOT_RECORDED
+- Document correction: retained from N−1 evidence; no producer replay
+- Decision: retain original source/incident boundary and any DEGRADED status
+
+### 2026-10-03 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-03-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-03-A2-doctrine-orient.md
+- A1 input presence: - A1 Git-tree presence: PRESENT
+- A2 blob: - A2 exact blob: 3c95e23cfa6187d0c23f607d622e2e8353051b13
+- Producer task result: NOT_RECORDED
+- Reported source lineage: NOT_RECORDED
+- Network/source depth: NOT_RECORDED
+- Local incident assertion: NOT_RECORDED
+- Document correction: retained from N−1 evidence; no producer replay
+- Decision: retain original source/incident boundary and any DEGRADED status
+
+### 2026-10-04 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-04-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-04-A2-doctrine-orient.md
+- A1 input presence: - A1 Git-tree presence: PRESENT
+- A2 blob: - A2 exact blob: 08f105bfae915c994d411e8ab86d421db03f9c42
+- Producer task result: NOT_RECORDED
+- Reported source lineage: NOT_RECORDED
+- Network/source depth: NOT_RECORDED
+- Local incident assertion: NOT_RECORDED
+- Document correction: retained from N−1 evidence; no producer replay
+- Decision: retain original source/incident boundary and any DEGRADED status
+
+### 2026-10-05 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-05-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-05-A2-doctrine-orient.md
+- A1 input presence: - A1 Git-tree presence: PRESENT
+- A2 blob: - A2 exact blob: 98139f531397d66bde60765a38f9b0c683d936ab
+- Producer task result: NOT_RECORDED
+- Reported source lineage: NOT_RECORDED
+- Network/source depth: NOT_RECORDED
+- Local incident assertion: NOT_RECORDED
+- Document correction: retained from N−1 evidence; no producer replay
+- Decision: retain original source/incident boundary and any DEGRADED status
+
+### 2026-10-06 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-06-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-06-A2-doctrine-orient.md
+- A1 input presence: - A1 Git-tree presence: PRESENT
+- A2 blob: - A2 exact blob: 6cb80c4d899b533c539ad487b274c1b168db9724
+- Producer task result: NOT_RECORDED
+- Reported source lineage: NOT_RECORDED
+- Network/source depth: NOT_RECORDED
+- Local incident assertion: NOT_RECORDED
+- Document correction: retained from N−1 evidence; no producer replay
+- Decision: retain original source/incident boundary and any DEGRADED status
+
+### 2026-10-07 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-07-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-07-A2-doctrine-orient.md
+- A1 input presence: - A1 Git-tree presence: PRESENT
+- A2 blob: - A2 exact blob: 9bd6c75a310832f7cc58c9ae399f41acfdf4d950
+- Producer task result: NOT_RECORDED
+- Reported source lineage: NOT_RECORDED
+- Network/source depth: NOT_RECORDED
+- Local incident assertion: NOT_RECORDED
+- Document correction: retained from N−1 evidence; no producer replay
+- Decision: retain original source/incident boundary and any DEGRADED status
+
+### 2026-10-08 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-08-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-08-A2-doctrine-orient.md
+- A1 input presence: - A1 Git-tree presence: PRESENT
+- A2 blob: - A2 exact blob: 9815107064b4fed9aa0983143c4b329b5f28a675
+- Producer task result: NOT_RECORDED
+- Reported source lineage: NOT_RECORDED
+- Network/source depth: NOT_RECORDED
+- Local incident assertion: NOT_RECORDED
+- Document correction: retained from N−1 evidence; no producer replay
+- Decision: retain original source/incident boundary and any DEGRADED status
+
+### 2026-10-09 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-09-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-09-A2-doctrine-orient.md
+- A1 input presence: - A1 Git-tree presence: PRESENT
+- A2 blob: - A2 exact blob: 2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124
+- Producer task result: NOT_RECORDED
+- Reported source lineage: NOT_RECORDED
+- Network/source depth: NOT_RECORDED
+- Local incident assertion: NOT_RECORDED
+- Document correction: retained from N−1 evidence; no producer replay
+- Decision: retain original source/incident boundary and any DEGRADED status
+
+### 2026-10-10 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-10-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-10-A2-doctrine-orient.md
+- A1 input presence: - A1 Git-tree presence: PRESENT
+- A2 blob: - A2 exact blob: ce4f369d35fda91ddeeb975679a89ee4fe1f2314
+- Producer task result: - A2 Task Status: - Task Status: SUCCESS
+- Reported source lineage: - A2 Source Status: - Source Status: SINGLE_SOURCE_LINEAGE
+- Network/source depth: - A2 Network Status: - Network Status: NETWORK_VERIFIED
+- Local incident assertion: NOT_RECORDED
+- Document correction: retained from N−1 evidence; no producer replay
+- Decision: retain original source/incident boundary and any DEGRADED status
+
+### 2026-10-11 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-11-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-11-A2-doctrine-orient.md
+- A1 input presence: - A1 Git-tree presence: PRESENT
+- A2 blob: - A2 exact blob: d3882e3530ce98550a10f93ba4221afbb270c83c
+- Producer task result: - A2 Task Status: - Task Status: SUCCESS
+- Reported source lineage: - A2 Source Status: - Source Status: SINGLE_SOURCE_LINEAGE
+- Network/source depth: - A2 Network Status: - Network Status: NETWORK_VERIFIED
+- Local incident assertion: NOT_RECORDED
+- Document correction: retained from N−1 evidence; no producer replay
+- Decision: retain original source/incident boundary and any DEGRADED status
+
+### 2026-10-12 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-12-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-12-A2-doctrine-orient.md
+- A1 input presence: - A1 Git-tree presence: PRESENT
+- A2 blob: - A2 exact blob: 6ed3797a34699a9eae821c7bb2a8c8797459b17f
+- Producer task result: - A2 Task Status: - Task Status: SUCCESS
+- Reported source lineage: - A2 Source Status: - Source Status: SINGLE_SOURCE_LINEAGE
+- Network/source depth: - A2 Network Status: - Network Status: NETWORK_VERIFIED
+- Local incident assertion: NOT_RECORDED
+- Document correction: retained from N−1 evidence; no producer replay
+- Decision: retain original source/incident boundary and any DEGRADED status
+
+### 2026-10-13 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-13-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-13-A2-doctrine-orient.md
+- A1 input presence: - A1 Git-tree presence: PRESENT
+- A2 blob: - A2 exact blob: 1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22
+- Producer task result: - A2 Task Status: - Task Status: `DEGRADED`
+- Reported source lineage: - A2 Source Status: - Source Status: `SINGLE_SOURCE_LINEAGE`
+- Network/source depth: - A2 Network Status: - Network Status: `PARTIAL_PRIMARY_SOURCE_RECHECK`
+- Local incident assertion: - A2 Local Incident Evidence: - Local Incident Evidence: `NO_LOCAL_EVIDENCE_IN_REVIEWED_AEGIS_RECORDS`
+- Document correction: retained from N−1 evidence; no producer replay
+- Decision: retain original source/incident boundary and any DEGRADED status
+
+### 2026-10-14 Aegis task-and-source contract
+- A1 original: aegis-cortex/2026-10-14-A1-reliability-observe.md
+- A2 original: aegis-cortex/2026-10-14-A2-doctrine-orient.md
+- A1 input presence: #644, main blob 1def392d03eb7bb03c428d696d4acb923454112f
+- A2 blob: c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd
+- Producer task result: - **Task Status**: SUCCESS
+- Reported source lineage: - **Source Status**: SINGLE_SOURCE_LINEAGE
+- Network/source depth: - **Network Status**: NETWORK_VERIFIED
+- Local incident assertion: - **Local Incident Evidence**: NO_LOCAL_EVIDENCE
+- Document correction: #646 limits the A2 check to recorded abstract/metadata; A1 full-text claim separate
+- Decision: external action mismatch observation ≠ local failure incident
+
+### A2 synthesis boundary
+- October 13 DEGRADED or bounded primary check remains historical
+- October 14 A2 independently reread full text: NOT_ESTABLISHED
+- Producer A1 and A2 remain separately attributable to native Jules execution
+- No original source edited, no risk-to-doctrine auto promotion, no host runtime test
+- Month remains OPEN / PROVISIONAL_NOT_FINAL
