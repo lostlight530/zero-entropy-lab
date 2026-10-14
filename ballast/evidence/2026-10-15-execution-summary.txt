@@ -1,0 +1,3 @@
+Ballast 2026-10-15 local SQLite execution summary
+28 scenarios, 112 decisions, 19 of 19 adversarial mutations rejected
+Producer and verifier executed in local Python 3.13.5, no external effects
