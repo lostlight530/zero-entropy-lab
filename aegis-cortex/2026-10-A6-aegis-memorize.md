@@ -4282,3 +4282,132 @@ DUPLICATE_EVIDENCE_CREDIT
 - Monthly final seal: 0
 - Relation-through: 2026-10-13
 - Status: FINAL_A2_COMPLETE / MONTH_OPEN / HISTORY_PRESERVED
+
+## A1 2026-10-14 Aegis evidence and source-depth matrix
+- Repository: lostlight530/zero-entropy-lab
+- Exact base main: 19be86de404e10f9ee4d7aa4fadbb9436cd90745
+- N-1 coverage: 2026-10-01..2026-10-13
+- 13 A2 Doctrine native files: full-text read at immutable GitHub blob; A1 file presence separately checked for each day
+- Producer-time A1→A2 hard gate is not established merely by later file presence
+- Source original research, single-publisher lineage, independent verification, and local incidents must be evaluated separately
+- The Oct 14 A2 source-depth fix #646 is excluded from N-1 and reserved for A2; original A1 A2 task history remains distinct
+- W41 A3/A4 are observe/act policy surfaces, not proven host repo bug or compelled architecture modification
+- Ballast external research origin remains separate from Jules Aegis local execution
+- October A6 final: NOT_DUE; month OPEN / PROVISIONAL_NOT_FINAL
+- New local incidents identified by this maintenance: NONE
+- No independent paper reread, new tests, source credit or task replay claimed
+
+### 2026-10-01 Aegis A1 → A2 evidence gate
+- A1 Git-tree presence: PRESENT
+- A1 native file: aegis-cortex/2026-10-01-A1-reliability-observe.md
+- A2 native file: aegis-cortex/2026-10-01-A2-doctrine-orient.md
+- A2 exact blob: 450bb5e41ba1f4f52f605632a3522797568429c5
+- Scope decision: original task-time source/incident distinction retained; producer content was not re-executed
+
+### 2026-10-02 Aegis A1 → A2 evidence gate
+- A1 Git-tree presence: PRESENT
+- A1 native file: aegis-cortex/2026-10-02-A1-reliability-observe.md
+- A2 native file: aegis-cortex/2026-10-02-A2-doctrine-orient.md
+- A2 exact blob: c590dffb8dc28fb701174e6dfafe2c3697f97b37
+- Scope decision: original task-time source/incident distinction retained; producer content was not re-executed
+
+### 2026-10-03 Aegis A1 → A2 evidence gate
+- A1 Git-tree presence: PRESENT
+- A1 native file: aegis-cortex/2026-10-03-A1-reliability-observe.md
+- A2 native file: aegis-cortex/2026-10-03-A2-doctrine-orient.md
+- A2 exact blob: 3c95e23cfa6187d0c23f607d622e2e8353051b13
+- Scope decision: original task-time source/incident distinction retained; producer content was not re-executed
+
+### 2026-10-04 Aegis A1 → A2 evidence gate
+- A1 Git-tree presence: PRESENT
+- A1 native file: aegis-cortex/2026-10-04-A1-reliability-observe.md
+- A2 native file: aegis-cortex/2026-10-04-A2-doctrine-orient.md
+- A2 exact blob: 08f105bfae915c994d411e8ab86d421db03f9c42
+- Scope decision: original task-time source/incident distinction retained; producer content was not re-executed
+
+### 2026-10-05 Aegis A1 → A2 evidence gate
+- A1 Git-tree presence: PRESENT
+- A1 native file: aegis-cortex/2026-10-05-A1-reliability-observe.md
+- A2 native file: aegis-cortex/2026-10-05-A2-doctrine-orient.md
+- A2 exact blob: 98139f531397d66bde60765a38f9b0c683d936ab
+- Scope decision: original task-time source/incident distinction retained; producer content was not re-executed
+
+### 2026-10-06 Aegis A1 → A2 evidence gate
+- A1 Git-tree presence: PRESENT
+- A1 native file: aegis-cortex/2026-10-06-A1-reliability-observe.md
+- A2 native file: aegis-cortex/2026-10-06-A2-doctrine-orient.md
+- A2 exact blob: 6cb80c4d899b533c539ad487b274c1b168db9724
+- Scope decision: original task-time source/incident distinction retained; producer content was not re-executed
+
+### 2026-10-07 Aegis A1 → A2 evidence gate
+- A1 Git-tree presence: PRESENT
+- A1 native file: aegis-cortex/2026-10-07-A1-reliability-observe.md
+- A2 native file: aegis-cortex/2026-10-07-A2-doctrine-orient.md
+- A2 exact blob: 9bd6c75a310832f7cc58c9ae399f41acfdf4d950
+- Scope decision: original task-time source/incident distinction retained; producer content was not re-executed
+
+### 2026-10-08 Aegis A1 → A2 evidence gate
+- A1 Git-tree presence: PRESENT
+- A1 native file: aegis-cortex/2026-10-08-A1-reliability-observe.md
+- A2 native file: aegis-cortex/2026-10-08-A2-doctrine-orient.md
+- A2 exact blob: 9815107064b4fed9aa0983143c4b329b5f28a675
+- Scope decision: original task-time source/incident distinction retained; producer content was not re-executed
+
+### 2026-10-09 Aegis A1 → A2 evidence gate
+- A1 Git-tree presence: PRESENT
+- A1 native file: aegis-cortex/2026-10-09-A1-reliability-observe.md
+- A2 native file: aegis-cortex/2026-10-09-A2-doctrine-orient.md
+- A2 exact blob: 2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124
+- Scope decision: original task-time source/incident distinction retained; producer content was not re-executed
+
+### 2026-10-10 Aegis A1 → A2 evidence gate
+- A1 Git-tree presence: PRESENT
+- A1 native file: aegis-cortex/2026-10-10-A1-reliability-observe.md
+- A2 native file: aegis-cortex/2026-10-10-A2-doctrine-orient.md
+- A2 exact blob: ce4f369d35fda91ddeeb975679a89ee4fe1f2314
+- A2 Task Status: - Task Status: SUCCESS
+- A2 Network Status: - Network Status: NETWORK_VERIFIED
+- A2 Source Status: - Source Status: SINGLE_SOURCE_LINEAGE
+- Scope decision: original task-time source/incident distinction retained; producer content was not re-executed
+
+### 2026-10-11 Aegis A1 → A2 evidence gate
+- A1 Git-tree presence: PRESENT
+- A1 native file: aegis-cortex/2026-10-11-A1-reliability-observe.md
+- A2 native file: aegis-cortex/2026-10-11-A2-doctrine-orient.md
+- A2 exact blob: d3882e3530ce98550a10f93ba4221afbb270c83c
+- A2 Task Status: - Task Status: SUCCESS
+- A2 Network Status: - Network Status: NETWORK_VERIFIED
+- A2 Source Status: - Source Status: SINGLE_SOURCE_LINEAGE
+- Scope decision: original task-time source/incident distinction retained; producer content was not re-executed
+
+### 2026-10-12 Aegis A1 → A2 evidence gate
+- A1 Git-tree presence: PRESENT
+- A1 native file: aegis-cortex/2026-10-12-A1-reliability-observe.md
+- A2 native file: aegis-cortex/2026-10-12-A2-doctrine-orient.md
+- A2 exact blob: 6ed3797a34699a9eae821c7bb2a8c8797459b17f
+- A2 Task Status: - Task Status: SUCCESS
+- A2 Network Status: - Network Status: NETWORK_VERIFIED
+- A2 Source Status: - Source Status: SINGLE_SOURCE_LINEAGE
+- Scope decision: original task-time source/incident distinction retained; producer content was not re-executed
+
+### 2026-10-13 Aegis A1 → A2 evidence gate
+- A1 Git-tree presence: PRESENT
+- A1 native file: aegis-cortex/2026-10-13-A1-reliability-observe.md
+- A2 native file: aegis-cortex/2026-10-13-A2-doctrine-orient.md
+- A2 exact blob: 1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22
+- A2 Task Status: - Task Status: `DEGRADED`
+- A2 Input Status: - Input Status: `INPUT_PRESENT`
+- A2 Network Status: - Network Status: `PARTIAL_PRIMARY_SOURCE_RECHECK`
+- A2 Source Status: - Source Status: `SINGLE_SOURCE_LINEAGE`
+- A2 Local Incident Evidence: - Local Incident Evidence: `NO_LOCAL_EVIDENCE_IN_REVIEWED_AEGIS_RECORDS`
+- A2 Host Applicability: - Host Applicability: `UNKNOWN`
+- A2 Record Provenance: - Record Provenance: `HUMAN_AUTHORIZED_SUBSTITUTE`
+- A2 GitHub Actions Inspection: - Host Implementation / GitHub Actions Inspection: `NOT_PERFORMED`
+- Scope decision: original task-time source/incident distinction retained; producer content was not re-executed
+
+### A1 disposition
+- Native task files modified: 0
+- Historical risk/no-local-evidence and uncertainty preserved
+- A1 records producer-reported claims and their source provenance, no effect-time guarantees
+- 2026-10-14 native #644/#645 and correction #646 enter later A2
+- Gate: A1 merge, fresh read, A2 through 10/14
