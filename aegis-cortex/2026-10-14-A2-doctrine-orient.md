@@ -101,3 +101,14 @@
 - **External risk and local incident properly separated**: YES
 - **No final discipline decisions made**: YES
 - **No external risks written as local truths**: YES
+
+## Forward correction — 2026-10-14 — A2 source-depth evidence boundary
+
+- Original native A2 producer PR: #645; original task-time content and producer-reported status: PRESERVED
+- Correction type: VERIFICATION_DEPTH_RECONCILIATION
+- The original A2 `RISK_CLASSIFICATION` used `VERIFIED_VIA_FULL_TEXT`, while A2 `INPUT_RECORD` describes its own access as arXiv API metadata and abstract verification
+- Original A2 full-text verification evidence: NOT_ESTABLISHED_BY_THE_RECORDED_A2_METHOD
+- The same-day A1 document separately records `Access Status: ACCESSED_FULL_TEXT`; that is an A1 producer-reported access level, not evidence of an independent A2 full-text reread
+- Effective A2 verification-depth interpretation: METADATA_AND_ABSTRACT_VERIFIED_AS_REPORTED; A1_FULL_TEXT_ACCESS_PRODUCER_REPORTED_SEPARATELY
+- Source identity remains `arXiv:2609.02371v1`; this correction adds no source, independent corroboration, local incident, execution, or risk-promotion credit
+- The existing `EXTERNAL_FAILURE_MODE_EVIDENCE`, `SINGLE_SOURCE_LINEAGE`, `NO_LOCAL_EVIDENCE`, and current uncertainty boundaries remain unchanged
