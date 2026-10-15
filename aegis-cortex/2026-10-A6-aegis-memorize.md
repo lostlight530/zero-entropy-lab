@@ -4922,3 +4922,19 @@ DUPLICATE_EVIDENCE_CREDIT
 - This A2 inherits all previous A1 source/identity checks and adds date 15 only after all ten A1 merges.
 - Verification must inspect this A2 diff, merge result, new main SHA and current owner blob.
 
+## 2026-10-15 forward correction — native A2 main-visibility failure (post-merge audit)
+- Record class: `FORWARD_RECONCILIATION`, author `external-independent-GPT`, performed after the completed October 15 ten-repo A1/A2 maintenance rounds; this is **not** a Jules native A2 rerun.
+- Authority: current main `cb68946b4ebd2bd018552126d0260c12a9e11216`; original A1 blob `293272cf6ae77efc28491dc69597d0652f4ca751`, original A2 blob `896901e892647ab19b584fa077363afc5e4e89ab`.
+- Original A1 execution: `2026-10-14T23:52:51Z`, marked `SUCCESS` in its own native record; native producer A1 PR #654 merged `2026-10-15T01:36:37Z`.
+- Original A2 execution: `2026-10-15T00:51:04Z`, marked `BLOCKED / INPUT_MISSING / NOT_RUN`; native producer A2 PR #653 merged `2026-10-15T01:15:42Z`.
+- Causal fact: at A2 start/merge, A1 was not yet visible on authoritative main; later A1 presence cannot retrospectively satisfy the A2 precondition.
+- Current read: A1 path now exists and is `SUCCESS` as a dated producer claim; A2 artifact remains the original `BLOCKED`. Both statements are simultaneously true and must travel together.
+- A2 source status is **not** `SUCCESS`, even though its PR and October independent maintenance A2 #657 are both merged; these are three different task identities.
+- No A2 source material, external risk checks, network verification, local incident classification, week decision, or newly executed agent runtime has been reproduced by this review.
+- Original `NO_LOCAL_EVIDENCE` from A1 applies only to its bounded native scope; it does not prove that a local attack is impossible.
+- Remediation classification: `DEPENDENCY_ORDER_GATE_CORRECTABLE_FORWARD`; task-time execution result: `HISTORICAL_BLOCKED_IMMUTABLE`.
+- Forward native task admission requirement: producer must refresh authoritative main and independently verify same-logical-date A1 blob, admissible task status, and merge visibility before running A2.
+- If a genuine A2 successor is later executed, use its own verifiable logical period, producer, base SHA and run identifier; preserve the October 15 failed point-in-time native report unchanged.
+- W42 A3/A4 and monthly A5/A6 must treat October 15 A2 as unavailable for risk promotion; no discipline or long-memory promotion by inference.
+- Current closure of this correction: `REPOSITORY_VISIBILITY_CONFIRMED`, `NATIVE_A2_REEXECUTION_NOT_PERFORMED`, `DOWNSTREAM_ADMISSION_BLOCKED`, `MONTH_OPEN`.
+- Actions/Pages or independent A2 PR success do not substitute for Jules A2 network/source execution evidence.
