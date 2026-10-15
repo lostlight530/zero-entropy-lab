@@ -4595,3 +4595,154 @@ DUPLICATE_EVIDENCE_CREDIT
 - Producer A1 and A2 remain separately attributable to native Jules execution
 - No original source edited, no risk-to-doctrine auto promotion, no host runtime test
 - Month remains OPEN / PROVISIONAL_NOT_FINAL
+
+## 2026-10-15 A1 | October 01–14 original daily file-by-file evidence gate
+- Maintenance producer: external independent GPT; native producer identity: retained Jules/assigned native task; no original daily source overwritten.
+- Original main authority at A1 start: 434032713435d9cad69f5fe6c84a61c03c1fae13; existing monthly owner blob: 75472bf723b37c59f97d81d61501931e8ddc7a45.
+- Cutoff: inclusive 2026-10-01..2026-10-14; 2026-10-15 inputs deliberately excluded for next A2.
+- File identity is Git blob (not execution certificate); task status below transcribed from individually fetched original daily records.
+- Network/verification descriptors are producer-reported; this maintenance did not rerun network calls or validate external facts.
+- Earlier October monthly A1 and A2 history remains immutable; this is a new dated maintenance checkpoint.
+- The two daily source tasks are separate; a merged downstream PR is not automatic source admissibility.
+- No original daily or weekly files modified by this A1.
+
+### 2026-10-01 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-01-A1-reliability-observe.md`; main blob prefix `461882e16809`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-01-A2-doctrine-orient.md`; main blob prefix `450bb5e41ba1`.
+- A2 observed producer task status: `BLOCKED`; recorded input: `INPUT_MISSING`; network: `NOT_RUN`.
+- 2026-10-01 causal decision: A2 input gate failed at its original execution (INPUT_MISSING); presence of A1 on this refreshed main does not cure the historical failure.
+- 2026-10-01 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### 2026-10-02 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-02-A1-reliability-observe.md`; main blob prefix `abe20d48251f`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-02-A2-doctrine-orient.md`; main blob prefix `c590dffb8dc2`.
+- A2 observed producer task status: `BLOCKED`; recorded input: `INPUT_MISSING`; network: `NOT_RUN`.
+- 2026-10-02 causal decision: A2 input gate failed at its original execution (INPUT_MISSING); presence of A1 on this refreshed main does not cure the historical failure.
+- 2026-10-02 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### 2026-10-03 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-03-A1-reliability-observe.md`; main blob prefix `0f37ab4b605a`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-03-A2-doctrine-orient.md`; main blob prefix `3c95e23cfa61`.
+- A2 observed producer task status: `SUCCESS`; recorded input: `INPUT_PRESENT`; network: `NETWORK_VERIFIED`.
+- 2026-10-03 causal decision: A2 source record says SUCCESS with input INPUT_PRESENT; task success is confined to its recorded native scope.
+- 2026-10-03 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### 2026-10-04 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-04-A1-reliability-observe.md`; main blob prefix `88fcc05dd273`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-04-A2-doctrine-orient.md`; main blob prefix `08f105bfae91`.
+- A2 observed producer task status: `BLOCKED`; recorded input: `INPUT_MISSING`; network: `NOT_RUN`.
+- 2026-10-04 causal decision: A2 input gate failed at its original execution (INPUT_MISSING); presence of A1 on this refreshed main does not cure the historical failure.
+- 2026-10-04 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### 2026-10-05 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-05-A1-reliability-observe.md`; main blob prefix `11701da8dff9`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-05-A2-doctrine-orient.md`; main blob prefix `98139f531397`.
+- A2 observed producer task status: `SUCCESS`; recorded input: `SUCCESS`; network: `NETWORK_VERIFIED`.
+- 2026-10-05 causal decision: A2 source record says SUCCESS with input SUCCESS; task success is confined to its recorded native scope.
+- 2026-10-05 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### 2026-10-06 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-06-A1-reliability-observe.md`; main blob prefix `56abc25eca5f`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-06-A2-doctrine-orient.md`; main blob prefix `6cb80c4d899b`.
+- A2 observed producer task status: `SUCCESS`; recorded input: `INPUT_PRESENT`; network: `NETWORK_VERIFIED`.
+- 2026-10-06 causal decision: A2 source record says SUCCESS with input INPUT_PRESENT; task success is confined to its recorded native scope.
+- 2026-10-06 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### 2026-10-07 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-07-A1-reliability-observe.md`; main blob prefix `12c9266cc5f1`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-07-A2-doctrine-orient.md`; main blob prefix `9bd6c75a3108`.
+- A2 observed producer task status: `SUCCESS`; recorded input: `INPUT_PRESENT`; network: `NETWORK_VERIFIED`.
+- 2026-10-07 causal decision: A2 source record says SUCCESS with input INPUT_PRESENT; task success is confined to its recorded native scope.
+- 2026-10-07 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### 2026-10-08 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-08-A1-reliability-observe.md`; main blob prefix `5c91de675c4d`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-08-A2-doctrine-orient.md`; main blob prefix `9815107064b4`.
+- A2 observed producer task status: `SUCCESS`; recorded input: `INPUT_PRESENT`; network: `NETWORK_VERIFIED`.
+- 2026-10-08 causal decision: A2 source record says SUCCESS with input INPUT_PRESENT; task success is confined to its recorded native scope.
+- 2026-10-08 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### 2026-10-09 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-09-A1-reliability-observe.md`; main blob prefix `e5b385ba25e8`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-09-A2-doctrine-orient.md`; main blob prefix `2f96bb0dd589`.
+- A2 observed producer task status: `SUCCESS`; recorded input: `INPUT_PRESENT`; network: `NETWORK_VERIFIED`.
+- 2026-10-09 causal decision: A2 source record says SUCCESS with input INPUT_PRESENT; task success is confined to its recorded native scope.
+- 2026-10-09 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### 2026-10-10 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-10-A1-reliability-observe.md`; main blob prefix `bfbe8f099a74`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-10-A2-doctrine-orient.md`; main blob prefix `ce4f369d35fd`.
+- A2 observed producer task status: `SUCCESS`; recorded input: `INPUT_PRESENT`; network: `NETWORK_VERIFIED`.
+- 2026-10-10 causal decision: A2 source record says SUCCESS with input INPUT_PRESENT; task success is confined to its recorded native scope.
+- 2026-10-10 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### 2026-10-11 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-11-A1-reliability-observe.md`; main blob prefix `bc3c4ba9cf48`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-11-A2-doctrine-orient.md`; main blob prefix `d3882e3530ce`.
+- A2 observed producer task status: `SUCCESS`; recorded input: `INPUT_PRESENT`; network: `NETWORK_VERIFIED`.
+- 2026-10-11 causal decision: A2 source record says SUCCESS with input INPUT_PRESENT; task success is confined to its recorded native scope.
+- 2026-10-11 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### 2026-10-12 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-12-A1-reliability-observe.md`; main blob prefix `72d7f662d70f`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-12-A2-doctrine-orient.md`; main blob prefix `6ed3797a3469`.
+- A2 observed producer task status: `SUCCESS`; recorded input: `INPUT_PRESENT`; network: `NETWORK_VERIFIED`.
+- 2026-10-12 causal decision: A2 source record says SUCCESS with input INPUT_PRESENT; task success is confined to its recorded native scope.
+- 2026-10-12 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### 2026-10-13 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-13-A1-reliability-observe.md`; main blob prefix `a5d0ca039bbe`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-13-A2-doctrine-orient.md`; main blob prefix `1404e3a91cb6`.
+- A2 observed producer task status: `DEGRADED`; recorded input: `INPUT_PRESENT`; network: `PARTIAL_PRIMARY_SOURCE_RECHECK`.
+- 2026-10-13 causal decision: A2 ran with bounded/degraded evidence; source claims must not be upgraded to independently verified evidence.
+- 2026-10-13 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### 2026-10-14 | A1 → A2
+- A1 original: `aegis-cortex/2026-10-14-A1-reliability-observe.md`; main blob prefix `1def392d03eb`.
+- A1 observed producer task status: `SUCCESS`; recorded network: `NETWORK_VERIFIED`.
+- A1 evidentiary limit: successful producer report is not an independent external re-execution.
+- A2 original: `aegis-cortex/2026-10-14-A2-doctrine-orient.md`; main blob prefix `c7b33ecece64`.
+- A2 observed producer task status: `SUCCESS`; recorded input: `INPUT_PRESENT`; network: `NETWORK_VERIFIED`.
+- 2026-10-14 causal decision: A2 source record says SUCCESS with input INPUT_PRESENT; task success is confined to its recorded native scope.
+- 2026-10-14 month decision: maintain two distinct native objects, two original source revisions, and their unmodified execution-time classification.
+
+### Weekly, monthly, upstream authority and completion boundary
+- Weekly sources: W40/W41 A3,A4: existing weekly discipline/protocol source files retained. Weekly discipline is not a surrogate for daily A2 network/source success; monthly A5/A6 final not due.
+- Monthly rolling owner is a relation and memory product, not a replay or unblocking of native daily producer tasks.
+- Date-scoped A2 BLOCKED count observed in this 14-day window: 3; retained, not normalized away.
+- Historical source degradation, partial external checks, and single-publisher lineage require explicit conditional language at later aggregation stages.
+- Do not infer host runtime implementation, scientific reproduction, independent corroboration, or disciplinary action from file counts.
+- Do not treat open/closed PR status alone as task-execution success; original file status controls.
+- A2 may start only after all ten A1 PRs are merged, followed by ten-repo fresh-read of main.
+- A2 inclusion date 2026-10-15 must be checked again from original current-main records, including any newly corrected producer evidence.
+- The original producer can carry an admissible BLOCKED status without any fictional remedial run.
+- A1 review disposition: historical native facts and explicit gaps preserved; October final remains OPEN.
+- Runtime/test claims by this independent maintainer: NOT_EXECUTED; maintenance checks are source identity and relationship checks.
+- A1 PR must be checked for its real diff, merge result, and post-merge owner blob before downstream gate.
+
