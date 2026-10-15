@@ -4746,3 +4746,179 @@ DUPLICATE_EVIDENCE_CREDIT
 - Runtime/test claims by this independent maintainer: NOT_EXECUTED; maintenance checks are source identity and relationship checks.
 - A1 PR must be checked for its real diff, merge result, and post-merge owner blob before downstream gate.
 
+## A2 2026-10-15 | Aegis A1/A2 month, W40–W42 and Ballast independent relation
+- Authority: all-ten-A1-merged main da744445f958b2eb426498ed75be3b8601c6b412, inherited A1 owner blob ddb78f649650bfc6ce4bbc91c3ed92acc822ace7 and merged A1 PR #656.
+- Namespace: zero/aegis/A1 and zero/aegis/A2 are native daily tasks, not the independent ten-SOP maintenance A1/A2.
+- Original October 15 native A1: PR #654 merged 2026-10-15T01:36:37Z, source task executed 2026-10-14T23:52:51Z, SUCCESS.
+- Original October 15 native A2: PR #653 merged 2026-10-15T01:15:42Z, task executed 2026-10-15T00:51:04Z, BLOCKED / INPUT_MISSING / NOT_RUN.
+- This is an upstream main-visibility/delivery-order race, not a successful A2 run after A1 later appears; original status remains BLOCKED.
+- Later A1 merge does not revise earlier A2 historical fact; any genuine remedial execution requires a separately attributable source record.
+- Ballast daily 15 source objects are independent research experiments and do not provide Aegis A2 doctrine input retroactively.
+- Weekly original A3/A4 are separate native producers, monthly A5/A6 are not prematurely finalized; W42 ongoing and month OPEN.
+- No external Aegis risk test, host-side security implementation, or Ballast experiment rerun performed by this maintenance.
+
+### 2026-10-01 | W40 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-01-A1-reliability-observe.md`, blob `461882e16809ef9b442b3c6d47b45f44418660b5`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-01-A2-doctrine-orient.md`, blob `450bb5e41ba1f4f52f605632a3522797568429c5`, original task report `BLOCKED`, producer input `INPUT_MISSING`.
+- 2026-10-01 dependency: original A1 visibility gate blocked; do not classify A2 as orientation success.
+- Independent Ballast `ballast/records/2026-10-01.md`, source blob `21a2dbd84f4a7e05bc64f78aa934d824a4a96593`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W40 relation: native weekly discipline and protocol documents retain historical decision authority.
+- 2026-10-01 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-01 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-01 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-02 | W40 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-02-A1-reliability-observe.md`, blob `abe20d48251fc36893884f355421e896e3f3631a`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-02-A2-doctrine-orient.md`, blob `c590dffb8dc28fb701174e6dfafe2c3697f97b37`, original task report `BLOCKED`, producer input `INPUT_MISSING`.
+- 2026-10-02 dependency: original A1 visibility gate blocked; do not classify A2 as orientation success.
+- Independent Ballast `ballast/records/2026-10-02.md`, source blob `1081112e8ef7f9c1d3e4415c2cf1edb297419a58`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W40 relation: native weekly discipline and protocol documents retain historical decision authority.
+- 2026-10-02 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-02 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-02 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-03 | W40 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-03-A1-reliability-observe.md`, blob `0f37ab4b605a24006a862a9837564a459c0c1298`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-03-A2-doctrine-orient.md`, blob `3c95e23cfa6187d0c23f607d622e2e8353051b13`, original task report `SUCCESS`, producer input `INPUT_PRESENT`.
+- 2026-10-03 dependency: original A2 reports completion within its own bounded source checks.
+- Independent Ballast `ballast/records/2026-10-03.md`, source blob `82df0f7d4e36c844f76bfed4b23bd1ece6a46b53`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W40 relation: native weekly discipline and protocol documents retain historical decision authority.
+- 2026-10-03 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-03 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-03 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-04 | W40 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-04-A1-reliability-observe.md`, blob `88fcc05dd273fbb361963435211e38447ea67a9c`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-04-A2-doctrine-orient.md`, blob `08f105bfae915c994d411e8ab86d421db03f9c42`, original task report `BLOCKED`, producer input `INPUT_MISSING`.
+- 2026-10-04 dependency: original A1 visibility gate blocked; do not classify A2 as orientation success.
+- Independent Ballast `ballast/records/2026-10-04.md`, source blob `649882d3a0bbb7939481f5f2bb43aea4f268b9c8`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W40 relation: native weekly discipline and protocol documents retain historical decision authority.
+- 2026-10-04 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-04 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-04 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-05 | W41 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-05-A1-reliability-observe.md`, blob `11701da8dff9882ef4e8d4f174abc062abd41404`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-05-A2-doctrine-orient.md`, blob `98139f531397d66bde60765a38f9b0c683d936ab`, original task report `SUCCESS`, producer input `SUCCESS`.
+- 2026-10-05 dependency: original A2 reports completion within its own bounded source checks.
+- Independent Ballast `ballast/records/2026-10-05.md`, source blob `b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W41 relation: native weekly discipline and protocol documents retain historical decision authority.
+- 2026-10-05 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-05 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-05 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-06 | W41 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-06-A1-reliability-observe.md`, blob `56abc25eca5f0e9e2aa537be5924c6045162815c`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-06-A2-doctrine-orient.md`, blob `6cb80c4d899b533c539ad487b274c1b168db9724`, original task report `SUCCESS`, producer input `INPUT_PRESENT`.
+- 2026-10-06 dependency: original A2 reports completion within its own bounded source checks.
+- Independent Ballast `ballast/records/2026-10-06.md`, source blob `2ad5c5ce4a3fc4228f089eaacf94109e4210a66f`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W41 relation: native weekly discipline and protocol documents retain historical decision authority.
+- 2026-10-06 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-06 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-06 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-07 | W41 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-07-A1-reliability-observe.md`, blob `12c9266cc5f1fe0837a736e7ec9ed4505e7ba4a5`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-07-A2-doctrine-orient.md`, blob `9bd6c75a310832f7cc58c9ae399f41acfdf4d950`, original task report `SUCCESS`, producer input `INPUT_PRESENT`.
+- 2026-10-07 dependency: original A2 reports completion within its own bounded source checks.
+- Independent Ballast `ballast/records/2026-10-07.md`, source blob `7f20b476517f31e4d890e64880b2eeb4b8248bf7`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W41 relation: native weekly discipline and protocol documents retain historical decision authority.
+- 2026-10-07 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-07 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-07 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-08 | W41 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-08-A1-reliability-observe.md`, blob `5c91de675c4dc78aba0f419ab5f7added9c29fd7`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-08-A2-doctrine-orient.md`, blob `9815107064b4fed9aa0983143c4b329b5f28a675`, original task report `SUCCESS`, producer input `INPUT_PRESENT`.
+- 2026-10-08 dependency: original A2 reports completion within its own bounded source checks.
+- Independent Ballast `ballast/records/2026-10-08.md`, source blob `8d24c4cfc5362b7c81b60a6888d875e6960342aa`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W41 relation: native weekly discipline and protocol documents retain historical decision authority.
+- 2026-10-08 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-08 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-08 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-09 | W41 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-09-A1-reliability-observe.md`, blob `e5b385ba25e8a4ef9a68401080dab545592ddf4b`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-09-A2-doctrine-orient.md`, blob `2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124`, original task report `SUCCESS`, producer input `INPUT_PRESENT`.
+- 2026-10-09 dependency: original A2 reports completion within its own bounded source checks.
+- Independent Ballast `ballast/records/2026-10-09.md`, source blob `cce84778a3f752461a1d82b9c38f5057f3950fd3`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W41 relation: native weekly discipline and protocol documents retain historical decision authority.
+- 2026-10-09 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-09 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-09 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-10 | W41 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-10-A1-reliability-observe.md`, blob `bfbe8f099a7413cdd5a8f1466a180d9e2d78f975`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-10-A2-doctrine-orient.md`, blob `ce4f369d35fda91ddeeb975679a89ee4fe1f2314`, original task report `SUCCESS`, producer input `INPUT_PRESENT`.
+- 2026-10-10 dependency: original A2 reports completion within its own bounded source checks.
+- Independent Ballast `ballast/records/2026-10-10.md`, source blob `d2702d66363b0e8a6ea645aff60a6475a1ca003c`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W41 relation: native weekly discipline and protocol documents retain historical decision authority.
+- 2026-10-10 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-10 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-10 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-11 | W41 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-11-A1-reliability-observe.md`, blob `bc3c4ba9cf48045bb05f02e65901dd02ad5464f1`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-11-A2-doctrine-orient.md`, blob `d3882e3530ce98550a10f93ba4221afbb270c83c`, original task report `SUCCESS`, producer input `INPUT_PRESENT`.
+- 2026-10-11 dependency: original A2 reports completion within its own bounded source checks.
+- Independent Ballast `ballast/records/2026-10-11.md`, source blob `b35c69acee29b194d597d3eedd942dd4cc7243a0`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W41 relation: native weekly discipline and protocol documents retain historical decision authority.
+- 2026-10-11 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-11 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-11 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-12 | W42 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-12-A1-reliability-observe.md`, blob `72d7f662d70f5c73301fd8bec7c8351f0e1a7349`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-12-A2-doctrine-orient.md`, blob `6ed3797a34699a9eae821c7bb2a8c8797459b17f`, original task report `SUCCESS`, producer input `INPUT_PRESENT`.
+- 2026-10-12 dependency: original A2 reports completion within its own bounded source checks.
+- Independent Ballast `ballast/records/2026-10-12.md`, source blob `02fe0896ac9c41ae336cda04e69f133460e0a742`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W42 relation: open partial week, no final A3/A4 conclusion yet.
+- 2026-10-12 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-12 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-12 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-13 | W42 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-13-A1-reliability-observe.md`, blob `a5d0ca039bbe4b93b8b59e5e671bcf76ff82ba87`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-13-A2-doctrine-orient.md`, blob `1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22`, original task report `DEGRADED`, producer input `INPUT_PRESENT`.
+- 2026-10-13 dependency: native A2 retains DEGRADED/partial evidence and must be aggregated conditionally.
+- Independent Ballast `ballast/records/2026-10-13.md`, source blob `cc09eb3e1746cf4e555880ab4304b28c63341a4c`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W42 relation: open partial week, no final A3/A4 conclusion yet.
+- 2026-10-13 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-13 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-13 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-14 | W42 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-14-A1-reliability-observe.md`, blob `1def392d03eb7bb03c428d696d4acb923454112f`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-14-A2-doctrine-orient.md`, blob `c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd`, original task report `SUCCESS`, producer input `INPUT_PRESENT`.
+- 2026-10-14 dependency: original A2 reports completion within its own bounded source checks.
+- Independent Ballast `ballast/records/2026-10-14.md`, source blob `98a752267cd0c2beff5d2770ecf1672a6c869e3b`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W42 relation: open partial week, no final A3/A4 conclusion yet.
+- 2026-10-14 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-14 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-14 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### 2026-10-15 | W42 Aegis native versus Ballast independent research
+- Native zero/aegis/A1: `aegis-cortex/2026-10-15-A1-reliability-observe.md`, blob `293272cf6ae77efc28491dc69597d0652f4ca751`, original task report `SUCCESS`.
+- Native zero/aegis/A2: `aegis-cortex/2026-10-15-A2-doctrine-orient.md`, blob `896901e892647ab19b584fa077363afc5e4e89ab`, original task report `BLOCKED`, producer input `INPUT_MISSING`.
+- 2026-10-15 dependency: original A1 visibility gate blocked; do not classify A2 as orientation success.
+- Independent Ballast `ballast/records/2026-10-15.md`, source blob `2f94b0b736cd8e3ffda03794462a12d3b50a3bc3`; not an Aegis A1/A2 run or an external validation of a local Aegis incident.
+- W42 relation: open partial week, no final A3/A4 conclusion yet.
+- 2026-10-15 incident boundary: an external paper/risk does not independently establish a local zero-entropy-lab failure or real host-side action.
+- 2026-10-15 monthly attribution: producer states are preserved at their original task time, even if later files or PR merges became visible.
+- 2026-10-15 follow-up state: do not rewrite the existing native Daily artifact; carry uncertainty and remediation gate forward.
+
+### Monthly evidence and remediation decision
+- zero/aegis/A1 native 2026-10-15 source blob: `293272cf6ae77efc28491dc69597d0652f4ca751`; zero/aegis/A2 native BLOCKED source blob: `896901e892647ab19b584fa077363afc5e4e89ab`.
+- Native A1 execution at 07:52 Shanghai, original native A2 at 08:51 Shanghai, but A1 PR merged only 09:36 Shanghai.
+- Native A2 merge at 09:15 Shanghai precedes A1 merge; this later repository-state repair is not a backdated native rerun.
+- The correct automated readiness invariant is same-day A1 merged into authoritative main before A2 attempts to consume it.
+- W40 and W41 A3/A4 files remain separate native weekly outputs; A2 is not a substitute for those producer decisions.
+- W42 weekly settlement and October A5/A6 final remain NOT_DUE at October 15 cutoff.
+- Ballast original 15 daily research files remain an independent plane with separate effect/experiment evidence status.
+- The independent maintenance layer must never convert external risk narrative into verified local incident claims.
+- Prior source-depth or partial full-text checks remain exactly as originally bounded, especially 2026-10-13.
+- No native Aegis or Ballast source file, host runtime, open-science material or research template was modified in this A2.
+- Month state: OPEN / native A2 Oct15 BLOCKED / no automatic doctrine promotion.
+- This A2 inherits all previous A1 source/identity checks and adds date 15 only after all ten A1 merges.
+- Verification must inspect this A2 diff, merge result, new main SHA and current owner blob.
+
