@@ -1,0 +1,71 @@
+{
+  "logical_date": "2026-10-16",
+  "actual_execution_utc": "2026-10-15T20:10:18.124Z",
+  "base_sha": "bb5161d9c9829692696e084a096ea3f96e4c59bb",
+  "producer_entrypoint": "GitHub-persisted JavaScript function evaluated in isolated V8",
+  "verifier_entrypoint": "separate GitHub-persisted JavaScript verifier evaluated in isolated V8",
+  "producer_blob_sha": "fafc4ce03685062ceb29ffc8dbcb52e3863df0b9",
+  "verifier_blob_sha": "b5f03577eb1c024b3fc454a8fb5277315b29b54c",
+  "producer": {
+    "scenario_count": 30,
+    "decision_rows": 120,
+    "frozen_mismatches": [],
+    "real_effects": 0,
+    "retries": 0
+  },
+  "verifier": {
+    "scenario_count": 30,
+    "row_count": 120,
+    "errors": [],
+    "negative_controls": 26,
+    "negative_rejected": 26,
+    "negative_failures": [],
+    "status": "PASS"
+  },
+  "paths": {
+    "cancel_only": {
+      "verified": 29,
+      "modeled_false_verified": 27,
+      "disagreements": 28
+    },
+    "queue_only": {
+      "verified": 29,
+      "modeled_false_verified": 27,
+      "disagreements": 28
+    },
+    "compensation_count": {
+      "verified": 20,
+      "modeled_false_verified": 18,
+      "disagreements": 28
+    },
+    "full_integrity": {
+      "verified": 3,
+      "modeled_false_verified": 0,
+      "disagreements": 0
+    }
+  },
+  "pre_repair_reference_attack": {
+    "probes": 2,
+    "false_verifications": 2,
+    "names": [
+      "forward-original-misbinding",
+      "hit-scope-mismatch"
+    ],
+    "repair": "bound forward original identity and scoped positive HIT in producer and verifier before final run"
+  },
+  "not_executed": [
+    "standalone Node CLI",
+    "full Python ballast/tools/check.py",
+    "live Saga workflow",
+    "independently authoritative effect sink",
+    "real cancellation/compensation",
+    "trusted temporal evidence",
+    "semantically independent verifier"
+  ],
+  "independence": {
+    "implementation": "PARTIAL",
+    "data_source": "NONE",
+    "semantic_contract": "LIMITED_SHARED_CONTRACT",
+    "authority": "NONE"
+  }
+}

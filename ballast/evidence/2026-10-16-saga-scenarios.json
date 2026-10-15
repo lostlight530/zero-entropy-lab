@@ -1,0 +1,3273 @@
+{
+  "schema": "ballast-saga-compensation-bounded",
+  "logical_date": "2026-10-16",
+  "base_sha": "bb5161d9c9829692696e084a096ea3f96e4c59bb",
+  "source_access_date": "2026-10-16",
+  "scenario_kind": "authored deterministic primitives, not external sink observations",
+  "scenarios": [
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "valid-historical-after-current-revocation",
+      "frozen_expected": "verified-aborted",
+      "injection": "post-effect current permission false"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": false,
+      "compensationQueued": false,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "valid-despite-lost-cancel-ack",
+      "frozen_expected": "verified-aborted",
+      "injection": "control-plane ack absent, exact history valid"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [],
+      "comp": [],
+      "prior": [
+        {
+          "state": "authoritative miss",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "authoritative miss",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "authoritative miss",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "authoritative miss",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "covered-no-effect-abort",
+      "frozen_expected": "verified-aborted",
+      "injection": "covered original absence and no compensations"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 100
+      },
+      "currentPermission": true,
+      "protectedNewEffect": true,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "authoritative miss",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "known-forward-pending-compensation-authorized",
+      "frozen_expected": "eligible-compensation",
+      "injection": "one exact compensation pending and authorized"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 100
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "authoritative miss",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "known-forward-pending-compensation-revoked",
+      "frozen_expected": "permission-stop",
+      "injection": "pending new compensation lacks current permission"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 100
+      },
+      "currentPermission": true,
+      "protectedNewEffect": true,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "unknown",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "pending-compensation-unknown-prior",
+      "frozen_expected": "safe-stop-unknown",
+      "injection": "no compensation receipt and unresolved old compensation"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 100
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "compensation-hit-without-exact-receipt",
+      "frozen_expected": "safe-stop-unknown",
+      "injection": "aggregate HIT cannot substitute exact receipt"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "authoritative miss",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "covered-compensation-miss-conflicts-with-receipt",
+      "frozen_expected": "evidence-conflict",
+      "injection": "positive compensation receipt and authoritative miss"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "authoritative miss",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "covered-original-miss-conflicts-with-receipt",
+      "frozen_expected": "evidence-conflict",
+      "injection": "positive original receipt and authoritative miss"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "unknown",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "original-unknown-without-receipt",
+      "frozen_expected": "safe-stop-unknown",
+      "injection": "old non-idempotent outcome unknown"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "authoritative miss",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 5,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "original-miss-stale-watermark",
+      "frozen_expected": "safe-stop-unknown",
+      "injection": "miss outside visibility horizon"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "authoritative miss",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": false,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "original-miss-expired-retention",
+      "frozen_expected": "safe-stop-unknown",
+      "injection": "miss outside retention"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "duplicate-compensation-receipt",
+      "frozen_expected": "duplicate-effect",
+      "injection": "count equality masks duplicated refund"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        },
+        {
+          "receiptId": "c-extra",
+          "effect": "refund-extra@acct-u5",
+          "original": "unplanned@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "extra-compensation-receipt",
+      "frozen_expected": "extra-effect",
+      "injection": "two required plus extra refund"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "compensation-bound-to-wrong-original",
+      "frozen_expected": "original-binding-mismatch",
+      "injection": "refund binds wrong original"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u6",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "compensation-wrong-incarnation",
+      "frozen_expected": "target-incarnation-mismatch",
+      "injection": "same logical account, new incarnation"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": false,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "compensation-historically-unauthorized",
+      "frozen_expected": "historically-unauthorized",
+      "injection": "compensation occurred without effect-time approval"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": false,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "forward-historically-unauthorized",
+      "frozen_expected": "historically-unauthorized",
+      "injection": "forward occurrence was unauthorized"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 2
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "compensation-before-original",
+      "frozen_expected": "temporal-order-unknown",
+      "injection": "compensation precedes forward receipt"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": false,
+      "id": "missing-temporal-witness",
+      "frozen_expected": "temporal-order-unknown",
+      "injection": "synthetic order cannot be proven"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u6"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "same-count-membership-replacement",
+      "frozen_expected": "membership-mismatch",
+      "injection": "equal count, different exact member"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m11",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "stale-membership-revision",
+      "frozen_expected": "membership-mismatch",
+      "injection": "current set without protected revision"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 100
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "current-net-state-reversed",
+      "frozen_expected": "current-incomplete",
+      "injection": "receipts present but net charge remains"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": false,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "unprotected-completion-boundary",
+      "frozen_expected": "current-incomplete",
+      "injection": "state read without compare-and-complete"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "unknown",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "queue-and-cancel-with-unknown-original",
+      "frozen_expected": "safe-stop-unknown",
+      "injection": "terminal/queued cannot classify old outcome"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        },
+        {
+          "receiptId": "f-extra",
+          "effect": "notify@acct-u5",
+          "original": "notify@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "extra-irreversible-forward-effect",
+      "frozen_expected": "extra-effect",
+      "injection": "irreversible unplanned notification"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u6",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "target-reincarnated-same-name",
+      "frozen_expected": "target-incarnation-mismatch",
+      "injection": "same account name but different incarnation"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-4",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "compensation-wrong-run",
+      "frozen_expected": "effect-identity-mismatch",
+      "injection": "receipt from unrelated run"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "other-original",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "forward-original-misbinding",
+      "frozen_expected": "original-binding-mismatch",
+      "injection": "forward receipt original identity unbound"
+    },
+    {
+      "task": "task-88",
+      "run": "run-3",
+      "attempt": "attempt-1",
+      "target": "account",
+      "incarnation": "acct-u5",
+      "required": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membership": [
+        "reserve@acct-u5",
+        "charge@acct-u5"
+      ],
+      "membershipRevision": "m12",
+      "witnessRevision": "m12",
+      "protectedCompletion": true,
+      "currentState": {
+        "reserved": false,
+        "netCharge": 0
+      },
+      "currentPermission": false,
+      "protectedNewEffect": false,
+      "cancelTerminal": true,
+      "compensationQueued": true,
+      "forward": [
+        {
+          "receiptId": "f0",
+          "effect": "reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 3
+        },
+        {
+          "receiptId": "f1",
+          "effect": "charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 4
+        }
+      ],
+      "comp": [
+        {
+          "receiptId": "c0",
+          "effect": "release-reserve@acct-u5",
+          "original": "reserve@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 7
+        },
+        {
+          "receiptId": "c1",
+          "effect": "refund-charge@acct-u5",
+          "original": "charge@acct-u5",
+          "task": "task-88",
+          "run": "run-3",
+          "attempt": "attempt-1",
+          "incarnation": "acct-u5",
+          "authorized": true,
+          "time": 8
+        }
+      ],
+      "prior": [
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|reserve@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "compPrior": [
+        {
+          "state": "hit",
+          "scope": "unrelated-scope",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        },
+        {
+          "state": "hit",
+          "scope": "task-88|run-3|attempt-1|acct-u5|charge@acct-u5",
+          "watermark": 12,
+          "minWatermark": 10,
+          "retained": true,
+          "queryOk": true
+        }
+      ],
+      "temporalWitness": true,
+      "id": "hit-scope-mismatch",
+      "frozen_expected": "safe-stop-unknown",
+      "injection": "positive prior HIT scoped to unrelated effect"
+    }
+  ]
+}
