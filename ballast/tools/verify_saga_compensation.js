@@ -13,22 +13,26 @@ function verify(payload,csv){
   if(s.forward.some(x=>!expected.includes(x.effect))||s.comp.some(x=>!inverses.includes(x.effect)))return "extra-effect";
   for(const r of s.comp){const i=inverses.indexOf(r.effect);if(r.original!==expected[i])return "original-binding-mismatch"}
   if(s.forward.some(r=>r.original!==r.effect))return "original-binding-mismatch";
+  if(!Array.isArray(s.required)||!unique(s.required)||s.required.length!==2||expected.some(x=>!s.required.includes(x)))return "membership-mismatch";
   if(!unique(s.membership)||s.membership.length!==2||expected.some(x=>!s.membership.includes(x))||s.membershipRevision!==s.witnessRevision)return "membership-mismatch";
   const f=new Map(s.forward.map(x=>[x.effect,x])), c=new Map(s.comp.map(x=>[x.original,x]));
   for(const [i,member] of expected.entries()){
     const original=f.get(member), undo=c.get(member), prior=s.prior[i], compPrior=s.compPrior[i];
-    if(original&&prior.state==="authoritative miss"||undo&&compPrior.state==="authoritative miss")return "evidence-conflict";
+    if(original&&prior.state==="authoritative miss"||undo&&compPrior.state==="authoritative miss"){
+     if((original&&prior.state==="authoritative miss"&&!covered(prior,member))||(undo&&compPrior.state==="authoritative miss"&&!covered(compPrior,member)))return "safe-stop-unknown";
+     return "evidence-conflict";
+    }
     if(prior.state==="hit"&&!covered(prior,member)||undo&&compPrior.state==="hit"&&!covered(compPrior,member))return "safe-stop-unknown";
     if(prior.state==="unknown"||prior.state==="authoritative miss"&&!covered(prior,member)||prior.state==="hit"&&!original||!["hit","authoritative miss"].includes(prior.state))return "safe-stop-unknown";
     if(!original){if(undo)return "extra-effect";continue}
-    if(!original.authorized)return "historically-unauthorized";
+    if(original.authorized!==true)return "historically-unauthorized";
     if(!undo){
       if(compPrior.state==="authoritative miss"&&covered(compPrior,member))return s.currentPermission===true&&s.protectedNewEffect===true?"eligible-compensation":"permission-stop";
       return "safe-stop-unknown";
     }
     if(compPrior.state!=="hit")return "safe-stop-unknown";
-    if(!undo.authorized)return "historically-unauthorized";
-    if(s.temporalWitness!==true||!(undo.time>original.time))return "temporal-order-unknown";
+    if(undo.authorized!==true)return "historically-unauthorized";
+    if(s.temporalWitness!==true||!Number.isFinite(undo.time)||!Number.isFinite(original.time)||!(undo.time>original.time))return "temporal-order-unknown";
   }
   if(s.protectedCompletion!==true||s.currentState.reserved!==false||s.currentState.netCharge!==0)return "current-incomplete";
   return "verified-aborted";
@@ -85,6 +89,12 @@ function verify(payload,csv){
   ["receipt-id-duplicate",p=>p.scenarios[0].forward[1].receiptId=p.scenarios[0].forward[0].receiptId],
   ["watermark-loss",p=>{const s=p.scenarios.find(s=>s.id==="covered-no-effect-abort");s.prior[0].watermark=1}],
   ["retention-loss",p=>{const s=p.scenarios.find(s=>s.id==="covered-no-effect-abort");s.prior[0].retained=false}],
+  ["authorization-string-false",p=>p.scenarios[0].comp[0].authorized="false"],
+  ["compensation-time-string",p=>p.scenarios[0].comp[0].time="7"],
+  ["hit-query-ok-string",p=>p.scenarios[0].compPrior[0].queryOk="false"],
+  ["uncovered-miss-with-positive",p=>{p.scenarios[0].compPrior[0].state="authoritative miss";p.scenarios[0].compPrior[0].scope="wrong"}],
+  ["required-effect-substitution",p=>{const s=p.scenarios.find(s=>s.id==="covered-no-effect-abort");s.required[1]="other@acct-u5";s.membership[1]="other@acct-u5"}],
+  ["non-boolean-temporal-witness",p=>p.scenarios[0].temporalWitness="true"],
  ];
  const controlsRejected=[], controlsFailed=[];
  for(const [name,mut] of controls){const p=copy();mut(p);if(audit(p,csv).length)controlsRejected.push(name);else controlsFailed.push(name)}
