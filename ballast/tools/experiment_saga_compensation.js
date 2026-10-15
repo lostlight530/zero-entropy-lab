@@ -38,32 +38,36 @@ function produce(){
  add("compensation-wrong-run","effect-identity-mismatch",s=>{s.comp[0].run="run-4"},"receipt from unrelated run");
  add("forward-original-misbinding","original-binding-mismatch",s=>{s.forward[0].original="other-original"},"forward receipt original identity unbound");
  add("hit-scope-mismatch","safe-stop-unknown",s=>{s.compPrior[0].scope="unrelated-scope"},"positive prior HIT scoped to unrelated effect");
- const covers=(q,x)=>q&&q.scope===mkScope(x)&&q.queryOk&&q.retained&&q.watermark>=q.minWatermark;
+ const covers=(q,x)=>q&&q.scope===mkScope(x)&&q.queryOk===true&&q.retained===true&&Number.isFinite(q.watermark)&&Number.isFinite(q.minWatermark)&&q.watermark>=q.minWatermark;
  const decision=s=>{
    const keys=a=>a.map(x=>x.effect);
    const eq=(a,b)=>a.length===b.length&&new Set(a).size===a.length&&a.every(x=>b.includes(x));
    if(s.incarnation!=="acct-u5"||[...s.forward,...s.comp].some(r=>r.incarnation!=="acct-u5"))return "target-incarnation-mismatch";
    if([...s.forward,...s.comp].some(r=>r.task!==s.task||r.run!==s.run||r.attempt!==s.attempt))return "effect-identity-mismatch";
    if(new Set(s.forward.map(r=>r.receiptId)).size!==s.forward.length||new Set(s.comp.map(r=>r.receiptId)).size!==s.comp.length||new Set(keys(s.forward)).size!==s.forward.length||new Set(keys(s.comp)).size!==s.comp.length)return "duplicate-effect";
-   const fAllowed=s.required, cAllowed=["release-reserve@acct-u5","refund-charge@acct-u5"];
+   const fAllowed=req, cAllowed=["release-reserve@acct-u5","refund-charge@acct-u5"];
+   if(!eq(s.required,req))return "membership-mismatch";
    if(s.forward.some(r=>!fAllowed.includes(r.effect))||s.comp.some(r=>!cAllowed.includes(r.effect)))return "extra-effect";
    if(s.comp.some(r=>!cAllowed.includes(r.effect)||r.original!==s.required[cAllowed.indexOf(r.effect)])||s.forward.some(r=>r.original!==r.effect))return "original-binding-mismatch";
    if(!eq(s.membership,s.required)||s.witnessRevision!==s.membershipRevision)return "membership-mismatch";
    for(let i=0;i<s.required.length;i++){
      const x=s.required[i],f=s.forward.find(r=>r.effect===x),c=s.comp.find(r=>r.original===x),p=s.prior[i],cp=s.compPrior[i];
-     if((p.state==="authoritative miss"&&f)||(cp.state==="authoritative miss"&&c))return "evidence-conflict";
+     if((p.state==="authoritative miss"&&f)||(cp.state==="authoritative miss"&&c)){
+       if((p.state==="authoritative miss"&&f&&!covers(p,x))||(cp.state==="authoritative miss"&&c&&!covers(cp,x)))return "safe-stop-unknown";
+       return "evidence-conflict";
+     }
      if(p.state==="hit"&&!covers(p,x)||cp.state==="hit"&&c&&!covers(cp,x))return "safe-stop-unknown";
      if(!["hit","authoritative miss"].includes(p.state)||p.state==="authoritative miss"&&!covers(p,x)||p.state==="hit"&&!f)return "safe-stop-unknown";
      if(f){
-       if(!f.authorized)return "historically-unauthorized";
+       if(f.authorized!==true)return "historically-unauthorized";
        if(!c){
          if(cp.state==="hit"||cp.state==="unknown"||cp.state==="authoritative miss"&&!covers(cp,x))return "safe-stop-unknown";
          if(cp.state==="authoritative miss")return s.currentPermission&&s.protectedNewEffect?"eligible-compensation":"permission-stop";
          return "safe-stop-unknown";
        }
        if(cp.state!=="hit")return "safe-stop-unknown";
-       if(!c.authorized)return "historically-unauthorized";
-       if(!s.temporalWitness||c.time<=f.time)return "temporal-order-unknown";
+       if(c.authorized!==true)return "historically-unauthorized";
+       if(s.temporalWitness!==true||!Number.isFinite(f.time)||!Number.isFinite(c.time)||!(c.time>f.time))return "temporal-order-unknown";
      }else if(c)return "extra-effect";
    }
    if(!s.protectedCompletion||s.currentState.reserved!==false||s.currentState.netCharge!==0)return "current-incomplete";
@@ -74,4 +78,5 @@ function produce(){
  const failures=cases.filter(s=>decision(s)!==s.frozen_expected).map(s=>[s.id,s.frozen_expected,decision(s)]);
  return {scenarios:cases,decisions,paths,failures};
 }
-if(typeof module!=="undefined"){module.exports={produce};if(require.main===module){const fs=require("fs");const path=require("path");const out=produce();if(out.failures.length)throw Error(JSON.stringify(out.failures));const dir=path.join(process.cwd(),"ballast","evidence");fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(path.join(dir,"2026-10-16-saga-scenarios.json"),JSON.stringify({schema:"ballast-saga-compensation-bounded",logical_date:"2026-10-16",scenarios:out.scenarios},null,2)+"\n");fs.writeFileSync(path.join(dir,"2026-10-16-saga-decisions.csv"),"scenario_id,path,decision\n"+out.decisions.map(x=>[x.scenario_id,x.path,x.decision].join(",")).join("\n")+"\n");console.log("scenarios="+out.scenarios.length+" decisions="+out.decisions.length+" frozen_mismatches="+out.failures.length+" real_effects=0 status=PASS");}}
+function evidencePayload(out){return {schema:"ballast-saga-compensation-bounded",logical_date:"2026-10-16",base_sha:"bb5161d9c9829692696e084a096ea3f96e4c59bb",source_access_date:"2026-10-16",scenario_kind:"authored deterministic primitives, not external sink observations",scenarios:out.scenarios};}
+if(typeof module!=="undefined"){module.exports={produce,evidencePayload};if(require.main===module){const fs=require("fs");const path=require("path");const out=produce();if(out.failures.length)throw Error(JSON.stringify(out.failures));const dir=path.join(process.cwd(),"ballast","evidence");fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(path.join(dir,"2026-10-16-saga-scenarios.json"),JSON.stringify(evidencePayload(out),null,2)+"\n");fs.writeFileSync(path.join(dir,"2026-10-16-saga-decisions.csv"),"scenario_id,path,decision\n"+out.decisions.map(x=>[x.scenario_id,x.path,x.decision].join(",")).join("\n")+"\n");console.log("scenarios="+out.scenarios.length+" decisions="+out.decisions.length+" frozen_mismatches="+out.failures.length+" real_effects=0 status=PASS");}}
