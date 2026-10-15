@@ -1,0 +1,92 @@
+{
+  "logical_date": "2026-10-16",
+  "actual_execution_utc": "2026-10-15T20:10:18.124Z",
+  "base_sha": "bb5161d9c9829692696e084a096ea3f96e4c59bb",
+  "producer_entrypoint": "GitHub-persisted JavaScript function evaluated in isolated V8",
+  "verifier_entrypoint": "separate GitHub-persisted JavaScript verifier evaluated in isolated V8",
+  "producer_blob_sha": "9b277e83246f5fe35369940f5d861e25908a632d",
+  "verifier_blob_sha": "34022ce9292abfd1b909683808ae4d1bfbbb9c3e",
+  "producer": {
+    "scenario_count": 30,
+    "decision_rows": 120,
+    "frozen_mismatches": [],
+    "real_effects": 0,
+    "retries": 0
+  },
+  "verifier": {
+    "scenario_count": 30,
+    "row_count": 120,
+    "errors": [],
+    "negative_controls": 32,
+    "negative_rejected": 32,
+    "negative_failures": [],
+    "status": "PASS"
+  },
+  "paths": {
+    "cancel_only": {
+      "verified": 29,
+      "modeled_false_verified": 27,
+      "disagreements": 28
+    },
+    "queue_only": {
+      "verified": 29,
+      "modeled_false_verified": 27,
+      "disagreements": 28
+    },
+    "compensation_count": {
+      "verified": 20,
+      "modeled_false_verified": 18,
+      "disagreements": 28
+    },
+    "full_integrity": {
+      "verified": 3,
+      "modeled_false_verified": 0,
+      "disagreements": 0
+    }
+  },
+  "pre_repair_reference_attack": {
+    "probes": 2,
+    "false_verifications": 2,
+    "names": [
+      "forward-original-misbinding",
+      "hit-scope-mismatch"
+    ],
+    "repair": "bound forward original identity and scoped positive HIT in producer and verifier before final run"
+  },
+  "not_executed": [
+    "standalone Node CLI",
+    "full Python ballast/tools/check.py",
+    "live Saga workflow",
+    "independently authoritative effect sink",
+    "real cancellation/compensation",
+    "trusted temporal evidence",
+    "semantically independent verifier"
+  ],
+  "independence": {
+    "implementation": "PARTIAL",
+    "data_source": "NONE",
+    "semantic_contract": "LIMITED_SHARED_CONTRACT",
+    "authority": "NONE"
+  },
+  "same_day_review": {
+    "preceding_stage": "Initial 2026-10-16 V8 run 30 scenarios, 120 decisions, 26/26 adversarial rejections, original producer blob fafc4ce03685062ceb29ffc8dbcb52e3863df0b9 and verifier blob b5f03577eb1c024b3fc454a8fb5277315b29b54c",
+    "newly_observed_pre_repair_acceptances": [
+      "Compensation authorized field string false was wrongly accepted as historically authorized, V8 verifier PASS on mutated primitive vector before repair",
+      "Compensation time field string 7 was wrongly accepted as a valid timestamp, V8 verifier PASS on mutated primitive vector before repair"
+    ],
+    "fixes": [
+      "Strict boolean historical authorization and temporal witness, strict numeric finite timestamp",
+      "Bind original required effect set to fixed task contract and enforce typed exact prior query coverage",
+      "Invalid negative MISS scope with positive receipt remains UNKNOWN, covered authoritative MISS conflict remains EVIDENCE_CONFLICT",
+      "Node CLI JSON writer now includes base_sha, source_access_date and scenario_kind so its serialization matches committed payload"
+    ],
+    "updated_validation": "Exact GitHub-persisted producer and verifier re-evaluated in isolated V8, unchanged 30 scenarios and 120 decisions, 0 frozen or path mismatches, amended verifier 32/32 adversarial rejections",
+    "ephemeral_reference_probes": "4 ephemeral fail-closed probes executed in V8 against producer, not added to the 30 persisted scenarios or research-window credit",
+    "serialized_evidence_bytes": "Producer evidencePayload JSON and decision CSV regenerated in V8 are byte-equal to the previously committed scenario JSON and CSV",
+    "independence": "Implementation partial, shared fixture/semantic contract, no separate data or authority",
+    "node_cli": "NOT_EXECUTED despite serialization parity demonstrated at function level",
+    "full_checker": "NOT_EXECUTED",
+    "research_credit_delta": 0,
+    "new_research_window": false
+  }
+}

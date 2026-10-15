@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-15 outbox/offset versus exact external effect completion](records/2026-10-15.md)
+- 最新 Daily: [2026-10-16 saga compensation versus exact historical effects and net-state](records/2026-10-16.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-08 至 2026-10-13](audits/2026-10-08--2026-10-13.md)
