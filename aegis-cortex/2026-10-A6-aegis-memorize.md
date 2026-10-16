@@ -5096,3 +5096,173 @@ DUPLICATE_EVIDENCE_CREDIT
 - Decision matrix: Oct01, Oct02, Oct04, Oct15 original BLOCKED; Oct13 DEGRADED; other A2 original SUCCESS as shown above
 - Handoff requires ten verified merged A1 PRs, fresh main and current native Oct16 source identity before the A2 action
 - Status: A1_NATIVE_SOURCE_RECONCILED / HISTORY_PRESERVED / MONTH_OPEN / PENDING_MERGE
+
+## 2026-10-16 A2 | Aegis 2026-10 complete current risk/doctrine relation
+
+- Merged A1 #663 fresh main `a017822bd8818e60b5e00fa13de939f9e73698d6`; 2026-10 single Aegis A6 month owner remains OPEN
+- This A2 recompiles sixteen source days: Aegis A1 observation, A2 doctrine interpretation, independent Ballast Daily plus W40/W41/W42
+- Historical original A2 BLOCKED on Oct1, Oct2, Oct4 and Oct15; missing task-time upstream cannot be repaired by later main presence
+- Oct13 original A2 DEGRADED due partial primary source check; do not upgrade to source completeness through monthly repetition
+- Original A1 source lineage except Oct7 is generally SINGLE_SOURCE; publisher claim does not measure risk occurrence inside this repository
+- Oct16 A1 false-completion cascade and A2 orientation both SUCCESS with NO_LOCAL_EVIDENCE; H1 signal is a failure-mode warning, not observed host incident
+- Ballast independently explores saga compensation and exact effects on Oct16, but its LOCAL_MODEL_NO_EXTERNAL_EFFECT must not be stated as a host rollout or Aegis corrective action
+- W41 A3 DEGRADED_WITH_EXTERNAL_ONLY_EVIDENCE; W41 A4 DEGRADED_WITH_BOUNDED_OBSERVATION_ACTIONS, no implementer-wide policy enforcement proof
+- W42 Oct12–18 remains OPEN and current A3/A4 weekly final not due; October final A5/A6 not due
+- Monthly claims separate source publication/independent source/abstract risk/local incident/mitigation runtime/operational verification
+- The evidence relation for the sixteen source-time dates follows:
+### 2026-10-01 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-01-A1-reliability-observe.md` blob `461882e16809ef9b442b3c6d47b45f44418660b5`
+- Dated failure mode under consideration: Observability/false completion/sycophancy
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-01-A2-doctrine-orient.md` blob `450bb5e41ba1f4f52f605632a3522797568429c5`; task-time state BLOCKED_INPUT_MISSING
+- Admissibility decision: Task-time missing A1 input cannot be repaired by current file listing
+- Independent Ballast source: `ballast/records/2026-10-01.md` blob `21a2dbd84f4a7e05bc64f78aa934d824a4a96593`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W40 local risk acceptance remained bounded
+- Current A2 label: ORIGINAL_BLOCKED_RETENTION
+### 2026-10-02 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-02-A1-reliability-observe.md` blob `abe20d48251fc36893884f355421e896e3f3631a`
+- Dated failure mode under consideration: Observability/action-level divergence
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-02-A2-doctrine-orient.md` blob `c590dffb8dc28fb701174e6dfafe2c3697f97b37`; task-time state BLOCKED_INPUT_MISSING
+- Admissibility decision: Original A2 blocked despite later A1 source available on main
+- Independent Ballast source: `ballast/records/2026-10-02.md` blob `1081112e8ef7f9c1d3e4415c2cf1edb297419a58`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W40 local risk acceptance remained bounded
+- Current A2 label: ORIGINAL_BLOCKED_RETENTION
+### 2026-10-03 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-03-A1-reliability-observe.md` blob `0f37ab4b605a24006a862a9837564a459c0c1298`
+- Dated failure mode under consideration: Cloud coding scope drift
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-03-A2-doctrine-orient.md` blob `3c95e23cfa6187d0c23f607d622e2e8353051b13`; task-time state SUCCESS
+- Admissibility decision: One publisher source supports risk framing, not local detected incident
+- Independent Ballast source: `ballast/records/2026-10-03.md` blob `82df0f7d4e36c844f76bfed4b23bd1ece6a46b53`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W40 local risk acceptance remained bounded
+- Current A2 label: EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT
+### 2026-10-04 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-04-A1-reliability-observe.md` blob `88fcc05dd273fbb361963435211e38447ea67a9c`
+- Dated failure mode under consideration: Coding agent reliability and false completion
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-04-A2-doctrine-orient.md` blob `08f105bfae915c994d411e8ab86d421db03f9c42`; task-time state BLOCKED_INPUT_MISSING
+- Admissibility decision: Original A2 missing prerequisite, must not count success
+- Independent Ballast source: `ballast/records/2026-10-04.md` blob `649882d3a0bbb7939481f5f2bb43aea4f268b9c8`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W40 local risk acceptance remained bounded
+- Current A2 label: ORIGINAL_BLOCKED_RETENTION
+### 2026-10-05 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-05-A1-reliability-observe.md` blob `11701da8dff9882ef4e8d4f174abc062abd41404`
+- Dated failure mode under consideration: Tool-use errors and evaluation
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-05-A2-doctrine-orient.md` blob `98139f531397d66bde60765a38f9b0c683d936ab`; task-time state SUCCESS
+- Admissibility decision: External tool-error paper does not evidence a host-side exploit
+- Independent Ballast source: `ballast/records/2026-10-05.md` blob `b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W41 A3 DEGRADED external-only, A4 bounded observation
+- Current A2 label: EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT
+### 2026-10-06 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-06-A1-reliability-observe.md` blob `56abc25eca5f0e9e2aa537be5924c6045162815c`
+- Dated failure mode under consideration: Unsupported success claims
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-06-A2-doctrine-orient.md` blob `6cb80c4d899b533c539ad487b274c1b168db9724`; task-time state SUCCESS
+- Admissibility decision: Published success-claim risk is a failure-mode hypothesis, not observed own incident
+- Independent Ballast source: `ballast/records/2026-10-06.md` blob `2ad5c5ce4a3fc4228f089eaacf94109e4210a66f`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W41 A3 DEGRADED external-only, A4 bounded observation
+- Current A2 label: EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT
+### 2026-10-07 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-07-A1-reliability-observe.md` blob `12c9266cc5f1fe0837a736e7ec9ed4505e7ba4a5`
+- Dated failure mode under consideration: Recovery verification and false completion
+- A1 source lineage: INDEPENDENT_CORROBORATION, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-07-A2-doctrine-orient.md` blob `9bd6c75a310832f7cc58c9ae399f41acfdf4d950`; task-time state SUCCESS_INDEPENDENT
+- Admissibility decision: Independent source corroboration producer-declared only on this day
+- Independent Ballast source: `ballast/records/2026-10-07.md` blob `7f20b476517f31e4d890e64880b2eeb4b8248bf7`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W41 A3 DEGRADED external-only, A4 bounded observation
+- Current A2 label: EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT
+### 2026-10-08 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-08-A1-reliability-observe.md` blob `5c91de675c4dc78aba0f419ab5f7added9c29fd7`
+- Dated failure mode under consideration: Overconfidence/false completion
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-08-A2-doctrine-orient.md` blob `9815107064b4fed9aa0983143c4b329b5f28a675`; task-time state SUCCESS
+- Admissibility decision: Overconfidence concern must be checked against actual action ledger
+- Independent Ballast source: `ballast/records/2026-10-08.md` blob `8d24c4cfc5362b7c81b60a6888d875e6960342aa`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W41 A3 DEGRADED external-only, A4 bounded observation
+- Current A2 label: EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT
+### 2026-10-09 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-09-A1-reliability-observe.md` blob `e5b385ba25e8a4ef9a68401080dab545592ddf4b`
+- Dated failure mode under consideration: Boundary control and scope drift
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-09-A2-doctrine-orient.md` blob `2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124`; task-time state SUCCESS
+- Admissibility decision: Scope-control risk not proof of today's unauthorized tool call
+- Independent Ballast source: `ballast/records/2026-10-09.md` blob `cce84778a3f752461a1d82b9c38f5057f3950fd3`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W41 A3 DEGRADED external-only, A4 bounded observation
+- Current A2 label: EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT
+### 2026-10-10 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-10-A1-reliability-observe.md` blob `bfbe8f099a7413cdd5a8f1466a180d9e2d78f975`
+- Dated failure mode under consideration: Instruction conflict and memory poisoning
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-10-A2-doctrine-orient.md` blob `ce4f369d35fda91ddeeb975679a89ee4fe1f2314`; task-time state SUCCESS
+- Admissibility decision: Memory poisoning needs observed payload and validator failure before local incident
+- Independent Ballast source: `ballast/records/2026-10-10.md` blob `d2702d66363b0e8a6ea645aff60a6475a1ca003c`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W41 A3 DEGRADED external-only, A4 bounded observation
+- Current A2 label: EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT
+### 2026-10-11 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-11-A1-reliability-observe.md` blob `bc3c4ba9cf48045bb05f02e65901dd02ad5464f1`
+- Dated failure mode under consideration: Tool authorization and scope controls
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-11-A2-doctrine-orient.md` blob `d3882e3530ce98550a10f93ba4221afbb270c83c`; task-time state SUCCESS
+- Admissibility decision: Tool authorization claims remain external and not own policy enforcement test
+- Independent Ballast source: `ballast/records/2026-10-11.md` blob `b35c69acee29b194d597d3eedd942dd4cc7243a0`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W41 A3 DEGRADED external-only, A4 bounded observation
+- Current A2 label: EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT
+### 2026-10-12 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-12-A1-reliability-observe.md` blob `72d7f662d70f5c73301fd8bec7c8351f0e1a7349`
+- Dated failure mode under consideration: Coding agent boundary failure
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-12-A2-doctrine-orient.md` blob `6ed3797a34699a9eae821c7bb2a8c8797459b17f`; task-time state SUCCESS
+- Admissibility decision: Native external coding-agent risk signal, no local production failure
+- Independent Ballast source: `ballast/records/2026-10-12.md` blob `02fe0896ac9c41ae336cda04e69f133460e0a742`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W42 OPEN, weekly A3/A4 not due
+- Current A2 label: EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT
+### 2026-10-13 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-13-A1-reliability-observe.md` blob `a5d0ca039bbe4b93b8b59e5e671bcf76ff82ba87`
+- Dated failure mode under consideration: False completion, partial source retrieval
+- A1 source lineage: PARTIAL_PRIMARY_RECHECK, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-13-A2-doctrine-orient.md` blob `1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22`; task-time state DEGRADED
+- Admissibility decision: Partially accessible primary source; producer A2 degraded and not complete
+- Independent Ballast source: `ballast/records/2026-10-13.md` blob `cc09eb3e1746cf4e555880ab4304b28c63341a4c`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W42 OPEN, weekly A3/A4 not due
+- Current A2 label: SOURCE_SCOPE_DEGRADED
+### 2026-10-14 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-14-A1-reliability-observe.md` blob `1def392d03eb7bb03c428d696d4acb923454112f`
+- Dated failure mode under consideration: Action mismatch with hidden failures
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-14-A2-doctrine-orient.md` blob `c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd`; task-time state SUCCESS
+- Admissibility decision: Intent/action mismatch hypothesis requires action trace for host assessment
+- Independent Ballast source: `ballast/records/2026-10-14.md` blob `98a752267cd0c2beff5d2770ecf1672a6c869e3b`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W42 OPEN, weekly A3/A4 not due
+- Current A2 label: EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT
+### 2026-10-15 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-15-A1-reliability-observe.md` blob `293272cf6ae77efc28491dc69597d0652f4ca751`
+- Dated failure mode under consideration: Memory poisoning, tool errors, false completion
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-15-A2-doctrine-orient.md` blob `896901e892647ab19b584fa077363afc5e4e89ab`; task-time state BLOCKED_INPUT_MISSING
+- Admissibility decision: Original Oct15 A2 blocked source-time despite current source present
+- Independent Ballast source: `ballast/records/2026-10-15.md` blob `2f94b0b736cd8e3ffda03794462a12d3b50a3bc3`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W42 OPEN, weekly A3/A4 not due
+- Current A2 label: ORIGINAL_BLOCKED_RETENTION
+### 2026-10-16 | source risk to doctrine and separate Ballast
+- A1 original: `aegis-cortex/2026-10-16-A1-reliability-observe.md` blob `372a99054cd4cd55ac909304b4c44a702376bcf6`
+- Dated failure mode under consideration: False completion cascades through coordinated agents
+- A1 source lineage: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 original: `aegis-cortex/2026-10-16-A2-doctrine-orient.md` blob `454d6a632ad13c2fdacbfa27a30d0a565427026f`; task-time state SUCCESS
+- Admissibility decision: Native A1/A2 SUCCESS, single-source false-completion cascade risk, NO_LOCAL_EVIDENCE
+- Independent Ballast source: `ballast/records/2026-10-16.md` blob `5cf129e2d6d31ce14171ac3e2b0c6ea0a3bddee0`, not evidence that Aegis configured a local fix
+- Relation to weekly decision: W42 OPEN, weekly A3/A4 not due
+- Current A2 label: EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT
+
+### October current interpretation and local-state gates
+- SOURCE_SINGLE_LINEAGE cannot be counted as independently corroborated systemic risk; Oct7 original independence classification remains date-bounded
+- Oct1/2/4/15 original A2 blockers are task executions with valid negative result, not missing physical file holes
+- Oct13 A2 partial source outcome retains DEGRADED; no inference of failed local attack or risk mitigation
+- W41 A3 explicitly separates network-verified external risks from zero local incident evidence in the reviewed Aegis logs
+- W41 A4 observation actions remain bounded; they do not silently establish executed kernel/network policy patches
+- Oct16 failure mode is a false-success state passed among agents, requiring actual execution/ack reconciliation before measuring incidence
+- Aegis risk and Ballast saga effect semantics intersect conceptually but cannot be treated as mutually verified host experiments
+- Independent maintenance does NOT run external tests, modify host, launch NEXUS or claim that local mitigations were deployed
+- Current risk ledger OPEN, risk applicability requires inspected host action traces and valid denominator
+- A2 result: MONTH_VERSION_2026_10_OPEN / FOUR_NATIVE_BLOCKED_DATES / OCT13_SOURCE_DEGRADED / W42_OPEN / NO_LOCAL_INCIDENT_PROVEN
