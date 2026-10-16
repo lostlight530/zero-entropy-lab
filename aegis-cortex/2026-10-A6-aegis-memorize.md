@@ -4938,3 +4938,161 @@ DUPLICATE_EVIDENCE_CREDIT
 - W42 A3/A4 and monthly A5/A6 must treat October 15 A2 as unavailable for risk promotion; no discipline or long-memory promotion by inference.
 - Current closure of this correction: `REPOSITORY_VISIBILITY_CONFIRMED`, `NATIVE_A2_REEXECUTION_NOT_PERFORMED`, `DOWNSTREAM_ADMISSION_BLOCKED`, `MONTH_OPEN`.
 - Actions/Pages or independent A2 PR success do not substitute for Jules A2 network/source execution evidence.
+
+## 2026-10-16 A1 — ordinary Aegis October 01–15 producer review
+
+- Review main `766fc188cdd9298762d756bf2f0560daf1eee64b`; cutoff Oct01..15 exactly
+- Fifteen original A1/A2 source identities checked, 15 Ballast daily paths identified separately
+- Original A2 failures Oct01/02/04/15 and partial Oct13 remain as dated evidence; later paths cannot repair source-time availability
+- Current month owner remains OPEN; W42 weekly Oct12..18 and October final have not naturally ended
+- No external experiment was executed in this independent A1; original source evidence retained without retroactive rewrite
+- Current Oct16 Jules native A1/A2 and Ballast will be considered only in post-A1 A2 after all ten repo A1 are merged
+### 2026-10-01 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-01-A1-reliability-observe.md` blob `461882e16809ef9b442b3c6d47b45f44418660b5`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-01-A2-doctrine-orient.md` blob `450bb5e41ba1f4f52f605632a3522797568429c5`
+- A2 task-time state: BLOCKED_INPUT_MISSING
+- Independent Ballast Daily `ballast/records/2026-10-01.md` blob `21a2dbd84f4a7e05bc64f78aa934d824a4a96593`
+- Actual source-level decision: H1 upstream not available when A2 ran
+- A1 remediation class: HISTORICAL_BLOCKED_PRESERVE
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-02 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-02-A1-reliability-observe.md` blob `abe20d48251fc36893884f355421e896e3f3631a`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-02-A2-doctrine-orient.md` blob `c590dffb8dc28fb701174e6dfafe2c3697f97b37`
+- A2 task-time state: BLOCKED_INPUT_MISSING
+- Independent Ballast Daily `ballast/records/2026-10-02.md` blob `1081112e8ef7f9c1d3e4415c2cf1edb297419a58`
+- Actual source-level decision: Original input missing, do not reconstruct
+- A1 remediation class: HISTORICAL_BLOCKED_PRESERVE
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-03 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-03-A1-reliability-observe.md` blob `0f37ab4b605a24006a862a9837564a459c0c1298`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-03-A2-doctrine-orient.md` blob `3c95e23cfa6187d0c23f607d622e2e8353051b13`
+- A2 task-time state: SUCCESS_SINGLE_SOURCE
+- Independent Ballast Daily `ballast/records/2026-10-03.md` blob `82df0f7d4e36c844f76bfed4b23bd1ece6a46b53`
+- Actual source-level decision: One source lineage cannot count independent support
+- A1 remediation class: NO_FOLLOW_UP
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-04 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-04-A1-reliability-observe.md` blob `88fcc05dd273fbb361963435211e38447ea67a9c`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-04-A2-doctrine-orient.md` blob `08f105bfae915c994d411e8ab86d421db03f9c42`
+- A2 task-time state: BLOCKED_INPUT_MISSING
+- Independent Ballast Daily `ballast/records/2026-10-04.md` blob `649882d3a0bbb7939481f5f2bb43aea4f268b9c8`
+- Actual source-level decision: Original A2 missing required authoritative input
+- A1 remediation class: HISTORICAL_BLOCKED_PRESERVE
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-05 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-05-A1-reliability-observe.md` blob `11701da8dff9882ef4e8d4f174abc062abd41404`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-05-A2-doctrine-orient.md` blob `98139f531397d66bde60765a38f9b0c683d936ab`
+- A2 task-time state: SUCCESS_SINGLE_SOURCE
+- Independent Ballast Daily `ballast/records/2026-10-05.md` blob `b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931`
+- Actual source-level decision: External failure mode only; no local incident
+- A1 remediation class: NO_FOLLOW_UP
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-06 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-06-A1-reliability-observe.md` blob `56abc25eca5f0e9e2aa537be5924c6045162815c`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-06-A2-doctrine-orient.md` blob `6cb80c4d899b533c539ad487b274c1b168db9724`
+- A2 task-time state: SUCCESS_SINGLE_SOURCE
+- Independent Ballast Daily `ballast/records/2026-10-06.md` blob `2ad5c5ce4a3fc4228f089eaacf94109e4210a66f`
+- Actual source-level decision: One publisher line, bounded original evidence
+- A1 remediation class: NO_FOLLOW_UP
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-07 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-07-A1-reliability-observe.md` blob `12c9266cc5f1fe0837a736e7ec9ed4505e7ba4a5`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-07-A2-doctrine-orient.md` blob `9bd6c75a310832f7cc58c9ae399f41acfdf4d950`
+- A2 task-time state: SUCCESS_INDEPENDENT_CORROBORATION
+- Independent Ballast Daily `ballast/records/2026-10-07.md` blob `7f20b476517f31e4d890e64880b2eeb4b8248bf7`
+- Actual source-level decision: Independent corroboration reported by producer, original date-specific
+- A1 remediation class: NO_FOLLOW_UP
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-08 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-08-A1-reliability-observe.md` blob `5c91de675c4dc78aba0f419ab5f7added9c29fd7`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-08-A2-doctrine-orient.md` blob `9815107064b4fed9aa0983143c4b329b5f28a675`
+- A2 task-time state: SUCCESS_SINGLE_SOURCE
+- Independent Ballast Daily `ballast/records/2026-10-08.md` blob `8d24c4cfc5362b7c81b60a6888d875e6960342aa`
+- Actual source-level decision: External observed risk only, no tested local effect
+- A1 remediation class: NO_FOLLOW_UP
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-09 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-09-A1-reliability-observe.md` blob `e5b385ba25e8a4ef9a68401080dab545592ddf4b`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-09-A2-doctrine-orient.md` blob `2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124`
+- A2 task-time state: SUCCESS_SINGLE_SOURCE
+- Independent Ballast Daily `ballast/records/2026-10-09.md` blob `cce84778a3f752461a1d82b9c38f5057f3950fd3`
+- Actual source-level decision: No local attack shown in current record
+- A1 remediation class: NO_FOLLOW_UP
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-10 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-10-A1-reliability-observe.md` blob `bfbe8f099a7413cdd5a8f1466a180d9e2d78f975`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-10-A2-doctrine-orient.md` blob `ce4f369d35fda91ddeeb975679a89ee4fe1f2314`
+- A2 task-time state: SUCCESS_SINGLE_SOURCE
+- Independent Ballast Daily `ballast/records/2026-10-10.md` blob `d2702d66363b0e8a6ea645aff60a6475a1ca003c`
+- Actual source-level decision: Week risk handoff not a local implementation claim
+- A1 remediation class: NO_FOLLOW_UP
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-11 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-11-A1-reliability-observe.md` blob `bc3c4ba9cf48045bb05f02e65901dd02ad5464f1`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-11-A2-doctrine-orient.md` blob `d3882e3530ce98550a10f93ba4221afbb270c83c`
+- A2 task-time state: SUCCESS_SINGLE_SOURCE
+- Independent Ballast Daily `ballast/records/2026-10-11.md` blob `b35c69acee29b194d597d3eedd942dd4cc7243a0`
+- Actual source-level decision: A2 successor cannot upgrade source independence
+- A1 remediation class: NO_FOLLOW_UP
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-12 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-12-A1-reliability-observe.md` blob `72d7f662d70f5c73301fd8bec7c8351f0e1a7349`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-12-A2-doctrine-orient.md` blob `6ed3797a34699a9eae821c7bb2a8c8797459b17f`
+- A2 task-time state: SUCCESS_SINGLE_SOURCE
+- Independent Ballast Daily `ballast/records/2026-10-12.md` blob `02fe0896ac9c41ae336cda04e69f133460e0a742`
+- Actual source-level decision: Task reports successful upstream gate, no runtime proof
+- A1 remediation class: NO_FOLLOW_UP
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-13 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-13-A1-reliability-observe.md` blob `a5d0ca039bbe4b93b8b59e5e671bcf76ff82ba87`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-13-A2-doctrine-orient.md` blob `1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22`
+- A2 task-time state: DEGRADED_PARTIAL_PRIMARY_RECHECK
+- Independent Ballast Daily `ballast/records/2026-10-13.md` blob `cc09eb3e1746cf4e555880ab4304b28c63341a4c`
+- Actual source-level decision: Partial primary recheck; do not upgrade to SUCCESS
+- A1 remediation class: SOURCE_GRADE_BOUNDED
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-14 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-14-A1-reliability-observe.md` blob `1def392d03eb7bb03c428d696d4acb923454112f`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-14-A2-doctrine-orient.md` blob `c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd`
+- A2 task-time state: SUCCESS_SINGLE_SOURCE
+- Independent Ballast Daily `ballast/records/2026-10-14.md` blob `98a752267cd0c2beff5d2770ecf1672a6c869e3b`
+- Actual source-level decision: Original source claim and implementation applicability separate
+- A1 remediation class: NO_FOLLOW_UP
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+### 2026-10-15 | zero/aegis/A1 → A2 plus Ballast
+- A1 original path `aegis-cortex/2026-10-15-A1-reliability-observe.md` blob `293272cf6ae77efc28491dc69597d0652f4ca751`
+- A1 declared SUCCESS / NETWORK_VERIFIED; original source only as authority allows
+- A2 original path `aegis-cortex/2026-10-15-A2-doctrine-orient.md` blob `896901e892647ab19b584fa077363afc5e4e89ab`
+- A2 task-time state: BLOCKED_MAIN_VISIBILITY_RACE
+- Independent Ballast Daily `ballast/records/2026-10-15.md` blob `2f94b0b736cd8e3ffda03794462a12d3b50a3bc3`
+- Actual source-level decision: A2 BLOCKED ahead of A1 merge, explicitly forward corrected
+- A1 remediation class: HISTORICAL_BLOCKED_PRESERVE
+- Producer partition: Aegis task log does not prove Ballast experiments, Ballast does not assert same-day A2 upstream visibility
+
+### Week and month source relation
+- Weekly native file `aegis-cortex/2026-W40-A3-discipline-decide.md` blob `041a3ed3b1ab9b36f448772be1ecff715d155842`; original weekly decision retained, not rerun
+- Weekly native file `aegis-cortex/2026-W40-A4-protocol-act.md` blob `21206290b54a704401086d12a47ad820d32f9841`; original weekly decision retained, not rerun
+- Weekly native file `aegis-cortex/2026-W41-A3-discipline-decide.md` blob `ae751ae48f27d6c390e0100756efd3e6fd63b460`; original weekly decision retained, not rerun
+- Weekly native file `aegis-cortex/2026-W41-A4-protocol-act.md` blob `4be8b4fd999ee217bb702675bf92325a1041aede`; original weekly decision retained, not rerun
+- W40 and W41 native weekly task identities remain separate from daily source and A1 independent maintenance
+- W42 weekly source final NOT_DUE; do not manufacture A3/A4 completion for current partial week
+- October A6 is rolling owner, final A5/A6 NOT_DUE
+- A2 source single lineage is not externally independent experiment, and NO_LOCAL_EVIDENCE applies only to checked bounded records
+- No native artifact or NEXUS lifecycle source was altered by this pass
+- Decision matrix: Oct01, Oct02, Oct04, Oct15 original BLOCKED; Oct13 DEGRADED; other A2 original SUCCESS as shown above
+- Handoff requires ten verified merged A1 PRs, fresh main and current native Oct16 source identity before the A2 action
+- Status: A1_NATIVE_SOURCE_RECONCILED / HISTORY_PRESERVED / MONTH_OPEN / PENDING_MERGE
