@@ -1,0 +1,54 @@
+{
+  "logical_date": "2026-10-17",
+  "base_sha": "71a2c45f208198b6963f59eda7e99da88e1bd48b",
+  "source_access_date": "2026-10-17",
+  "scenarios": 36,
+  "paths": 4,
+  "rows": 144,
+  "real_effects": 0,
+  "counts": {
+    "terminal_proxy": {
+      "COMPLETE": 36,
+      "RETRY": 0,
+      "STOP_UNKNOWN": 0,
+      "BLOCKED": 0,
+      "RECONCILE": 0
+    },
+    "key_proxy": {
+      "COMPLETE": 34,
+      "RETRY": 2,
+      "STOP_UNKNOWN": 0,
+      "BLOCKED": 0,
+      "RECONCILE": 0
+    },
+    "count_proxy": {
+      "COMPLETE": 24,
+      "RETRY": 12,
+      "STOP_UNKNOWN": 0,
+      "BLOCKED": 0,
+      "RECONCILE": 0
+    },
+    "full_integrity": {
+      "COMPLETE": 3,
+      "RETRY": 2,
+      "STOP_UNKNOWN": 28,
+      "BLOCKED": 1,
+      "RECONCILE": 2
+    }
+  },
+  "modeled_false_complete": {
+    "terminal_proxy": 33,
+    "key_proxy": 32,
+    "count_proxy": 21
+  },
+  "modeled_unsafe_retry": {
+    "terminal_proxy": 0,
+    "key_proxy": 1,
+    "count_proxy": 10
+  },
+  "json_sha256": "d502ea94f76c00a90bb53c2e7690021291006e0367e3981bc84bccdce1bd8e35",
+  "csv_sha256": "1b7b3e54f1a49ec91ac927d218ff8543b01fa3b338e4c0e538ea55d326d96f9f",
+  "local_sink_trials": 9,
+  "local_sink_committed_effects": 9,
+  "trace_sha256": "39ba4c3b0f8f1bce7df47aed5fd2c662ebea3b6e2f7d0b920b18f3154d70abb8"
+}

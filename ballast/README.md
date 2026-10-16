@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-16 saga compensation versus exact historical effects and net-state](records/2026-10-16.md)
+- 最新 Daily: [2026-10-17 compensation retry after idempotency retention expiry](records/2026-10-17.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-08 至 2026-10-13](audits/2026-10-08--2026-10-13.md)
@@ -608,3 +608,9 @@ The 2026-10-08..2026-10-13 non-overlapping six-date derived audit is now present
 Current native research endpoint is 2026-10-13.
 
 Derived index clarification — 2026-10-13: the 2026-10-12 current-state paragraph above is retained as an earlier point-in-time note. The finalized, same-day-hardened 2026-10-12 primary Daily reports 18/18/17/0 (gate-only / OIDC-only / count-only / full-integrity) rather than the earlier 18/18/16/0. This corrects the navigation summary's interpretation without rewriting historical research evidence or adding credit.
+
+## Ballast current-state advance — 2026-10-17
+
+One NATIVE bounded Python research window on compensation retry after modeled idempotency-key expiry, versus exact historical refund occurrence, effect-time authorization and protected current net-state. The [Daily](records/2026-10-17.md) records 36 authored scenarios, four paths, 144 local modeled decisions, nine isolated simulated sink trials, ten simulated sink calls, nine committed model effects and 33/33 rejected adversarial mutations. An expired key was blindly reused after a simulated response loss and produced a second committed modeled refund effect. No live payment, independent authorization or external sink experiment was executed, and reference-label agreement is not production accuracy.
+
+The non-overlapping 2026-10-14..2026-10-17 audit window has four logical dates and is not yet due. October Monthly synchronization is derived navigation, with no additional experiment/window credit; no CASES, METHOD or NOTES promotion. Current native research endpoint is 2026-10-17.
