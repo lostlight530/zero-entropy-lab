@@ -1,0 +1,3498 @@
+{
+  "logical_date": "2026-10-17",
+  "base_sha": "71a2c45f208198b6963f59eda7e99da88e1bd48b",
+  "source_access_date": "2026-10-17",
+  "scenario_kind": "authored_synthetic",
+  "scenarios": [
+    {
+      "id": "baseline_complete",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "permission_restored_after_effect",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": true,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "expired_key_effect_exists",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": false,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "unknown_missing_a",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 100,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "UNKNOWN",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "covered_miss_retry",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 100,
+        "current_permission": true,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "MISS",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "covered_miss_no_permission",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 100,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "MISS",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "miss_expired_retention",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 100,
+        "current_permission": true,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "MISS",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": false
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "miss_stale_watermark",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 100,
+        "current_permission": true,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "MISS",
+            "query_ok": true,
+            "watermark": 20,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "miss_wrong_scope",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 100,
+        "current_permission": true,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-other",
+            "status": "MISS",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "miss_query_error",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 100,
+        "current_permission": true,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "MISS",
+            "query_ok": false,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "miss_net_already_restored",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": true,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "MISS",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "duplicate_compensation",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "extra_compensation",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          },
+          {
+            "member": "C",
+            "effect_id": "refund:C",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "wrong_original_binding",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "unauthorized_compensation",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": false,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "reversed_effect_time",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 9
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "non_numeric_effect_time",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": "20"
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "target_reincarnation",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u5",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "same_count_membership_swap",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "C"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "current_net_state_reversed",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 100,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "unprotected_completion",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": false,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "miss_positive_conflict",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "MISS",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "hit_wrong_scope",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-other",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "unauthorized_original",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": false,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "missing_original",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "wrong_attempt",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-3",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "string_authorization",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": "false",
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "extra_original",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          },
+          {
+            "member": "C",
+            "effect_id": "charge:C",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "duplicate_membership",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "A"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "task_contract_rewritten",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "C"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "covered_miss_expired_key",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 100,
+        "current_permission": true,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": false,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "MISS",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "unknown_with_live_key",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 100,
+        "current_permission": true,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "UNKNOWN",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "hit_without_receipt",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 100,
+        "current_permission": true,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "wrong_receipt_target",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u5",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "invalid_watermark_type",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 21,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": "30",
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "membership_revision_drift",
+      "facts": {
+        "task": "task-121",
+        "run": "run-4",
+        "attempt": "attempt-2",
+        "target": "wallet-u4",
+        "expected_target": "wallet-u4",
+        "required_members": [
+          "A",
+          "B"
+        ],
+        "observed_members": [
+          "A",
+          "B"
+        ],
+        "membership_revision": 21,
+        "witness_revision": 20,
+        "protected": true,
+        "net_balance": 0,
+        "current_permission": false,
+        "terminal": "CANCELED",
+        "compensation_scheduled": true,
+        "key_live": true,
+        "original_receipts": [
+          {
+            "member": "A",
+            "effect_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 10
+          },
+          {
+            "member": "B",
+            "effect_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-1",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 11
+          }
+        ],
+        "compensation_receipts": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "original_id": "charge:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 20
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "original_id": "charge:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "authorized": true,
+            "at": 21
+          }
+        ],
+        "queries": [
+          {
+            "member": "A",
+            "effect_id": "refund:A",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          },
+          {
+            "member": "B",
+            "effect_id": "refund:B",
+            "task": "task-121",
+            "run": "run-4",
+            "attempt": "attempt-2",
+            "target": "wallet-u4",
+            "status": "HIT",
+            "query_ok": true,
+            "watermark": 30,
+            "required_watermark": 25,
+            "retention_covers": true
+          }
+        ]
+      }
+    }
+  ]
+}

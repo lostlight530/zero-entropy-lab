@@ -1,0 +1,296 @@
+{
+  "logical_date": "2026-10-17",
+  "kind": "executed_local_simulated_sink",
+  "trials": [
+    {
+      "trial": "expired_blind_retry",
+      "mode": "initial_then_retry",
+      "key_retention": 10,
+      "events": [
+        {
+          "kind": "SINK_CALL",
+          "at": 0,
+          "key": "refund:A:request-1",
+          "result": "COMMITTED",
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "RESPONSE_LOST",
+          "at": 0,
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "SINK_CALL",
+          "at": 11,
+          "key": "refund:A:request-1",
+          "result": "COMMITTED",
+          "effect_id": "refund:A"
+        }
+      ],
+      "ledger": [
+        {
+          "effect_id": "refund:A",
+          "sequence": 1,
+          "at": 0
+        },
+        {
+          "effect_id": "refund:A",
+          "sequence": 2,
+          "at": 11
+        }
+      ]
+    },
+    {
+      "trial": "live_key_dedup",
+      "mode": "initial_then_retry",
+      "key_retention": 10,
+      "events": [
+        {
+          "kind": "SINK_CALL",
+          "at": 0,
+          "key": "refund:A:request-1",
+          "result": "COMMITTED",
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "RESPONSE_LOST",
+          "at": 0,
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "SINK_CALL",
+          "at": 5,
+          "key": "refund:A:request-1",
+          "result": "DEDUPED",
+          "effect_id": "refund:A"
+        }
+      ],
+      "ledger": [
+        {
+          "effect_id": "refund:A",
+          "sequence": 1,
+          "at": 0
+        }
+      ]
+    },
+    {
+      "trial": "covered_hit_safe_stop",
+      "mode": "initial_then_hit",
+      "key_retention": 10,
+      "events": [
+        {
+          "kind": "SINK_CALL",
+          "at": 0,
+          "key": "refund:A:request-1",
+          "result": "COMMITTED",
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "RESPONSE_LOST",
+          "at": 0,
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "QUERY",
+          "at": 11,
+          "result": "HIT",
+          "scope": "EXACT",
+          "retention": "COVERED"
+        }
+      ],
+      "ledger": [
+        {
+          "effect_id": "refund:A",
+          "sequence": 1,
+          "at": 0
+        }
+      ]
+    },
+    {
+      "trial": "query_failure_safe_stop",
+      "mode": "initial_then_unknown",
+      "key_retention": 10,
+      "events": [
+        {
+          "kind": "SINK_CALL",
+          "at": 0,
+          "key": "refund:A:request-1",
+          "result": "COMMITTED",
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "RESPONSE_LOST",
+          "at": 0,
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "QUERY",
+          "at": 11,
+          "result": "UNKNOWN",
+          "scope": "EXACT",
+          "retention": "COVERED"
+        }
+      ],
+      "ledger": [
+        {
+          "effect_id": "refund:A",
+          "sequence": 1,
+          "at": 0
+        }
+      ]
+    },
+    {
+      "trial": "retention_gap_safe_stop",
+      "mode": "initial_then_expired_miss",
+      "key_retention": 10,
+      "events": [
+        {
+          "kind": "SINK_CALL",
+          "at": 0,
+          "key": "refund:A:request-1",
+          "result": "COMMITTED",
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "RESPONSE_LOST",
+          "at": 0,
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "QUERY",
+          "at": 11,
+          "result": "MISS",
+          "scope": "EXACT",
+          "retention": "EXPIRED"
+        }
+      ],
+      "ledger": [
+        {
+          "effect_id": "refund:A",
+          "sequence": 1,
+          "at": 0
+        }
+      ]
+    },
+    {
+      "trial": "conflicting_miss_safe_stop",
+      "mode": "initial_then_conflict",
+      "key_retention": 10,
+      "events": [
+        {
+          "kind": "SINK_CALL",
+          "at": 0,
+          "key": "refund:A:request-1",
+          "result": "COMMITTED",
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "RESPONSE_LOST",
+          "at": 0,
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "QUERY",
+          "at": 11,
+          "result": "MISS",
+          "scope": "EXACT",
+          "retention": "COVERED",
+          "conflict": "POSITIVE_LEDGER"
+        }
+      ],
+      "ledger": [
+        {
+          "effect_id": "refund:A",
+          "sequence": 1,
+          "at": 0
+        }
+      ]
+    },
+    {
+      "trial": "wrong_scope_safe_stop",
+      "mode": "initial_then_wrong_scope",
+      "key_retention": 10,
+      "events": [
+        {
+          "kind": "SINK_CALL",
+          "at": 0,
+          "key": "refund:A:request-1",
+          "result": "COMMITTED",
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "RESPONSE_LOST",
+          "at": 0,
+          "effect_id": "refund:A"
+        },
+        {
+          "kind": "QUERY",
+          "at": 11,
+          "result": "MISS",
+          "scope": "OTHER_TARGET",
+          "retention": "COVERED"
+        }
+      ],
+      "ledger": [
+        {
+          "effect_id": "refund:A",
+          "sequence": 1,
+          "at": 0
+        }
+      ]
+    },
+    {
+      "trial": "covered_miss_authorized",
+      "mode": "new_authorized",
+      "key_retention": 10,
+      "events": [
+        {
+          "kind": "QUERY",
+          "at": 11,
+          "result": "MISS",
+          "scope": "EXACT",
+          "retention": "COVERED"
+        },
+        {
+          "kind": "PERMISSION",
+          "at": 11,
+          "value": true
+        },
+        {
+          "kind": "SINK_CALL",
+          "at": 11,
+          "key": "refund:A:request-1",
+          "result": "COMMITTED",
+          "effect_id": "refund:A"
+        }
+      ],
+      "ledger": [
+        {
+          "effect_id": "refund:A",
+          "sequence": 1,
+          "at": 11
+        }
+      ]
+    },
+    {
+      "trial": "covered_miss_revoked",
+      "mode": "new_revoked",
+      "key_retention": 10,
+      "events": [
+        {
+          "kind": "QUERY",
+          "at": 11,
+          "result": "MISS",
+          "scope": "EXACT",
+          "retention": "COVERED"
+        },
+        {
+          "kind": "PERMISSION",
+          "at": 11,
+          "value": false
+        }
+      ],
+      "ledger": []
+    }
+  ]
+}
