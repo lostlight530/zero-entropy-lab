@@ -1,0 +1,3859 @@
+{
+  "logical_date": "2026-10-18",
+  "scenarios": [
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "complete_new_epoch",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 0,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 0,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "historical_complete_after_permission_revocation",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": false,
+          "epoch": 1,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:old:1:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": false,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "old"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:old:1:attempt-2",
+          "epoch": 1,
+          "fence_accepted": 0,
+          "historical_authorized": 0,
+          "holder": "old",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "stale_leader_weak_write",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:old:1:attempt-2",
+          "epoch": 1,
+          "fence_accepted": 0,
+          "historical_authorized": 0,
+          "holder": "old",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": false,
+          "attempt": "attempt-2",
+          "eligible_at_commit": false,
+          "epoch": 1,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:old:1:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "old"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "MISS",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [],
+      "scenario_id": "stale_leader_protected_reject",
+      "sink_effects": [],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "C"
+        ],
+        "protected": true,
+        "revision": 6,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "C"
+        ],
+        "permission": 1,
+        "revision": 6
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "C"
+            ],
+            "permission": 1,
+            "revision": 6
+          },
+          "before": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": false,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": false,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 0,
+          "historical_authorized": 0,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "membership_change_weak",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 0,
+          "historical_authorized": 0,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "C"
+        ],
+        "protected": true,
+        "revision": 6,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "C"
+        ],
+        "permission": 1,
+        "revision": 6
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "C"
+            ],
+            "permission": 1,
+            "revision": 6
+          },
+          "before": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": false,
+          "attempt": "attempt-2",
+          "eligible_at_commit": false,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "MISS",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [],
+      "scenario_id": "membership_change_protected",
+      "sink_effects": [],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 0,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 0,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": false,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": false,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 0,
+          "historical_authorized": 0,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "permission_revoked_weak",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 0,
+          "historical_authorized": 0,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 0,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 0,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": false,
+          "attempt": "attempt-2",
+          "eligible_at_commit": false,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "MISS",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [],
+      "scenario_id": "permission_revoked_protected",
+      "sink_effects": [],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-9",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-9",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-9",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": false,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": false,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 0,
+          "historical_authorized": 0,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "incarnation_change_weak",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 0,
+          "historical_authorized": 0,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-9",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-9",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-9",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": false,
+          "attempt": "attempt-2",
+          "eligible_at_commit": false,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "MISS",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [],
+      "scenario_id": "incarnation_change_protected",
+      "sink_effects": [],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": false,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "same_key_replay",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "partial_one_member",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "C"
+        ],
+        "protected": true,
+        "revision": 6,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "C"
+        ],
+        "permission": 1,
+        "revision": 6
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "C"
+            ],
+            "permission": 1,
+            "revision": 6
+          },
+          "before": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "same_count_member_replacement",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:replay:other",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:replay:other",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "duplicate_member_distinct_key",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:replay:other",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": false,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "D:new:2:attempt-2",
+          "member": "D",
+          "op": "effect_attempt",
+          "protected": false,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "D:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 0,
+          "historical_authorized": 0,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "D",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "extra_member",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "D:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 0,
+          "historical_authorized": 0,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "D",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "MISS",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "covered_miss_conflicts_positive",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 1,
+        "holder": "old",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "UNKNOWN",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [],
+      "scenario_id": "query_unknown",
+      "sink_effects": [],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 1,
+        "holder": "old",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [],
+      "prior_query": {
+        "exact_scope": false,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "MISS",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [],
+      "scenario_id": "miss_scope_incomplete",
+      "sink_effects": [],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 1,
+        "holder": "old",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "MISS",
+        "visibility_watermark": 10
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [],
+      "scenario_id": "miss_watermark_stale",
+      "sink_effects": [],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 1,
+        "holder": "old",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": false,
+        "status": "MISS",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [],
+      "scenario_id": "miss_retention_gap",
+      "sink_effects": [],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 1,
+        "holder": "old",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "MISS",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [],
+      "scenario_id": "covered_miss_permission_true",
+      "sink_effects": [],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 1,
+        "holder": "old",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 0,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 0,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "MISS",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [],
+      "scenario_id": "covered_miss_permission_false",
+      "sink_effects": [],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-1",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "receipt_wrong_attempt",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": "1",
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "receipt_string_authorization",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 1
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "receipt_older_than_scope",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": false,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "unprotected_completion_witness",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "receipt_extra_duplicate_identity",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "other",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "receipt_wrong_target",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-older",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "scenario_id": "receipt_wrong_run",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    },
+    {
+      "completion_witness": {
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "protected": true,
+        "revision": 5,
+        "verified_tick": 50
+      },
+      "control": {
+        "epoch": 2,
+        "holder": "new",
+        "incarnation": "target-inc-8",
+        "members": [
+          "A",
+          "B"
+        ],
+        "permission": 1,
+        "revision": 5
+      },
+      "fixed": {
+        "initial_epoch": 1,
+        "initial_members": [
+          "A",
+          "B"
+        ],
+        "initial_revision": 5,
+        "run": "run-8",
+        "target_incarnation": "target-inc-8",
+        "task": "handoff-task-18"
+      },
+      "operations": [
+        {
+          "after": {
+            "epoch": 2,
+            "holder": "new",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "before": {
+            "epoch": 1,
+            "holder": "old",
+            "incarnation": "target-inc-8",
+            "members": [
+              "A",
+              "B"
+            ],
+            "permission": 1,
+            "revision": 5
+          },
+          "op": "control_update"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "A:new:2:attempt-2",
+          "member": "A",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        },
+        {
+          "accepted": true,
+          "attempt": "attempt-2",
+          "eligible_at_commit": true,
+          "epoch": 2,
+          "incarnation_seen": "target-inc-8",
+          "key": "B:new:2:attempt-2",
+          "member": "B",
+          "op": "effect_attempt",
+          "protected": true,
+          "revision_seen": 5,
+          "tick": 20,
+          "worker": "new"
+        }
+      ],
+      "prior_query": {
+        "exact_scope": true,
+        "healthy": true,
+        "minimum_watermark": 30,
+        "retention_covers_attempt": true,
+        "status": "HIT",
+        "visibility_watermark": 40
+      },
+      "receipt_authority": "modeled_projection_of_local_sink",
+      "receipts": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 60
+        }
+      ],
+      "scenario_id": "receipt_temporal_future",
+      "sink_effects": [
+        {
+          "attempt": "attempt-2",
+          "effect_key": "A:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "A",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        },
+        {
+          "attempt": "attempt-2",
+          "effect_key": "B:new:2:attempt-2",
+          "epoch": 2,
+          "fence_accepted": 1,
+          "historical_authorized": 1,
+          "holder": "new",
+          "incarnation": "target-inc-8",
+          "member": "B",
+          "run": "run-8",
+          "task": "handoff-task-18",
+          "tick": 20
+        }
+      ],
+      "terminal_success": true
+    }
+  ],
+  "source": "sqlite3 in-memory transactional sink; controlled authored interventions"
+}

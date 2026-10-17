@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-17 compensation retry after idempotency retention expiry](records/2026-10-17.md)
+- 最新 Daily: [2026-10-18 lease handoff sink fencing versus atomic permission and dynamic membership](records/2026-10-18.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-08 至 2026-10-13](audits/2026-10-08--2026-10-13.md)
@@ -614,3 +614,9 @@ Derived index clarification — 2026-10-13: the 2026-10-12 current-state paragra
 One NATIVE bounded Python research window on compensation retry after modeled idempotency-key expiry, versus exact historical refund occurrence, effect-time authorization and protected current net-state. The [Daily](records/2026-10-17.md) records 36 authored scenarios, four paths, 144 local modeled decisions, nine isolated simulated sink trials, ten simulated sink calls, nine committed model effects and 33/33 rejected adversarial mutations. An expired key was blindly reused after a simulated response loss and produced a second committed modeled refund effect. No live payment, independent authorization or external sink experiment was executed, and reference-label agreement is not production accuracy.
 
 The non-overlapping 2026-10-14..2026-10-17 audit window has four logical dates and is not yet due. October Monthly synchronization is derived navigation, with no additional experiment/window credit; no CASES, METHOD or NOTES promotion. Current native research endpoint is 2026-10-17.
+
+## Ballast current-state advance — 2026-10-18
+
+One NATIVE bounded local SQLite research window examines lease-holder handoff, protected effect-sink fencing at commit, current permission, effect-time authorization, exact historical occurrence and dynamic membership. [Daily](records/2026-10-18.md) records 30 isolated scenarios, 41 local effect attempts, 36 accepted SQLite inserts, three decision paths and 90 decisions. Terminal and count proxies produce 27 and 10 model-relative false COMPLETE outcomes, while a separate verifier reconstructs the exported SQLite transition journal and rejects 69/69 adversarial mutation controls. The reference and verifier share scenario data and contract semantics; no live Kubernetes, Temporal, DynamoDB or external effect sink validation was performed. Original raw evidence, producer, verifier, checked SHA256 source bundle and extraction tool are committed together. This is one research unit/window, not a second window from post-research delivery.
+
+2026-10-14..2026-10-18 has five dates since the last non-overlapping complete audit, so no new audit is due. Monthly/README are derived navigation only, CASE 0, METHOD 0, NOTES 0, Special 0, Audit 0. Current native research endpoint is 2026-10-18.
