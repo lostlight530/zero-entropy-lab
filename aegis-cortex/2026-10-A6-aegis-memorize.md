@@ -5266,3 +5266,135 @@ DUPLICATE_EVIDENCE_CREDIT
 - Independent maintenance does NOT run external tests, modify host, launch NEXUS or claim that local mitigations were deployed
 - Current risk ledger OPEN, risk applicability requires inspected host action traces and valid denominator
 - A2 result: MONTH_VERSION_2026_10_OPEN / FOUR_NATIVE_BLOCKED_DATES / OCT13_SOURCE_DEGRADED / W42_OPEN / NO_LOCAL_INCIDENT_PROVEN
+
+## A1 2026-10-17 | 16-day Aegis original evidence review and Ballast partition
+
+- Base main: `f93b16708f42e2e010ccf2192b1dfca0a50d065e`; cutoff 2026-10-01..16, before October 17 native inputs
+- Review source: original date-addressed Aegis A1/A2 and Ballast Git blob identity plus the merged October 16 native-to-doctrine historical source-time reconciliation
+- A1 decisions below reconfirm the entire month-to-date inventory, do not represent new producer runs, source replications, host incidents, or an extra independent research cohort
+- October A6 is a provisional month-to-date owner, never final native A6; W42 (Oct12–18) remains naturally OPEN
+- Distinguish publication evidence, local host runtime, source-time input visibility, and independent Ballast synthetic research
+- Previous native A2 BLOCKED October 1, 2, 4 and 15, DEGRADED October 13 remain unchanged; repeated delivery does not repair them
+
+### Sixteen source-time producer and research partitions
+#### 2026-10-01 | Observability/false completion/sycophancy
+- A1 producer path: `aegis-cortex/2026-10-01-A1-reliability-observe.md` · blob `461882e16809ef9b442b3c6d47b45f44418660b5`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-01-A2-doctrine-orient.md` · blob `450bb5e41ba1f4f52f605632a3522797568429c5`; task-time `BLOCKED_INPUT_MISSING`
+- Source-to-doctrine eligibility: Task-time missing A1 input cannot be repaired by current file listing
+- Independent Ballast path: `ballast/records/2026-10-01.md` · blob `21a2dbd84f4a7e05bc64f78aa934d824a4a96593`; not an Aegis local mitigation execution
+- A1 disposition: `HISTORICAL_BLOCKED_PRESERVE`; inherited current relation `ORIGINAL_BLOCKED_RETENTION`
+#### 2026-10-02 | Observability/action-level divergence
+- A1 producer path: `aegis-cortex/2026-10-02-A1-reliability-observe.md` · blob `abe20d48251fc36893884f355421e896e3f3631a`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-02-A2-doctrine-orient.md` · blob `c590dffb8dc28fb701174e6dfafe2c3697f97b37`; task-time `BLOCKED_INPUT_MISSING`
+- Source-to-doctrine eligibility: Original A2 blocked despite later A1 source available on main
+- Independent Ballast path: `ballast/records/2026-10-02.md` · blob `1081112e8ef7f9c1d3e4415c2cf1edb297419a58`; not an Aegis local mitigation execution
+- A1 disposition: `HISTORICAL_BLOCKED_PRESERVE`; inherited current relation `ORIGINAL_BLOCKED_RETENTION`
+#### 2026-10-03 | Cloud coding scope drift
+- A1 producer path: `aegis-cortex/2026-10-03-A1-reliability-observe.md` · blob `0f37ab4b605a24006a862a9837564a459c0c1298`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-03-A2-doctrine-orient.md` · blob `3c95e23cfa6187d0c23f607d622e2e8353051b13`; task-time `SUCCESS`
+- Source-to-doctrine eligibility: One publisher source supports risk framing, not local detected incident
+- Independent Ballast path: `ballast/records/2026-10-03.md` · blob `82df0f7d4e36c844f76bfed4b23bd1ece6a46b53`; not an Aegis local mitigation execution
+- A1 disposition: `SOURCE_SCOPE_NO_LOCAL_PROMOTION`; inherited current relation `EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT`
+#### 2026-10-04 | Coding agent reliability and false completion
+- A1 producer path: `aegis-cortex/2026-10-04-A1-reliability-observe.md` · blob `88fcc05dd273fbb361963435211e38447ea67a9c`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-04-A2-doctrine-orient.md` · blob `08f105bfae915c994d411e8ab86d421db03f9c42`; task-time `BLOCKED_INPUT_MISSING`
+- Source-to-doctrine eligibility: Original A2 missing prerequisite, must not count success
+- Independent Ballast path: `ballast/records/2026-10-04.md` · blob `649882d3a0bbb7939481f5f2bb43aea4f268b9c8`; not an Aegis local mitigation execution
+- A1 disposition: `HISTORICAL_BLOCKED_PRESERVE`; inherited current relation `ORIGINAL_BLOCKED_RETENTION`
+#### 2026-10-05 | Tool-use errors and evaluation
+- A1 producer path: `aegis-cortex/2026-10-05-A1-reliability-observe.md` · blob `11701da8dff9882ef4e8d4f174abc062abd41404`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-05-A2-doctrine-orient.md` · blob `98139f531397d66bde60765a38f9b0c683d936ab`; task-time `SUCCESS`
+- Source-to-doctrine eligibility: External tool-error paper does not evidence a host-side exploit
+- Independent Ballast path: `ballast/records/2026-10-05.md` · blob `b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931`; not an Aegis local mitigation execution
+- A1 disposition: `SOURCE_SCOPE_NO_LOCAL_PROMOTION`; inherited current relation `EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT`
+#### 2026-10-06 | Unsupported success claims
+- A1 producer path: `aegis-cortex/2026-10-06-A1-reliability-observe.md` · blob `56abc25eca5f0e9e2aa537be5924c6045162815c`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-06-A2-doctrine-orient.md` · blob `6cb80c4d899b533c539ad487b274c1b168db9724`; task-time `SUCCESS`
+- Source-to-doctrine eligibility: Published success-claim risk is a failure-mode hypothesis, not observed own incident
+- Independent Ballast path: `ballast/records/2026-10-06.md` · blob `2ad5c5ce4a3fc4228f089eaacf94109e4210a66f`; not an Aegis local mitigation execution
+- A1 disposition: `SOURCE_SCOPE_NO_LOCAL_PROMOTION`; inherited current relation `EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT`
+#### 2026-10-07 | Recovery verification and false completion
+- A1 producer path: `aegis-cortex/2026-10-07-A1-reliability-observe.md` · blob `12c9266cc5f1fe0837a736e7ec9ed4505e7ba4a5`
+- Original source assessment: INDEPENDENT_CORROBORATION, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-07-A2-doctrine-orient.md` · blob `9bd6c75a310832f7cc58c9ae399f41acfdf4d950`; task-time `SUCCESS_INDEPENDENT`
+- Source-to-doctrine eligibility: Independent source corroboration producer-declared only on this day
+- Independent Ballast path: `ballast/records/2026-10-07.md` · blob `7f20b476517f31e4d890e64880b2eeb4b8248bf7`; not an Aegis local mitigation execution
+- A1 disposition: `SOURCE_SCOPE_NO_LOCAL_PROMOTION`; inherited current relation `EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT`
+#### 2026-10-08 | Overconfidence/false completion
+- A1 producer path: `aegis-cortex/2026-10-08-A1-reliability-observe.md` · blob `5c91de675c4dc78aba0f419ab5f7added9c29fd7`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-08-A2-doctrine-orient.md` · blob `9815107064b4fed9aa0983143c4b329b5f28a675`; task-time `SUCCESS`
+- Source-to-doctrine eligibility: Overconfidence concern must be checked against actual action ledger
+- Independent Ballast path: `ballast/records/2026-10-08.md` · blob `8d24c4cfc5362b7c81b60a6888d875e6960342aa`; not an Aegis local mitigation execution
+- A1 disposition: `SOURCE_SCOPE_NO_LOCAL_PROMOTION`; inherited current relation `EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT`
+#### 2026-10-09 | Boundary control and scope drift
+- A1 producer path: `aegis-cortex/2026-10-09-A1-reliability-observe.md` · blob `e5b385ba25e8a4ef9a68401080dab545592ddf4b`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-09-A2-doctrine-orient.md` · blob `2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124`; task-time `SUCCESS`
+- Source-to-doctrine eligibility: Scope-control risk not proof of today's unauthorized tool call
+- Independent Ballast path: `ballast/records/2026-10-09.md` · blob `cce84778a3f752461a1d82b9c38f5057f3950fd3`; not an Aegis local mitigation execution
+- A1 disposition: `SOURCE_SCOPE_NO_LOCAL_PROMOTION`; inherited current relation `EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT`
+#### 2026-10-10 | Instruction conflict and memory poisoning
+- A1 producer path: `aegis-cortex/2026-10-10-A1-reliability-observe.md` · blob `bfbe8f099a7413cdd5a8f1466a180d9e2d78f975`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-10-A2-doctrine-orient.md` · blob `ce4f369d35fda91ddeeb975679a89ee4fe1f2314`; task-time `SUCCESS`
+- Source-to-doctrine eligibility: Memory poisoning needs observed payload and validator failure before local incident
+- Independent Ballast path: `ballast/records/2026-10-10.md` · blob `d2702d66363b0e8a6ea645aff60a6475a1ca003c`; not an Aegis local mitigation execution
+- A1 disposition: `SOURCE_SCOPE_NO_LOCAL_PROMOTION`; inherited current relation `EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT`
+#### 2026-10-11 | Tool authorization and scope controls
+- A1 producer path: `aegis-cortex/2026-10-11-A1-reliability-observe.md` · blob `bc3c4ba9cf48045bb05f02e65901dd02ad5464f1`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-11-A2-doctrine-orient.md` · blob `d3882e3530ce98550a10f93ba4221afbb270c83c`; task-time `SUCCESS`
+- Source-to-doctrine eligibility: Tool authorization claims remain external and not own policy enforcement test
+- Independent Ballast path: `ballast/records/2026-10-11.md` · blob `b35c69acee29b194d597d3eedd942dd4cc7243a0`; not an Aegis local mitigation execution
+- A1 disposition: `SOURCE_SCOPE_NO_LOCAL_PROMOTION`; inherited current relation `EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT`
+#### 2026-10-12 | Coding agent boundary failure
+- A1 producer path: `aegis-cortex/2026-10-12-A1-reliability-observe.md` · blob `72d7f662d70f5c73301fd8bec7c8351f0e1a7349`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-12-A2-doctrine-orient.md` · blob `6ed3797a34699a9eae821c7bb2a8c8797459b17f`; task-time `SUCCESS`
+- Source-to-doctrine eligibility: Native external coding-agent risk signal, no local production failure
+- Independent Ballast path: `ballast/records/2026-10-12.md` · blob `02fe0896ac9c41ae336cda04e69f133460e0a742`; not an Aegis local mitigation execution
+- A1 disposition: `SOURCE_SCOPE_NO_LOCAL_PROMOTION`; inherited current relation `EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT`
+#### 2026-10-13 | False completion, partial source retrieval
+- A1 producer path: `aegis-cortex/2026-10-13-A1-reliability-observe.md` · blob `a5d0ca039bbe4b93b8b59e5e671bcf76ff82ba87`
+- Original source assessment: PARTIAL_PRIMARY_RECHECK, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-13-A2-doctrine-orient.md` · blob `1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22`; task-time `DEGRADED`
+- Source-to-doctrine eligibility: Partially accessible primary source; producer A2 degraded and not complete
+- Independent Ballast path: `ballast/records/2026-10-13.md` · blob `cc09eb3e1746cf4e555880ab4304b28c63341a4c`; not an Aegis local mitigation execution
+- A1 disposition: `DEGRADED_SOURCE_PRESERVE`; inherited current relation `SOURCE_SCOPE_DEGRADED`
+#### 2026-10-14 | Action mismatch with hidden failures
+- A1 producer path: `aegis-cortex/2026-10-14-A1-reliability-observe.md` · blob `1def392d03eb7bb03c428d696d4acb923454112f`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-14-A2-doctrine-orient.md` · blob `c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd`; task-time `SUCCESS`
+- Source-to-doctrine eligibility: Intent/action mismatch hypothesis requires action trace for host assessment
+- Independent Ballast path: `ballast/records/2026-10-14.md` · blob `98a752267cd0c2beff5d2770ecf1672a6c869e3b`; not an Aegis local mitigation execution
+- A1 disposition: `SOURCE_SCOPE_NO_LOCAL_PROMOTION`; inherited current relation `EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT`
+#### 2026-10-15 | Memory poisoning, tool errors, false completion
+- A1 producer path: `aegis-cortex/2026-10-15-A1-reliability-observe.md` · blob `293272cf6ae77efc28491dc69597d0652f4ca751`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-15-A2-doctrine-orient.md` · blob `896901e892647ab19b584fa077363afc5e4e89ab`; task-time `BLOCKED_INPUT_MISSING`
+- Source-to-doctrine eligibility: Original Oct15 A2 blocked source-time despite current source present
+- Independent Ballast path: `ballast/records/2026-10-15.md` · blob `2f94b0b736cd8e3ffda03794462a12d3b50a3bc3`; not an Aegis local mitigation execution
+- A1 disposition: `HISTORICAL_BLOCKED_PRESERVE`; inherited current relation `ORIGINAL_BLOCKED_RETENTION`
+#### 2026-10-16 | False completion cascades through coordinated agents
+- A1 producer path: `aegis-cortex/2026-10-16-A1-reliability-observe.md` · blob `372a99054cd4cd55ac909304b4c44a702376bcf6`
+- Original source assessment: SINGLE_SOURCE, external published evidence not host incident proof
+- A2 dependent path: `aegis-cortex/2026-10-16-A2-doctrine-orient.md` · blob `454d6a632ad13c2fdacbfa27a30d0a565427026f`; task-time `SUCCESS`
+- Source-to-doctrine eligibility: Native A1/A2 SUCCESS, single-source false-completion cascade risk, NO_LOCAL_EVIDENCE
+- Independent Ballast path: `ballast/records/2026-10-16.md` · blob `5cf129e2d6d31ce14171ac3e2b0c6ea0a3bddee0`; not an Aegis local mitigation execution
+- A1 disposition: `SOURCE_SCOPE_NO_LOCAL_PROMOTION`; inherited current relation `EXTERNAL_RISK_TRACKED_NO_LOCAL_INCIDENT`
+
+### Weekly, monthly and authority gate
+- W40 and W41 original A3/A4 records remain point-in-time discipline and action outputs, not current host runtime enforcement
+- W42 A3/A4 natural week not ended at October 17 cutoff; no false missing-work state or premature Weekly seal
+- October A5/A6 natural closure remains NOT_DUE; this A1 does not represent native monthly reflection or durable doctrine promotion
+- Ballast synthetic compensation/ledger checks can illustrate effect identity but cannot independently prove Aegis host mitigation
+- Original A1/A2 producer files and Ballast research files deliberately not changed; the October A6 relation owner alone receives append-only review
+- No live incident verification, external source rerun, repository checker, or GitHub Actions check was executed in this maintainer audit
+- A1 decision: ORIGINAL_HISTORY_PRESERVED / 16_TRIADS_IDENTIFIED / MONTH_OPEN / CONTINUE_TO_MERGED_A1_GATE
