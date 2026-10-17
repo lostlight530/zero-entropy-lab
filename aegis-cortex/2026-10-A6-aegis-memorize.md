@@ -5398,3 +5398,144 @@ DUPLICATE_EVIDENCE_CREDIT
 - Original A1/A2 producer files and Ballast research files deliberately not changed; the October A6 relation owner alone receives append-only review
 - No live incident verification, external source rerun, repository checker, or GitHub Actions check was executed in this maintainer audit
 - A1 decision: ORIGINAL_HISTORY_PRESERVED / 16_TRIADS_IDENTIFIED / MONTH_OPEN / CONTINUE_TO_MERGED_A1_GATE
+
+## 2026-10-17 A2 | Aegis October 1–17 risk, source-time admission and independent Ballast relation
+
+- Fresh after A1 #668 merged main `ce4d594781599f2c57c684a82b5e2f291d5d0389`; this append updates single `MONTH_VERSION=2026-10`, still OPEN/PROVISIONAL_NOT_FINAL
+- October 17 native Jules A1/A2 have actual current main paths, original source arXiv:2604.02623v2, SINGLE_SOURCE_LINEAGE, A2 INPUT_PRESENT and SUCCESS
+- Oct17 eTAMP/memory poisoning is a study of published risk, not an observed local Zero Host Kernel incident or tested mitigation
+- Ballast Oct17 is a different synthetic compensation experiment: 36 scenarios, 144 decisions, 9 isolated sink trials and 33/33 adversarial checks; zero external refunds, no real Stripe/Temporal/AWS run
+- Original A2 Oct01,02,04,15 BLOCKED remains as historical source-time evidence; Oct13 DEGRADED is not later upgraded by source retention
+- W40/W41 A3/A4 are original discipline/action evidence with bounded observation; W42 Oct12–18 is OPEN, October native A5/A6 final NOT_DUE
+- Do not merge SOURCE_SINGLE_LINEAGE, external failure mode, local incident, risk mitigation deployment or independent experiment denominators
+
+### Daily risk-to-doctrine evidence graph, including separate Ballast
+#### 2026-10-01 | upstream task-time blocker
+- A1 observation `aegis-cortex/2026-10-01-A1-reliability-observe.md` · Git blob `461882e16809ef9b442b3c6d47b45f44418660b5`
+- A2 source-time doctrine `aegis-cortex/2026-10-01-A2-doctrine-orient.md` · Git blob `450bb5e41ba1f4f52f605632a3522797568429c5`
+- Related independent Ballast `ballast/records/2026-10-01.md` · Git blob `21a2dbd84f4a7e05bc64f78aa934d824a4a96593`; separate execution authority
+- Evidence admissibility: Current file cannot prove original upstream main-visible at A2 execution
+- Weekly relation: W40 history; no weekly final inferred
+- October A2 decision `ORIGINAL_INPUT_BLOCKED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-02 | second original missing A1-to-A2 handoff
+- A1 observation `aegis-cortex/2026-10-02-A1-reliability-observe.md` · Git blob `abe20d48251fc36893884f355421e896e3f3631a`
+- A2 source-time doctrine `aegis-cortex/2026-10-02-A2-doctrine-orient.md` · Git blob `c590dffb8dc28fb701174e6dfafe2c3697f97b37`
+- Related independent Ballast `ballast/records/2026-10-02.md` · Git blob `1081112e8ef7f9c1d3e4415c2cf1edb297419a58`; separate execution authority
+- Evidence admissibility: Current file cannot prove original upstream main-visible at A2 execution
+- Weekly relation: W40 history; no weekly final inferred
+- October A2 decision `ORIGINAL_INPUT_BLOCKED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-03 | external risk evidence not local incident
+- A1 observation `aegis-cortex/2026-10-03-A1-reliability-observe.md` · Git blob `0f37ab4b605a24006a862a9837564a459c0c1298`
+- A2 source-time doctrine `aegis-cortex/2026-10-03-A2-doctrine-orient.md` · Git blob `3c95e23cfa6187d0c23f607d622e2e8353051b13`
+- Related independent Ballast `ballast/records/2026-10-03.md` · Git blob `82df0f7d4e36c844f76bfed4b23bd1ece6a46b53`; separate execution authority
+- Evidence admissibility: Only date-bounded published failure mode, no observed host incident
+- Weekly relation: W40 history; no weekly final inferred
+- October A2 decision `ORIGINAL_DEPENDENCY_RECORDED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-04 | historical A2 input blocker
+- A1 observation `aegis-cortex/2026-10-04-A1-reliability-observe.md` · Git blob `88fcc05dd273fbb361963435211e38447ea67a9c`
+- A2 source-time doctrine `aegis-cortex/2026-10-04-A2-doctrine-orient.md` · Git blob `08f105bfae915c994d411e8ab86d421db03f9c42`
+- Related independent Ballast `ballast/records/2026-10-04.md` · Git blob `649882d3a0bbb7939481f5f2bb43aea4f268b9c8`; separate execution authority
+- Evidence admissibility: Current file cannot prove original upstream main-visible at A2 execution
+- Weekly relation: W40 history; no weekly final inferred
+- October A2 decision `ORIGINAL_INPUT_BLOCKED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-05 | external tool-error publication vs host event
+- A1 observation `aegis-cortex/2026-10-05-A1-reliability-observe.md` · Git blob `11701da8dff9882ef4e8d4f174abc062abd41404`
+- A2 source-time doctrine `aegis-cortex/2026-10-05-A2-doctrine-orient.md` · Git blob `98139f531397d66bde60765a38f9b0c683d936ab`
+- Related independent Ballast `ballast/records/2026-10-05.md` · Git blob `b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931`; separate execution authority
+- Evidence admissibility: Only date-bounded published failure mode, no observed host incident
+- Weekly relation: W41 decision-to-action history; no weekly final inferred
+- October A2 decision `ORIGINAL_DEPENDENCY_RECORDED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-06 | unsupported success claim risk
+- A1 observation `aegis-cortex/2026-10-06-A1-reliability-observe.md` · Git blob `56abc25eca5f0e9e2aa537be5924c6045162815c`
+- A2 source-time doctrine `aegis-cortex/2026-10-06-A2-doctrine-orient.md` · Git blob `6cb80c4d899b533c539ad487b274c1b168db9724`
+- Related independent Ballast `ballast/records/2026-10-06.md` · Git blob `2ad5c5ce4a3fc4228f089eaacf94109e4210a66f`; separate execution authority
+- Evidence admissibility: Only date-bounded published failure mode, no observed host incident
+- Weekly relation: W41 decision-to-action history; no weekly final inferred
+- October A2 decision `ORIGINAL_DEPENDENCY_RECORDED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-07 | independent cross-source recovery controls in original A1
+- A1 observation `aegis-cortex/2026-10-07-A1-reliability-observe.md` · Git blob `12c9266cc5f1fe0837a736e7ec9ed4505e7ba4a5`
+- A2 source-time doctrine `aegis-cortex/2026-10-07-A2-doctrine-orient.md` · Git blob `9bd6c75a310832f7cc58c9ae399f41acfdf4d950`
+- Related independent Ballast `ballast/records/2026-10-07.md` · Git blob `7f20b476517f31e4d890e64880b2eeb4b8248bf7`; separate execution authority
+- Evidence admissibility: Only date-bounded published failure mode, no observed host incident
+- Weekly relation: W41 decision-to-action history; no weekly final inferred
+- October A2 decision `ORIGINAL_DEPENDENCY_RECORDED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-08 | authority and metadata bounded
+- A1 observation `aegis-cortex/2026-10-08-A1-reliability-observe.md` · Git blob `5c91de675c4dc78aba0f419ab5f7added9c29fd7`
+- A2 source-time doctrine `aegis-cortex/2026-10-08-A2-doctrine-orient.md` · Git blob `9815107064b4fed9aa0983143c4b329b5f28a675`
+- Related independent Ballast `ballast/records/2026-10-08.md` · Git blob `8d24c4cfc5362b7c81b60a6888d875e6960342aa`; separate execution authority
+- Evidence admissibility: Only date-bounded published failure mode, no observed host incident
+- Weekly relation: W41 decision-to-action history; no weekly final inferred
+- October A2 decision `ORIGINAL_DEPENDENCY_RECORDED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-09 | risk/source class no local implementation
+- A1 observation `aegis-cortex/2026-10-09-A1-reliability-observe.md` · Git blob `e5b385ba25e8a4ef9a68401080dab545592ddf4b`
+- A2 source-time doctrine `aegis-cortex/2026-10-09-A2-doctrine-orient.md` · Git blob `2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124`
+- Related independent Ballast `ballast/records/2026-10-09.md` · Git blob `cce84778a3f752461a1d82b9c38f5057f3950fd3`; separate execution authority
+- Evidence admissibility: Only date-bounded published failure mode, no observed host incident
+- Weekly relation: W41 decision-to-action history; no weekly final inferred
+- October A2 decision `ORIGINAL_DEPENDENCY_RECORDED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-10 | compensating transaction identity
+- A1 observation `aegis-cortex/2026-10-10-A1-reliability-observe.md` · Git blob `bfbe8f099a7413cdd5a8f1466a180d9e2d78f975`
+- A2 source-time doctrine `aegis-cortex/2026-10-10-A2-doctrine-orient.md` · Git blob `ce4f369d35fda91ddeeb975679a89ee4fe1f2314`
+- Related independent Ballast `ballast/records/2026-10-10.md` · Git blob `d2702d66363b0e8a6ea645aff60a6475a1ca003c`; separate execution authority
+- Evidence admissibility: Only date-bounded published failure mode, no observed host incident
+- Weekly relation: W41 decision-to-action history; no weekly final inferred
+- October A2 decision `ORIGINAL_DEPENDENCY_RECORDED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-11 | producer risk source without run receipt
+- A1 observation `aegis-cortex/2026-10-11-A1-reliability-observe.md` · Git blob `bc3c4ba9cf48045bb05f02e65901dd02ad5464f1`
+- A2 source-time doctrine `aegis-cortex/2026-10-11-A2-doctrine-orient.md` · Git blob `d3882e3530ce98550a10f93ba4221afbb270c83c`
+- Related independent Ballast `ballast/records/2026-10-11.md` · Git blob `b35c69acee29b194d597d3eedd942dd4cc7243a0`; separate execution authority
+- Evidence admissibility: Only date-bounded published failure mode, no observed host incident
+- Weekly relation: W41 decision-to-action history; no weekly final inferred
+- October A2 decision `ORIGINAL_DEPENDENCY_RECORDED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-12 | external reproducibility context
+- A1 observation `aegis-cortex/2026-10-12-A1-reliability-observe.md` · Git blob `72d7f662d70f5c73301fd8bec7c8351f0e1a7349`
+- A2 source-time doctrine `aegis-cortex/2026-10-12-A2-doctrine-orient.md` · Git blob `6ed3797a34699a9eae821c7bb2a8c8797459b17f`
+- Related independent Ballast `ballast/records/2026-10-12.md` · Git blob `02fe0896ac9c41ae336cda04e69f133460e0a742`; separate execution authority
+- Evidence admissibility: Only date-bounded published failure mode, no observed host incident
+- Weekly relation: W42 open research inputs; no weekly final inferred
+- October A2 decision `ORIGINAL_DEPENDENCY_RECORDED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-13 | partially verified source chain
+- A1 observation `aegis-cortex/2026-10-13-A1-reliability-observe.md` · Git blob `a5d0ca039bbe4b93b8b59e5e671bcf76ff82ba87`
+- A2 source-time doctrine `aegis-cortex/2026-10-13-A2-doctrine-orient.md` · Git blob `1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22`
+- Related independent Ballast `ballast/records/2026-10-13.md` · Git blob `cc09eb3e1746cf4e555880ab4304b28c63341a4c`; separate execution authority
+- Evidence admissibility: Do not upgrade partial publisher verification through later research
+- Weekly relation: W42 open research inputs; no weekly final inferred
+- October A2 decision `ORIGINAL_SOURCE_DEGRADED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-14 | observed supplier failure class, zero host incident
+- A1 observation `aegis-cortex/2026-10-14-A1-reliability-observe.md` · Git blob `1def392d03eb7bb03c428d696d4acb923454112f`
+- A2 source-time doctrine `aegis-cortex/2026-10-14-A2-doctrine-orient.md` · Git blob `c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd`
+- Related independent Ballast `ballast/records/2026-10-14.md` · Git blob `98a752267cd0c2beff5d2770ecf1672a6c869e3b`; separate execution authority
+- Evidence admissibility: Only date-bounded published failure mode, no observed host incident
+- Weekly relation: W42 open research inputs; no weekly final inferred
+- October A2 decision `ORIGINAL_DEPENDENCY_RECORDED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-15 | original A2 BLOCKED, retained negative
+- A1 observation `aegis-cortex/2026-10-15-A1-reliability-observe.md` · Git blob `293272cf6ae77efc28491dc69597d0652f4ca751`
+- A2 source-time doctrine `aegis-cortex/2026-10-15-A2-doctrine-orient.md` · Git blob `896901e892647ab19b584fa077363afc5e4e89ab`
+- Related independent Ballast `ballast/records/2026-10-15.md` · Git blob `2f94b0b736cd8e3ffda03794462a12d3b50a3bc3`; separate execution authority
+- Evidence admissibility: Current file cannot prove original upstream main-visible at A2 execution
+- Weekly relation: W42 open research inputs; no weekly final inferred
+- October A2 decision `ORIGINAL_INPUT_BLOCKED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-16 | false-completion cascade risk, external-only
+- A1 observation `aegis-cortex/2026-10-16-A1-reliability-observe.md` · Git blob `372a99054cd4cd55ac909304b4c44a702376bcf6`
+- A2 source-time doctrine `aegis-cortex/2026-10-16-A2-doctrine-orient.md` · Git blob `454d6a632ad13c2fdacbfa27a30d0a565427026f`
+- Related independent Ballast `ballast/records/2026-10-16.md` · Git blob `5cf129e2d6d31ce14171ac3e2b0c6ea0a3bddee0`; separate execution authority
+- Evidence admissibility: Only date-bounded published failure mode, no observed host incident
+- Weekly relation: W42 open research inputs; no weekly final inferred
+- October A2 decision `ORIGINAL_DEPENDENCY_RECORDED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+#### 2026-10-17 | external memory poisoning/eTAMP and frustration exploitation, single-source
+- A1 observation `aegis-cortex/2026-10-17-A1-reliability-observe.md` · Git blob `32bc7fefb64671e1c09347d03231034fd3d28cda`
+- A2 source-time doctrine `aegis-cortex/2026-10-17-A2-doctrine-orient.md` · Git blob `7d839226fcf975325c8a5813e706b6e05f09aeeb`
+- Related independent Ballast `ballast/records/2026-10-17.md` · Git blob `4f76b71274f8a72434ca0a02af8d48a18842dbb3`; separate execution authority
+- Evidence admissibility: Single source metadata/abstract does not evidence host memory corruption, runtime exploit or incidence rate
+- Weekly relation: W42 open research inputs; no weekly final inferred
+- October A2 decision `ORIGINAL_DEPENDENCY_RECORDED` / `NO_LOCAL_INCIDENT_PROVEN`; no new evidence credit from monthly reuse
+
+### Cross-plane current interpretation and next gates
+- October 17 external memory-poisoning source identity does not prove our repository has untrusted persistent memory, a local affected agent or an executed attack
+- Oct16 false-completion report and Oct17 memory-poisoning paper discuss different failure mechanisms; do not form a single confirmed host incident chain
+- Ballast Oct16 compensation retention and Oct17 idempotency-key expiry scenarios broaden the *synthetic* evidence identity classes, not trusted real-world Stripe refund correctness
+- Host Aegis monthly doctrine promotion remains prohibited without witnessed relevant local execution, reliable population denominators and valid temporal artifacts
+- W42 ending Oct18 cannot be finalized at Oct17; original task-time BLOCKED and network degraded retain independent historical validity
+- No native A1/A2 or Ballast records changed; only October current-month owner append, prior A1 preserved unchanged
+- GitHub delivery and blob identity verified, but external live exploit, local mitigation runtime and full ballast check NOT_EXECUTED by maintainer
+- A2 status 17_RISK_DATE_RELATIONS / 4_ORIGINAL_BLOCKED / 1_DEGRADED / NO_LOCAL_HOST_INCIDENT / OPEN_MONTH
