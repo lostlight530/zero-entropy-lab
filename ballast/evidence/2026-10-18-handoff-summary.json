@@ -1,0 +1,27 @@
+{
+  "decision_counts": {
+    "count_proxy": {
+      "COMPLETE": 13,
+      "NOT_COMPLETE": 17
+    },
+    "full_integrity": {
+      "BLOCKED": 2,
+      "COMPLETE": 3,
+      "RECONCILE": 15,
+      "RETRY_ALLOWED": 4,
+      "STOP_UNKNOWN": 6
+    },
+    "terminal_proxy": {
+      "COMPLETE": 30
+    }
+  },
+  "decision_sha256": "30b7ffce711a2fa1b44132608f5a71d062c71b273235efca9f5d7be37300136d",
+  "decisions": 90,
+  "external_effects": 0,
+  "logical_date": "2026-10-18",
+  "paths": 3,
+  "scenario_sha256": "a662423b5d2604d03568cc049607bd54109326f10ee82f60ed2d3103b7bf19f4",
+  "scenarios": 30,
+  "sqlite_accepted_writes": 36,
+  "sqlite_effect_attempts": 41
+}
