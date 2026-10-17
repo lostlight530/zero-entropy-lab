@@ -335,16 +335,16 @@
     "agentclientprotocol/agent-client-protocol": {
       "documents": {
         "CHANGELOG.md": {
-          "blob_sha": "43d7956b4b02c292e688b655df940684243365b8",
-          "commit_sha": "44d93e13291498b4e78b6c96fea493f840eb6701",
-          "content_hash": "b1e617d06fc6264bf1f452bb53912e0d619ff398fe630dcd4cec74bb6eef6218",
+          "blob_sha": "ea87be2aa376921407d225afe8de8e6fe1e4468b",
+          "commit_sha": "e7dac67ac64ec7cf69079b3bb6eff46a21e026b3",
+          "content_hash": "740c3ac1128f98c73fccf9475c0b8191327f70fa8b6ca8938581d3a72c2c3804",
           "entity_id": "external_doc_agentclientprotocol_agent_client_protocol_changelog_md",
-          "observed_blob_sha": "43d7956b4b02c292e688b655df940684243365b8",
-          "observed_commit_sha": "44d93e13291498b4e78b6c96fea493f840eb6701",
-          "observed_tree_sha": "3a2b69637857a0eb6b5738ed38c9ffefbff1d7f9",
-          "output": "current/protocols/agentclientprotocol_agent_client_protocol/CHANGELOG.md__43d7956b4b02__44d93e132914.md",
-          "sha": "43d7956b4b02c292e688b655df940684243365b8",
-          "tree_sha": "3a2b69637857a0eb6b5738ed38c9ffefbff1d7f9"
+          "observed_blob_sha": "ea87be2aa376921407d225afe8de8e6fe1e4468b",
+          "observed_commit_sha": "e7dac67ac64ec7cf69079b3bb6eff46a21e026b3",
+          "observed_tree_sha": "94e50117fd8137864482772ecc5f546a4f5cc5d5",
+          "output": "current/protocols/agentclientprotocol_agent_client_protocol/CHANGELOG.md__ea87be2aa376__e7dac67ac64e.md",
+          "sha": "ea87be2aa376921407d225afe8de8e6fe1e4468b",
+          "tree_sha": "94e50117fd8137864482772ecc5f546a4f5cc5d5"
         },
         "README.md": {
           "blob_sha": "1b4fbc172daae9b829cf8337bd92d99b2855e721",
@@ -359,7 +359,7 @@
           "tree_sha": "f0ba014baa23f3e5f8701da24a43464e21d2cbaf"
         }
       },
-      "last_checked_at": "2026-10-10T01:22:51.881175+00:00"
+      "last_checked_at": "2026-10-17T00:01:14.256448+00:00"
     },
     "agentscope-ai/agentscope": {
       "documents": {
@@ -1261,6 +1261,18 @@
           "sha": "c03d9bcbd035ac425f3905634f53f83ce71bdbfb",
           "tree_sha": "b987d8ad187b8be4f6c21c815650147baeeca03e"
         },
+        "docs/decisions/0045-python-mcp-v2-client-lifecycle.md": {
+          "blob_sha": "765daa5d134eba6db507beb3d8c222d85dc22c4d",
+          "commit_sha": "44fe223da7ea6853eefb7053e25c2c213a2e5c15",
+          "content_hash": "562f12a3de3dee0b435a1170b323b2df7a2c3d1ae5a81743538a15d40fea8b0d",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0045_python_mcp_v2_client_lifecycle_md",
+          "observed_blob_sha": "765daa5d134eba6db507beb3d8c222d85dc22c4d",
+          "observed_commit_sha": "44fe223da7ea6853eefb7053e25c2c213a2e5c15",
+          "observed_tree_sha": "4273d16742a02c4a83959922ae123429ffce3243",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0045-python-mcp-v2-client-lifecycle.md__765daa5d134e__44fe223da7ea.md",
+          "sha": "765daa5d134eba6db507beb3d8c222d85dc22c4d",
+          "tree_sha": "4273d16742a02c4a83959922ae123429ffce3243"
+        },
         "docs/decisions/README.md": {
           "blob_sha": "55c48a7089dde103d2ec7bc3c9d16412989fe2e7",
           "commit_sha": "7b6d2579884b0fde7729342f046ea58847ffdf37",
@@ -1310,7 +1322,7 @@
           "tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4"
         }
       },
-      "last_checked_at": "2026-10-15T00:10:29.750854+00:00"
+      "last_checked_at": "2026-10-17T00:01:18.950197+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
@@ -2319,19 +2331,19 @@
     "pydantic/pydantic-ai": {
       "documents": {
         "README.md": {
-          "blob_sha": "6ab8aa053ae054d46a8c992b09853b316359ceef",
-          "commit_sha": "febbe7310dee069cb9dc0dd439e90c26b4206908",
-          "content_hash": "361b97ad5b6917ed127a1e6adc58cf67e0a4105cb610a5c885ea19e4ae957a18",
+          "blob_sha": "adb171ae7d2751710160ac38c2491c96b7b5a583",
+          "commit_sha": "6cd4321c9408bd82f17e36f1a9b0529ca0168dd1",
+          "content_hash": "435c9b0137892dffc39764415be29a58361856f8899446b8858dbc3b854ad2f7",
           "entity_id": "external_doc_pydantic_pydantic_ai_readme_md",
-          "observed_blob_sha": "6ab8aa053ae054d46a8c992b09853b316359ceef",
-          "observed_commit_sha": "febbe7310dee069cb9dc0dd439e90c26b4206908",
-          "observed_tree_sha": "fe3056d18b782f68c218f33f5f87d6d3625e97f4",
-          "output": "current/agent-runtime/pydantic_pydantic_ai/README.md__6ab8aa053ae0__febbe7310dee.md",
-          "sha": "6ab8aa053ae054d46a8c992b09853b316359ceef",
-          "tree_sha": "fe3056d18b782f68c218f33f5f87d6d3625e97f4"
+          "observed_blob_sha": "adb171ae7d2751710160ac38c2491c96b7b5a583",
+          "observed_commit_sha": "6cd4321c9408bd82f17e36f1a9b0529ca0168dd1",
+          "observed_tree_sha": "a8d9c08b0cd1cf8e5aa8d3cb3c597f72ed5bfdc8",
+          "output": "current/agent-runtime/pydantic_pydantic_ai/README.md__adb171ae7d27__6cd4321c9408.md",
+          "sha": "adb171ae7d2751710160ac38c2491c96b7b5a583",
+          "tree_sha": "a8d9c08b0cd1cf8e5aa8d3cb3c597f72ed5bfdc8"
         }
       },
-      "last_checked_at": "2026-10-15T23:57:37.167748+00:00"
+      "last_checked_at": "2026-10-17T00:01:22.946639+00:00"
     },
     "run-llama/llama_index": {
       "documents": {
