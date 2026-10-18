@@ -1,0 +1,2719 @@
+{
+  "schema": "ballast-cross-region-miss-2026-10-19",
+  "execution": "bounded-v8-model",
+  "task": "task-19",
+  "scenarios": [
+    {
+      "id": "clean_covered_miss",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 2,
+          "kind": "query",
+          "status": "MISS",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 3,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 3
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [],
+        "sink_commits": 0,
+        "replica_east": 0,
+        "replica_west": 0
+      },
+      "decisions": {
+        "regional_absence": "RETRY_ALLOWED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "RETRY_ALLOWED"
+      }
+    },
+    {
+      "id": "clean_revoked",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "control",
+          "field": "permission",
+          "value": false
+        },
+        {
+          "tick": 2,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 3,
+          "kind": "query",
+          "status": "MISS",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 4,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 4
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [],
+        "sink_commits": 0,
+        "replica_east": 0,
+        "replica_west": 0
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "BLOCKED"
+      }
+    },
+    {
+      "id": "complete_replicated",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 2
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "COMPLETE",
+        "full_integrity": "COMPLETE"
+      }
+    },
+    {
+      "id": "complete_unreplicated",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 4,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 5,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 5
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 0
+      },
+      "decisions": {
+        "regional_absence": "RETRY_ALLOWED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "COMPLETE"
+      }
+    },
+    {
+      "id": "complete_after_revocation",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "control",
+          "field": "permission",
+          "value": false
+        },
+        {
+          "tick": 5,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 7,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 7
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 2
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "COMPLETE",
+        "full_integrity": "COMPLETE"
+      }
+    },
+    {
+      "id": "hidden_east_A",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 3,
+          "kind": "query",
+          "status": "UNKNOWN",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 4,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 4
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [],
+        "sink_commits": 1,
+        "replica_east": 1,
+        "replica_west": 0
+      },
+      "decisions": {
+        "regional_absence": "RETRY_ALLOWED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "hidden_east_miss_conflict",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 3,
+          "kind": "query",
+          "status": "MISS",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 4,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 4
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [],
+        "sink_commits": 1,
+        "replica_east": 1,
+        "replica_west": 0
+      },
+      "decisions": {
+        "regional_absence": "RETRY_ALLOWED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "regional_double_commit",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 3,
+          "kind": "commit",
+          "region": "west",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 4,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 5,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 5
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [
+          "effect:A"
+        ],
+        "sink_commits": 2,
+        "replica_east": 1,
+        "replica_west": 1
+      },
+      "decisions": {
+        "regional_absence": "RETRY_ALLOWED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "regional_double_commit_reconciled",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 3,
+          "kind": "commit",
+          "region": "west",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 4,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [
+          "effect:A"
+        ],
+        "sink_commits": 2,
+        "replica_east": 1,
+        "replica_west": 1
+      },
+      "decisions": {
+        "regional_absence": "RETRY_ALLOWED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "partial_replication",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A"
+        ],
+        "west_after": [
+          "effect:A"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 1
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "COMPLETE"
+      }
+    },
+    {
+      "id": "same_count_membership_swap",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "control",
+          "field": "members",
+          "value": [
+            "A",
+            "C"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 6
+        },
+        {
+          "tick": 7,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "C"
+          ],
+          "revision": 6,
+          "target": "inc-1",
+          "at_tick": 7
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 2
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "same_count_swap_unreplicated",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "control",
+          "field": "members",
+          "value": [
+            "A",
+            "C"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 6
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "C"
+          ],
+          "revision": 6,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 0
+      },
+      "decisions": {
+        "regional_absence": "RETRY_ALLOWED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "target_reincarnation",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "control",
+          "field": "target",
+          "value": "inc-2"
+        },
+        {
+          "tick": 5,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-2",
+          "revision": 5
+        },
+        {
+          "tick": 7,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-2",
+          "at_tick": 7
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 2
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "unauthorized_history",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": false,
+          "accepted": true,
+          "bypass": true
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 2
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "wrong_run_history",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-old",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 2
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "wrong_attempt_history",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-old",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 2
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "extra_effect",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "commit",
+          "region": "east",
+          "member": "D",
+          "effect_key": "effect:D",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": false,
+          "accepted": true,
+          "bypass": true
+        },
+        {
+          "tick": 4,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B",
+            "effect:D"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 7,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 7
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B",
+          "effect:D"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B",
+          "effect:D"
+        ],
+        "sink_commits": 3,
+        "replica_east": 3,
+        "replica_west": 3
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "duplicate_member_new_key",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A:other",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 4,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B",
+            "A"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:A:other",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 7,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 7
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:A:other",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:A:other",
+          "effect:B"
+        ],
+        "sink_commits": 3,
+        "replica_east": 3,
+        "replica_west": 3
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "missing_B",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A"
+          ]
+        },
+        {
+          "tick": 3,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 5,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 5
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A"
+        ],
+        "west_after": [
+          "effect:A"
+        ],
+        "sink_commits": 1,
+        "replica_east": 1,
+        "replica_west": 1
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "query_failed",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 2,
+          "kind": "query",
+          "status": "UNKNOWN",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": false,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 3,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 3
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [],
+        "sink_commits": 0,
+        "replica_east": 0,
+        "replica_west": 0
+      },
+      "decisions": {
+        "regional_absence": "RETRY_ALLOWED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "STOP_UNKNOWN"
+      }
+    },
+    {
+      "id": "watermark_gap",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 2,
+          "kind": "query",
+          "status": "MISS",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 2,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 3,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 3
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [],
+        "sink_commits": 0,
+        "replica_east": 0,
+        "replica_west": 0
+      },
+      "decisions": {
+        "regional_absence": "RETRY_ALLOWED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "STOP_UNKNOWN"
+      }
+    },
+    {
+      "id": "retention_gap",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 2,
+          "kind": "query",
+          "status": "MISS",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": false,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 3,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 3
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [],
+        "sink_commits": 0,
+        "replica_east": 0,
+        "replica_west": 0
+      },
+      "decisions": {
+        "regional_absence": "RETRY_ALLOWED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "STOP_UNKNOWN"
+      }
+    },
+    {
+      "id": "scope_mismatch",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 2,
+          "kind": "query",
+          "status": "MISS",
+          "scope_exact": false,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 3,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 3
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [],
+        "sink_commits": 0,
+        "replica_east": 0,
+        "replica_west": 0
+      },
+      "decisions": {
+        "regional_absence": "RETRY_ALLOWED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "STOP_UNKNOWN"
+      }
+    },
+    {
+      "id": "positive_miss_conflict",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "MISS",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 2
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "witness_revision_stale",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 4,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 2
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "witness_unprotected",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": false,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 2
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "future_receipt_tick",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 1
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 2
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "aggregate_hit_only",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 3,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": false,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 4,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 4
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [],
+        "sink_commits": 1,
+        "replica_east": 1,
+        "replica_west": 0
+      },
+      "decisions": {
+        "regional_absence": "RETRY_ALLOWED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "revoked_before_regional_write",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "control",
+          "field": "permission",
+          "value": false
+        },
+        {
+          "tick": 3,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 4,
+          "kind": "commit",
+          "region": "west",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": false,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [
+          "effect:A"
+        ],
+        "sink_commits": 2,
+        "replica_east": 1,
+        "replica_west": 1
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "regional_replay_dedup",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "commit",
+          "region": "west",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": false,
+          "bypass": false
+        },
+        {
+          "tick": 6,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 7,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 7
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 2
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "COMPLETE",
+        "full_integrity": "COMPLETE"
+      }
+    },
+    {
+      "id": "regional_only_negative",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "read",
+          "region": "west",
+          "keys": []
+        },
+        {
+          "tick": 2,
+          "kind": "query",
+          "status": "MISS",
+          "scope_exact": true,
+          "coverage_global": false,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 3,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 3
+        }
+      ],
+      "raw": {
+        "west_before": [],
+        "west_after": [],
+        "sink_commits": 0,
+        "replica_east": 0,
+        "replica_west": 0
+      },
+      "decisions": {
+        "regional_absence": "RETRY_ALLOWED",
+        "replica_count": "RECONCILE",
+        "full_integrity": "STOP_UNKNOWN"
+      }
+    },
+    {
+      "id": "post_witness_toctou",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "region": "east",
+          "member": "A",
+          "effect_key": "effect:A",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "region": "east",
+          "member": "B",
+          "effect_key": "effect:B",
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "authorized": true,
+          "accepted": true,
+          "bypass": false
+        },
+        {
+          "tick": 3,
+          "kind": "replicate",
+          "from": "east",
+          "to": "west",
+          "members": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "read",
+          "region": "west",
+          "keys": [
+            "effect:A",
+            "effect:B"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "task": "task-19",
+          "run": "run-19",
+          "attempt": "attempt-19",
+          "target": "inc-1",
+          "revision": 5
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "target": "inc-1",
+          "at_tick": 6
+        },
+        {
+          "tick": 7,
+          "kind": "control",
+          "field": "members",
+          "value": [
+            "A",
+            "C"
+          ]
+        }
+      ],
+      "raw": {
+        "west_before": [
+          "effect:A",
+          "effect:B"
+        ],
+        "west_after": [
+          "effect:A",
+          "effect:B"
+        ],
+        "sink_commits": 2,
+        "replica_east": 2,
+        "replica_west": 2
+      },
+      "decisions": {
+        "regional_absence": "BLOCKED",
+        "replica_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    }
+  ],
+  "decision_paths": [
+    "regional_absence",
+    "replica_count",
+    "full_integrity"
+  ]
+}
