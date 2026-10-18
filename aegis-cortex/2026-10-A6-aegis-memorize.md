@@ -5539,3 +5539,183 @@ DUPLICATE_EVIDENCE_CREDIT
 - No native A1/A2 or Ballast records changed; only October current-month owner append, prior A1 preserved unchanged
 - GitHub delivery and blob identity verified, but external live exploit, local mitigation runtime and full ballast check NOT_EXECUTED by maintainer
 - A2 status 17_RISK_DATE_RELATIONS / 4_ORIGINAL_BLOCKED / 1_DEGRADED / NO_LOCAL_HOST_INCIDENT / OPEN_MONTH
+
+## 2026-10-18 A1 | Complete original October 01–17 Aegis/Ballast custody and relation census
+
+- Maintenance producer: Independent GPT, not native Jules/Parallax/Ballast producer; read-only Git inputs at base main `3cae62f9c53aee8b484561fd71c27d89a21a39ff`
+- Evidence cutoff: Asia/Shanghai 2026-10-17 inclusive (MonthStart→N−1); 2026-10-18 source files excluded from A1
+- Review unit: source object/blob and task-time identity; preservation policy: no original native or historical audit files rewritten
+- Current Git object presence proves file custody only; source-time execution, independent validation and live producer success require separate evidence
+- Original source clock and actual downstream read clock are not interchangeable; later presence never repairs historical INPUT_MISSING
+- Coverage classification: exact Git blob and owner transfer references checked below; semantic conclusions remain scoped to original source and historic owner
+- Disposition codes: OBJECT_PRESENT / PRIOR_OWNER_LINK_PRESENT or OWNER_LINK_NOT_FOUND; no fabricated research, external verification or CASE/NOTES promotion
+
+### Native dated sources, ordered by logical date
+#### 2026-10-01 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-01-A1-reliability-observe.md` | blob `461882e16809ef9b442b3c6d47b45f44418660b5` | bytes 6438 | exact blob previously in month owner: YES
+  - 2026-10-01 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-01-A2-doctrine-orient.md` | blob `450bb5e41ba1f4f52f605632a3522797568429c5` | bytes 3188 | exact blob previously in month owner: YES
+  - 2026-10-01 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-01.md` | blob `21a2dbd84f4a7e05bc64f78aa934d824a4a96593` | bytes 12421 | exact blob previously in month owner: YES
+  - 2026-10-01 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-01 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-02 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-02-A1-reliability-observe.md` | blob `abe20d48251fc36893884f355421e896e3f3631a` | bytes 6538 | exact blob previously in month owner: YES
+  - 2026-10-02 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-02-A2-doctrine-orient.md` | blob `c590dffb8dc28fb701174e6dfafe2c3697f97b37` | bytes 4018 | exact blob previously in month owner: YES
+  - 2026-10-02 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-02.md` | blob `1081112e8ef7f9c1d3e4415c2cf1edb297419a58` | bytes 12361 | exact blob previously in month owner: YES
+  - 2026-10-02 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-02 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-03 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-03-A1-reliability-observe.md` | blob `0f37ab4b605a24006a862a9837564a459c0c1298` | bytes 6295 | exact blob previously in month owner: YES
+  - 2026-10-03 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-03-A2-doctrine-orient.md` | blob `3c95e23cfa6187d0c23f607d622e2e8353051b13` | bytes 6600 | exact blob previously in month owner: YES
+  - 2026-10-03 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-03.md` | blob `82df0f7d4e36c844f76bfed4b23bd1ece6a46b53` | bytes 16562 | exact blob previously in month owner: YES
+  - 2026-10-03 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-03 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-04 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-04-A1-reliability-observe.md` | blob `88fcc05dd273fbb361963435211e38447ea67a9c` | bytes 5967 | exact blob previously in month owner: YES
+  - 2026-10-04 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-04-A2-doctrine-orient.md` | blob `08f105bfae915c994d411e8ab86d421db03f9c42` | bytes 1834 | exact blob previously in month owner: YES
+  - 2026-10-04 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-04.md` | blob `649882d3a0bbb7939481f5f2bb43aea4f268b9c8` | bytes 16760 | exact blob previously in month owner: YES
+  - 2026-10-04 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-04 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-05 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-05-A1-reliability-observe.md` | blob `11701da8dff9882ef4e8d4f174abc062abd41404` | bytes 6137 | exact blob previously in month owner: YES
+  - 2026-10-05 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-05-A2-doctrine-orient.md` | blob `98139f531397d66bde60765a38f9b0c683d936ab` | bytes 6438 | exact blob previously in month owner: YES
+  - 2026-10-05 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-05.md` | blob `b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931` | bytes 11168 | exact blob previously in month owner: YES
+  - 2026-10-05 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-05 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-06 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-06-A1-reliability-observe.md` | blob `56abc25eca5f0e9e2aa537be5924c6045162815c` | bytes 6238 | exact blob previously in month owner: YES
+  - 2026-10-06 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-06-A2-doctrine-orient.md` | blob `6cb80c4d899b533c539ad487b274c1b168db9724` | bytes 7015 | exact blob previously in month owner: YES
+  - 2026-10-06 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-06.md` | blob `2ad5c5ce4a3fc4228f089eaacf94109e4210a66f` | bytes 9276 | exact blob previously in month owner: YES
+  - 2026-10-06 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-06 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-07 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-07-A1-reliability-observe.md` | blob `12c9266cc5f1fe0837a736e7ec9ed4505e7ba4a5` | bytes 8403 | exact blob previously in month owner: YES
+  - 2026-10-07 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-07-A2-doctrine-orient.md` | blob `9bd6c75a310832f7cc58c9ae399f41acfdf4d950` | bytes 9117 | exact blob previously in month owner: YES
+  - 2026-10-07 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-07.md` | blob `7f20b476517f31e4d890e64880b2eeb4b8248bf7` | bytes 11410 | exact blob previously in month owner: YES
+  - 2026-10-07 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-07 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-08 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-08-A1-reliability-observe.md` | blob `5c91de675c4dc78aba0f419ab5f7added9c29fd7` | bytes 5910 | exact blob previously in month owner: YES
+  - 2026-10-08 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-08-A2-doctrine-orient.md` | blob `9815107064b4fed9aa0983143c4b329b5f28a675` | bytes 11624 | exact blob previously in month owner: YES
+  - 2026-10-08 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-08.md` | blob `8d24c4cfc5362b7c81b60a6888d875e6960342aa` | bytes 21159 | exact blob previously in month owner: YES
+  - 2026-10-08 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-08 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-09 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-09-A1-reliability-observe.md` | blob `e5b385ba25e8a4ef9a68401080dab545592ddf4b` | bytes 6609 | exact blob previously in month owner: YES
+  - 2026-10-09 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-09-A2-doctrine-orient.md` | blob `2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124` | bytes 16037 | exact blob previously in month owner: YES
+  - 2026-10-09 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-09.md` | blob `cce84778a3f752461a1d82b9c38f5057f3950fd3` | bytes 12343 | exact blob previously in month owner: YES
+  - 2026-10-09 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-09 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-10 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-10-A1-reliability-observe.md` | blob `bfbe8f099a7413cdd5a8f1466a180d9e2d78f975` | bytes 6407 | exact blob previously in month owner: YES
+  - 2026-10-10 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-10-A2-doctrine-orient.md` | blob `ce4f369d35fda91ddeeb975679a89ee4fe1f2314` | bytes 6626 | exact blob previously in month owner: YES
+  - 2026-10-10 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-10.md` | blob `d2702d66363b0e8a6ea645aff60a6475a1ca003c` | bytes 13882 | exact blob previously in month owner: YES
+  - 2026-10-10 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-10 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-11 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-11-A1-reliability-observe.md` | blob `bc3c4ba9cf48045bb05f02e65901dd02ad5464f1` | bytes 5959 | exact blob previously in month owner: YES
+  - 2026-10-11 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-11-A2-doctrine-orient.md` | blob `d3882e3530ce98550a10f93ba4221afbb270c83c` | bytes 7757 | exact blob previously in month owner: YES
+  - 2026-10-11 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-11.md` | blob `b35c69acee29b194d597d3eedd942dd4cc7243a0` | bytes 15372 | exact blob previously in month owner: YES
+  - 2026-10-11 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-11 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-12 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-12-A1-reliability-observe.md` | blob `72d7f662d70f5c73301fd8bec7c8351f0e1a7349` | bytes 6876 | exact blob previously in month owner: YES
+  - 2026-10-12 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-12-A2-doctrine-orient.md` | blob `6ed3797a34699a9eae821c7bb2a8c8797459b17f` | bytes 8336 | exact blob previously in month owner: YES
+  - 2026-10-12 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-12.md` | blob `02fe0896ac9c41ae336cda04e69f133460e0a742` | bytes 9594 | exact blob previously in month owner: YES
+  - 2026-10-12 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-12 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-13 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-13-A1-reliability-observe.md` | blob `a5d0ca039bbe4b93b8b59e5e671bcf76ff82ba87` | bytes 7596 | exact blob previously in month owner: YES
+  - 2026-10-13 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-13-A2-doctrine-orient.md` | blob `1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22` | bytes 9874 | exact blob previously in month owner: YES
+  - 2026-10-13 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-13.md` | blob `cc09eb3e1746cf4e555880ab4304b28c63341a4c` | bytes 16962 | exact blob previously in month owner: YES
+  - 2026-10-13 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-13 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-14 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-14-A1-reliability-observe.md` | blob `1def392d03eb7bb03c428d696d4acb923454112f` | bytes 6178 | exact blob previously in month owner: YES
+  - 2026-10-14 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-14-A2-doctrine-orient.md` | blob `c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd` | bytes 7932 | exact blob previously in month owner: YES
+  - 2026-10-14 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-14.md` | blob `98a752267cd0c2beff5d2770ecf1672a6c869e3b` | bytes 18894 | exact blob previously in month owner: YES
+  - 2026-10-14 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-14 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-15 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-15-A1-reliability-observe.md` | blob `293272cf6ae77efc28491dc69597d0652f4ca751` | bytes 7671 | exact blob previously in month owner: YES
+  - 2026-10-15 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-15-A2-doctrine-orient.md` | blob `896901e892647ab19b584fa077363afc5e4e89ab` | bytes 3670 | exact blob previously in month owner: YES
+  - 2026-10-15 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-15.md` | blob `2f94b0b736cd8e3ffda03794462a12d3b50a3bc3` | bytes 9229 | exact blob previously in month owner: YES
+  - 2026-10-15 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-15 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-16 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-16-A1-reliability-observe.md` | blob `372a99054cd4cd55ac909304b4c44a702376bcf6` | bytes 5743 | exact blob previously in month owner: YES
+  - 2026-10-16 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-16-A2-doctrine-orient.md` | blob `454d6a632ad13c2fdacbfa27a30d0a565427026f` | bytes 6642 | exact blob previously in month owner: YES
+  - 2026-10-16 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-16.md` | blob `5cf129e2d6d31ce14171ac3e2b0c6ea0a3bddee0` | bytes 10297 | exact blob previously in month owner: YES
+  - 2026-10-16 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-16 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+#### 2026-10-17 | native object custody / original relation
+- A source observation: `aegis-cortex/2026-10-17-A1-reliability-observe.md` | blob `32bc7fefb64671e1c09347d03231034fd3d28cda` | bytes 6621 | exact blob previously in month owner: YES
+  - 2026-10-17 custody: observe producer artifact on main; this entry does not certify publisher accessibility or elapsed-time validity; downstream must use original task-time inputs
+- A dependent orientation: `aegis-cortex/2026-10-17-A2-doctrine-orient.md` | blob `7d839226fcf975325c8a5813e706b6e05f09aeeb` | bytes 7415 | exact blob previously in month owner: YES
+  - 2026-10-17 dependency: orient is subordinate to same-date observe when contract demands it; now-available file does not retroactively turn blocked/restricted original run into success
+- Ballast independently owned daily: `ballast/records/2026-10-17.md` | blob `4f76b71274f8a72434ca0a02af8d48a18842dbb3` | bytes 11965 | exact blob previously in month owner: YES
+  - 2026-10-17 research authority: daily study retains separate experiment-window, CASE, retest, historical-counterexample and claim-promotion rules; monthly reuse adds zero independent research credit
+- 2026-10-17 A1 decision: IDENTITY_SET_PRESENT; unsupported independent rerun and external-world effects remain UNKNOWN
+
+### Weekly, special, audit and monthly edge custody
+- Periodic/owner: `aegis-cortex/2026-10-A6-aegis-memorize.md` @ `2db46a87365ea1cfb6feba97ebd71d616e14225e` | 337796 bytes | role OPEN_MONTH_RELATION_OWNER
+  - A1 classification: historical/weekly truth preserved; month final NOT_DUE, where applicable weekly dependency determined by original execution and task-specific contract
+- Periodic/owner: `aegis-cortex/2026-W40-A3-discipline-decide.md` @ `041a3ed3b1ab9b36f448772be1ecff715d155842` | 8940 bytes | role INDEPENDENT_WEEKLY_OR_AUDIT_INPUT
+  - A1 classification: historical/weekly truth preserved; month final NOT_DUE, where applicable weekly dependency determined by original execution and task-specific contract
+- Periodic/owner: `aegis-cortex/2026-W40-A4-protocol-act.md` @ `21206290b54a704401086d12a47ad820d32f9841` | 6696 bytes | role INDEPENDENT_WEEKLY_OR_AUDIT_INPUT
+  - A1 classification: historical/weekly truth preserved; month final NOT_DUE, where applicable weekly dependency determined by original execution and task-specific contract
+- Periodic/owner: `aegis-cortex/2026-W41-A3-discipline-decide.md` @ `ae751ae48f27d6c390e0100756efd3e6fd63b460` | 9341 bytes | role INDEPENDENT_WEEKLY_OR_AUDIT_INPUT
+  - A1 classification: historical/weekly truth preserved; month final NOT_DUE, where applicable weekly dependency determined by original execution and task-specific contract
+- Periodic/owner: `aegis-cortex/2026-W41-A4-protocol-act.md` @ `4be8b4fd999ee217bb702675bf92325a1041aede` | 6619 bytes | role INDEPENDENT_WEEKLY_OR_AUDIT_INPUT
+  - A1 classification: historical/weekly truth preserved; month final NOT_DUE, where applicable weekly dependency determined by original execution and task-specific contract
+- Periodic/owner: `aegis-cortex/2026-W42-A3-discipline-decide.md` @ `a6098c04acb1cdca1247a97fdf2fb4e102315e95` | 6733 bytes | role INDEPENDENT_WEEKLY_OR_AUDIT_INPUT
+  - A1 classification: historical/weekly truth preserved; month final NOT_DUE, where applicable weekly dependency determined by original execution and task-specific contract
+- Periodic/owner: `aegis-cortex/2026-W42-A4-protocol-act.md` @ `c91936228660b8147c38a8f787c490000ecccf09` | 3990 bytes | role INDEPENDENT_WEEKLY_OR_AUDIT_INPUT
+  - A1 classification: historical/weekly truth preserved; month final NOT_DUE, where applicable weekly dependency determined by original execution and task-specific contract
+- Periodic/owner: `ballast/audits/2026-09-26--2026-10-01.md` @ `3177b85cd3a1b66eb9ae75a31797b852af402d97` | 2407 bytes | role INDEPENDENT_WEEKLY_OR_AUDIT_INPUT
+  - A1 classification: historical/weekly truth preserved; month final NOT_DUE, where applicable weekly dependency determined by original execution and task-specific contract
+- Periodic/owner: `ballast/audits/2026-10-02--2026-10-07.md` @ `bbcce0605856c1a1863464a343dd14228c50a1e7` | 2429 bytes | role INDEPENDENT_WEEKLY_OR_AUDIT_INPUT
+  - A1 classification: historical/weekly truth preserved; month final NOT_DUE, where applicable weekly dependency determined by original execution and task-specific contract
+- Periodic/owner: `ballast/audits/2026-10-08--2026-10-13.md` @ `e3a5bb19874e7dd47a01722e7230a2bafeb99f04` | 6371 bytes | role INDEPENDENT_WEEKLY_OR_AUDIT_INPUT
+  - A1 classification: historical/weekly truth preserved; month final NOT_DUE, where applicable weekly dependency determined by original execution and task-specific contract
+- Periodic/owner: `ballast/records/2026-10.md` @ `72e707cb855c02cde2082fec40dbb4c3f3a5cb5e` | 10942 bytes | role INDEPENDENT_WEEKLY_OR_AUDIT_INPUT
+  - A1 classification: historical/weekly truth preserved; month final NOT_DUE, where applicable weekly dependency determined by original execution and task-specific contract
+
+### A1 decision summary and handoff
+- Original source paths present: 51/51; exact blob links observed in prior month owner: 51/51; missing native paths: 0
+- Missing list: NONE_IN_CHECKED_DATED_FILE_SET
+- Source identity coverage is not proof of semantic correctness; earlier forward corrections, original BLOCKED, DEGRADED and independent experiment limitations remain binding
+- No replacement of existing prior A1/A2 blocks; no duplicate research trial, source credit, test rerun, Stage completion or verified host incident from this maintenance
+- A1 disposition: BOUNDED_COMPLETE_CUSTODY_CENSUS / SOURCE_TIME_GATES_RETAINED; A2 may begin only after all ten A1 merge commits are verified on fresh main
+- A1 output adds a dated, object-addressed mapping to this same canonical monthly owner instead of manufacturing parallel maintenance artifacts
