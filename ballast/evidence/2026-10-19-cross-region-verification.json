@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scenario_count": 32,
+  "decision_rows": 96,
+  "totals": {
+    "COMPLETE": 5,
+    "RECONCILE": 20,
+    "STOP_UNKNOWN": 5,
+    "RETRY_ALLOWED": 1,
+    "BLOCKED": 1
+  },
+  "mutation_controls": 54,
+  "mutation_rejected": 54,
+  "mutation_structural": 10,
+  "mutation_semantic": 44,
+  "external_effects": 0,
+  "implementation_independence": "separate reconstruction",
+  "data_source_independence": "NONE",
+  "semantic_contract_independence": "LIMITED",
+  "authority_independence": "NONE"
+}
