@@ -5539,3 +5539,218 @@ DUPLICATE_EVIDENCE_CREDIT
 - No native A1/A2 or Ballast records changed; only October current-month owner append, prior A1 preserved unchanged
 - GitHub delivery and blob identity verified, but external live exploit, local mitigation runtime and full ballast check NOT_EXECUTED by maintainer
 - A2 status 17_RISK_DATE_RELATIONS / 4_ORIGINAL_BLOCKED / 1_DEGRADED / NO_LOCAL_HOST_INCIDENT / OPEN_MONTH
+
+## 2026-10-18 A1 | full October 01–17 original-source and merge-lineage reconciliation
+- Audit role: INDEPENDENT_GPT_A1 / first-round repository maintenance; logical cutoff 2026-10-17 Asia/Shanghai
+- Base main SHA: 3cae62f9c53aee8b484561fd71c27d89a21a39ff; canonical owner pre-append blob: 2db46a87365ea1cfb6feba97ebd71d616e14225e
+- Scope: native Daily pair + independent research Daily, historically due weekly documents and exact current month owner
+- Evidence surfaces: Git main tree path/blob identities, existing October owner source-time adjudications, GitHub PR created/merged metadata
+- Distinct grains: logical date / actual execution / PR delivery / merged Git object / current file blob / externally verified result
+- Historical invariant: existing primary research and blocked records unchanged; this A1 only adds an inspectable owner-level provenance ledger
+- Denominator is 17 assigned dates × 3 expected native-file identities = 51; file existence is not proof of original task-time availability
+- The October 18 native outputs already on main are intentionally excluded here; A2 will consume them only after A1 merge
+### Date-wise native-file presence and dependency decisions
+- 2026-10-01: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-02: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-03: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-04: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-05: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-06: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-07: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-08: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-09: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-10: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-11: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-12: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-13: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-14: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-15: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-16: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+- 2026-10-17: 3/3 exact current-main native paths; missing=NONE; original run success, availability and independent reproduction remain source-time dependent
+### Original file inventory, distinct blob identities and evidence decisions
+- `aegis-cortex/2026-10-01-A1-reliability-observe.md` | blob=461882e16809ef9b442b3c6d47b45f44418660b5 | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-01-A2-doctrine-orient.md` | blob=450bb5e41ba1f4f52f605632a3522797568429c5 | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-02-A1-reliability-observe.md` | blob=abe20d48251fc36893884f355421e896e3f3631a | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-02-A2-doctrine-orient.md` | blob=c590dffb8dc28fb701174e6dfafe2c3697f97b37 | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-03-A1-reliability-observe.md` | blob=0f37ab4b605a24006a862a9837564a459c0c1298 | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-03-A2-doctrine-orient.md` | blob=3c95e23cfa6187d0c23f607d622e2e8353051b13 | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-04-A1-reliability-observe.md` | blob=88fcc05dd273fbb361963435211e38447ea67a9c | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-04-A2-doctrine-orient.md` | blob=08f105bfae915c994d411e8ab86d421db03f9c42 | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-05-A1-reliability-observe.md` | blob=11701da8dff9882ef4e8d4f174abc062abd41404 | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-05-A2-doctrine-orient.md` | blob=98139f531397d66bde60765a38f9b0c683d936ab | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-06-A1-reliability-observe.md` | blob=56abc25eca5f0e9e2aa537be5924c6045162815c | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-06-A2-doctrine-orient.md` | blob=6cb80c4d899b533c539ad487b274c1b168db9724 | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-07-A1-reliability-observe.md` | blob=12c9266cc5f1fe0837a736e7ec9ed4505e7ba4a5 | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-07-A2-doctrine-orient.md` | blob=9bd6c75a310832f7cc58c9ae399f41acfdf4d950 | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-08-A1-reliability-observe.md` | blob=5c91de675c4dc78aba0f419ab5f7added9c29fd7 | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-08-A2-doctrine-orient.md` | blob=9815107064b4fed9aa0983143c4b329b5f28a675 | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-09-A1-reliability-observe.md` | blob=e5b385ba25e8a4ef9a68401080dab545592ddf4b | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-09-A2-doctrine-orient.md` | blob=2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124 | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-10-A1-reliability-observe.md` | blob=bfbe8f099a7413cdd5a8f1466a180d9e2d78f975 | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-10-A2-doctrine-orient.md` | blob=ce4f369d35fda91ddeeb975679a89ee4fe1f2314 | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-11-A1-reliability-observe.md` | blob=bc3c4ba9cf48045bb05f02e65901dd02ad5464f1 | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-11-A2-doctrine-orient.md` | blob=d3882e3530ce98550a10f93ba4221afbb270c83c | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-12-A1-reliability-observe.md` | blob=72d7f662d70f5c73301fd8bec7c8351f0e1a7349 | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-12-A2-doctrine-orient.md` | blob=6ed3797a34699a9eae821c7bb2a8c8797459b17f | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-13-A1-reliability-observe.md` | blob=a5d0ca039bbe4b93b8b59e5e671bcf76ff82ba87 | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-13-A2-doctrine-orient.md` | blob=1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22 | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-14-A1-reliability-observe.md` | blob=1def392d03eb7bb03c428d696d4acb923454112f | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-14-A2-doctrine-orient.md` | blob=c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-15-A1-reliability-observe.md` | blob=293272cf6ae77efc28491dc69597d0652f4ca751 | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-15-A2-doctrine-orient.md` | blob=896901e892647ab19b584fa077363afc5e4e89ab | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-16-A1-reliability-observe.md` | blob=372a99054cd4cd55ac909304b4c44a702376bcf6 | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-16-A2-doctrine-orient.md` | blob=454d6a632ad13c2fdacbfa27a30d0a565427026f | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-17-A1-reliability-observe.md` | blob=32bc7fefb64671e1c09347d03231034fd3d28cda | AEGIS A1: published risk observation is not a local incident | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-10-17-A2-doctrine-orient.md` | blob=7d839226fcf975325c8a5813e706b6e05f09aeeb | AEGIS A2: source-time dependency and local doctrine admission separated | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-W40-A3-discipline-decide.md` | blob=041a3ed3b1ab9b36f448772be1ecff715d155842 | WEEKLY DECIDE: only inherited previous full-week native evidence | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-W40-A4-protocol-act.md` | blob=21206290b54a704401086d12a47ad820d32f9841 | WEEKLY ACT: do not infer execution from decision prose | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-W41-A3-discipline-decide.md` | blob=ae751ae48f27d6c390e0100756efd3e6fd63b460 | WEEKLY DECIDE: only inherited previous full-week native evidence | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `aegis-cortex/2026-W41-A4-protocol-act.md` | blob=4be8b4fd999ee217bb702675bf92325a1041aede | WEEKLY ACT: do not infer execution from decision prose | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-01.md` | blob=21a2dbd84f4a7e05bc64f78aa934d824a4a96593 | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-02.md` | blob=1081112e8ef7f9c1d3e4415c2cf1edb297419a58 | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-03.md` | blob=82df0f7d4e36c844f76bfed4b23bd1ece6a46b53 | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-04.md` | blob=649882d3a0bbb7939481f5f2bb43aea4f268b9c8 | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-05.md` | blob=b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931 | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-06.md` | blob=2ad5c5ce4a3fc4228f089eaacf94109e4210a66f | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-07.md` | blob=7f20b476517f31e4d890e64880b2eeb4b8248bf7 | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-08.md` | blob=8d24c4cfc5362b7c81b60a6888d875e6960342aa | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-09.md` | blob=cce84778a3f752461a1d82b9c38f5057f3950fd3 | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-10.md` | blob=d2702d66363b0e8a6ea645aff60a6475a1ca003c | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-11.md` | blob=b35c69acee29b194d597d3eedd942dd4cc7243a0 | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-12.md` | blob=02fe0896ac9c41ae336cda04e69f133460e0a742 | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-13.md` | blob=cc09eb3e1746cf4e555880ab4304b28c63341a4c | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-14.md` | blob=98a752267cd0c2beff5d2770ecf1672a6c869e3b | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-15.md` | blob=2f94b0b736cd8e3ffda03794462a12d3b50a3bc3 | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-16.md` | blob=5cf129e2d6d31ce14171ac3e2b0c6ea0a3bddee0 | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10-17.md` | blob=4f76b71274f8a72434ca0a02af8d48a18842dbb3 | BALLAST: local control/effect/receipt/authorization and completion remain distinct | prior-owner-exact-blob=MATCH | NO_FOLLOW_UP; file body unchanged
+- `ballast/records/2026-10.md` | blob=72e707cb855c02cde2082fec40dbb4c3f3a5cb5e | MONTH_OWNER: derived evidence routing, not an additional native execution | prior-owner-exact-blob=NOT_INDEXED_OR_CHANGED | APPEND_RELATION_TO_OWNER_ONLY; file body unchanged
+### GitHub original and historical PR provenance (UTC creation, separate from logical task date)
+- PR #555 | created=2026-10-01T00:21:04Z | merged=2026-10-01T00:48:07Z | NATIVE_OR_RESEARCH | Add A1 daily reliability observe report for 2026-10-01
+- PR #556 | created=2026-10-01T00:54:54Z | merged=2026-10-01T09:00:18Z | MAINTENANCE_OR_CORRECTION | Add A2 Doctrine Orient fail-closed record for 2026-10-01
+- PR #557 | created=2026-10-01T04:22:02Z | merged=NOT_MERGED | OTHER_PROJECT | Generate final 2026-09 A5 Monthly Drift Reflect
+- PR #558 | created=2026-10-01T06:11:13Z | merged=2026-10-01T08:58:10Z | OTHER_PROJECT | Add A6 Monthly Aegis Memorize report for 2026-09
+- PR #559 | created=2026-10-01T13:23:44Z | merged=2026-10-01T13:23:49Z | MAINTENANCE_OR_CORRECTION | A1: initialize October relational owner — Aegis
+- PR #560 | created=2026-10-01T13:23:57Z | merged=2026-10-01T13:24:02Z | MAINTENANCE_OR_CORRECTION | A2: integrate October 1 Aegis task state
+- PR #561 | created=2026-10-01T22:17:42Z | merged=2026-10-01T22:18:06Z | NATIVE_OR_RESEARCH | ballast: 2026-10-02 deletion acceptance vs cleanup completion
+- PR #562 | created=2026-10-01T23:46:47Z | merged=2026-10-02T02:29:02Z | NATIVE_OR_RESEARCH | Create A1 Daily Reliability Observe for 2026-10-02
+- PR #563 | created=2026-10-02T00:55:15Z | merged=2026-10-02T02:31:01Z | MAINTENANCE_OR_CORRECTION | Create A2 Daily Doctrine Orient for 2026-10-02
+- PR #564 | created=2026-10-02T13:14:07Z | merged=2026-10-02T13:14:27Z | MAINTENANCE_OR_CORRECTION | October A1: full Aegis / Ballast review through 2026-10-01
+- PR #565 | created=2026-10-02T13:24:48Z | merged=2026-10-02T13:25:04Z | MAINTENANCE_OR_CORRECTION | October A2: reconcile Aegis / Ballast through 2026-10-02
+- PR #566 | created=2026-10-02T13:51:53Z | merged=2026-10-02T14:26:29Z | NATIVE_OR_RESEARCH | September D30 Independent GPT audit — Zero / Aegis / Ballast
+- PR #567 | created=2026-10-02T23:11:30Z | merged=2026-10-02T23:12:17Z | NATIVE_OR_RESEARCH | ballast: 2026-10-03 verify external cleanup beyond finalizer release
+- PR #568 | created=2026-10-03T00:15:38Z | merged=2026-10-03T00:17:02Z | NATIVE_OR_RESEARCH | A1 Daily Reliability Observe - 2026-10-03
+- PR #569 | created=2026-10-03T01:06:07Z | merged=2026-10-03T01:17:27Z | MAINTENANCE_OR_CORRECTION | A2 Daily Doctrine Orient 2026-10-03
+- PR #570 | created=2026-10-03T04:44:21Z | merged=2026-10-03T04:44:25Z | MAINTENANCE_OR_CORRECTION | October A1: full Aegis / Ballast review through 2026-10-02
+- PR #571 | created=2026-10-03T04:44:53Z | merged=2026-10-03T04:44:56Z | MAINTENANCE_OR_CORRECTION | October A2: reconcile Aegis / Ballast through 2026-10-03
+- PR #572 | created=2026-10-03T12:43:34Z | merged=2026-10-03T12:44:00Z | MAINTENANCE_OR_CORRECTION | October A1 successor: recheck Aegis / Ballast through 2026-10-02
+- PR #573 | created=2026-10-03T12:50:38Z | merged=2026-10-03T12:51:01Z | MAINTENANCE_OR_CORRECTION | October A2 successor: reconcile Aegis / Ballast current month
+- PR #574 | created=2026-10-03T23:38:47Z | merged=2026-10-03T23:39:13Z | NATIVE_OR_RESEARCH | ballast: 2026-10-04 recover ambiguous external creation safely
+- PR #575 | created=2026-10-04T00:25:21Z | merged=2026-10-04T00:53:20Z | NATIVE_OR_RESEARCH | A1: Add 2026-10-04 Reliability Observe report
+- PR #576 | created=2026-10-04T00:55:58Z | merged=2026-10-04T01:05:11Z | MAINTENANCE_OR_CORRECTION | Add 2026-10-04 A2 Daily Doctrine Orient for missing A1
+- PR #577 | created=2026-10-04T02:42:24Z | merged=2026-10-04T02:47:59Z | NATIVE_OR_RESEARCH | Generate W39 A3 Discipline Decide Report
+- PR #578 | created=2026-10-04T03:35:15Z | merged=2026-10-04T03:44:03Z | NATIVE_OR_RESEARCH | feat(aegis-cortex): add W39 A4 protocol act
+- PR #579 | created=2026-10-04T09:10:05Z | merged=2026-10-04T09:10:11Z | MAINTENANCE_OR_CORRECTION | October A1: full Aegis / Ballast review through 2026-10-03
+- PR #580 | created=2026-10-04T09:22:06Z | merged=2026-10-04T09:22:11Z | MAINTENANCE_OR_CORRECTION | October A2: reconcile Aegis / Ballast through 2026-10-04
+- PR #581 | created=2026-10-04T10:18:38Z | merged=2026-10-04T12:01:37Z | NATIVE_OR_RESEARCH | docs: establish open research production framework
+- PR #582 | created=2026-10-04T22:35:55Z | merged=2026-10-04T22:36:17Z | NATIVE_OR_RESEARCH | ballast: 2026-10-05 separate target preconditions from authorization and completion
+- PR #583 | created=2026-10-04T23:43:55Z | merged=2026-10-04T23:59:41Z | NATIVE_OR_RESEARCH | docs: add A1 daily reliability observe for 2026-10-05
+- PR #584 | created=2026-10-05T00:45:22Z | merged=2026-10-05T01:36:40Z | MAINTENANCE_OR_CORRECTION | docs: add A2 Daily Doctrine Orient report for 2026-10-05
+- PR #585 | created=2026-10-05T13:44:51Z | merged=2026-10-05T13:45:02Z | MAINTENANCE_OR_CORRECTION | October A1: full Aegis / Ballast + open-research review through 2026-10-04
+- PR #586 | created=2026-10-05T13:51:52Z | merged=2026-10-05T13:52:00Z | MAINTENANCE_OR_CORRECTION | October A2: reconcile Aegis / Ballast + open-research through 2026-10-05
+- PR #587 | created=2026-10-05T23:20:15Z | merged=2026-10-05T23:20:37Z | NATIVE_OR_RESEARCH | ballast: 2026-10-06 daily research
+- PR #588 | created=2026-10-06T00:06:53Z | merged=2026-10-06T00:20:57Z | NATIVE_OR_RESEARCH | A1 Daily Reliability Observe - 2026-10-06
+- PR #589 | created=2026-10-06T00:58:40Z | merged=2026-10-06T01:04:09Z | MAINTENANCE_OR_CORRECTION | Aegis Cortex A2 Daily Doctrine Orient (2026-10-06)
+- PR #590 | created=2026-10-06T08:34:54Z | merged=2026-10-06T08:43:16Z | MAINTENANCE_OR_CORRECTION | October A1: full Aegis / Ballast review through 2026-10-05
+- PR #591 | created=2026-10-06T08:46:25Z | merged=2026-10-06T08:53:37Z | MAINTENANCE_OR_CORRECTION | October A2: reconcile Aegis / Ballast through 2026-10-06
+- PR #592 | created=2026-10-06T20:01:48Z | merged=2026-10-06T23:01:08Z | NATIVE_OR_RESEARCH | Ballast Daily 2026-10-07
+- PR #593 | created=2026-10-06T23:54:52Z | merged=2026-10-07T00:04:07Z | MAINTENANCE_OR_CORRECTION | feat(aegis-cortex): add A1 report for 2026-10-07
+- PR #594 | created=2026-10-07T01:21:00Z | merged=2026-10-07T05:47:39Z | MAINTENANCE_OR_CORRECTION | Create A2 Doctrine Orient 2026-10-07
+- PR #595 | created=2026-10-07T07:14:37Z | merged=2026-10-07T07:19:29Z | MAINTENANCE_OR_CORRECTION | October A1: full Aegis / Ballast review through 2026-10-06
+- PR #596 | created=2026-10-07T07:22:23Z | merged=2026-10-07T07:28:18Z | MAINTENANCE_OR_CORRECTION | October A2: reconcile Aegis / Ballast through 2026-10-07
+- PR #597 | created=2026-10-07T12:24:49Z | merged=2026-10-07T13:11:04Z | OTHER_PROJECT | Archive task records and workflow identity through 2026-10-07
+- PR #598 | created=2026-10-07T23:21:07Z | merged=2026-10-07T23:21:42Z | NATIVE_OR_RESEARCH | ballast: 2026-10-08 separate watch progress from complete current state
+- PR #599 | created=2026-10-08T00:09:37Z | merged=2026-10-08T00:10:19Z | NATIVE_OR_RESEARCH | Add A1 reliability observe report for 2026-10-08
+- PR #600 | created=2026-10-08T00:11:41Z | merged=2026-10-08T02:02:00Z | NATIVE_OR_RESEARCH | ballast: strengthen 2026-10-08 streaming-list synchronization boundary
+- PR #601 | created=2026-10-08T04:28:44Z | merged=2026-10-08T04:29:17Z | MAINTENANCE_OR_CORRECTION | Recover A2 Doctrine Orient for 2026-10-08
+- PR #602 | created=2026-10-08T07:29:15Z | merged=2026-10-08T07:35:59Z | MAINTENANCE_OR_CORRECTION | October A1: full Aegis / Ballast review through 2026-10-07
+- PR #603 | created=2026-10-08T07:38:37Z | merged=2026-10-08T07:45:39Z | MAINTENANCE_OR_CORRECTION | October A2: reconcile Aegis / Ballast through 2026-10-08
+- PR #604 | created=2026-10-09T00:24:57Z | merged=2026-10-09T00:26:34Z | NATIVE_OR_RESEARCH | research(ballast): 2026-10-09 Indexed Job success vs external effect completion
+- PR #605 | created=2026-10-09T01:16:42Z | merged=2026-10-09T01:30:13Z | MAINTENANCE_OR_CORRECTION | chore(aegis): Generate A1 reliability record for 2026-10-09
+- PR #606 | created=2026-10-09T02:52:56Z | merged=2026-10-09T02:53:30Z | MAINTENANCE_OR_CORRECTION | Recover 2026-10-09 A2 Doctrine Orient from same-day A1
+- PR #607 | created=2026-10-09T03:09:45Z | merged=NOT_MERGED | MAINTENANCE_OR_CORRECTION | Add 2026-10-08 A2 Doctrine Orient
+- PR #608 | created=2026-10-09T08:35:25Z | merged=2026-10-09T08:40:15Z | MAINTENANCE_OR_CORRECTION | October A1: Aegis / Ballast through October 8
+- PR #609 | created=2026-10-09T08:53:20Z | merged=2026-10-09T08:56:15Z | MAINTENANCE_OR_CORRECTION | October A2: Aegis/Ballast relation through 2026-10-09
+- PR #610 | created=2026-10-09T12:14:47Z | merged=2026-10-09T13:11:58Z | OTHER_PROJECT | docs(agi): recover original and next workflow generations
+- PR #611 | created=2026-10-09T23:38:39Z | merged=2026-10-09T23:44:11Z | NATIVE_OR_RESEARCH | research(ballast): 2026-10-10 CronJob exact external-effect proof (same-day strengthened)
+- PR #612 | created=2026-10-10T00:26:11Z | merged=2026-10-10T00:38:48Z | NATIVE_OR_RESEARCH | Generate A1 reliability observe report for 2026-10-10
+- PR #613 | created=2026-10-10T00:54:27Z | merged=2026-10-10T04:16:20Z | MAINTENANCE_OR_CORRECTION | Add A2 Daily Doctrine Orient report for 2026-10-10
+- PR #614 | created=2026-10-10T08:52:28Z | merged=2026-10-10T08:54:17Z | MAINTENANCE_OR_CORRECTION | October 10 A1: Aegis Ballast review through October 9
+- PR #615 | created=2026-10-10T09:03:59Z | merged=2026-10-10T09:05:59Z | MAINTENANCE_OR_CORRECTION | October 10 A2: Aegis Ballast relation through October 10
+- PR #616 | created=2026-10-10T15:05:57Z | merged=2026-10-10T15:08:00Z | OTHER_PROJECT | docs: reconcile concept DOI and three archived release identities
+- PR #617 | created=2026-10-10T23:27:51Z | merged=2026-10-10T23:31:48Z | NATIVE_OR_RESEARCH | research(ballast): 2026-10-11 Actions cancellation evidence — same-day reviewed
+- PR #618 | created=2026-10-10T23:39:58Z | merged=2026-10-10T23:59:06Z | MAINTENANCE_OR_CORRECTION | chore(aegis-cortex): add 2026-10-11 A1 reliability observe report
+- PR #619 | created=2026-10-11T01:42:40Z | merged=2026-10-11T02:25:08Z | MAINTENANCE_OR_CORRECTION | Add 2026-10-11 A2 Daily Doctrine Orient Report
+- PR #620 | created=2026-10-11T02:55:28Z | merged=2026-10-11T07:36:30Z | NATIVE_OR_RESEARCH | Add 2026-W40 A3 Report
+- PR #621 | created=2026-10-11T03:13:11Z | merged=NOT_MERGED | NATIVE_OR_RESEARCH | Add Week 40 A4 Protocol Act
+- PR #622 | created=2026-10-11T07:41:29Z | merged=2026-10-11T07:41:37Z | NATIVE_OR_RESEARCH | Aegis: recover W40 A4 after A3 became available
+- PR #623 | created=2026-10-11T07:52:12Z | merged=2026-10-11T07:53:46Z | MAINTENANCE_OR_CORRECTION | October 11 A1: Aegis Ballast full review through October 10
+- PR #624 | created=2026-10-11T08:00:13Z | merged=2026-10-11T08:01:52Z | MAINTENANCE_OR_CORRECTION | October 11 A2: Aegis Ballast relation through October 11
+- PR #625 | created=2026-10-11T20:04:40Z | merged=2026-10-11T23:30:16Z | NATIVE_OR_RESEARCH | Ballast Daily 2026-10-12: environment/OIDC trust versus effect-time authority
+- PR #626 | created=2026-10-12T00:05:26Z | merged=2026-10-12T00:25:51Z | NATIVE_OR_RESEARCH | docs: generate A1 Daily Reliability Observe report for 2026-10-12
+- PR #627 | created=2026-10-12T01:35:24Z | merged=2026-10-12T01:43:17Z | MAINTENANCE_OR_CORRECTION | Add A2 Daily Doctrine Orient report for 2026-10-12
+- PR #628 | created=2026-10-12T03:18:50Z | merged=2026-10-12T03:54:20Z | OTHER_PROJECT | docs(agi): complete selected historical NEXUS workflow lineage
+- PR #629 | created=2026-10-12T04:57:56Z | merged=2026-10-12T05:01:54Z | OTHER_PROJECT | docs(agi): preserve selected historical workflow YAML backups
+- PR #630 | created=2026-10-12T05:19:27Z | merged=2026-10-12T09:11:34Z | OTHER_PROJECT | docs(agi): preserve historical lifecycle revisions with archive ingestion guard
+- PR #631 | created=2026-10-12T11:02:25Z | merged=2026-10-12T11:06:00Z | MAINTENANCE_OR_CORRECTION | A1 2026-10-12: October maintenance through 2026-10-11
+- PR #632 | created=2026-10-12T11:07:35Z | merged=2026-10-12T11:10:51Z | MAINTENANCE_OR_CORRECTION | A2 2026-10-12: October maintenance through 2026-10-12
+- PR #633 | created=2026-10-12T23:03:26Z | merged=2026-10-13T00:22:36Z | NATIVE_OR_RESEARCH | Ballast Daily 2026-10-13: delegated token exchange versus effect-time authority
+- PR #634 | created=2026-10-12T23:59:04Z | merged=2026-10-13T00:20:19Z | NATIVE_OR_RESEARCH | A1 Daily Reliability Observe 2026-10-13
+- PR #635 | created=2026-10-13T08:15:39Z | merged=2026-10-13T08:19:02Z | MAINTENANCE_OR_CORRECTION | A1 2026-10-13: October maintenance through 2026-10-12
+- PR #636 | created=2026-10-13T08:20:46Z | merged=2026-10-13T08:24:10Z | MAINTENANCE_OR_CORRECTION | A2 2026-10-13: October maintenance through 2026-10-13
+- PR #637 | created=2026-10-13T08:29:53Z | merged=2026-10-13T08:32:24Z | OTHER_PROJECT | correct: clarify 2026-10-13 Aegis source independence
+- PR #638 | created=2026-10-13T08:34:20Z | merged=2026-10-13T08:38:21Z | NATIVE_OR_RESEARCH | Final A1 2026-10-13: reconcile through 2026-10-12
+- PR #639 | created=2026-10-13T08:40:34Z | merged=2026-10-13T08:44:46Z | MAINTENANCE_OR_CORRECTION | Final A2 2026-10-13: current month through 2026-10-13
+- PR #640 | created=2026-10-13T09:46:02Z | merged=2026-10-13T09:46:25Z | MAINTENANCE_OR_CORRECTION | Aegis A2 2026-10-13: bounded independent recovery of missing Orient artifact
+- PR #641 | created=2026-10-13T09:53:58Z | merged=2026-10-13T09:54:08Z | NATIVE_OR_RESEARCH | W41 Aegis A3: external-risk synthesis with bounded R01/R02 decisions
+- PR #642 | created=2026-10-13T09:55:20Z | merged=2026-10-13T09:55:29Z | NATIVE_OR_RESEARCH | W41 Aegis A4: bounded observe-only protocol actions after merged A3
+- PR #643 | created=2026-10-13T22:29:35Z | merged=2026-10-13T22:52:26Z | NATIVE_OR_RESEARCH | research(ballast): 2026-10-14 event delivery identity versus exact effects
+- PR #644 | created=2026-10-14T00:12:45Z | merged=2026-10-14T00:36:47Z | MAINTENANCE_OR_CORRECTION | feat(aegis): complete A1 Daily Reliability Observe for 2026-10-14
+- PR #645 | created=2026-10-14T01:13:11Z | merged=2026-10-14T02:31:15Z | MAINTENANCE_OR_CORRECTION | Create A2 Doctrine Orient report for 2026-10-14
+- PR #646 | created=2026-10-14T07:24:42Z | merged=2026-10-14T07:26:18Z | MAINTENANCE_OR_CORRECTION | fix(aegis): reconcile 2026-10-14 A2 source-depth evidence
+- PR #647 | created=2026-10-14T08:00:41Z | merged=2026-10-14T08:04:21Z | MAINTENANCE_OR_CORRECTION | A1 2026-10-14: Aegis Oct 1-13 source-depth and local-evidence gate
+- PR #648 | created=2026-10-14T08:40:45Z | merged=2026-10-14T08:58:13Z | MAINTENANCE_OR_CORRECTION | A2 2026-10-14: Aegis source-depth and incident boundary
+- PR #649 | created=2026-10-14T09:06:54Z | merged=2026-10-14T09:09:39Z | OTHER_PROJECT | D14 2026-10-14: Aegis source/incident pattern audit
+- PR #650 | created=2026-10-14T09:09:21Z | merged=NOT_MERGED | OTHER_PROJECT | D14 2026-10-14: independent pattern formation audit
+- PR #651 | created=2026-10-14T09:16:11Z | merged=2026-10-14T09:18:30Z | OTHER_PROJECT | correct(d14): restore Aegis Oct 10–14 evidence-depth matrix
+- PR #652 | created=2026-10-14T23:25:48Z | merged=2026-10-14T23:27:01Z | NATIVE_OR_RESEARCH | research(ballast): 2026-10-15 outbox offset versus exact effect completion
+- PR #653 | created=2026-10-15T01:08:46Z | merged=2026-10-15T01:15:42Z | MAINTENANCE_OR_CORRECTION | feat(aegis): Add A2 Doctrine Orient for 2026-10-15 (BLOCKED)
+- PR #654 | created=2026-10-15T01:27:03Z | merged=2026-10-15T01:36:37Z | NATIVE_OR_RESEARCH | Create A1 Daily Reliability Observe for 2026-10-15
+- PR #655 | created=2026-10-15T01:57:05Z | merged=2026-10-15T02:09:18Z | NATIVE_OR_RESEARCH | docs(open-science): align archived checkpoint, citation and research reuse
+- PR #656 | created=2026-10-15T10:18:29Z | merged=2026-10-15T10:47:16Z | MAINTENANCE_OR_CORRECTION | A1 2026-10-15: A1/A2 original evidence coverage through Oct 14
+- PR #657 | created=2026-10-15T10:52:17Z | merged=2026-10-15T11:12:35Z | MAINTENANCE_OR_CORRECTION | A2 2026-10-15: Aegis full October, Ballast and same-day upstream visibility
+- PR #658 | created=2026-10-15T11:47:43Z | merged=2026-10-15T11:49:23Z | MAINTENANCE_OR_CORRECTION | Forward correction: preserve 2026-10-15 Aegis native A2 BLOCKED and enforce main-visible upstream gate
+- PR #659 | created=2026-10-15T15:41:11Z | merged=2026-10-15T15:51:05Z | NATIVE_OR_RESEARCH | docs(open-science): strengthen research handoff through Windows maintenance
+- PR #660 | created=2026-10-15T22:50:54Z | merged=2026-10-15T22:51:46Z | NATIVE_OR_RESEARCH | research(ballast): 2026-10-16 Saga compensation exact-effect proof and verifier hardening
+- PR #661 | created=2026-10-16T00:28:44Z | merged=2026-10-16T00:39:47Z | NATIVE_OR_RESEARCH | feat: Add A1 Reliability Observe report for 2026-10-16
+- PR #662 | created=2026-10-16T01:22:00Z | merged=2026-10-16T02:37:51Z | MAINTENANCE_OR_CORRECTION | Add 2026-10-16 A2 Doctrine Orient report
+- PR #663 | created=2026-10-16T09:47:14Z | merged=2026-10-16T09:47:30Z | MAINTENANCE_OR_CORRECTION | A1 Oct16 Aegis: original 15-day A1/A2 and Ballast source-time review
+- PR #664 | created=2026-10-16T10:29:55Z | merged=2026-10-16T10:30:08Z | MAINTENANCE_OR_CORRECTION | A2 Oct16 Aegis: 16-day risk/doctrine, Ballast and W40–W42 relation
+- PR #665 | created=2026-10-16T23:16:43Z | merged=2026-10-16T23:17:52Z | NATIVE_OR_RESEARCH | Ballast Daily 2026-10-17: compensation retention and historical refund integrity
+- PR #666 | created=2026-10-17T00:12:31Z | merged=2026-10-17T00:15:34Z | NATIVE_OR_RESEARCH | Add 2026-10-17 A1 Reliability Observe Report
+- PR #667 | created=2026-10-17T01:05:58Z | merged=2026-10-17T01:08:59Z | MAINTENANCE_OR_CORRECTION | docs: generate 2026-10-17 A2 Daily Doctrine Orient report
+- PR #668 | created=2026-10-17T11:58:42Z | merged=2026-10-17T11:58:52Z | MAINTENANCE_OR_CORRECTION | A1 Oct17 Aegis: original 16-day A1/A2 and Ballast source-time review
+- PR #669 | created=2026-10-17T12:13:14Z | merged=2026-10-17T12:13:21Z | MAINTENANCE_OR_CORRECTION | A2 Oct17 Aegis: 17-day risks and Ballast exact-effect evidence chain
+- PR #670 | created=2026-10-17T22:53:15Z | merged=2026-10-17T22:54:55Z | NATIVE_OR_RESEARCH | research(ballast): 2026-10-18 lease handoff sink fencing and exact effect-set evidence
+### Specific scientific/operational boundaries and A1 disposition
+- Aegis external risk alert is not evidence of observed Zero host exploitation or mitigation success
+- An A2 file arriving on current main cannot rewrite its pre-existing task-time INPUT_MISSING state
+- Ballast current execution permission, historical effect occurrence, effect-time authorization, exact current completion and independent verifier are five separate witness questions
+- SQLite controlled sink fencing is local simulation; Kubernetes/Temporal/external-effect equivalence NOT_TESTED by this A1
+- W42 due-boundary and same-week H/A3-A4 interpretation must respect original schedule; this A1 does not back-date weekly final
+- Ballast CASE/NOTES/experiment and source-observation denominator are not incremented by index/review
+- Aegis October A6 remains an OPEN monthly relation; it is not natural-month FINAL or postcondition verification
+- Exact A1 source identity decisions: 55 previous-owner blob anchors among 56 selected files; non-anchors remain temporal/index questions, not presumed corruption
+- PR evidence: 116 PR objects created within UTC Oct01–Oct17, includes different maintenance/native workflows; never use this count as number of independent experiments
+- Original file modifications: ZERO; new CASE/NOTES, runtime, implementation, external replication, or audit credit: ZERO
+- Full file contents, live external sources and current integrated test suite independently replayed in this A1: NOT_EXECUTED
+- A1 disposition: COMPLETE_FOR_ENUMERATED_SOURCE_IDENTITIES / BOUNDED_PROVENANCE_REVIEW / ORIGINAL_HISTORICAL_STATES_PRESERVED / MONTH_OPEN
