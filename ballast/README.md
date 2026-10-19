@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-19 regional replica visibility](records/2026-10-19.md)
+- 最新 Daily: [2026-10-20 Continue-As-New run lineage versus stable business effect identity](records/2026-10-20.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-14 至 2026-10-19](audits/2026-10-14--2026-10-19.md)
@@ -624,3 +624,15 @@ One NATIVE bounded local SQLite research window examines lease-holder handoff, p
 ## Ballast current-state advance — 2026-10-19
 
 One NATIVE bounded JavaScript Daily on regional replica visibility and prior-effect absence, [Daily](records/2026-10-19.md) has 32 scenarios, 96 decisions, 49 modeled attempts, 48 accepted and 54/54 rejected mutations. Regional MISS can miss an effect in another Region, and equal receipt counts can conceal A/B to A/C membership drift. No live cloud or independent sink authority tested. [Six-date derived audit](audits/2026-10-14--2026-10-19.md) adds zero independent research credit. Monthly/README navigation only, CASE 0, METHOD 0, NOTES 0, Special 0. Current native research endpoint is 2026-10-19.
+
+## Ballast current-state advance — 2026-10-20
+
+One NATIVE bounded JavaScript-isolate research unit on Temporal Continue-As-New run lineage versus stable business effect identity, [Daily](records/2026-10-20.md) reports 35 authored scenarios, 105 local model decisions, 62 simulated attempts, 59 accepted effects, two deduplications, one key conflict and 56/56 rejected adversarial mutations
+
+Strong counterexample: an external capture commits under run-A with its response lost, then a new run-B-derived idempotency key admits a second modeled capture for the same business operation, while a capture/notify to capture/refund membership change keeps equal receipt counts but invalidates current completion
+
+The [October Monthly](records/2026-10.md) is derived navigation only, latest complete nonoverlapping [six-date audit](audits/2026-10-14--2026-10-19.md) remains valid, 2026-10-20 begins the next cycle with no audit due, CASE 0, METHOD 0, NOTES 0, Special 0, new independent audit research credit 0
+
+Original research: V8 isolate producer and event-replay verifier EXECUTED with limited independent semantics, real Temporal, payment sink, authoritative receipt query and external effect-time authorization NOT_EXECUTED, standalone Node CLI and full repository checker were NOT_EXECUTED at original research time
+
+Current native research endpoint is 2026-10-20
