@@ -1,0 +1,387 @@
+[
+  {
+    "id": "clean_covered_miss"
+  },
+  {
+    "id": "clean_miss_revoked",
+    "post": [
+      [
+        "permission",
+        false
+      ]
+    ]
+  },
+  {
+    "id": "complete_prior",
+    "prior": [
+      "capture",
+      "notify"
+    ]
+  },
+  {
+    "id": "complete_after_revocation",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "post": [
+      [
+        "permission",
+        false
+      ]
+    ]
+  },
+  {
+    "id": "run_key_duplicate_capture",
+    "prior": [
+      "capture"
+    ],
+    "retry": [
+      "capture"
+    ],
+    "loss": true
+  },
+  {
+    "id": "run_key_duplicate_both",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "retry": [
+      "capture",
+      "notify"
+    ],
+    "loss": true
+  },
+  {
+    "id": "stable_key_replay_both",
+    "prior": [
+      {
+        "member": "capture",
+        "stable": true
+      },
+      {
+        "member": "notify",
+        "stable": true
+      }
+    ],
+    "retry": [
+      {
+        "member": "capture",
+        "stable": true
+      },
+      {
+        "member": "notify",
+        "stable": true
+      }
+    ],
+    "loss": true
+  },
+  {
+    "id": "partial_prior",
+    "prior": [
+      "capture"
+    ]
+  },
+  {
+    "id": "same_count_membership_swap",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "post": [
+      [
+        "members",
+        [
+          "capture",
+          "refund"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "same_count_duplicate_capture",
+    "prior": [
+      {
+        "member": "capture",
+        "key": "alt-capture-1"
+      },
+      {
+        "member": "capture",
+        "key": "alt-capture-2"
+      }
+    ]
+  },
+  {
+    "id": "same_count_extra_missing",
+    "prior": [
+      "capture",
+      {
+        "member": "refund",
+        "bypass": true
+      }
+    ]
+  },
+  {
+    "id": "extra_effect",
+    "prior": [
+      "capture",
+      "notify",
+      {
+        "member": "refund",
+        "bypass": true
+      }
+    ]
+  },
+  {
+    "id": "wrong_target_prior",
+    "prior": [
+      {
+        "member": "capture",
+        "target": "inc-old",
+        "bypass": true
+      },
+      "notify"
+    ]
+  },
+  {
+    "id": "wrong_intent_prior",
+    "prior": [
+      {
+        "member": "capture",
+        "intent": "intent-old",
+        "bypass": true
+      },
+      "notify"
+    ]
+  },
+  {
+    "id": "wrong_workflow_prior",
+    "prior": [
+      {
+        "member": "capture",
+        "workflow": "wf-old",
+        "bypass": true
+      },
+      "notify"
+    ]
+  },
+  {
+    "id": "unknown_run_lineage",
+    "prior": [
+      {
+        "member": "capture",
+        "run": "run-X",
+        "bypass": true
+      },
+      "notify"
+    ]
+  },
+  {
+    "id": "wrong_attempt_history",
+    "prior": [
+      {
+        "member": "capture",
+        "attempt": "try-X",
+        "bypass": true
+      },
+      "notify"
+    ]
+  },
+  {
+    "id": "unauthorized_history",
+    "prior": [
+      {
+        "member": "capture",
+        "auth": false,
+        "bypass": true
+      },
+      "notify"
+    ]
+  },
+  {
+    "id": "query_unknown_prior",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "query": {
+      "status": "UNKNOWN"
+    }
+  },
+  {
+    "id": "positive_miss_conflict",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "query": {
+      "status": "MISS"
+    }
+  },
+  {
+    "id": "query_scope_gap",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "query": {
+      "coverage_global": false
+    }
+  },
+  {
+    "id": "query_watermark_gap",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "query": {
+      "watermark": 1
+    }
+  },
+  {
+    "id": "query_member_scope_gap",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "query": {
+      "scope_members": [
+        "capture"
+      ]
+    }
+  },
+  {
+    "id": "query_wrong_effect_identity",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "query": {
+      "op": "op-old"
+    }
+  },
+  {
+    "id": "query_failed",
+    "query": {
+      "status": "UNKNOWN",
+      "health": false
+    }
+  },
+  {
+    "id": "retention_gap_miss",
+    "query": {
+      "retention": false
+    }
+  },
+  {
+    "id": "false_positive_without_receipt",
+    "query": {
+      "status": "HIT"
+    }
+  },
+  {
+    "id": "witness_revision_stale",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "witness": {
+      "revision": 2
+    }
+  },
+  {
+    "id": "witness_unprotected",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "witness": {
+      "protected": false
+    }
+  },
+  {
+    "id": "witness_time_before_effect",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "witness": {
+      "at_tick": 1
+    }
+  },
+  {
+    "id": "post_witness_membership_toctou",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "afterWitness": [
+      [
+        "members",
+        [
+          "capture",
+          "refund"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "post_witness_target_toctou",
+    "prior": [
+      "capture",
+      "notify"
+    ],
+    "afterWitness": [
+      [
+        "target",
+        "inc-2"
+      ]
+    ]
+  },
+  {
+    "id": "post_witness_revocation_no_prior",
+    "afterWitness": [
+      [
+        "permission",
+        false
+      ]
+    ]
+  },
+  {
+    "id": "stable_key_changed_intent_conflict",
+    "prior": [
+      {
+        "member": "capture",
+        "stable": true
+      }
+    ],
+    "retry": [
+      {
+        "member": "capture",
+        "stable": true,
+        "intent": "intent-new"
+      }
+    ],
+    "loss": true
+  },
+  {
+    "id": "run_key_duplicate_after_member_swap",
+    "prior": [
+      "capture"
+    ],
+    "post": [
+      [
+        "members",
+        [
+          "capture",
+          "refund"
+        ]
+      ]
+    ],
+    "retry": [
+      "capture"
+    ],
+    "loss": true
+  }
+]

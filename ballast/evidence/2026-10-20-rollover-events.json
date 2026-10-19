@@ -1,0 +1,3354 @@
+{
+  "schema": "ballast-rollover-effect-identity-2026-10-20",
+  "execution": "bounded-v8-isolate",
+  "model": "synthetic-gateway-and-append-only-ledger",
+  "paths": [
+    "run_scoped_key",
+    "receipt_count",
+    "full_integrity"
+  ],
+  "scenarios": [
+    {
+      "id": "clean_covered_miss",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 2,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 3,
+          "kind": "query",
+          "status": "MISS",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 4
+        }
+      ],
+      "raw": {
+        "attempts": 0,
+        "accepted": 0,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "RECONCILE",
+        "full_integrity": "RETRY_ALLOWED"
+      }
+    },
+    {
+      "id": "clean_miss_revoked",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 2,
+          "kind": "control",
+          "field": "permission",
+          "value": false
+        },
+        {
+          "tick": 3,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 4,
+          "kind": "query",
+          "status": "MISS",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 5
+        }
+      ],
+      "raw": {
+        "attempts": 0,
+        "accepted": 0,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "BLOCKED",
+        "receipt_count": "RECONCILE",
+        "full_integrity": "BLOCKED"
+      }
+    },
+    {
+      "id": "complete_prior",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "COMPLETE"
+      }
+    },
+    {
+      "id": "complete_after_revocation",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "control",
+          "field": "permission",
+          "value": false
+        },
+        {
+          "tick": 5,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 6,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 7,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 7
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "BLOCKED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "COMPLETE"
+      }
+    },
+    {
+      "id": "run_key_duplicate_capture",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "response_lost",
+          "for_run": "run-A"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "commit",
+          "phase": "retry",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-B",
+          "attempt": "try-B",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-B:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 6,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 7,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 7
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "run_key_duplicate_both",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "response_lost",
+          "for_run": "run-A"
+        },
+        {
+          "tick": 4,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 5,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 6,
+          "kind": "commit",
+          "phase": "retry",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-B",
+          "attempt": "try-B",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-B:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 7,
+          "kind": "commit",
+          "phase": "retry",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-B",
+          "attempt": "try-B",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-B:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 8,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 9,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 9
+        }
+      ],
+      "raw": {
+        "attempts": 4,
+        "accepted": 4,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "stable_key_replay_both",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "business:op-20:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "business:op-20:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "response_lost",
+          "for_run": "run-A"
+        },
+        {
+          "tick": 4,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 5,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 6,
+          "kind": "commit",
+          "phase": "retry",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-B",
+          "attempt": "try-B",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "business:op-20:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "dedup"
+        },
+        {
+          "tick": 7,
+          "kind": "commit",
+          "phase": "retry",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-B",
+          "attempt": "try-B",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "business:op-20:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "dedup"
+        },
+        {
+          "tick": 8,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 9,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 9
+        }
+      ],
+      "raw": {
+        "attempts": 4,
+        "accepted": 2,
+        "dedup": 2,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "COMPLETE"
+      }
+    },
+    {
+      "id": "partial_prior",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 3,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 4,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 5
+        }
+      ],
+      "raw": {
+        "attempts": 1,
+        "accepted": 1,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "same_count_membership_swap",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "control",
+          "field": "members",
+          "value": [
+            "capture",
+            "refund"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 6,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 4,
+          "scope_members": [
+            "capture",
+            "refund"
+          ]
+        },
+        {
+          "tick": 7,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "refund"
+          ],
+          "revision": 4,
+          "target": "inc-1",
+          "at_tick": 7
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "refund"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "same_count_duplicate_capture",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "alt-capture-1",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "alt-capture-2",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "same_count_extra_missing",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "refund",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:refund",
+          "authorized": false,
+          "bypass": true,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "extra_effect",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "refund",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:refund",
+          "authorized": false,
+          "bypass": true,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 4,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 5,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 6,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 7,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 7
+        }
+      ],
+      "raw": {
+        "attempts": 3,
+        "accepted": 3,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "wrong_target_prior",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-old",
+          "key": "run:run-A:capture",
+          "authorized": false,
+          "bypass": true,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "wrong_intent_prior",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-old",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": false,
+          "bypass": true,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "wrong_workflow_prior",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-old",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": false,
+          "bypass": true,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "unknown_run_lineage",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-X",
+          "attempt": "try-B",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-X:capture",
+          "authorized": true,
+          "bypass": true,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "wrong_attempt_history",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-X",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": true,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "unauthorized_history",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": false,
+          "bypass": true,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "query_unknown_prior",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "UNKNOWN",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "STOP_UNKNOWN"
+      }
+    },
+    {
+      "id": "positive_miss_conflict",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "MISS",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "EVIDENCE_CONFLICT"
+      }
+    },
+    {
+      "id": "query_scope_gap",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": false,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "STOP_UNKNOWN"
+      }
+    },
+    {
+      "id": "query_watermark_gap",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 1,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "STOP_UNKNOWN"
+      }
+    },
+    {
+      "id": "query_member_scope_gap",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "STOP_UNKNOWN"
+      }
+    },
+    {
+      "id": "query_wrong_effect_identity",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-old",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "STOP_UNKNOWN"
+      }
+    },
+    {
+      "id": "query_failed",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 2,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 3,
+          "kind": "query",
+          "status": "UNKNOWN",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": false,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 4
+        }
+      ],
+      "raw": {
+        "attempts": 0,
+        "accepted": 0,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "RECONCILE",
+        "full_integrity": "STOP_UNKNOWN"
+      }
+    },
+    {
+      "id": "retention_gap_miss",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 2,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 3,
+          "kind": "query",
+          "status": "MISS",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": false,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 4
+        }
+      ],
+      "raw": {
+        "attempts": 0,
+        "accepted": 0,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "RECONCILE",
+        "full_integrity": "STOP_UNKNOWN"
+      }
+    },
+    {
+      "id": "false_positive_without_receipt",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 2,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 3,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 4
+        }
+      ],
+      "raw": {
+        "attempts": 0,
+        "accepted": 0,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "RECONCILE",
+        "full_integrity": "STOP_UNKNOWN"
+      }
+    },
+    {
+      "id": "witness_revision_stale",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 2,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "witness_unprotected",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": false,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "witness_time_before_effect",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 1
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "post_witness_membership_toctou",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        },
+        {
+          "tick": 7,
+          "kind": "control",
+          "field": "members",
+          "value": [
+            "capture",
+            "refund"
+          ]
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "refund"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "post_witness_target_toctou",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "notify",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:notify",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 6,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 6
+        },
+        {
+          "tick": 7,
+          "kind": "control",
+          "field": "target",
+          "value": "inc-2"
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "post_witness_revocation_no_prior",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 2,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 3,
+          "kind": "query",
+          "status": "MISS",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 4,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 4
+        },
+        {
+          "tick": 5,
+          "kind": "control",
+          "field": "permission",
+          "value": false
+        }
+      ],
+      "raw": {
+        "attempts": 0,
+        "accepted": 0,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "RECONCILE",
+        "full_integrity": "BLOCKED"
+      }
+    },
+    {
+      "id": "stable_key_changed_intent_conflict",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "business:op-20:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "response_lost",
+          "for_run": "run-A"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 5,
+          "kind": "commit",
+          "phase": "retry",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-B",
+          "attempt": "try-B",
+          "intent": "intent-new",
+          "target": "inc-1",
+          "key": "business:op-20:capture",
+          "authorized": false,
+          "bypass": false,
+          "outcome": "conflict"
+        },
+        {
+          "tick": 6,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 3,
+          "scope_members": [
+            "capture",
+            "notify"
+          ]
+        },
+        {
+          "tick": 7,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "notify"
+          ],
+          "revision": 3,
+          "target": "inc-1",
+          "at_tick": 7
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 1,
+        "dedup": 0,
+        "conflicts": 1,
+        "final_members": [
+          "capture",
+          "notify"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "RECONCILE",
+        "full_integrity": "RECONCILE"
+      }
+    },
+    {
+      "id": "run_key_duplicate_after_member_swap",
+      "events": [
+        {
+          "tick": 1,
+          "kind": "commit",
+          "phase": "prior",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-A",
+          "attempt": "try-A",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-A:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 2,
+          "kind": "response_lost",
+          "for_run": "run-A"
+        },
+        {
+          "tick": 3,
+          "kind": "rollover",
+          "from": "run-A",
+          "to": "run-B",
+          "workflow": "wf-20"
+        },
+        {
+          "tick": 4,
+          "kind": "control",
+          "field": "members",
+          "value": [
+            "capture",
+            "refund"
+          ]
+        },
+        {
+          "tick": 5,
+          "kind": "decision_boundary",
+          "current_run": "run-B"
+        },
+        {
+          "tick": 6,
+          "kind": "commit",
+          "phase": "retry",
+          "member": "capture",
+          "op": "op-20",
+          "workflow": "wf-20",
+          "run": "run-B",
+          "attempt": "try-B",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "key": "run:run-B:capture",
+          "authorized": true,
+          "bypass": false,
+          "outcome": "accepted"
+        },
+        {
+          "tick": 7,
+          "kind": "query",
+          "status": "HIT",
+          "scope_exact": true,
+          "coverage_global": true,
+          "health": true,
+          "watermark": 100,
+          "min_watermark": 20,
+          "retention": true,
+          "op": "op-20",
+          "workflow": "wf-20",
+          "intent": "intent-20",
+          "target": "inc-1",
+          "revision": 4,
+          "scope_members": [
+            "capture",
+            "refund"
+          ]
+        },
+        {
+          "tick": 8,
+          "kind": "witness",
+          "protected": true,
+          "members": [
+            "capture",
+            "refund"
+          ],
+          "revision": 4,
+          "target": "inc-1",
+          "at_tick": 8
+        }
+      ],
+      "raw": {
+        "attempts": 2,
+        "accepted": 2,
+        "dedup": 0,
+        "conflicts": 0,
+        "final_members": [
+          "capture",
+          "refund"
+        ],
+        "final_run": "run-B"
+      },
+      "decisions": {
+        "run_scoped_key": "RETRY_ALLOWED",
+        "receipt_count": "COMPLETE",
+        "full_integrity": "RECONCILE"
+      }
+    }
+  ]
+}
