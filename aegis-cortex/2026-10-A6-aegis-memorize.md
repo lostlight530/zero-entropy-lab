@@ -5892,7 +5892,7 @@ Maintenance execution UTC: 2026-10-19T02:46:52+00:00
 Maintenance execution Asia/Shanghai: 2026-10-19T10:46:52+08:00
 Exact base main SHA: df2559271f3f97705124cbad10ffc6b4252232a8
 Canonical owner pre-append blob: e9d7bdf5ba5c569278a91a62c6774aebbadc1ee6
-Record Provenance: INDEPENDENT_GPT_MAINTENANCE
+Maintenance Provenance: INDEPENDENT_GPT_MAINTENANCE
 Modification Class: APPEND_ONLY_MONTH_OWNER_RECONCILIATION
 
 ### Coverage contract and revalidation
@@ -5973,7 +5973,7 @@ Maintenance execution Asia/Shanghai: 2026-10-19T10:53:42+08:00
 A1 PR #681 merge/current-main SHA: 1dcd47bbde6a23f3cdd3d53b5388f8e5da30f028
 Exact fresh base main SHA: 1dcd47bbde6a23f3cdd3d53b5388f8e5da30f028
 Canonical owner pre-append blob: f7ef0f12ec6574f72fb006636cde0e14ef2e8744
-Record Provenance: INDEPENDENT_GPT_MAINTENANCE
+Maintenance Provenance: INDEPENDENT_GPT_MAINTENANCE
 Modification Class: APPEND_ONLY_CURRENT_MONTH_RELATION
 
 ### A1 dependency and full-month relation revalidation
@@ -6025,3 +6025,17 @@ Modification Class: APPEND_ONLY_CURRENT_MONTH_RELATION
 NATIVE_MODIFICATION_NOTE
 - The only file modified by this maintenance is aegis-cortex/2026-10-A6-aegis-memorize.md, via an append-only current-month relation section.
 - Original native daily/weekly/audit/index artifacts are not rewritten. Any substitute retains HUMAN_AUTHORIZED_SUBSTITUTE provenance and is never counted as an original native execution.
+
+
+## 2026-10-19 Maintenance Correction | Provenance-key namespace
+
+Correction ID: AEGIS-MONTH-OWNER-METADATA-2026-10-19
+Correction execution UTC: 2026-10-19T03:57:56+00:00
+Correction execution Asia/Shanghai: 2026-10-19T11:57:56+08:00
+Correction class: METADATA_KEY_SCOPE_CORRECTION
+Affected sections: 2026-10-19 A1 and 2026-10-19 A2
+Observed defect: the two maintenance-section provenance values were written using the file-level Record Provenance key. A parser that collects file metadata across the complete owner document can interpret a section-local maintenance role as the owner task's provenance.
+Correction: exactly two section-local keys were renamed to Maintenance Provenance. Their value remains INDEPENDENT_GPT_MAINTENANCE. No maintenance decision, date boundary, source anchor, source-time state or original native artifact was changed.
+Owner identity preservation: the original top-level HUMAN_AUTHORIZED_MONTH_TO_DATE_BASELINE provenance remains unchanged. This file remains a provisional month-to-date owner, not a native H6/A6 execution or natural-month final.
+Validation boundary: exact base main recorded; exactly two targeted key replacements; original owner body otherwise preserved; branch content reread exactly. Repository-native checker remains NOT_EXECUTED in this environment; GitHub CI results are not claimed as a substitute for that checker.
+No new experiment, independent execution window, source-independence credit, host verification, durable governance promotion or month closure is created by this correction.
