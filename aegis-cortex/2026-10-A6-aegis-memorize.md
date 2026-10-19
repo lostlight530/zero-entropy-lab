@@ -6351,3 +6351,132 @@ No new experiment, independent execution window, source-independence credit, hos
 - A1 disposition: OCT01_18_CURRENT_BLOB_CUSTODY_54_OF_54 / ORIGINAL_BLOCKED_RETAINED / NO_LIVE_SINK_REPLAY / MONTH_OPEN.
 - Next gate: all ten A1 successors merged and ten-main fresh-read before any A2 new full-current relation.
 NATIVE_MODIFICATION_NOTE: only canonical A6 month owner appended; native Jules A1/A2, Ballast, and audits unchanged.
+
+
+
+## GPT6-A2-SUCCESSOR-2026-10-19 | Current 19-day Aegis/Ballast evidence relation
+- A2 current main after merged A1 successor #684 and #685: `a2e659937f2f5cb989b0cb0ebe3ffc3ffa4803cf`; A6 owner preappend blob `47a583dbcc89f37deb1c61fb5ecb152c01f31cd6`.
+- A1 2026-10-01..18 inherited completely as original prior month review; A2 updates October01..19 inclusive without fabricating a second research-window execution.
+- Role GPT-6 / OpenAI cloud / External Independent GPT Maintainer; month-to-date owner remains HUMAN_AUTHORIZED_MONTH_TO_DATE_BASELINE, OPEN/PROVISIONAL_NOT_FINAL.
+- 19×3 = 57 dated original Aegis A1, Aegis A2 and independently owned Ballast Daily file objects; source presence is not source-time runner success or host-runtime validation.
+- The 2026-10-18 Jules Aegis A2 original INPUT_MISSING/BLOCKED remains original event; Oct19 A1 input and A2 success cannot rewrite Oct18.
+- N-day Ballast Oct14–19 derived audit belongs only to A2 current source relation and counts as zero additional independent experiments.
+- A1 duplicate reviews #684/#685 are overlapping custody observations; inherited once, not credited as two native science windows.
+### Source owners, exact current Git blob, role and identity boundary
+- DATE 2026-10-01 | `aegis-cortex/2026-10-01-A1-reliability-observe.md` | sha=461882e16809ef9b442b3c6d47b45f44418660b5 | bytes=6438 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-01 | `aegis-cortex/2026-10-01-A2-doctrine-orient.md` | sha=450bb5e41ba1f4f52f605632a3522797568429c5 | bytes=3188 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-01 | `ballast/records/2026-10-01.md` | sha=21a2dbd84f4a7e05bc64f78aa934d824a4a96593 | bytes=12421 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-02 | `aegis-cortex/2026-10-02-A1-reliability-observe.md` | sha=abe20d48251fc36893884f355421e896e3f3631a | bytes=6538 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-02 | `aegis-cortex/2026-10-02-A2-doctrine-orient.md` | sha=c590dffb8dc28fb701174e6dfafe2c3697f97b37 | bytes=4018 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-02 | `ballast/records/2026-10-02.md` | sha=1081112e8ef7f9c1d3e4415c2cf1edb297419a58 | bytes=12361 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-03 | `aegis-cortex/2026-10-03-A1-reliability-observe.md` | sha=0f37ab4b605a24006a862a9837564a459c0c1298 | bytes=6295 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-03 | `aegis-cortex/2026-10-03-A2-doctrine-orient.md` | sha=3c95e23cfa6187d0c23f607d622e2e8353051b13 | bytes=6600 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-03 | `ballast/records/2026-10-03.md` | sha=82df0f7d4e36c844f76bfed4b23bd1ece6a46b53 | bytes=16562 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-04 | `aegis-cortex/2026-10-04-A1-reliability-observe.md` | sha=88fcc05dd273fbb361963435211e38447ea67a9c | bytes=5967 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-04 | `aegis-cortex/2026-10-04-A2-doctrine-orient.md` | sha=08f105bfae915c994d411e8ab86d421db03f9c42 | bytes=1834 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-04 | `ballast/records/2026-10-04.md` | sha=649882d3a0bbb7939481f5f2bb43aea4f268b9c8 | bytes=16760 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-05 | `aegis-cortex/2026-10-05-A1-reliability-observe.md` | sha=11701da8dff9882ef4e8d4f174abc062abd41404 | bytes=6137 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-05 | `aegis-cortex/2026-10-05-A2-doctrine-orient.md` | sha=98139f531397d66bde60765a38f9b0c683d936ab | bytes=6438 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-05 | `ballast/records/2026-10-05.md` | sha=b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931 | bytes=11168 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-06 | `aegis-cortex/2026-10-06-A1-reliability-observe.md` | sha=56abc25eca5f0e9e2aa537be5924c6045162815c | bytes=6238 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-06 | `aegis-cortex/2026-10-06-A2-doctrine-orient.md` | sha=6cb80c4d899b533c539ad487b274c1b168db9724 | bytes=7015 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-06 | `ballast/records/2026-10-06.md` | sha=2ad5c5ce4a3fc4228f089eaacf94109e4210a66f | bytes=9276 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-07 | `aegis-cortex/2026-10-07-A1-reliability-observe.md` | sha=12c9266cc5f1fe0837a736e7ec9ed4505e7ba4a5 | bytes=8403 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-07 | `aegis-cortex/2026-10-07-A2-doctrine-orient.md` | sha=9bd6c75a310832f7cc58c9ae399f41acfdf4d950 | bytes=9117 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-07 | `ballast/records/2026-10-07.md` | sha=7f20b476517f31e4d890e64880b2eeb4b8248bf7 | bytes=11410 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-08 | `aegis-cortex/2026-10-08-A1-reliability-observe.md` | sha=5c91de675c4dc78aba0f419ab5f7added9c29fd7 | bytes=5910 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-08 | `aegis-cortex/2026-10-08-A2-doctrine-orient.md` | sha=9815107064b4fed9aa0983143c4b329b5f28a675 | bytes=11624 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-08 | `ballast/records/2026-10-08.md` | sha=8d24c4cfc5362b7c81b60a6888d875e6960342aa | bytes=21159 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-09 | `aegis-cortex/2026-10-09-A1-reliability-observe.md` | sha=e5b385ba25e8a4ef9a68401080dab545592ddf4b | bytes=6609 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-09 | `aegis-cortex/2026-10-09-A2-doctrine-orient.md` | sha=2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124 | bytes=16037 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-09 | `ballast/records/2026-10-09.md` | sha=cce84778a3f752461a1d82b9c38f5057f3950fd3 | bytes=12343 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-10 | `aegis-cortex/2026-10-10-A1-reliability-observe.md` | sha=bfbe8f099a7413cdd5a8f1466a180d9e2d78f975 | bytes=6407 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-10 | `aegis-cortex/2026-10-10-A2-doctrine-orient.md` | sha=ce4f369d35fda91ddeeb975679a89ee4fe1f2314 | bytes=6626 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-10 | `ballast/records/2026-10-10.md` | sha=d2702d66363b0e8a6ea645aff60a6475a1ca003c | bytes=13882 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-11 | `aegis-cortex/2026-10-11-A1-reliability-observe.md` | sha=bc3c4ba9cf48045bb05f02e65901dd02ad5464f1 | bytes=5959 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-11 | `aegis-cortex/2026-10-11-A2-doctrine-orient.md` | sha=d3882e3530ce98550a10f93ba4221afbb270c83c | bytes=7757 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-11 | `ballast/records/2026-10-11.md` | sha=b35c69acee29b194d597d3eedd942dd4cc7243a0 | bytes=15372 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-12 | `aegis-cortex/2026-10-12-A1-reliability-observe.md` | sha=72d7f662d70f5c73301fd8bec7c8351f0e1a7349 | bytes=6876 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-12 | `aegis-cortex/2026-10-12-A2-doctrine-orient.md` | sha=6ed3797a34699a9eae821c7bb2a8c8797459b17f | bytes=8336 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-12 | `ballast/records/2026-10-12.md` | sha=02fe0896ac9c41ae336cda04e69f133460e0a742 | bytes=9594 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-13 | `aegis-cortex/2026-10-13-A1-reliability-observe.md` | sha=a5d0ca039bbe4b93b8b59e5e671bcf76ff82ba87 | bytes=7596 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-13 | `aegis-cortex/2026-10-13-A2-doctrine-orient.md` | sha=1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22 | bytes=9874 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-13 | `ballast/records/2026-10-13.md` | sha=cc09eb3e1746cf4e555880ab4304b28c63341a4c | bytes=16962 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-14 | `aegis-cortex/2026-10-14-A1-reliability-observe.md` | sha=1def392d03eb7bb03c428d696d4acb923454112f | bytes=6178 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-14 | `aegis-cortex/2026-10-14-A2-doctrine-orient.md` | sha=c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd | bytes=7932 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-14 | `ballast/records/2026-10-14.md` | sha=98a752267cd0c2beff5d2770ecf1672a6c869e3b | bytes=18894 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-15 | `aegis-cortex/2026-10-15-A1-reliability-observe.md` | sha=293272cf6ae77efc28491dc69597d0652f4ca751 | bytes=7671 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-15 | `aegis-cortex/2026-10-15-A2-doctrine-orient.md` | sha=896901e892647ab19b584fa077363afc5e4e89ab | bytes=3670 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-15 | `ballast/records/2026-10-15.md` | sha=2f94b0b736cd8e3ffda03794462a12d3b50a3bc3 | bytes=9229 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-16 | `aegis-cortex/2026-10-16-A1-reliability-observe.md` | sha=372a99054cd4cd55ac909304b4c44a702376bcf6 | bytes=5743 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-16 | `aegis-cortex/2026-10-16-A2-doctrine-orient.md` | sha=454d6a632ad13c2fdacbfa27a30d0a565427026f | bytes=6642 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-16 | `ballast/records/2026-10-16.md` | sha=5cf129e2d6d31ce14171ac3e2b0c6ea0a3bddee0 | bytes=10297 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-17 | `aegis-cortex/2026-10-17-A1-reliability-observe.md` | sha=32bc7fefb64671e1c09347d03231034fd3d28cda | bytes=6621 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-17 | `aegis-cortex/2026-10-17-A2-doctrine-orient.md` | sha=7d839226fcf975325c8a5813e706b6e05f09aeeb | bytes=7415 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-17 | `ballast/records/2026-10-17.md` | sha=4f76b71274f8a72434ca0a02af8d48a18842dbb3 | bytes=11965 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-18 | `aegis-cortex/2026-10-18-A1-reliability-observe.md` | sha=cb4df7bb2ca43662643354bf531a10dde9e75ffd | bytes=5728 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-18 | `aegis-cortex/2026-10-18-A2-doctrine-orient.md` | sha=de4fa530ab13e81aedb672701392680d2bd83925 | bytes=3670 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-18 | `ballast/records/2026-10-18.md` | sha=9d0aa4b7d2dc10b59221ae91be580c1f35f92e61 | bytes=13441 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-19 | `aegis-cortex/2026-10-19-A1-reliability-observe.md` | sha=f0edcb5ce06fbc06a5c0ce6a4454607121915be2 | bytes=8532 | role=Jules A1 dated observe source | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-19 | `aegis-cortex/2026-10-19-A2-doctrine-orient.md` | sha=6a9798bba6967b020ddc9bf4542b3404e421d24b | bytes=8251 | role=Jules A2 dated dependent orientation | A2=SOURCE_IDENTITY_RETAINED
+- DATE 2026-10-19 | `ballast/records/2026-10-19.md` | sha=84488c6de94120a49a909937571e46bfcdb09505 | bytes=7542 | role=Ballast independent local research | A2=SOURCE_IDENTITY_RETAINED
+### Day-paired native A1→A2 source-time control
+- PAIR 2026-10-01: A1 sha=461882e16809ef9b442; A2 sha=450bb5e41ba1f4f52f6; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-02: A1 sha=abe20d48251fc368938; A2 sha=c590dffb8dc28fb7011; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-03: A1 sha=0f37ab4b605a24006a8; A2 sha=3c95e23cfa6187d0c23; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-04: A1 sha=88fcc05dd273fbb3619; A2 sha=08f105bfae915c994d4; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-05: A1 sha=11701da8dff9882ef4e; A2 sha=98139f531397d66bde6; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-06: A1 sha=56abc25eca5f0e9e2aa; A2 sha=6cb80c4d899b533c539; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-07: A1 sha=12c9266cc5f1fe0837a; A2 sha=9bd6c75a310832f7cc5; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-08: A1 sha=5c91de675c4dc78aba0; A2 sha=9815107064b4fed9aa0; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-09: A1 sha=e5b385ba25e8a4ef9a6; A2 sha=2f96bb0dd5891a93ec3; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-10: A1 sha=bfbe8f099a7413cdd5a; A2 sha=ce4f369d35fda91ddee; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-11: A1 sha=bc3c4ba9cf48045bb05; A2 sha=d3882e3530ce98550a1; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-12: A1 sha=72d7f662d70f5c73301; A2 sha=6ed3797a34699a9eae8; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-13: A1 sha=a5d0ca039bbe4b93b8b; A2 sha=1404e3a91cb6f4b17a5; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-14: A1 sha=1def392d03eb7bb03c4; A2 sha=c7b33ecece64b24d54f; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-15: A1 sha=293272cf6ae77efc284; A2 sha=896901e892647ab19b5; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-16: A1 sha=372a99054cd4cd55ac9; A2 sha=454d6a632ad13c2fdac; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-17: A1 sha=32bc7fefb64671e1c09; A2 sha=7d839226fcf975325c8; source-time=INHERITED_FROM_A1_CURRENT_OWNER; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-18: A1 sha=cb4df7bb2ca43662643; A2 sha=de4fa530ab13e81aedb; source-time=ORIGINAL_INPUT_MISSING_BLOCKED; later path visibility gives zero retroactive native-task success.
+- PAIR 2026-10-19: A1 sha=f0edcb5ce06fbc06a5c; A2 sha=6a9798bba6967b020dd; source-time=ORIGINAL_INPUT_PRESENT_FROM_NATIVE_A1; later path visibility gives zero retroactive native-task success.
+### Independent Ballast / current month evidence separation
+- RESEARCH 2026-10-01: independent Ballast blob=21a2dbd84f4a7e05bc64f78aa934d824a4a96593 / 12421 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-02: independent Ballast blob=1081112e8ef7f9c1d3e4415c2cf1edb297419a58 / 12361 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-03: independent Ballast blob=82df0f7d4e36c844f76bfed4b23bd1ece6a46b53 / 16562 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-04: independent Ballast blob=649882d3a0bbb7939481f5f2bb43aea4f268b9c8 / 16760 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-05: independent Ballast blob=b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931 / 11168 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-06: independent Ballast blob=2ad5c5ce4a3fc4228f089eaacf94109e4210a66f / 9276 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-07: independent Ballast blob=7f20b476517f31e4d890e64880b2eeb4b8248bf7 / 11410 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-08: independent Ballast blob=8d24c4cfc5362b7c81b60a6888d875e6960342aa / 21159 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-09: independent Ballast blob=cce84778a3f752461a1d82b9c38f5057f3950fd3 / 12343 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-10: independent Ballast blob=d2702d66363b0e8a6ea645aff60a6475a1ca003c / 13882 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-11: independent Ballast blob=b35c69acee29b194d597d3eedd942dd4cc7243a0 / 15372 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-12: independent Ballast blob=02fe0896ac9c41ae336cda04e69f133460e0a742 / 9594 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-13: independent Ballast blob=cc09eb3e1746cf4e555880ab4304b28c63341a4c / 16962 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-14: independent Ballast blob=98a752267cd0c2beff5d2770ecf1672a6c869e3b / 18894 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-15: independent Ballast blob=2f94b0b736cd8e3ffda03794462a12d3b50a3bc3 / 9229 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-16: independent Ballast blob=5cf129e2d6d31ce14171ac3e2b0c6ea0a3bddee0 / 10297 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-17: independent Ballast blob=4f76b71274f8a72434ca0a02af8d48a18842dbb3 / 11965 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-18: independent Ballast blob=9d0aa4b7d2dc10b59221ae91be580c1f35f92e61 / 13441 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+- RESEARCH 2026-10-19: independent Ballast blob=84488c6de94120a49a909937571e46bfcdb09505 / 7542 bytes. Local bounded sink/authorization simulation claims remain source-scoped; no live provider, effect authority or new GPT experiment.
+### W40–W42 weekly authority boundaries
+- WEEKLY `aegis-cortex/2026-W40-A3-discipline-decide.md` | sha=041a3ed3b1ab9b36f448772be1ecff715d155842 | bytes=8940 | original native weekly input quality, degraded and blocked states unchanged; 2026-W43 weekly final not due.
+- WEEKLY `aegis-cortex/2026-W40-A4-protocol-act.md` | sha=21206290b54a704401086d12a47ad820d32f9841 | bytes=6696 | original native weekly input quality, degraded and blocked states unchanged; 2026-W43 weekly final not due.
+- WEEKLY `aegis-cortex/2026-W41-A3-discipline-decide.md` | sha=ae751ae48f27d6c390e0100756efd3e6fd63b460 | bytes=9341 | original native weekly input quality, degraded and blocked states unchanged; 2026-W43 weekly final not due.
+- WEEKLY `aegis-cortex/2026-W41-A4-protocol-act.md` | sha=4be8b4fd999ee217bb702675bf92325a1041aede | bytes=6619 | original native weekly input quality, degraded and blocked states unchanged; 2026-W43 weekly final not due.
+- WEEKLY `aegis-cortex/2026-W42-A3-discipline-decide.md` | sha=a6098c04acb1cdca1247a97fdf2fb4e102315e95 | bytes=6733 | original native weekly input quality, degraded and blocked states unchanged; 2026-W43 weekly final not due.
+- WEEKLY `aegis-cortex/2026-W42-A4-protocol-act.md` | sha=c91936228660b8147c38a8f787c490000ecccf09 | bytes=3990 | original native weekly input quality, degraded and blocked states unchanged; 2026-W43 weekly final not due.
+### Original header sampled for same-date reconciliation
+- OBS `aegis-cortex/2026-10-18-A2-doctrine-orient.md`: STATUS_UNKNOWN_IN_SAMPLED_RANGE.
+- OBS `aegis-cortex/2026-10-19-A1-reliability-observe.md`: - Task Status: SUCCESS ; - Record Provenance: JULES_NATIVE ; - Original Execution Status: SUCCESS.
+- OBS `aegis-cortex/2026-10-19-A2-doctrine-orient.md`: STATUS_UNKNOWN_IN_SAMPLED_RANGE.
+- OBS `aegis-cortex/2026-W42-A3-discipline-decide.md`: STATUS_UNKNOWN_IN_SAMPLED_RANGE.
+- OBS `ballast/records/2026-10-19.md`: Record Provenance: NATIVE ; 任务终态: COMPLETED_WITH_LIMITS ; 有效完成状态: VERIFIED_WITH_LIMITS.
+- Oct14–19 derived audit `ballast/audits/2026-10-14--2026-10-19.md` @ ae9bf6854d22f9b3809ce68395e6f08599b0c011, classified DERIVED_NO_NEW_RESEARCH with October19 in A2 only.
+- Ballast monthly derived index `ballast/records/2026-10.md` @ b2dc0d9dc825eacedef61cfaa5d0701d89400e03; 19 primary dated original records represented once.
+- Current month count 57/57 dated paths; A1 covered 54/54 N−1; A2 adds Oct19 A1/A2 and Ballast Daily, not an extra 19-day replay.
+- Any original INPUT_MISSING/BLOCKED, degraded native evidence, authorized substitute or NOT_EXECUTED survives current month review.
+- A6 natural month closure not due; no durable doctrine promotion, no native checker/run replay, no host-side effect verification.
+- A2 result: INHERITED_A1_54_54 / NEW_N_DAY_3_PATHS / BALLAST_DERIVED_AUDIT_CURRENT_ONLY / OCT18_BLOCKED_RETAINED / MONTH_OPEN.
+NATIVE_MODIFICATION_NOTE: only canonical A6 owner append; no Jules A1/A2, Ballast native source, weekly or audit primary file rewritten.
