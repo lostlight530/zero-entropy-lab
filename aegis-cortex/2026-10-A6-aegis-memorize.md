@@ -6039,3 +6039,132 @@ Correction: exactly two section-local keys were renamed to Maintenance Provenanc
 Owner identity preservation: the original top-level HUMAN_AUTHORIZED_MONTH_TO_DATE_BASELINE provenance remains unchanged. This file remains a provisional month-to-date owner, not a native H6/A6 execution or natural-month final.
 Validation boundary: exact base main recorded; exactly two targeted key replacements; original owner body otherwise preserved; branch content reread exactly. Repository-native checker remains NOT_EXECUTED in this environment; GitHub CI results are not claimed as a substitute for that checker.
 No new experiment, independent execution window, source-independence credit, host verification, durable governance promotion or month closure is created by this correction.
+
+
+
+## GPT6-A1-SUCCESSOR-2026-10-19 | Full October 01–18 Aegis/Ballast accountability
+- Exact post-native-gate main: `00c024dd51d51b6b96fab84f15407f880a723d14`; cutoff N−1=2026-10-18 inclusive Asia/Shanghai.
+- Role: GPT-6 / OpenAI cloud / External Independent GPT Maintainer; new dated successor, not historical amendment of #681/#682.
+- Original top-level owner provenance HUMAN_AUTHORIZED_MONTH_TO_DATE_BASELINE is retained; October natural-month final NOT_DUE.
+- Evidence: 54 current Git native date-path blob+byte anchors; six weekly A3/A4 branches of evidence; Ballast independent derived audits and monthly index.
+- Evidence limit: recursive Git SHA custody does not prove executed runner success; bounded native header samples separately noted; full checker NOT_EXECUTED.
+- Historical input-missing or blocked A2 outcomes remain original events; later A1 path presence and month relation do not repair their source-time gate.
+- Old #681 A1 80 additions and #682 A2 63 additions are historically noncompliant with >=100 substantive PR requirement; this version is new.
+### Primary per-object October 01–18 source custody
+- `aegis-cortex/2026-10-01-A1-reliability-observe.md` | blob=461882e16809ef9b442b3c6d47b45f44418660b5 | bytes=6438 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-01-A2-doctrine-orient.md` | blob=450bb5e41ba1f4f52f605632a3522797568429c5 | bytes=3188 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-01.md` | blob=21a2dbd84f4a7e05bc64f78aa934d824a4a96593 | bytes=12421 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-02-A1-reliability-observe.md` | blob=abe20d48251fc36893884f355421e896e3f3631a | bytes=6538 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-02-A2-doctrine-orient.md` | blob=c590dffb8dc28fb701174e6dfafe2c3697f97b37 | bytes=4018 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-02.md` | blob=1081112e8ef7f9c1d3e4415c2cf1edb297419a58 | bytes=12361 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-03-A1-reliability-observe.md` | blob=0f37ab4b605a24006a862a9837564a459c0c1298 | bytes=6295 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-03-A2-doctrine-orient.md` | blob=3c95e23cfa6187d0c23f607d622e2e8353051b13 | bytes=6600 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-03.md` | blob=82df0f7d4e36c844f76bfed4b23bd1ece6a46b53 | bytes=16562 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-04-A1-reliability-observe.md` | blob=88fcc05dd273fbb361963435211e38447ea67a9c | bytes=5967 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-04-A2-doctrine-orient.md` | blob=08f105bfae915c994d411e8ab86d421db03f9c42 | bytes=1834 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-04.md` | blob=649882d3a0bbb7939481f5f2bb43aea4f268b9c8 | bytes=16760 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-05-A1-reliability-observe.md` | blob=11701da8dff9882ef4e8d4f174abc062abd41404 | bytes=6137 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-05-A2-doctrine-orient.md` | blob=98139f531397d66bde60765a38f9b0c683d936ab | bytes=6438 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-05.md` | blob=b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931 | bytes=11168 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-06-A1-reliability-observe.md` | blob=56abc25eca5f0e9e2aa537be5924c6045162815c | bytes=6238 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-06-A2-doctrine-orient.md` | blob=6cb80c4d899b533c539ad487b274c1b168db9724 | bytes=7015 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-06.md` | blob=2ad5c5ce4a3fc4228f089eaacf94109e4210a66f | bytes=9276 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-07-A1-reliability-observe.md` | blob=12c9266cc5f1fe0837a736e7ec9ed4505e7ba4a5 | bytes=8403 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-07-A2-doctrine-orient.md` | blob=9bd6c75a310832f7cc58c9ae399f41acfdf4d950 | bytes=9117 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-07.md` | blob=7f20b476517f31e4d890e64880b2eeb4b8248bf7 | bytes=11410 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-08-A1-reliability-observe.md` | blob=5c91de675c4dc78aba0f419ab5f7added9c29fd7 | bytes=5910 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-08-A2-doctrine-orient.md` | blob=9815107064b4fed9aa0983143c4b329b5f28a675 | bytes=11624 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-08.md` | blob=8d24c4cfc5362b7c81b60a6888d875e6960342aa | bytes=21159 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-09-A1-reliability-observe.md` | blob=e5b385ba25e8a4ef9a68401080dab545592ddf4b | bytes=6609 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-09-A2-doctrine-orient.md` | blob=2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124 | bytes=16037 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-09.md` | blob=cce84778a3f752461a1d82b9c38f5057f3950fd3 | bytes=12343 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-10-A1-reliability-observe.md` | blob=bfbe8f099a7413cdd5a8f1466a180d9e2d78f975 | bytes=6407 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-10-A2-doctrine-orient.md` | blob=ce4f369d35fda91ddeeb975679a89ee4fe1f2314 | bytes=6626 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-10.md` | blob=d2702d66363b0e8a6ea645aff60a6475a1ca003c | bytes=13882 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-11-A1-reliability-observe.md` | blob=bc3c4ba9cf48045bb05f02e65901dd02ad5464f1 | bytes=5959 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-11-A2-doctrine-orient.md` | blob=d3882e3530ce98550a10f93ba4221afbb270c83c | bytes=7757 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-11.md` | blob=b35c69acee29b194d597d3eedd942dd4cc7243a0 | bytes=15372 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-12-A1-reliability-observe.md` | blob=72d7f662d70f5c73301fd8bec7c8351f0e1a7349 | bytes=6876 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-12-A2-doctrine-orient.md` | blob=6ed3797a34699a9eae821c7bb2a8c8797459b17f | bytes=8336 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-12.md` | blob=02fe0896ac9c41ae336cda04e69f133460e0a742 | bytes=9594 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-13-A1-reliability-observe.md` | blob=a5d0ca039bbe4b93b8b59e5e671bcf76ff82ba87 | bytes=7596 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-13-A2-doctrine-orient.md` | blob=1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22 | bytes=9874 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-13.md` | blob=cc09eb3e1746cf4e555880ab4304b28c63341a4c | bytes=16962 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-14-A1-reliability-observe.md` | blob=1def392d03eb7bb03c428d696d4acb923454112f | bytes=6178 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-14-A2-doctrine-orient.md` | blob=c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd | bytes=7932 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-14.md` | blob=98a752267cd0c2beff5d2770ecf1672a6c869e3b | bytes=18894 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-15-A1-reliability-observe.md` | blob=293272cf6ae77efc28491dc69597d0652f4ca751 | bytes=7671 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-15-A2-doctrine-orient.md` | blob=896901e892647ab19b584fa077363afc5e4e89ab | bytes=3670 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-15.md` | blob=2f94b0b736cd8e3ffda03794462a12d3b50a3bc3 | bytes=9229 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-16-A1-reliability-observe.md` | blob=372a99054cd4cd55ac909304b4c44a702376bcf6 | bytes=5743 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-16-A2-doctrine-orient.md` | blob=454d6a632ad13c2fdacbfa27a30d0a565427026f | bytes=6642 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-16.md` | blob=5cf129e2d6d31ce14171ac3e2b0c6ea0a3bddee0 | bytes=10297 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-17-A1-reliability-observe.md` | blob=32bc7fefb64671e1c09347d03231034fd3d28cda | bytes=6621 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-17-A2-doctrine-orient.md` | blob=7d839226fcf975325c8a5813e706b6e05f09aeeb | bytes=7415 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-17.md` | blob=4f76b71274f8a72434ca0a02af8d48a18842dbb3 | bytes=11965 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+- `aegis-cortex/2026-10-18-A1-reliability-observe.md` | blob=cb4df7bb2ca43662643354bf531a10dde9e75ffd | bytes=5728 | role=Jules A1 source-signal observation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `aegis-cortex/2026-10-18-A2-doctrine-orient.md` | blob=de4fa530ab13e81aedb672701392680d2bd83925 | bytes=3670 | role=Jules A2 downstream doctrine orientation | decision=KEEP_SOURCE_TIME_TASK_AND_INPUT_STATE | source_rewrite=NO
+- `ballast/records/2026-10-18.md` | blob=9d0aa4b7d2dc10b59221ae91be580c1f35f92e61 | bytes=13441 | role=Independent Ballast local research study | decision=KEEP_ORIGINAL_LOCAL_EXPERIMENT_LIMITS | source_rewrite=NO
+### Per-logical-date action provenance, native dependency and independent-research separation
+- 2026-10-01 A1→A2 source pair: A1=461882e16809ef9b and A2=450bb5e41ba1f4f5 are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-01 Ballast independent study: 21a2dbd84f4a7e05 / 12421 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-02 A1→A2 source pair: A1=abe20d48251fc368 and A2=c590dffb8dc28fb7 are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-02 Ballast independent study: 1081112e8ef7f9c1 / 12361 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-03 A1→A2 source pair: A1=0f37ab4b605a2400 and A2=3c95e23cfa6187d0 are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-03 Ballast independent study: 82df0f7d4e36c844 / 16562 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-04 A1→A2 source pair: A1=88fcc05dd273fbb3 and A2=08f105bfae915c99 are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-04 Ballast independent study: 649882d3a0bbb793 / 16760 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-05 A1→A2 source pair: A1=11701da8dff9882e and A2=98139f531397d66b are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-05 Ballast independent study: b5ac70417e44bd8b / 11168 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-06 A1→A2 source pair: A1=56abc25eca5f0e9e and A2=6cb80c4d899b533c are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-06 Ballast independent study: 2ad5c5ce4a3fc422 / 9276 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-07 A1→A2 source pair: A1=12c9266cc5f1fe08 and A2=9bd6c75a310832f7 are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-07 Ballast independent study: 7f20b476517f31e4 / 11410 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-08 A1→A2 source pair: A1=5c91de675c4dc78a and A2=9815107064b4fed9 are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-08 Ballast independent study: 8d24c4cfc5362b7c / 21159 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-09 A1→A2 source pair: A1=e5b385ba25e8a4ef and A2=2f96bb0dd5891a93 are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-09 Ballast independent study: cce84778a3f75246 / 12343 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-10 A1→A2 source pair: A1=bfbe8f099a7413cd and A2=ce4f369d35fda91d are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-10 Ballast independent study: d2702d66363b0e8a / 13882 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-11 A1→A2 source pair: A1=bc3c4ba9cf48045b and A2=d3882e3530ce9855 are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-11 Ballast independent study: b35c69acee29b194 / 15372 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-12 A1→A2 source pair: A1=72d7f662d70f5c73 and A2=6ed3797a34699a9e are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-12 Ballast independent study: 02fe0896ac9c41ae / 9594 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-13 A1→A2 source pair: A1=a5d0ca039bbe4b93 and A2=1404e3a91cb6f4b1 are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-13 Ballast independent study: cc09eb3e1746cf4e / 16962 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-14 A1→A2 source pair: A1=1def392d03eb7bb0 and A2=c7b33ecece64b24d are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-14 Ballast independent study: 98a752267cd0c2be / 18894 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-15 A1→A2 source pair: A1=293272cf6ae77efc and A2=896901e892647ab1 are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-15 Ballast independent study: 2f94b0b736cd8e3f / 9229 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-16 A1→A2 source pair: A1=372a99054cd4cd55 and A2=454d6a632ad13c2f are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-16 Ballast independent study: 5cf129e2d6d31ce1 / 10297 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-17 A1→A2 source pair: A1=32bc7fefb64671e1 and A2=7d839226fcf97532 are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-17 Ballast independent study: 4f76b71274f8a724 / 11965 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+- 2026-10-18 A1→A2 source pair: A1=cb4df7bb2ca43662 and A2=de4fa530ab13e81a are current main blobs; contemporaneous input gate and original A2 task status cannot be inferred from custody alone.
+- 2026-10-18 Ballast independent study: 9d0aa4b7d2dc10b5 / 13441 bytes; native Ballast boundary does not grant local host-incident or independent live-sink verification credit.
+### Weekly native A3/A4 and derived original audit anchors
+- `aegis-cortex/2026-W40-A3-discipline-decide.md` | blob=041a3ed3b1ab9b36f448772be1ecff715d155842 | bytes=8940 | W40-W42 native/recovery provenance and original evidence limitations preserved; no reinterpretation.
+- `aegis-cortex/2026-W40-A4-protocol-act.md` | blob=21206290b54a704401086d12a47ad820d32f9841 | bytes=6696 | W40-W42 native/recovery provenance and original evidence limitations preserved; no reinterpretation.
+- `aegis-cortex/2026-W41-A3-discipline-decide.md` | blob=ae751ae48f27d6c390e0100756efd3e6fd63b460 | bytes=9341 | W40-W42 native/recovery provenance and original evidence limitations preserved; no reinterpretation.
+- `aegis-cortex/2026-W41-A4-protocol-act.md` | blob=4be8b4fd999ee217bb702675bf92325a1041aede | bytes=6619 | W40-W42 native/recovery provenance and original evidence limitations preserved; no reinterpretation.
+- `aegis-cortex/2026-W42-A3-discipline-decide.md` | blob=a6098c04acb1cdca1247a97fdf2fb4e102315e95 | bytes=6733 | W40-W42 native/recovery provenance and original evidence limitations preserved; no reinterpretation.
+- `aegis-cortex/2026-W42-A4-protocol-act.md` | blob=c91936228660b8147c38a8f787c490000ecccf09 | bytes=3990 | W40-W42 native/recovery provenance and original evidence limitations preserved; no reinterpretation.
+- `ballast/audits/2026-10-02--2026-10-07.md` | blob=bbcce0605856c1a1863464a343dd14228c50a1e7 | bytes=2429 | decision=DERIVED_PERIODIC_REVIEW; independent research window credit=0.
+- `ballast/audits/2026-10-08--2026-10-13.md` | blob=e3a5bb19874e7dd47a01722e7230a2bafeb99f04 | bytes=6371 | decision=DERIVED_PERIODIC_REVIEW; independent research window credit=0.
+- `ballast/audits/2026-10-14--2026-10-19.md` | blob=ae9bf6854d22f9b3809ce68395e6f08599b0c011 | bytes=4090 | decision=DERIVED_PERIODIC_REVIEW; independent research window credit=0.
+### Exact original-header rechecks with explicit negative evidence
+- Header evidence `aegis-cortex/2026-10-01-A2-doctrine-orient.md` @ 450bb5e41ba1f4f52f605632a3522797568429c5: - **Input Status**: INPUT_MISSING ; - **Task Status**: BLOCKED ; - **Record Provenance**: JULES_NATIVE ; - **Original Execution Status**: BLOCKED.
+- Header evidence `aegis-cortex/2026-10-18-A1-reliability-observe.md` @ cb4df7bb2ca43662643354bf531a10dde9e75ffd: - Task Status: SUCCESS ; - Record Provenance: JULES_NATIVE ; - Original Execution Status: SUCCESS.
+- Header evidence `aegis-cortex/2026-10-18-A2-doctrine-orient.md` @ de4fa530ab13e81aedb672701392680d2bd83925: - **Input Status**: INPUT_MISSING ; - **Task Status**: BLOCKED ; - **Record Provenance**: JULES_NATIVE ; - **Original Execution Status**: INPUT_MISSING.
+- Header evidence `aegis-cortex/2026-W42-A3-discipline-decide.md` @ a6098c04acb1cdca1247a97fdf2fb4e102315e95: - **Record Provenance**: JULES_NATIVE ; - **Input Status**: DEGRADED ; - **Task Status**: SUCCESS ; - **Missing Inputs Preserved**: YES (2026-10-18 A2 preserving original task BLOCKED state) ; 10-18的A2当前记录为BLOCKED状态，因为原始执行时未获取到对应的A1数据。在此维护阶段遵循保留缺失历史真实的原则（Missing Inputs Preserved: YES），不对10-18的A2实施重建，将其按降级输入（DEGRADED）处理，不脑补相关信号分析。.
+- Header evidence `aegis-cortex/2026-W42-A4-protocol-act.md` @ c91936228660b8147c38a8f787c490000ecccf09: - Record Provenance: JULES_NATIVE ; - Decision Input Status: PRESENT ; - Task Status: SUCCESS ; - Missing Inputs Preserved: YES (2026-10-18 A2 preserving original task BLOCKED state).
+- Ballast October index `ballast/records/2026-10.md` | blob=b2dc0d9dc825eacedef61cfaa5d0701d89400e03 | bytes=11504; index only, no month-end task success.
+- Aegis October A6 owner pre-append blob=553e2d4c1ee6048e785f00644a7b26369a41ded2; source of month-to-date review, not Jules natural-month A6 execution.
+- Original 2026-10-18 native A2 is INPUT_MISSING / BLOCKED, later month SOURCE_ADMITTED is only a relational-coverage label.
+- 2026-10-19 Ballast Oct14–19 derived audit includes N and is A2-only, not this N−1 calendar denominator.
+- W42 A3/A4 successor and recovery provenance remain separately source-owned; doctrine or execution credit cannot be invented by monthly memo.
+- Existing Daily/Weekly/Ballast and derived audit source files remain byte-unmodified by GPT maintenance; only month owner receives A1 ledger.
+- Original research results from bounded local isolates may support local modeling only, not Kubernetes, payments, global effects or host incidents.
+- A1 disposition: OCT01_18_CURRENT_BLOB_CUSTODY_54_OF_54 / ORIGINAL_BLOCKED_RETAINED / NO_LIVE_SINK_REPLAY / MONTH_OPEN.
+- Next gate: all ten A1 successors merged and ten-main fresh-read before any A2 new full-current relation.
+NATIVE_MODIFICATION_NOTE: only canonical A6 month owner appended; native Jules A1/A2, Ballast, and audits unchanged.
