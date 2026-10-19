@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scenario_count": 35,
+  "decision_rows": 105,
+  "totals": {
+    "RETRY_ALLOWED": 1,
+    "BLOCKED": 2,
+    "COMPLETE": 3,
+    "RECONCILE": 20,
+    "STOP_UNKNOWN": 8,
+    "EVIDENCE_CONFLICT": 1
+  },
+  "stats": {
+    "attempts": 62,
+    "accepted": 59,
+    "dedup": 2,
+    "conflicts": 1
+  },
+  "mutation_controls": 56,
+  "mutation_rejected": 56,
+  "mutation_semantic": 39,
+  "mutation_structural": 17,
+  "csv_negative_control": "REJECTED_BY_ROW_COMPARISON",
+  "external_effects": 0,
+  "implementation_independence": "separate event replay, no producer import",
+  "data_source_independence": "NONE",
+  "semantic_contract_independence": "LIMITED",
+  "authority_independence": "NONE"
+}
