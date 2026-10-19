@@ -633,6 +633,6 @@ Strong counterexample: an external capture commits under run-A with its response
 
 The [October Monthly](records/2026-10.md) is derived navigation only, latest complete nonoverlapping [six-date audit](audits/2026-10-14--2026-10-19.md) remains valid, 2026-10-20 begins the next cycle with no audit due, CASE 0, METHOD 0, NOTES 0, Special 0, new independent audit research credit 0
 
-Original research: V8 isolate producer and event-replay verifier EXECUTED with limited independent semantics, real Temporal, payment sink, authoritative receipt query and external effect-time authorization NOT_EXECUTED, standalone Node CLI and full repository checker were NOT_EXECUTED at original research time
+Original research: JavaScript isolate producer and event-replay verifier EXECUTED with limited independent semantics, real Temporal, payment sink, authoritative receipt query and external effect-time authorization NOT_EXECUTED, standalone Node CLI and full repository checker were NOT_EXECUTED at original research time
 
 Current native research endpoint is 2026-10-20
