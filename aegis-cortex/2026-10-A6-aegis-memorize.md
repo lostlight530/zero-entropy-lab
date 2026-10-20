@@ -6480,3 +6480,16 @@ NATIVE_MODIFICATION_NOTE: only canonical A6 month owner appended; native Jules A
 - A6 natural month closure not due; no durable doctrine promotion, no native checker/run replay, no host-side effect verification.
 - A2 result: INHERITED_A1_54_54 / NEW_N_DAY_3_PATHS / BALLAST_DERIVED_AUDIT_CURRENT_ONLY / OCT18_BLOCKED_RETAINED / MONTH_OPEN.
 NATIVE_MODIFICATION_NOTE: only canonical A6 owner append; no Jules A1/A2, Ballast native source, weekly or audit primary file rewritten.
+
+
+## A2_CURRENT_MONTH_RELATION_2026-10-20 — ten-repository gated successor
+
+- Exact ten-A1-merged base main: `d9875a2a668dbb6222b86205ec40b9a64ea3ece2`
+- A1 source `historical-audits/2026-10/2026-10-20-a1-source-custody.md` blob `6593b37e96b6153dfe46bfc8b931d596992b5572`: 57 exact source object identities through Oct19
+- A2 current relation `historical-audits/2026-10/2026-10-20-a2-month-relation.md`: 60 distinct Aegis A1/A2 and Ballast original paths including Oct20
+- Original Oct20 Aegis A1 Jules: paper-specific SUCCESS, host incident and mitigation NOT_VERIFIED
+- Original Oct20 Aegis A2: later-authorized substitute with INPUT_MISSING / BLOCKED at its original main-visibility boundary; later independent follow-on separately attributed, original Jules execution NOT_OBSERVED
+- Original Oct20 Ballast: 35 synthetic scenarios, 105 decisions, no real external effects or independent sink authority, standalone checker NOT_EXECUTED
+- October A6 OPEN / PROVISIONAL_NOT_FINAL, no natural month-final or durable doctrine promotion
+- No source-history rewrite, no research credit by this derived A2 successor; live host/runtime verification NOT_EXECUTED
+- Current disposition: A2_N20_SOURCE_RELATION / A1_57_INHERITED / THREE_NEW_OBJECTS / HUMAN_SUBSTITUTE_BLOCKED_RETAINED / NO_RESEARCH_CREDIT
