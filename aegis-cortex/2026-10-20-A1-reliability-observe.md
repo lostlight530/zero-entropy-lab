@@ -101,3 +101,38 @@
 - 确认未读取旧 Nexus 和 Aegis 之外文件：YES
 - 确认未把外部风险声明为本地事实：YES
 - 确认未公开私有控制内容：YES
+
+## INDEPENDENT_GPT_POST_EXECUTION_SOURCE_RECONCILIATION_2026_10_20
+
+Reconciliation Producer: Independent GPT / human-authorized supplementary review
+Reconciliation Execution UTC: 2026-10-20T02:56:19Z
+Reconciliation Execution Asia/Shanghai: 2026-10-20T10:56:19+08:00
+Reconciliation Scope: A1 document-only correction/addendum; original run header and signal claims remain visible above for historical comparison
+Original Execution Identity: Jules, `2026-10-20T00:15:00Z`, `JULES_NATIVE`, `Task Status: SUCCESS` — PRESERVED, not retroactively attributed to GPT
+Correction Authority: full-text primary research, arXiv:2602.16666v3
+Source URL: https://arxiv.org/html/2602.16666v3
+Paper Version Date: 2026-06-02
+Date Checked: 2026-10-20 at the independent-reconciliation time above
+Source Status: SINGLE_SOURCE_LINEAGE; this follow-up of the same paper does NOT create independent corroboration
+Local Repository Incident: NOT_ESTABLISHED
+Host Applicability: UNKNOWN
+Independent Verification: independent re-reading of the same primary source, NOT independent experimental reproduction of its findings
+
+### CLAIM_CORRECTION — benchmark-specific discrimination
+Affected Original Signal: `SIG-2026-10-20-02`
+Original Wording: “discrimination ... remains poor, meaning agents do not know when they will fail” (over-generalized across models and benchmarks).
+Corrected Evidence Claim: In §4.2 (Predictability) and Appendix G.4 of the cited v3 paper, **calibration** improves noticeably in newer models on the evaluated benchmarks; **discrimination** generally improves for newer models on **τ-bench**, whereas on **GAIA** it stagnates or even deteriorates for some recent models. Thus `CALIBRATION_GAIN != PER_TASK_FAILURE_DISCRIMINATION_GAIN`, and the magnitude/direction of discrimination trends is **benchmark-dependent**, not universally negative.
+Corrected Signal: BENCHMARK_DEPENDENT_DISCRIMINATION_GAP (external evaluation finding, not a measured Aegis-local defect).
+Evidence References: https://arxiv.org/html/2602.16666v3#S4.SS2 and https://arxiv.org/html/2602.16666v3#S7.SS4 (section labels in paper; full-text page above is canonical when anchors differ).
+Confidence: HIGH for the paper's own benchmark-specific claims; UNKNOWN for generalization to this repository's constrained Markdown Daily workflow.
+External Evidence: The research reports a 15-model evaluation across GAIA and τ-bench and separates four reliability dimensions: consistency, robustness, predictability, safety. Benchmark-level observations are not proof that a particular Aegis task or local runner failed.
+Local Repository Evidence: NONE; no local agent trajectory or per-task confidence/discrimination dataset was collected by this review.
+Needs A2 Verification: YES, but only after this corrected A1 is legitimately visible to an A2 follow-on run via refreshed `main`.
+Evidence Upgrade Basis: NONE for local incidents, host implementation or durable doctrine.
+
+### CONSEQUENCE_FOR_DOWNSTREAM
+- Do not promote the original generalized “discrimination remains poor everywhere” claim into A2/A3/A6.
+- Treat “Capability != Reliable Execution” as an external analytical hypothesis; no automatic change to Aegis enforcement or host code follows from a literature review.
+- Original A1 Jules completion and reported network state remain separate from this later source correction.
+- The existing A2 recovery Draft PR #689 records `INPUT_MISSING / BLOCKED` at its own `main` observation cut; its result must not be relabeled success merely because this A1 has an open PR or independent addendum.
+- Re-run A2 only as a new producer/timestamped follow-on after reviewed A1 is merged to main; retain both PR histories, unverified claims and source lineage.
