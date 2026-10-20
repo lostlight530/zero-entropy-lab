@@ -15,10 +15,11 @@
     "redrive_preserves_success": 29,
     "receipt_count": 29
   },
-  "negative_controls": 18,
-  "negative_controls_rejected": 18,
+  "negative_controls": 23,
+  "negative_controls_rejected": 23,
   "positive_revocation_invariant": "PASS",
   "miss_authority_and_lifecycle_controls": "PASS",
+  "miss_numeric_type_controls": "PASS",
   "altered_csv_rejected": true,
   "independence": {
     "implementation": "PARTIAL",

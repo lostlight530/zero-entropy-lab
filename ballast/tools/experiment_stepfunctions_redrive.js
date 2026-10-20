@@ -72,18 +72,18 @@ function reference(s) {
   ids.add(e.event_id);
  }
  const accepted=s.events.filter(e=>e.accepted);
- const authoritativeMiss=s.prior.status==="miss"&&s.prior.query_ok===true&&s.prior.scope==="exact"&&s.prior.authority==="modeled_sink_journal"&&s.prior.lifecycle==="complete"&&s.prior.retention===true&&s.prior.watermark>=s.prior.old_attempt_tick;
+ const authoritativeMiss=s.prior.status==="miss"&&s.prior.query_ok===true&&s.prior.scope==="exact"&&s.prior.authority==="modeled_sink_journal"&&s.prior.lifecycle==="complete"&&s.prior.retention===true&&Number.isFinite(s.prior.watermark)&&Number.isFinite(s.prior.old_attempt_tick)&&s.prior.old_attempt_tick>=0&&s.prior.watermark>=s.prior.old_attempt_tick;
  if(authoritativeMiss&&accepted.some(e=>e.effect_id===s.prior.effect_id))return "EVIDENCE_CONFLICT";
- if(new Set(s.required).size!==s.required.length)return "STOP_UNKNOWN";
- if(s.task.definition!==s.task.expected_definition||s.witness.protected!==true||s.witness.revision!==s.membership_revision||s.witness.target!==s.target||JSON.stringify(s.witness.members.slice().sort())!==JSON.stringify(s.required.slice().sort())||s.witness.mutation_tick>s.witness.commit_tick)return "STOP_UNKNOWN";
+ if(!Array.isArray(s.required)||s.required.length===0||new Set(s.required).size!==s.required.length)return "STOP_UNKNOWN";
+ if(s.task.definition!==s.task.expected_definition||s.witness.protected!==true||s.witness.revision!==s.membership_revision||s.witness.target!==s.target||JSON.stringify(s.witness.members.slice().sort())!==JSON.stringify(s.required.slice().sort())||!Number.isFinite(s.witness.commit_tick)||!Number.isFinite(s.witness.mutation_tick)||s.witness.mutation_tick<0||s.witness.mutation_tick>s.witness.commit_tick)return "STOP_UNKNOWN";
  for(const e of accepted){
-  if(e.historical_authorized==null||e.tick==null)return "STOP_UNKNOWN";
+  if(e.historical_authorized==null||!Number.isFinite(e.tick)||e.tick<0||e.tick>s.witness.commit_tick)return "STOP_UNKNOWN";
   if(e.historical_authorized!==true||e.target!==s.target||e.effect_id!==s.id+"/"+e.member+"/"+s.target||!s.required.includes(e.member))return "RECONCILE";
   members.set(e.member,(members.get(e.member)||0)+1);
  }
  if([...members.values()].some(n=>n!==1))return "RECONCILE";
  if(s.required.every(m=>members.get(m)===1))return "COMPLETE";
- if(!s.current_permission)return "BLOCKED";
+ if(s.current_permission!==true)return "BLOCKED";
  const missing=s.required.filter(m=>!members.has(m));
  if(missing.length===1&&authoritativeMiss&&s.prior.effect_id===s.id+"/"+missing[0]+"/"+s.target)return "RETRY_ALLOWED";
  return "STOP_UNKNOWN";

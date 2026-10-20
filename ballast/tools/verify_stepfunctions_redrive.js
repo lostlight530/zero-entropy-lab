@@ -7,16 +7,16 @@ function replay(s) {
   seen.add(e.event_id);
   if(e.accepted)accepted.push(e);
  }
- const p=s.prior,miss=p.status==="miss"&&p.query_ok===true&&p.scope==="exact"&&p.authority==="modeled_sink_journal"&&p.lifecycle==="complete"&&p.retention===true&&Number.isFinite(p.watermark)&&Number.isFinite(p.old_attempt_tick)&&p.watermark>=p.old_attempt_tick;
+ const p=s.prior,miss=p.status==="miss"&&p.query_ok===true&&p.scope==="exact"&&p.authority==="modeled_sink_journal"&&p.lifecycle==="complete"&&p.retention===true&&Number.isFinite(p.watermark)&&Number.isFinite(p.old_attempt_tick)&&p.old_attempt_tick>=0&&p.watermark>=p.old_attempt_tick;
  if(miss&&accepted.find(e=>e.effect_id===p.effect_id))return "EVIDENCE_CONFLICT";
- if(new Set(s.required).size!==s.required.length)return "STOP_UNKNOWN";
+ if(!Array.isArray(s.required)||s.required.length===0||new Set(s.required).size!==s.required.length)return "STOP_UNKNOWN";
  if(s.task.definition!==s.task.expected_definition)return "STOP_UNKNOWN";
  const w=s.witness;
- if(w.protected!==true||w.revision!==s.membership_revision||w.target!==s.target||w.mutation_tick>w.commit_tick)return "STOP_UNKNOWN";
+ if(w.protected!==true||w.revision!==s.membership_revision||w.target!==s.target||!Number.isFinite(w.commit_tick)||!Number.isFinite(w.mutation_tick)||w.mutation_tick<0||w.mutation_tick>w.commit_tick)return "STOP_UNKNOWN";
  if(w.members.length!==s.required.length||new Set(w.members).size!==w.members.length||w.members.some(m=>!s.required.includes(m)))return "STOP_UNKNOWN";
  const occurrence=new Map();
  for(const e of accepted){
-  if(e.tick===null||!Number.isFinite(e.tick)||e.historical_authorized===null)return "STOP_UNKNOWN";
+  if(!Number.isFinite(e.tick)||e.tick<0||e.tick>w.commit_tick||e.historical_authorized===null)return "STOP_UNKNOWN";
   if(e.historical_authorized!==true||e.target!==s.target||e.effect_id!==[s.id,e.member,s.target].join("/")||!s.required.includes(e.member))return "RECONCILE";
   const key=e.member;
   occurrence.set(key,(occurrence.get(key)||0)+1);
@@ -61,7 +61,10 @@ function verify(input,csvText){
   x=>x.witness.mutation_tick=51,x=>x.required=["A","C"],
   x=>x.events[0].tick=null,x=>x.task.expected_definition="def-8",
   x=>x.events[0].historical_authorized=null,x=>x.required=["A","A"],
-  x=>x.witness.members=["A","A"]
+  x=>x.witness.members=["A","A"],
+  x=>x.events[0].tick="10",x=>x.events[0].tick=NaN,
+  x=>x.events[0].tick=51,x=>x.witness.commit_tick=NaN,
+  x=>{x.required=[];x.witness.members=[];x.events=[]}
  ];
  if(replay(positive)!=="COMPLETE")throw Error("positive baseline");
  let rejected=0;
@@ -80,6 +83,9 @@ function verify(input,csvText){
  const invalidAuthority=clone(recovery);invalidAuthority.prior.authority="unrelated";
  const invalidLifecycle=clone(recovery);invalidLifecycle.prior.lifecycle="unknown";
  if(replay(invalidAuthority)!=="STOP_UNKNOWN"||replay(invalidLifecycle)!=="STOP_UNKNOWN")throw Error("miss authority or lifecycle escaped");
- return {status:"PASS_WITH_LIMITS",scenarios:ids.length,paths:paths.length,decision_rows:rows.length-1,reference_counts:counts,model_relative_disagreements:disagreement,negative_controls:controls.length,negative_controls_rejected:rejected,positive_revocation_invariant:"PASS",miss_authority_and_lifecycle_controls:"PASS",altered_csv_rejected:csvMutationRejected,independence:{implementation:"PARTIAL",data_source:"NONE",semantic_contract:"LIMITED",authority:"NONE"},external_effects:0,execution_environment:"V8 isolate, not Node CLI"};
+ const stringWatermark=clone(recovery);stringWatermark.prior.watermark="120";
+ const infiniteAttempt=clone(recovery);infiniteAttempt.prior.old_attempt_tick=Infinity;
+ if(replay(stringWatermark)!=="STOP_UNKNOWN"||replay(infiniteAttempt)!=="STOP_UNKNOWN")throw Error("miss numeric evidence escaped");
+ return {status:"PASS_WITH_LIMITS",scenarios:ids.length,paths:paths.length,decision_rows:rows.length-1,reference_counts:counts,model_relative_disagreements:disagreement,negative_controls:controls.length,negative_controls_rejected:rejected,positive_revocation_invariant:"PASS",miss_authority_and_lifecycle_controls:"PASS",miss_numeric_type_controls:"PASS",altered_csv_rejected:csvMutationRejected,independence:{implementation:"PARTIAL",data_source:"NONE",semantic_contract:"LIMITED",authority:"NONE"},external_effects:0,execution_environment:"V8 isolate, not Node CLI"};
 }
 if(typeof module!=="undefined"){module.exports={verify};if(require.main===module){const fs=require("fs");const [a,b]=process.argv.slice(2);if(!a||!b)throw Error("usage: node verify_stepfunctions_redrive.js scenarios.json decisions.csv");process.stdout.write(JSON.stringify(verify(JSON.parse(fs.readFileSync(a,"utf8")),fs.readFileSync(b,"utf8")),null,2)+"\n")}}
