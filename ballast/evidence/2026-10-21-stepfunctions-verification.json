@@ -1,0 +1,31 @@
+{
+  "status": "PASS_WITH_LIMITS",
+  "scenarios": 34,
+  "paths": 3,
+  "decision_rows": 102,
+  "reference_counts": {
+    "COMPLETE": 4,
+    "RECONCILE": 7,
+    "STOP_UNKNOWN": 19,
+    "EVIDENCE_CONFLICT": 2,
+    "BLOCKED": 1,
+    "RETRY_ALLOWED": 1
+  },
+  "model_relative_disagreements": {
+    "redrive_preserves_success": 29,
+    "receipt_count": 29
+  },
+  "negative_controls": 18,
+  "negative_controls_rejected": 18,
+  "positive_revocation_invariant": "PASS",
+  "miss_authority_and_lifecycle_controls": "PASS",
+  "altered_csv_rejected": true,
+  "independence": {
+    "implementation": "PARTIAL",
+    "data_source": "NONE",
+    "semantic_contract": "LIMITED",
+    "authority": "NONE"
+  },
+  "external_effects": 0,
+  "execution_environment": "V8 isolate, not Node CLI"
+}

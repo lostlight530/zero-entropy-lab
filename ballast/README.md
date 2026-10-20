@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-20 Continue-As-New run lineage versus stable business effect identity](records/2026-10-20.md)
+- 最新 Daily: [2026-10-21 Step Functions DataLimitExceeded redrive and exact external effect integrity](records/2026-10-21.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-14 至 2026-10-19](audits/2026-10-14--2026-10-19.md)
@@ -636,3 +636,15 @@ The [October Monthly](records/2026-10.md) is derived navigation only, latest com
 Original research: JavaScript isolate producer and event-replay verifier EXECUTED with limited independent semantics, real Temporal, payment sink, authoritative receipt query and external effect-time authorization NOT_EXECUTED, standalone Node CLI and full repository checker were NOT_EXECUTED at original research time
 
 Current native research endpoint is 2026-10-20
+
+## Ballast current-state advance — 2026-10-21
+
+One NATIVE bounded V8 research unit on Step Functions exceptional `States.DataLimitExceeded` redrive and exact external effect integrity, [Daily](records/2026-10-21.md) contains 34 synthetic scenarios, 102 decisions, 62 modeled events, 61 accepted and one suppressed, 18/18 negative mutation rejections and two query-authority/lifecycle controls
+
+The [AWS redrive contract](https://docs.aws.amazon.com/step-functions/latest/dg/redrive-executions.html) allows successful Map/Parallel members to rerun under `States.DataLimitExceeded`, unlike ordinary preserve-success behavior, the modeled sink accepted a duplicate successful-member effect, live AWS and external sink NOT_EXECUTED
+
+Each weak path disagreed with the authored reference in 29/34 cases, reference zero disagreement with itself is not production accuracy or semantic independence, modeled prior MISS is not an actual authoritative MISS
+
+[October Monthly](records/2026-10.md) is derived navigation only, latest nonoverlapping [six-date audit](audits/2026-10-14--2026-10-19.md) remains valid, new cycle 2026-10-20..21 has two dates and no audit due, CASE 0, METHOD 0, NOTES 0, Special 0, Audit 0, derived edits zero research credit
+
+Original V8 producer/verifier EXECUTED PASS_WITH_LIMITS, full `python ballast/tools/check.py`, standalone Node CLI, live AWS and independent effect authority NOT_EXECUTED, current native research endpoint 2026-10-21
