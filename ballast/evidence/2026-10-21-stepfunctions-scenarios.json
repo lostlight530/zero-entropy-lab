@@ -1,0 +1,2086 @@
+{
+  "scenarios": [
+    {
+      "id": "ordinary_baseline",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:ordinary_baseline",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "ordinary_baseline/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "ordinary_baseline-evt-A-0-10",
+          "member": "A",
+          "effect_id": "ordinary_baseline/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "ordinary_baseline-evt-B-1-30",
+          "member": "B",
+          "effect_id": "ordinary_baseline/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "datalimit_reruns_success",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:datalimit_reruns_success",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "States.DataLimitExceeded",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "datalimit_reruns_success/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "datalimit_reruns_success-evt-A-0-10",
+          "member": "A",
+          "effect_id": "datalimit_reruns_success/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "datalimit_reruns_success-evt-B-1-30",
+          "member": "B",
+          "effect_id": "datalimit_reruns_success/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        },
+        {
+          "event_id": "datalimit_reruns_success-evt-A-1-31",
+          "member": "A",
+          "effect_id": "datalimit_reruns_success/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 31,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "datalimit_sink_dedup",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:datalimit_sink_dedup",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "States.DataLimitExceeded",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "datalimit_sink_dedup/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "datalimit_sink_dedup-evt-A-0-10",
+          "member": "A",
+          "effect_id": "datalimit_sink_dedup/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "datalimit_sink_dedup-evt-B-1-30",
+          "member": "B",
+          "effect_id": "datalimit_sink_dedup/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        },
+        {
+          "event_id": "datalimit_sink_dedup-evt-A-1-31",
+          "member": "A",
+          "effect_id": "datalimit_sink_dedup/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 31,
+          "accepted": false,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "datalimit_extra_retry",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:datalimit_extra_retry",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "States.DataLimitExceeded",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "datalimit_extra_retry/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "datalimit_extra_retry-evt-A-0-10",
+          "member": "A",
+          "effect_id": "datalimit_extra_retry/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "datalimit_extra_retry-evt-B-1-30",
+          "member": "B",
+          "effect_id": "datalimit_extra_retry/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        },
+        {
+          "event_id": "datalimit_extra_retry-evt-A-1-31",
+          "member": "A",
+          "effect_id": "datalimit_extra_retry/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 31,
+          "accepted": true,
+          "redrive": 1
+        },
+        {
+          "event_id": "datalimit_extra_retry-evt-A-2-32",
+          "member": "A",
+          "effect_id": "datalimit_extra_retry/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 32,
+          "accepted": true,
+          "redrive": 2
+        }
+      ]
+    },
+    {
+      "id": "ordinary_failed_member_retried_twice",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:ordinary_failed_member_retried_twice",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "ordinary_failed_member_retried_twice/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "ordinary_failed_member_retried_twice-evt-A-0-10",
+          "member": "A",
+          "effect_id": "ordinary_failed_member_retried_twice/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "ordinary_failed_member_retried_twice-evt-B-1-30",
+          "member": "B",
+          "effect_id": "ordinary_failed_member_retried_twice/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        },
+        {
+          "event_id": "ordinary_failed_member_retried_twice-evt-B-2-33",
+          "member": "B",
+          "effect_id": "ordinary_failed_member_retried_twice/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 33,
+          "accepted": true,
+          "redrive": 2
+        }
+      ]
+    },
+    {
+      "id": "same_count_member_swap",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:same_count_member_swap",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "C"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "same_count_member_swap/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "same_count_member_swap-evt-A-0-10",
+          "member": "A",
+          "effect_id": "same_count_member_swap/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "same_count_member_swap-evt-B-1-30",
+          "member": "B",
+          "effect_id": "same_count_member_swap/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "unexpected_member",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:unexpected_member",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "unexpected_member/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "unexpected_member-evt-A-0-10",
+          "member": "A",
+          "effect_id": "unexpected_member/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "unexpected_member-evt-B-1-30",
+          "member": "B",
+          "effect_id": "unexpected_member/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        },
+        {
+          "event_id": "unexpected_member-evt-C-1-34",
+          "member": "C",
+          "effect_id": "unexpected_member/C/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 34,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "duplicate_receipt_identity",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:duplicate_receipt_identity",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "duplicate_receipt_identity/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "duplicate_receipt_identity-evt-A-0-10",
+          "member": "A",
+          "effect_id": "duplicate_receipt_identity/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "duplicate_receipt_identity-evt-A-0-10",
+          "member": "B",
+          "effect_id": "duplicate_receipt_identity/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "unauthorized_original",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:unauthorized_original",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "unauthorized_original/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "unauthorized_original-evt-A-0-10",
+          "member": "A",
+          "effect_id": "unauthorized_original/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": false,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "unauthorized_original-evt-B-1-30",
+          "member": "B",
+          "effect_id": "unauthorized_original/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "wrong_target_incarnation",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:wrong_target_incarnation",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "wrong_target_incarnation/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "wrong_target_incarnation-evt-A-0-10",
+          "member": "A",
+          "effect_id": "wrong_target_incarnation/A/inc-7",
+          "target": "inc-previous",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "wrong_target_incarnation-evt-B-1-30",
+          "member": "B",
+          "effect_id": "wrong_target_incarnation/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "wrong_business_effect_identity",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:wrong_business_effect_identity",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "wrong_business_effect_identity/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "wrong_business_effect_identity-evt-A-0-10",
+          "member": "A",
+          "effect_id": "wrong_business_effect_identity/A/inc-previous",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "wrong_business_effect_identity-evt-B-1-30",
+          "member": "B",
+          "effect_id": "wrong_business_effect_identity/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "permission_revoked_after_completion",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:permission_revoked_after_completion",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": false,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "permission_revoked_after_completion/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "permission_revoked_after_completion-evt-A-0-10",
+          "member": "A",
+          "effect_id": "permission_revoked_after_completion/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "permission_revoked_after_completion-evt-B-1-30",
+          "member": "B",
+          "effect_id": "permission_revoked_after_completion/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "permission_revoked_missing_effect",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:permission_revoked_missing_effect",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": false,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "miss",
+        "effect_id": "permission_revoked_missing_effect/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "permission_revoked_missing_effect-evt-A-0-10",
+          "member": "A",
+          "effect_id": "permission_revoked_missing_effect/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        }
+      ]
+    },
+    {
+      "id": "covered_miss_allows_recovery",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:covered_miss_allows_recovery",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "miss",
+        "effect_id": "covered_miss_allows_recovery/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "covered_miss_allows_recovery-evt-A-0-10",
+          "member": "A",
+          "effect_id": "covered_miss_allows_recovery/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        }
+      ]
+    },
+    {
+      "id": "unknown_prior_blocks_recovery",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:unknown_prior_blocks_recovery",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "unknown",
+        "effect_id": "unknown_prior_blocks_recovery/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "unknown_prior_blocks_recovery-evt-A-0-10",
+          "member": "A",
+          "effect_id": "unknown_prior_blocks_recovery/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        }
+      ]
+    },
+    {
+      "id": "uncovered_visibility_watermark",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:uncovered_visibility_watermark",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "miss",
+        "effect_id": "uncovered_visibility_watermark/B/inc-7",
+        "scope": "exact",
+        "watermark": 80,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "uncovered_visibility_watermark-evt-A-0-10",
+          "member": "A",
+          "effect_id": "uncovered_visibility_watermark/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        }
+      ]
+    },
+    {
+      "id": "expired_query_retention",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:expired_query_retention",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "miss",
+        "effect_id": "expired_query_retention/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": false,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "expired_query_retention-evt-A-0-10",
+          "member": "A",
+          "effect_id": "expired_query_retention/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        }
+      ]
+    },
+    {
+      "id": "aggregate_miss_not_authoritative",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:aggregate_miss_not_authoritative",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "miss",
+        "effect_id": "aggregate_miss_not_authoritative/B/inc-7",
+        "scope": "aggregate",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "aggregate_miss_not_authoritative-evt-A-0-10",
+          "member": "A",
+          "effect_id": "aggregate_miss_not_authoritative/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        }
+      ]
+    },
+    {
+      "id": "wrong_miss_effect_identity",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:wrong_miss_effect_identity",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "miss",
+        "effect_id": "wrong",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "wrong_miss_effect_identity-evt-A-0-10",
+          "member": "A",
+          "effect_id": "wrong_miss_effect_identity/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        }
+      ]
+    },
+    {
+      "id": "positive_receipt_conflicts_with_miss",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:positive_receipt_conflicts_with_miss",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "miss",
+        "effect_id": "positive_receipt_conflicts_with_miss/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "positive_receipt_conflicts_with_miss-evt-A-0-10",
+          "member": "A",
+          "effect_id": "positive_receipt_conflicts_with_miss/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "positive_receipt_conflicts_with_miss-evt-B-1-30",
+          "member": "B",
+          "effect_id": "positive_receipt_conflicts_with_miss/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "stale_membership_revision",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:stale_membership_revision",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 3,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "stale_membership_revision/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "stale_membership_revision-evt-A-0-10",
+          "member": "A",
+          "effect_id": "stale_membership_revision/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "stale_membership_revision-evt-B-1-30",
+          "member": "B",
+          "effect_id": "stale_membership_revision/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "stale_witness_membership",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:stale_witness_membership",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "C"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "stale_witness_membership/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "stale_witness_membership-evt-A-0-10",
+          "member": "A",
+          "effect_id": "stale_witness_membership/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "stale_witness_membership-evt-B-1-30",
+          "member": "B",
+          "effect_id": "stale_witness_membership/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "unprotected_completion_witness",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:unprotected_completion_witness",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": false,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "unprotected_completion_witness/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "unprotected_completion_witness-evt-A-0-10",
+          "member": "A",
+          "effect_id": "unprotected_completion_witness/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "unprotected_completion_witness-evt-B-1-30",
+          "member": "B",
+          "effect_id": "unprotected_completion_witness/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "post_witness_membership_drift",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:post_witness_membership_drift",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 51
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "post_witness_membership_drift/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "post_witness_membership_drift-evt-A-0-10",
+          "member": "A",
+          "effect_id": "post_witness_membership_drift/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "post_witness_membership_drift-evt-B-1-30",
+          "member": "B",
+          "effect_id": "post_witness_membership_drift/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "definition_alias_version_mismatch",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:definition_alias_version_mismatch",
+        "definition": "def-7",
+        "expected_definition": "def-8",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "definition_alias_version_mismatch/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "definition_alias_version_mismatch-evt-A-0-10",
+          "member": "A",
+          "effect_id": "definition_alias_version_mismatch/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "definition_alias_version_mismatch-evt-B-1-30",
+          "member": "B",
+          "effect_id": "definition_alias_version_mismatch/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "missing_temporal_order",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:missing_temporal_order",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "missing_temporal_order/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "missing_temporal_order-evt-A-0-10",
+          "member": "A",
+          "effect_id": "missing_temporal_order/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": null,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "missing_temporal_order-evt-B-1-30",
+          "member": "B",
+          "effect_id": "missing_temporal_order/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "unknown_historical_authorization",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:unknown_historical_authorization",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "unknown_historical_authorization/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "unknown_historical_authorization-evt-A-0-10",
+          "member": "A",
+          "effect_id": "unknown_historical_authorization/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": null,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "unknown_historical_authorization-evt-B-1-30",
+          "member": "B",
+          "effect_id": "unknown_historical_authorization/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "duplicate_required_member",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:duplicate_required_member",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "A"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "duplicate_required_member/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "duplicate_required_member-evt-A-0-10",
+          "member": "A",
+          "effect_id": "duplicate_required_member/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "duplicate_required_member-evt-B-1-30",
+          "member": "B",
+          "effect_id": "duplicate_required_member/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "terminal_success_missing_external_effect",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:terminal_success_missing_external_effect",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "SUCCEEDED",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "unknown",
+        "effect_id": "terminal_success_missing_external_effect/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "terminal_success_missing_external_effect-evt-A-0-10",
+          "member": "A",
+          "effect_id": "terminal_success_missing_external_effect/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        }
+      ]
+    },
+    {
+      "id": "redrive_retry_counter_reset",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:redrive_retry_counter_reset",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 3
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "hit",
+        "effect_id": "redrive_retry_counter_reset/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "redrive_retry_counter_reset-evt-A-0-10",
+          "member": "A",
+          "effect_id": "redrive_retry_counter_reset/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        },
+        {
+          "event_id": "redrive_retry_counter_reset-evt-B-1-30",
+          "member": "B",
+          "effect_id": "redrive_retry_counter_reset/B/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 30,
+          "accepted": true,
+          "redrive": 1
+        }
+      ]
+    },
+    {
+      "id": "prior_query_failure",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:prior_query_failure",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "unknown",
+        "effect_id": "prior_query_failure/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": false
+      },
+      "events": [
+        {
+          "event_id": "prior_query_failure-evt-A-0-10",
+          "member": "A",
+          "effect_id": "prior_query_failure/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        }
+      ]
+    },
+    {
+      "id": "miss_before_old_attempt_visible",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:miss_before_old_attempt_visible",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "miss",
+        "effect_id": "miss_before_old_attempt_visible/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 200,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "miss_before_old_attempt_visible-evt-A-0-10",
+          "member": "A",
+          "effect_id": "miss_before_old_attempt_visible/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        }
+      ]
+    },
+    {
+      "id": "miss_from_unrelated_authority",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:miss_from_unrelated_authority",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "miss",
+        "effect_id": "miss_from_unrelated_authority/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "complete",
+        "authority": "unrelated",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "miss_from_unrelated_authority-evt-A-0-10",
+          "member": "A",
+          "effect_id": "miss_from_unrelated_authority/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        }
+      ]
+    },
+    {
+      "id": "miss_without_lifecycle_coverage",
+      "task": {
+        "execution_arn": "arn:aws:states:us-east-1:000000000000:execution:ballast:miss_without_lifecycle_coverage",
+        "definition": "def-7",
+        "expected_definition": "def-7",
+        "state": "FAILED_THEN_REDRIVEN",
+        "redrive_count": 1,
+        "cause": "OrdinaryFailure",
+        "retry_counter": 0
+      },
+      "current_permission": true,
+      "required": [
+        "A",
+        "B"
+      ],
+      "membership_revision": 4,
+      "target": "inc-7",
+      "witness": {
+        "revision": 4,
+        "members": [
+          "A",
+          "B"
+        ],
+        "target": "inc-7",
+        "protected": true,
+        "commit_tick": 50,
+        "mutation_tick": 0
+      },
+      "prior": {
+        "status": "miss",
+        "effect_id": "miss_without_lifecycle_coverage/B/inc-7",
+        "scope": "exact",
+        "watermark": 120,
+        "old_attempt_tick": 100,
+        "retention": true,
+        "lifecycle": "unknown",
+        "authority": "modeled_sink_journal",
+        "query_ok": true
+      },
+      "events": [
+        {
+          "event_id": "miss_without_lifecycle_coverage-evt-A-0-10",
+          "member": "A",
+          "effect_id": "miss_without_lifecycle_coverage/A/inc-7",
+          "target": "inc-7",
+          "historical_authorized": true,
+          "tick": 10,
+          "accepted": true,
+          "redrive": 0
+        }
+      ]
+    }
+  ]
+}

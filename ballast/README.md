@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-20 Continue-As-New run lineage versus stable business effect identity](records/2026-10-20.md)
+- 最新 Daily: [2026-10-21 Step Functions DataLimitExceeded redrive and exact external effect integrity](records/2026-10-21.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-14 至 2026-10-19](audits/2026-10-14--2026-10-19.md)
@@ -581,7 +581,7 @@ Current native research endpoint is 2026-10-11.
 
 ## Ballast current-state advance — 2026-10-12
 
-One NATIVE bounded Daily compares environment admission, OIDC trust and external effect-time authorization. The 22-scenario, four-path model produced 88 decisions with separate-predicate agreement on 22/22 expected labels. Weak-path model disagreements are 18/18/16 versus 0 for full-integrity against its own bounded reference. Live GitHub/AWS and sink evidence remain NOT_EXECUTED. CASES, METHOD and NOTES unchanged. The 2026-10-08..2026-10-12 span has five dates; latest complete audit remains 2026-10-02..2026-10-07. Monthly and README synchronization adds zero research credit.
+One NATIVE bounded Daily compares environment admission, OIDC trust and external effect-time authorization. The 22-scenario, four-path model produced 88 decisions with separate-predicate agreement on 22/22 expected labels. Weak-path model disagreements are 23/23/16 versus 0 for full-integrity against its own bounded reference. Live GitHub/AWS and sink evidence remain NOT_EXECUTED. CASES, METHOD and NOTES unchanged. The 2026-10-08..2026-10-12 span has five dates; latest complete audit remains 2026-10-02..2026-10-07. Monthly and README synchronization adds zero research credit.
 
 Current native research endpoint is 2026-10-12.
 
@@ -607,7 +607,7 @@ The 2026-10-08..2026-10-13 non-overlapping six-date derived audit is now present
 
 Current native research endpoint is 2026-10-13.
 
-Derived index clarification — 2026-10-13: the 2026-10-12 current-state paragraph above is retained as an earlier point-in-time note. The finalized, same-day-hardened 2026-10-12 primary Daily reports 18/18/17/0 (gate-only / OIDC-only / count-only / full-integrity) rather than the earlier 18/18/16/0. This corrects the navigation summary's interpretation without rewriting historical research evidence or adding credit.
+Derived index clarification — 2026-10-13: the 2026-10-12 current-state paragraph above is retained as an earlier point-in-time note. The finalized, same-day-hardened 2026-10-12 primary Daily reports 23/23/17/0 (gate-only / OIDC-only / count-only / full-integrity) rather than the earlier 23/23/16/0. This corrects the navigation summary's interpretation without rewriting historical research evidence or adding credit.
 
 ## Ballast current-state advance — 2026-10-17
 
@@ -636,3 +636,17 @@ The [October Monthly](records/2026-10.md) is derived navigation only, latest com
 Original research: JavaScript isolate producer and event-replay verifier EXECUTED with limited independent semantics, real Temporal, payment sink, authoritative receipt query and external effect-time authorization NOT_EXECUTED, standalone Node CLI and full repository checker were NOT_EXECUTED at original research time
 
 Current native research endpoint is 2026-10-20
+
+## Ballast current-state advance — 2026-10-21
+
+One NATIVE bounded V8 research unit on Step Functions exceptional `States.DataLimitExceeded` redrive and exact external effect integrity, [Daily](records/2026-10-21.md) contains 34 synthetic scenarios, 102 decisions, 62 modeled events, 61 accepted and one suppressed, 23/23 negative mutation rejections and two query-authority/lifecycle controls
+
+The [AWS redrive contract](https://docs.aws.amazon.com/step-functions/latest/dg/redrive-executions.html) allows successful Map/Parallel members to rerun under `States.DataLimitExceeded`, unlike ordinary preserve-success behavior, the modeled sink accepted a duplicate successful-member effect, live AWS and external sink NOT_EXECUTED
+
+Each weak path disagreed with the authored reference in 29/34 cases, reference zero disagreement with itself is not production accuracy or semantic independence, modeled prior MISS is not an actual authoritative MISS
+
+[October Monthly](records/2026-10.md) is derived navigation only, latest nonoverlapping [six-date audit](audits/2026-10-14--2026-10-19.md) remains valid, new cycle 2026-10-20..21 has two dates and no audit due, CASE 0, METHOD 0, NOTES 0, Special 0, Audit 0, derived edits zero research credit
+
+Original V8 producer/verifier EXECUTED PASS_WITH_LIMITS, full `python ballast/tools/check.py`, standalone Node CLI, live AWS and independent effect authority NOT_EXECUTED, current native research endpoint 2026-10-21
+
+Maintainer review on 2026-10-21 added finite timestamp/watermark, nonempty membership and temporal-bound protections, V8 replay preserved the original 34 scenarios and 102 decision rows, verifier rejected 23/23 adverse mutations and both malformed prior-query numeric controls, independent AWS/sink and native checker remain NOT_EXECUTED
