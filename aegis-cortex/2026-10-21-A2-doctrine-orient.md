@@ -96,3 +96,26 @@
 - **No external risks written as local truths**: YES
 - **No private task prompt or memory published**: YES
 - **Boundary Violation**: NO
+
+
+## FORWARD_RECONCILIATION_2026_10_21
+- **Execution UTC:** 2026-10-21T06:37:06.603Z
+- **Execution Asia/Shanghai:** 2026-10-21 14:37:06 — GPT A2 source-specific follow-on
+- **Producer:** GPT-6 independent successor; NOT an original Jules A2 replay
+- **Logical Date:** 2026-10-21 Asia/Shanghai
+- **Reason:** Original A2 at 09:10 Asia/Shanghai legitimately saw its same-day A1 absent in main and reported INPUT_MISSING / BLOCKED
+- **Now-visible upstream:** aegis-cortex/2026-10-21-A1-reliability-observe.md, Jules original 08:15 Asia/Shanghai, later merged; post-merge availability differs from original A2 input cut
+- **Exact external source:** AgentLoupe: Kernel-Resident Semantic Causal Labels for AI Agent Observability, arXiv:2610.23233v2, revised 2026-10-19 01:49:36 UTC, https://arxiv.org/abs/2610.23233
+- **Source depth:** original arXiv abstract plus paper HTML Sections 3.1–3.3 and 4.1–4.2 inspected by current GPT; same canonical paper as A1, not independent corroboration
+- **RISK_CLASSIFICATION:** EXTERNAL_FAILURE_MODE_EVIDENCE, relevant to cross-process delayed effect provenance and observational blind spots
+- **Claim supported narrowly:** in the authors' paper-specific design, causal identity propagates via labeled processes/inodes/sockets rather than merely by a process-tree or time-similarity correlation
+- **Claim not supported:** universal provenance completeness, deployed tracing in zero-entropy-lab, current host incident, local unsafe agent effect, authorization at historical effect time, local security guarantee, independent reproduction
+- **Claim correction:** eBPF kernel-resource labels are bounded by instrumented events and explicit inheritance semantics; they are neither the only imaginable source of causality nor proof that all other systems fail in every environment
+- **Handoff to A3:** consider observation/approval/completion separation, but do not promote to a new preventative doctrine without local evidence, counterexamples and distinct supporting sources
+- **Local Repository Evidence:** NO_LOCAL_EVIDENCE for a concrete corresponding host incident; absence of evidence does not establish immunity
+- **Counterevidence needed:** replay with authoritative effect receipt and delayed handoff coverage; independent cross-platform observation; permission/freshness tests
+- **Weekly Promotion Eligibility:** WATCHLIST_ONLY / NOT_ELIGIBLE_FOR_DOCTRINE_PROMOTION
+- **Current follow-on Task Status:** SOURCE_SPECIFIC_REVIEW_COMPLETE; external risk analysis complete, original Jules A2 remains BLOCKED and unchanged
+- **Boundary:** no Aegis host/NEXUS/Ballast or GitHub Actions changes; no new experiment or independent source credit
+- **Runner checks:** local host and native Aegis structural checker NOT_EXECUTED; verify final PR diff separately
+
