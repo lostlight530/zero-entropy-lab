@@ -653,10 +653,10 @@ Maintainer review on 2026-10-21 added finite timestamp/watermark, nonempty membe
 
 ## Ballast current-state advance — 2026-10-22
 
-One NATIVE bounded V8 research unit on Temporal asynchronous Activity Task Token validity versus exact external effect integrity, [Daily](records/2026-10-22.md) records 38 synthetic scenarios, 65 modeled accepted effects, 114 decisions and 39/39 corrected verifier mutation controls
+One NATIVE bounded JavaScript isolate research unit on Temporal asynchronous Activity Task Token validity versus exact external effect integrity, [Daily](records/2026-10-22.md) records 38 synthetic scenarios, 65 modeled accepted effects, 114 decisions and 39/39 corrected verifier mutation controls
 
 A rejected or canceled token does not establish historical effect absence, a successful token does not establish exact effect completion, and equal receipt counts can hide membership swaps, these are controlled model observations rather than live Temporal evidence
 
 [October Monthly](records/2026-10.md) and this README are derived navigation with zero experiment credit, latest [six-date audit](audits/2026-10-14--2026-10-19.md) remains valid, current 2026-10-20..22 cycle is not due, CASE 0, METHOD 0, NOTES 0, Special 0, Audit 0
 
-Original V8 producer and primitive replay verifier EXECUTED with shared semantics, complete source and CSV persistence BLOCKED, full Python checker, Node CLI, live Temporal and independent sink NOT_EXECUTED, current native research endpoint is 2026-10-22
+Original JavaScript isolate producer and primitive replay verifier EXECUTED with shared semantics, complete source and CSV persistence BLOCKED, full Python checker, Node CLI, live Temporal and independent sink NOT_EXECUTED, current native research endpoint is 2026-10-22
