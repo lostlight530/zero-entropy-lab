@@ -2377,19 +2377,19 @@
     "sgl-project/sglang": {
       "documents": {
         "README.md": {
-          "blob_sha": "dd92f9a44bca4f6b4d2c970ffc23e8d937a521bd",
-          "commit_sha": "693d33330647c57f82e09ac39a34122fa46b5763",
-          "content_hash": "e1334c285b4f267063c612f5863fae9553c442a1213ab35da87e65aaf3d9755d",
+          "blob_sha": "0c28df5e901bf8f1e1b0f8c0d5972ed0004b0529",
+          "commit_sha": "c1c287a42928495166e14dbcef31b9e1f1dac199",
+          "content_hash": "4ecaad8cd4bb3ec45c6b19b0c1de942eb149c8a89761e93a37682213c6d68eee",
           "entity_id": "doc_sgl_project_sglang_readme_md_e5cfd3d65b13",
-          "observed_blob_sha": "dd92f9a44bca4f6b4d2c970ffc23e8d937a521bd",
-          "observed_commit_sha": "693d33330647c57f82e09ac39a34122fa46b5763",
-          "observed_tree_sha": "4360c8bbe2622eac3cea8cf1f51a12259d691ca7",
-          "output": "current/serving-inference/sgl_project_sglang/README.md__dd92f9a44bca__693d33330647.md",
-          "sha": "dd92f9a44bca4f6b4d2c970ffc23e8d937a521bd",
-          "tree_sha": "4360c8bbe2622eac3cea8cf1f51a12259d691ca7"
+          "observed_blob_sha": "0c28df5e901bf8f1e1b0f8c0d5972ed0004b0529",
+          "observed_commit_sha": "c1c287a42928495166e14dbcef31b9e1f1dac199",
+          "observed_tree_sha": "67d268a9bba94ee1c9f506f4e37b6dfe856a03ee",
+          "output": "current/serving-inference/sgl_project_sglang/README.md__0c28df5e901b__c1c287a42928.md",
+          "sha": "0c28df5e901bf8f1e1b0f8c0d5972ed0004b0529",
+          "tree_sha": "67d268a9bba94ee1c9f506f4e37b6dfe856a03ee"
         }
       },
-      "last_checked_at": "2026-10-20T00:48:51.569120+00:00"
+      "last_checked_at": "2026-10-21T00:13:31.633820+00:00"
     },
     "stanfordnlp/dspy": {
       "documents": {
