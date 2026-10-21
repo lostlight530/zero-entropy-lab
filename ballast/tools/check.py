@@ -153,7 +153,8 @@ def validate() -> list[str]:
                     continue
                 if not linked.exists():
                     errors.append(f"broken local link: {relative} -> {target}")
-        if re.search(r"\bv\d+(?:\.\d+)*\b", visible_text, re.IGNORECASE) and relative not in LEGACY_VERSION_LABELS:
+        version_scan_text = re.sub(r"\bV8\b(?!\.)", "JS_ENGINE", visible_text)  # V8 engine is not a version label
+        if re.search(r"\bv\d+(?:\.\d+)*\b", version_scan_text, re.IGNORECASE) and relative not in LEGACY_VERSION_LABELS:
             errors.append(f"version label: {relative}")
     for relative, headings in TEMPLATE_HEADINGS.items():
         path = ROOT / relative

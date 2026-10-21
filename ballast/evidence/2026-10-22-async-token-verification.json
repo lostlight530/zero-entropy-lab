@@ -1,0 +1,37 @@
+{
+  "status": "PASS_WITH_LIMITS",
+  "scenarios": 38,
+  "decision_rows": 114,
+  "accepted_effects": 65,
+  "reference_counts": {
+    "COMPLETE": 6,
+    "STOP_UNKNOWN": 9,
+    "EVIDENCE_CONFLICT": 5,
+    "RECONCILE": 16,
+    "RETRY_ALLOWED": 1,
+    "BLOCKED": 1
+  },
+  "model_relative_disagreements": {
+    "token_proxy": 35,
+    "count_proxy": 31
+  },
+  "negative_controls": 41,
+  "positive_invariants": 3,
+  "altered_csv_rejected": true,
+  "independence": {
+    "implementation": "PARTIAL",
+    "data_source": "NONE",
+    "semantic_contract": "LIMITED",
+    "authority": "NONE"
+  },
+  "external_effects": 0,
+  "scenario_blob_sha": "0e52da49ba1699851a2093d9a4536f67ecc42e55",
+  "source_provenance": "2026-10-22 same-day maintainer reconstructed replay, not original generator",
+  "execution_environment": "isolated JavaScript evaluation",
+  "native_node_cli": "NOT_EXECUTED",
+  "full_python_checker": "NOT_EXECUTED",
+  "live_temporal": "NOT_EXECUTED",
+  "independent_effect_sink": "NOT_EXECUTED",
+  "original_research_units": 1,
+  "additional_research_units": 0
+}

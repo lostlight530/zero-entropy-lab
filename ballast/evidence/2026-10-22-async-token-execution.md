@@ -1,6 +1,6 @@
 # Async completion token controlled observation — 2026-10-22
 
-Execution: JavaScript JavaScript isolate isolate, 2026-10-22 Asia/Shanghai
+Execution: JavaScript isolate, 2026-10-22 Asia/Shanghai
 Source verification: Temporal Activity Execution documentation and Google Cloud Tasks documentation, accessed 2026-10-22
 
 Observed producer execution: 38 distinct synthetic scenarios, 65 modeled accepted effects, 114 path decisions, reference COMPLETE 6, STOP_UNKNOWN 9, EVIDENCE_CONFLICT 5, RECONCILE 16, RETRY_ALLOWED 1, BLOCKED 1
@@ -63,3 +63,13 @@ This record is bounded synthetic evidence, not a production incident, external e
 The initial verifier mutation expectations were wrong for two cases, changing B effect identity while preserving an asserted complete positive journal and prior HIT B creates EVIDENCE_CONFLICT rather than RECONCILE, correcting only these expectations yielded 39/39 controls, 36 negative and three positive
 
 Implementation independence PARTIAL, data independence NONE, semantic contract independence LIMITED, external authority NONE, full checker, standalone Node CLI and real external sink NOT_EXECUTED
+
+## 2026-10-22 same-day maintainer correction and fixture replay
+
+The original research JSON [scenarios](2026-10-22-async-token-scenarios.json) remains unchanged, the previously missing [CSV](2026-10-22-async-token-decisions.csv) and reconstructed [producer](../tools/experiment_async_token.js) / [verifier](../tools/verify_async_token.js) are now available
+
+Original generator source remains NOT_RECOVERED, reconstructed producer reads original primitive facts and does not demonstrate an independent new research window
+
+Executed JavaScript isolated replay: 38 scenarios, 65 accepted synthetic effects, 114 decisions, exact 38/38 correspondence to the original Markdown decision matrix, 41/41 fail-closed negative mutations, 3/3 positive invariants and tampered CSV rejected
+
+[Machine-readable verification report](2026-10-22-async-token-verification.json) records exact derived counts and independence, Node CLI, full repository Python checker, real Temporal and external sink NOT_EXECUTED, semantically independent real verifier NOT_EXECUTED
