@@ -1,0 +1,2669 @@
+{
+  "logicalDate": "2026-10-22",
+  "execution": "V8_ISOLATE",
+  "scenarios": [
+    {
+      "id": "baseline_complete",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "stale_token_after_retry",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 2,
+        "status": "REJECTED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "cancel_after_external_effect",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "CANCELED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "timeout_after_external_effect",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "TIMED_OUT"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "ack_without_external_B",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "unknown",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "ack_wrong_member",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-C",
+          "receiptId": "receipt-C",
+          "effectId": "wf-22|task-22|inc-22|C",
+          "member": "C",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "ack_duplicate_effect",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-A-again",
+          "receiptId": "receipt-A-again",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "ack_extra_effect",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-C",
+          "receiptId": "receipt-C",
+          "effectId": "wf-22|task-22|inc-22|C",
+          "member": "C",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 41,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "ack_unauthorized_effect",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": false,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "ack_wrong_target",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-old",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "ack_wrong_task",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-other",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "ack_wrong_effect_identity",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|X",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "covered_miss_missing_B",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "miss",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "stale_watermark_miss",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "miss",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 19,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "expired_retention_miss",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "miss",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": false,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "uncovered_lifecycle_miss",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "miss",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": false,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "wrong_scope_miss",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "miss",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "all_activity_tokens",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "wrong_identity_miss",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "miss",
+        "effectId": "wf-22|task-22|inc-22|X",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "positive_receipt_miss_conflict",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "miss",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "hit_without_journal_effect",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "permission_revoked_missing",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": false,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "miss",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "permission_revoked_complete",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": false,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "same_count_membership_swap",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "C"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "C"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "witness_membership_mismatch",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "C"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "witness_stale_revision",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 8,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "witness_unprotected",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": false
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "witness_after_commit",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 61,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "duplicate_receipt_identity",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "duplicate_event_identity",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "duplicate_required_members",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "A"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "empty_required_members",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "effect_after_commit",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 61,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "unknown_permission_missing",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": "unknown",
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "miss",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "nonfinite_watermark_miss",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "miss",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": "Infinity",
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "prior_query_error",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "unknown",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "effect_before_attempt_start",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 10,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "token_ack_for_other_attempt",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 2,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    },
+    {
+      "id": "same_name_new_incarnation",
+      "workflow": "wf-22",
+      "run": "run-22",
+      "activity": "act-22",
+      "task": "task-22",
+      "target": "inc-22",
+      "intent": "notify-22",
+      "required": [
+        "A",
+        "B"
+      ],
+      "currentRevision": 7,
+      "permission": true,
+      "attempt": {
+        "number": 1,
+        "token": "tok-1",
+        "started": 20
+      },
+      "token": {
+        "value": "tok-1",
+        "attempt": 1,
+        "status": "ACKED"
+      },
+      "witness": {
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observed": 50,
+        "commit": 60,
+        "protected": true
+      },
+      "prior": {
+        "status": "hit",
+        "effectId": "wf-22|task-22|inc-22|B",
+        "scope": "exact_task_target_member",
+        "authority": "modeled_sink_journal",
+        "watermark": 45,
+        "retention": true,
+        "lifecycle": true,
+        "queriedAt": 50,
+        "journalComplete": true
+      },
+      "effects": [
+        {
+          "eventId": "evt-A",
+          "receiptId": "receipt-A",
+          "effectId": "wf-22|task-22|inc-22|A",
+          "member": "A",
+          "task": "task-22",
+          "target": "inc-22",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 30,
+          "authorized": true,
+          "accepted": true
+        },
+        {
+          "eventId": "evt-B",
+          "receiptId": "receipt-B",
+          "effectId": "wf-22|task-22|inc-22|B",
+          "member": "B",
+          "task": "task-22",
+          "target": "inc-recreated",
+          "attempt": 1,
+          "token": "tok-1",
+          "at": 40,
+          "authorized": true,
+          "accepted": true
+        }
+      ]
+    }
+  ]
+}
