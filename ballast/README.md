@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-21 Step Functions DataLimitExceeded redrive and exact external effect integrity](records/2026-10-21.md)
+- 最新 Daily: [2026-10-22 Temporal async Activity token and exact external effect integrity](records/2026-10-22.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-14 至 2026-10-19](audits/2026-10-14--2026-10-19.md)
@@ -650,3 +650,13 @@ Each weak path disagreed with the authored reference in 29/34 cases, reference z
 Original V8 producer/verifier EXECUTED PASS_WITH_LIMITS, full `python ballast/tools/check.py`, standalone Node CLI, live AWS and independent effect authority NOT_EXECUTED, current native research endpoint 2026-10-21
 
 Maintainer review on 2026-10-21 added finite timestamp/watermark, nonempty membership and temporal-bound protections, V8 replay preserved the original 34 scenarios and 102 decision rows, verifier rejected 23/23 adverse mutations and both malformed prior-query numeric controls, independent AWS/sink and native checker remain NOT_EXECUTED
+
+## Ballast current-state advance — 2026-10-22
+
+One NATIVE bounded V8 research unit on Temporal asynchronous Activity Task Token validity versus exact external effect integrity, [Daily](records/2026-10-22.md) records 38 synthetic scenarios, 65 modeled accepted effects, 114 decisions and 39/39 corrected verifier mutation controls
+
+A rejected or canceled token does not establish historical effect absence, a successful token does not establish exact effect completion, and equal receipt counts can hide membership swaps, these are controlled model observations rather than live Temporal evidence
+
+[October Monthly](records/2026-10.md) and this README are derived navigation with zero experiment credit, latest [six-date audit](audits/2026-10-14--2026-10-19.md) remains valid, current 2026-10-20..22 cycle is not due, CASE 0, METHOD 0, NOTES 0, Special 0, Audit 0
+
+Original V8 producer and primitive replay verifier EXECUTED with shared semantics, complete source and CSV persistence BLOCKED, full Python checker, Node CLI, live Temporal and independent sink NOT_EXECUTED, current native research endpoint is 2026-10-22
