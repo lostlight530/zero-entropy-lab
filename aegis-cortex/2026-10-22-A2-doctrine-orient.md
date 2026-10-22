@@ -94,3 +94,48 @@
 - **External risk and local incident properly separated**: YES
 - **No final discipline decisions made**: YES
 - **No external risks written as local truths**: YES
+
+
+## FORWARD_RECONCILIATION_2026_10_22_GPT_A2_SUCCESSOR
+
+### Attribution and temporal availability
+- **Producer for this addendum:** GPT-6, independent *later* A2 follow-on, not Jules.
+- **Follow-on execution (UTC):** 2026-10-22T04:46:36.733Z
+- **Original Jules A2:** `INPUT_MISSING / BLOCKED` at 2026-10-22T00:55:48Z, original branch base `4dfd43d9ec1bd08a629b04d4d7e52405c496da15`. All original text/metadata above remain unchanged. A sibling A1 branch existing at that time did not make its contents visible on A2's execution base.
+- **Later main SHA:** `fb0c613ba5ec00deafb54bf8ed854725e8fd49d6` after A1 Jules PR #699 **merged** (reviewer correction appended on A1) at this revision.
+- **Same-date A1 proof:** `aegis-cortex/2026-10-22-A1-reliability-observe.md` actually fetched from this merged `main`, Git blob `97f64b6c675e716952843ff7da3d9c5b65fe1c86`; includes `FORWARD_RECONCILIATION_2026_10_22_GPT_SOURCE_SCOPE`.
+- **Current successor outcome:** `GPT_FOLLOW_ON_ORIENTATION_COMPLETED_WITH_PAPER_LEVEL_LIMITS`; original `JULES_NATIVE_INPUT_MISSING` remains valid and is not renamed `JULES_SUCCESS`.
+- **Source verification boundary:** paper-original https://arxiv.org/html/2610.28612v1 (preliminary all-image ablation vs proposed hybrid); original A1 cites https://arxiv.org/abs/2610.25374v1 as a *Vision* paper; no independent local failure reproduction. The GPT reviewer checked arXiv paper-level method scope, not a live Aegis incident or causal intervention.
+
+### Forward RISK_CLASSIFICATION
+**RISK-2026-10-22-GPT-F01 — Endogenous feedback drift**
+- Source lineage: `SRC-2026-10-22-01`, one unreplicated research *vision*, not demonstrated Aegis drift.
+- Category: FEEDBACK_LOOP / MEMORY_ROT_HYPOTHESIS; `NO_LOCAL_EVIDENCE`.
+- Local analog boundary: repeated research summaries can contaminate future assessments **if** historical outputs are promoted to unexamined current inputs. This is a possible failure path, NOT a documented 2026-10-22 incident.
+- Counterevidence: versioned Git historical retention and source identity checks provide potential mitigations; their effectiveness has not been measured against a comparable self-rewriting experiment.
+- Evidence strength: PAPER_VISION / APPLICABILITY_UNTESTED.
+- Weekly promotion: ONLY_AS_OPEN_HYPOTHESIS, no verified incident or quantified risk.
+
+**RISK-2026-10-22-GPT-F02 — Context compression vs historical evidence retention**
+- Source lineage: `SRC-2026-10-22-02`, TraceLite original paper, same source when observed in Horizon or other repositories; not independent replication.
+- Category: PROMPT_CONTEXT_FIDELITY / HISTORICAL_EVIDENCE_LOSS_HYPOTHESIS.
+- Original-paper distinction: 50-task all-image ablation shows 45/50, 37/50, 29/50 in its own conditions. **This does not measure proposed hybrid TraceLite failure.** Its proposed hybrid keeps recent observations as text and reports separate benchmark performance.
+- Counterevidence: proposed hybrid can preserve recent fidelity while reducing token use; paper does not test byte-exact archival evidence or Aegis's Markdown retention contract.
+- Local applicability: UNKNOWN, since no local truncation or destructive compression event was reproduced.
+- Weekly promotion: PAPER_LEVEL_WARNING_ONLY; no implementable universal rule or Aegis incident conclusion.
+
+### ORIENTATION_NOTES — follow-on synthesis
+- Distinguish an external theoretical possibility, an observed agent benchmark ablation, a repository source-preservation rule, and an actual local failure. They are four separate evidence categories.
+- Do **not** infer that `EXACT_TARGET_ONLY` writing eliminates semantic memory contamination. No local observations establish either immunity or failure.
+- Multiple citations to arXiv:2610.28612 across repos constitute `SOURCE_LINEAGE=1`, `INDEPENDENT_VALIDATION=0` on a shared empirical claim.
+- Claimed original 2026-10-22 A1 and A2 input timing is preserved. No retrospective merging of Jules execution and GPT later orientation.
+
+### NO_DECISION_SECTION — follow-on controls
+- No A3 weekly risk decision, no A4 protocol change, no host code or workflow modification, no A5/A6 doctrine promotion, no unverified `HEALTHY`.
+- This is prospective interpretation of now-available same-day A1, not an authorization to change Aegis system implementation.
+
+### NEXT_HANDOFF — follow-on
+- Carry `RISK-2026-10-22-GPT-F01` and `RISK-2026-10-22-GPT-F02` only as paper-level unresolved candidates. Require a separately scoped local test/real incident before promotion.
+- Retest exact original source and paper version before any quantitative claim; retain counterexamples to naive compression and effectiveness of partial recent-history retention.
+- Weekly A3 may aggregate hypotheses if cadence calls for it; absence of local incident and lack of experimental replication remain visible.
+- `FORWARD_RECONCILIATION_COMPLETED` is not the original A2's task-time SUCCESS state.
