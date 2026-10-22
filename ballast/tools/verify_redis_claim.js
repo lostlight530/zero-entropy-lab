@@ -5,19 +5,21 @@ function reconstruct(s){
  const scoped=q.identity===s.task+"|"+s.inc+"|B"&&q.authority===true&&q.complete===true&&Number.isFinite(q.watermark)&&q.watermark>=s.oldAttemptEnd&&Number.isFinite(q.queryAt)&&q.queryAt>=q.watermark&&q.retained===true&&q.lifecycle==="active";
  if(q.state==="miss"&&scoped&&s.effects.some(e=>e.member==="B"&&e.task===s.task&&e.inc===s.inc))return "EVIDENCE_CONFLICT";
  if(["miss","hit"].includes(q.state)&&!scoped)return "STOP_UNKNOWN";
+ if(!["hit","miss","unknown"].includes(q.state))return "STOP_UNKNOWN";
+ if(w.task!==s.task||w.inc!==s.inc||w.revision!==s.revision||w.protected!==true||!Array.isArray(w.members)||w.members.length!==r.length||new Set(w.members).size!==r.length||r.some(x=>!w.members.includes(x)))return "RECONCILE";
  const ids=[],receipts=[],members=[];
  for(const e of s.effects){
   if(!e||!r.includes(e.member)||e.task!==s.task||e.inc!==s.inc||e.authorized!==true||e.id!=="e"+e.member||!e.receipt||!Number.isFinite(e.at)||e.at<0||e.at>w.at)return "RECONCILE";
   ids.push(e.id);receipts.push(e.receipt);members.push(e.member);
  }
  if([ids,receipts,members].some(a=>new Set(a).size!==a.length))return "RECONCILE";
+ if(q.state==="hit"&&scoped&&!s.effects.some(e=>e.member==="B"&&e.id==="eB"&&e.task===s.task&&e.inc===s.inc))return "EVIDENCE_CONFLICT";
  const missing=r.filter(x=>!members.includes(x));
  if(missing.length){
   if(s.permission===false)return "BLOCKED";
   if(s.permission!==true)return "STOP_UNKNOWN";
   return missing.length===1&&missing[0]==="B"&&q.state==="miss"&&scoped?"RETRY_ALLOWED":"STOP_UNKNOWN";
  }
- if(w.task!==s.task||w.inc!==s.inc||w.revision!==s.revision||w.protected!==true||!Array.isArray(w.members)||w.members.length!==r.length||new Set(w.members).size!==r.length||r.some(x=>!w.members.includes(x)))return "RECONCILE";
  return "COMPLETE";
 }
 function verify(scenarios,rows){

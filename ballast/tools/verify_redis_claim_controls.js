@@ -19,7 +19,14 @@ function controls(scenarios,rows,reconstruct,verify){
  [s=>{s.permission=false;},"COMPLETE"],
  [s=>{s.effects.pop();s.prior.state="miss";},"RETRY_ALLOWED"],
  [s=>{s.effects.pop();s.prior.state="miss";s.permission=false;},"BLOCKED"],
- [s=>{s.effects.pop();s.prior.state="miss";s.prior.identity="wrong";},"STOP_UNKNOWN"]];
+ [s=>{s.effects.pop();s.prior.state="miss";s.prior.identity="wrong";},"STOP_UNKNOWN"],
+ [s=>{s.effects.pop();s.prior.state="miss";s.witness.protected=false;},"RECONCILE"],
+ [s=>{s.effects.pop();s.prior.state="miss";s.witness.revision=6;},"RECONCILE"],
+ [s=>{s.effects.pop();s.prior.state="miss";s.witness.task="wrong";},"RECONCILE"],
+ [s=>{s.effects.pop();s.prior.state="miss";s.witness.inc="wrong";},"RECONCILE"],
+ [s=>{s.effects.pop();s.prior.state="miss";s.witness.members=["A","C"];},"RECONCILE"],
+ [s=>{s.effects.pop();s.prior.state="hit";},"EVIDENCE_CONFLICT"],
+ [s=>{s.effects.pop();s.prior.state="invalid";},"STOP_UNKNOWN"]];
  let passed=0;
  for(const [change,expected] of probes){const s=clone(base);change(s);if(reconstruct(s)!==expected)errors.push("boundary mismatch "+passed);else passed++;}
  const altered=rows.map(r=>({...r}));altered[0].decision="FORGED";

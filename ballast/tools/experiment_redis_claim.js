@@ -13,18 +13,20 @@ function reference(s){
  if(!Array.isArray(req)||!req.length||req.some(x=>typeof x!=="string"||!x)||new Set(req).size!==req.length||!Array.isArray(s.effects)||!w||!q||!s.task||!s.inc||!Number.isFinite(s.oldAttemptEnd)||!Number.isFinite(w.at)||!Number.isFinite(w.commitAt)||w.commitAt<w.at)return "RECONCILE";
  if(q.state==="miss"&&covered(s)&&s.effects.some(e=>e.member==="B"&&e.task===s.task&&e.inc===s.inc))return "EVIDENCE_CONFLICT";
  if((q.state==="hit"||q.state==="miss")&&!covered(s))return "STOP_UNKNOWN";
+ if(!["hit","miss","unknown"].includes(q.state))return "STOP_UNKNOWN";
+ if(w.task!==s.task||w.inc!==s.inc||w.revision!==s.revision||w.protected!==true||!Array.isArray(w.members)||w.members.length!==req.length||new Set(w.members).size!==req.length||w.members.some(m=>!req.includes(m)))return "RECONCILE";
  const ids=new Set(),receipts=new Set(),members=new Set();
  for(const e of s.effects){
   if(!e||!req.includes(e.member)||members.has(e.member)||e.task!==s.task||e.inc!==s.inc||e.authorized!==true||e.id!=="e"+e.member||ids.has(e.id)||!e.receipt||receipts.has(e.receipt)||!Number.isFinite(e.at)||e.at<0||e.at>w.at)return "RECONCILE";
   ids.add(e.id);receipts.add(e.receipt);members.add(e.member);
  }
+ if(q.state==="hit"&&covered(s)&&!s.effects.some(e=>e.member==="B"&&e.id==="eB"&&e.task===s.task&&e.inc===s.inc))return "EVIDENCE_CONFLICT";
  if(members.size<req.length){
   if(s.permission===false)return "BLOCKED";
   if(s.permission!==true)return "STOP_UNKNOWN";
   const absent=req.filter(x=>!members.has(x));
   return absent.length===1&&absent[0]==="B"&&q.state==="miss"&&covered(s)?"RETRY_ALLOWED":"STOP_UNKNOWN";
  }
- if(w.task!==s.task||w.inc!==s.inc||w.revision!==s.revision||w.protected!==true||!Array.isArray(w.members)||w.members.length!==req.length||new Set(w.members).size!==req.length||w.members.some(m=>!req.includes(m)))return "RECONCILE";
  return "COMPLETE";
 }
 function build(){
