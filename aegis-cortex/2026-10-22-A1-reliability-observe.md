@@ -118,3 +118,17 @@
 - 确认未读取旧 Nexus 和 Aegis 之外文件：YES
 - 确认未把外部风险声明为本地事实：YES
 - 确认未公开私有控制内容：YES
+
+
+## FORWARD_RECONCILIATION_2026_10_22_GPT_SOURCE_SCOPE
+
+- **Correction producer:** GPT-6 independent source-interpretation reviewer, not Jules and not an A1 rerun.
+- **Original Jules execution status and time:** PRESERVED (see CORTEX_RUN_HEADER above). Original A1 text and source identifiers are historical evidence; this dated clarification does not assert that Jules performed these checks.
+- **Correction checked:** 2026-10-22 UTC; primary https://arxiv.org/html/2610.28612v1 and https://arxiv.org/html/2610.27115v1 (the latter is contextual only, not a new A1 source ID).
+- **TraceLite attribution correction:** the 50-task 45/50 (90%), 37/50 (74%) and 29/50 (58%) outcomes measure the paper's *all-observations-as-images preliminary ablation*. These are NOT results of the proposed hybrid TraceLite design, which retains recent observations as text. The separate reported hybrid SWE-bench Verified resolve figure is 78.25% under its distinct evaluation setup; do not compare these as a controlled one-sample intervention.
+- **Vision-paper scope:** `arXiv:2610.25374v1` frames self-rewriting/endogenous drift as a research vision and explanation, NOT a reproduced local incident, an Aegis-measured drift rate, or demonstrated general causal identification for Markdown-based loops.
+- **Historical `Independent Verification: YES` calibration:** read narrowly as original-producer source inspection and source-identity lookup; this annotation **does not establish** third-party experimental reproduction, independence between these papers on an identical quantitative claim, implementation verification or local validation. Two independent paper identities are not “many studies mutually verifying the same failure mode”.
+- **Risk applicability correction:** exact-target-only historical record writing is a reasonable record-retention boundary but **does not itself eliminate** memory/context truncation, downstream summary contamination or implicit evidence-selection failures. `NO_LOCAL_EVIDENCE` means **not observed**, not “locally immune”.
+- **Safety/effect scope:** author-reported SWE-agent benchmark outcomes `!=` Aegis host implementation failure; no change to H1/H2 evidence gate, no A3/A4/A5/A6 promotion, no host-specific intervention.
+- **Evidence Delta:** CORRECTED_INTERPRETATION=ALL_IMAGE_BASELINE_NOT_HYBRID; UNCHANGED_BOUNDARY=NO_LOCAL_EVIDENCE; COUNTEREVIDENCE=SOURCE_METHOD_SCOPE_DIFFERENCE; UNKNOWN_RETAINED=LOCAL_REPRODUCTION_AND_APPLICABILITY; NEXT_RETEST=explicit source-linked run under a comparable agent/harness.
+- **Provenance rule:** original `JULES_NATIVE` producer identity, source records and original task outcome remain immutable above; this section is an independently attributable later correction.
