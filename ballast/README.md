@@ -662,3 +662,13 @@ A rejected or canceled token does not establish historical effect absence, a suc
 Original JavaScript isolate producer and primitive replay verifier EXECUTED with shared semantics, complete source and CSV persistence BLOCKED, full Python checker, Node CLI, live Temporal and independent sink NOT_EXECUTED, current native research endpoint is 2026-10-22
 
 2026-10-22 same-day independent maintainer correction: the original 38 scenarios and 114 decisions are preserved, [reconstructed replay source](tools/experiment_async_token.js), [separate verifier](tools/verify_async_token.js), [CSV](evidence/2026-10-22-async-token-decisions.csv), and [new verification receipt](evidence/2026-10-22-async-token-verification.json) are now persisted, 41/41 new negative tests and 3/3 positive invariants executed in JavaScript isolate, original generator source remains NOT_RECOVERED, Python checker and Node CLI NOT_EXECUTED, no new research window or CASE/NOTES/Audit credit
+
+## Ballast current-state advance — 2026-10-23
+
+One NATIVE bounded [Redis XAUTOCLAIM Daily](records/2026-10-23.md) on PEL claim cursor, JUSTID, trimmed entries and exact external effect-set completion, 29 JavaScript-isolate synthetic scenarios, 87 path decisions, 24/24 rejected adversarial mutations and 6/6 boundary probes
+
+[Redis command documentation](https://redis.io/docs/latest/commands/xautoclaim/) establishes claim and cursor semantics only, [independent AWS queue guidance](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/best-practices-processing-messages-timely-manner.html) describes analogous visibility-related redelivery, neither proves a local external effect, the modeled claim proxy disagreed 25/29 and count proxy 23/29 with the authored reference
+
+[October Monthly](records/2026-10.md) is derived navigation, [latest six-date audit](audits/2026-10-14--2026-10-19.md) remains valid, 2026-10-20..23 four-date audit interval not due, CASE 0, METHOD 0, NOTES 0, Special 0, Audit 0, derived changes zero research credit
+
+JavaScript isolate producer/verifier EXECUTED PASS_WITH_LIMITS, full Python checker, standalone Node CLI, live Redis/SQS, external effect sink and independent semantic authority NOT_EXECUTED, current native research endpoint 2026-10-23
