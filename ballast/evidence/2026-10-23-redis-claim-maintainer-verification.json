@@ -1,0 +1,82 @@
+{
+  "status": "PASS_WITH_LIMITS",
+  "review_kind": "INDEPENDENT_MAINTAINER_SAME_DATE_CORRECTION",
+  "logical_date": "2026-10-23",
+  "original_research_execution": "2026-10-23 04:01:53 Asia/Shanghai",
+  "review_execution": "2026-10-23 Asia/Shanghai, separate execution after producer",
+  "base_commit": "1cacd411b6ec13760f1e3d2c0a0ac397e64e5690",
+  "immutable_original_primitives": {
+    "scenarios_blob_sha": "69705b7e0b4c47fa66235708a1bae4da79f57830",
+    "decisions_blob_sha": "e6f717a1b6f694466aa0065141acb79e5e1a9627",
+    "original_verification_blob_sha": "982c169f7586f92c80db2fd01a64abd6a5588389"
+  },
+  "original_decisions_unchanged": true,
+  "validation": {
+    "ok": true,
+    "errors": [],
+    "scenarios": 29,
+    "rows": 87,
+    "histogram": {
+      "COMPLETE": 5,
+      "STOP_UNKNOWN": 7,
+      "RECONCILE": 14,
+      "BLOCKED": 1,
+      "RETRY_ALLOWED": 1,
+      "EVIDENCE_CONFLICT": 1
+    },
+    "model_relative_disagreements": {
+      "claim_proxy": 25,
+      "count_proxy": 23
+    }
+  },
+  "controls": {
+    "ok": true,
+    "errors": [],
+    "negative_mutations": {
+      "passed": 24,
+      "total": 24
+    },
+    "positive_and_boundary_probes": {
+      "passed": 13,
+      "total": 13
+    },
+    "csv_tamper_rejection": {
+      "status": "PASS",
+      "errors": [
+        "row mismatch baseline claim_proxy"
+      ]
+    }
+  },
+  "new_exact_outcome_probes": [
+    "missing_B_covered_miss_unprotected_witness",
+    "missing_B_covered_miss_stale_witness_revision",
+    "missing_B_covered_miss_wrong_witness_task",
+    "missing_B_covered_miss_wrong_witness_incarnation",
+    "missing_B_covered_miss_wrong_witness_membership",
+    "complete_journal_B_missing_with_positive_hit",
+    "invalid_prior_status_safe_stop"
+  ],
+  "independence": {
+    "implementation": "PARTIAL",
+    "data_source": "NONE",
+    "semantic_contract": "LIMITED",
+    "authority": "NONE"
+  },
+  "actual_execution": {
+    "producer": "EXECUTED_JS_ISOLATE",
+    "verifier": "EXECUTED_JS_ISOLATE",
+    "controls": "EXECUTED_JS_ISOLATE",
+    "native_node_cli": "NOT_EXECUTED",
+    "python_checker": "NOT_EXECUTED",
+    "live_redis": "NOT_EXECUTED",
+    "live_sqs": "NOT_EXECUTED",
+    "external_effect_sink": "NOT_EXECUTED"
+  },
+  "credit": {
+    "new_daily": 0,
+    "new_execution_window": 0,
+    "new_case": 0,
+    "new_note": 0,
+    "new_audit": 0
+  }
+}

@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-22 Temporal async Activity token and exact external effect integrity](records/2026-10-22.md)
+- 最新 Daily: [2026-10-23 Redis Streams XAUTOCLAIM PEL ownership versus external effect integrity](records/2026-10-23.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-14 至 2026-10-19](audits/2026-10-14--2026-10-19.md)
@@ -662,3 +662,15 @@ A rejected or canceled token does not establish historical effect absence, a suc
 Original JavaScript isolate producer and primitive replay verifier EXECUTED with shared semantics, complete source and CSV persistence BLOCKED, full Python checker, Node CLI, live Temporal and independent sink NOT_EXECUTED, current native research endpoint is 2026-10-22
 
 2026-10-22 same-day independent maintainer correction: the original 38 scenarios and 114 decisions are preserved, [reconstructed replay source](tools/experiment_async_token.js), [separate verifier](tools/verify_async_token.js), [CSV](evidence/2026-10-22-async-token-decisions.csv), and [new verification receipt](evidence/2026-10-22-async-token-verification.json) are now persisted, 41/41 new negative tests and 3/3 positive invariants executed in JavaScript isolate, original generator source remains NOT_RECOVERED, Python checker and Node CLI NOT_EXECUTED, no new research window or CASE/NOTES/Audit credit
+
+## Ballast current-state advance — 2026-10-23
+
+One NATIVE bounded [Redis XAUTOCLAIM Daily](records/2026-10-23.md) on PEL claim cursor, JUSTID, trimmed entries and exact external effect-set completion, 29 JavaScript-isolate synthetic scenarios, 87 path decisions, 24/24 rejected adversarial mutations and 6/6 boundary probes
+
+[Redis command documentation](https://redis.io/docs/latest/commands/xautoclaim/) establishes claim and cursor semantics only, [independent AWS queue guidance](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/best-practices-processing-messages-timely-manner.html) describes analogous visibility-related redelivery, neither proves a local external effect, the modeled claim proxy disagreed 25/29 and count proxy 23/29 with the authored reference
+
+[October Monthly](records/2026-10.md) is derived navigation, [latest six-date audit](audits/2026-10-14--2026-10-19.md) remains valid, 2026-10-20..23 four-date audit interval not due, CASE 0, METHOD 0, NOTES 0, Special 0, Audit 0, derived changes zero research credit
+
+JavaScript isolate producer/verifier EXECUTED PASS_WITH_LIMITS, full Python checker, standalone Node CLI, live Redis/SQS, external effect sink and independent semantic authority NOT_EXECUTED, current native research endpoint 2026-10-23
+
+2026-10-23 independent same-date maintainer correction: the original 29 primitive scenarios, 87 path decisions and first verification JSON are unchanged, an actual combined prior-MISS and unprotected/stale/wrong-membership witness attack exposed unsafe RETRY_ALLOWED in producer and verifier, both reference implementations now validate protected witness before permitting recovery, modeled positive B HIT without a complete-journal B event is EVIDENCE_CONFLICT, original 24/24 negatives and new 13/13 exact-outcome boundary probes passed with a separate [maintainer receipt](evidence/2026-10-23-redis-claim-maintainer-verification.json), no new research/window credit, native Python checker and Node CLI NOT_EXECUTED
