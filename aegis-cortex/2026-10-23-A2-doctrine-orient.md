@@ -10,9 +10,17 @@
 - Logical Date: 2026-10-23
 - Execution Timezone: Asia/Shanghai
 - Agent: GPT-6
-- Record Provenance: GPT_NATIVE_PROSPECTIVE
+- Record Provenance: HUMAN_AUTHORIZED_SUBSTITUTE
+- Producer Identity: GPT_NATIVE_PROSPECTIVE
+- Provenance Enum Note: current Aegis checker lacks a dedicated GPT_NATIVE enum; original Jules A1 remains Jules and current GPT A2 uses the authorized substitute class
 - Input Status: SAME_DATE_A1_MERGED_MAIN_VISIBLE
 - Source Status: A1_SOURCE_IDS_PLUS_ONE_INDEPENDENT_PAPER
+- Source Identity: inherited A1 arXiv:2606.17099v1 / 2606.04329v2 / 2603.20357v1 plus arXiv:2610.29869v1
+- Source Authority For Claim: ORIGINAL_RESEARCH_FOR_PAPER_LEVEL_CLAIMS
+- Independent Verification: A1_GIT_BLOB_READ_AND_ORIGINAL_NEW_PAPER_TEXT_CHECKED / NO_LOCAL_RUNTIME_REPLAY
+- Original Execution Status: CURRENT_GPT_NATIVE_A2 / NO_JULES_A2_CLAIM_FOR_2026_10_23
+- Local Applicability: UNKNOWN
+- Remaining Uncertainty: SERIALIZER_AND_LOCAL_DEFENSE_EFFECTIVENESS_NOT_MEASURED
 - Network Status: ORIGINAL_ARXIV_PAPER_VERIFIED
 - Task Status: SUCCESS_BOUNDED_RESEARCH_ORIENTATION
 - Evidence Class: EXTERNAL_RISK_CLASS / NO_LOCAL_INCIDENT
