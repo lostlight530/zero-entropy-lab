@@ -6,7 +6,7 @@
 - Previous A2 relation retained unchanged: `historical-audits/2026-10/2026-10-21-a2-month-relation.md` at blob `c81f51878dc6612629539b9f51c79b09a1310f23`
 - Fixed month identity: `2026-10`; this is a dated successor relation, not a new monthly universe
 - Source objects in current relation: 69; inherited/A1 source identities: 63; N−1 inputs: 3; N-day inputs: 3
-- Main recursive tree SHA matched the fresh `main` commit SHA; all 69 selected source paths exist and their table-recorded current SHAs matched live main before this relation was built
+- Fresh `main` commit `f308c14dadec2a860b9f3ecd19bb3958d5655d66` records root tree `b3a10e8705a861b1bf8aa0c37c6f67a2ce43abaf`; all 69 mapped source paths, blob SHAs, and byte sizes match the recursive tree for that commit.
 - System boundary: Aegis Cortex, Ballast and Zero Host Kernel remain separate; this is not a local runtime replay
 
 ## Complete source-to-current mapping
@@ -107,3 +107,9 @@ W43 remains OPEN; A5 is NOT_DUE. October A6 and Ballast month close remain OPEN 
 ## Result
 
 `A2_MONTH_VERSION_2026-10 / N_DAY_ADMITTED / BALLAST_COUNT_CONFLICT_PRESERVED / MONTH_OPEN`
+
+## 2026-10-23 post-merge correction — Git object identity
+
+- Superseded wording: “Main recursive tree SHA matched the fresh `main` commit SHA; all 69 selected source paths exist and their table-recorded current SHAs matched live main before this relation was built”. The original version remains in Git history.
+- Correction: a commit SHA identifies a Git commit object; a tree SHA identifies a separate tree object. The recorded base commit and root-tree SHA are distinct, and the mapped source rows were verified against that root tree.
+- Scope: wording precision only. Source identities, mapping counts, owner states, historical task-time classifications, research credit, and month-closure state are unchanged.
