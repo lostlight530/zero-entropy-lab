@@ -1,0 +1,76 @@
+{
+  "schema": "ballast-s3-multipart-verification-2026-10-24",
+  "logicalDate": "2026-10-24",
+  "baseSha": "ad7f1961a97ee24a1769f4068c7a54b5f7da663f",
+  "observedAtUtc": "2026-10-23T22:56:45.629Z",
+  "executionEntry": "Amended producer and verifier V8 isolated JavaScript functions",
+  "producer": {
+    "scenarios": 60,
+    "paths": 3,
+    "decisions": 180,
+    "histogram": {
+      "COMPLETE": 6,
+      "STOP_UNKNOWN": 12,
+      "RECONCILE": 38,
+      "EVIDENCE_CONFLICT": 2,
+      "RETRY_ALLOWED": 1,
+      "BLOCKED": 1
+    },
+    "disagreements": {
+      "status_200_proxy": 56,
+      "key_count_proxy": 56
+    },
+    "realExternalEffects": 0
+  },
+  "verifier": {
+    "ok": true,
+    "issues": [],
+    "scenarioCount": 60,
+    "decisionCount": 180,
+    "matched": 180,
+    "negativeCount": 53,
+    "negativeRejected": 53,
+    "probeCount": 24,
+    "probePass": 24,
+    "tamperDetected": true,
+    "independence": {
+      "implementation": "PARTIAL separate primitive implementation",
+      "dataSource": "NONE same authored fixtures",
+      "semanticContract": "LIMITED shared decision contract",
+      "externalAuthority": "NONE"
+    },
+    "environment": "V8 isolated JavaScript function execution, not Node CLI or live AWS"
+  },
+  "validation": {
+    "nativeNodeCLI": "NOT_EXECUTED",
+    "pythonChecker": "NOT_EXECUTED",
+    "liveS3": "NOT_EXECUTED",
+    "independentEffectSink": "NOT_EXECUTED",
+    "semanticAuthority": "NOT_EXECUTED"
+  },
+  "originalObservedAtUtc": "2026-10-23T20:08:07.210Z",
+  "maintainerCorrection": {
+    "originalHeadSha": "3cd9afc5bd7b1316e36f842fbacd36e0f8efd07e",
+    "originalScenarios": 51,
+    "originalDecisions": 153,
+    "originalNegativeControls": 44,
+    "originalProbes": 15,
+    "reviewedAtUtc": "2026-10-23T22:56:45.629Z",
+    "newCounterexamples": [
+      "journal_wrong_bucket",
+      "journal_wrong_key",
+      "journal_missing_scope",
+      "guard_wrong_bucket",
+      "guard_wrong_key",
+      "guard_missing_scope",
+      "journal_version_missing",
+      "coherent_duplicate_required_parts",
+      "coherent_reordered_required_parts"
+    ],
+    "distinctDailyCredit": 0,
+    "distinctResearchWindowCredit": 0,
+    "nativeNodeCLI": "NOT_EXECUTED",
+    "pythonChecker": "NOT_EXECUTED",
+    "externalAuthority": "NOT_EXECUTED"
+  }
+}

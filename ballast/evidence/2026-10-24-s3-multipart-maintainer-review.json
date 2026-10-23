@@ -1,0 +1,42 @@
+{
+  "schema": "ballast-s3-multipart-maintainer-review-2026-10-24",
+  "logicalDate": "2026-10-24",
+  "reviewedAtUtc": "2026-10-23T22:56:45.629Z",
+  "originalHeadSha": "3cd9afc5bd7b1316e36f842fbacd36e0f8efd07e",
+  "originalModel": "nine under-bound coherent attacks were falsely accepted as COMPLETE and original verifier returned PASS",
+  "attacks": [
+    "journal_wrong_bucket",
+    "journal_wrong_key",
+    "journal_missing_scope",
+    "guard_wrong_bucket",
+    "guard_wrong_key",
+    "guard_missing_scope",
+    "journal_version_missing",
+    "coherent_duplicate_required_parts",
+    "coherent_reordered_required_parts"
+  ],
+  "corrected": {
+    "scenarios": 60,
+    "decisions": 180,
+    "negativeControls": "53/53",
+    "exactProbes": "24/24",
+    "rowAgreement": "180/180",
+    "histogram": {
+      "COMPLETE": 6,
+      "STOP_UNKNOWN": 12,
+      "RECONCILE": 38,
+      "EVIDENCE_CONFLICT": 2,
+      "RETRY_ALLOWED": 1,
+      "BLOCKED": 1
+    },
+    "weakDisagreements": {
+      "status_200_proxy": 56,
+      "key_count_proxy": 56
+    }
+  },
+  "implementationIndependence": "PARTIAL",
+  "dataSourceIndependence": "NONE",
+  "semanticIndependence": "LIMITED",
+  "authorityIndependence": "NONE",
+  "newResearchWindows": 0
+}
