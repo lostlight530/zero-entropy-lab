@@ -44,10 +44,13 @@ const verify = function verify(scenarios,decisions,csv){
 if (typeof module !== "undefined") module.exports = {verify};
 if (typeof require !== "undefined" && require.main === module) {
   const fs = require("fs");
-  if (process.argv.length !== 5) throw new Error("usage: node verify_s3_multipart.js scenarios.json decisions.json decisions.csv");
+  if (process.argv.length !== 4) throw new Error("usage: node verify_s3_multipart.js scenarios.json decisions.csv");
   const scenarios = JSON.parse(fs.readFileSync(process.argv[2],"utf8")).scenarios;
-  const decisions = JSON.parse(fs.readFileSync(process.argv[3],"utf8")).decisions;
-  const csv = fs.readFileSync(process.argv[4],"utf8");
+  const csv = fs.readFileSync(process.argv[3],"utf8");
+  const decisions = csv.trimEnd().split("\n").slice(1).map(line => {
+    const [scenario,path,decision] = line.split(",");
+    return {scenario,path,decision};
+  });
   const report = verify(scenarios,decisions,csv);
   process.stdout.write(JSON.stringify(report)+"\n");
   process.exitCode = report.ok ? 0 : 1;
