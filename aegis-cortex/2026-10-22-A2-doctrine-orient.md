@@ -139,3 +139,22 @@
 - Retest exact original source and paper version before any quantitative claim; retain counterexamples to naive compression and effectiveness of partial recent-history retention.
 - Weekly A3 may aggregate hypotheses if cadence calls for it; absence of local incident and lack of experimental replication remain visible.
 - `FORWARD_RECONCILIATION_COMPLETED` is not the original A2's task-time SUCCESS state.
+
+
+## FORWARD_RECONCILIATION_2026_10_22_JULES_A2_RETRY — later execution, not original success
+
+### Attribution and chronology
+- Original Jules A2 execution recorded above remains `INPUT_MISSING / BLOCKED` at `2026-10-22T00:55:48Z`. Its input was not available on that execution base; this status is not revised.
+- PR #703 carries a distinct later A2 output that reports execution time `2026-10-22T02:00:00Z`, `INPUT_PRESENT`, and `SUCCESS`. This later report is retained as a separate retry/reconciliation, not used to retroactively change the earlier task-time result.
+- The existing `FORWARD_RECONCILIATION_2026_10_22_GPT_A2_SUCCESSOR` remains intact. The later Jules retry and the earlier GPT follow-on are distinct producer records.
+- The current file path being present now does not prove it was present on the original 00:55:48Z input base.
+
+### Source-scope correction
+- `arXiv:2610.25374v1` remains an external research vision/hypothesis. It is not evidence of an observed local Aegis incident or a reproduced endogenous-drift failure.
+- `arXiv:2610.28612v1`: the existing reconciliation records the paper's 50-task all-image ablation results as 45/50, 37/50, and 29/50 under their tested conditions. These results must not be restated as proof that the proposed hybrid TraceLite method itself drops from 90% to 74%, and they do not measure Aegis.
+- Metadata/abstract verification is not full-text reproduction, an independent replication, or local causal validation. Any `Independent Verification: YES` field in the later retry applies only to the source checks actually described; it does not establish independent runtime conformance.
+- Local incident evidence remains `NO_LOCAL_EVIDENCE`; host applicability remains `UNKNOWN`; no local reproduction, A3 decision, A4 protocol change, or A5/A6 doctrine promotion is claimed.
+- Repeated use of the same arXiv paper across repositories remains one source lineage for that paper, not independent corroboration.
+
+### Disposition
+`LATER_RETRY_RETAINED / ORIGINAL_JULES_RUN_BLOCKED / PAPER_LEVEL_ONLY / LOCAL_APPLICABILITY_UNKNOWN`
