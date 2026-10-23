@@ -674,3 +674,15 @@ One NATIVE bounded [Redis XAUTOCLAIM Daily](records/2026-10-23.md) on PEL claim 
 JavaScript isolate producer/verifier EXECUTED PASS_WITH_LIMITS, full Python checker, standalone Node CLI, live Redis/SQS, external effect sink and independent semantic authority NOT_EXECUTED, current native research endpoint 2026-10-23
 
 2026-10-23 independent same-date maintainer correction: the original 29 primitive scenarios, 87 path decisions and first verification JSON are unchanged, an actual combined prior-MISS and unprotected/stale/wrong-membership witness attack exposed unsafe RETRY_ALLOWED in producer and verifier, both reference implementations now validate protected witness before permitting recovery, modeled positive B HIT without a complete-journal B event is EVIDENCE_CONFLICT, original 24/24 negatives and new 13/13 exact-outcome boundary probes passed with a separate [maintainer receipt](evidence/2026-10-23-redis-claim-maintainer-verification.json), no new research/window credit, native Python checker and Node CLI NOT_EXECUTED
+
+## Ballast current-state advance — 2026-10-24
+
+One NATIVE [Daily S3 multipart publication study](records/2026-10-24.md) tests whether HTTP 200 with embedded Error, parsed success, or same-key/count readback proves exact authorized historical multipart publish and protected current ordered-part completion
+
+Executed V8-isolate [producer](tools/experiment_s3_multipart.js), separate [primitive verifier](tools/verify_s3_multipart.js), [scenario evidence](evidence/2026-10-24-s3-multipart-scenarios.json), [decision CSV](evidence/2026-10-24-s3-multipart-decisions.csv) and [verification receipt](evidence/2026-10-24-s3-multipart-verification.json): 51 synthetic scenarios, 153 decisions, 44/44 negative controls and 15/15 exact probes, forged CSV detected, no real effects
+
+[Amazon S3 API](https://docs.aws.amazon.com/AmazonS3/latest/API/API_CompleteMultipartUpload.html) documents HTTP 200 with embedded Error and conditional conflicts, [AWS multipart guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html) describes part/ETag semantics, [Google Cloud Storage compose guide](https://cloud.google.com/storage/docs/composing-objects) offers only a different-product generation-fencing analogy, not independent AWS wire evidence
+
+[October Monthly](records/2026-10.md) is derived navigation, latest [nonoverlapping audit](audits/2026-10-14--2026-10-19.md) remains valid, 2026-10-20..24 five-date interval not yet due, CASE 0, METHOD 0, NOTES 0, Special 0, Audit 0, derived changes zero research credit
+
+JavaScript isolate producer/verifier EXECUTED PASS_WITH_LIMITS, native Node CLI, full Python checker, real S3/GCS, external effect sink and independent semantic authority NOT_EXECUTED, current native research endpoint 2026-10-24

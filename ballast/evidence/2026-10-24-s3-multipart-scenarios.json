@@ -1,0 +1,4866 @@
+{
+  "schema": "ballast-s3-multipart-primitives-2026-10-24",
+  "logicalDate": "2026-10-24",
+  "baseSha": "ad7f1961a97ee24a1769f4068c7a54b5f7da663f",
+  "observedAtUtc": "2026-10-23T20:08:07.210Z",
+  "sourceContract": "authored bounded synthetic fixtures; not AWS traffic",
+  "scenarios": [
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "baseline"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "error",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "unknown",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "http200_error_no_effect"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "malformed",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "unknown",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "http200_malformed_no_effect"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "unknown",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "http200_result_no_effect"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": null,
+        "body": "lost",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "lost_response_prior_effect"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "C@1",
+              "etag": "etag-c1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "C@1",
+            "etag": "etag-c1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "same_count_part_swap"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "duplicate_part_identity"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            },
+            {
+              "number": 3,
+              "identity": "C@1",
+              "etag": "etag-c1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          },
+          {
+            "number": 3,
+            "identity": "C@1",
+            "etag": "etag-c1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "extra_part"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "missing_part"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b2"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b2"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "wrong_part_etag"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            },
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          },
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "part_order_reversed"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "other-task",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "journal_wrong_task"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "old-inc",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "journal_wrong_incarnation"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "journal_wrong_upload_identity"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "other-effect",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "journal_wrong_effect_identity"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": false,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "historically_unauthorized"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 80
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "effect_after_readback"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 100
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "readback_after_guard"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-2",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "readback_wrong_version"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "other.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "readback_wrong_key"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "old-inc",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "readback_wrong_incarnation"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 6,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "guard_stale_revision"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": false,
+        "committedAt": 90
+      },
+      "id": "guard_unprotected"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "C@1",
+            "etag": "etag-c1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "guard_same_count_swap"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        },
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "duplicate_journal_effect"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        },
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "unexpected",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "extra_journal_effect"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "miss",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "covered_miss_conflicts_positive"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "covered_hit_without_journal"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "unknown",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "unknown_no_journal"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "miss",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 10,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "uncovered_miss_no_journal"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "miss",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "covered_miss_retry"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": false,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "miss",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "covered_miss_revoked"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": null,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "miss",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "covered_miss_permission_unknown"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "miss",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": false,
+        "committedAt": 90
+      },
+      "id": "covered_miss_unprotected_guard"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "miss",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 6,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "covered_miss_stale_revision"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "miss",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 65,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "expired_retention_miss"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "miss",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "other-effect",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "wrong_scope_miss"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-25",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-25",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-25",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "same_key_new_incarnation"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": false,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "revoked_after_authorized_effect"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "error",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "http200_error_but_prior_effect_valid"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "readback_missing_with_journal"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "other-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "readback_wrong_bucket"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          },
+          {
+            "number": 3,
+            "identity": "C@1",
+            "etag": "etag-c1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "readback_parts_extra"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "other-task",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "guard_wrong_task"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "old-inc",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "guard_wrong_incarnation"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "other-effect",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "prior_hit_wrong_effect_scope"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 409,
+        "body": "error",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "http409_with_prior_valid"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "miss",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "expired"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "miss_query_lifecycle_unknown"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [],
+      "prior": {
+        "state": "miss",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": false,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": null,
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "miss_query_not_authoritative"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": "NaN"
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "nonfinite_effect_time"
+    },
+    {
+      "target": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "revision": 7,
+        "effectId": "publish-effect-24",
+        "requiredParts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ]
+      },
+      "permission": true,
+      "response": {
+        "status": 200,
+        "body": "result",
+        "attempt": "attempt-2",
+        "uploadId": "upload-2",
+        "partCount": 2
+      },
+      "journal": [
+        {
+          "task": "publish-task-24",
+          "inc": "target-inc-24",
+          "effectId": "publish-effect-24",
+          "uploadId": "upload-1",
+          "attempt": "attempt-1",
+          "version": "version-1",
+          "parts": [
+            {
+              "number": 1,
+              "identity": "A@1",
+              "etag": "etag-a1"
+            },
+            {
+              "number": 2,
+              "identity": "B@1",
+              "etag": "etag-b1"
+            }
+          ],
+          "authorized": true,
+          "committedAt": 30
+        }
+      ],
+      "prior": {
+        "state": "hit",
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "effectId": "publish-effect-24",
+        "authority": true,
+        "exact": true,
+        "oldAttemptEnd": 40,
+        "watermark": 60,
+        "queriedAt": 70,
+        "retentionThrough": 120,
+        "lifecycle": "active"
+      },
+      "readback": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "bucket": "lab-bucket",
+        "key": "artifact.bin",
+        "version": "version-1",
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 2,
+            "identity": "B@1",
+            "etag": "etag-b1"
+          }
+        ],
+        "readAt": 75
+      },
+      "guard": {
+        "task": "publish-task-24",
+        "inc": "target-inc-24",
+        "revision": 7,
+        "parts": [
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          },
+          {
+            "number": 1,
+            "identity": "A@1",
+            "etag": "etag-a1"
+          }
+        ],
+        "protected": true,
+        "committedAt": 90
+      },
+      "id": "duplicate_guard_member"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "ballast-s3-multipart-verification-2026-10-24",
+  "logicalDate": "2026-10-24",
+  "baseSha": "ad7f1961a97ee24a1769f4068c7a54b5f7da663f",
+  "observedAtUtc": "2026-10-23T20:08:07.210Z",
+  "executionEntry": "V8 isolated produce() and verify() calls",
+  "producer": {
+    "scenarios": 51,
+    "paths": 3,
+    "decisions": 153,
+    "histogram": {
+      "COMPLETE": 6,
+      "STOP_UNKNOWN": 12,
+      "RECONCILE": 29,
+      "EVIDENCE_CONFLICT": 2,
+      "RETRY_ALLOWED": 1,
+      "BLOCKED": 1
+    },
+    "disagreements": {
+      "status_200_proxy": 47,
+      "key_count_proxy": 47
+    },
+    "realExternalEffects": 0
+  },
+  "verifier": {
+    "ok": true,
+    "issues": [],
+    "scenarioCount": 51,
+    "decisionCount": 153,
+    "matched": 153,
+    "negativeCount": 44,
+    "negativeRejected": 44,
+    "probeCount": 15,
+    "probePass": 15,
+    "tamperDetected": true,
+    "independence": {
+      "implementation": "PARTIAL separate primitive implementation",
+      "dataSource": "NONE same authored fixtures",
+      "semanticContract": "LIMITED shared decision contract",
+      "externalAuthority": "NONE"
+    },
+    "environment": "V8 isolated JavaScript function execution, not Node CLI or live AWS"
+  },
+  "validation": {
+    "nativeNodeCLI": "NOT_EXECUTED",
+    "pythonChecker": "NOT_EXECUTED",
+    "liveS3": "NOT_EXECUTED",
+    "independentEffectSink": "NOT_EXECUTED",
+    "semanticAuthority": "NOT_EXECUTED"
+  }
+}
