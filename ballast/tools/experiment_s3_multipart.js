@@ -7,10 +7,10 @@ const run = function produce(){
     target:{task:"publish-task-24",inc:"target-inc-24",bucket:"lab-bucket",key:"artifact.bin",revision:7,effectId:"publish-effect-24",requiredParts:parts},
     permission:true,
     response:{status:200,body:"result",attempt:"attempt-2",uploadId:"upload-2",partCount:2},
-    journal:[{task:"publish-task-24",inc:"target-inc-24",effectId:"publish-effect-24",uploadId:"upload-1",attempt:"attempt-1",version:"version-1",parts:copy(parts),authorized:true,committedAt:30}],
+    journal:[{task:"publish-task-24",inc:"target-inc-24",effectId:"publish-effect-24",bucket:"lab-bucket",key:"artifact.bin",uploadId:"upload-1",attempt:"attempt-1",version:"version-1",parts:copy(parts),authorized:true,committedAt:30}],
     prior:{state:"hit",task:"publish-task-24",inc:"target-inc-24",effectId:"publish-effect-24",authority:true,exact:true,oldAttemptEnd:40,watermark:60,queriedAt:70,retentionThrough:120,lifecycle:"active"},
     readback:{task:"publish-task-24",inc:"target-inc-24",bucket:"lab-bucket",key:"artifact.bin",version:"version-1",parts:copy(parts),readAt:75},
-    guard:{task:"publish-task-24",inc:"target-inc-24",revision:7,parts:copy(parts),protected:true,committedAt:90}
+    guard:{task:"publish-task-24",inc:"target-inc-24",revision:7,bucket:"lab-bucket",key:"artifact.bin",effectId:"publish-effect-24",version:"version-1",parts:copy(parts),protected:true,committedAt:90}
   };
   const scenarios=[];
   function add(id,mutate){const s=copy(base);s.id=id;mutate(s);scenarios.push(s)}
@@ -66,8 +66,19 @@ const run = function produce(){
   add("miss_query_not_authoritative",s=>{absent(s);s.prior.state="miss";s.prior.authority=false});
   add("nonfinite_effect_time",s=>{s.journal[0].committedAt="NaN"});
   add("duplicate_guard_member",s=>{s.guard.parts[1]=copy(s.guard.parts[0])});
+  add("journal_wrong_bucket",s=>{s.journal[0].bucket="other-bucket"});
+  add("journal_wrong_key",s=>{s.journal[0].key="other.bin"});
+  add("journal_missing_scope",s=>{delete s.journal[0].bucket;delete s.journal[0].key});
+  add("guard_wrong_bucket",s=>{s.guard.bucket="other-bucket"});
+  add("guard_wrong_key",s=>{s.guard.key="other.bin"});
+  add("guard_missing_scope",s=>{delete s.guard.bucket;delete s.guard.key});
+  add("journal_version_missing",s=>{delete s.journal[0].version;delete s.readback.version});
+  add("coherent_duplicate_required_parts",s=>{const p=copy(s.target.requiredParts[0]);s.target.requiredParts[1]=copy(p);s.journal[0].parts[1]=copy(p);s.readback.parts[1]=copy(p);s.guard.parts[1]=copy(p)});
+  add("coherent_reordered_required_parts",s=>{s.target.requiredParts.reverse();s.journal[0].parts.reverse();s.readback.parts.reverse();s.guard.parts.reverse()});
   const eq=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
-  const validGuard=s=>s.guard&&s.guard.protected===true&&s.guard.task===s.target.task&&s.guard.inc===s.target.inc&&s.guard.revision===s.target.revision&&eq(s.guard.parts,s.target.requiredParts)&&Number.isFinite(s.guard.committedAt);
+  const validParts=xs=>Array.isArray(xs)&&xs.length>0&&xs.every((p,i)=>p&&Number.isInteger(p.number)&&p.number>0&&(i===0||xs[i-1].number<p.number)&&typeof p.identity==="string"&&p.identity.length>0&&typeof p.etag==="string"&&p.etag.length>0)&&new Set(xs.map(p=>p.identity)).size===xs.length;
+  const validTarget=t=>!!t&&["task","inc","bucket","key","effectId"].every(k=>typeof t[k]==="string"&&t[k].length>0)&&Number.isInteger(t.revision)&&validParts(t.requiredParts);
+  const validGuard=s=>validTarget(s.target)&&s.guard&&s.guard.protected===true&&s.guard.task===s.target.task&&s.guard.inc===s.target.inc&&s.guard.revision===s.target.revision&&s.guard.bucket===s.target.bucket&&s.guard.key===s.target.key&&s.guard.effectId===s.target.effectId&&typeof s.guard.version==="string"&&s.guard.version.length>0&&eq(s.guard.parts,s.target.requiredParts)&&Number.isFinite(s.guard.committedAt);
   const covered=s=>{const p=s.prior;return p&&p.authority===true&&p.exact===true&&p.task===s.target.task&&p.inc===s.target.inc&&p.effectId===s.target.effectId&&p.lifecycle==="active"&&[p.oldAttemptEnd,p.watermark,p.queriedAt,p.retentionThrough].every(Number.isFinite)&&p.watermark>=p.oldAttemptEnd&&p.queriedAt>=p.watermark&&p.retentionThrough>=p.queriedAt};
   function reference(s){
     const has=s.journal.length>0;
@@ -79,7 +90,7 @@ const run = function produce(){
     }
     if(s.journal.length!==1||!validGuard(s))return "RECONCILE";
     const j=s.journal[0],h=s.readback,t=s.target;
-    if(j.task!==t.task||j.inc!==t.inc||j.effectId!==t.effectId||typeof j.uploadId!=="string"||!j.uploadId||j.authorized!==true||!eq(j.parts,t.requiredParts)||!Number.isFinite(j.committedAt))return "RECONCILE";
+    if(j.task!==t.task||j.inc!==t.inc||j.effectId!==t.effectId||j.bucket!==t.bucket||j.key!==t.key||typeof j.version!=="string"||j.version.length===0||s.guard.version!==j.version||typeof j.uploadId!=="string"||!j.uploadId||j.authorized!==true||!eq(j.parts,t.requiredParts)||!Number.isFinite(j.committedAt))return "RECONCILE";
     if(!h||h.task!==t.task||h.inc!==t.inc||h.bucket!==t.bucket||h.key!==t.key||h.version!==j.version||!eq(h.parts,t.requiredParts)||!Number.isFinite(h.readAt)||j.committedAt>h.readAt||h.readAt>s.guard.committedAt)return "RECONCILE";
     return "COMPLETE";
   }

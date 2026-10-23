@@ -679,9 +679,11 @@ JavaScript isolate producer/verifier EXECUTED PASS_WITH_LIMITS, full Python chec
 
 One NATIVE [Daily S3 multipart publication study](records/2026-10-24.md) tests whether HTTP 200 with embedded Error, parsed success, or same-key/count readback proves exact authorized historical multipart publish and protected current ordered-part completion
 
-Executed V8-isolate [producer](tools/experiment_s3_multipart.js), separate [primitive verifier](tools/verify_s3_multipart.js), [scenario evidence](evidence/2026-10-24-s3-multipart-scenarios.json), [decision CSV](evidence/2026-10-24-s3-multipart-decisions.csv) and [verification receipt](evidence/2026-10-24-s3-multipart-verification.json): 51 synthetic scenarios, 153 decisions, 44/44 negative controls and 15/15 exact probes, forged CSV detected, no real effects
+Executed V8-isolate [producer](tools/experiment_s3_multipart.js), separate [primitive verifier](tools/verify_s3_multipart.js), [scenario evidence](evidence/2026-10-24-s3-multipart-scenarios.json), [decision CSV](evidence/2026-10-24-s3-multipart-decisions.csv) and [verification receipt](evidence/2026-10-24-s3-multipart-verification.json): 60 synthetic scenarios, 180 decisions, 53/53 negative controls and 24/24 exact probes, forged CSV detected, no real effects
 
 [Amazon S3 API](https://docs.aws.amazon.com/AmazonS3/latest/API/API_CompleteMultipartUpload.html) documents HTTP 200 with embedded Error and conditional conflicts, [AWS multipart guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html) describes part/ETag semantics, [Google Cloud Storage compose guide](https://cloud.google.com/storage/docs/composing-objects) offers only a different-product generation-fencing analogy, not independent AWS wire evidence
+
+Same-day [maintainer correction](evidence/2026-10-24-s3-multipart-maintainer-review.json) documents nine old-reference false COMPLETE counterexamples repaired by journal bucket/key/version and guard resource binding with strict ordered unique declared parts, V8-only revalidation, no new credit
 
 [October Monthly](records/2026-10.md) is derived navigation, latest [nonoverlapping audit](audits/2026-10-14--2026-10-19.md) remains valid, 2026-10-20..24 five-date interval not yet due, CASE 0, METHOD 0, NOTES 0, Special 0, Audit 0, derived changes zero research credit
 
