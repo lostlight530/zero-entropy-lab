@@ -71,7 +71,7 @@
 - Weekly eligibility: OPEN_HYPOTHESIS, not a local incident or deployable requirement
 
 ## FOUR_AXIS_BOUNDARY_MATRIX
-- External Risk: PAPER_REPORTED / NOT_A_LOCAL_INCIDENT
+- External Risk: PAPER_REPORTED / NOT_A_LOCAL_INCIDENT_ESTABLISHED
 
 | Question | Result | Supporting scope |
 | --- | --- | --- |
