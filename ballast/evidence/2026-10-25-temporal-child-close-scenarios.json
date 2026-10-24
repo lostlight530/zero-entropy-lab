@@ -1,0 +1,6386 @@
+[
+  {
+    "id": "baseline",
+    "group": "positive",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "abandon_post_close_effect",
+    "group": "positive",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "request_cancel_with_observed_effect",
+    "group": "positive",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "REQUEST_CANCEL",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "terminate_with_preclose_effects",
+    "group": "positive",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "TERMINATE",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 45,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "revoked_after_effect",
+    "group": "positive",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": 70,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "current_permission_revoked_after_effect",
+    "group": "positive",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": false,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "parent_completed_without_child_start",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": []
+    },
+    "effects": [],
+    "query": {
+      "result": "unknown",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "start_initiated_but_not_started",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": []
+    },
+    "effects": [],
+    "query": {
+      "result": "unknown",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "child_started_without_effect",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "unknown",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "same_count_wrong_effect_member",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "C",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "duplicate_effect_replaces_member",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "extra_effect",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      },
+      {
+        "member": "C",
+        "effect": "effect-C",
+        "child": "child-C",
+        "run": "run-C",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 70,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "C",
+          "effect": "effect-C"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "duplicate_child_start",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        },
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "missing_child_start_B",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "late_child_start_after_parent_close",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 55
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "wrong_child_run_start",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-other",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "wrong_effect_run",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-other",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "wrong_effect_incarnation",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-other",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "historical_revocation_before_effect",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": 60,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "historical_auth_wrong_task",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "other",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "historical_auth_string_time",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": "100",
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "witness_same_count_swap",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "C"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "C",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "C"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "witness_duplicate_member",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "A"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "witness_extra_member",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B",
+        "C"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "witness_extra_state",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        },
+        {
+          "member": "C",
+          "effect": "effect-C",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "guard_stale_revision",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 6,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "guard_unprotected",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": false,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "guard_wrong_task",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "other",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "postcondition_after_guard",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 100,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "postcondition_missing_member",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "postcondition_duplicate_state",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "postcondition_wrong_effect",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-X",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "miss_conflicts_positive",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "authoritative miss",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "miss_conflicts_partial_positive",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "authoritative miss",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A"
+      ],
+      "effects": [
+        "effect-A"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "unknown_no_effect",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "unknown",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "hit_without_journal",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "covered_miss_retry",
+    "group": "recovery",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "authoritative miss",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "covered_miss_revoked",
+    "group": "recovery",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": false,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "authoritative miss",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "covered_miss_unprotected",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "authoritative miss",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": false,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "covered_miss_wrong_members",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "authoritative miss",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "C"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "miss_stale_watermark",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "authoritative miss",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 30,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "miss_retention_expired",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "authoritative miss",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 80,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "miss_wrong_incarnation",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "authoritative miss",
+      "task": "task-25",
+      "inc": "other",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "miss_wrong_authority",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "authoritative miss",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "replica"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "miss_lifecycle_expired",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "authoritative miss",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "expired",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "miss_missing_old_attempt_scope",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "authoritative miss",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 25,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "parent_not_terminal_with_effect",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "RUNNING",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "task_cancelled_with_historical_effect",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "cancelled"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "extra_child_start",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        },
+        {
+          "member": "C",
+          "child": "child-C",
+          "run": "run-C",
+          "at": 22
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "effect_timestamp_string",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": "65",
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  },
+  {
+    "id": "guard_commit_before_effect",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [
+      {
+        "member": "A",
+        "effect": "effect-A",
+        "child": "child-A",
+        "run": "run-A",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 35,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "A",
+          "effect": "effect-A"
+        }
+      },
+      {
+        "member": "B",
+        "effect": "effect-B",
+        "child": "child-B",
+        "run": "run-B",
+        "task": "task-25",
+        "inc": "target-25",
+        "at": 65,
+        "authorization": {
+          "approvedAt": 10,
+          "expiresAt": 100,
+          "revokedAt": null,
+          "task": "task-25",
+          "member": "B",
+          "effect": "effect-B"
+        }
+      }
+    ],
+    "query": {
+      "result": "hit",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-B"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "done": true
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "done": true
+        }
+      ],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 60
+      }
+    }
+  },
+  {
+    "id": "query_miss_wrong_effect_scope",
+    "group": "negative",
+    "task": {
+      "id": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        {
+          "member": "A",
+          "effect": "effect-A",
+          "child": "child-A",
+          "run": "run-A"
+        },
+        {
+          "member": "B",
+          "effect": "effect-B",
+          "child": "child-B",
+          "run": "run-B"
+        }
+      ],
+      "permission": true,
+      "status": "active"
+    },
+    "parent": {
+      "id": "parent-25",
+      "run": "parent-run-25",
+      "status": "COMPLETED",
+      "closedAt": 50,
+      "policy": "ABANDON",
+      "startEvents": [
+        {
+          "member": "A",
+          "child": "child-A",
+          "run": "run-A",
+          "at": 20
+        },
+        {
+          "member": "B",
+          "child": "child-B",
+          "run": "run-B",
+          "at": 21
+        }
+      ]
+    },
+    "effects": [],
+    "query": {
+      "result": "authoritative miss",
+      "task": "task-25",
+      "inc": "target-25",
+      "members": [
+        "A",
+        "B"
+      ],
+      "effects": [
+        "effect-A",
+        "effect-C"
+      ],
+      "oldStart": 15,
+      "oldEnd": 70,
+      "scopeStart": 0,
+      "scopeEnd": 80,
+      "watermark": 85,
+      "queriedAt": 90,
+      "retentionThrough": 140,
+      "lifecycle": "active",
+      "authority": "synthetic-sink"
+    },
+    "witness": {
+      "task": "task-25",
+      "inc": "target-25",
+      "revision": 7,
+      "members": [
+        "A",
+        "B"
+      ],
+      "states": [],
+      "readAt": 91,
+      "guard": {
+        "protected": true,
+        "task": "task-25",
+        "inc": "target-25",
+        "revision": 7,
+        "members": [
+          "A",
+          "B"
+        ],
+        "committedAt": 95
+      }
+    }
+  }
+]
