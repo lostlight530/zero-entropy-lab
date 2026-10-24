@@ -1,0 +1,80 @@
+{
+  "schema": "ballast-temporal-child-close-maintainer-review-2026-10-25",
+  "logicalDate": "2026-10-25",
+  "originalHeadSha": "f21a01d673c796dbcb4d71cd17d4da959354db85",
+  "observedAtUtc": "2026-10-24T23:14:16.829Z",
+  "originalVerifierAcceptedNewStrongCounterexamples": [
+    "parent_run_changed",
+    "parent_id_missing",
+    "duplicate_child_across_members",
+    "duplicate_run_across_members",
+    "effect_wrong_parent_run",
+    "child_start_wrong_parent_run",
+    "historical_auth_wrong_child_run",
+    "historical_auth_wrong_incarnation",
+    "state_wrong_incarnation",
+    "state_wrong_revision",
+    "witness_binding_wrong_child",
+    "guard_binding_wrong_run",
+    "effect_wrong_attempt",
+    "covered_miss_wrong_run_scope",
+    "covered_miss_missing_attempt_scope"
+  ],
+  "originalCounts": {
+    "scenarios": 52,
+    "decisions": 156,
+    "negativeControls": 44,
+    "exactProbes": 25
+  },
+  "correctedCounts": {
+    "scenarios": 67,
+    "decisions": 201,
+    "negativeControls": 59,
+    "rejectedNegatives": 59,
+    "probes": 40,
+    "probesPassed": 40,
+    "histogram": {
+      "COMPLETE": 6,
+      "STOP_UNKNOWN": 16,
+      "RECONCILE": 41,
+      "EVIDENCE_CONFLICT": 2,
+      "RETRY_ALLOWED": 1,
+      "BLOCKED": 1
+    },
+    "weakDisagreements": {
+      "parent_terminal_proxy": 60,
+      "child_started_count_proxy": 57
+    },
+    "rawCounts": {
+      "childStartedEvents": 131,
+      "modeledEffectEvents": 99
+    },
+    "forgedCsvDetected": true
+  },
+  "fixes": [
+    "parentId and parentRun bound through child-start, effect, authorization, state and guarded completion",
+    "per-member unique member/effect/child/run/attempt binding",
+    "effect-time approval scope additionally bound to parent, child, run, attempt and target incarnation",
+    "protected witness requires exact spec bindings, not only member count or names",
+    "authoritative MISS requires exact run/attempt tuple scoped to parent run",
+    "verifier independently preserves effect run and attempt in MISS-positive conflict test"
+  ],
+  "validation": {
+    "jsV8Producer": "EXECUTED_PASS",
+    "jsV8PrimitiveVerifier": "EXECUTED_PASS_WITH_LIMITS",
+    "originalReceiptReplay": "EXECUTED_PASS",
+    "pythonChecker": "NOT_EXECUTED",
+    "nodeCLI": "NOT_EXECUTED",
+    "liveTemporal": "NOT_EXECUTED",
+    "semanticIndependence": "LIMITED"
+  },
+  "credit": {
+    "extraDaily": 0,
+    "extraWindow": 0,
+    "case": 0,
+    "method": 0,
+    "notes": 0,
+    "special": 0,
+    "audit": 0
+  }
+}

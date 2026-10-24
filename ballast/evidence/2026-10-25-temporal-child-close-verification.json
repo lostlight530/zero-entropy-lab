@@ -1,0 +1,74 @@
+{
+  "ok": true,
+  "errors": [],
+  "scenarios": 67,
+  "decisions": 201,
+  "verifiedRows": 201,
+  "negativeControls": 59,
+  "rejectedNegatives": 59,
+  "probesExpected": 40,
+  "probesPassed": 40,
+  "forgedCsvDetected": true,
+  "histogram": {
+    "COMPLETE": 6,
+    "STOP_UNKNOWN": 16,
+    "RECONCILE": 41,
+    "EVIDENCE_CONFLICT": 2,
+    "RETRY_ALLOWED": 1,
+    "BLOCKED": 1
+  },
+  "weakDisagreements": {
+    "parent_terminal_proxy": 60,
+    "child_started_count_proxy": 57
+  },
+  "rawCounts": {
+    "childStartedEvents": 131,
+    "modeledEffectEvents": 99
+  },
+  "independence": {
+    "implementation": "PARTIAL",
+    "dataSource": "NONE",
+    "semanticContract": "LIMITED",
+    "externalAuthority": "NONE"
+  },
+  "runtime": "JavaScript isolate",
+  "liveEffects": 0,
+  "sourceDate": "2026-10-25",
+  "baseSha": "561254377a9946aa608020b22e98e4aaa8118003",
+  "validationEntry": "V8 isolate: producerRun() then verifierRun(scenarios, decisions, csv), including actual CSV validator replay on forged row",
+  "checker": "NOT_EXECUTED",
+  "nodeCLI": "NOT_EXECUTED",
+  "liveTemporal": "NOT_EXECUTED",
+  "originalObservation": {
+    "headSha": "f21a01d673c796dbcb4d71cd17d4da959354db85",
+    "scenarios": 52,
+    "decisions": 156,
+    "negativeControls": 44,
+    "exactProbes": 25,
+    "sourceExecution": "2026-10-25 04:00–04:07 Asia/Shanghai"
+  },
+  "maintainerCorrection": {
+    "observedAtUtc": "2026-10-24T23:14:16.829Z",
+    "entry": "V8 isolate producerRun() and verifierRun() of amended source, persisted source/CSV replay",
+    "originalCounterexamplesAcceptedByOldVerifier": [
+      "parent_run_changed",
+      "parent_id_missing",
+      "duplicate_child_across_members",
+      "duplicate_run_across_members",
+      "effect_wrong_parent_run",
+      "child_start_wrong_parent_run",
+      "historical_auth_wrong_child_run",
+      "historical_auth_wrong_incarnation",
+      "state_wrong_incarnation",
+      "state_wrong_revision",
+      "witness_binding_wrong_child",
+      "guard_binding_wrong_run",
+      "effect_wrong_attempt",
+      "covered_miss_wrong_run_scope",
+      "covered_miss_missing_attempt_scope"
+    ],
+    "independence": "implementation PARTIAL, dataSource NONE, semanticContract LIMITED, externalAuthority NONE",
+    "additionalDailyCredit": 0,
+    "additionalWindowCredit": 0
+  }
+}
