@@ -35,7 +35,7 @@
   "liveEffects": 0,
   "sourceDate": "2026-10-25",
   "baseSha": "561254377a9946aa608020b22e98e4aaa8118003",
-  "validationEntry": "V8 isolate: producerRun() then verifierRun(scenarios, decisions, csv)",
+  "validationEntry": "V8 isolate: producerRun() then verifierRun(scenarios, decisions, csv), including actual CSV validator replay on forged row",
   "checker": "NOT_EXECUTED",
   "nodeCLI": "NOT_EXECUTED",
   "liveTemporal": "NOT_EXECUTED"
