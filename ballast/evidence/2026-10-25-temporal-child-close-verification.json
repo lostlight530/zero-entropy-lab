@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "errors": [],
+  "scenarios": 52,
+  "decisions": 156,
+  "verifiedRows": 156,
+  "negativeControls": 44,
+  "rejectedNegatives": 44,
+  "probesExpected": 25,
+  "probesPassed": 25,
+  "forgedCsvDetected": true,
+  "histogram": {
+    "COMPLETE": 6,
+    "STOP_UNKNOWN": 14,
+    "RECONCILE": 28,
+    "EVIDENCE_CONFLICT": 2,
+    "RETRY_ALLOWED": 1,
+    "BLOCKED": 1
+  },
+  "weakDisagreements": {
+    "parent_terminal_proxy": 45,
+    "child_started_count_proxy": 42
+  },
+  "rawCounts": {
+    "childStartedEvents": 101,
+    "modeledEffectEvents": 73
+  },
+  "independence": {
+    "implementation": "PARTIAL",
+    "dataSource": "NONE",
+    "semanticContract": "LIMITED",
+    "externalAuthority": "NONE"
+  },
+  "runtime": "JavaScript isolate",
+  "liveEffects": 0,
+  "sourceDate": "2026-10-25",
+  "baseSha": "561254377a9946aa608020b22e98e4aaa8118003",
+  "validationEntry": "V8 isolate: producerRun() then verifierRun(scenarios, decisions, csv)",
+  "checker": "NOT_EXECUTED",
+  "nodeCLI": "NOT_EXECUTED",
+  "liveTemporal": "NOT_EXECUTED"
+}
