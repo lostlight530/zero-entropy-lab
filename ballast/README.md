@@ -29,10 +29,10 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-23 Redis Streams XAUTOCLAIM PEL ownership versus external effect integrity](records/2026-10-23.md)
+- 最新 Daily: [2026-10-25 Temporal Parent Close Policy and child-start versus exact external effect integrity](records/2026-10-25.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
-- 最新完整周期审计: [2026-10-14 至 2026-10-19](audits/2026-10-14--2026-10-19.md)
+- 最新完整周期审计: [2026-10-20 至 2026-10-25](audits/2026-10-20--2026-10-25.md)
 - 2026-09-26 至 2026-10-01 已形成新的 6 日 derived audit, 其中 2026-09-26 为 RECONSTRUCTION / NOT_RUN / UNVERIFIED. 该 audit 仅做派生审计, 新增实验数量 0, 新增长期结论数量 0, 不重复创建重叠 audit
 - 当前方法: [METHOD.md](METHOD.md)
 - 控制案例: [CASES.md](CASES.md)
@@ -688,3 +688,17 @@ Same-day [maintainer correction](evidence/2026-10-24-s3-multipart-maintainer-rev
 [October Monthly](records/2026-10.md) is derived navigation, latest [nonoverlapping audit](audits/2026-10-14--2026-10-19.md) remains valid, 2026-10-20..24 five-date interval not yet due, CASE 0, METHOD 0, NOTES 0, Special 0, Audit 0, derived changes zero research credit
 
 JavaScript isolate producer/verifier EXECUTED PASS_WITH_LIMITS, native Node CLI, full Python checker, real S3/GCS, external effect sink and independent semantic authority NOT_EXECUTED, current native research endpoint 2026-10-24
+
+## Ballast current-state advance — 2026-10-25
+
+One NATIVE [Temporal parent-close and child-start Daily](records/2026-10-25.md) separates parent terminal, child started event, ABANDON / REQUEST_CANCEL / TERMINATE policy, historical authorized child effect, exact run/member identity and protected current completion
+
+Executed JavaScript-isolate [producer](tools/experiment_temporal_child_close.js) and separately implemented [primitive verifier](tools/verify_temporal_child_close.js) with [52 authored scenarios](evidence/2026-10-25-temporal-child-close-scenarios.json), [156 decision rows](evidence/2026-10-25-temporal-child-close-decisions.csv) and [verification receipt](evidence/2026-10-25-temporal-child-close-verification.json), 44/44 negative controls, 25/25 exact probes and actual forged CSV validator rejection
+
+Strong counterexamples include parent COMPLETED with no child effect, A+A duplicate replacing A+B, same-count membership swap, covered MISS versus positive receipt conflict, historical revocation before effect and unprotected guard with covered MISS
+
+[Temporal Child Workflows](https://docs.temporal.io/child-workflows) documents parent-child lifecycle semantics, [AWS Step Functions integration](https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html) independently documents a different-product best-effort cancellation boundary, neither is an independent live effect receipt
+
+[October Monthly](records/2026-10.md) is derived navigation and the newly due [2026-10-20..25 six-date audit](audits/2026-10-20--2026-10-25.md) is derived review, both add zero experiment/window/finding credit, CASE 0, METHOD 0, NOTES 0, Special 0
+
+JavaScript isolate producer/verifier EXECUTED PASS_WITH_LIMITS, full Python checker, standalone Node CLI, live Temporal/AWS/external sink and independent semantic authority NOT_EXECUTED, current native research endpoint 2026-10-25
