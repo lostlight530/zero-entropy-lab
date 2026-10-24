@@ -119,3 +119,9 @@
 - No Ballast, NEXUS, host state, hash chain or SQLite modified
 - Full checker and local runtime NOT_EXECUTED
 - No local incident or success fabricated
+
+## A1 CHECKER EVIDENCE FIELDS
+- External Evidence: first-party MCP SDK security advisory documenting concrete cross-session task access in a narrow deprecated taskStore configuration; and arXiv:2610.17544v2 author-reported theory of partial stale memory reuse
+- Confidence: HIGH for exact advisory identity, published version range and patched boundary; MEDIUM for author-preprint mechanism outside its studied distribution; NOT_MEASURED for local applicability
+- Uncertainty: Zero Host Kernel has not been inspected for actual affected SDK usage in this scoped native A1; no local incident, controlled SDK exploit reproduction or countermeasure-effectiveness measurement
+- Source counts: TWO_CANONICAL_SOURCE_OBJECTS / ZERO_INDEPENDENT_REPRODUCTIONS; the same source reused in other repositories adds no independence
