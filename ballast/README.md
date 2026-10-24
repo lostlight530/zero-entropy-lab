@@ -693,11 +693,13 @@ JavaScript isolate producer/verifier EXECUTED PASS_WITH_LIMITS, native Node CLI,
 
 One NATIVE [Temporal parent-close and child-start Daily](records/2026-10-25.md) separates parent terminal, child started event, ABANDON / REQUEST_CANCEL / TERMINATE policy, historical authorized child effect, exact run/member identity and protected current completion
 
-Executed JavaScript-isolate [producer](tools/experiment_temporal_child_close.js) and separately implemented [primitive verifier](tools/verify_temporal_child_close.js) with [52 authored scenarios](evidence/2026-10-25-temporal-child-close-scenarios.json), [156 decision rows](evidence/2026-10-25-temporal-child-close-decisions.csv) and [verification receipt](evidence/2026-10-25-temporal-child-close-verification.json), 44/44 negative controls, 25/25 exact probes and actual forged CSV validator rejection
+Executed JavaScript-isolate [producer](tools/experiment_temporal_child_close.js) and separately implemented [primitive verifier](tools/verify_temporal_child_close.js) with [67 corrected synthetic scenarios](evidence/2026-10-25-temporal-child-close-scenarios.json), [201 decision rows](evidence/2026-10-25-temporal-child-close-decisions.csv) and [verification receipt](evidence/2026-10-25-temporal-child-close-verification.json), 59/59 negative controls, 40/40 exact probes and actual forged CSV validator rejection
 
 Strong counterexamples include parent COMPLETED with no child effect, A+A duplicate replacing A+B, same-count membership swap, covered MISS versus positive receipt conflict, historical revocation before effect and unprotected guard with covered MISS
 
 [Temporal Child Workflows](https://docs.temporal.io/child-workflows) documents parent-child lifecycle semantics, [AWS Step Functions integration](https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html) independently documents a different-product best-effort cancellation boundary, neither is an independent live effect receipt
+
+The same-date [maintainer correction](evidence/2026-10-25-temporal-child-close-maintainer-review.json) preserved the original 52-scenario head and added 15 strong counterexamples against parent-run, child/run/attempt, historical authorization, current witness and authoritative MISS tuple scope, zero additional Daily/window/finding credit
 
 [October Monthly](records/2026-10.md) is derived navigation and the newly due [2026-10-20..25 six-date audit](audits/2026-10-20--2026-10-25.md) is derived review, both add zero experiment/window/finding credit, CASE 0, METHOD 0, NOTES 0, Special 0
 
