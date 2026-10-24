@@ -62,7 +62,8 @@ function verifierRun(scenarios,decisions,csv){
   const negatives=scenarios.filter(f=>f.group==="negative");let rejected=0;
   for(const f of negatives){const x=reconstruct(f);if(x!=="COMPLETE"&&x!=="RETRY_ALLOWED")rejected++;else errors.push("unsafe negative "+f.id+" "+x)}
   const forged=csv.replace("baseline,parent_terminal_proxy,COMPLETE","baseline,parent_terminal_proxy,RETRY_ALLOWED");
-  const tamperDetected=forged!==csv&&forged.split("\n")[1]!==csv.split("\n")[1];
+  const csvValid=raw=>{const lines=raw.trimEnd().split("\n");return lines[0]==="scenario,path,decision"&&lines.length===decisions.length+1&&decisions.every((d,i)=>lines[i+1]===[d.scenario,d.path,d.decision].join(","))};
+  const tamperDetected=forged!==csv&&csvValid(csv)&&!csvValid(forged);
   if(!tamperDetected)errors.push("CSV tamper not detected");
   const hist={},weak={parent_terminal_proxy:0,child_started_count_proxy:0};
   for(const f of scenarios){const full=reconstruct(f);hist[full]=(hist[full]||0)+1;for(const p of Object.keys(weak))if(decisions.find(d=>d.scenario===f.id&&d.path===p).decision!==full)weak[p]++}
