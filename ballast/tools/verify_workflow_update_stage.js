@@ -1,24 +1,30 @@
 const baseSha="7c23502945e6fea63fb208d400c380ade754d35b";
 "use strict";
+
 function verifierReconstruct(s){
- const ids=s.id,req=s.required,rec=s.receipts,q=s.prior,c=s.current;
- const uniqueEqual=(a,b)=>Array.isArray(a)&&a.length===b.length&&new Set(a).size===a.length&&b.every(x=>a.indexOf(x)>=0);
- const witness=["A:uid-A","B:uid-B"];
- const safeGuard=c.guard.protected===true&&c.guard.target===ids.target&&c.target===ids.target&&c.revision===c.guard.revision&&c.guard.evaluatedAt===c.commitAt&&c.readAt<c.commitAt&&uniqueEqual(c.members.map(m=>`${m.id}:${m.uid}`),witness)&&uniqueEqual(c.guard.members,witness);
- const covered=q.kind==="miss"&&q.task===ids.task&&q.workflow===ids.workflow&&q.run===ids.run&&q.update===ids.update&&q.attempt===ids.attempt&&q.target===ids.target&&uniqueEqual(q.effects,req)&&q.lifecycle==="ACTIVE"&&q.watermark>=q.attemptEnd&&q.queryAt>=q.watermark&&q.queryAt<=q.retentionUntil&&q.retentionUntil>=q.attemptEnd;
+ const ids=s.id,req=s.required,rec=s.receipts,q=s.prior,c=s.current,ks=["task","workflow","run","update","attempt","target"];
+ const uniqueEqual=(a,b)=>Array.isArray(a)&&Array.isArray(b)&&a.length===b.length&&new Set(a).size===a.length&&b.every(x=>a.indexOf(x)>=0);
+ const validInt=x=>typeof x==="number"&&Number.isSafeInteger(x)&&x>=0;
+ const bound=(doc)=>ks.every(k=>doc[k]===ids[k]);
+ const memberContract=s.requiredMembers;
+ const protectedWitness=Array.isArray(memberContract)&&uniqueEqual(memberContract.map(x=>typeof x==="string"?x.split(":")[0]:null),req)&&[c.revision,c.guard.revision,c.readAt,c.commitAt,c.guard.evaluatedAt].every(validInt)&&c.guard.protected===true&&c.guard.target===ids.target&&c.target===ids.target&&c.revision===c.guard.revision&&c.guard.evaluatedAt===c.commitAt&&c.readAt<c.commitAt&&uniqueEqual(c.members.map(m=>`${m.id}:${m.uid}`),memberContract)&&uniqueEqual(c.guard.members,memberContract);
+ const covered=q.kind==="miss"&&bound(q)&&uniqueEqual(q.effects,req)&&q.lifecycle==="ACTIVE"&&[q.watermark,q.queryAt,q.retentionUntil,q.attemptEnd].every(validInt)&&q.watermark>=q.attemptEnd&&q.queryAt>=q.watermark&&q.queryAt<=q.retentionUntil&&q.retentionUntil>=q.attemptEnd;
  if(covered&&rec.length)return "EVIDENCE_CONFLICT";
  if(rec.length===0){
   if(!covered)return "STOP_UNKNOWN";
-  if(!(s.permission.allowed&&s.permission.task===ids.task&&s.permission.update===ids.update&&s.permission.validUntil>=q.queryAt))return "BLOCKED";
-  return safeGuard?"RETRY_ALLOWED":"STOP_UNKNOWN";
+  const allowed=s.permission.allowed===true&&bound(s.permission)&&uniqueEqual(s.permission.effects,req)&&validInt(s.permission.validUntil)&&validInt(c.commitAt)&&s.permission.validUntil>=Math.max(q.queryAt,c.commitAt)&&s.update.validator==="ACCEPTED"&&["ACCEPTED","COMPLETED"].includes(s.update.stage);
+  if(!allowed)return "BLOCKED";
+  return protectedWitness?"RETRY_ALLOWED":"STOP_UNKNOWN";
  }
  if(s.update.validator!=="ACCEPTED"||!["ACCEPTED","COMPLETED"].includes(s.update.stage))return "RECONCILE";
  if(!uniqueEqual(rec.map(x=>x.effect),req))return "RECONCILE";
+ if(!validInt(s.update.acceptedAt)||!validInt(s.update.completedAt))return s.update.stage==="ACCEPTED"?"STOP_UNKNOWN":"RECONCILE";
  for(let r of rec){
-  if(Object.keys(ids).some(k=>r[k]!==ids[k]))return "RECONCILE";
-  let matching=s.grants.filter(a=>a.approval===r.approval&&a.task===ids.task&&a.update===ids.update&&a.effect===r.effect);
+  if(!bound(r)||!validInt(r.tick))return "RECONCILE";
+  let matching=s.grants.filter(a=>a.approval===r.approval&&a.effect===r.effect&&bound(a));
   if(matching.length!==1)return "RECONCILE";
   let a=matching[0];
+  if(!validInt(a.from)||!validInt(a.until)||(a.revokedAt!==null&&!validInt(a.revokedAt)))return "RECONCILE";
   if(r.tick<a.from||r.tick>a.until||(a.revokedAt!==null&&r.tick>=a.revokedAt))return "RECONCILE";
   if(r.tick<s.update.acceptedAt)return "RECONCILE";
   if(s.update.stage==="ACCEPTED")return "STOP_UNKNOWN";
@@ -26,7 +32,7 @@ function verifierReconstruct(s){
  }
  if(s.update.stage!=="COMPLETED")return "STOP_UNKNOWN";
  if(s.update.completedAt<s.update.acceptedAt||c.readAt<=Math.max(...rec.map(x=>x.tick)))return "RECONCILE";
- if(!safeGuard||c.members.some(m=>m.done!==true))return "RECONCILE";
+ if(!protectedWitness||c.members.some(m=>m.done!==true))return "RECONCILE";
  return "COMPLETE";
 }
 function verifyRows(fixtures,rows){
