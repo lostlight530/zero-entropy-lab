@@ -145,3 +145,24 @@
 ## Result
 
 `A2_MONTH_VERSION_2026-10 / N_DAY_ADMITTED_AS_OBSERVED / HISTORY_PRESERVED / MONTH_OPEN / READY_FOR_A2_MERGE`
+
+## 2026-10-25 correction — N-day producer-visible at original A2 base (2026-10-25T03:26:02.013Z)
+
+**Correction identity:** independent GPT / A2 2026-10-24 source-availability reconciliation; later evidence record, not a restatement of what the original A2 producer actually observed.
+
+**Incorrect original interpretation retained above for auditability:** the 2026-10-24 component row states `NO_N_DAY_NATIVE_OBJECT_OBSERVED / DO_NOT_INVENT` for `ballast/records/2026-10-24.md`; the N-day delta repeats “No Ballast 2026-10-24 native record was observed”. These claims describe the original maintainer's recovered PR set but are **false if read as absence from the A2 execution base**.
+
+**Exact branch/ref proof:**
+- Original 2026-10-24 A2 base `main@5e35c53340cadf24b8d19977771623c8e47b6cc9`.
+- Actual `ballast/records/2026-10-24.md` was **directly fetched at that exact original A2 base**; its Git blob was `84ff6b00559f6062bdcc36b6ac5c2a52253ca0a1`. This is stronger than current-main-only path evidence.
+- Independent original producer PR [#708](https://github.com/lostlight530/zero-entropy-lab/pull/708) is merged at `2026-10-23T22:58:21Z` UTC, before the original A2 merge `2026-10-24T04:26:03Z` UTC.
+- Correction was written from new current `main@e1a9f9d2ec3552e5055bb39230131e352a39e32f`, not the original A2 base; the prior record's original task-time source omission and text remain inspectable.
+
+**Corrected current custody and interpretation:**
+- `2026-10-24 | Ballast | ballast/records/2026-10-24.md | MAIN_VISIBLE_AT_ORIGINAL_A2_BASE / HISTORICAL_NATIVE_PR_MERGED`.
+- The “no 2026-10-24 Ballast record” assertion in the original A2 is **superseded as a Git visibility claim**. The original file remained a real independent native producer artifact; this correction grants **no new research run, source independence, CASE/Stage/Special, benchmark, or execution credit**.
+- The correction changes **only the A2 provenance/availability dimension**. Native result limitations stay exactly as authored in `ballast/records/2026-10-24.md`; earlier A1 N−1 exclusions, other Daily states, Weekly, October `MONTH_OPEN` and Periodic Audits remain unchanged.
+- Successor 2026-10-25 A1 must consume the historical correction while continuing to use its own `MonthStart → 2026-10-24` cutoff; successor A2 must incorporate 2026-10-25 natives only after all ten A1 merges.
+- Validation performed: exact A2 base file fetch, exact Git blob comparison, native PR merge metadata and current owning-file read. Original A2 native task/runtime replay `NOT_EXECUTED`. No hidden code or researcher-run claim.
+
+**Repair scope:** append-only on the already owning October 24 A2 relation file. No historical file body is deleted; no native producer file, current code, checker, schedule, month/weekly or separate parallel taxonomy is created.
