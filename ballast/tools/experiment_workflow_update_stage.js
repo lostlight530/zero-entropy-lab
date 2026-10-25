@@ -2,8 +2,8 @@
 function baseline(){
  const id={task:"task-26",workflow:"workflow-26",run:"run-26",update:"update-26",attempt:"attempt-1",target:"target-26"};
  const receipt=(effect,tick)=>({...id,effect,tick,approval:"approval-26"});
- const grant=(effect)=>({task:id.task,update:id.update,effect,approval:"approval-26",from:5,until:70,revokedAt:null});
- return {id,update:{stage:"COMPLETED",validator:"ACCEPTED",acceptedAt:10,completedAt:60},required:["A","B"],receipts:[receipt("A",30),receipt("B",40)],grants:[grant("A"),grant("B")],prior:{kind:"hit",task:id.task,workflow:id.workflow,run:id.run,update:id.update,attempt:id.attempt,target:id.target,effects:["A","B"],queryAt:85,watermark:80,attemptEnd:65,retentionUntil:150,lifecycle:"ACTIVE"},permission:{allowed:true,task:id.task,update:id.update,validUntil:120},current:{target:id.target,revision:8,members:[{id:"A",uid:"uid-A",done:true},{id:"B",uid:"uid-B",done:true}],readAt:80,commitAt:90,guard:{protected:true,target:id.target,revision:8,members:["A:uid-A","B:uid-B"],evaluatedAt:90}}};
+ const grant=(effect)=>({...id,effect,approval:"approval-26",from:5,until:70,revokedAt:null});
+ return {id,update:{stage:"COMPLETED",validator:"ACCEPTED",acceptedAt:10,completedAt:60},required:["A","B"],requiredMembers:["A:uid-A","B:uid-B"],receipts:[receipt("A",30),receipt("B",40)],grants:[grant("A"),grant("B")],prior:{kind:"hit",task:id.task,workflow:id.workflow,run:id.run,update:id.update,attempt:id.attempt,target:id.target,effects:["A","B"],queryAt:85,watermark:80,attemptEnd:65,retentionUntil:150,lifecycle:"ACTIVE"},permission:{allowed:true,...id,effects:["A","B"],validUntil:120},current:{target:id.target,revision:8,members:[{id:"A",uid:"uid-A",done:true},{id:"B",uid:"uid-B",done:true}],readAt:80,commitAt:90,guard:{protected:true,target:id.target,revision:8,members:["A:uid-A","B:uid-B"],evaluatedAt:90}}};
 }
 function cases(){
  const seed=baseline(), out=[];
@@ -62,25 +62,59 @@ function cases(){
  add("grant_revoked_after_effect",s=>{s.grants[0].revokedAt=45},"COMPLETE");
  add("accepted_with_complete_external_evidence",s=>{s.update.stage="ACCEPTED";s.update.completedAt=null},"STOP_UNKNOWN");
  add("current_state_reversed_after_effect",s=>{s.current.members[1].done=false},"RECONCILE");
+
+ add("required_changed_to_A_C_without_current_witness",s=>{s.required=["A","C"];s.receipts[1].effect="C";s.grants[1].effect="C"},"RECONCILE");
+ add("grant_wrong_run_scope",s=>{s.grants[0].run="run-other"},"RECONCILE");
+ add("grant_wrong_attempt_scope",s=>{s.grants[0].attempt="attempt-old"},"RECONCILE");
+ add("grant_wrong_target_scope",s=>{s.grants[0].target="target-old"},"RECONCILE");
+ add("grant_duplicate_for_same_effect",s=>{s.grants.push({...s.grants[0]})},"RECONCILE");
+ add("receipt_tick_string_coercion",s=>{s.receipts[0].tick="30"},"RECONCILE");
+ add("grant_until_string_coercion",s=>{s.grants[0].until="70"},"RECONCILE");
+ add("current_revision_string_coercion",s=>{s.current.revision="8";s.current.guard.revision="8"},"RECONCILE");
+ add("miss_watermark_string_coercion",s=>{miss(s);s.prior.watermark="80"},"STOP_UNKNOWN");
+ add("retry_permission_expires_before_guard_fence",s=>{miss(s);s.permission.validUntil=87},"BLOCKED");
+ add("retry_permission_wrong_target",s=>{miss(s);s.permission.target="target-old"},"BLOCKED");
+ add("retry_permission_incomplete_effects",s=>{miss(s);s.permission.effects=["A"]},"BLOCKED");
+ add("rejected_update_even_with_miss",s=>{miss(s);s.update.validator="REJECTED";s.update.stage="REJECTED"},"BLOCKED");
+ add("task_member_witness_extra_entry",s=>{s.requiredMembers.push("C:uid-C")},"RECONCILE");
  return out;
 }
 function exactUnique(actual,expected){return Array.isArray(actual)&&actual.length===expected.length&&new Set(actual).size===actual.length&&expected.every(x=>actual.includes(x))}
-function guardValid(s){const c=s.current;return c.guard.protected===true&&c.target===s.id.target&&c.guard.target===s.id.target&&c.revision===c.guard.revision&&c.guard.evaluatedAt===c.commitAt&&c.readAt<c.commitAt&&exactUnique(c.members.map(m=>m.id+":"+m.uid),["A:uid-A","B:uid-B"])&&exactUnique(c.guard.members,["A:uid-A","B:uid-B"])}
-function missValid(s){let q=s.prior,i=s.id;return q.kind==="miss"&&["task","workflow","run","update","attempt","target"].every(k=>q[k]===i[k])&&exactUnique(q.effects,s.required)&&q.lifecycle==="ACTIVE"&&q.watermark>=q.attemptEnd&&q.queryAt>=q.watermark&&q.queryAt<=q.retentionUntil&&q.retentionUntil>=q.attemptEnd}
+
+const safeTick=v=>Number.isSafeInteger(v)&&v>=0;
+const identityKeys=["task","workflow","run","update","attempt","target"];
+const matchingIdentity=(obj,id)=>identityKeys.every(k=>obj[k]===id[k]);
+function guardValid(s){
+ const c=s.current,memberContract=s.requiredMembers;
+ if(!Array.isArray(memberContract)||!exactUnique(s.required,memberContract.map(x=>typeof x==="string"?x.split(":")[0]:null)))return false;
+ if(!safeTick(c.revision)||!safeTick(c.guard.revision)||!safeTick(c.readAt)||!safeTick(c.commitAt)||!safeTick(c.guard.evaluatedAt))return false;
+ return c.guard.protected===true&&c.target===s.id.target&&c.guard.target===s.id.target&&c.revision===c.guard.revision&&c.guard.evaluatedAt===c.commitAt&&c.readAt<c.commitAt&&exactUnique(c.members.map(m=>m.id+":"+m.uid),memberContract)&&exactUnique(c.guard.members,memberContract);
+}
+function missValid(s){
+ let q=s.prior,i=s.id;
+ return q.kind==="miss"&&matchingIdentity(q,i)&&exactUnique(q.effects,s.required)&&q.lifecycle==="ACTIVE"&&[q.watermark,q.queryAt,q.retentionUntil,q.attemptEnd].every(safeTick)&&q.watermark>=q.attemptEnd&&q.queryAt>=q.watermark&&q.queryAt<=q.retentionUntil&&q.retentionUntil>=q.attemptEnd;
+}
+function validRetryPermission(s){
+ const x=s.permission,q=s.prior,c=s.current;
+ return x.allowed===true&&matchingIdentity(x,s.id)&&exactUnique(x.effects,s.required)&&safeTick(x.validUntil)&&safeTick(q.queryAt)&&safeTick(c.commitAt)&&x.validUntil>=Math.max(q.queryAt,c.commitAt);
+}
 function full(s){
  const i=s.id,r=s.receipts,required=s.required,goodMiss=missValid(s),guard=guardValid(s);
  if(goodMiss&&r.length>0)return "EVIDENCE_CONFLICT";
  if(r.length===0){
-   if(!goodMiss)return "STOP_UNKNOWN";
-   if(s.permission.allowed!==true||s.permission.task!==i.task||s.permission.update!==i.update||s.permission.validUntil<s.prior.queryAt)return "BLOCKED";
-   return guard?"RETRY_ALLOWED":"STOP_UNKNOWN";
+  if(!goodMiss)return "STOP_UNKNOWN";
+  if(s.update.validator!=="ACCEPTED"||!["ACCEPTED","COMPLETED"].includes(s.update.stage)||!validRetryPermission(s))return "BLOCKED";
+  return guard?"RETRY_ALLOWED":"STOP_UNKNOWN";
  }
  if(s.update.validator!=="ACCEPTED"||!["ACCEPTED","COMPLETED"].includes(s.update.stage))return "RECONCILE";
  if(!exactUnique(r.map(x=>x.effect),required))return "RECONCILE";
+ if(!safeTick(s.update.acceptedAt)||!safeTick(s.update.completedAt))return s.update.stage==="ACCEPTED"?"STOP_UNKNOWN":"RECONCILE";
  for(let x of r){
-  if(!["task","workflow","run","update","attempt","target"].every(k=>x[k]===i[k]))return "RECONCILE";
-  let grant=s.grants.filter(g=>g.effect===x.effect&&g.approval===x.approval&&g.task===i.task&&g.update===i.update);
-  if(grant.length!==1||!(x.tick>=grant[0].from&&x.tick<=grant[0].until&&(grant[0].revokedAt===null||x.tick<grant[0].revokedAt)))return "RECONCILE";
+  if(!matchingIdentity(x,i)||!safeTick(x.tick))return "RECONCILE";
+  let grant=s.grants.filter(g=>g.effect===x.effect&&g.approval===x.approval&&matchingIdentity(g,i));
+  if(grant.length!==1)return "RECONCILE";
+  const g=grant[0];
+  if(!safeTick(g.from)||!safeTick(g.until)||(g.revokedAt!==null&&!safeTick(g.revokedAt))||!(x.tick>=g.from&&x.tick<=g.until&&(g.revokedAt===null||x.tick<g.revokedAt)))return "RECONCILE";
   if(!(x.tick>=s.update.acceptedAt&&s.update.stage==="COMPLETED"&&x.tick<=s.update.completedAt))return s.update.stage==="ACCEPTED"?"STOP_UNKNOWN":"RECONCILE";
  }
  if(s.update.stage!=="COMPLETED")return "STOP_UNKNOWN";
