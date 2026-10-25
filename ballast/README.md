@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-25 Temporal Parent Close Policy and child-start versus exact external effect integrity](records/2026-10-25.md)
+- 最新 Daily: [2026-10-26 Temporal Workflow Update stage versus exact authorized external effect completion](records/2026-10-26.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-20 至 2026-10-25](audits/2026-10-20--2026-10-25.md)
@@ -712,3 +712,17 @@ Independent cross-date [audit addendum](audits/2026-10-20--2026-10-25.md) with a
 October Monthly as-of date corrected to 2026-10-25, 2026-10-24 original 0/51 versus corrected 0/60 model-relative reference comparison clarified only in the audit erratum without rewriting the merged original Daily, 2026-10-22 original generator remains NOT_RECOVERED
 
 Live external effects, trusted authorization and effect-sink validation, native Node CLI and full Python ballast checker remain NOT_EXECUTED, implementation/data-source/semantic/authority independence explicitly limited
+
+## Ballast current-state advance — 2026-10-26
+
+One NATIVE [Temporal Workflow Update stage Daily](records/2026-10-26.md) separates Update ACCEPTED / COMPLETED, validator rejection, exact run-update-attempt identity, historical authorized A+B external effects, prior MISS and protected current membership completion
+
+Executed bounded V8 [producer](tools/experiment_workflow_update_stage.js) and separately implemented [primitive verifier](tools/verify_workflow_update_stage.js) with [52 authored scenarios](evidence/2026-10-26-update-stage-scenarios.json), [156 decision rows](evidence/2026-10-26-update-stage-decisions.csv) and [verification receipt](evidence/2026-10-26-update-stage-verification.json), 49/49 non-COMPLETE controls, 156/156 row reconstruction, forged CSV row rejection and persisted-source V8 replay matching committed JSON/CSV
+
+[Temporal Workflow message passing](https://docs.temporal.io/encyclopedia/workflow-message-passing) and [Nexus Update walkthrough](https://docs.temporal.io/develop/java/nexus/development-walkthrough/add-messaging) support control-plane stage distinctions, not real external effect proof, [AWS Step Functions callbacks](https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html) provide a separate-product analogy only
+
+Strong counterexamples include ACCEPTED with no effect, COMPLETED with A+A or extra C receipt, same-count A+C member replacement, wrong run/update/attempt, invalid effect-time grant, covered negative MISS conflicting with positive receipt and read-to-commit TOCTOU
+
+One Daily/window, CASE 0, METHOD 0, NOTES 0, Special 0, Audit 0, October Monthly index updated, latest complete audit remains 2026-10-20..25
+
+V8 producer/verifier and persisted-source replay EXECUTED PASS_WITH_LIMITS, full Python checker, standalone Node CLI, live Temporal/external sink and semantic-independent authority NOT_EXECUTED

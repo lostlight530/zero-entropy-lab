@@ -1,0 +1,25 @@
+{
+  "status": "PASS_WITH_LIMITS",
+  "errors": [],
+  "scenarioCount": 66,
+  "rowCount": 198,
+  "csvDataRows": 198,
+  "referenceRowsReconstructed": 66,
+  "allPathsReconstructed": 198,
+  "negativeControls": 63,
+  "negativeControlsRejected": 63,
+  "forgedRowDetected": true,
+  "independence": {
+    "implementation": "PARTIAL_SEPARATE_FUNCTION",
+    "dataSource": "NONE_SHARED_AUTHORED_FIXTURES",
+    "semanticContract": "LIMITED_SHARED_AUTHORED_MODEL",
+    "authority": "NONE"
+  },
+  "runtime": "V8_CODE_MODE_ISOLATE",
+  "nodeCLI": "NOT_EXECUTED",
+  "checker": "NOT_EXECUTED",
+  "liveTemporal": "NOT_EXECUTED",
+  "externalEffectSink": "NOT_EXECUTED",
+  "verifiedBaseSha": "7c23502945e6fea63fb208d400c380ade754d35b",
+  "sourceVerifiedDate": "2026-10-26"
+}
