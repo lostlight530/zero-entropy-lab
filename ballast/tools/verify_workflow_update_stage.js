@@ -1,3 +1,4 @@
+const baseSha="7c23502945e6fea63fb208d400c380ade754d35b";
 "use strict";
 function verifierReconstruct(s){
  const ids=s.id,req=s.required,rec=s.receipts,q=s.prior,c=s.current;
