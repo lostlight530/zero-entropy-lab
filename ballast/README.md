@@ -704,3 +704,11 @@ The same-date [maintainer correction](evidence/2026-10-25-temporal-child-close-m
 [October Monthly](records/2026-10.md) is derived navigation and the newly due [2026-10-20..25 six-date audit](audits/2026-10-20--2026-10-25.md) is derived review, both add zero experiment/window/finding credit, CASE 0, METHOD 0, NOTES 0, Special 0
 
 JavaScript isolate producer/verifier EXECUTED PASS_WITH_LIMITS, full Python checker, standalone Node CLI, live Temporal/AWS/external sink and independent semantic authority NOT_EXECUTED, current native research endpoint 2026-10-25
+
+## Ballast six-date maintainer verification — 2026-10-25
+
+Independent cross-date [audit addendum](audits/2026-10-20--2026-10-25.md) with a [machine-readable review receipt](evidence/2026-10-25-cycle-maintainer-verification.json) executed bounded replay of all six currently committed model evidence sets for 2026-10-20..25: 263 current-version synthetic scenarios and 789 decision rows, preserved original source generations and separate correction provenance, with zero new independent research credit
+
+October Monthly as-of date corrected to 2026-10-25, 2026-10-24 original 0/51 versus corrected 0/60 model-relative reference comparison clarified only in the audit erratum without rewriting the merged original Daily, 2026-10-22 original generator remains NOT_RECOVERED
+
+Live external effects, trusted authorization and effect-sink validation, native Node CLI and full Python ballast checker remain NOT_EXECUTED, implementation/data-source/semantic/authority independence explicitly limited
