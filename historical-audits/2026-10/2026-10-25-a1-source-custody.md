@@ -1,0 +1,420 @@
+# A1 | zero-entropy-lab | 2026-10-25 October custody through N−1
+
+- Repository: `lostlight530/zero-entropy-lab`
+- Producer: Independent GPT maintenance (not original Jules/Web GPT producer)
+- Exact pre-write main: `25c2724694745d4ca0f5d99168ae34d15fa125f8`
+- Inherited 2026-10-24 merged A2 commit: `561254377a9946aa608020b22e98e4aaa8118003`
+- Inherited canonical A2 file: `historical-audits/2026-10/2026-10-24-a2-month-relation.md` @ blob `91742ceecd53c73774e220d855b77922a6a81bbd`
+- Inherited A1 file: `historical-audits/2026-10/2026-10-24-a1-source-custody.md`
+- Fixed interval: 2026-10-01…2026-10-24 inclusive; excluded N=2026-10-25
+- Snapshot: GitHub recursive tree, 2135 blobs, truncated=false; compare 561254377a9946aa608020b22e98e4aaa8118003…25c2724694745d4ca0f5d99168ae34d15fa125f8 19 changed paths
+- Coverage: 72 expected named Native slots, 0 absent; 303 distinct current source objects individually SHA-indexed below
+- Schema of rows: exact path | Git blob identity | declared bytes | owning evidence class | delta from inherited A2 | conservative disposition
+- Status: SOURCE_PATH_COVERAGE_COMPLETE / CONTENT_TRUTH_NOT_REPRODUCED / MONTH_OPEN
+
+## Evidence and boundary decisions
+- CRITICAL CORRECTION: 2026-10-24 Ballast was visible on original 2026-10-24 A2 base; #717 appended exact-base evidence. Do NOT inherit former NO_N_DAY_NATIVE_OBJECT_OBSERVED as current visibility.
+- The original producer outcome and synthetic-vs-real execution distinctions in native records remain independent of Git blob visibility.
+- Prior-period W40-W42 outcomes are inherited with all exceptions intact; W43 is in progress at 2026-10-24 cutoff for this A1.
+- October month status: MONTH_OPEN; a Sunday weekly status is interpreted only under the owning native cadence.
+- Old A2 exact version is lineage, not current main. The 2026-10-25 native source is intentionally not used in this N-1 artifact.
+- D7/D10/D14/D30 audits are independent and receive NO new run/pass credit from this custody report.
+- The list below is a SHA/path cross-check and inheritance decision for unchanged content; it is not a claim to have reexecuted native tests or reread all external links.
+
+## Native daily expected-slot ledger (MonthStart → N−1)
+- 001 | aegis-cortex/2026-10-01-A1-reliability-observe.md | blob `461882e16809ef9b442b3c6d47b45f44418660b5`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 002 | aegis-cortex/2026-10-01-A2-doctrine-orient.md | blob `450bb5e41ba1f4f52f605632a3522797568429c5`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 003 | ballast/records/2026-10-01.md | blob `21a2dbd84f4a7e05bc64f78aa934d824a4a96593`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 004 | aegis-cortex/2026-10-02-A1-reliability-observe.md | blob `abe20d48251fc36893884f355421e896e3f3631a`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 005 | aegis-cortex/2026-10-02-A2-doctrine-orient.md | blob `c590dffb8dc28fb701174e6dfafe2c3697f97b37`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 006 | ballast/records/2026-10-02.md | blob `1081112e8ef7f9c1d3e4415c2cf1edb297419a58`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 007 | aegis-cortex/2026-10-03-A1-reliability-observe.md | blob `0f37ab4b605a24006a862a9837564a459c0c1298`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 008 | aegis-cortex/2026-10-03-A2-doctrine-orient.md | blob `3c95e23cfa6187d0c23f607d622e2e8353051b13`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 009 | ballast/records/2026-10-03.md | blob `82df0f7d4e36c844f76bfed4b23bd1ece6a46b53`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 010 | aegis-cortex/2026-10-04-A1-reliability-observe.md | blob `88fcc05dd273fbb361963435211e38447ea67a9c`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 011 | aegis-cortex/2026-10-04-A2-doctrine-orient.md | blob `08f105bfae915c994d411e8ab86d421db03f9c42`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 012 | ballast/records/2026-10-04.md | blob `649882d3a0bbb7939481f5f2bb43aea4f268b9c8`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 013 | aegis-cortex/2026-10-05-A1-reliability-observe.md | blob `11701da8dff9882ef4e8d4f174abc062abd41404`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 014 | aegis-cortex/2026-10-05-A2-doctrine-orient.md | blob `98139f531397d66bde60765a38f9b0c683d936ab`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 015 | ballast/records/2026-10-05.md | blob `b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 016 | aegis-cortex/2026-10-06-A1-reliability-observe.md | blob `56abc25eca5f0e9e2aa537be5924c6045162815c`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 017 | aegis-cortex/2026-10-06-A2-doctrine-orient.md | blob `6cb80c4d899b533c539ad487b274c1b168db9724`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 018 | ballast/records/2026-10-06.md | blob `2ad5c5ce4a3fc4228f089eaacf94109e4210a66f`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 019 | aegis-cortex/2026-10-07-A1-reliability-observe.md | blob `12c9266cc5f1fe0837a736e7ec9ed4505e7ba4a5`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 020 | aegis-cortex/2026-10-07-A2-doctrine-orient.md | blob `9bd6c75a310832f7cc58c9ae399f41acfdf4d950`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 021 | ballast/records/2026-10-07.md | blob `7f20b476517f31e4d890e64880b2eeb4b8248bf7`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 022 | aegis-cortex/2026-10-08-A1-reliability-observe.md | blob `5c91de675c4dc78aba0f419ab5f7added9c29fd7`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 023 | aegis-cortex/2026-10-08-A2-doctrine-orient.md | blob `9815107064b4fed9aa0983143c4b329b5f28a675`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 024 | ballast/records/2026-10-08.md | blob `8d24c4cfc5362b7c81b60a6888d875e6960342aa`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 025 | aegis-cortex/2026-10-09-A1-reliability-observe.md | blob `e5b385ba25e8a4ef9a68401080dab545592ddf4b`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 026 | aegis-cortex/2026-10-09-A2-doctrine-orient.md | blob `2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 027 | ballast/records/2026-10-09.md | blob `cce84778a3f752461a1d82b9c38f5057f3950fd3`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 028 | aegis-cortex/2026-10-10-A1-reliability-observe.md | blob `bfbe8f099a7413cdd5a8f1466a180d9e2d78f975`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 029 | aegis-cortex/2026-10-10-A2-doctrine-orient.md | blob `ce4f369d35fda91ddeeb975679a89ee4fe1f2314`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 030 | ballast/records/2026-10-10.md | blob `d2702d66363b0e8a6ea645aff60a6475a1ca003c`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 031 | aegis-cortex/2026-10-11-A1-reliability-observe.md | blob `bc3c4ba9cf48045bb05f02e65901dd02ad5464f1`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 032 | aegis-cortex/2026-10-11-A2-doctrine-orient.md | blob `d3882e3530ce98550a10f93ba4221afbb270c83c`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 033 | ballast/records/2026-10-11.md | blob `b35c69acee29b194d597d3eedd942dd4cc7243a0`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 034 | aegis-cortex/2026-10-12-A1-reliability-observe.md | blob `72d7f662d70f5c73301fd8bec7c8351f0e1a7349`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 035 | aegis-cortex/2026-10-12-A2-doctrine-orient.md | blob `6ed3797a34699a9eae821c7bb2a8c8797459b17f`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 036 | ballast/records/2026-10-12.md | blob `02fe0896ac9c41ae336cda04e69f133460e0a742`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 037 | aegis-cortex/2026-10-13-A1-reliability-observe.md | blob `a5d0ca039bbe4b93b8b59e5e671bcf76ff82ba87`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 038 | aegis-cortex/2026-10-13-A2-doctrine-orient.md | blob `1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 039 | ballast/records/2026-10-13.md | blob `cc09eb3e1746cf4e555880ab4304b28c63341a4c`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 040 | aegis-cortex/2026-10-14-A1-reliability-observe.md | blob `1def392d03eb7bb03c428d696d4acb923454112f`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 041 | aegis-cortex/2026-10-14-A2-doctrine-orient.md | blob `c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 042 | ballast/records/2026-10-14.md | blob `98a752267cd0c2beff5d2770ecf1672a6c869e3b`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 043 | aegis-cortex/2026-10-15-A1-reliability-observe.md | blob `293272cf6ae77efc28491dc69597d0652f4ca751`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 044 | aegis-cortex/2026-10-15-A2-doctrine-orient.md | blob `896901e892647ab19b584fa077363afc5e4e89ab`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 045 | ballast/records/2026-10-15.md | blob `2f94b0b736cd8e3ffda03794462a12d3b50a3bc3`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 046 | aegis-cortex/2026-10-16-A1-reliability-observe.md | blob `372a99054cd4cd55ac909304b4c44a702376bcf6`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 047 | aegis-cortex/2026-10-16-A2-doctrine-orient.md | blob `454d6a632ad13c2fdacbfa27a30d0a565427026f`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 048 | ballast/records/2026-10-16.md | blob `5cf129e2d6d31ce14171ac3e2b0c6ea0a3bddee0`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 049 | aegis-cortex/2026-10-17-A1-reliability-observe.md | blob `32bc7fefb64671e1c09347d03231034fd3d28cda`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 050 | aegis-cortex/2026-10-17-A2-doctrine-orient.md | blob `7d839226fcf975325c8a5813e706b6e05f09aeeb`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 051 | ballast/records/2026-10-17.md | blob `4f76b71274f8a72434ca0a02af8d48a18842dbb3`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 052 | aegis-cortex/2026-10-18-A1-reliability-observe.md | blob `cb4df7bb2ca43662643354bf531a10dde9e75ffd`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 053 | aegis-cortex/2026-10-18-A2-doctrine-orient.md | blob `de4fa530ab13e81aedb672701392680d2bd83925`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 054 | ballast/records/2026-10-18.md | blob `9d0aa4b7d2dc10b59221ae91be580c1f35f92e61`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 055 | aegis-cortex/2026-10-19-A1-reliability-observe.md | blob `f0edcb5ce06fbc06a5c0ce6a4454607121915be2`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 056 | aegis-cortex/2026-10-19-A2-doctrine-orient.md | blob `6a9798bba6967b020ddc9bf4542b3404e421d24b`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 057 | ballast/records/2026-10-19.md | blob `84488c6de94120a49a909937571e46bfcdb09505`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 058 | aegis-cortex/2026-10-20-A1-reliability-observe.md | blob `4adfe9ac3a6321031afec2daad0609ee5db0d209`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 059 | aegis-cortex/2026-10-20-A2-doctrine-orient.md | blob `14c2e2d8dcc85fc007ba8392111960ad194ba996`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 060 | ballast/records/2026-10-20.md | blob `86adc547bc9a745f4f0508614887e6569c7d43e9`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 061 | aegis-cortex/2026-10-21-A1-reliability-observe.md | blob `9c397544e16158d0eac8751798fdc894950fa2d0`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 062 | aegis-cortex/2026-10-21-A2-doctrine-orient.md | blob `3bee2ab7f45d9be1aaa285ccc08e703200ce6685`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 063 | ballast/records/2026-10-21.md | blob `1d6f82a47c714da7c79cb951a8eba9ecd969ea1f`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 064 | aegis-cortex/2026-10-22-A1-reliability-observe.md | blob `97f64b6c675e716952843ff7da3d9c5b65fe1c86`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 065 | aegis-cortex/2026-10-22-A2-doctrine-orient.md | blob `57671395b124905190d924e698b67a299ed4e6ce`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 066 | ballast/records/2026-10-22.md | blob `d0989c17f7f3412dd1f8902802500ba5ca06fc51`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 067 | aegis-cortex/2026-10-23-A1-reliability-observe.md | blob `a48c1172dee8b8c76c99ca0a9baa2b31d67d1019`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 068 | aegis-cortex/2026-10-23-A2-doctrine-orient.md | blob `a46cde6671b65d40f5110805aa7f40cadd4068d4`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 069 | ballast/records/2026-10-23.md | blob `4c96e39a7a2438ac4ba654eacaaf2645bd249e3f`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 070 | aegis-cortex/2026-10-24-A1-reliability-observe.md | blob `1ed35d655b0316838c59ef3f30b8cb87f1421c4a`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 071 | aegis-cortex/2026-10-24-A2-doctrine-orient.md | blob `694eac2dc0f2656b97482d2d549f6043d91e6e1f`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+- 072 | ballast/records/2026-10-24.md | blob `84ff6b00559f6062bdcc36b6ac5c2a52253ca0a1`; UNCHANGED_FROM_PRIOR_A2; historical task evidence retained
+
+## Individual repository-object custody decisions
+- 001 | `aegis-cortex/2026-10-01-A1-reliability-observe.md` | blob `461882e16809ef9b442b3c6d47b45f44418660b5` | 6438 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 002 | `aegis-cortex/2026-10-01-A2-doctrine-orient.md` | blob `450bb5e41ba1f4f52f605632a3522797568429c5` | 3188 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 003 | `aegis-cortex/2026-10-02-A1-reliability-observe.md` | blob `abe20d48251fc36893884f355421e896e3f3631a` | 6538 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 004 | `aegis-cortex/2026-10-02-A2-doctrine-orient.md` | blob `c590dffb8dc28fb701174e6dfafe2c3697f97b37` | 4018 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 005 | `aegis-cortex/2026-10-03-A1-reliability-observe.md` | blob `0f37ab4b605a24006a862a9837564a459c0c1298` | 6295 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 006 | `aegis-cortex/2026-10-03-A2-doctrine-orient.md` | blob `3c95e23cfa6187d0c23f607d622e2e8353051b13` | 6600 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 007 | `aegis-cortex/2026-10-04-A1-reliability-observe.md` | blob `88fcc05dd273fbb361963435211e38447ea67a9c` | 5967 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 008 | `aegis-cortex/2026-10-04-A2-doctrine-orient.md` | blob `08f105bfae915c994d411e8ab86d421db03f9c42` | 1834 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 009 | `aegis-cortex/2026-10-05-A1-reliability-observe.md` | blob `11701da8dff9882ef4e8d4f174abc062abd41404` | 6137 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 010 | `aegis-cortex/2026-10-05-A2-doctrine-orient.md` | blob `98139f531397d66bde60765a38f9b0c683d936ab` | 6438 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 011 | `aegis-cortex/2026-10-06-A1-reliability-observe.md` | blob `56abc25eca5f0e9e2aa537be5924c6045162815c` | 6238 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 012 | `aegis-cortex/2026-10-06-A2-doctrine-orient.md` | blob `6cb80c4d899b533c539ad487b274c1b168db9724` | 7015 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 013 | `aegis-cortex/2026-10-07-A1-reliability-observe.md` | blob `12c9266cc5f1fe0837a736e7ec9ed4505e7ba4a5` | 8403 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 014 | `aegis-cortex/2026-10-07-A2-doctrine-orient.md` | blob `9bd6c75a310832f7cc58c9ae399f41acfdf4d950` | 9117 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 015 | `aegis-cortex/2026-10-08-A1-reliability-observe.md` | blob `5c91de675c4dc78aba0f419ab5f7added9c29fd7` | 5910 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 016 | `aegis-cortex/2026-10-08-A2-doctrine-orient.md` | blob `9815107064b4fed9aa0983143c4b329b5f28a675` | 11624 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 017 | `aegis-cortex/2026-10-09-A1-reliability-observe.md` | blob `e5b385ba25e8a4ef9a68401080dab545592ddf4b` | 6609 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 018 | `aegis-cortex/2026-10-09-A2-doctrine-orient.md` | blob `2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124` | 16037 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 019 | `aegis-cortex/2026-10-10-A1-reliability-observe.md` | blob `bfbe8f099a7413cdd5a8f1466a180d9e2d78f975` | 6407 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 020 | `aegis-cortex/2026-10-10-A2-doctrine-orient.md` | blob `ce4f369d35fda91ddeeb975679a89ee4fe1f2314` | 6626 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 021 | `aegis-cortex/2026-10-11-A1-reliability-observe.md` | blob `bc3c4ba9cf48045bb05f02e65901dd02ad5464f1` | 5959 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 022 | `aegis-cortex/2026-10-11-A2-doctrine-orient.md` | blob `d3882e3530ce98550a10f93ba4221afbb270c83c` | 7757 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 023 | `aegis-cortex/2026-10-12-A1-reliability-observe.md` | blob `72d7f662d70f5c73301fd8bec7c8351f0e1a7349` | 6876 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 024 | `aegis-cortex/2026-10-12-A2-doctrine-orient.md` | blob `6ed3797a34699a9eae821c7bb2a8c8797459b17f` | 8336 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 025 | `aegis-cortex/2026-10-13-A1-reliability-observe.md` | blob `a5d0ca039bbe4b93b8b59e5e671bcf76ff82ba87` | 7596 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 026 | `aegis-cortex/2026-10-13-A2-doctrine-orient.md` | blob `1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22` | 9874 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 027 | `aegis-cortex/2026-10-14-A1-reliability-observe.md` | blob `1def392d03eb7bb03c428d696d4acb923454112f` | 6178 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 028 | `aegis-cortex/2026-10-14-A2-doctrine-orient.md` | blob `c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd` | 7932 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 029 | `aegis-cortex/2026-10-15-A1-reliability-observe.md` | blob `293272cf6ae77efc28491dc69597d0652f4ca751` | 7671 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 030 | `aegis-cortex/2026-10-15-A2-doctrine-orient.md` | blob `896901e892647ab19b584fa077363afc5e4e89ab` | 3670 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 031 | `aegis-cortex/2026-10-16-A1-reliability-observe.md` | blob `372a99054cd4cd55ac909304b4c44a702376bcf6` | 5743 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 032 | `aegis-cortex/2026-10-16-A2-doctrine-orient.md` | blob `454d6a632ad13c2fdacbfa27a30d0a565427026f` | 6642 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 033 | `aegis-cortex/2026-10-17-A1-reliability-observe.md` | blob `32bc7fefb64671e1c09347d03231034fd3d28cda` | 6621 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 034 | `aegis-cortex/2026-10-17-A2-doctrine-orient.md` | blob `7d839226fcf975325c8a5813e706b6e05f09aeeb` | 7415 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 035 | `aegis-cortex/2026-10-18-A1-reliability-observe.md` | blob `cb4df7bb2ca43662643354bf531a10dde9e75ffd` | 5728 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 036 | `aegis-cortex/2026-10-18-A2-doctrine-orient.md` | blob `de4fa530ab13e81aedb672701392680d2bd83925` | 3670 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 037 | `aegis-cortex/2026-10-19-A1-reliability-observe.md` | blob `f0edcb5ce06fbc06a5c0ce6a4454607121915be2` | 8532 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 038 | `aegis-cortex/2026-10-19-A2-doctrine-orient.md` | blob `6a9798bba6967b020ddc9bf4542b3404e421d24b` | 8251 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 039 | `aegis-cortex/2026-10-20-A1-reliability-observe.md` | blob `4adfe9ac3a6321031afec2daad0609ee5db0d209` | 11398 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 040 | `aegis-cortex/2026-10-20-A2-doctrine-orient.md` | blob `14c2e2d8dcc85fc007ba8392111960ad194ba996` | 15588 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 041 | `aegis-cortex/2026-10-21-A1-reliability-observe.md` | blob `9c397544e16158d0eac8751798fdc894950fa2d0` | 8493 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 042 | `aegis-cortex/2026-10-21-A2-doctrine-orient.md` | blob `3bee2ab7f45d9be1aaa285ccc08e703200ce6685` | 6514 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 043 | `aegis-cortex/2026-10-22-A1-reliability-observe.md` | blob `97f64b6c675e716952843ff7da3d9c5b65fe1c86` | 12786 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 044 | `aegis-cortex/2026-10-22-A2-doctrine-orient.md` | blob `57671395b124905190d924e698b67a299ed4e6ce` | 10636 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 045 | `aegis-cortex/2026-10-23-A1-reliability-observe.md` | blob `a48c1172dee8b8c76c99ca0a9baa2b31d67d1019` | 10487 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 046 | `aegis-cortex/2026-10-23-A2-doctrine-orient.md` | blob `a46cde6671b65d40f5110805aa7f40cadd4068d4` | 8921 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 047 | `aegis-cortex/2026-10-24-A1-reliability-observe.md` | blob `1ed35d655b0316838c59ef3f30b8cb87f1421c4a` | 8436 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 048 | `aegis-cortex/2026-10-24-A2-doctrine-orient.md` | blob `694eac2dc0f2656b97482d2d549f6043d91e6e1f` | 8905 B | GPT_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 049 | `ballast/audits/2026-07-21--2026-07-26.md` | blob `fa6d29b2bb5d05dc1c91e6d01bcb26ee13cc8d4f` | 8322 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 050 | `ballast/audits/2026-07-26--2026-07-31.md` | blob `ee6816c57fdf91df73e82c2af11cdaffc61a76d8` | 9227 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 051 | `ballast/audits/2026-08-01--2026-08-06.md` | blob `57468ebd5c87e29cef0986a2873c55ed997772d7` | 4623 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 052 | `ballast/audits/2026-08-03--2026-08-09.md` | blob `826c688ace75e5dd01fae4e8ce337b2f0121eda5` | 12045 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 053 | `ballast/audits/2026-08-07--2026-08-13.md` | blob `9b002d57ed0d755d98961e0e3ae08c107332aca2` | 13378 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 054 | `ballast/audits/2026-08-11--2026-08-17.md` | blob `6dce63c0261605cc63b21b69dd4a56906ddf375b` | 14231 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 055 | `ballast/audits/2026-08-17--2026-08-22.md` | blob `6f16234acd01d493336e707c199334aa41f52193` | 11181 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 056 | `ballast/audits/2026-08-17--2026-08-23.md` | blob `dcbba144d18d6bce45b101d90513175245c3c462` | 12071 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 057 | `ballast/audits/2026-08-18--2026-08-24.md` | blob `92c392db9aff195bd5781b83b7dd98aaad6dba87` | 13891 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 058 | `ballast/audits/2026-08-23--2026-08-28.md` | blob `457d227b1db56f5d0d445a0273216561f528c4b5` | 13657 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 059 | `ballast/audits/2026-08-24--2026-08-30.md` | blob `d601815f205e47511911d4ebf4c3cdd4198820cb` | 11295 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 060 | `ballast/audits/2026-08-25--2026-08-31.md` | blob `3c5976fc46d87ad8e0cbb1b5cb050a597ee30b95` | 10170 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 061 | `ballast/audits/2026-09-01--2026-09-06.md` | blob `4372667f72d219ed000c45246516bf7c9a6729c7` | 9982 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 062 | `ballast/audits/2026-09-07--2026-09-12.md` | blob `27bd88abe7fdb9dd936ec8413034be71373cf143` | 8431 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 063 | `ballast/audits/2026-09-13--2026-09-19.md` | blob `dd5b78c324cca253643e11d65a5a2a4e0688798c` | 10451 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 064 | `ballast/audits/2026-09-20--2026-09-25.md` | blob `b4caa9e161c4135baef9ee89e0f5a8a51e220d5d` | 4827 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 065 | `ballast/audits/2026-09-26--2026-10-01.md` | blob `3177b85cd3a1b66eb9ae75a31797b852af402d97` | 2407 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 066 | `ballast/audits/2026-10-02--2026-10-07.md` | blob `bbcce0605856c1a1863464a343dd14228c50a1e7` | 2429 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 067 | `ballast/audits/2026-10-08--2026-10-13.md` | blob `e3a5bb19874e7dd47a01722e7230a2bafeb99f04` | 6371 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 068 | `ballast/audits/2026-10-14--2026-10-19.md` | blob `ae9bf6854d22f9b3809ce68395e6f08599b0c011` | 4090 B | NATIVE_PERIODIC_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 069 | `ballast/evidence/2026-10-09-decisions.csv` | blob `c0c9935d67b6eb68e76bc89835bb8c64d6cc78b6` | 4357 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 070 | `ballast/evidence/2026-10-09-scenarios.json` | blob `998345f28dfa50c19ca330563b6cdf8064025b6c` | 6854 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 071 | `ballast/evidence/2026-10-10-decisions.csv` | blob `d633926c5f793026cd18aa14f20c3304e23985e4` | 6753 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 072 | `ballast/evidence/2026-10-10-scenarios.json` | blob `0367b531ea8186b026f6fa121121b01e39e7ce39` | 15602 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 073 | `ballast/evidence/2026-10-11-decisions.csv` | blob `8231682c1ca96d1a20a1ab4e750a42908ac105b6` | 7002 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 074 | `ballast/evidence/2026-10-11-scenarios.json` | blob `59a9bb25e5c114199e68bef854160b6863633aee` | 4303 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 075 | `ballast/evidence/2026-10-12-decisions.csv` | blob `e721d89a24a8b4ba7dd91ddc5e98b66a67354ad9` | 2105 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 076 | `ballast/evidence/2026-10-12-scenarios.json` | blob `1748780f8af11fc44f3a18df85d620c2b21910da` | 7980 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 077 | `ballast/evidence/2026-10-13-decisions.csv` | blob `9c31e1fde14ec217a9fa6a910e9fdf3556285abc` | 10572 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 078 | `ballast/evidence/2026-10-13-scenarios.json` | blob `ffeee6cf6c586ddf1c6333d78a0577d0b9c07fa7` | 25221 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 079 | `ballast/evidence/2026-10-14-decisions.csv` | blob `6ab16a97f42359f1979fb432d4ff707f6084e42f` | 8239 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 080 | `ballast/evidence/2026-10-14-scenarios.json` | blob `2ee5ca28054e0112f1a8a4e3a4f35dbe0e0421fb` | 74257 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 081 | `ballast/evidence/2026-10-15-decision-matrix.json` | blob `283f41a724a7a3b2f044faa407ec478ec6c6ee6e` | 1669 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 082 | `ballast/evidence/2026-10-15-execution-summary.txt` | blob `d1c89f71ff64b04e88fe3314678e322fb20483e9` | 194 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 083 | `ballast/evidence/2026-10-15-outbox-decisions-part-1.csv` | blob `0336163cdbb7910e0fdb96a00208940f4762b39f` | 1693 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 084 | `ballast/evidence/2026-10-15-outbox-decisions-part-2.csv` | blob `cb8be21d4649e3b7b4e9e887916bc1728ee268a9` | 1499 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 085 | `ballast/evidence/2026-10-15-outbox-decisions-part-3.csv` | blob `64dafc2e91ed410de3ad1a93762edf4bc9c27d65` | 1599 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 086 | `ballast/evidence/2026-10-15-outbox-decisions-part-4.csv` | blob `cd6cfef86dfbab64a4e4181a1cf02886fbe6659a` | 1544 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 087 | `ballast/evidence/2026-10-15-outbox-scenarios.json` | blob `c9731c09c79e5a24d08d361658aba169eb215315` | 48749 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 088 | `ballast/evidence/2026-10-16-saga-decisions.csv` | blob `96d0cfa0557608138d827ad167594c2754f4217e` | 7769 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 089 | `ballast/evidence/2026-10-16-saga-execution-summary.json` | blob `ba58622dbc30abc48f60c20bd345260654ed06af` | 3990 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 090 | `ballast/evidence/2026-10-16-saga-scenarios.json` | blob `07c788235582a124160c38c1bf18d0bf61ac724a` | 88072 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 091 | `ballast/evidence/2026-10-17-compensation-decisions.csv` | blob `ccc4ecc2c26856503796bc0e3e12ee0652872b9b` | 6412 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 092 | `ballast/evidence/2026-10-17-compensation-scenarios.json` | blob `2dd08f622f083ec451a3f46561dfe65208fd59e7` | 93489 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 093 | `ballast/evidence/2026-10-17-compensation-sink-trace.json` | blob `a1fc6661c528209639485dba2866e6b5bf892891` | 6369 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 094 | `ballast/evidence/2026-10-17-compensation-summary.json` | blob `bcf06eb70a5ba15ef0050539558a1b9a7cf03bd9` | 1281 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 095 | `ballast/evidence/2026-10-18-handoff-bundle.json` | blob `45abcacfd3c0e2ec451ed6a82e329a025c8e4403` | 14430 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 096 | `ballast/evidence/2026-10-18-handoff-decisions.csv` | blob `331811cbe631a527d7c4b2e24047c5642342856a` | 4489 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 097 | `ballast/evidence/2026-10-18-handoff-events.json` | blob `40a28c17cdae82a9ea9d6a80977c2c04e3106677` | 96968 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 098 | `ballast/evidence/2026-10-18-handoff-summary.json` | blob `e749f249886a92ad0976012df4c171e665cb159a` | 653 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 099 | `ballast/evidence/2026-10-19-cross-region-decisions.csv` | blob `47e3a7f4a81f431699c0e0fb95d9b46c75f457b7` | 4891 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 100 | `ballast/evidence/2026-10-19-cross-region-events.json` | blob `13081812b328b87c90b84b67ea878fa555382930` | 62493 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 101 | `ballast/evidence/2026-10-19-cross-region-verification.json` | blob `f4440d6b77779622c643a0d642f734188ba8db36` | 509 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 102 | `ballast/evidence/2026-10-20-rollover-decisions.csv` | blob `a2278b7d3a975da9140052fb05309d169d64c5ee` | 6049 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 103 | `ballast/evidence/2026-10-20-rollover-events.json` | blob `67b4a291a55259fd45f021e4bf5f44c007e34369` | 80073 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 104 | `ballast/evidence/2026-10-20-rollover-verification.json` | blob `5b66cf8b55997339c6d54625c5e2f94e3e7a3272` | 705 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 105 | `ballast/evidence/2026-10-21-stepfunctions-decisions.csv` | blob `e99f0a6ab847239063714995b468949a4fdd69da` | 6279 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 106 | `ballast/evidence/2026-10-21-stepfunctions-scenarios.json` | blob `862a1f4521bc4c769489db92009c67c75b243aa9` | 57349 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 107 | `ballast/evidence/2026-10-21-stepfunctions-verification.json` | blob `ad127983e59c103c0cfca89246dacf21a45a135a` | 809 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 108 | `ballast/evidence/2026-10-22-async-token-decisions.csv` | blob `4bba2766da067490b36aa5b0dcf2caf174eded3b` | 5405 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 109 | `ballast/evidence/2026-10-22-async-token-execution.md` | blob `20bf79520598167ee5b6827b9edeb751da5cc6fe` | 5614 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 110 | `ballast/evidence/2026-10-22-async-token-scenarios.json` | blob `0e52da49ba1699851a2093d9a4536f67ecc42e55` | 62507 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 111 | `ballast/evidence/2026-10-22-async-token-verification.json` | blob `3af95468e994021e3e59ca1fbfebace3890396e5` | 1062 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 112 | `ballast/evidence/2026-10-23-redis-claim-decisions.csv` | blob `e6f717a1b6f694466aa0065141acb79e5e1a9627` | 3759 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 113 | `ballast/evidence/2026-10-23-redis-claim-maintainer-verification.json` | blob `65be01a84babf43effe98843ecda560aed6236f3` | 2341 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 114 | `ballast/evidence/2026-10-23-redis-claim-scenarios.json` | blob `69705b7e0b4c47fa66235708a1bae4da79f57830` | 20331 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 115 | `ballast/evidence/2026-10-23-redis-claim-verification.json` | blob `982c169f7586f92c80db2fd01a64abd6a5588389` | 907 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 116 | `ballast/evidence/2026-10-24-s3-multipart-decisions.csv` | blob `4dbc9f1b3038e39051ceb47d06633c5ebe3a6f68` | 9007 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 117 | `ballast/evidence/2026-10-24-s3-multipart-maintainer-review.json` | blob `a190495ec4a455a2dd1521639b1e09964962ddcd` | 1224 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 118 | `ballast/evidence/2026-10-24-s3-multipart-scenarios.json` | blob `89ad1eb6efac0366740772878f5a5e7452948e25` | 150188 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 119 | `ballast/evidence/2026-10-24-s3-multipart-verification.json` | blob `fd9175c07487f6b668bdc23fa4cc4bd27c3498f8` | 2279 B | NATIVE_INDEX_OR_EVIDENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 120 | `ballast/README.md` | blob `f0fc22d8e2db780fde320a1748517de61f802206` | 41048 B | NATIVE_INDEX_OR_EVIDENCE | CHANGED_AFTER_2026_10_24_A2_RECHECK_SCOPE | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 121 | `ballast/records/2026-07-21.md` | blob `37d8138a716e5f7caa6b503a94392573002a7ddb` | 2774 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 122 | `ballast/records/2026-07-22.md` | blob `a0d3e0f37aaa60b52bd2277e7401b37c1cf06b99` | 3537 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 123 | `ballast/records/2026-07-23.md` | blob `d6018c9c7248af7e90e762a2142aee63aff72172` | 5819 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 124 | `ballast/records/2026-07-24.md` | blob `79e232a00b9ff12bc367fff71aeb1df881c5bed7` | 8487 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 125 | `ballast/records/2026-07-25.md` | blob `1321500490a421109e1970ebdac426e098dbc858` | 9993 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 126 | `ballast/records/2026-07-26.md` | blob `c865ded5bff0f00e793ce444e822d81f2da6c57c` | 6970 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 127 | `ballast/records/2026-07-27.md` | blob `dfb4543a6d3f6dd181c02561fa105514cc03683e` | 6975 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 128 | `ballast/records/2026-07-28.md` | blob `1e26ee73f66ef20b545dc7bf9b9603a908916da8` | 6841 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 129 | `ballast/records/2026-07-29.md` | blob `cb7034c54d981d720b8e875e96f1dc8c85dacf56` | 9498 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 130 | `ballast/records/2026-07-30.md` | blob `2bccf26e0307174a9859206ee8443fd9f4d36dc4` | 9476 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 131 | `ballast/records/2026-07-31.md` | blob `23fbb837ae23ddb3acebae52615e380ee8891436` | 9708 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 132 | `ballast/records/2026-07.md` | blob `3bf183d2f99f5e16bea5070f62591b3a63fe5ddd` | 18630 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 133 | `ballast/records/2026-08-01.md` | blob `8b26e087eba885b0ad9cedc3ad3156b82e923734` | 7317 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 134 | `ballast/records/2026-08-02.md` | blob `42e617210c28e8b9573e9585c9b01fe4a05ce8e8` | 7773 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 135 | `ballast/records/2026-08-03.md` | blob `a6e978f1b06b30fa9c047c22a8cc6b226f19262c` | 8047 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 136 | `ballast/records/2026-08-04.md` | blob `7a1f8e68ee6788fd1ed4678d2863c8960a52aa7a` | 8737 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 137 | `ballast/records/2026-08-05.md` | blob `ff6ba78d8f4df0aaf3177dafd6151d26b5ff947c` | 8630 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 138 | `ballast/records/2026-08-06.md` | blob `6a8dd75f8e182a35c84a385d71182c46678234e7` | 5908 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 139 | `ballast/records/2026-08-07.md` | blob `2a00a3d8031271e2c9bf7e0f0650c8f42b3cb091` | 9671 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 140 | `ballast/records/2026-08-08.md` | blob `b207339ce31720737e8556e12bec9b4f3d715156` | 11059 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 141 | `ballast/records/2026-08-09.md` | blob `46787493ccec1c40c0f254a175966a236e55c49d` | 11725 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 142 | `ballast/records/2026-08-10.md` | blob `b349af900c90a3b8501d0a8c198b3f085496ca13` | 15462 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 143 | `ballast/records/2026-08-11.md` | blob `66997ef396ba06b2db5d63bdad23064ad8bf0a6a` | 14548 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 144 | `ballast/records/2026-08-12.md` | blob `4f3b06038a419069d4d1291cd0f28fb1786be54a` | 12396 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 145 | `ballast/records/2026-08-13.md` | blob `b4e4b2caa29e7f4af8150128dd583ba79da98de3` | 13285 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 146 | `ballast/records/2026-08-14.md` | blob `90878cfc39958dc94a8c3f46d6e96c669ceb9b12` | 15536 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 147 | `ballast/records/2026-08-15.md` | blob `3e056ea0bbe013068e466fd33534913fe8ead649` | 15808 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 148 | `ballast/records/2026-08-16.md` | blob `d1a8a2b5a695af293090f2677ff65f6a95076f34` | 16510 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 149 | `ballast/records/2026-08-17.md` | blob `510ec81564f61a95f118a49740f4b2b5b18193ff` | 12599 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 150 | `ballast/records/2026-08-18.md` | blob `359ae81a8457f7e3ad2ea95b490d1ecadfea38bb` | 12493 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 151 | `ballast/records/2026-08-19.md` | blob `29b7d7ccf8fea905847ec07cab3945119683cba8` | 14395 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 152 | `ballast/records/2026-08-20.md` | blob `ce52858d26b9e301391bc60ab4c7f896af056451` | 16645 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 153 | `ballast/records/2026-08-21.md` | blob `ffe16ea4a42afb1c075fe8e1c319019babab0e39` | 16114 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 154 | `ballast/records/2026-08-22.md` | blob `a6b4f9665ef08df24a3596b9f478da62feb1571e` | 15707 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 155 | `ballast/records/2026-08-23.md` | blob `05cc2a614ac86e00de2100e60e98e2243116e5b2` | 15087 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 156 | `ballast/records/2026-08-24.md` | blob `257ed7764ee628ba1752f927cd926b732a052297` | 16791 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 157 | `ballast/records/2026-08-25.md` | blob `d1cc76b0c82a2c3afc9db8578db3f544980d0fdc` | 17061 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 158 | `ballast/records/2026-08-26.md` | blob `48d4dfd36f18b3c097641bbc7794735e2517aacd` | 19011 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 159 | `ballast/records/2026-08-27.md` | blob `630af750c00a7e2c1f4594b97cd458fc38ccaa32` | 13872 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 160 | `ballast/records/2026-08-28.md` | blob `6c146c7cca7e9bebd0086d1b9ed76dd69a05095d` | 15757 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 161 | `ballast/records/2026-08-29.md` | blob `dc5683b6cd87e876a3b203c8002c698cfb33f0ba` | 18201 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 162 | `ballast/records/2026-08-30.md` | blob `1affa0e1627f3e759bde54ee20a71b439cd3db25` | 20134 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 163 | `ballast/records/2026-08-31.md` | blob `eed8c1d040d6cc89c5d9c076ac71d081afbd0223` | 14820 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 164 | `ballast/records/2026-08.md` | blob `b32968678169558cd6c8262c8c0966f3e4ed5773` | 39626 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 165 | `ballast/records/2026-09-01.md` | blob `95d43c63206ca4a050bd9d5f3dd018e44de63673` | 17153 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 166 | `ballast/records/2026-09-02.md` | blob `abacc0a2f4db3469ccc874fa1fcc16021a7e9f9b` | 7988 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 167 | `ballast/records/2026-09-03.md` | blob `d47a4fc6048f5c1d4855fc1ca166be860372778c` | 13052 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 168 | `ballast/records/2026-09-04.md` | blob `c2d5a9362d79880ecbddff718f450157a8f5890a` | 16958 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 169 | `ballast/records/2026-09-05.md` | blob `f0f6682c8e78e20c5732bd482392aa6d51e2d829` | 10117 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 170 | `ballast/records/2026-09-06.md` | blob `c9b5c968b5de59e092cef79a27bd371f2ca82f88` | 18799 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 171 | `ballast/records/2026-09-07.md` | blob `c191bef40799d53c663ee6559a2b7452f14654b7` | 17699 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 172 | `ballast/records/2026-09-08.md` | blob `71c20cd283e8afaac8b124afd806a1b8c7e6bf95` | 6326 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 173 | `ballast/records/2026-09-09.md` | blob `063ea598b1db76e857d7ecf20ac4420c4a6b6675` | 16328 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 174 | `ballast/records/2026-09-10.md` | blob `e2c8350c6a94ca0329852e7567c61edc91b69775` | 17354 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 175 | `ballast/records/2026-09-11.md` | blob `8760469d272a5ec1967ef39c1a4bc8218b0a8082` | 16491 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 176 | `ballast/records/2026-09-12.md` | blob `b8727c367f2d663c93c2034f6f10ca8abb7f1487` | 16023 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 177 | `ballast/records/2026-09-13.md` | blob `4db850b7e8a97f97cd35175a8bf05bd7d6b3b1df` | 14863 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 178 | `ballast/records/2026-09-14.md` | blob `f93e3be7f98645414f5d10db3d505ee14cc4f3f0` | 14980 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 179 | `ballast/records/2026-09-15.md` | blob `520d5740a57aca794449a35f9c29a430d0112ea9` | 15158 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 180 | `ballast/records/2026-09-16.md` | blob `ecb1d6cd08019266277abac3abb49d4ca0154789` | 16354 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 181 | `ballast/records/2026-09-17.md` | blob `cdea9104f02586bb4704854365f37d8cbe5f45cf` | 14081 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 182 | `ballast/records/2026-09-18.md` | blob `5c8ee8f9d54e45cfb47f901969b0492c949a35e2` | 8363 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 183 | `ballast/records/2026-09-19.md` | blob `10532b004b19271870e4e6f2fea2f269b5bb1c1d` | 15000 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 184 | `ballast/records/2026-09-20.md` | blob `3ee8b23d22b1ef7c2f0f7ec3856bfb5ec4d6a128` | 10474 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 185 | `ballast/records/2026-09-21.md` | blob `bbd1c0423f9e268bac3f459cb07d2a3fb481f8aa` | 11312 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 186 | `ballast/records/2026-09-22.md` | blob `9fd4c71cd29fa6b9046aab9891b326bbec045619` | 12573 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 187 | `ballast/records/2026-09-23.md` | blob `5595b8b1a6e805557aab3c1abf0ac8fbf6077437` | 7865 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 188 | `ballast/records/2026-09-24.md` | blob `8a3dd281f6a2b3aaefdddee0b80f89ece98d4671` | 11575 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 189 | `ballast/records/2026-09-25.md` | blob `cf4312c314256210b9b62bd64f55f9e55a41cac2` | 8157 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 190 | `ballast/records/2026-09-26.md` | blob `de7c038d883a50775ce39744779ade411d1deb23` | 3903 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 191 | `ballast/records/2026-09-27.md` | blob `55dd7c0928b601f1c04319f88ffb023e5b716bfe` | 7299 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 192 | `ballast/records/2026-09-28.md` | blob `6c933a1cd291913a459de60826afc70f73f3d37d` | 9585 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 193 | `ballast/records/2026-09-29.md` | blob `9ad12a09058e61fee7797634e02aa2bde9852538` | 12993 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 194 | `ballast/records/2026-09-30.md` | blob `4bb750afcef7f1fd10c14557feed9437ab866b27` | 13792 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 195 | `ballast/records/2026-09.md` | blob `53e62b74b7d9f2e42b23cc95240f23f33918464b` | 63125 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 196 | `ballast/records/2026-10-01.md` | blob `21a2dbd84f4a7e05bc64f78aa934d824a4a96593` | 12421 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 197 | `ballast/records/2026-10-02.md` | blob `1081112e8ef7f9c1d3e4415c2cf1edb297419a58` | 12361 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 198 | `ballast/records/2026-10-03.md` | blob `82df0f7d4e36c844f76bfed4b23bd1ece6a46b53` | 16562 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 199 | `ballast/records/2026-10-04.md` | blob `649882d3a0bbb7939481f5f2bb43aea4f268b9c8` | 16760 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 200 | `ballast/records/2026-10-05.md` | blob `b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931` | 11168 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 201 | `ballast/records/2026-10-06.md` | blob `2ad5c5ce4a3fc4228f089eaacf94109e4210a66f` | 9276 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 202 | `ballast/records/2026-10-07.md` | blob `7f20b476517f31e4d890e64880b2eeb4b8248bf7` | 11410 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 203 | `ballast/records/2026-10-08.md` | blob `8d24c4cfc5362b7c81b60a6888d875e6960342aa` | 21159 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 204 | `ballast/records/2026-10-09.md` | blob `cce84778a3f752461a1d82b9c38f5057f3950fd3` | 12343 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 205 | `ballast/records/2026-10-10.md` | blob `d2702d66363b0e8a6ea645aff60a6475a1ca003c` | 13882 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 206 | `ballast/records/2026-10-11.md` | blob `b35c69acee29b194d597d3eedd942dd4cc7243a0` | 15372 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 207 | `ballast/records/2026-10-12.md` | blob `02fe0896ac9c41ae336cda04e69f133460e0a742` | 9594 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 208 | `ballast/records/2026-10-13.md` | blob `cc09eb3e1746cf4e555880ab4304b28c63341a4c` | 16962 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 209 | `ballast/records/2026-10-14.md` | blob `98a752267cd0c2beff5d2770ecf1672a6c869e3b` | 18894 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 210 | `ballast/records/2026-10-15.md` | blob `2f94b0b736cd8e3ffda03794462a12d3b50a3bc3` | 9229 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 211 | `ballast/records/2026-10-16.md` | blob `5cf129e2d6d31ce14171ac3e2b0c6ea0a3bddee0` | 10297 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 212 | `ballast/records/2026-10-17.md` | blob `4f76b71274f8a72434ca0a02af8d48a18842dbb3` | 11965 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 213 | `ballast/records/2026-10-18.md` | blob `9d0aa4b7d2dc10b59221ae91be580c1f35f92e61` | 13441 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 214 | `ballast/records/2026-10-19.md` | blob `84488c6de94120a49a909937571e46bfcdb09505` | 7542 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 215 | `ballast/records/2026-10-20.md` | blob `86adc547bc9a745f4f0508614887e6569c7d43e9` | 7129 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 216 | `ballast/records/2026-10-21.md` | blob `1d6f82a47c714da7c79cb951a8eba9ecd969ea1f` | 10878 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 217 | `ballast/records/2026-10-22.md` | blob `d0989c17f7f3412dd1f8902802500ba5ca06fc51` | 16260 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 218 | `ballast/records/2026-10-23.md` | blob `4c96e39a7a2438ac4ba654eacaaf2645bd249e3f` | 14390 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 219 | `ballast/records/2026-10-24.md` | blob `84ff6b00559f6062bdcc36b6ac5c2a52253ca0a1` | 15680 B | JULES_NATIVE_DAILY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 220 | `ballast/records/2026-10.md` | blob `c1745ff71ef76055eb38be5267ecba09e1f12bc6` | 20682 B | JULES_NATIVE_DAILY | CHANGED_AFTER_2026_10_24_A2_RECHECK_SCOPE | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 221 | `ballast/tools/check.py` | blob `372bef18e6f5b6f727ed148179c8a21e89594c2d` | 18319 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 222 | `ballast/tools/experiment_actions_cancellation.js` | blob `ba9a7763382d8052701442806f37c1c86d3a7407` | 1873 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 223 | `ballast/tools/experiment_async_completion.py` | blob `17accde583892cd981b0d8520e61d122328bb039` | 3867 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 224 | `ballast/tools/experiment_async_token.js` | blob `767fd9ffccae80b371a7cfa3de1b6efe7bbee6c4` | 3733 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 225 | `ballast/tools/experiment_batch_partial.py` | blob `092a6465dfb5f3e2d91671b922562ea157067a14` | 6659 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 226 | `ballast/tools/experiment_breaker_scope.py` | blob `3e1962f4a21d9b7febc65dbbd4248c4e8d9ce6d4` | 4471 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 227 | `ballast/tools/experiment_cached_read.py` | blob `8418d6354f95d7b0c0779b008930dd561532dce5` | 3495 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 228 | `ballast/tools/experiment_compensation_retention.py` | blob `42b55c6a59020cc4b2cb42d8d9d4c3c1e63e2b12` | 14447 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 229 | `ballast/tools/experiment_conditional_write_readback.py` | blob `4b3c973f26dfc547d445a371fca5c5c9a385f902` | 6715 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 230 | `ballast/tools/experiment_continue_as_new_identity.js` | blob `e000f6fccbe0820c297ca0165de04987955aa497` | 4539 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 231 | `ballast/tools/experiment_cronjob_schedule_evidence.js` | blob `f0a382713aeaa407acbc659a16174c540a5e2b33` | 5242 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 232 | `ballast/tools/experiment_cross_region_prior_miss.js` | blob `17591c9e931f26520e737063f0cf949c3cb7df77` | 7133 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 233 | `ballast/tools/experiment_delegated_token_exchange.js` | blob `e546f4d482858cad8bec04d261f0940beb18fc0d` | 2283 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 234 | `ballast/tools/experiment_dual_write_atomicity.py` | blob `cceff08e2ee11cff4fc1580b07e26531d9d7cbdd` | 7180 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 235 | `ballast/tools/experiment_environment_oidc_authority.js` | blob `8513b2df40830d520dce2cfaaf669f871e43ca12` | 1973 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 236 | `ballast/tools/experiment_event_delivery_identity.js` | blob `ca25406fef500b94a2feeea0422506f9dc606b70` | 9392 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 237 | `ballast/tools/experiment_false_success.ps1` | blob `bf7bcb1b141bfda067041fe0211e15980921a3a5` | 3171 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 238 | `ballast/tools/experiment_handoff_sink_boundary.py` | blob `d1c717d8a1753699456120881b1dae79cc1959c1` | 11077 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 239 | `ballast/tools/experiment_interrupted_manifest.ps1` | blob `f8b87a62eb1e2a050c16bfc83ceff7c549b20fcf` | 7694 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 240 | `ballast/tools/experiment_job_success_boundary.py` | blob `d61cc72ca454ce2d1313cdbdfed3aa7da1f1ce96` | 3981 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 241 | `ballast/tools/experiment_late_attempt_fencing.py` | blob `8aa39e1e4c74a21b835e0fd2ddfe65457b3af7cc` | 7482 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 242 | `ballast/tools/experiment_lease_fencing.py` | blob `7ec168c0e46ddbb9bd3b034ab5a4166c05d1cdf2` | 3446 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 243 | `ballast/tools/experiment_outbox_offset_effect.py` | blob `85d198d17090cb95fcb4890f38ecfb4475da28bb` | 9275 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 244 | `ballast/tools/experiment_paginated_snapshot.py` | blob `2f982f84ef2925150943fd7a62d352e004142df6` | 4984 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 245 | `ballast/tools/experiment_parser_independence.py` | blob `afd77856c6ff5d8eb69df9c53e4ced3267ebb322` | 2847 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 246 | `ballast/tools/experiment_production_replay.py` | blob `aa98d2d6cdb46cfeb16375591af555c5608bdbe3` | 7376 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 247 | `ballast/tools/experiment_publish_binding.py` | blob `c89b0ffda484991e44c2052dea360292fa6c8104` | 5876 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 248 | `ballast/tools/experiment_redis_claim.js` | blob `1b54c22b73c371b0653db663cdc8be63ae660f25` | 5115 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 249 | `ballast/tools/experiment_retention_expiry.py` | blob `d38670d5b9df890ec69998d0b862563fb4c95f26` | 10243 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 250 | `ballast/tools/experiment_s3_multipart.js` | blob `c6c64fdfca0fd8e44f0f1133980d34436e4d0233` | 10397 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 251 | `ballast/tools/experiment_saga_compensation.js` | blob `9b277e83246f5fe35369940f5d861e25908a632d` | 10692 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 252 | `ballast/tools/experiment_shared_outage.py` | blob `74ae9dcb16fe758edaa07f8c54dcd388e75ca499` | 12017 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 253 | `ballast/tools/experiment_stale_replay.ps1` | blob `97aaf0dab5e60e574de8831afc7d605b0781e77f` | 10759 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 254 | `ballast/tools/experiment_stepfunctions_redrive.js` | blob `fbba3538a5fee461b8337ac254b8ab96469df2b9` | 7253 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 255 | `ballast/tools/experiment_temporal_child_close.js` | blob `717bf31b799cac9c7e900e814e6317696e13af37` | 13769 B | EXECUTABLE_CONTRACT_REFERENCE | CHANGED_AFTER_2026_10_24_A2_RECHECK_SCOPE | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 256 | `ballast/tools/experiment_unknown_outcome.py` | blob `30331506613e1ea860cfa81ed0d28734ac90eb07` | 10420 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 257 | `ballast/tools/rollover_replay_2026_10_20.js` | blob `c3b0182284bb9160b16641221508fe94baed0f9b` | 4193 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 258 | `ballast/tools/rollover_scenarios_2026_10_20.json` | blob `fc40f44df5cc304b7b0578c84a855724cc878c93` | 5686 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 259 | `ballast/tools/unpack_handoff_research.py` | blob `fabc1f70ad0f7afa40d52342f2c25e3df86e8a72` | 1792 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 260 | `ballast/tools/verify_actions_cancellation.js` | blob `6dd9b061f51b64e76b3857deda6f45114dd255cd` | 2157 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 261 | `ballast/tools/verify_async_completion.py` | blob `6c5e7a8912582221f081926c2a7e9b56a76ac692` | 2201 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 262 | `ballast/tools/verify_async_token.js` | blob `5193a0e22d35ff9e2f9a593b0268c283c2235e21` | 7519 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 263 | `ballast/tools/verify_batch_partial.py` | blob `580ff11e05b7d7cb0972f2b0af4c5de1b3608115` | 2595 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 264 | `ballast/tools/verify_breaker_scope.py` | blob `45593333ee2f83c05d1c2b676e4c89e685f5ae42` | 2197 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 265 | `ballast/tools/verify_cached_read.py` | blob `49f78a6dcd975744c3b608cf013b428db56546b2` | 1463 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 266 | `ballast/tools/verify_compensation_retention.py` | blob `1a06949939da0b5a98912a4e8f2ec28915ad1955` | 11996 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 267 | `ballast/tools/verify_conditional_write_readback.py` | blob `21c633f18f654942ee95770e4d55153fac55043b` | 1767 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 268 | `ballast/tools/verify_continue_as_new_identity.js` | blob `ad013b82c11a4413784eee916616f03c856d38d9` | 4748 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 269 | `ballast/tools/verify_cronjob_schedule_evidence.js` | blob `97d2462954db4a53ce76748e37dffe92a622f47c` | 3577 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 270 | `ballast/tools/verify_cross_region_prior_miss.js` | blob `786b24755aa65b7773ea207af34f46b40ef9c93e` | 9596 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 271 | `ballast/tools/verify_delegated_token_exchange.js` | blob `e74ae4d6d579aa4a2a7cf7755b1a5b5078419a90` | 4718 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 272 | `ballast/tools/verify_dual_write_atomicity.py` | blob `18411f0701866e5ecc61ab9a2f7c32621eb5a374` | 3021 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 273 | `ballast/tools/verify_environment_oidc_authority.js` | blob `7244423f83c83f051989f6f3ee536a1111c56b4e` | 4727 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 274 | `ballast/tools/verify_event_delivery_identity.js` | blob `7a95d921c90ef702de9f2794614c2ef07620262d` | 7427 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 275 | `ballast/tools/verify_handoff_sink_boundary.py` | blob `5bd8337ea4ed4ef06e0e339b1d6158fa8f86e619` | 8132 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 276 | `ballast/tools/verify_job_success_boundary.js` | blob `dfc91b30ea7b1d7b59c756eae15e10eca3928c60` | 2265 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 277 | `ballast/tools/verify_late_attempt_fencing.py` | blob `2b40341591616a685305d79f06155b7f0d3d3384` | 1916 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 278 | `ballast/tools/verify_lease_fencing.py` | blob `be3aef44b5ec928b1c3a7de840f56b4815e4fd30` | 1562 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 279 | `ballast/tools/verify_outbox_offset_effect.py` | blob `8217bfe76700d9374fd71151212fdcea6e2db18e` | 8731 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 280 | `ballast/tools/verify_paginated_snapshot.py` | blob `a7a003954995cf18368c23f81a83b9cb89f2be7a` | 1784 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 281 | `ballast/tools/verify_parser_independence.py` | blob `c5e7ec42b4f588a0b424b0bf949f6a5011efb295` | 1822 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 282 | `ballast/tools/verify_production_replay.py` | blob `9a5a0dd47ed4a6d9edb7cd5f527f724a6efc9b74` | 4469 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 283 | `ballast/tools/verify_publish_binding.py` | blob `a55f36c219308b8daad2f53b307905b28fbabb6f` | 1671 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 284 | `ballast/tools/verify_redis_claim_controls.js` | blob `b8750bc6730f8d38bf96985163808035a20f362e` | 2670 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 285 | `ballast/tools/verify_redis_claim.js` | blob `9ff9f08a7a187da0515f4495ac9dea513e887fbf` | 2967 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 286 | `ballast/tools/verify_retention_expiry.py` | blob `5fe52ebf28911d0cc4ed82dded9e5ce0d050727c` | 3461 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 287 | `ballast/tools/verify_s3_multipart.js` | blob `a95e41b6faa223978463022da424c461971b55d7` | 7138 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 288 | `ballast/tools/verify_saga_compensation.js` | blob `34022ce9292abfd1b909683808ae4d1bfbbb9c3e` | 9538 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 289 | `ballast/tools/verify_shared_outage.py` | blob `0014787dac54122a526599ba668d94d76cb529af` | 2683 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 290 | `ballast/tools/verify_stepfunctions_redrive.js` | blob `8672fa6d6e6286ff360ff92033010e8b4c482db1` | 6772 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 291 | `ballast/tools/verify_temporal_child_close.js` | blob `363ee6a9ba0a32206315fb06ee593ee94ec5c9c1` | 10396 B | EXECUTABLE_CONTRACT_REFERENCE | CHANGED_AFTER_2026_10_24_A2_RECHECK_SCOPE | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 292 | `ballast/tools/verify_unknown_outcome.py` | blob `e0bd07e2ed7fec16965a9e48c21dfb9dd3c27afa` | 2859 B | EXECUTABLE_CONTRACT_REFERENCE | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 293 | `historical-audits/2026-10/2026-10-01-external-independent-gpt-review.md` | blob `20fe8922187a4c9a4a5dd05e22a4db75887a4d5b` | 12222 B | DERIVED_AUDIT_CUSTODY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 294 | `historical-audits/2026-10/2026-10-02-september-d30-independent-gpt-audit.md` | blob `9d594f6fe2f78c609562e57f89db273d81b4e5fc` | 7000 B | DERIVED_AUDIT_CUSTODY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 295 | `historical-audits/2026-10/2026-10-14-d14-pattern-formation.md` | blob `d3e9aebae370557b910cf4680dca6030c45a3d19` | 7778 B | DERIVED_AUDIT_CUSTODY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 296 | `historical-audits/2026-10/2026-10-20-a1-source-custody.md` | blob `6593b37e96b6153dfe46bfc8b931d596992b5572` | 23783 B | DERIVED_AUDIT_CUSTODY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 297 | `historical-audits/2026-10/2026-10-20-a2-month-relation.md` | blob `2cd58f2d503469a9f3e774f70033afc902b23028` | 28328 B | DERIVED_AUDIT_CUSTODY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 298 | `historical-audits/2026-10/2026-10-21-a1-source-custody.md` | blob `90a48297f87a5d2c4727c1e06d1040d3bc79f880` | 17304 B | DERIVED_AUDIT_CUSTODY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 299 | `historical-audits/2026-10/2026-10-21-a2-month-relation.md` | blob `c81f51878dc6612629539b9f51c79b09a1310f23` | 16457 B | DERIVED_AUDIT_CUSTODY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 300 | `historical-audits/2026-10/2026-10-23-a1-source-custody.md` | blob `db20f4c0009277bdf20912634fe89b5f760e3b8b` | 15481 B | DERIVED_AUDIT_CUSTODY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 301 | `historical-audits/2026-10/2026-10-23-a2-month-relation.md` | blob `e4d40abd0ca60735dd17086503c6dd72b7e8c9ec` | 13589 B | DERIVED_AUDIT_CUSTODY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 302 | `historical-audits/2026-10/2026-10-24-a1-source-custody.md` | blob `7e37d74c0dfa5701f382161d3ca7b5ed32eaf0bf` | 12021 B | DERIVED_AUDIT_CUSTODY | BLOB_UNCHANGED_SINCE_2026_10_24_A2 | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+- 303 | `historical-audits/2026-10/2026-10-24-a2-month-relation.md` | blob `91742ceecd53c73774e220d855b77922a6a81bbd` | 12938 B | DERIVED_AUDIT_CUSTODY | FORMER_A2_PLUS_2026_10_25_FORWARD_CORRECTION | PRESERVE_NATIVE_RESULT_NO_EXECUTION_INFERENCE
+
+## Explicit exclusion of N-day native material
+- EXCLUDED N-day `aegis-cortex/2026-10-25-A1-reliability-observe.md` @ `8f57bef1f90eaf5e15596c5193111bf2b3f8453a`
+- EXCLUDED N-day `aegis-cortex/2026-10-25-A2-doctrine-orient.md` @ `2b1d0eed8acd75edaf49278859c3b56c67fd911b`
+- EXCLUDED N-day `ballast/records/2026-10-25.md` @ `0cf46aa7a78f7faf46ebe25f5be3b31de025925e`
+
+## A1 result and validation scope
+- Exact paths and object SHA values were enumerated from current GitHub main and compared against the merged prior A2 lineage.
+- All 72 native path slots were tested for tree membership; path present != command executed, claim validated or source corroborated.
+- 303 object-specific content dispositions use blob immutability to carry forward prior judgments unless changed. Changes require separate review, not implicit PASS.
+- Index, suite or site deployment correctness was NOT independently executed in this pass.
+- A1 source-custody status: BOUNDED_FULL_PATH_COVERAGE; no monthly close or prior-outcome rewrites.
+- A2 cannot begin until **all ten** A1 PRs are merged and all ten current main SHA values refreshed.
+- Expected follow-on: A2 MonthStart→2026-10-25 must inherit this merged A1 plus latest native and corrected 10-24 availability.
+- This is new dated maintenance, not a parallel native Daily or an impersonation of Jules/Web GPT.
+
+## Historical gap identity
+- Required 24-day canonical native path set: present in this current main; no execution claim implied.
+
