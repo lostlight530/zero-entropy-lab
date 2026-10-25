@@ -1,0 +1,166 @@
+# A2 | zero-entropy-lab | 2026-10 fixed monthly current relation through Oct25
+
+- Repository: `lostlight530/zero-entropy-lab`
+- Fresh **after all ten A1 merges**: `39cbb1095cf769be35a4e7d213b6f9e76130a460`
+- Merged own A1: `historical-audits/2026-10/2026-10-25-a1-source-custody.md` @ blob `7d6e0551bd2e9644be57d7b9e4d65dc8bab61256`
+- Prior merged Oct24 A2 baseline: `561254377a9946aa608020b22e98e4aaa8118003`
+- Canonical monthly relational identity: `2026-10` (not a new natural month)
+- Complete interval: MonthStart=2026-10-01 through N=2026-10-25 inclusive
+- Exact native slot denominator: 75 source paths across 25 logical dates, missing 0.
+- Current versus previous A2: 20 changed paths, including current Oct25 Native input and merged A1 custody.
+- Producer boundary: Independent GPT relational maintenance; original Horizon/Aegis GPT Native and Parallax/Ballast Jules roles retained.
+- Status: OCTOBER_MONTH_OPEN; source delivery does not imply the native runtime/scientific truth was separately replayed.
+
+## A1→A2 invariant and corrected historical base
+- A1 Oct01–24 is a merged prerequisite at `7d6e0551bd2e9644be57d7b9e4d65dc8bab61256`; it remains prior state, not rewritten by this A2.
+- The 2026-10-24 A2 carried one **now corrected original source availability** error; merged independent correction #717 must override its old absence-as-Git-state reading.
+- Ballast 2026-10-24 original PR #708 was already visible at old A2 base; correction #717 confirms exact blob without manufacturing extra runs.
+- N=Oct25 Native source PR(s) are #713, #714, #715, #716; add their observed result and limitations without rewriting Oct24.
+- Aegis A1 → A2 / Ballast independent are **distinct source identities**, not independent corroboration of one claim.
+- Source repetition, PR merge, path presence and actual test execution are separate predicates.
+- October is OPEN; A2 only records the latest evidence relation, no natural month seal.
+- Weekly/Periodic audits and D7/D10/D14/D30 retain their own task cadence and do not get new execution credit from A2.
+
+## All 25 dates: current cross-task relational closure checks
+- 2026-10-01 | Aegis A1 → A2 / Ballast independent | 461882e16809 → 450bb5e41ba1 → 21a2dbd84f4a | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-02 | Aegis A1 → A2 / Ballast independent | abe20d48251f → c590dffb8dc2 → 1081112e8ef7 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-03 | Aegis A1 → A2 / Ballast independent | 0f37ab4b605a → 3c95e23cfa61 → 82df0f7d4e36 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-04 | Aegis A1 → A2 / Ballast independent | 88fcc05dd273 → 08f105bfae91 → 649882d3a0bb | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-05 | Aegis A1 → A2 / Ballast independent | 11701da8dff9 → 98139f531397 → b5ac70417e44 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-06 | Aegis A1 → A2 / Ballast independent | 56abc25eca5f → 6cb80c4d899b → 2ad5c5ce4a3f | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-07 | Aegis A1 → A2 / Ballast independent | 12c9266cc5f1 → 9bd6c75a3108 → 7f20b476517f | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-08 | Aegis A1 → A2 / Ballast independent | 5c91de675c4d → 9815107064b4 → 8d24c4cfc536 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-09 | Aegis A1 → A2 / Ballast independent | e5b385ba25e8 → 2f96bb0dd589 → cce84778a3f7 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-10 | Aegis A1 → A2 / Ballast independent | bfbe8f099a74 → ce4f369d35fd → d2702d66363b | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-11 | Aegis A1 → A2 / Ballast independent | bc3c4ba9cf48 → d3882e3530ce → b35c69acee29 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-12 | Aegis A1 → A2 / Ballast independent | 72d7f662d70f → 6ed3797a3469 → 02fe0896ac9c | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-13 | Aegis A1 → A2 / Ballast independent | a5d0ca039bbe → 1404e3a91cb6 → cc09eb3e1746 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-14 | Aegis A1 → A2 / Ballast independent | 1def392d03eb → c7b33ecece64 → 98a752267cd0 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-15 | Aegis A1 → A2 / Ballast independent | 293272cf6ae7 → 896901e89264 → 2f94b0b736cd | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-16 | Aegis A1 → A2 / Ballast independent | 372a99054cd4 → 454d6a632ad1 → 5cf129e2d6d3 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-17 | Aegis A1 → A2 / Ballast independent | 32bc7fefb646 → 7d839226fcf9 → 4f76b71274f8 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-18 | Aegis A1 → A2 / Ballast independent | cb4df7bb2ca4 → de4fa530ab13 → 9d0aa4b7d2dc | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-19 | Aegis A1 → A2 / Ballast independent | f0edcb5ce06f → 6a9798bba696 → 84488c6de941 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-20 | Aegis A1 → A2 / Ballast independent | 4adfe9ac3a63 → 14c2e2d8dcc8 → 86adc547bc9a | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-21 | Aegis A1 → A2 / Ballast independent | 9c397544e161 → 3bee2ab7f45d → 1d6f82a47c71 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-22 | Aegis A1 → A2 / Ballast independent | 97f64b6c675e → 57671395b124 → d0989c17f7f3 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-23 | Aegis A1 → A2 / Ballast independent | a48c1172dee8 → a46cde6671b6 → 4c96e39a7a24 | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-24 | Aegis A1 → A2 / Ballast independent | 1ed35d655b03 → 694eac2dc0f2 → 84ff6b00559f | A1_INHERITED_WITH_ORIGINAL_RESULT | no inferred scientific PASS
+- 2026-10-25 | Aegis A1 → A2 / Ballast independent | 8f57bef1f90e → 2b1d0eed8acd → 0cf46aa7a78f | N_DAY_NATIVE_ADMITTED_AFTER_A1 | no inferred scientific PASS
+
+## Full current-month component lineage (each source blob distinct)
+- 001 | 2026-10-01 | `aegis-cortex/2026-10-01-A1-reliability-observe.md` | `461882e16809ef9b442b3c6d47b45f44418660b5` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 002 | 2026-10-01 | `aegis-cortex/2026-10-01-A2-doctrine-orient.md` | `450bb5e41ba1f4f52f605632a3522797568429c5` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 003 | 2026-10-01 | `ballast/records/2026-10-01.md` | `21a2dbd84f4a7e05bc64f78aa934d824a4a96593` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 004 | 2026-10-02 | `aegis-cortex/2026-10-02-A1-reliability-observe.md` | `abe20d48251fc36893884f355421e896e3f3631a` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 005 | 2026-10-02 | `aegis-cortex/2026-10-02-A2-doctrine-orient.md` | `c590dffb8dc28fb701174e6dfafe2c3697f97b37` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 006 | 2026-10-02 | `ballast/records/2026-10-02.md` | `1081112e8ef7f9c1d3e4415c2cf1edb297419a58` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 007 | 2026-10-03 | `aegis-cortex/2026-10-03-A1-reliability-observe.md` | `0f37ab4b605a24006a862a9837564a459c0c1298` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 008 | 2026-10-03 | `aegis-cortex/2026-10-03-A2-doctrine-orient.md` | `3c95e23cfa6187d0c23f607d622e2e8353051b13` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 009 | 2026-10-03 | `ballast/records/2026-10-03.md` | `82df0f7d4e36c844f76bfed4b23bd1ece6a46b53` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 010 | 2026-10-04 | `aegis-cortex/2026-10-04-A1-reliability-observe.md` | `88fcc05dd273fbb361963435211e38447ea67a9c` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 011 | 2026-10-04 | `aegis-cortex/2026-10-04-A2-doctrine-orient.md` | `08f105bfae915c994d411e8ab86d421db03f9c42` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 012 | 2026-10-04 | `ballast/records/2026-10-04.md` | `649882d3a0bbb7939481f5f2bb43aea4f268b9c8` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 013 | 2026-10-05 | `aegis-cortex/2026-10-05-A1-reliability-observe.md` | `11701da8dff9882ef4e8d4f174abc062abd41404` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 014 | 2026-10-05 | `aegis-cortex/2026-10-05-A2-doctrine-orient.md` | `98139f531397d66bde60765a38f9b0c683d936ab` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 015 | 2026-10-05 | `ballast/records/2026-10-05.md` | `b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 016 | 2026-10-06 | `aegis-cortex/2026-10-06-A1-reliability-observe.md` | `56abc25eca5f0e9e2aa537be5924c6045162815c` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 017 | 2026-10-06 | `aegis-cortex/2026-10-06-A2-doctrine-orient.md` | `6cb80c4d899b533c539ad487b274c1b168db9724` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 018 | 2026-10-06 | `ballast/records/2026-10-06.md` | `2ad5c5ce4a3fc4228f089eaacf94109e4210a66f` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 019 | 2026-10-07 | `aegis-cortex/2026-10-07-A1-reliability-observe.md` | `12c9266cc5f1fe0837a736e7ec9ed4505e7ba4a5` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 020 | 2026-10-07 | `aegis-cortex/2026-10-07-A2-doctrine-orient.md` | `9bd6c75a310832f7cc58c9ae399f41acfdf4d950` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 021 | 2026-10-07 | `ballast/records/2026-10-07.md` | `7f20b476517f31e4d890e64880b2eeb4b8248bf7` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 022 | 2026-10-08 | `aegis-cortex/2026-10-08-A1-reliability-observe.md` | `5c91de675c4dc78aba0f419ab5f7added9c29fd7` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 023 | 2026-10-08 | `aegis-cortex/2026-10-08-A2-doctrine-orient.md` | `9815107064b4fed9aa0983143c4b329b5f28a675` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 024 | 2026-10-08 | `ballast/records/2026-10-08.md` | `8d24c4cfc5362b7c81b60a6888d875e6960342aa` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 025 | 2026-10-09 | `aegis-cortex/2026-10-09-A1-reliability-observe.md` | `e5b385ba25e8a4ef9a68401080dab545592ddf4b` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 026 | 2026-10-09 | `aegis-cortex/2026-10-09-A2-doctrine-orient.md` | `2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 027 | 2026-10-09 | `ballast/records/2026-10-09.md` | `cce84778a3f752461a1d82b9c38f5057f3950fd3` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 028 | 2026-10-10 | `aegis-cortex/2026-10-10-A1-reliability-observe.md` | `bfbe8f099a7413cdd5a8f1466a180d9e2d78f975` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 029 | 2026-10-10 | `aegis-cortex/2026-10-10-A2-doctrine-orient.md` | `ce4f369d35fda91ddeeb975679a89ee4fe1f2314` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 030 | 2026-10-10 | `ballast/records/2026-10-10.md` | `d2702d66363b0e8a6ea645aff60a6475a1ca003c` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 031 | 2026-10-11 | `aegis-cortex/2026-10-11-A1-reliability-observe.md` | `bc3c4ba9cf48045bb05f02e65901dd02ad5464f1` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 032 | 2026-10-11 | `aegis-cortex/2026-10-11-A2-doctrine-orient.md` | `d3882e3530ce98550a10f93ba4221afbb270c83c` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 033 | 2026-10-11 | `ballast/records/2026-10-11.md` | `b35c69acee29b194d597d3eedd942dd4cc7243a0` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 034 | 2026-10-12 | `aegis-cortex/2026-10-12-A1-reliability-observe.md` | `72d7f662d70f5c73301fd8bec7c8351f0e1a7349` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 035 | 2026-10-12 | `aegis-cortex/2026-10-12-A2-doctrine-orient.md` | `6ed3797a34699a9eae821c7bb2a8c8797459b17f` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 036 | 2026-10-12 | `ballast/records/2026-10-12.md` | `02fe0896ac9c41ae336cda04e69f133460e0a742` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 037 | 2026-10-13 | `aegis-cortex/2026-10-13-A1-reliability-observe.md` | `a5d0ca039bbe4b93b8b59e5e671bcf76ff82ba87` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 038 | 2026-10-13 | `aegis-cortex/2026-10-13-A2-doctrine-orient.md` | `1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 039 | 2026-10-13 | `ballast/records/2026-10-13.md` | `cc09eb3e1746cf4e555880ab4304b28c63341a4c` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 040 | 2026-10-14 | `aegis-cortex/2026-10-14-A1-reliability-observe.md` | `1def392d03eb7bb03c428d696d4acb923454112f` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 041 | 2026-10-14 | `aegis-cortex/2026-10-14-A2-doctrine-orient.md` | `c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 042 | 2026-10-14 | `ballast/records/2026-10-14.md` | `98a752267cd0c2beff5d2770ecf1672a6c869e3b` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 043 | 2026-10-15 | `aegis-cortex/2026-10-15-A1-reliability-observe.md` | `293272cf6ae77efc28491dc69597d0652f4ca751` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 044 | 2026-10-15 | `aegis-cortex/2026-10-15-A2-doctrine-orient.md` | `896901e892647ab19b584fa077363afc5e4e89ab` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 045 | 2026-10-15 | `ballast/records/2026-10-15.md` | `2f94b0b736cd8e3ffda03794462a12d3b50a3bc3` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 046 | 2026-10-16 | `aegis-cortex/2026-10-16-A1-reliability-observe.md` | `372a99054cd4cd55ac909304b4c44a702376bcf6` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 047 | 2026-10-16 | `aegis-cortex/2026-10-16-A2-doctrine-orient.md` | `454d6a632ad13c2fdacbfa27a30d0a565427026f` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 048 | 2026-10-16 | `ballast/records/2026-10-16.md` | `5cf129e2d6d31ce14171ac3e2b0c6ea0a3bddee0` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 049 | 2026-10-17 | `aegis-cortex/2026-10-17-A1-reliability-observe.md` | `32bc7fefb64671e1c09347d03231034fd3d28cda` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 050 | 2026-10-17 | `aegis-cortex/2026-10-17-A2-doctrine-orient.md` | `7d839226fcf975325c8a5813e706b6e05f09aeeb` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 051 | 2026-10-17 | `ballast/records/2026-10-17.md` | `4f76b71274f8a72434ca0a02af8d48a18842dbb3` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 052 | 2026-10-18 | `aegis-cortex/2026-10-18-A1-reliability-observe.md` | `cb4df7bb2ca43662643354bf531a10dde9e75ffd` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 053 | 2026-10-18 | `aegis-cortex/2026-10-18-A2-doctrine-orient.md` | `de4fa530ab13e81aedb672701392680d2bd83925` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 054 | 2026-10-18 | `ballast/records/2026-10-18.md` | `9d0aa4b7d2dc10b59221ae91be580c1f35f92e61` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 055 | 2026-10-19 | `aegis-cortex/2026-10-19-A1-reliability-observe.md` | `f0edcb5ce06fbc06a5c0ce6a4454607121915be2` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 056 | 2026-10-19 | `aegis-cortex/2026-10-19-A2-doctrine-orient.md` | `6a9798bba6967b020ddc9bf4542b3404e421d24b` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 057 | 2026-10-19 | `ballast/records/2026-10-19.md` | `84488c6de94120a49a909937571e46bfcdb09505` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 058 | 2026-10-20 | `aegis-cortex/2026-10-20-A1-reliability-observe.md` | `4adfe9ac3a6321031afec2daad0609ee5db0d209` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 059 | 2026-10-20 | `aegis-cortex/2026-10-20-A2-doctrine-orient.md` | `14c2e2d8dcc85fc007ba8392111960ad194ba996` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 060 | 2026-10-20 | `ballast/records/2026-10-20.md` | `86adc547bc9a745f4f0508614887e6569c7d43e9` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 061 | 2026-10-21 | `aegis-cortex/2026-10-21-A1-reliability-observe.md` | `9c397544e16158d0eac8751798fdc894950fa2d0` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 062 | 2026-10-21 | `aegis-cortex/2026-10-21-A2-doctrine-orient.md` | `3bee2ab7f45d9be1aaa285ccc08e703200ce6685` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 063 | 2026-10-21 | `ballast/records/2026-10-21.md` | `1d6f82a47c714da7c79cb951a8eba9ecd969ea1f` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 064 | 2026-10-22 | `aegis-cortex/2026-10-22-A1-reliability-observe.md` | `97f64b6c675e716952843ff7da3d9c5b65fe1c86` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 065 | 2026-10-22 | `aegis-cortex/2026-10-22-A2-doctrine-orient.md` | `57671395b124905190d924e698b67a299ed4e6ce` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 066 | 2026-10-22 | `ballast/records/2026-10-22.md` | `d0989c17f7f3412dd1f8902802500ba5ca06fc51` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 067 | 2026-10-23 | `aegis-cortex/2026-10-23-A1-reliability-observe.md` | `a48c1172dee8b8c76c99ca0a9baa2b31d67d1019` | UPSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 068 | 2026-10-23 | `aegis-cortex/2026-10-23-A2-doctrine-orient.md` | `a46cde6671b65d40f5110805aa7f40cadd4068d4` | DOWNSTREAM_DAILY | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 069 | 2026-10-23 | `ballast/records/2026-10-23.md` | `4c96e39a7a2438ac4ba654eacaaf2645bd249e3f` | INDEPENDENT_NATIVE_RESEARCH | A1_HISTORICAL_INHERITED | source claim/status preserved
+- 070 | 2026-10-24 | `aegis-cortex/2026-10-24-A1-reliability-observe.md` | `1ed35d655b0316838c59ef3f30b8cb87f1421c4a` | UPSTREAM_DAILY | PRIOR_DAY_A1_PLUS_CORRECTED_AVAILABILITY | source claim/status preserved
+- 071 | 2026-10-24 | `aegis-cortex/2026-10-24-A2-doctrine-orient.md` | `694eac2dc0f2656b97482d2d549f6043d91e6e1f` | DOWNSTREAM_DAILY | PRIOR_DAY_A1_PLUS_CORRECTED_AVAILABILITY | source claim/status preserved
+- 072 | 2026-10-24 | `ballast/records/2026-10-24.md` | `84ff6b00559f6062bdcc36b6ac5c2a52253ca0a1` | INDEPENDENT_NATIVE_RESEARCH | PRIOR_DAY_A1_PLUS_CORRECTED_AVAILABILITY | source claim/status preserved
+- 073 | 2026-10-25 | `aegis-cortex/2026-10-25-A1-reliability-observe.md` | `8f57bef1f90eaf5e15596c5193111bf2b3f8453a` | UPSTREAM_DAILY | CURRENT_N_DAY_INPUT | source claim/status preserved
+- 074 | 2026-10-25 | `aegis-cortex/2026-10-25-A2-doctrine-orient.md` | `2b1d0eed8acd75edaf49278859c3b56c67fd911b` | DOWNSTREAM_DAILY | CURRENT_N_DAY_INPUT | source claim/status preserved
+- 075 | 2026-10-25 | `ballast/records/2026-10-25.md` | `0cf46aa7a78f7faf46ebe25f5be3b31de025925e` | INDEPENDENT_NATIVE_RESEARCH | CURRENT_N_DAY_INPUT | source claim/status preserved
+
+## Monthly / weekly / Special relation and current N-day case
+- `aegis-cortex/2026-10-A6-aegis-memorize.md` | exact blob `1082ef84c1a69125a45aa409367edeae36e6725d` | MONTH_OWNER_OPEN | source presence != natural close
+- `ballast/records/2026-10.md` | exact blob `c1745ff71ef76055eb38be5267ecba09e1f12bc6` | MONTH_OWNER_OPEN | source presence != natural close
+- `ballast/audits/2026-10-20--2026-10-25.md` | exact blob `cc27c97d380b31d39823ce2ba1e0dd3beddd04da` | PERIODIC_OWNER_BOUNDED | source presence != natural close
+- 2026-10-25 Aegis A1 (#715) entered main before A2 (#716); this is document dependency ordering only.
+- 2026-10-25 Ballast (#713) bounded synthetic Temporal child-close/model effects and #714 reviewer correction: real external effect count remains 0.
+- Ballast six-date 2026-10-20..25 audit is distinct from the Daily and from D7/D10/D14/D30.
+- Bounded V8 synthetic PASS_WITH_LIMITS does not establish real Temporal/AWS acceptance, protected completion or external side effect.
+
+## Exact delta since prior current-month A2
+- `aegis-cortex/2026-10-25-A1-reliability-observe.md` | added | +102/-0 | N_DAY_ADDITION | Git diff only; no native replay
+- `aegis-cortex/2026-10-25-A2-doctrine-orient.md` | added | +111/-0 | N_DAY_ADDITION | Git diff only; no native replay
+- `ballast/README.md` | modified | +26/-2 | CORRECTION_OR_SYNC_REQUIRED | Git diff only; no native replay
+- `ballast/audits/2026-10-20--2026-10-25.md` | added | +142/-0 | N_DAY_ADDITION | Git diff only; no native replay
+- `ballast/evidence/2026-10-25-cycle-maintainer-verification.json` | added | +156/-0 | N_DAY_ADDITION | Git diff only; no native replay
+- `ballast/evidence/2026-10-25-temporal-child-close-decisions.csv` | added | +202/-0 | N_DAY_ADDITION | Git diff only; no native replay
+- `ballast/evidence/2026-10-25-temporal-child-close-maintainer-review.json` | added | +80/-0 | N_DAY_ADDITION | Git diff only; no native replay
+- `ballast/evidence/2026-10-25-temporal-child-close-scenarios.json` | added | +14282/-0 | N_DAY_ADDITION | Git diff only; no native replay
+- `ballast/evidence/2026-10-25-temporal-child-close-verification.json` | added | +74/-0 | N_DAY_ADDITION | Git diff only; no native replay
+- `ballast/records/2026-10-25.md` | added | +230/-0 | N_DAY_ADDITION | Git diff only; no native replay
+- `ballast/records/2026-10.md` | modified | +10/-2 | CORRECTION_OR_SYNC_REQUIRED | Git diff only; no native replay
+- `ballast/tools/experiment_temporal_child_close.js` | added | +127/-0 | CORRECTION_OR_SYNC_REQUIRED | Git diff only; no native replay
+- `ballast/tools/verify_temporal_child_close.js` | added | +102/-0 | CORRECTION_OR_SYNC_REQUIRED | Git diff only; no native replay
+- `data/knowledge/entities/code_file.jsonl` | modified | +59/-57 | CORRECTION_OR_SYNC_REQUIRED | Git diff only; no native replay
+- `data/knowledge/entities/doc_section.jsonl` | modified | +20/-6 | CORRECTION_OR_SYNC_REQUIRED | Git diff only; no native replay
+- `data/knowledge/relations/canonical.jsonl` | modified | +745/-729 | CORRECTION_OR_SYNC_REQUIRED | Git diff only; no native replay
+- `data/memories/20261024-cognitive-report.md` | modified | +5/-5 | CORRECTION_OR_SYNC_REQUIRED | Git diff only; no native replay
+- `data/memories/MISSION_ACTIVE.md` | modified | +1/-1 | CORRECTION_OR_SYNC_REQUIRED | Git diff only; no native replay
+- `historical-audits/2026-10/2026-10-24-a2-month-relation.md` | modified | +21/-0 | CORRECTION_OR_SYNC_REQUIRED | Git diff only; no native replay
+- `historical-audits/2026-10/2026-10-25-a1-source-custody.md` | added | +420/-0 | TEN_A1_MERGED_EVIDENCE | Git diff only; no native replay
+
+## Final A2 interpretation
+- All 75 canonical named daily source paths are present on post-A1 main, and all 25 logical dates have separate upstream/downstream/independent-research identities.
+- The exact source-to-source relation is traceable through SHA; links do not confer executable, scientific or independence credit.
+- Prev Oct24 visibility correction remains active; original assertion and the correction are both retained in Git history.
+- Current October month version stays OPEN, with known unknowns/failures preserved.
+- Code, source Daily, original Weekly/Monthly, Special, audits and user production ownership were not edited.
+- Deliver A2 only as a new dated relational update, then require final main SHA + PR + owner file + open PR=0 verification.
+
