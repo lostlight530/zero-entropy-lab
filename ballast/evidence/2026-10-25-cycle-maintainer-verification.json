@@ -1,0 +1,156 @@
+{
+  "schema": "ballast-cycle-maintainer-verification-2026-10-25",
+  "reviewKind": "DERIVED_INDEPENDENT_MAINTAINER_AUDIT",
+  "reviewRecordedAtUtc": "2026-10-25T00:25:06.379Z",
+  "reviewLogicalDate": "2026-10-25",
+  "timeZone": "Asia/Shanghai",
+  "remoteMainBaseSha": "8c3393fabd97b7c3cd179804ae258c1f2b2aeb1b",
+  "previousMergeSha": "15fd611f8b0fdfbebe279da291239b3e7482957b",
+  "audit": "ballast/audits/2026-10-20--2026-10-25.md",
+  "auditWindow": {
+    "start": "2026-10-20",
+    "end": "2026-10-25",
+    "inclusiveLogicalDates": 6,
+    "overlapWithPrevious2026_10_14To19": 0
+  },
+  "replayEntry": "Isolated V8 JavaScript function evaluation of committed producer/replay/verifier sources with committed JSON and CSV, not a native Node CLI",
+  "perDate": [
+    {
+      "day": "2026-10-20",
+      "topic": "Temporal Continue-As-New / run lineage",
+      "scenarioCount": 35,
+      "decisionRows": 105,
+      "primitiveProducer": "REGNERATED_FROM_AUTHORED_SPECS",
+      "primitiveReplay": "INDEPENDENT_EVENT_REPLAY",
+      "control": "56/56 mutations",
+      "originalGenerator": "PRESENT",
+      "evidence": "evidence/2026-10-20-rollover-verification.json"
+    },
+    {
+      "day": "2026-10-21",
+      "topic": "Step Functions DataLimitExceeded redrive",
+      "scenarioCount": 34,
+      "decisionRows": 102,
+      "primitiveProducer": "REGENERATED",
+      "primitiveReplay": "INDEPENDENT_PRIMITIVE_REPLAY",
+      "control": "23/23 negative",
+      "originalGenerator": "PRESENT",
+      "evidence": "evidence/2026-10-21-stepfunctions-verification.json"
+    },
+    {
+      "day": "2026-10-22",
+      "topic": "Temporal async Activity token",
+      "scenarioCount": 38,
+      "decisionRows": 114,
+      "primitiveProducer": "RECONSTRUCTED_FIXTURE_REPLAY_ONLY",
+      "primitiveReplay": "INDEPENDENT_PRIMITIVE_REPLAY",
+      "control": "41 negatives and 3 positive",
+      "originalGenerator": "NOT_RECOVERED",
+      "evidence": "evidence/2026-10-22-async-token-verification.json"
+    },
+    {
+      "day": "2026-10-23",
+      "topic": "Redis XAUTOCLAIM",
+      "scenarioCount": 29,
+      "decisionRows": 87,
+      "primitiveProducer": "REGENERATED",
+      "primitiveReplay": "INDEPENDENT_PRIMITIVE_REPLAY",
+      "control": "24/24 negatives, 13/13 probes",
+      "originalGenerator": "PRESENT",
+      "evidence": "evidence/2026-10-23-redis-claim-maintainer-verification.json"
+    },
+    {
+      "day": "2026-10-24",
+      "topic": "S3 multipart publish",
+      "scenarioCount": 60,
+      "decisionRows": 180,
+      "primitiveProducer": "REGENERATED_CORRECTED_SAME_DAY",
+      "primitiveReplay": "INDEPENDENT_PRIMITIVE_REPLAY",
+      "control": "53/53 negatives, 24/24 probes",
+      "originalGenerator": "PRESENT_ORIGINAL_HEAD_PRESERVED",
+      "evidence": "evidence/2026-10-24-s3-multipart-verification.json"
+    },
+    {
+      "day": "2026-10-25",
+      "topic": "Temporal child-close",
+      "scenarioCount": 67,
+      "decisionRows": 201,
+      "primitiveProducer": "REGENERATED_CORRECTED_SAME_DAY",
+      "primitiveReplay": "INDEPENDENT_PRIMITIVE_REPLAY",
+      "control": "59/59 negatives, 40/40 probes",
+      "originalGenerator": "PRESENT_ORIGINAL_HEAD_PRESERVED",
+      "evidence": "evidence/2026-10-25-temporal-child-close-verification.json"
+    }
+  ],
+  "aggregates": {
+    "latestPreservedScenarioInstances": 263,
+    "latestPreservedDecisionRows": 789,
+    "distinctLogicalDailies": 6,
+    "distinctOriginalResearchWindows": 6,
+    "additionalResearchWindows": 0,
+    "additionalDaily": 0,
+    "additionalAudit": 0,
+    "additionalCases": 0,
+    "additionalNotes": 0,
+    "additionalMethod": 0,
+    "additionalSpecial": 0
+  },
+  "verification": {
+    "modelReplayEntries": "6/6 executed",
+    "replayedDecisions": "789/789 model-relative",
+    "sourceGenerators": "5 current dates generated from present source, 2026-10-22 is reconstructed fixture replay and original generator NOT_RECOVERED",
+    "dataSourceIndependence": "NONE shared authored primitive evidence",
+    "semanticContractIndependence": "LIMITED shared modeled contracts",
+    "externalAuthorityIndependence": "NONE",
+    "fullPythonChecker": "NOT_EXECUTED — complete local checkout inaccessible",
+    "standaloneNodeCLI": "NOT_EXECUTED",
+    "realTemporalAWSRedisS3Stripe": "NOT_EXECUTED",
+    "realExternalEffectSink": "NOT_EXECUTED",
+    "trustedAuthorizationAndAuthoritativeMiss": "NOT_EXECUTED",
+    "historyOverrides": "NONE"
+  },
+  "findings": [
+    {
+      "kind": "METADATA_DATE_CORRECTION",
+      "path": "ballast/records/2026-10.md",
+      "before": "Twenty-five NATIVE Dailies ... as of 2026-10-24",
+      "after": "as of 2026-10-25",
+      "reason": "October 25 Daily is included in count of twenty-five"
+    },
+    {
+      "kind": "POINT_IN_TIME_DISAMBIGUATION",
+      "path": "ballast/records/2026-10-24.md",
+      "before": "full_reference | 0/51",
+      "after": "0/51 applies to original 51-fixture run; latest corrected reference across 60 fixtures is 0/60 relative to its verifier, and 180/180 decision-row reconstruction",
+      "reason": "Do not retroactively overwrite merged historical source; audit correction records provenance"
+    },
+    {
+      "kind": "REPLAY_PROVENANCE",
+      "day": "2026-10-22",
+      "value": "Original generator NOT_RECOVERED, distinct from executable fixture replay"
+    },
+    {
+      "kind": "EVIDENCE_STRENGTH",
+      "value": "Six modeled decision replays are not six independent real-system sink validations and reference agreement is not empirical accuracy"
+    }
+  ],
+  "sourcesRecheckedAtUtc": "2026-10-25T00:25:06.379Z",
+  "publicVendorContracts": [
+    {
+      "publisher": "AWS",
+      "url": "https://docs.aws.amazon.com/step-functions/latest/dg/redrive-executions.html",
+      "boundary": "DataLimitExceeded can rerun successful Parallel or Map work, not an external effect witness"
+    },
+    {
+      "publisher": "AWS",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_CompleteMultipartUpload.html",
+      "boundary": "HTTP 200 may embed an Error body"
+    },
+    {
+      "publisher": "Redis",
+      "url": "https://redis.io/docs/latest/commands/xautoclaim/",
+      "boundary": "0-0 cursor indicates scan exhausted at that moment, not external completion"
+    }
+  ],
+  "noPromotion": true
+}
