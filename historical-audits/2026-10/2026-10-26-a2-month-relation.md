@@ -1,0 +1,170 @@
+# A2 | zero-entropy-lab | 2026-10-26 current October evidence relation
+
+- Repository: `lostlight530/zero-entropy-lab`; logical date 2026-10-26 Asia/Shanghai.
+- Fresh post-ALL-TEN-A1 merged main: `643ff4c35cb18dfded28e5d845250cf26fb5202b`; direct A1 owner `historical-audits/2026-10/2026-10-26-a1-source-custody.md` blob `d8b340076c9aea93b7d757efe6c438ce7903662a`.
+- Last Oct25 A2 merged baseline: `7c23502945e6fea63fb208d400c380ade754d35b`; 2026-10 monthly relation is **OPEN** (not early natural-month completion).
+- Input scope: MonthStart 2026-10-01→N=2026-10-26 inclusive; 78 exact daily native slots / missing 0.
+- Source comparison previous A2→current main: 21 exact changed paths; 90 daily/weekly/context named source objects indexed below.
+- A1 Oct01–25 is immutable merged prerequisite, not rewritten here; Oct26 actual N-day native files are separate input.
+- Original native producers (Jules/authorized prospective GPT) remain distinct from this Independent GPT relation review.
+- This A2 did not execute repo-native tests, SDK reproducer, or scientific benchmark; GitHub blobs are source custody only.
+
+## N-day native relations and evidentiary limits
+- Aegis A1/A2 from GHSA-f897-62hf-6gxq one original advisory, zero local exploit reproduction; Ballast 52 scenario synthetic V8 model and 156 checked decision rows, zero actual Temporal or external side effects.
+- A daily prerequisite chain is not two independent corroborations; embedded advisory/source lineage and separate Jules Parallax/Ballast are different producer classes.
+- 2026-W43 is logically Oct19–25 and its report can be delivered Oct26; a merge timestamp on Oct26 cannot expand its logical week.
+- October H5/H6 or A5/A6 natural-month terminal artifacts remain NOT_DUE/MONTH_OPEN, regardless of daily/weekly path visibility.
+- Do not award any new D7/D10/D14/D30 periodic audit success, producer-native test PASS, or science adoption from this maintenance record.
+
+## All 26 logical dates — exact three-way current native source relationship
+- 2026-10-01 | 461882e16809ef → 450bb5e41ba1f4 → 21a2dbd84f4a7e | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-02 | abe20d48251fc3 → c590dffb8dc28f → 1081112e8ef7f9 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-03 | 0f37ab4b605a24 → 3c95e23cfa6187 → 82df0f7d4e36c8 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-04 | 88fcc05dd273fb → 08f105bfae915c → 649882d3a0bbb7 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-05 | 11701da8dff988 → 98139f531397d6 → b5ac70417e44bd | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-06 | 56abc25eca5f0e → 6cb80c4d899b53 → 2ad5c5ce4a3fc4 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-07 | 12c9266cc5f1fe → 9bd6c75a310832 → 7f20b476517f31 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-08 | 5c91de675c4dc7 → 9815107064b4fe → 8d24c4cfc5362b | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-09 | e5b385ba25e8a4 → 2f96bb0dd5891a → cce84778a3f752 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-10 | bfbe8f099a7413 → ce4f369d35fda9 → d2702d66363b0e | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-11 | bc3c4ba9cf4804 → d3882e3530ce98 → b35c69acee29b1 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-12 | 72d7f662d70f5c → 6ed3797a34699a → 02fe0896ac9c41 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-13 | a5d0ca039bbe4b → 1404e3a91cb6f4 → cc09eb3e1746cf | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-14 | 1def392d03eb7b → c7b33ecece64b2 → 98a752267cd0c2 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-15 | 293272cf6ae77e → 896901e892647a → 2f94b0b736cd8e | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-16 | 372a99054cd4cd → 454d6a632ad13c → 5cf129e2d6d31c | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-17 | 32bc7fefb64671 → 7d839226fcf975 → 4f76b71274f8a7 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-18 | cb4df7bb2ca436 → de4fa530ab13e8 → 9d0aa4b7d2dc10 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-19 | f0edcb5ce06fbc → 6a9798bba6967b → 84488c6de94120 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-20 | 4adfe9ac3a6321 → 14c2e2d8dcc85f → 86adc547bc9a74 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-21 | 9c397544e16158 → 3bee2ab7f45d9b → 1d6f82a47c714d | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-22 | 97f64b6c675e71 → 57671395b12490 → d0989c17f7f341 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-23 | a48c1172dee8b8 → a46cde6671b65d → 4c96e39a7a2438 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-24 | 1ed35d655b0316 → 694eac2dc0f265 → 84ff6b00559f60 | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-25 | 8f57bef1f90eaf → 2b1d0eed8acd75 → 0cf46aa7a78f7f | 3/3_PATH_VISIBLE | INHERITED_A1_BOUNDED_NATIVE_STATUS
+- 2026-10-26 | 30fefde5e5c96b → 01cd8158ead1b3 → 3216f2469d8eba | 3/3_PATH_VISIBLE | NEW_N_DAY_INPUT_AUTHOR_REPORTED_STATUS
+
+## Named native, weekly, independent, and contextual immutable Git objects
+- 001 | `aegis-cortex/2026-10-01-A1-reliability-observe.md` | blob `461882e16809ef9b442b3c6d47b45f44418660b5` | 6438 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 002 | `aegis-cortex/2026-10-01-A2-doctrine-orient.md` | blob `450bb5e41ba1f4f52f605632a3522797568429c5` | 3188 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 003 | `aegis-cortex/2026-10-02-A1-reliability-observe.md` | blob `abe20d48251fc36893884f355421e896e3f3631a` | 6538 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 004 | `aegis-cortex/2026-10-02-A2-doctrine-orient.md` | blob `c590dffb8dc28fb701174e6dfafe2c3697f97b37` | 4018 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 005 | `aegis-cortex/2026-10-03-A1-reliability-observe.md` | blob `0f37ab4b605a24006a862a9837564a459c0c1298` | 6295 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 006 | `aegis-cortex/2026-10-03-A2-doctrine-orient.md` | blob `3c95e23cfa6187d0c23f607d622e2e8353051b13` | 6600 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 007 | `aegis-cortex/2026-10-04-A1-reliability-observe.md` | blob `88fcc05dd273fbb361963435211e38447ea67a9c` | 5967 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 008 | `aegis-cortex/2026-10-04-A2-doctrine-orient.md` | blob `08f105bfae915c994d411e8ab86d421db03f9c42` | 1834 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 009 | `aegis-cortex/2026-10-05-A1-reliability-observe.md` | blob `11701da8dff9882ef4e8d4f174abc062abd41404` | 6137 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 010 | `aegis-cortex/2026-10-05-A2-doctrine-orient.md` | blob `98139f531397d66bde60765a38f9b0c683d936ab` | 6438 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 011 | `aegis-cortex/2026-10-06-A1-reliability-observe.md` | blob `56abc25eca5f0e9e2aa537be5924c6045162815c` | 6238 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 012 | `aegis-cortex/2026-10-06-A2-doctrine-orient.md` | blob `6cb80c4d899b533c539ad487b274c1b168db9724` | 7015 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 013 | `aegis-cortex/2026-10-07-A1-reliability-observe.md` | blob `12c9266cc5f1fe0837a736e7ec9ed4505e7ba4a5` | 8403 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 014 | `aegis-cortex/2026-10-07-A2-doctrine-orient.md` | blob `9bd6c75a310832f7cc58c9ae399f41acfdf4d950` | 9117 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 015 | `aegis-cortex/2026-10-08-A1-reliability-observe.md` | blob `5c91de675c4dc78aba0f419ab5f7added9c29fd7` | 5910 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 016 | `aegis-cortex/2026-10-08-A2-doctrine-orient.md` | blob `9815107064b4fed9aa0983143c4b329b5f28a675` | 11624 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 017 | `aegis-cortex/2026-10-09-A1-reliability-observe.md` | blob `e5b385ba25e8a4ef9a68401080dab545592ddf4b` | 6609 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 018 | `aegis-cortex/2026-10-09-A2-doctrine-orient.md` | blob `2f96bb0dd5891a93ec3e4b94410e4a4a44eb8124` | 16037 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 019 | `aegis-cortex/2026-10-10-A1-reliability-observe.md` | blob `bfbe8f099a7413cdd5a8f1466a180d9e2d78f975` | 6407 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 020 | `aegis-cortex/2026-10-10-A2-doctrine-orient.md` | blob `ce4f369d35fda91ddeeb975679a89ee4fe1f2314` | 6626 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 021 | `aegis-cortex/2026-10-11-A1-reliability-observe.md` | blob `bc3c4ba9cf48045bb05f02e65901dd02ad5464f1` | 5959 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 022 | `aegis-cortex/2026-10-11-A2-doctrine-orient.md` | blob `d3882e3530ce98550a10f93ba4221afbb270c83c` | 7757 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 023 | `aegis-cortex/2026-10-12-A1-reliability-observe.md` | blob `72d7f662d70f5c73301fd8bec7c8351f0e1a7349` | 6876 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 024 | `aegis-cortex/2026-10-12-A2-doctrine-orient.md` | blob `6ed3797a34699a9eae821c7bb2a8c8797459b17f` | 8336 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 025 | `aegis-cortex/2026-10-13-A1-reliability-observe.md` | blob `a5d0ca039bbe4b93b8b59e5e671bcf76ff82ba87` | 7596 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 026 | `aegis-cortex/2026-10-13-A2-doctrine-orient.md` | blob `1404e3a91cb6f4b17a5ef3cbd121e1aade9b6d22` | 9874 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 027 | `aegis-cortex/2026-10-14-A1-reliability-observe.md` | blob `1def392d03eb7bb03c428d696d4acb923454112f` | 6178 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 028 | `aegis-cortex/2026-10-14-A2-doctrine-orient.md` | blob `c7b33ecece64b24d54f2c68edd5fcbe7d9d5fbdd` | 7932 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 029 | `aegis-cortex/2026-10-15-A1-reliability-observe.md` | blob `293272cf6ae77efc28491dc69597d0652f4ca751` | 7671 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 030 | `aegis-cortex/2026-10-15-A2-doctrine-orient.md` | blob `896901e892647ab19b584fa077363afc5e4e89ab` | 3670 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 031 | `aegis-cortex/2026-10-16-A1-reliability-observe.md` | blob `372a99054cd4cd55ac909304b4c44a702376bcf6` | 5743 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 032 | `aegis-cortex/2026-10-16-A2-doctrine-orient.md` | blob `454d6a632ad13c2fdacbfa27a30d0a565427026f` | 6642 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 033 | `aegis-cortex/2026-10-17-A1-reliability-observe.md` | blob `32bc7fefb64671e1c09347d03231034fd3d28cda` | 6621 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 034 | `aegis-cortex/2026-10-17-A2-doctrine-orient.md` | blob `7d839226fcf975325c8a5813e706b6e05f09aeeb` | 7415 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 035 | `aegis-cortex/2026-10-18-A1-reliability-observe.md` | blob `cb4df7bb2ca43662643354bf531a10dde9e75ffd` | 5728 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 036 | `aegis-cortex/2026-10-18-A2-doctrine-orient.md` | blob `de4fa530ab13e81aedb672701392680d2bd83925` | 3670 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 037 | `aegis-cortex/2026-10-19-A1-reliability-observe.md` | blob `f0edcb5ce06fbc06a5c0ce6a4454607121915be2` | 8532 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 038 | `aegis-cortex/2026-10-19-A2-doctrine-orient.md` | blob `6a9798bba6967b020ddc9bf4542b3404e421d24b` | 8251 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 039 | `aegis-cortex/2026-10-20-A1-reliability-observe.md` | blob `4adfe9ac3a6321031afec2daad0609ee5db0d209` | 11398 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 040 | `aegis-cortex/2026-10-20-A2-doctrine-orient.md` | blob `14c2e2d8dcc85fc007ba8392111960ad194ba996` | 15588 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 041 | `aegis-cortex/2026-10-21-A1-reliability-observe.md` | blob `9c397544e16158d0eac8751798fdc894950fa2d0` | 8493 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 042 | `aegis-cortex/2026-10-21-A2-doctrine-orient.md` | blob `3bee2ab7f45d9be1aaa285ccc08e703200ce6685` | 6514 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 043 | `aegis-cortex/2026-10-22-A1-reliability-observe.md` | blob `97f64b6c675e716952843ff7da3d9c5b65fe1c86` | 12786 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 044 | `aegis-cortex/2026-10-22-A2-doctrine-orient.md` | blob `57671395b124905190d924e698b67a299ed4e6ce` | 10636 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 045 | `aegis-cortex/2026-10-23-A1-reliability-observe.md` | blob `a48c1172dee8b8c76c99ca0a9baa2b31d67d1019` | 10487 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 046 | `aegis-cortex/2026-10-23-A2-doctrine-orient.md` | blob `a46cde6671b65d40f5110805aa7f40cadd4068d4` | 8921 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 047 | `aegis-cortex/2026-10-24-A1-reliability-observe.md` | blob `1ed35d655b0316838c59ef3f30b8cb87f1421c4a` | 8436 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 048 | `aegis-cortex/2026-10-24-A2-doctrine-orient.md` | blob `694eac2dc0f2656b97482d2d549f6043d91e6e1f` | 8905 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 049 | `aegis-cortex/2026-10-25-A1-reliability-observe.md` | blob `8f57bef1f90eaf5e15596c5193111bf2b3f8453a` | 6951 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 050 | `aegis-cortex/2026-10-25-A2-doctrine-orient.md` | blob `2b1d0eed8acd75edaf49278859c3b56c67fd911b` | 10798 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 051 | `aegis-cortex/2026-10-26-A1-reliability-observe.md` | blob `30fefde5e5c96bcf964acffa323e9ebdd694772a` | 6907 B | N_DAY_NATIVE_OR_EVIDENCE; source identity != runtime PASS
+- 052 | `aegis-cortex/2026-10-26-A2-doctrine-orient.md` | blob `01cd8158ead1b3e0287477d5478ae19a86a07070` | 6835 B | N_DAY_NATIVE_OR_EVIDENCE; source identity != runtime PASS
+- 053 | `aegis-cortex/2026-W43-A3-discipline-decide.md` | blob `07911070de810482f5efc7118b3ec56d0405f1bb` | 6165 B | W43_WEEKLY; source identity != runtime PASS
+- 054 | `aegis-cortex/2026-W43-A4-protocol-act.md` | blob `7d6c81562c02a53eef24aab6ca00a7db4b97d94e` | 4335 B | W43_WEEKLY; source identity != runtime PASS
+- 055 | `aegis-cortex/EVIDENCE_POLICY.md` | blob `4977de3ac6cc8fbfd59bb0f7ebbb1957a9f22d84` | 15263 B | POLICY_OR_CONTEXT; source identity != runtime PASS
+- 056 | `aegis-cortex/README.md` | blob `ab1a7caaed2f338b05174d9428b071234d6a5546` | 3823 B | POLICY_OR_CONTEXT; source identity != runtime PASS
+- 057 | `ballast/audits/2026-10-02--2026-10-07.md` | blob `bbcce0605856c1a1863464a343dd14228c50a1e7` | 2429 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 058 | `ballast/audits/2026-10-08--2026-10-13.md` | blob `e3a5bb19874e7dd47a01722e7230a2bafeb99f04` | 6371 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 059 | `ballast/audits/2026-10-14--2026-10-19.md` | blob `ae9bf6854d22f9b3809ce68395e6f08599b0c011` | 4090 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 060 | `ballast/audits/2026-10-20--2026-10-25.md` | blob `cc27c97d380b31d39823ce2ba1e0dd3beddd04da` | 10123 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 061 | `ballast/evidence/2026-10-26-update-stage-decisions.csv` | blob `712c3ef6d6648959fc6a5cdd751b980f278c488e` | 11025 B | N_DAY_NATIVE_OR_EVIDENCE; source identity != runtime PASS
+- 062 | `ballast/evidence/2026-10-26-update-stage-scenarios.json` | blob `7ce7415cd3304fa0a717fc2d87cd07eec70e3047` | 201581 B | N_DAY_NATIVE_OR_EVIDENCE; source identity != runtime PASS
+- 063 | `ballast/evidence/2026-10-26-update-stage-verification.json` | blob `69c94f3a24fb03e2f743b3fde961313bc111a407` | 752 B | N_DAY_NATIVE_OR_EVIDENCE; source identity != runtime PASS
+- 064 | `ballast/README.md` | blob `cddd280a66b03fc9357eb4e7dcf365701682578f` | 42935 B | POLICY_OR_CONTEXT; source identity != runtime PASS
+- 065 | `ballast/records/2026-10-01.md` | blob `21a2dbd84f4a7e05bc64f78aa934d824a4a96593` | 12421 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 066 | `ballast/records/2026-10-02.md` | blob `1081112e8ef7f9c1d3e4415c2cf1edb297419a58` | 12361 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 067 | `ballast/records/2026-10-03.md` | blob `82df0f7d4e36c844f76bfed4b23bd1ece6a46b53` | 16562 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 068 | `ballast/records/2026-10-04.md` | blob `649882d3a0bbb7939481f5f2bb43aea4f268b9c8` | 16760 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 069 | `ballast/records/2026-10-05.md` | blob `b5ac70417e44bd8b7a8d2de04ad4daa5e4f71931` | 11168 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 070 | `ballast/records/2026-10-06.md` | blob `2ad5c5ce4a3fc4228f089eaacf94109e4210a66f` | 9276 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 071 | `ballast/records/2026-10-07.md` | blob `7f20b476517f31e4d890e64880b2eeb4b8248bf7` | 11410 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 072 | `ballast/records/2026-10-08.md` | blob `8d24c4cfc5362b7c81b60a6888d875e6960342aa` | 21159 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 073 | `ballast/records/2026-10-09.md` | blob `cce84778a3f752461a1d82b9c38f5057f3950fd3` | 12343 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 074 | `ballast/records/2026-10-10.md` | blob `d2702d66363b0e8a6ea645aff60a6475a1ca003c` | 13882 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 075 | `ballast/records/2026-10-11.md` | blob `b35c69acee29b194d597d3eedd942dd4cc7243a0` | 15372 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 076 | `ballast/records/2026-10-12.md` | blob `02fe0896ac9c41ae336cda04e69f133460e0a742` | 9594 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 077 | `ballast/records/2026-10-13.md` | blob `cc09eb3e1746cf4e555880ab4304b28c63341a4c` | 16962 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 078 | `ballast/records/2026-10-14.md` | blob `98a752267cd0c2beff5d2770ecf1672a6c869e3b` | 18894 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 079 | `ballast/records/2026-10-15.md` | blob `2f94b0b736cd8e3ffda03794462a12d3b50a3bc3` | 9229 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 080 | `ballast/records/2026-10-16.md` | blob `5cf129e2d6d31ce14171ac3e2b0c6ea0a3bddee0` | 10297 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 081 | `ballast/records/2026-10-17.md` | blob `4f76b71274f8a72434ca0a02af8d48a18842dbb3` | 11965 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 082 | `ballast/records/2026-10-18.md` | blob `9d0aa4b7d2dc10b59221ae91be580c1f35f92e61` | 13441 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 083 | `ballast/records/2026-10-19.md` | blob `84488c6de94120a49a909937571e46bfcdb09505` | 7542 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 084 | `ballast/records/2026-10-20.md` | blob `86adc547bc9a745f4f0508614887e6569c7d43e9` | 7129 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 085 | `ballast/records/2026-10-21.md` | blob `1d6f82a47c714da7c79cb951a8eba9ecd969ea1f` | 10878 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 086 | `ballast/records/2026-10-22.md` | blob `d0989c17f7f3412dd1f8902802500ba5ca06fc51` | 16260 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 087 | `ballast/records/2026-10-23.md` | blob `4c96e39a7a2438ac4ba654eacaaf2645bd249e3f` | 14390 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 088 | `ballast/records/2026-10-24.md` | blob `84ff6b00559f6062bdcc36b6ac5c2a52253ca0a1` | 15680 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 089 | `ballast/records/2026-10-25.md` | blob `0cf46aa7a78f7faf46ebe25f5be3b31de025925e` | 16740 B | HISTORICAL_NATIVE; source identity != runtime PASS
+- 090 | `ballast/records/2026-10-26.md` | blob `3216f2469d8eba59fc4dfccfc7a81e87a825c23b` | 18555 B | N_DAY_NATIVE_OR_EVIDENCE; source identity != runtime PASS
+
+## Actual changes since previous A2 baseline; correction is append-only
+- Δ01 | `aegis-cortex/2026-10-26-A1-reliability-observe.md` | added, +103/-0 | current main version observed, original source/producer timing remains intact
+- Δ02 | `aegis-cortex/2026-10-26-A2-doctrine-orient.md` | added, +93/-0 | current main version observed, original source/producer timing remains intact
+- Δ03 | `aegis-cortex/2026-W43-A3-discipline-decide.md` | added, +81/-0 | current main version observed, original source/producer timing remains intact
+- Δ04 | `aegis-cortex/2026-W43-A4-protocol-act.md` | added, +73/-0 | current main version observed, original source/producer timing remains intact
+- Δ05 | `ballast/README.md` | modified, +15/-1 | current main version observed, original source/producer timing remains intact
+- Δ06 | `ballast/evidence/2026-10-26-update-stage-decisions.csv` | added, +199/-0 | current main version observed, original source/producer timing remains intact
+- Δ07 | `ballast/evidence/2026-10-26-update-stage-scenarios.json` | added, +8725/-0 | current main version observed, original source/producer timing remains intact
+- Δ08 | `ballast/evidence/2026-10-26-update-stage-verification.json` | added, +25/-0 | current main version observed, original source/producer timing remains intact
+- Δ09 | `ballast/records/2026-10-26.md` | added, +241/-0 | current main version observed, original source/producer timing remains intact
+- Δ10 | `ballast/records/2026-10.md` | modified, +6/-2 | current main version observed, original source/producer timing remains intact
+- Δ11 | `ballast/tools/experiment_workflow_update_stage.js` | added, +134/-0 | current main version observed, original source/producer timing remains intact
+- Δ12 | `ballast/tools/verify_workflow_update_stage.js` | added, +62/-0 | current main version observed, original source/producer timing remains intact
+- Δ13 | `data/inputs/ARCHIVE_AND_HARVESTER.md` | modified, +3/-3 | current main version observed, original source/producer timing remains intact
+- Δ14 | `data/knowledge/entities/code_file.jsonl` | modified, +59/-57 | current main version observed, original source/producer timing remains intact
+- Δ15 | `data/knowledge/entities/doc_section.jsonl` | modified, +27/-12 | current main version observed, original source/producer timing remains intact
+- Δ16 | `data/knowledge/relations/canonical.jsonl` | modified, +754/-737 | current main version observed, original source/producer timing remains intact
+- Δ17 | `data/memories/20261025-cognitive-report.md` | added, +52/-0 | current main version observed, original source/producer timing remains intact
+- Δ18 | `data/memories/MISSION_ACTIVE.md` | modified, +2/-2 | current main version observed, original source/producer timing remains intact
+- Δ19 | `governance/README.md` | modified, +7/-1 | current main version observed, original source/producer timing remains intact
+- Δ20 | `historical-audits/2026-10/2026-10-26-a1-source-custody.md` | added, +344/-0 | current main version observed, original source/producer timing remains intact
+- Δ21 | `src/kernel/sensory/report_hygiene_core.py` | modified, +2/-2 | current main version observed, original source/producer timing remains intact
+
+## Today's reproducible multi-agent delivery adjustments
+- Prior 2026-10-26 same-task parallel PR branches were possible. Before mutation, re-fetch repository open PR list and match `(repo, owner, logical period, producer, base)`; reuse existing draft rather than producing a second owner.
+- If a duplicate PR is closed without merge, it contributes **zero** additional native Daily/Weekly deliveries. Its prior text remains historical metadata only.
+- A real `main` tree and PR merge result are required before A1 credit; a Draft PR and a PASS claim in its body are not merges or executed tests.
+- Enforce ten-A1 global barrier before creating A2, and record new post-barrier main SHA per repository; that barrier was observed in this run.
+- Comparison baselines must be exact merged A2 commits and tree blobs, not latest PR title; historical corrections should be versioned forward.
+- Separate `SOURCE_PRESENT`, `ORIGINAL_EXECUTION_OBSERVED`, `RUNNER_EXECUTED`, `SCIENTIFIC_VALIDATED`, and `INDEPENDENT_REPRODUCED` as different predicates.
+- Keep 2026-10 monthly OPEN until natural close, independent of weekly closure or relationship report line count.
+- No unrelated code or original research files were edited; evidence relation belongs in this dated A2 owner.
