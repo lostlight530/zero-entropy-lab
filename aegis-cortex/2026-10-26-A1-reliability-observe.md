@@ -13,12 +13,13 @@
 - Exact Execution Time: NOT_CAPTURED
 - Agent: GPT-6
 - Producer Identity: GPT_NATIVE_PROSPECTIVE / NOT_JULES_REPLAY
-- Record Provenance: HUMAN_AUTHORIZED_NATIVE_PRODUCTION
+- Record Provenance: HUMAN_AUTHORIZED_SUBSTITUTE
 - Base Main SHA: 09d5df5eacd8080bd8dc0c5352dba73cc13713db
 - Run Identity: zero-entropy-lab/aegis/A1/2026-10-26/GPT_NATIVE/09d5df5eacd8080bd8dc0c5352dba73cc13713db/gpt-native-20261026-a1-01
 - Network Status: PRIMARY_SOURCE_OPENED
 - Source Status: FIRST_PARTY_SCOPED_SECURITY_ADVISORY / NO_INDEPENDENT_REPLAY
-- Task Status: SUCCESS_WITH_BOUNDED_EXTERNAL_OBSERVATION
+- Task Status: SUCCESS
+- Evidence Scope: BOUNDED_EXTERNAL_OBSERVATION
 - Evidence Class: EXTERNAL_FAILURE_MODE_EVIDENCE
 - Source Identity: GHSA-f897-62hf-6gxq
 - Source Authority For Claim: SDK_MAINTAINER_OWN_IMPLEMENTATION
@@ -29,6 +30,8 @@
 - GitHub Actions Inspection: RECENT_METADATA_ONLY / NOT_NATIVE_A1_VALIDATION
 - Write Scope: aegis-cortex/2026-10-26-A1-reliability-observe.md
 - Boundary Violation: NO
+- Original Execution Status: GPT_NATIVE_PROSPECTIVE_CURRENT_RUN / NOT_JULES_REPLAY
+- Current Path Status: DRAFT_PENDING_HUMAN_REVIEW
 - Current Delivery: DRAFT_PENDING_HUMAN_REVIEW
 
 ## INPUT_RECORD
@@ -66,6 +69,8 @@
 ### SIG-20261026-A01
 - Signal ID: SIG-20261026-A01
 - Failure Class: RESOURCE_EXHAUSTION_BY_UNBOUNDED_HTTP_BODY_OR_JSONRPC_BATCH_CARDINALITY
+- External Evidence: GHSA-f897-62hf-6gxq original maintainer advisory, HTTP body and JSON-RPC batch bounds
+- Uncertainty: no local package, exposed endpoint, workload or defense measurement proven
 - External Risk: a transport parser and a per-message validator cover different resource dimensions; one can pass while the other remains unbounded
 - Evidence: SRC-20261026-A01
 - External Risk State: EXTERNAL_FAILURE_MODE_EVIDENCE
