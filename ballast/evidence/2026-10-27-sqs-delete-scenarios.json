@@ -1,0 +1,7232 @@
+[
+  {
+    "id": "baseline",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "historical_revocation_after_effect",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": false,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": 95
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "dedup_window_expired_historical_complete",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 420,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "stale_handle_http_200",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-1",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "delete_http_200_no_external_effect",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [],
+    "prior": {
+      "state": "unknown",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "PENDING",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "missing_member_B_receipt",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "duplicate_A_replaces_B",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "extra_effect_C",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      },
+      {
+        "member": "C",
+        "uid": "uid-C",
+        "effectId": "effect-C",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 73
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "wrong_task_receipt",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "other-task",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "wrong_run_receipt",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "other-run",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "wrong_attempt_receipt",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-3",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "wrong_target_receipt",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "other-target",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "wrong_incarnation_receipt",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-new",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "wrong_member_uid_receipt",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B2",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "duplicate_effect_identity",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "grant_revoked_before_effect",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": 65
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "grant_expired_before_effect",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 69,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "effect_before_delivery",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 35
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "same_count_member_swap",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "C",
+          "uid": "uid-C"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "C",
+          "uid": "uid-C"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "duplicate_current_member",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "A",
+          "uid": "uid-A"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "A",
+          "uid": "uid-A"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "extra_current_member",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        },
+        {
+          "member": "C",
+          "uid": "uid-C"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        },
+        {
+          "member": "C",
+          "uid": "uid-C"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "unprotected_current_guard",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": false
+    }
+  },
+  {
+    "id": "guard_revision_drift",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 13,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "read_commit_membership_toctou",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "C",
+          "uid": "uid-C"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "target_incarnation_recreated",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-new",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "queue_proof_wrong_handle",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-1",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "queue_proof_wrong_epoch",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 1,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "queue_proof_duplicate",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      },
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "queue_proof_extra_message",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      },
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "other-message",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "queue_proof_boolean_coercion",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": true,
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "covered_negative_miss_conflicts_positive",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "miss",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "covered_miss_safe_retry",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [],
+    "prior": {
+      "state": "miss",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "PENDING",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "covered_miss_permission_revoked",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [],
+    "prior": {
+      "state": "miss",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": false,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": 90
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "PENDING",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "covered_miss_guard_unprotected",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [],
+    "prior": {
+      "state": "miss",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "PENDING",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": false
+    }
+  },
+  {
+    "id": "miss_stale_watermark",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [],
+    "prior": {
+      "state": "miss",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 60,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "PENDING",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "miss_retention_expired",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [],
+    "prior": {
+      "state": "miss",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 80,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "PENDING",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "miss_wrong_effect_set",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [],
+    "prior": {
+      "state": "miss",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "PENDING",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "miss_wrong_target",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [],
+    "prior": {
+      "state": "miss",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "other-target",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "PENDING",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "hit_with_complete_empty_journal",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "PENDING",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "blind_retry_after_dedup_expiry",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 420,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [],
+    "prior": {
+      "state": "unknown",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "PENDING",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "fifo_dedup_ack_without_delivery",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [],
+    "prior": {
+      "state": "unknown",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "PENDING",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "historical_grant_revoked_after_effect",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": 74
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "current_permission_expired_after_effect",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 95,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "queue_delete_before_effect",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 55
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "current_read_before_effect",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 65,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  {
+    "id": "required_set_duplicate_identity",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  }
+]

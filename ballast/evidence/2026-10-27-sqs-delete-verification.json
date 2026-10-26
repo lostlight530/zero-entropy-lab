@@ -1,0 +1,51 @@
+{
+  "status": "PASS_WITH_LIMITS",
+  "scenarioCount": 46,
+  "decisionRows": 138,
+  "paths": [
+    "http_status_proxy",
+    "fifo_dedup_proxy",
+    "full_reference"
+  ],
+  "referenceHistogram": {
+    "COMPLETE": 5,
+    "STOP_UNKNOWN": 9,
+    "RECONCILE": 28,
+    "EVIDENCE_CONFLICT": 2,
+    "RETRY_ALLOWED": 1,
+    "BLOCKED": 1
+  },
+  "weakPathDisagreements": {
+    "http_status_proxy": 41,
+    "fifo_dedup_proxy": 41
+  },
+  "allRowsReconstructed": 138,
+  "nonCompleteControls": 41,
+  "exactProbes": 14,
+  "forgedRowRejected": true,
+  "duplicateScenarioRejected": true,
+  "independence": {
+    "implementation": "PARTIAL",
+    "dataSource": "NONE",
+    "semanticContract": "LIMITED_SHARED",
+    "authority": "NONE"
+  },
+  "externalEffects": 0,
+  "execution": {
+    "entry": "V8 code-mode isolate produceSqs() -> verifySqs(scenarios,csv)",
+    "executedAtUTC": "2026-10-26T20:00:58.323Z",
+    "logicalDateShanghai": "2026-10-27",
+    "baseMain": "d1df51289f1532240a077efff8ffa7d0085cc496",
+    "producerSource": "ballast/tools/experiment_sqs_delete_ack.js",
+    "verifierSource": "ballast/tools/verify_sqs_delete_ack.js",
+    "nativeNodeCli": "NOT_EXECUTED",
+    "fullPythonChecker": "NOT_EXECUTED",
+    "liveAwsSqs": "NOT_EXECUTED",
+    "externalSink": "NOT_EXECUTED"
+  },
+  "limits": [
+    "All receipts, queue deletion proof, grants and prior queries are authored synthetic facts",
+    "SQS does not expose this hypothetical authoritative deletion journal through DeleteMessage HTTP 200",
+    "No claim of AWS wire accuracy, protected real transaction, trusted clock, or semantic-independent verification"
+  ]
+}
