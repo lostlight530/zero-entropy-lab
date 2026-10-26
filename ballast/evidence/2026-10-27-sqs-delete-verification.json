@@ -1,7 +1,7 @@
 {
   "status": "PASS_WITH_LIMITS",
-  "scenarioCount": 46,
-  "decisionRows": 138,
+  "scenarioCount": 55,
+  "decisionRows": 165,
   "paths": [
     "http_status_proxy",
     "fifo_dedup_proxy",
@@ -9,19 +9,19 @@
   ],
   "referenceHistogram": {
     "COMPLETE": 5,
-    "STOP_UNKNOWN": 9,
-    "RECONCILE": 28,
+    "STOP_UNKNOWN": 11,
+    "RECONCILE": 34,
     "EVIDENCE_CONFLICT": 2,
     "RETRY_ALLOWED": 1,
-    "BLOCKED": 1
+    "BLOCKED": 2
   },
   "weakPathDisagreements": {
-    "http_status_proxy": 41,
-    "fifo_dedup_proxy": 41
+    "http_status_proxy": 50,
+    "fifo_dedup_proxy": 50
   },
-  "allRowsReconstructed": 138,
-  "nonCompleteControls": 41,
-  "exactProbes": 14,
+  "allRowsReconstructed": 165,
+  "nonCompleteControls": 50,
+  "exactProbes": 23,
   "forgedRowRejected": true,
   "duplicateScenarioRejected": true,
   "independence": {
@@ -32,16 +32,41 @@
   },
   "externalEffects": 0,
   "execution": {
-    "entry": "V8 code-mode isolate produceSqs() -> verifySqs(scenarios,csv)",
-    "executedAtUTC": "2026-10-26T20:00:58.323Z",
+    "entry": "V8 code-mode isolate persisted-source produceSqs() -> verifySqs(scenarios,csv)",
+    "initialExecutedAtUTC": "2026-10-26T20:00:58.323Z",
+    "correctedExecutedAtUTC": "2026-10-26T20:03:54.802Z",
     "logicalDateShanghai": "2026-10-27",
     "baseMain": "d1df51289f1532240a077efff8ffa7d0085cc496",
+    "initialUnmergedHead": "babf17181ed652017ac0550fb0aac337055ec497",
     "producerSource": "ballast/tools/experiment_sqs_delete_ack.js",
     "verifierSource": "ballast/tools/verify_sqs_delete_ack.js",
     "nativeNodeCli": "NOT_EXECUTED",
     "fullPythonChecker": "NOT_EXECUTED",
     "liveAwsSqs": "NOT_EXECUTED",
     "externalSink": "NOT_EXECUTED"
+  },
+  "sameDateCorrection": {
+    "trigger": "adversarial implicit numeric string coercion against initial reference",
+    "initialScenarios": 46,
+    "initialRows": 138,
+    "initialReferenceHistogram": {
+      "COMPLETE": 5,
+      "STOP_UNKNOWN": 9,
+      "RECONCILE": 28,
+      "EVIDENCE_CONFLICT": 2,
+      "RETRY_ALLOWED": 1,
+      "BLOCKED": 1
+    },
+    "initialSourceBlobs": {
+      "producer": "c4f0670a7226818c2a407c4ed1b5a34c4beef78a",
+      "verifier": "49a9ce4bcaed56464eec0dba36fbf413af3a225a",
+      "scenarios": "2aafe8eca3e7cd72a01f79b7ea87a136c9e26708",
+      "decisions": "d4fcb1a59e8e62f0a49ef47b2de1f528413801fb"
+    },
+    "newTypeSafetyProbes": 9,
+    "initialUnsafeCompleteOrRetryOnStringCoercion": 9,
+    "correctedUnsafeCompleteOrRetry": 0,
+    "creditDelta": 0
   },
   "limits": [
     "All receipts, queue deletion proof, grants and prior queries are authored synthetic facts",

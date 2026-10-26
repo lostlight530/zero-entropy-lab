@@ -732,10 +732,12 @@ V8 producer/verifier and persisted-source replay EXECUTED PASS_WITH_LIMITS, full
 
 One NATIVE [SQS FIFO stale-handle Daily](records/2026-10-27.md) tests HTTP 200 DeleteMessage, five-minute dedup token, exact delivery epoch, authorized downstream A+B effects, prior authoritative MISS and protected current membership
 
-Executed V8-isolate [producer](tools/experiment_sqs_delete_ack.js), separately implemented [primitive verifier](tools/verify_sqs_delete_ack.js), [scenario evidence](evidence/2026-10-27-sqs-delete-scenarios.json), [decision CSV](evidence/2026-10-27-sqs-delete-decisions.csv) and [verification receipt](evidence/2026-10-27-sqs-delete-verification.json): 46 synthetic scenarios, 138 decisions, 41/41 negative controls, 14/14 exact probes and forged CSV/duplicate ID rejection, real AWS and external effects 0
+Executed V8-isolate [producer](tools/experiment_sqs_delete_ack.js), separately implemented [primitive verifier](tools/verify_sqs_delete_ack.js), [scenario evidence](evidence/2026-10-27-sqs-delete-scenarios.json), [decision CSV](evidence/2026-10-27-sqs-delete-decisions.csv) and [verification receipt](evidence/2026-10-27-sqs-delete-verification.json): 55 synthetic scenarios, 165 decisions, 50/50 negative controls, 23/23 exact probes and forged CSV/duplicate ID rejection, real AWS and external effects 0
 
 [AWS DeleteMessage](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_DeleteMessage.html) explicitly warns old handle can return success without deleting, [AWS FIFO dedup](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/using-messagededuplicationid-property.html) defines five-minute window, [Google Pub/Sub exactly-once](https://docs.cloud.google.com/pubsub/docs/exactly-once-delivery) is different-product comparison only
 
 October Monthly index updated with zero derived research credit, latest audit 2026-10-20..25 remains current, 2026-10-26..27 not due, CASE 0, METHOD 0, NOTES 0, Special 0, Audit 0, long-term finding 0
 
 V8 model producer/verifier EXECUTED PASS_WITH_LIMITS, standalone Node CLI, full Python checker, live AWS SQS, real external sink and independent semantic authority NOT_EXECUTED
+
+Same-date adversarial reference-model correction: original unmerged 46/138 head `babf17181ed652017ac0550fb0aac337055ec497` admitted 9/9 implicit numeric-string coercion unsafe COMPLETE or RETRY_ALLOWED results; corrected same Daily/PR to 55/165 with 9/9 type-safety probes rejected, no second window or credit, persisted-source V8 replay only

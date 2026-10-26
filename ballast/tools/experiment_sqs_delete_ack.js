@@ -54,14 +54,25 @@ function produceSqs(){
  add("queue_delete_before_effect",s=>{s.queueProof[0].at=55});
  add("current_read_before_effect",s=>{s.current.readAt=65});
  add("required_set_duplicate_identity",s=>{s.context.required[1]=clone(s.context.required[0])});
+
+ add("attack_receipt_time_string",s=>{s.receipts[0].at="60"});
+ add("attack_grant_from_string",s=>{s.grants[0].validFrom="10"});
+ add("attack_current_read_string",s=>{s.current.readAt="90"});
+ add("attack_current_guard_string",s=>{s.current.guardAt="99"});
+ add("attack_control_receive_string",s=>{s.control.receivedAt="40"});
+ add("attack_current_commit_string",s=>{s.current.commitAt="100"});
+ add("attack_prior_watermark_string",s=>{s.receipts=[];s.queueProof=[];s.prior.state="miss";s.current.predicate="PENDING";s.prior.query.watermark="75"});
+ add("attack_prior_retention_string",s=>{s.receipts=[];s.queueProof=[];s.prior.state="miss";s.current.predicate="PENDING";s.prior.query.retentionUntil="150"});
+ add("attack_permission_valid_until_string",s=>{s.receipts=[];s.queueProof=[];s.prior.state="miss";s.current.predicate="PENDING";s.permission.validUntil="110"});
  const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
  const exactSet=(xs,ys)=>Array.isArray(xs)&&xs.length===ys.length&&new Set(xs).size===xs.length&&xs.every(x=>ys.includes(x));
  const memberSet=(xs,req)=>Array.isArray(xs)&&xs.length===req.length&&new Set(xs.map(x=>x.member)).size===xs.length&&xs.every(x=>req.some(y=>y.member===x.member&&y.uid===x.uid));
- const scope=s=>{const q=s.prior.query,c=s.context;return q&&q.task===c.task&&q.run===c.run&&q.attempt===c.attempt&&q.target===c.target&&q.incarnation===c.incarnation&&exactSet(q.effectIds,c.required.map(x=>x.effectId))&&q.authority==="synthetic-sink-ledger"&&q.lifecycle==="ACTIVE"&&Number.isFinite(q.at)&&q.at>=q.attemptEnd&&q.watermark>=q.attemptEnd&&q.retentionUntil>=q.at};
- const current=(s,pending)=>{const w=s.current,c=s.context;return w.task===c.task&&w.target===c.target&&w.incarnation===c.incarnation&&memberSet(w.members,c.required)&&memberSet(w.commitMembers,c.required)&&same(w.members,w.commitMembers)&&w.predicate===(pending?"PENDING":"DONE")&&w.protected===true&&Number.isInteger(w.revision)&&w.revision===w.guardRevision&&w.revision===w.commitRevision&&w.readAt<w.guardAt&&w.guardAt<w.commitAt&&w.readAt>=s.prior.query.at};
- const permission=s=>{const p=s.permission,c=s.context;return p.allowed===true&&p.task===c.task&&p.target===c.target&&p.incarnation===c.incarnation&&p.validUntil>=s.current.commitAt&&(p.revokedAt===null||p.revokedAt>s.current.commitAt)};
+ const scope=s=>{const q=s.prior.query,c=s.context;return q&&[q.at,q.watermark,q.attemptEnd,q.retentionUntil].every(Number.isFinite)&&q.task===c.task&&q.run===c.run&&q.attempt===c.attempt&&q.target===c.target&&q.incarnation===c.incarnation&&exactSet(q.effectIds,c.required.map(x=>x.effectId))&&q.authority==="synthetic-sink-ledger"&&q.lifecycle==="ACTIVE"&&Number.isFinite(q.at)&&q.at>=q.attemptEnd&&q.watermark>=q.attemptEnd&&q.retentionUntil>=q.at};
+ const current=(s,pending)=>{const w=s.current,c=s.context;return [w.readAt,w.guardAt,w.commitAt,w.revision,w.guardRevision,w.commitRevision].every(Number.isFinite)&&w.task===c.task&&w.target===c.target&&w.incarnation===c.incarnation&&memberSet(w.members,c.required)&&memberSet(w.commitMembers,c.required)&&same(w.members,w.commitMembers)&&w.predicate===(pending?"PENDING":"DONE")&&w.protected===true&&Number.isInteger(w.revision)&&w.revision===w.guardRevision&&w.revision===w.commitRevision&&w.readAt<w.guardAt&&w.guardAt<w.commitAt&&w.readAt>=s.prior.query.at};
+ const permission=s=>{const p=s.permission,c=s.context;return Number.isFinite(p.validUntil)&&(p.revokedAt===null||Number.isFinite(p.revokedAt))&&p.allowed===true&&p.task===c.task&&p.target===c.target&&p.incarnation===c.incarnation&&p.validUntil>=s.current.commitAt&&(p.revokedAt===null||p.revokedAt>s.current.commitAt)};
  const ref=s=>{
   const c=s.context,req=c.required,rs=s.receipts;
+  if(!Number.isFinite(s.control.receivedAt)||!Number.isFinite(s.control.deletedAt)||!Number.isInteger(s.control.deliveryEpoch))return "RECONCILE";
   if(!Array.isArray(req)||req.length!==2||new Set(req.map(x=>x.member)).size!==2||new Set(req.map(x=>x.effectId)).size!==2||new Set(req.map(x=>x.uid)).size!==2)return "RECONCILE";
   if(s.prior.state==="miss"&&scope(s)&&rs.length>0&&rs.some(r=>req.some(x=>x.member===r.member&&x.effectId===r.effectId)))return "EVIDENCE_CONFLICT";
   if(rs.length===0){
@@ -73,14 +84,14 @@ function produceSqs(){
   if(rs.length!==req.length||new Set(rs.map(x=>x.effectId)).size!==rs.length)return "RECONCILE";
   for(const r of rs){
    const x=req.find(x=>x.member===r.member&&x.uid===r.uid&&x.effectId===r.effectId);
-   if(!x||r.task!==c.task||r.run!==c.run||r.attempt!==c.attempt||r.target!==c.target||r.incarnation!==c.incarnation||r.at<s.control.receivedAt||r.at>=s.current.readAt)return "RECONCILE";
-   const grants=s.grants.filter(g=>g.member===r.member&&g.uid===r.uid&&g.effectId===r.effectId&&g.task===r.task&&g.run===r.run&&g.attempt===r.attempt&&g.target===r.target&&g.incarnation===r.incarnation&&g.approval===r.approval&&g.validFrom<=r.at&&r.at<=g.validTo&&(g.revokedAt===null||g.revokedAt>r.at));
+   if(!Number.isFinite(r.at)||!x||r.task!==c.task||r.run!==c.run||r.attempt!==c.attempt||r.target!==c.target||r.incarnation!==c.incarnation||r.at<s.control.receivedAt||r.at>=s.current.readAt)return "RECONCILE";
+   const grants=s.grants.filter(g=>Number.isFinite(g.validFrom)&&Number.isFinite(g.validTo)&&(g.revokedAt===null||Number.isFinite(g.revokedAt))&&g.member===r.member&&g.uid===r.uid&&g.effectId===r.effectId&&g.task===r.task&&g.run===r.run&&g.attempt===r.attempt&&g.target===r.target&&g.incarnation===r.incarnation&&g.approval===r.approval&&g.validFrom<=r.at&&r.at<=g.validTo&&(g.revokedAt===null||g.revokedAt>r.at));
    if(grants.length!==1)return "RECONCILE";
   }
   if(s.queueProof.length===0)return "STOP_UNKNOWN";
   if(s.queueProof.length!==1)return "RECONCILE";
   const a=s.queueProof[0],t=s.control;
-  if(a.state!=="DELETED"||a.queue!==t.queue||a.message!==t.message||a.epoch!==t.deliveryEpoch||a.handle!==t.usedHandle||t.usedHandle!==t.latestHandle||a.at!==t.deletedAt||a.at<Math.max(...rs.map(r=>r.at))||a.at>=s.current.readAt)return "RECONCILE";
+  if(!Number.isFinite(a.at)||!Number.isInteger(a.epoch)||a.state!=="DELETED"||a.queue!==t.queue||a.message!==t.message||a.epoch!==t.deliveryEpoch||a.handle!==t.usedHandle||t.usedHandle!==t.latestHandle||a.at!==t.deletedAt||a.at<Math.max(...rs.map(r=>r.at))||a.at>=s.current.readAt)return "RECONCILE";
   return current(s,false)?"COMPLETE":"RECONCILE";
  };
  const paths=["http_status_proxy","fifo_dedup_proxy","full_reference"];
