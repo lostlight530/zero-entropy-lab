@@ -1,6 +1,6 @@
 
 function produceSqs(){
- const context={task:"task-27",run:"run-27",attempt:"attempt-2",target:"target-27",incarnation:"inc-27",required:[{member:"A",uid:"uid-A",effectId:"effect-A"},{member:"B",uid:"uid-B",effectId:"effect-B"}]};
+ const context={task:"task-27",run:"run-27",attempt:"attempt-2",target:"target-27",incarnation:"inc-27",queue:"queue-27.fifo",message:"message-27",group:"group-27",dedup:"dedup-27",deliveryEpoch:2,latestHandle:"handle-2",required:[{member:"A",uid:"uid-A",effectId:"effect-A"},{member:"B",uid:"uid-B",effectId:"effect-B"}]};
  const mk=(member,uid,effectId,at)=>({member,uid,effectId,task:context.task,run:context.run,attempt:context.attempt,target:context.target,incarnation:context.incarnation,approval:"approval-27",at});
  const receiptA=mk("A","uid-A","effect-A",60),receiptB=mk("B","uid-B","effect-B",70);
  const grant=r=>({...r,validFrom:10,validTo:75,revokedAt:null});
@@ -64,14 +64,38 @@ function produceSqs(){
  add("attack_prior_watermark_string",s=>{s.receipts=[];s.queueProof=[];s.prior.state="miss";s.current.predicate="PENDING";s.prior.query.watermark="75"});
  add("attack_prior_retention_string",s=>{s.receipts=[];s.queueProof=[];s.prior.state="miss";s.current.predicate="PENDING";s.prior.query.retentionUntil="150"});
  add("attack_permission_valid_until_string",s=>{s.receipts=[];s.queueProof=[];s.prior.state="miss";s.current.predicate="PENDING";s.permission.validUntil="110"});
+ add("positive_journal_incomplete",s=>{s.prior.journalComplete=false});
+ add("positive_without_prior_hit",s=>{s.prior.state='unknown'});
+ add("positive_query_wrong_run",s=>{s.prior.query.run='run-old'});
+ add("control_message_and_proof_both_swapped",s=>{s.control.message='other-message';s.queueProof[0].message='other-message'});
+ add("control_queue_and_proof_both_swapped",s=>{s.control.queue='other.fifo';s.queueProof[0].queue='other.fifo'});
+ add("epoch_and_handle_both_swapped",s=>{s.control.deliveryEpoch=3;s.queueProof[0].epoch=3;s.control.latestHandle='handle-3';s.control.usedHandle='handle-3';s.queueProof[0].handle='handle-3'});
+ add("effect_fractional_time",s=>{s.receipts[0].at=60.5});
+ add("miss_fractional_watermark",s=>{s.receipts=[];s.queueProof=[];s.prior.state='miss';s.current.predicate='PENDING';s.prior.query.watermark=75.5});
+ add("wrong_control_message_group",s=>{s.control.group='other-group'});
+ add("retry_stale_handle",s=>{s.receipts=[];s.queueProof=[];s.prior.state='miss';s.current.predicate='PENDING';s.control.usedHandle='stale-handle'});
  const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
  const exactSet=(xs,ys)=>Array.isArray(xs)&&xs.length===ys.length&&new Set(xs).size===xs.length&&xs.every(x=>ys.includes(x));
  const memberSet=(xs,req)=>Array.isArray(xs)&&xs.length===req.length&&new Set(xs.map(x=>x.member)).size===xs.length&&xs.every(x=>req.some(y=>y.member===x.member&&y.uid===x.uid));
  const scope=s=>{const q=s.prior.query,c=s.context;return q&&[q.at,q.watermark,q.attemptEnd,q.retentionUntil].every(Number.isFinite)&&q.task===c.task&&q.run===c.run&&q.attempt===c.attempt&&q.target===c.target&&q.incarnation===c.incarnation&&exactSet(q.effectIds,c.required.map(x=>x.effectId))&&q.authority==="synthetic-sink-ledger"&&q.lifecycle==="ACTIVE"&&Number.isFinite(q.at)&&q.at>=q.attemptEnd&&q.watermark>=q.attemptEnd&&q.retentionUntil>=q.at};
  const current=(s,pending)=>{const w=s.current,c=s.context;return [w.readAt,w.guardAt,w.commitAt,w.revision,w.guardRevision,w.commitRevision].every(Number.isFinite)&&w.task===c.task&&w.target===c.target&&w.incarnation===c.incarnation&&memberSet(w.members,c.required)&&memberSet(w.commitMembers,c.required)&&same(w.members,w.commitMembers)&&w.predicate===(pending?"PENDING":"DONE")&&w.protected===true&&Number.isInteger(w.revision)&&w.revision===w.guardRevision&&w.revision===w.commitRevision&&w.readAt<w.guardAt&&w.guardAt<w.commitAt&&w.readAt>=s.prior.query.at};
  const permission=s=>{const p=s.permission,c=s.context;return Number.isFinite(p.validUntil)&&(p.revokedAt===null||Number.isFinite(p.revokedAt))&&p.allowed===true&&p.task===c.task&&p.target===c.target&&p.incarnation===c.incarnation&&p.validUntil>=s.current.commitAt&&(p.revokedAt===null||p.revokedAt>s.current.commitAt)};
+
+ const proofScopeGate=s=>{
+  const task=s.context,ctl=s.control,records=s.receipts,q=s.prior.query,world=s.current,req=task.required;
+  const int=x=>Number.isSafeInteger(x)&&x>=0;
+  if(!Array.isArray(req)||req.length!==2||new Set(req.map(x=>x.member)).size!==2||new Set(req.map(x=>x.uid)).size!==2||new Set(req.map(x=>x.effectId)).size!==2)return "RECONCILE";
+  if(![ctl.receivedAt,ctl.deletedAt,ctl.deliveryEpoch,world.readAt,world.guardAt,world.commitAt,world.revision,world.guardRevision,world.commitRevision].every(int)||records.some(x=>!int(x.at)))return "RECONCILE";
+  if(![q.at,q.watermark,q.attemptEnd,q.retentionUntil].every(int))return "STOP_UNKNOWN";
+  if(ctl.queue!==task.queue||ctl.message!==task.message||ctl.group!==task.group||ctl.dedup!==task.dedup||ctl.deliveryEpoch!==task.deliveryEpoch||ctl.latestHandle!==task.latestHandle)return "RECONCILE";
+  if(records.length&&s.prior.state!=="miss"&&(s.prior.state!=="hit"||s.prior.journalComplete!==true||!scope(s)))return "STOP_UNKNOWN";
+  if(records.length&&s.prior.state==="miss"&&!scope(s))return "STOP_UNKNOWN";
+  if(!records.length&&s.prior.state==="miss"&&scope(s)&&ctl.usedHandle!==ctl.latestHandle)return "BLOCKED";
+  return null;
+ };
  const ref=s=>{
   const c=s.context,req=c.required,rs=s.receipts;
+  const extra=proofScopeGate(s);if(extra!==null)return extra;
   if(!Number.isFinite(s.control.receivedAt)||!Number.isFinite(s.control.deletedAt)||!Number.isInteger(s.control.deliveryEpoch))return "RECONCILE";
   if(!Array.isArray(req)||req.length!==2||new Set(req.map(x=>x.member)).size!==2||new Set(req.map(x=>x.effectId)).size!==2||new Set(req.map(x=>x.uid)).size!==2)return "RECONCILE";
   if(s.prior.state==="miss"&&scope(s)&&rs.length>0&&rs.some(r=>req.some(x=>x.member===r.member&&x.effectId===r.effectId)))return "EVIDENCE_CONFLICT";
