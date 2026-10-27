@@ -72,5 +72,19 @@
     "All receipts, queue deletion proof, grants and prior queries are authored synthetic facts",
     "SQS does not expose this hypothetical authoritative deletion journal through DeleteMessage HTTP 200",
     "No claim of AWS wire accuracy, protected real transaction, trusted clock, or semantic-independent verification"
-  ]
+  ],
+  "compactEvidence": {
+    "schema": "ballast.sqs-delete.fixture-deltas/1",
+    "baseline": 1,
+    "deltaCount": 54,
+    "originalFullJSONLines": 8615,
+    "compactJSONLines": 224,
+    "roundtrip": "55/55 EXACT",
+    "reconstructedDecisions": "165/165",
+    "invalidDeltaRejected": true,
+    "unresolvedSemanticModelAttacks": 10,
+    "nativeNodeCLI": "NOT_EXECUTED",
+    "fullPythonChecker": "NOT_EXECUTED",
+    "liveAWS": "NOT_EXECUTED"
+  }
 }
