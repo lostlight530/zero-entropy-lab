@@ -73,5 +73,20 @@
     "notes": 0,
     "special": 0,
     "audit": 0
+  },
+  "sameDatePrePatchAdversarialReplay": {
+    "executedUTC": "2026-10-27T20:12:37Z",
+    "oldCommitSha": "3ce6a9126eb8b7247a662f25fddf2edd80f1e62d",
+    "oldProducerBlobSha": "1ab04ab9fb30d7f23c3c4dce3ebbbb157d78ba5d",
+    "oldVerifierBlobSha": "f3acd663eeaa5372a571618f16a106362d243227",
+    "injections": {
+      "sourceIdentityDrift": "UNSAFE_COMPLETE",
+      "destinationIdentityDrift": "UNSAFE_COMPLETE",
+      "destinationIncarnationDrift": "UNSAFE_COMPLETE"
+    },
+    "oldVerifierResult": "PASS_WITH_LIMITS_DESPITE_3_UNSAFE_COMPLETE",
+    "repairedVerifierResult": "3/3_RECONCILE",
+    "creditDelta": 0,
+    "provenance": "POST_FIX_REPLAY_OF_PRE_FIX_COMMIT_IN_SAME_LOGICAL_DATE"
   }
 }
