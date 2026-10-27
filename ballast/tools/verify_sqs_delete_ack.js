@@ -1,3 +1,18 @@
+function expandSqsFixturePack(pack){
+ if(!pack||pack.schema!=="ballast.sqs-delete.fixture-deltas/1"||!pack.baseline||!Array.isArray(pack.cases)||pack.baseline.id!=="baseline")throw Error("PACK_SCHEMA");
+ const copy=x=>JSON.parse(JSON.stringify(x)),used=new Set(["baseline"]),out=[copy(pack.baseline)];
+ for(const item of pack.cases){
+  if(!item||typeof item.id!=="string"||!/^[A-Za-z0-9_]+$/.test(item.id)||used.has(item.id)||!item.set||typeof item.set!=="object"||Array.isArray(item.set))throw Error("PACK_CASE");
+  used.add(item.id);let s=copy(pack.baseline);s.id=item.id;
+  for(const [k,val] of Object.entries(item.set)){
+   const path=k.split(".");if(path.some(x=>!/^[_A-Za-z0-9]+$/.test(x)||["id","__proto__","constructor","prototype"].includes(x)))throw Error("PACK_PATH");
+   let obj=s;for(let i=0;i<path.length-1;i++){if(!obj||typeof obj!=="object"||!Object.prototype.hasOwnProperty.call(obj,path[i]))throw Error("PACK_UNKNOWN");obj=obj[path[i]]}
+   const last=path[path.length-1];if(!obj||typeof obj!=="object"||!Object.prototype.hasOwnProperty.call(obj,last))throw Error("PACK_LEAF");
+   obj[last]=copy(val)
+  }out.push(s)
+ }return out
+}
+
 
 function verifySqs(scenarios,csv){
  const requiredPaths=["http_status_proxy","fifo_dedup_proxy","full_reference"],lines=csv.trimEnd().split(/\r?\n/);
@@ -59,4 +74,4 @@ function verifySqs(scenarios,csv){
  if(!forgedDetected||!duplicateDetected)throw Error("MUTATION_CONTROLS");
  return {status:"PASS_WITH_LIMITS",scenarioCount:scenarios.length,decisionRows:lines.length-1,paths:requiredPaths,referenceHistogram:hist,weakPathDisagreements:pathDiff,allRowsReconstructed:lines.length-1,nonCompleteControls:Object.values(refOut).filter(x=>x!=="COMPLETE").length,exactProbes:Object.keys(controls).length,forgedRowRejected:forgedDetected,duplicateScenarioRejected:duplicateDetected,independence:{implementation:"PARTIAL",dataSource:"NONE",semanticContract:"LIMITED_SHARED",authority:"NONE"},externalEffects:0};
 }
-if(typeof module!=="undefined"){module.exports={verifySqs};if(require.main===module){const fs=require("fs");const s=JSON.parse(fs.readFileSync(process.argv[2],"utf8"));const csv=fs.readFileSync(process.argv[3],"utf8");console.log(JSON.stringify(verifySqs(s,csv),null,2));}}
+if(typeof module!=="undefined"){module.exports={verifySqs,expandSqsFixturePack};if(require.main===module){const fs=require("fs");const input=JSON.parse(fs.readFileSync(process.argv[2],"utf8"));const s=Array.isArray(input)?input:expandSqsFixturePack(input);const csv=fs.readFileSync(process.argv[3],"utf8");console.log(JSON.stringify(verifySqs(s,csv),null,2));}}
