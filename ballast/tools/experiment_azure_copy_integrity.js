@@ -3,7 +3,7 @@ function produceAzure(){
  const c={task:"task28",run:"run28",attempt:"attempt1",source:"src28",sourceETag:"src-etag7",target:"dst28",incarnation:"dst-uid28",copyId:"copy28",members:[{member:"A",uid:"uidA",effectId:"effectA"},{member:"B",uid:"uidB",effectId:"effectB"}]};
  const rec=(m,u,e,t)=>({member:m,uid:u,effectId:e,task:c.task,run:c.run,attempt:c.attempt,target:c.target,incarnation:c.incarnation,copyId:c.copyId,approval:"approval28",at:t});
  const a=rec("A","uidA","effectA",75),b=rec("B","uidB","effectB",80),grant=r=>({...r,from:10,until:90,revokedAt:null});
- const baseline={id:"baseline",context:c,copy:{http:202,status:"success",copyId:c.copyId,sourceETag:c.sourceETag,sourceChanged:false,statusProof:true,startedAt:20,finishedAt:70,observedAt:85,exists:true,etag:"dst-etag9",expectedETag:"dst-etag9",size:128,expectedSize:128,digest:"fixture-digest",expectedDigest:"fixture-digest",metadata:true,authority:"completed"},receipts:[a,b],grants:[grant(a),grant(b)],prior:{state:"hit",complete:true,query:{task:c.task,run:c.run,attempt:c.attempt,target:c.target,incarnation:c.incarnation,copyId:c.copyId,effects:["effectA","effectB"],at:88,watermark:85,attemptEnd:80,retentionUntil:150,lifecycle:"ACTIVE"}},permission:{allowed:true,until:140,revokedAt:null},current:{target:c.target,incarnation:c.incarnation,members:[{member:"A",uid:"uidA",done:true},{member:"B",uid:"uidB",done:true}],predicate:"DONE",revision:7,guardRevision:7,commitRevision:7,readAt:90,guardAt:95,commitAt:100,protected:true}};
+ const baseline={id:"baseline",context:c,copy:{http:202,status:"success",copyId:c.copyId,source:c.source,target:c.target,incarnation:c.incarnation,sourceETag:c.sourceETag,sourceChanged:false,statusProof:true,startedAt:20,finishedAt:70,observedAt:85,exists:true,etag:"dst-etag9",expectedETag:"dst-etag9",size:128,expectedSize:128,digest:"fixture-digest",expectedDigest:"fixture-digest",metadata:true,authority:"completed"},receipts:[a,b],grants:[grant(a),grant(b)],prior:{state:"hit",complete:true,query:{task:c.task,run:c.run,attempt:c.attempt,target:c.target,incarnation:c.incarnation,copyId:c.copyId,effects:["effectA","effectB"],at:88,watermark:85,attemptEnd:80,retentionUntil:150,lifecycle:"ACTIVE"}},permission:{allowed:true,until:140,revokedAt:null},current:{target:c.target,incarnation:c.incarnation,members:[{member:"A",uid:"uidA",done:true},{member:"B",uid:"uidB",done:true}],predicate:"DONE",revision:7,guardRevision:7,commitRevision:7,readAt:90,guardAt:95,commitAt:100,protected:true}};
  const cases=[],add=(id,set)=>cases.push({id,set}),none={receipts:[],grants:[]},notDone={"current.predicate":"PENDING","current.members":[{member:"A",uid:"uidA",done:false},{member:"B",uid:"uidB",done:false}]};
  add("pending",{...none,...notDone,"copy.status":"pending","copy.finishedAt":null,"prior.state":"unknown"});
  add("pending_with_receipts",{"copy.status":"pending","copy.finishedAt":null});
@@ -17,6 +17,9 @@ function produceAzure(){
  add("wrong_run_receipt",{receipts:[{...a,run:"old"},b]});
  add("wrong_incarnation_receipt",{receipts:[{...a,incarnation:"old"},b]});
  add("source_changed",{"copy.sourceChanged":true});
+ add("source_identity_drift",{"copy.source":"wrong-source"});
+ add("destination_identity_drift",{"copy.target":"wrong-destination"});
+ add("copy_incarnation_drift",{"copy.incarnation":"wrong-incarnation"});
  add("source_etag_drift",{"copy.sourceETag":"old"});
  add("destination_etag_drift",{"copy.etag":"old"});
  add("destination_digest_drift",{"copy.digest":"old"});
@@ -55,7 +58,7 @@ function produceAzure(){
  function guard(s){const w=s.current,k=s.context;return w.target===k.target&&w.incarnation===k.incarnation&&w.protected===true&&[w.revision,w.guardRevision,w.commitRevision,w.readAt,w.guardAt,w.commitAt].every(nat)&&w.revision===w.guardRevision&&w.revision===w.commitRevision&&w.readAt<=w.guardAt&&w.guardAt<=w.commitAt}
  function full(s){
   const k=s.context,x=s.copy,r=s.receipts,w=s.current,q=s.prior;
-  if(![x.startedAt,x.observedAt,w.readAt,w.guardAt,w.commitAt].every(nat)||x.copyId!==k.copyId||x.sourceETag!==k.sourceETag||x.sourceChanged===true)return "RECONCILE";
+  if(![x.startedAt,x.observedAt,w.readAt,w.guardAt,w.commitAt].every(nat)||x.copyId!==k.copyId||x.source!==k.source||x.target!==k.target||x.incarnation!==k.incarnation||x.sourceETag!==k.sourceETag||x.sourceChanged===true)return "RECONCILE";
   if(x.http!==202||x.statusProof!==true)return "STOP_UNKNOWN";
   if(q.state==="miss"&&r.length&&scope(s))return "EVIDENCE_CONFLICT";
   if(q.state==="unknown"||!scope(s)||q.complete!==true)return "STOP_UNKNOWN";
