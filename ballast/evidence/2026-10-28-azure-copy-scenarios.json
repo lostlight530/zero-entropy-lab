@@ -1,0 +1,939 @@
+{
+  "schema": "ballast.azure-copy.deltas/1",
+  "baseline": {
+    "id": "baseline",
+    "context": {
+      "task": "task28",
+      "run": "run28",
+      "attempt": "attempt1",
+      "source": "src28",
+      "sourceETag": "src-etag7",
+      "target": "dst28",
+      "incarnation": "dst-uid28",
+      "copyId": "copy28",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uidA",
+          "effectId": "effectA"
+        },
+        {
+          "member": "B",
+          "uid": "uidB",
+          "effectId": "effectB"
+        }
+      ]
+    },
+    "copy": {
+      "http": 202,
+      "status": "success",
+      "copyId": "copy28",
+      "source": "src28",
+      "target": "dst28",
+      "incarnation": "dst-uid28",
+      "sourceETag": "src-etag7",
+      "sourceChanged": false,
+      "statusProof": true,
+      "startedAt": 20,
+      "finishedAt": 70,
+      "observedAt": 85,
+      "exists": true,
+      "etag": "dst-etag9",
+      "expectedETag": "dst-etag9",
+      "size": 128,
+      "expectedSize": 128,
+      "digest": "fixture-digest",
+      "expectedDigest": "fixture-digest",
+      "metadata": true,
+      "authority": "completed"
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uidA",
+        "effectId": "effectA",
+        "task": "task28",
+        "run": "run28",
+        "attempt": "attempt1",
+        "target": "dst28",
+        "incarnation": "dst-uid28",
+        "copyId": "copy28",
+        "approval": "approval28",
+        "at": 75
+      },
+      {
+        "member": "B",
+        "uid": "uidB",
+        "effectId": "effectB",
+        "task": "task28",
+        "run": "run28",
+        "attempt": "attempt1",
+        "target": "dst28",
+        "incarnation": "dst-uid28",
+        "copyId": "copy28",
+        "approval": "approval28",
+        "at": 80
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uidA",
+        "effectId": "effectA",
+        "task": "task28",
+        "run": "run28",
+        "attempt": "attempt1",
+        "target": "dst28",
+        "incarnation": "dst-uid28",
+        "copyId": "copy28",
+        "approval": "approval28",
+        "at": 75,
+        "from": 10,
+        "until": 90,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uidB",
+        "effectId": "effectB",
+        "task": "task28",
+        "run": "run28",
+        "attempt": "attempt1",
+        "target": "dst28",
+        "incarnation": "dst-uid28",
+        "copyId": "copy28",
+        "approval": "approval28",
+        "at": 80,
+        "from": 10,
+        "until": 90,
+        "revokedAt": null
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "complete": true,
+      "query": {
+        "task": "task28",
+        "run": "run28",
+        "attempt": "attempt1",
+        "target": "dst28",
+        "incarnation": "dst-uid28",
+        "copyId": "copy28",
+        "effects": [
+          "effectA",
+          "effectB"
+        ],
+        "at": 88,
+        "watermark": 85,
+        "attemptEnd": 80,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "until": 140,
+      "revokedAt": null
+    },
+    "current": {
+      "target": "dst28",
+      "incarnation": "dst-uid28",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uidA",
+          "done": true
+        },
+        {
+          "member": "B",
+          "uid": "uidB",
+          "done": true
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 7,
+      "guardRevision": 7,
+      "commitRevision": 7,
+      "readAt": 90,
+      "guardAt": 95,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  "cases": [
+    {
+      "id": "pending",
+      "set": {
+        "receipts": [],
+        "grants": [],
+        "current.predicate": "PENDING",
+        "current.members": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "done": false
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "done": false
+          }
+        ],
+        "copy.status": "pending",
+        "copy.finishedAt": null,
+        "prior.state": "unknown"
+      }
+    },
+    {
+      "id": "pending_with_receipts",
+      "set": {
+        "copy.status": "pending",
+        "copy.finishedAt": null
+      }
+    },
+    {
+      "id": "accepted_without_receipts",
+      "set": {
+        "receipts": [],
+        "grants": [],
+        "current.predicate": "PENDING",
+        "current.members": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "done": false
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "done": false
+          }
+        ],
+        "prior.state": "unknown"
+      }
+    },
+    {
+      "id": "aborted_zero",
+      "set": {
+        "receipts": [],
+        "grants": [],
+        "current.predicate": "PENDING",
+        "current.members": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "done": false
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "done": false
+          }
+        ],
+        "copy.status": "aborted",
+        "copy.size": 0,
+        "prior.state": "unknown"
+      }
+    },
+    {
+      "id": "missing_b",
+      "set": {
+        "receipts": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "effectId": "effectA",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 75
+          }
+        ]
+      }
+    },
+    {
+      "id": "duplicate_a",
+      "set": {
+        "receipts": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "effectId": "effectA",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 75
+          },
+          {
+            "member": "A",
+            "uid": "uidA",
+            "effectId": "effectA",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 75
+          }
+        ]
+      }
+    },
+    {
+      "id": "extra_c",
+      "set": {
+        "receipts": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "effectId": "effectA",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 75
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "effectId": "effectB",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 80
+          },
+          {
+            "member": "C",
+            "uid": "uidC",
+            "effectId": "effectC",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 82
+          }
+        ]
+      }
+    },
+    {
+      "id": "same_count_swap",
+      "set": {
+        "receipts": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "effectId": "effectA",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 75
+          },
+          {
+            "member": "C",
+            "uid": "uidC",
+            "effectId": "effectC",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 80
+          }
+        ]
+      }
+    },
+    {
+      "id": "wrong_copy_receipt",
+      "set": {
+        "receipts": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "effectId": "effectA",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "old",
+            "approval": "approval28",
+            "at": 75
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "effectId": "effectB",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 80
+          }
+        ]
+      }
+    },
+    {
+      "id": "wrong_run_receipt",
+      "set": {
+        "receipts": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "effectId": "effectA",
+            "task": "task28",
+            "run": "old",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 75
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "effectId": "effectB",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 80
+          }
+        ]
+      }
+    },
+    {
+      "id": "wrong_incarnation_receipt",
+      "set": {
+        "receipts": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "effectId": "effectA",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "old",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 75
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "effectId": "effectB",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 80
+          }
+        ]
+      }
+    },
+    {
+      "id": "source_changed",
+      "set": {
+        "copy.sourceChanged": true
+      }
+    },
+    {
+      "id": "source_identity_drift",
+      "set": {
+        "copy.source": "wrong-source"
+      }
+    },
+    {
+      "id": "destination_identity_drift",
+      "set": {
+        "copy.target": "wrong-destination"
+      }
+    },
+    {
+      "id": "copy_incarnation_drift",
+      "set": {
+        "copy.incarnation": "wrong-incarnation"
+      }
+    },
+    {
+      "id": "source_etag_drift",
+      "set": {
+        "copy.sourceETag": "old"
+      }
+    },
+    {
+      "id": "destination_etag_drift",
+      "set": {
+        "copy.etag": "old"
+      }
+    },
+    {
+      "id": "destination_digest_drift",
+      "set": {
+        "copy.digest": "old"
+      }
+    },
+    {
+      "id": "destination_size_drift",
+      "set": {
+        "copy.size": 0
+      }
+    },
+    {
+      "id": "status_copy_id_drift",
+      "set": {
+        "copy.copyId": "old"
+      }
+    },
+    {
+      "id": "status_proof_missing",
+      "set": {
+        "copy.statusProof": false
+      }
+    },
+    {
+      "id": "status_before_finish",
+      "set": {
+        "copy.observedAt": 69
+      }
+    },
+    {
+      "id": "effect_before_copy",
+      "set": {
+        "receipts": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "effectId": "effectA",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 60
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "effectId": "effectB",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 80
+          }
+        ]
+      }
+    },
+    {
+      "id": "grant_revoked",
+      "set": {
+        "grants": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "effectId": "effectA",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 75,
+            "from": 10,
+            "until": 90,
+            "revokedAt": 74
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "effectId": "effectB",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 80,
+            "from": 10,
+            "until": 90,
+            "revokedAt": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "grant_wrong_approval",
+      "set": {
+        "grants": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "effectId": "effectA",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "other",
+            "at": 75,
+            "from": 10,
+            "until": 90,
+            "revokedAt": null
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "effectId": "effectB",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 80,
+            "from": 10,
+            "until": 90,
+            "revokedAt": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "current_member_swap",
+      "set": {
+        "current.members": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "done": true
+          },
+          {
+            "member": "C",
+            "uid": "uidC",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "current_uid_swap",
+      "set": {
+        "current.members": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "done": true
+          },
+          {
+            "member": "B",
+            "uid": "uidB2",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "current_incarnation_drift",
+      "set": {
+        "current.incarnation": "new"
+      }
+    },
+    {
+      "id": "guard_drift",
+      "set": {
+        "current.guardRevision": 8
+      }
+    },
+    {
+      "id": "unprotected_guard",
+      "set": {
+        "current.protected": false
+      }
+    },
+    {
+      "id": "commit_drift",
+      "set": {
+        "current.commitRevision": 8
+      }
+    },
+    {
+      "id": "prior_unknown",
+      "set": {
+        "prior.state": "unknown"
+      }
+    },
+    {
+      "id": "prior_wrong_run",
+      "set": {
+        "prior.query.run": "old"
+      }
+    },
+    {
+      "id": "prior_wrong_effect_set",
+      "set": {
+        "prior.query.effects": [
+          "effectA",
+          "effectC"
+        ]
+      }
+    },
+    {
+      "id": "journal_incomplete",
+      "set": {
+        "prior.complete": false
+      }
+    },
+    {
+      "id": "positive_miss_conflict",
+      "set": {
+        "prior.state": "miss"
+      }
+    },
+    {
+      "id": "current_permission_revoked",
+      "set": {
+        "permission.allowed": false,
+        "permission.revokedAt": 89
+      }
+    },
+    {
+      "id": "fractional_receipt",
+      "set": {
+        "receipts": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "effectId": "effectA",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 75.5
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "effectId": "effectB",
+            "task": "task28",
+            "run": "run28",
+            "attempt": "attempt1",
+            "target": "dst28",
+            "incarnation": "dst-uid28",
+            "copyId": "copy28",
+            "approval": "approval28",
+            "at": 80
+          }
+        ]
+      }
+    },
+    {
+      "id": "fractional_watermark",
+      "set": {
+        "prior.query.watermark": 85.5
+      }
+    },
+    {
+      "id": "retry_authoritative_miss",
+      "set": {
+        "receipts": [],
+        "grants": [],
+        "current.predicate": "PENDING",
+        "current.members": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "done": false
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "done": false
+          }
+        ],
+        "copy.status": "failed",
+        "copy.exists": false,
+        "copy.size": 0,
+        "copy.authority": "authoritative_failed",
+        "prior.state": "miss"
+      }
+    },
+    {
+      "id": "retry_permission_revoked",
+      "set": {
+        "receipts": [],
+        "grants": [],
+        "current.predicate": "PENDING",
+        "current.members": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "done": false
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "done": false
+          }
+        ],
+        "copy.status": "failed",
+        "copy.exists": false,
+        "copy.size": 0,
+        "copy.authority": "authoritative_failed",
+        "prior.state": "miss",
+        "permission.allowed": false
+      }
+    },
+    {
+      "id": "retry_uncovered",
+      "set": {
+        "receipts": [],
+        "grants": [],
+        "current.predicate": "PENDING",
+        "current.members": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "done": false
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "done": false
+          }
+        ],
+        "copy.status": "failed",
+        "copy.exists": false,
+        "copy.size": 0,
+        "copy.authority": "authoritative_failed",
+        "prior.state": "miss",
+        "prior.query.watermark": 70
+      }
+    },
+    {
+      "id": "retry_retention_expired",
+      "set": {
+        "receipts": [],
+        "grants": [],
+        "current.predicate": "PENDING",
+        "current.members": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "done": false
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "done": false
+          }
+        ],
+        "copy.status": "failed",
+        "copy.exists": false,
+        "copy.size": 0,
+        "copy.authority": "authoritative_failed",
+        "prior.state": "miss",
+        "prior.query.retentionUntil": 80
+      }
+    },
+    {
+      "id": "retry_pending",
+      "set": {
+        "receipts": [],
+        "grants": [],
+        "current.predicate": "PENDING",
+        "current.members": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "done": false
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "done": false
+          }
+        ],
+        "copy.status": "pending",
+        "copy.exists": false,
+        "copy.size": 0,
+        "copy.authority": "unknown",
+        "prior.state": "miss",
+        "copy.finishedAt": null
+      }
+    },
+    {
+      "id": "retry_guard_drift",
+      "set": {
+        "receipts": [],
+        "grants": [],
+        "current.predicate": "PENDING",
+        "current.members": [
+          {
+            "member": "A",
+            "uid": "uidA",
+            "done": false
+          },
+          {
+            "member": "B",
+            "uid": "uidB",
+            "done": false
+          }
+        ],
+        "copy.status": "failed",
+        "copy.exists": false,
+        "copy.size": 0,
+        "copy.authority": "authoritative_failed",
+        "prior.state": "miss",
+        "current.guardRevision": 8
+      }
+    }
+  ]
+}
