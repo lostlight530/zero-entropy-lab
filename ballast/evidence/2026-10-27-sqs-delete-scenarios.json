@@ -1,0 +1,240 @@
+{
+  "schema": "ballast.sqs-delete.fixture-deltas/1",
+  "baseline": {
+    "id": "baseline",
+    "context": {
+      "task": "task-27",
+      "run": "run-27",
+      "attempt": "attempt-2",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "required": [
+        {
+          "member": "A",
+          "uid": "uid-A",
+          "effectId": "effect-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B",
+          "effectId": "effect-B"
+        }
+      ]
+    },
+    "control": {
+      "http": 200,
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "dedupAgeSec": 120,
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
+      "usedHandle": "handle-2",
+      "receivedAt": 40,
+      "deletedAt": 80
+    },
+    "receipts": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70
+      }
+    ],
+    "grants": [
+      {
+        "member": "A",
+        "uid": "uid-A",
+        "effectId": "effect-A",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 60,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      },
+      {
+        "member": "B",
+        "uid": "uid-B",
+        "effectId": "effect-B",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "approval": "approval-27",
+        "at": 70,
+        "validFrom": 10,
+        "validTo": 75,
+        "revokedAt": null
+      }
+    ],
+    "queueProof": [
+      {
+        "state": "DELETED",
+        "queue": "queue-27.fifo",
+        "message": "message-27",
+        "epoch": 2,
+        "handle": "handle-2",
+        "at": 80
+      }
+    ],
+    "prior": {
+      "state": "hit",
+      "journalComplete": true,
+      "query": {
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-2",
+        "target": "target-27",
+        "incarnation": "inc-27",
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ],
+        "at": 85,
+        "watermark": 75,
+        "attemptEnd": 72,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE",
+        "authority": "synthetic-sink-ledger"
+      }
+    },
+    "permission": {
+      "allowed": true,
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "validUntil": 110,
+      "revokedAt": null
+    },
+    "current": {
+      "task": "task-27",
+      "target": "target-27",
+      "incarnation": "inc-27",
+      "members": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "commitMembers": [
+        {
+          "member": "A",
+          "uid": "uid-A"
+        },
+        {
+          "member": "B",
+          "uid": "uid-B"
+        }
+      ],
+      "predicate": "DONE",
+      "revision": 12,
+      "guardRevision": 12,
+      "commitRevision": 12,
+      "readAt": 90,
+      "guardAt": 99,
+      "commitAt": 100,
+      "protected": true
+    }
+  },
+  "cases": [
+    {"id":"historical_revocation_after_effect","set":{"permission.allowed":false,"permission.revokedAt":95}},
+    {"id":"dedup_window_expired_historical_complete","set":{"control.dedupAgeSec":420}},
+    {"id":"stale_handle_http_200","set":{"control.usedHandle":"handle-1","queueProof":[]}},
+    {"id":"delete_http_200_no_external_effect","set":{"receipts":[],"queueProof":[],"prior.state":"unknown","current.predicate":"PENDING"}},
+    {"id":"missing_member_B_receipt","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60}]}},
+    {"id":"duplicate_A_replaces_B","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60},{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60}]}},
+    {"id":"extra_effect_C","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70},{"member":"C","uid":"uid-C","effectId":"effect-C","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":73}]}},
+    {"id":"wrong_task_receipt","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"other-task","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70}]}},
+    {"id":"wrong_run_receipt","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"task-27","run":"other-run","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70}]}},
+    {"id":"wrong_attempt_receipt","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"task-27","run":"run-27","attempt":"attempt-3","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70}]}},
+    {"id":"wrong_target_receipt","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"task-27","run":"run-27","attempt":"attempt-2","target":"other-target","incarnation":"inc-27","approval":"approval-27","at":70}]}},
+    {"id":"wrong_incarnation_receipt","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-new","approval":"approval-27","at":70}]}},
+    {"id":"wrong_member_uid_receipt","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60},{"member":"B","uid":"uid-B2","effectId":"effect-B","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70}]}},
+    {"id":"duplicate_effect_identity","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60},{"member":"B","uid":"uid-B","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70}]}},
+    {"id":"grant_revoked_before_effect","set":{"grants":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60,"validFrom":10,"validTo":75,"revokedAt":null},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70,"validFrom":10,"validTo":75,"revokedAt":65}]}},
+    {"id":"grant_expired_before_effect","set":{"grants":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60,"validFrom":10,"validTo":75,"revokedAt":null},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70,"validFrom":10,"validTo":69,"revokedAt":null}]}},
+    {"id":"effect_before_delivery","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":35},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70}]}},
+    {"id":"same_count_member_swap","set":{"current.members":[{"member":"A","uid":"uid-A"},{"member":"C","uid":"uid-C"}],"current.commitMembers":[{"member":"A","uid":"uid-A"},{"member":"C","uid":"uid-C"}]}},
+    {"id":"duplicate_current_member","set":{"current.members":[{"member":"A","uid":"uid-A"},{"member":"A","uid":"uid-A"}],"current.commitMembers":[{"member":"A","uid":"uid-A"},{"member":"A","uid":"uid-A"}]}},
+    {"id":"extra_current_member","set":{"current.members":[{"member":"A","uid":"uid-A"},{"member":"B","uid":"uid-B"},{"member":"C","uid":"uid-C"}],"current.commitMembers":[{"member":"A","uid":"uid-A"},{"member":"B","uid":"uid-B"},{"member":"C","uid":"uid-C"}]}},
+    {"id":"unprotected_current_guard","set":{"current.protected":false}},
+    {"id":"guard_revision_drift","set":{"current.commitRevision":13}},
+    {"id":"read_commit_membership_toctou","set":{"current.commitMembers":[{"member":"A","uid":"uid-A"},{"member":"C","uid":"uid-C"}]}},
+    {"id":"target_incarnation_recreated","set":{"current.incarnation":"inc-new"}},
+    {"id":"queue_proof_wrong_handle","set":{"queueProof":[{"state":"DELETED","queue":"queue-27.fifo","message":"message-27","epoch":2,"handle":"handle-1","at":80}]}},
+    {"id":"queue_proof_wrong_epoch","set":{"queueProof":[{"state":"DELETED","queue":"queue-27.fifo","message":"message-27","epoch":1,"handle":"handle-2","at":80}]}},
+    {"id":"queue_proof_duplicate","set":{"queueProof":[{"state":"DELETED","queue":"queue-27.fifo","message":"message-27","epoch":2,"handle":"handle-2","at":80},{"state":"DELETED","queue":"queue-27.fifo","message":"message-27","epoch":2,"handle":"handle-2","at":80}]}},
+    {"id":"queue_proof_extra_message","set":{"queueProof":[{"state":"DELETED","queue":"queue-27.fifo","message":"message-27","epoch":2,"handle":"handle-2","at":80},{"state":"DELETED","queue":"queue-27.fifo","message":"other-message","epoch":2,"handle":"handle-2","at":80}]}},
+    {"id":"queue_proof_boolean_coercion","set":{"queueProof":[{"state":true,"queue":"queue-27.fifo","message":"message-27","epoch":2,"handle":"handle-2","at":80}]}},
+    {"id":"covered_negative_miss_conflicts_positive","set":{"prior.state":"miss"}},
+    {"id":"covered_miss_safe_retry","set":{"receipts":[],"queueProof":[],"prior.state":"miss","current.predicate":"PENDING"}},
+    {"id":"covered_miss_permission_revoked","set":{"receipts":[],"queueProof":[],"prior.state":"miss","permission.allowed":false,"permission.revokedAt":90,"current.predicate":"PENDING"}},
+    {"id":"covered_miss_guard_unprotected","set":{"receipts":[],"queueProof":[],"prior.state":"miss","current.predicate":"PENDING","current.protected":false}},
+    {"id":"miss_stale_watermark","set":{"receipts":[],"queueProof":[],"prior.state":"miss","prior.query.watermark":60,"current.predicate":"PENDING"}},
+    {"id":"miss_retention_expired","set":{"receipts":[],"queueProof":[],"prior.state":"miss","prior.query.retentionUntil":80,"current.predicate":"PENDING"}},
+    {"id":"miss_wrong_effect_set","set":{"receipts":[],"queueProof":[],"prior.state":"miss","prior.query.effectIds":["effect-A"],"current.predicate":"PENDING"}},
+    {"id":"miss_wrong_target","set":{"receipts":[],"queueProof":[],"prior.state":"miss","prior.query.target":"other-target","current.predicate":"PENDING"}},
+    {"id":"hit_with_complete_empty_journal","set":{"receipts":[],"queueProof":[],"current.predicate":"PENDING"}},
+    {"id":"blind_retry_after_dedup_expiry","set":{"control.dedupAgeSec":420,"receipts":[],"queueProof":[],"prior.state":"unknown","current.predicate":"PENDING"}},
+    {"id":"fifo_dedup_ack_without_delivery","set":{"receipts":[],"queueProof":[],"prior.state":"unknown","current.predicate":"PENDING"}},
+    {"id":"historical_grant_revoked_after_effect","set":{"grants":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60,"validFrom":10,"validTo":75,"revokedAt":null},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70,"validFrom":10,"validTo":75,"revokedAt":74}]}},
+    {"id":"current_permission_expired_after_effect","set":{"permission.validUntil":95}},
+    {"id":"queue_delete_before_effect","set":{"queueProof":[{"state":"DELETED","queue":"queue-27.fifo","message":"message-27","epoch":2,"handle":"handle-2","at":55}]}},
+    {"id":"current_read_before_effect","set":{"current.readAt":65}},
+    {"id":"required_set_duplicate_identity","set":{"context.required":[{"member":"A","uid":"uid-A","effectId":"effect-A"},{"member":"A","uid":"uid-A","effectId":"effect-A"}]}},
+    {"id":"attack_receipt_time_string","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":"60"},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70}]}},
+    {"id":"attack_grant_from_string","set":{"grants":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60,"validFrom":"10","validTo":75,"revokedAt":null},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70,"validFrom":10,"validTo":75,"revokedAt":null}]}},
+    {"id":"attack_current_read_string","set":{"current.readAt":"90"}},
+    {"id":"attack_current_guard_string","set":{"current.guardAt":"99"}},
+    {"id":"attack_control_receive_string","set":{"control.receivedAt":"40"}},
+    {"id":"attack_current_commit_string","set":{"current.commitAt":"100"}},
+    {"id":"attack_prior_watermark_string","set":{"receipts":[],"queueProof":[],"prior.state":"miss","prior.query.watermark":"75","current.predicate":"PENDING"}},
+    {"id":"attack_prior_retention_string","set":{"receipts":[],"queueProof":[],"prior.state":"miss","prior.query.retentionUntil":"150","current.predicate":"PENDING"}},
+    {"id":"attack_permission_valid_until_string","set":{"receipts":[],"queueProof":[],"prior.state":"miss","permission.validUntil":"110","current.predicate":"PENDING"}},
+    {"id":"positive_journal_incomplete","set":{"prior.journalComplete":false}},
+    {"id":"positive_without_prior_hit","set":{"prior.state":"unknown"}},
+    {"id":"positive_query_wrong_run","set":{"prior.query.run":"run-old"}},
+    {"id":"control_message_and_proof_both_swapped","set":{"control.message":"other-message","queueProof":[{"state":"DELETED","queue":"queue-27.fifo","message":"other-message","epoch":2,"handle":"handle-2","at":80}]}},
+    {"id":"control_queue_and_proof_both_swapped","set":{"control.queue":"other.fifo","queueProof":[{"state":"DELETED","queue":"other.fifo","message":"message-27","epoch":2,"handle":"handle-2","at":80}]}},
+    {"id":"epoch_and_handle_both_swapped","set":{"control.deliveryEpoch":3,"control.latestHandle":"handle-3","control.usedHandle":"handle-3","queueProof":[{"state":"DELETED","queue":"queue-27.fifo","message":"message-27","epoch":3,"handle":"handle-3","at":80}]}},
+    {"id":"effect_fractional_time","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60.5},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70}]}},
+    {"id":"miss_fractional_watermark","set":{"receipts":[],"queueProof":[],"prior.state":"miss","prior.query.watermark":75.5,"current.predicate":"PENDING"}},
+    {"id":"wrong_control_message_group","set":{"control.group":"other-group"}},
+    {"id":"retry_stale_handle","set":{"control.usedHandle":"stale-handle","receipts":[],"queueProof":[],"prior.state":"miss","current.predicate":"PENDING"}}
+  ]
+}
