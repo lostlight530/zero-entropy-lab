@@ -8,6 +8,12 @@
       "attempt": "attempt-2",
       "target": "target-27",
       "incarnation": "inc-27",
+      "queue": "queue-27.fifo",
+      "message": "message-27",
+      "group": "group-27",
+      "dedup": "dedup-27",
+      "deliveryEpoch": 2,
+      "latestHandle": "handle-2",
       "required": [
         {
           "member": "A",
@@ -219,6 +225,16 @@
     {"id":"attack_current_commit_string","set":{"current.commitAt":"100"}},
     {"id":"attack_prior_watermark_string","set":{"receipts":[],"queueProof":[],"prior.state":"miss","prior.query.watermark":"75","current.predicate":"PENDING"}},
     {"id":"attack_prior_retention_string","set":{"receipts":[],"queueProof":[],"prior.state":"miss","prior.query.retentionUntil":"150","current.predicate":"PENDING"}},
-    {"id":"attack_permission_valid_until_string","set":{"receipts":[],"queueProof":[],"prior.state":"miss","permission.validUntil":"110","current.predicate":"PENDING"}}
+    {"id":"attack_permission_valid_until_string","set":{"receipts":[],"queueProof":[],"prior.state":"miss","permission.validUntil":"110","current.predicate":"PENDING"}},
+    {"id":"positive_journal_incomplete","set":{"prior.journalComplete":false}},
+    {"id":"positive_without_prior_hit","set":{"prior.state":"unknown"}},
+    {"id":"positive_query_wrong_run","set":{"prior.query.run":"run-old"}},
+    {"id":"control_message_and_proof_both_swapped","set":{"control.message":"other-message","queueProof":[{"state":"DELETED","queue":"queue-27.fifo","message":"other-message","epoch":2,"handle":"handle-2","at":80}]}},
+    {"id":"control_queue_and_proof_both_swapped","set":{"control.queue":"other.fifo","queueProof":[{"state":"DELETED","queue":"other.fifo","message":"message-27","epoch":2,"handle":"handle-2","at":80}]}},
+    {"id":"epoch_and_handle_both_swapped","set":{"control.deliveryEpoch":3,"control.latestHandle":"handle-3","control.usedHandle":"handle-3","queueProof":[{"state":"DELETED","queue":"queue-27.fifo","message":"message-27","epoch":3,"handle":"handle-3","at":80}]}},
+    {"id":"effect_fractional_time","set":{"receipts":[{"member":"A","uid":"uid-A","effectId":"effect-A","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":60.5},{"member":"B","uid":"uid-B","effectId":"effect-B","task":"task-27","run":"run-27","attempt":"attempt-2","target":"target-27","incarnation":"inc-27","approval":"approval-27","at":70}]}},
+    {"id":"miss_fractional_watermark","set":{"receipts":[],"queueProof":[],"prior.state":"miss","prior.query.watermark":75.5,"current.predicate":"PENDING"}},
+    {"id":"wrong_control_message_group","set":{"control.group":"other-group"}},
+    {"id":"retry_stale_handle","set":{"control.usedHandle":"stale-handle","receipts":[],"queueProof":[],"prior.state":"miss","current.predicate":"PENDING"}}
   ]
 }
