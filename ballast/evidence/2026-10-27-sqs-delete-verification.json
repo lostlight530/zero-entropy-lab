@@ -1,7 +1,7 @@
 {
   "status": "PASS_WITH_LIMITS",
-  "scenarioCount": 55,
-  "decisionRows": 165,
+  "scenarioCount": 65,
+  "decisionRows": 195,
   "paths": [
     "http_status_proxy",
     "fifo_dedup_proxy",
@@ -9,19 +9,19 @@
   ],
   "referenceHistogram": {
     "COMPLETE": 5,
-    "STOP_UNKNOWN": 11,
-    "RECONCILE": 34,
+    "STOP_UNKNOWN": 15,
+    "RECONCILE": 39,
     "EVIDENCE_CONFLICT": 2,
     "RETRY_ALLOWED": 1,
-    "BLOCKED": 2
+    "BLOCKED": 3
   },
   "weakPathDisagreements": {
-    "http_status_proxy": 50,
-    "fifo_dedup_proxy": 50
+    "http_status_proxy": 60,
+    "fifo_dedup_proxy": 60
   },
-  "allRowsReconstructed": 165,
-  "nonCompleteControls": 50,
-  "exactProbes": 23,
+  "allRowsReconstructed": 195,
+  "nonCompleteControls": 60,
+  "exactProbes": 33,
   "forgedRowRejected": true,
   "duplicateScenarioRejected": true,
   "independence": {
@@ -76,15 +76,37 @@
   "compactEvidence": {
     "schema": "ballast.sqs-delete.fixture-deltas/1",
     "baseline": 1,
-    "deltaCount": 54,
+    "deltaCount": 64,
     "originalFullJSONLines": 8615,
-    "compactJSONLines": 224,
-    "roundtrip": "55/55 EXACT",
-    "reconstructedDecisions": "165/165",
+    "compactJSONLines": 240,
+    "roundtrip": "65/65 EXACT",
+    "reconstructedDecisions": "195/195",
     "invalidDeltaRejected": true,
-    "unresolvedSemanticModelAttacks": 10,
+    "unresolvedSemanticModelAttacks": 0,
     "nativeNodeCLI": "NOT_EXECUTED",
     "fullPythonChecker": "NOT_EXECUTED",
     "liveAWS": "NOT_EXECUTED"
+  },
+  "adversarialCorrection": {
+    "reviewedHead": "d58bee5a939d3d9879d3998993027fda747a65cb",
+    "tenRepairedCases": [
+      "positive_journal_incomplete",
+      "positive_without_prior_hit",
+      "positive_query_wrong_run",
+      "control_message_and_proof_both_swapped",
+      "control_queue_and_proof_both_swapped",
+      "epoch_and_handle_both_swapped",
+      "effect_fractional_time",
+      "miss_fractional_watermark",
+      "wrong_control_message_group",
+      "retry_stale_handle"
+    ],
+    "producerAndVerifierReplay": "EXECUTED_V8_ISOLATE",
+    "additionalResearchWindows": 0,
+    "fullPythonChecker": "NOT_EXECUTED",
+    "nativeNodeCLI": "NOT_EXECUTED",
+    "liveAwsSqs": "NOT_EXECUTED",
+    "externalEffectSink": "NOT_EXECUTED",
+    "independentAuthority": "NOT_EXECUTED"
   }
 }
