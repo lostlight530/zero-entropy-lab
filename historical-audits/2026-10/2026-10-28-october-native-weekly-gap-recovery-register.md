@@ -90,3 +90,8 @@
 | Long-term governance promotion | NONE |
 
 **Source priority:** repo current `main` and canonical contracts → native source-time records → dated corrections → this derived inventory. Existing October A1/A2 and the 2026-10-28 minimal acceptance audit remain intact. All historical discrepancies are retained, and any subsequent completion requires a newer dated delta with exact proof, not silently changing this record.
+
+
+## Independent 2026-10-27 delivery receipts that do exist
+
+The separate maintenance plane is not absent: [A1 source custody PR #732](https://github.com/lostlight530/zero-entropy-lab/pull/732) merged on Oct 27 at 13:45:24Z and [A2 month relation PR #733](https://github.com/lostlight530/zero-entropy-lab/pull/733) merged at 13:56:24Z, in dependency order. These were one-file derived custody/relation records, not new native Aegis A1/A2 scientific production. [Ballast Daily PR #731](https://github.com/lostlight530/zero-entropy-lab/pull/731) is separately owned and does not fill the absent Aegis canonical files. Original Aegis task-time scheduler receipts were not recovered from these maintenance PRs.
