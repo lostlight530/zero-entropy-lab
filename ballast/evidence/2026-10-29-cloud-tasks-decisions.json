@@ -1,0 +1,737 @@
+[
+  {
+    "scenario": "baseline",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "baseline",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "baseline",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "deadline_worker_unfenced",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "deadline_worker_unfenced",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "deadline_worker_unfenced",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "fence_after_retry",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "fence_after_retry",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "fence_after_retry",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "deadline_without_effect_proof",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "deadline_without_effect_proof",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "deadline_without_effect_proof",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "late_old_attempt_receipt",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "late_old_attempt_receipt",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "late_old_attempt_receipt",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "duplicate_A_receipt",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "duplicate_A_receipt",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "duplicate_A_receipt",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "extra_C_receipt",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "extra_C_receipt",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "extra_C_receipt",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "same_count_A_C",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "same_count_A_C",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "same_count_A_C",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "wrong_receipt_task",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "wrong_receipt_task",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "wrong_receipt_task",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "wrong_receipt_run",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "wrong_receipt_run",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "wrong_receipt_run",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "wrong_receipt_attempt",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "wrong_receipt_attempt",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "wrong_receipt_attempt",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "wrong_receipt_incarnation",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "wrong_receipt_incarnation",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "wrong_receipt_incarnation",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "wrong_receipt_target_uid",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "wrong_receipt_target_uid",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "wrong_receipt_target_uid",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "grant_expired",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "grant_expired",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "grant_expired",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "scenario": "grant_revoked_before_effect",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "grant_revoked_before_effect",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "grant_revoked_before_effect",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "scenario": "grant_revoked_after_effect",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "grant_revoked_after_effect",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "grant_revoked_after_effect",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "wrong_grant_identity",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "wrong_grant_identity",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "wrong_grant_identity",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "prior_unknown",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_unknown",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_unknown",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "prior_hit_incomplete",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_hit_incomplete",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_hit_incomplete",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "prior_wrong_queue",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_wrong_queue",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_wrong_queue",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "prior_wrong_required_set",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_wrong_required_set",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_wrong_required_set",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "prior_watermark_behind",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_watermark_behind",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_watermark_behind",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "prior_retention_expired",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_retention_expired",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_retention_expired",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "prior_miss_positive_conflict",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_miss_positive_conflict",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_miss_positive_conflict",
+    "path": "full_reference",
+    "decision": "EVIDENCE_CONFLICT"
+  },
+  {
+    "scenario": "miss_incomplete_no_receipts",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_incomplete_no_receipts",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_incomplete_no_receipts",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "miss_covered_safe_retry",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_covered_safe_retry",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_covered_safe_retry",
+    "path": "full_reference",
+    "decision": "RETRY_ALLOWED"
+  },
+  {
+    "scenario": "miss_revoked_permission",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_revoked_permission",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_revoked_permission",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "scenario": "miss_unprotected_permission",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_unprotected_permission",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_unprotected_permission",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "miss_unfenced_worker",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_unfenced_worker",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_unfenced_worker",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "current_target_recreated",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_target_recreated",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_target_recreated",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_membership_swap",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_membership_swap",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_membership_swap",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_extra_member",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_extra_member",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_extra_member",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_duplicate_member",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_duplicate_member",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_duplicate_member",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_revision_drift",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_revision_drift",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_revision_drift",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_guard_unprotected",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_guard_unprotected",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_guard_unprotected",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_predicate_incomplete",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_predicate_incomplete",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_predicate_incomplete",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_state_unsatisfied",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_state_unsatisfied",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_state_unsatisfied",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_guard_before_effect",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_guard_before_effect",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_guard_before_effect",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "fractional_effect_time",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "fractional_effect_time",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "fractional_effect_time",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "string_attempt_coercion",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "string_attempt_coercion",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "string_attempt_coercion",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "name_window_expired",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "name_window_expired",
+    "path": "name_proxy",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "name_window_expired",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "name_reuse_new_incarnation",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "name_reuse_new_incarnation",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "name_reuse_new_incarnation",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "http_503_but_completed",
+    "path": "http_proxy",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "http_503_but_completed",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "http_503_but_completed",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_permission_revoked_after_effect",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_permission_revoked_after_effect",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_permission_revoked_after_effect",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "grant_begins_after_effect",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "grant_begins_after_effect",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "grant_begins_after_effect",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "scenario": "query_time_before_watermark",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_time_before_watermark",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_time_before_watermark",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "query_lifecycle_pruned",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_lifecycle_pruned",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_lifecycle_pruned",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "missing_required_member",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "missing_required_member",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "missing_required_member",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "unprotected_completion_read",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "unprotected_completion_read",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "unprotected_completion_read",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  }
+]

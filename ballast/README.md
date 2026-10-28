@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-28 Azure Copy Blob asynchronous copy and downstream effect integrity](records/2026-10-28.md)
+- 最新 Daily: [2026-10-29 Cloud Tasks dispatch deadline and downstream effect integrity](records/2026-10-29.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-20 至 2026-10-25](audits/2026-10-20--2026-10-25.md)
@@ -762,3 +762,13 @@ V8 isolate producer/verifier EXECUTED PASS_WITH_LIMITS, native Node CLI, complet
 
 
 [PR #737 merge reconciliation](corrections/2026-10-28-azure-copy-merge-reconciliation.md): correction merged after same-day Aegis A2 (#739) at 2026-10-28T06:19:07Z, merge SHA `4a1e33fb3970ad1ab1fe2891910d0169fa2b11f8`; eight ballast-only changes, original source blob SHA preserved, CodeQL and deploy success observed, no independent Node/Python/live Azure replay or additional Daily/window credit.
+
+## Ballast current-state advance — 2026-10-29
+
+One NATIVE [Cloud Tasks deadline Daily](records/2026-10-29.md) studies dispatchDeadline cancellation versus still-running worker effects, 2xx and task-name dedup proxies, exact downstream A+B identity, authoritative prior MISS and protected completion
+
+Executed bounded V8 producer/verifier with 49 authored synthetic scenarios and 147 decisions, 44/44 negative controls, 147/147 primitive reconstruction, 5/5 positive and exact probes, 3/3 forged-input rejection, both weak proxies disagree with model reference in 45/49 cases, real Cloud Tasks calls and external effects 0
+
+[Google Cloud Tasks Task REST](https://docs.cloud.google.com/tasks/docs/reference/rest/v2/projects.locations.queues.tasks) documents that deadline cancellation does not ensure worker stops, [Google Cloud Tasks overview](https://docs.cloud.google.com/tasks/docs/dual-overview) documents at-least-once delivery and up-to-24-hour name dedup, [AWS SQS visibility timeout](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html) is a different-product independent-publisher comparison only
+
+One Daily and one bounded window, October Monthly synchronized, latest audit 2026-10-20..25 remains current, CASE/METHOD/NOTES/Special/Audit 0, full Python checker / native Node CLI / live Cloud Tasks / independent sink authority NOT_EXECUTED

@@ -1,0 +1,42 @@
+{
+  "logicalDate": "2026-10-29",
+  "execution": "V8_ISOLATE_EXECUTED",
+  "summary": {
+    "scenarios": 49,
+    "rows": 147,
+    "hist": {
+      "COMPLETE": 5,
+      "STOP_UNKNOWN": 15,
+      "RECONCILE": 23,
+      "BLOCKED": 4,
+      "EVIDENCE_CONFLICT": 1,
+      "RETRY_ALLOWED": 1
+    },
+    "positive": 5,
+    "negative": 44,
+    "exactProbes": 5,
+    "disagreements": {
+      "http_proxy": 45,
+      "name_proxy": 45
+    },
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    }
+  },
+  "attacks": {
+    "forged_row": "Error: VERIFIER_REJECT row baseline/full_reference",
+    "duplicate_scenario": "Error: VERIFIER_REJECT duplicate scenario",
+    "unsafe_patch": "Error: VERIFIER_REJECT unsafe patch"
+  },
+  "producer": "ballast/tools/experiment_cloud_tasks_deadline.js",
+  "verifier": "ballast/tools/verify_cloud_tasks_deadline.js",
+  "realCloudTasksRequests": 0,
+  "realExternalEffects": 0,
+  "checker": "NOT_EXECUTED",
+  "nodeCli": "NOT_EXECUTED",
+  "sourceAuthority": "GOOGLE_DOCUMENTATION",
+  "verifierAuthority": "NONE"
+}

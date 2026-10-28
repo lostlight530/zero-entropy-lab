@@ -1,0 +1,458 @@
+{
+  "schema": "ballast.cloud-tasks-deadline-fixtures/1",
+  "logicalDate": "2026-10-29",
+  "base": {
+    "task": {
+      "id": "task29",
+      "run": "run29",
+      "attempt": 2,
+      "queue": "queue29",
+      "name": "task-name29",
+      "inc": "task-inc29",
+      "target": "target29",
+      "targetUid": "uid29",
+      "intent": "publish29",
+      "required": [
+        {
+          "id": "A",
+          "uid": "a1"
+        },
+        {
+          "id": "B",
+          "uid": "b1"
+        }
+      ]
+    },
+    "dispatch": {
+      "createOk": true,
+      "lastHttp": 204,
+      "dispatchCount": 2,
+      "responseCount": 1,
+      "deadlineExceeded": true,
+      "deadline": 50,
+      "retryAt": 60,
+      "nameDedupRejected": true,
+      "nameAgeHours": 4,
+      "oldFence": {
+        "protected": true,
+        "tick": 55
+      }
+    },
+    "prior": {
+      "kind": "hit",
+      "query": {
+        "task": "task29",
+        "run": "run29",
+        "queue": "queue29",
+        "inc": "task-inc29",
+        "targetUid": "uid29",
+        "required": [
+          "A:a1",
+          "B:b1"
+        ],
+        "attempts": [
+          1,
+          2
+        ],
+        "complete": true,
+        "watermark": 95,
+        "queryAt": 96,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      }
+    },
+    "receipts": [
+      {
+        "id": "A",
+        "uid": "a1",
+        "task": "task29",
+        "run": "run29",
+        "attempt": 2,
+        "inc": "task-inc29",
+        "targetUid": "uid29",
+        "effectAt": 70,
+        "grant": "grant29"
+      },
+      {
+        "id": "B",
+        "uid": "b1",
+        "task": "task29",
+        "run": "run29",
+        "attempt": 2,
+        "inc": "task-inc29",
+        "targetUid": "uid29",
+        "effectAt": 75,
+        "grant": "grant29"
+      }
+    ],
+    "grant": {
+      "id": "grant29",
+      "from": 40,
+      "to": 90,
+      "revokedAt": null
+    },
+    "permission": {
+      "valid": true,
+      "protected": true,
+      "guardAt": 98
+    },
+    "completion": {
+      "targetUid": "uid29",
+      "members": [
+        {
+          "id": "A",
+          "uid": "a1"
+        },
+        {
+          "id": "B",
+          "uid": "b1"
+        }
+      ],
+      "state": "satisfied",
+      "predicateComplete": true,
+      "revision": 7,
+      "observedRevision": 7,
+      "guardRevision": 7,
+      "readAt": 85,
+      "guardAt": 99,
+      "commitAt": 100,
+      "guardProtected": true
+    }
+  },
+  "cases": [
+    {
+      "id": "baseline",
+      "changes": {}
+    },
+    {
+      "id": "deadline_worker_unfenced",
+      "changes": {
+        "dispatch.oldFence.protected": false
+      }
+    },
+    {
+      "id": "fence_after_retry",
+      "changes": {
+        "dispatch.oldFence.tick": 65
+      }
+    },
+    {
+      "id": "deadline_without_effect_proof",
+      "changes": {
+        "receipts": [],
+        "prior.kind": "unknown",
+        "completion.state": "unsatisfied"
+      }
+    },
+    {
+      "id": "late_old_attempt_receipt",
+      "changes": {
+        "receipts.0.attempt": 1
+      }
+    },
+    {
+      "id": "duplicate_A_receipt",
+      "changes": {
+        "receipts.1.id": "A",
+        "receipts.1.uid": "a1"
+      }
+    },
+    {
+      "id": "extra_C_receipt",
+      "changes": {
+        "receipts.2": {
+          "id": "C",
+          "uid": "c1",
+          "task": "task29",
+          "run": "run29",
+          "attempt": 2,
+          "inc": "task-inc29",
+          "targetUid": "uid29",
+          "effectAt": 78,
+          "grant": "grant29"
+        }
+      }
+    },
+    {
+      "id": "same_count_A_C",
+      "changes": {
+        "receipts.1.id": "C",
+        "receipts.1.uid": "c1"
+      }
+    },
+    {
+      "id": "wrong_receipt_task",
+      "changes": {
+        "receipts.0.task": "other"
+      }
+    },
+    {
+      "id": "wrong_receipt_run",
+      "changes": {
+        "receipts.0.run": "other"
+      }
+    },
+    {
+      "id": "wrong_receipt_attempt",
+      "changes": {
+        "receipts.0.attempt": 3
+      }
+    },
+    {
+      "id": "wrong_receipt_incarnation",
+      "changes": {
+        "receipts.0.inc": "other"
+      }
+    },
+    {
+      "id": "wrong_receipt_target_uid",
+      "changes": {
+        "receipts.0.targetUid": "other"
+      }
+    },
+    {
+      "id": "grant_expired",
+      "changes": {
+        "grant.to": 69
+      }
+    },
+    {
+      "id": "grant_revoked_before_effect",
+      "changes": {
+        "grant.revokedAt": 65
+      }
+    },
+    {
+      "id": "grant_revoked_after_effect",
+      "changes": {
+        "grant.revokedAt": 85
+      }
+    },
+    {
+      "id": "wrong_grant_identity",
+      "changes": {
+        "receipts.0.grant": "other"
+      }
+    },
+    {
+      "id": "prior_unknown",
+      "changes": {
+        "prior.kind": "unknown"
+      }
+    },
+    {
+      "id": "prior_hit_incomplete",
+      "changes": {
+        "prior.query.complete": false
+      }
+    },
+    {
+      "id": "prior_wrong_queue",
+      "changes": {
+        "prior.query.queue": "other"
+      }
+    },
+    {
+      "id": "prior_wrong_required_set",
+      "changes": {
+        "prior.query.required": [
+          "A:a1",
+          "C:c1"
+        ]
+      }
+    },
+    {
+      "id": "prior_watermark_behind",
+      "changes": {
+        "prior.query.watermark": 69
+      }
+    },
+    {
+      "id": "prior_retention_expired",
+      "changes": {
+        "prior.query.retentionUntil": 90
+      }
+    },
+    {
+      "id": "prior_miss_positive_conflict",
+      "changes": {
+        "prior.kind": "miss"
+      }
+    },
+    {
+      "id": "miss_incomplete_no_receipts",
+      "changes": {
+        "prior.kind": "miss",
+        "receipts": [],
+        "completion.state": "unsatisfied",
+        "prior.query.complete": false
+      }
+    },
+    {
+      "id": "miss_covered_safe_retry",
+      "changes": {
+        "prior.kind": "miss",
+        "receipts": [],
+        "completion.state": "unsatisfied"
+      }
+    },
+    {
+      "id": "miss_revoked_permission",
+      "changes": {
+        "prior.kind": "miss",
+        "receipts": [],
+        "completion.state": "unsatisfied",
+        "permission.valid": false
+      }
+    },
+    {
+      "id": "miss_unprotected_permission",
+      "changes": {
+        "prior.kind": "miss",
+        "receipts": [],
+        "completion.state": "unsatisfied",
+        "permission.protected": false
+      }
+    },
+    {
+      "id": "miss_unfenced_worker",
+      "changes": {
+        "prior.kind": "miss",
+        "receipts": [],
+        "completion.state": "unsatisfied",
+        "dispatch.oldFence.protected": false
+      }
+    },
+    {
+      "id": "current_target_recreated",
+      "changes": {
+        "completion.targetUid": "new-uid"
+      }
+    },
+    {
+      "id": "current_membership_swap",
+      "changes": {
+        "completion.members.1.id": "C",
+        "completion.members.1.uid": "c1"
+      }
+    },
+    {
+      "id": "current_extra_member",
+      "changes": {
+        "completion.members.2": {
+          "id": "C",
+          "uid": "c1"
+        }
+      }
+    },
+    {
+      "id": "current_duplicate_member",
+      "changes": {
+        "completion.members.1.id": "A",
+        "completion.members.1.uid": "a1"
+      }
+    },
+    {
+      "id": "current_revision_drift",
+      "changes": {
+        "completion.guardRevision": 8
+      }
+    },
+    {
+      "id": "current_guard_unprotected",
+      "changes": {
+        "completion.guardProtected": false
+      }
+    },
+    {
+      "id": "current_predicate_incomplete",
+      "changes": {
+        "completion.predicateComplete": false
+      }
+    },
+    {
+      "id": "current_state_unsatisfied",
+      "changes": {
+        "completion.state": "unsatisfied"
+      }
+    },
+    {
+      "id": "current_guard_before_effect",
+      "changes": {
+        "completion.guardAt": 72
+      }
+    },
+    {
+      "id": "fractional_effect_time",
+      "changes": {
+        "receipts.0.effectAt": 70.5
+      }
+    },
+    {
+      "id": "string_attempt_coercion",
+      "changes": {
+        "receipts.0.attempt": "2"
+      }
+    },
+    {
+      "id": "name_window_expired",
+      "changes": {
+        "dispatch.nameAgeHours": 25,
+        "dispatch.nameDedupRejected": false
+      }
+    },
+    {
+      "id": "name_reuse_new_incarnation",
+      "changes": {
+        "task.inc": "new-inc"
+      }
+    },
+    {
+      "id": "http_503_but_completed",
+      "changes": {
+        "dispatch.lastHttp": 503
+      }
+    },
+    {
+      "id": "current_permission_revoked_after_effect",
+      "changes": {
+        "permission.valid": false
+      }
+    },
+    {
+      "id": "grant_begins_after_effect",
+      "changes": {
+        "grant.from": 72
+      }
+    },
+    {
+      "id": "query_time_before_watermark",
+      "changes": {
+        "prior.query.queryAt": 90
+      }
+    },
+    {
+      "id": "query_lifecycle_pruned",
+      "changes": {
+        "prior.query.lifecycle": "PRUNED"
+      }
+    },
+    {
+      "id": "missing_required_member",
+      "changes": {
+        "task.required": [
+          {
+            "id": "A",
+            "uid": "a1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "unprotected_completion_read",
+      "changes": {
+        "completion.observedRevision": 8
+      }
+    }
+  ]
+}
