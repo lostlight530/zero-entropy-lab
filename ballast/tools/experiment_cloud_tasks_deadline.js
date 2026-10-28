@@ -55,7 +55,12 @@ const changes=[
 ["rebound_except_grant",{"task.intent":"new-intent","prior.query.intent":"new-intent","receipts.0.intent":"new-intent","receipts.1.intent":"new-intent","completion.scope.intent":"new-intent","permission.scope.intent":"new-intent"}],
 ["rebound_except_completion",{"task.intent":"new-intent","prior.query.intent":"new-intent","receipts.0.intent":"new-intent","receipts.1.intent":"new-intent","grant.scope.intent":"new-intent","permission.scope.intent":"new-intent"}],
 ["rebound_except_fence",{"task.name":"new-name","prior.query.name":"new-name","receipts.0.name":"new-name","receipts.1.name":"new-name","grant.scope.name":"new-name","completion.scope.name":"new-name"}],
-["rebound_except_permission",{"prior.kind":"miss","receipts":[],"completion.state":"unsatisfied","task.intent":"new-intent","prior.query.intent":"new-intent","grant.scope.intent":"new-intent","completion.scope.intent":"new-intent"}]
+["rebound_except_permission",{"prior.kind":"miss","receipts":[],"completion.state":"unsatisfied","task.intent":"new-intent","prior.query.intent":"new-intent","grant.scope.intent":"new-intent","completion.scope.intent":"new-intent"}],
+["miss_but_current_satisfied",{"prior.kind":"miss","receipts":[]}],
+["miss_current_predicate_incomplete",{"prior.kind":"miss","receipts":[],"completion.state":"unsatisfied","completion.predicateComplete":false}],
+["miss_current_guard_drift",{"prior.kind":"miss","receipts":[],"completion.state":"unsatisfied","completion.guardRevision":8}],
+["miss_current_guard_unprotected",{"prior.kind":"miss","receipts":[],"completion.state":"unsatisfied","completion.guardProtected":false}],
+["miss_current_read_after_guard",{"prior.kind":"miss","receipts":[],"completion.state":"unsatisfied","completion.readAt":100}]
 ];
 function patch(o,delta){for(const [path,v] of Object.entries(delta)){let a=path.split("."),p=o;if(!["task","dispatch","prior","receipts","grant","permission","completion"].includes(a[0])||a.some(x=>!x||["__proto__","prototype","constructor"].includes(x)))throw Error("invalid patch "+path);for(const b of a.slice(0,-1)){if(p==null||!(b in p))throw Error("missing "+path);p=p[b]}const k=a.at(-1);if(p==null||(!Array.isArray(p)&&!(k in p))||(Array.isArray(p)&&(!/^\d+$/.test(k)||+k>p.length)))throw Error("invalid leaf "+path);p[k]=C(v)}return o}
 function decide(s){
@@ -68,7 +73,7 @@ const f=d.oldFence.scope;if(!f||f.task!==t.id||f.run!==t.run||f.queue!==t.queue|
 const cs=c.scope;if(!cs||cs.task!==t.id||cs.run!==t.run||cs.name!==t.name||cs.inc!==t.inc||cs.intent!==t.intent||cs.target!==t.target||cs.targetUid!==t.targetUid||!E(cs.required,ids(t.required)))return "RECONCILE";
 if(d.oldFence.protected!==true||d.oldFence.tick<d.deadline||d.oldFence.tick>d.retryAt)return "STOP_UNKNOWN";
 const wanted=ids(t.required),got=ids(r),present=ids(c.members);
-if(!r.length){if(h.kind!=="miss")return "STOP_UNKNOWN";const ps=p.scope;if(!ps||ps.task!==t.id||ps.run!==t.run||ps.inc!==t.inc||ps.intent!==t.intent||ps.targetUid!==t.targetUid||!E(ps.required,ids(t.required)))return "STOP_UNKNOWN";if(p.valid!==true)return "BLOCKED";if(p.protected!==true||p.guardAt<=q.queryAt||p.guardAt>=c.commitAt)return "STOP_UNKNOWN";if(c.targetUid!==t.targetUid||!unique(wanted)||!unique(present)||!E(present,wanted))return "RECONCILE";return "RETRY_ALLOWED"}
+if(!r.length){if(h.kind!=="miss")return "STOP_UNKNOWN";const ps=p.scope;if(!ps||ps.task!==t.id||ps.run!==t.run||ps.inc!==t.inc||ps.intent!==t.intent||ps.targetUid!==t.targetUid||!E(ps.required,ids(t.required)))return "STOP_UNKNOWN";if(p.valid!==true)return "BLOCKED";if(p.protected!==true||p.guardAt<=q.queryAt||p.guardAt>=c.commitAt)return "STOP_UNKNOWN";if(c.state==="satisfied")return "RECONCILE";if(c.state!=="unsatisfied"||c.predicateComplete!==true||c.guardProtected!==true||c.revision!==c.observedRevision||c.revision!==c.guardRevision||!(c.readAt<c.guardAt&&c.guardAt<c.commitAt))return "STOP_UNKNOWN";if(c.targetUid!==t.targetUid||!unique(wanted)||!unique(present)||!E(present,wanted))return "RECONCILE";return "RETRY_ALLOWED"}
 if(h.kind!=="hit")return "STOP_UNKNOWN";
 const gs=g.scope;if(!gs||gs.task!==t.id||gs.run!==t.run||gs.queue!==t.queue||gs.name!==t.name||gs.target!==t.target||gs.targetUid!==t.targetUid||gs.inc!==t.inc||gs.intent!==t.intent||!E(gs.required,ids(t.required)))return "BLOCKED";
 if(!unique(wanted)||!unique(got)||!unique(present)||!E(got,wanted))return "RECONCILE";

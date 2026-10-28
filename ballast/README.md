@@ -767,10 +767,12 @@ V8 isolate producer/verifier EXECUTED PASS_WITH_LIMITS, native Node CLI, complet
 
 One NATIVE [Cloud Tasks deadline Daily](records/2026-10-29.md) studies dispatchDeadline cancellation versus still-running worker effects, 2xx and task-name dedup proxies, exact downstream A+B identity, authoritative prior MISS and protected completion
 
-Executed bounded V8 producer/verifier with initial 49/147 exposed three unsafe task intent/name/target reference accepts, corrected same-date to 63 authored synthetic scenarios and 189 decisions, 58/58 negative controls, 189/189 primitive reconstruction, 5/5 positive and 19/19 exact probes, 3/3 forged-input rejection, both weak proxies disagree with corrected model reference in 59/63 cases, real Cloud Tasks calls and external effects 0
+Executed bounded V8 producer/verifier with initial 49/147 exposed three unsafe task intent/name/target reference accepts, first corrected to 63/189, then five unsafe no-receipt retry witness accepts were found and corrected to 68 authored synthetic scenarios and 204 decisions, 63/63 negative controls, 204/204 primitive reconstruction, 5/5 positive and 24/24 exact probes, 3/3 forged-input rejection, both weak proxies disagree with final model reference in 64/68 cases, real Cloud Tasks calls and external effects 0
 
 [Google Cloud Tasks Task REST](https://docs.cloud.google.com/tasks/docs/reference/rest/v2/projects.locations.queues.tasks) documents that deadline cancellation does not ensure worker stops, [Google Cloud Tasks overview](https://docs.cloud.google.com/tasks/docs/dual-overview) documents at-least-once delivery and up-to-24-hour name dedup, [AWS SQS visibility timeout](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html) is a different-product independent-publisher comparison only
 
 One Daily and one bounded window, October Monthly synchronized, latest audit 2026-10-20..25 remains current, CASE/METHOD/NOTES/Special/Audit 0, full Python checker / native Node CLI / live Cloud Tasks / independent sink authority NOT_EXECUTED
 
 Same-date adversarial reference-model correction remains in the original Draft PR, original unmerged head 46dc727f84643ace2b7b7cc2255499244edc622d is preserved as point-in-time evidence, no second Daily or research-window credit
+
+Second same-date reference-model correction also preserves unmerged first-correction head d2b621176ecf44a02a5523bff4637c67d2164a31 as point-in-time evidence, five unsafe RETRY_ALLOWED cases now safe-stop or reconcile, no extra research/window credit

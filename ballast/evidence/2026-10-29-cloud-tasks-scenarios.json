@@ -620,6 +620,49 @@
         "grant.scope.intent": "new-intent",
         "completion.scope.intent": "new-intent"
       }
+    },
+    {
+      "id": "miss_but_current_satisfied",
+      "changes": {
+        "prior.kind": "miss",
+        "receipts": []
+      }
+    },
+    {
+      "id": "miss_current_predicate_incomplete",
+      "changes": {
+        "prior.kind": "miss",
+        "receipts": [],
+        "completion.state": "unsatisfied",
+        "completion.predicateComplete": false
+      }
+    },
+    {
+      "id": "miss_current_guard_drift",
+      "changes": {
+        "prior.kind": "miss",
+        "receipts": [],
+        "completion.state": "unsatisfied",
+        "completion.guardRevision": 8
+      }
+    },
+    {
+      "id": "miss_current_guard_unprotected",
+      "changes": {
+        "prior.kind": "miss",
+        "receipts": [],
+        "completion.state": "unsatisfied",
+        "completion.guardProtected": false
+      }
+    },
+    {
+      "id": "miss_current_read_after_guard",
+      "changes": {
+        "prior.kind": "miss",
+        "receipts": [],
+        "completion.state": "unsatisfied",
+        "completion.readAt": 100
+      }
     }
   ]
 }

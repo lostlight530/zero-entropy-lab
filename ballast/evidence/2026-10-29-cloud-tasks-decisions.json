@@ -943,5 +943,80 @@
     "scenario": "rebound_except_permission",
     "path": "full_reference",
     "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "miss_but_current_satisfied",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_but_current_satisfied",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_but_current_satisfied",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "miss_current_predicate_incomplete",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_current_predicate_incomplete",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_current_predicate_incomplete",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "miss_current_guard_drift",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_current_guard_drift",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_current_guard_drift",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "miss_current_guard_unprotected",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_current_guard_unprotected",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_current_guard_unprotected",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "miss_current_read_after_guard",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_current_read_after_guard",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_current_read_after_guard",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
   }
 ]

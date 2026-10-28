@@ -1,30 +1,36 @@
 {
   "logicalDate": "2026-10-29",
   "execution": "V8_ISOLATE_EXECUTED",
-  "revision": "SAME_DATE_REFERENCE_MODEL_CORRECTION",
-  "original": {
-    "scenarios": 49,
-    "rows": 147,
-    "producerBlob": "91d76898e06a22d16407a40c3508d09f6fe32231",
-    "verifierBlob": "d955f9cac7fb86853c5e5192f951f22f7f2bb177"
-  },
+  "revision": "SAME_DATE_SECOND_REFERENCE_MODEL_CORRECTION",
+  "pointInTime": [
+    {
+      "scenarios": 49,
+      "rows": 147,
+      "commit": "46dc727f84643ace2b7b7cc2255499244edc622d"
+    },
+    {
+      "scenarios": 63,
+      "rows": 189,
+      "commit": "d2b621176ecf44a02a5523bff4637c67d2164a31"
+    }
+  ],
   "summary": {
-    "scenarios": 63,
-    "rows": 189,
+    "scenarios": 68,
+    "rows": 204,
     "hist": {
       "COMPLETE": 5,
-      "STOP_UNKNOWN": 22,
-      "RECONCILE": 28,
+      "STOP_UNKNOWN": 26,
+      "RECONCILE": 29,
       "BLOCKED": 6,
       "EVIDENCE_CONFLICT": 1,
       "RETRY_ALLOWED": 1
     },
     "positive": 5,
-    "negative": 58,
-    "exactProbes": 19,
+    "negative": 63,
+    "exactProbes": 24,
     "disagreements": {
-      "http_proxy": 59,
-      "name_proxy": 59
+      "http_proxy": 64,
+      "name_proxy": 64
     },
     "independence": {
       "implementation": "PARTIAL",
@@ -38,61 +44,25 @@
     "duplicate_scenario": "Error: VERIFIER_REJECT duplicate scenario",
     "unsafe_patch": "Error: VERIFIER_REJECT unsafe patch"
   },
-  "semanticAttacks": [
+  "additionalRetrySafetyProbes": [
     [
-      "task_intent_changed",
-      "STOP_UNKNOWN"
-    ],
-    [
-      "task_name_changed",
-      "STOP_UNKNOWN"
-    ],
-    [
-      "task_target_changed",
-      "STOP_UNKNOWN"
-    ],
-    [
-      "receipt_intent_changed",
+      "miss_but_current_satisfied",
       "RECONCILE"
     ],
     [
-      "receipt_name_changed",
-      "RECONCILE"
-    ],
-    [
-      "receipt_target_changed",
-      "RECONCILE"
-    ],
-    [
-      "grant_scope_intent_changed",
-      "BLOCKED"
-    ],
-    [
-      "completion_scope_intent_changed",
-      "RECONCILE"
-    ],
-    [
-      "fence_scope_run_changed",
+      "miss_current_predicate_incomplete",
       "STOP_UNKNOWN"
     ],
     [
-      "miss_permission_scope_intent_changed",
+      "miss_current_guard_drift",
       "STOP_UNKNOWN"
     ],
     [
-      "rebound_except_grant",
-      "BLOCKED"
-    ],
-    [
-      "rebound_except_completion",
-      "RECONCILE"
-    ],
-    [
-      "rebound_except_fence",
+      "miss_current_guard_unprotected",
       "STOP_UNKNOWN"
     ],
     [
-      "rebound_except_permission",
+      "miss_current_read_after_guard",
       "STOP_UNKNOWN"
     ]
   ],
