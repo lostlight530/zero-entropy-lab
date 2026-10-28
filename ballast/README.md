@@ -759,3 +759,6 @@ V8 isolate producer/verifier EXECUTED PASS_WITH_LIMITS, native Node CLI, complet
 ## Azure Copy Blob post-merge correction — 2026-10-28
 
 [Post-merge adversarial correction](corrections/2026-10-28-azure-copy-postmerge.md) preserves the original 46/138 Daily and supplements it with 56/168 corrected V8 replay, 10/10 formerly unsafe shared-contract cases rejected, zero new research/window/CASE/NOTES credit, Node CLI / full checker / live Azure / independent authority NOT_EXECUTED
+
+
+[PR #737 merge reconciliation](corrections/2026-10-28-azure-copy-merge-reconciliation.md): correction merged after same-day Aegis A2 (#739) at 2026-10-28T06:19:07Z, merge SHA `4a1e33fb3970ad1ab1fe2891910d0169fa2b11f8`; eight ballast-only changes, original source blob SHA preserved, CodeQL and deploy success observed, no independent Node/Python/live Azure replay or additional Daily/window credit.
