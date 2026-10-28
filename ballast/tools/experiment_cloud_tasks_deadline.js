@@ -66,7 +66,7 @@ function patch(o,delta){for(const [path,v] of Object.entries(delta)){let a=path.
 function decide(s){
 const {task:t,dispatch:d,prior:h,receipts:r,grant:g,permission:p,completion:c}=s,q=h.query;
 if(!Array.isArray(r)||!Array.isArray(t.required)||!Array.isArray(c.members)||![t.attempt,d.deadline,d.retryAt,d.oldFence.tick,c.readAt,c.guardAt,c.commitAt,c.revision,c.observedRevision,c.guardRevision,p.guardAt,g.from,g.to].every(S))return "STOP_UNKNOWN";
-const scope=q.complete===true&&q.lifecycle==="ACTIVE"&&q.task===t.id&&q.run===t.run&&q.queue===t.queue&&q.name===t.name&&q.target===t.target&&q.intent===t.intent&&q.inc===t.inc&&q.targetUid===t.targetUid&&E(q.required,ids(t.required))&&E(q.attempts,[1,2])&&[q.watermark,q.queryAt,q.retentionUntil].every(S)&&q.watermark>=d.retryAt&&q.queryAt>=q.watermark&&q.retentionUntil>=q.queryAt;
+const scope=q.complete===true&&q.lifecycle==="ACTIVE"&&q.task===t.id&&q.run===t.run&&q.queue===t.queue&&q.name===t.name&&q.target===t.target&&q.intent===t.intent&&q.inc===t.inc&&q.targetUid===t.targetUid&&E(q.required,ids(t.required))&&E(q.attempts,[1,2])&&[q.watermark,q.queryAt,q.retentionUntil].every(S)&&q.watermark>=d.retryAt&&q.queryAt>=q.watermark&&q.retentionUntil>=q.queryAt&&q.queryAt<c.guardAt&&t.attempt===2;
 if(h.kind==="miss"&&scope&&r.length>0)return "EVIDENCE_CONFLICT";
 if(!scope||!["hit","miss"].includes(h.kind))return "STOP_UNKNOWN";
 const f=d.oldFence.scope;if(!f||f.task!==t.id||f.run!==t.run||f.queue!==t.queue||f.name!==t.name||f.inc!==t.inc||f.targetUid!==t.targetUid||f.attempt!==1)return "STOP_UNKNOWN";
@@ -80,6 +80,10 @@ if(!unique(wanted)||!unique(got)||!unique(present)||!E(got,wanted))return "RECON
 for(const x of r){if(!S(x.effectAt)||!S(x.attempt)||x.task!==t.id||x.run!==t.run||x.name!==t.name||x.target!==t.target||x.intent!==t.intent||x.attempt!==t.attempt||x.inc!==t.inc||x.targetUid!==t.targetUid||x.grant!==g.id||x.effectAt<=d.retryAt||x.effectAt>q.watermark||x.effectAt>=c.commitAt)return "RECONCILE";if(x.effectAt<g.from||x.effectAt>g.to||(g.revokedAt!==null&&(!S(g.revokedAt)||g.revokedAt<=x.effectAt)))return "BLOCKED"}
 if(c.targetUid!==t.targetUid||!E(present,wanted)||c.state!=="satisfied"||c.predicateComplete!==true||c.guardProtected!==true||c.revision!==c.observedRevision||c.revision!==c.guardRevision||!(c.readAt<c.guardAt&&c.guardAt<c.commitAt)||c.guardAt<Math.max(...r.map(x=>x.effectAt)))return "RECONCILE";
 return "COMPLETE"}
+// Review-only same-date proof-boundary attacks, retained in the same Daily
+changes.push(["prior_query_at_guard",{"prior.query.queryAt":99}]);
+changes.push(["prior_query_after_commit",{"prior.query.queryAt":101}]);
+changes.push(["attempt3_uncovered",{"task.attempt":3,"receipts.0.attempt":3,"receipts.1.attempt":3}]);
 const pack={schema:"ballast.cloud-tasks-deadline-fixtures/1",logicalDate:"2026-10-29",base,cases:changes.map(([id,changes])=>({id,changes}))};
 const rows=[];for(const {id,changes:delta} of pack.cases){const s=patch(C(base),delta);rows.push({scenario:id,path:"http_proxy",decision:s.dispatch.lastHttp>=200&&s.dispatch.lastHttp<300?"COMPLETE":"STOP_UNKNOWN"},{scenario:id,path:"name_proxy",decision:s.dispatch.nameDedupRejected&&s.dispatch.nameAgeHours<=24?"COMPLETE":"STOP_UNKNOWN"},{scenario:id,path:"full_reference",decision:decide(s)})}
 return {pack,rows}

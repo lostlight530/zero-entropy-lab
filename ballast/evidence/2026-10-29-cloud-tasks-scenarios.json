@@ -663,6 +663,26 @@
         "completion.state": "unsatisfied",
         "completion.readAt": 100
       }
+    },
+    {
+      "id": "prior_query_at_guard",
+      "changes": {
+        "prior.query.queryAt": 99
+      }
+    },
+    {
+      "id": "prior_query_after_commit",
+      "changes": {
+        "prior.query.queryAt": 101
+      }
+    },
+    {
+      "id": "attempt3_uncovered",
+      "changes": {
+        "task.attempt": 3,
+        "receipts.0.attempt": 3,
+        "receipts.1.attempt": 3
+      }
     }
   ]
 }

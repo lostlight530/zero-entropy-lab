@@ -1,7 +1,7 @@
 {
   "logicalDate": "2026-10-29",
   "execution": "V8_ISOLATE_EXECUTED",
-  "revision": "SAME_DATE_SECOND_REFERENCE_MODEL_CORRECTION",
+  "revision": "SAME_DATE_INDEPENDENT_MAINTAINER_TEMPORAL_AND_ATTEMPT_SCOPE_CORRECTION",
   "pointInTime": [
     {
       "scenarios": 49,
@@ -12,25 +12,32 @@
       "scenarios": 63,
       "rows": 189,
       "commit": "d2b621176ecf44a02a5523bff4637c67d2164a31"
+    },
+    {
+      "scenarios": 68,
+      "rows": 204,
+      "commit": "159050d80783bcd05f0254ef71a1e971a18f710e",
+      "execution": "EXECUTED_V8_ISOLATE",
+      "verifier": "PASS_WITH_LIMITS"
     }
   ],
   "summary": {
-    "scenarios": 68,
-    "rows": 204,
+    "scenarios": 71,
+    "rows": 213,
     "hist": {
       "COMPLETE": 5,
-      "STOP_UNKNOWN": 26,
-      "RECONCILE": 29,
+      "STOP_UNKNOWN": 30,
+      "RECONCILE": 28,
       "BLOCKED": 6,
       "EVIDENCE_CONFLICT": 1,
       "RETRY_ALLOWED": 1
     },
     "positive": 5,
-    "negative": 63,
-    "exactProbes": 24,
+    "negative": 66,
+    "exactProbes": 27,
     "disagreements": {
-      "http_proxy": 64,
-      "name_proxy": 64
+      "http_proxy": 67,
+      "name_proxy": 67
     },
     "independence": {
       "implementation": "PARTIAL",
@@ -70,5 +77,49 @@
   "realExternalEffects": 0,
   "checker": "NOT_EXECUTED",
   "nodeCli": "NOT_EXECUTED",
-  "verifierAuthority": "NONE"
+  "verifierAuthority": "NONE",
+  "additionalIndependentReview": {
+    "actualExecutionUTC": "2026-10-28T23:09:34.663Z",
+    "reviewedOldHeadSha": "159050d80783bcd05f0254ef71a1e971a18f710e",
+    "oldReferenceUnsafeCases": [
+      "prior_query_at_guard",
+      "prior_query_after_commit",
+      "attempt3_uncovered"
+    ],
+    "newControlResults": [
+      {
+        "id": "prior_query_at_guard",
+        "decision": "STOP_UNKNOWN"
+      },
+      {
+        "id": "prior_query_after_commit",
+        "decision": "STOP_UNKNOWN"
+      },
+      {
+        "id": "attempt3_uncovered",
+        "decision": "STOP_UNKNOWN"
+      }
+    ],
+    "existingControlChanges": [
+      {
+        "id": "current_guard_before_effect",
+        "old": "RECONCILE",
+        "now": "STOP_UNKNOWN"
+      }
+    ],
+    "oldSourceAndEvidenceReplay": "EXACT_68_204",
+    "correctedProducerVerifierReplay": "EXECUTED_V8_ISOLATE_71_213",
+    "correctedVerifierReconstruction": "213/213",
+    "realCloudTaskEffects": 0,
+    "confidence": "SYNTHETIC_MODEL_ONLY",
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    },
+    "checker": "NOT_EXECUTED",
+    "nativeNodeCLI": "NOT_EXECUTED"
+  },
+  "additionalTimelineRisk": "Prior queryAt must precede protected current completion guardAt; scoped attempt-2 model rejects any attempt 3 without evidence and fences for attempt 2"
 }

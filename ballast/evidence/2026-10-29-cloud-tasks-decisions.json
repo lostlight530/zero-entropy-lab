@@ -567,7 +567,7 @@
   {
     "scenario": "current_guard_before_effect",
     "path": "full_reference",
-    "decision": "RECONCILE"
+    "decision": "STOP_UNKNOWN"
   },
   {
     "scenario": "fractional_effect_time",
@@ -1016,6 +1016,51 @@
   },
   {
     "scenario": "miss_current_read_after_guard",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "prior_query_at_guard",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_query_at_guard",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_query_at_guard",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "prior_query_after_commit",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_query_after_commit",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "prior_query_after_commit",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "attempt3_uncovered",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "attempt3_uncovered",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "attempt3_uncovered",
     "path": "full_reference",
     "decision": "STOP_UNKNOWN"
   }
