@@ -57,7 +57,7 @@
   },
   "sourcePublishers": {
     "microsoft": "https://learn.microsoft.com/en-us/rest/api/storageservices/copy-blob",
-    "google": "https://docs.cloud.google.com/storage/docs/json_api/v1/objects/rewrite"
+    "google": "https://cloud.google.com/storage/docs/copying-renaming-moving-objects"
   },
   "limits": [
     "All copy status, receipt, grant, prior MISS, authority and current completion facts are authored synthetic primitives",
