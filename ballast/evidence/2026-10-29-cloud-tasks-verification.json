@@ -1,0 +1,125 @@
+{
+  "logicalDate": "2026-10-29",
+  "execution": "V8_ISOLATE_EXECUTED",
+  "revision": "SAME_DATE_INDEPENDENT_MAINTAINER_TEMPORAL_AND_ATTEMPT_SCOPE_CORRECTION",
+  "pointInTime": [
+    {
+      "scenarios": 49,
+      "rows": 147,
+      "commit": "46dc727f84643ace2b7b7cc2255499244edc622d"
+    },
+    {
+      "scenarios": 63,
+      "rows": 189,
+      "commit": "d2b621176ecf44a02a5523bff4637c67d2164a31"
+    },
+    {
+      "scenarios": 68,
+      "rows": 204,
+      "commit": "159050d80783bcd05f0254ef71a1e971a18f710e",
+      "execution": "EXECUTED_V8_ISOLATE",
+      "verifier": "PASS_WITH_LIMITS"
+    }
+  ],
+  "summary": {
+    "scenarios": 71,
+    "rows": 213,
+    "hist": {
+      "COMPLETE": 5,
+      "STOP_UNKNOWN": 30,
+      "RECONCILE": 28,
+      "BLOCKED": 6,
+      "EVIDENCE_CONFLICT": 1,
+      "RETRY_ALLOWED": 1
+    },
+    "positive": 5,
+    "negative": 66,
+    "exactProbes": 27,
+    "disagreements": {
+      "http_proxy": 67,
+      "name_proxy": 67
+    },
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    }
+  },
+  "attacks": {
+    "forged_row": "Error: VERIFIER_REJECT row baseline/full_reference",
+    "duplicate_scenario": "Error: VERIFIER_REJECT duplicate scenario",
+    "unsafe_patch": "Error: VERIFIER_REJECT unsafe patch"
+  },
+  "additionalRetrySafetyProbes": [
+    [
+      "miss_but_current_satisfied",
+      "RECONCILE"
+    ],
+    [
+      "miss_current_predicate_incomplete",
+      "STOP_UNKNOWN"
+    ],
+    [
+      "miss_current_guard_drift",
+      "STOP_UNKNOWN"
+    ],
+    [
+      "miss_current_guard_unprotected",
+      "STOP_UNKNOWN"
+    ],
+    [
+      "miss_current_read_after_guard",
+      "STOP_UNKNOWN"
+    ]
+  ],
+  "realCloudTasksRequests": 0,
+  "realExternalEffects": 0,
+  "checker": "NOT_EXECUTED",
+  "nodeCli": "NOT_EXECUTED",
+  "verifierAuthority": "NONE",
+  "additionalIndependentReview": {
+    "actualExecutionUTC": "2026-10-28T23:09:34.663Z",
+    "reviewedOldHeadSha": "159050d80783bcd05f0254ef71a1e971a18f710e",
+    "oldReferenceUnsafeCases": [
+      "prior_query_at_guard",
+      "prior_query_after_commit",
+      "attempt3_uncovered"
+    ],
+    "newControlResults": [
+      {
+        "id": "prior_query_at_guard",
+        "decision": "STOP_UNKNOWN"
+      },
+      {
+        "id": "prior_query_after_commit",
+        "decision": "STOP_UNKNOWN"
+      },
+      {
+        "id": "attempt3_uncovered",
+        "decision": "STOP_UNKNOWN"
+      }
+    ],
+    "existingControlChanges": [
+      {
+        "id": "current_guard_before_effect",
+        "old": "RECONCILE",
+        "now": "STOP_UNKNOWN"
+      }
+    ],
+    "oldSourceAndEvidenceReplay": "EXACT_68_204",
+    "correctedProducerVerifierReplay": "EXECUTED_V8_ISOLATE_71_213",
+    "correctedVerifierReconstruction": "213/213",
+    "realCloudTaskEffects": 0,
+    "confidence": "SYNTHETIC_MODEL_ONLY",
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    },
+    "checker": "NOT_EXECUTED",
+    "nativeNodeCLI": "NOT_EXECUTED"
+  },
+  "additionalTimelineRisk": "Prior queryAt must precede protected current completion guardAt; scoped attempt-2 model rejects any attempt 3 without evidence and fences for attempt 2"
+}
