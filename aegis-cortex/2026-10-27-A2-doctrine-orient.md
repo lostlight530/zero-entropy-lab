@@ -67,3 +67,9 @@
 - Proposed write scope: this missing 2026-10-27 A2 file only.
 - Original A2 execution, advisory source-time reads, exploitation replay and full Aegis checker: NOT_EXECUTED / NOT_OBSERVED.
 - The existing 10-28 canonical gap register and all previous records remain as historical truth.
+
+## CHECKER_CONTRACT_RECONCILIATION — 2026-10-28
+- Local Applicability: UNKNOWN / NO_LOCAL_EVIDENCE
+- Remaining Uncertainty: ORIGINAL_2026_10_27_A1_A2_RUN_RECEIPTS_AND_SOURCE_TIME_ACCESS_UNKNOWN
+- Historical transport state: UNRESOLVED_DELIVERY_HISTORY / no original 2026-10-27 PR or runner receipt independently recovered
+- The current retrospective file can be reviewed for path/contract validity; it is not original execution, a local incident, or a conformance pass.
