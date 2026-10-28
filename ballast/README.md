@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-27 SQS FIFO DeleteMessage stale receipt-handle and downstream effect proof](records/2026-10-27.md)
+- 最新 Daily: [2026-10-28 Azure Copy Blob asynchronous copy and downstream effect integrity](records/2026-10-28.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-20 至 2026-10-25](audits/2026-10-20--2026-10-25.md)
@@ -732,7 +732,7 @@ V8 producer/verifier and persisted-source replay EXECUTED PASS_WITH_LIMITS, full
 
 One NATIVE [SQS FIFO stale-handle Daily](records/2026-10-27.md) tests HTTP 200 DeleteMessage, five-minute dedup token, exact delivery epoch, authorized downstream A+B effects, prior authoritative MISS and protected current membership
 
-Executed V8-isolate [producer](tools/experiment_sqs_delete_ack.js), separately implemented [primitive verifier](tools/verify_sqs_delete_ack.js), [scenario evidence](evidence/2026-10-27-sqs-delete-scenarios.json), [decision CSV](evidence/2026-10-27-sqs-delete-decisions.csv) and [verification receipt](evidence/2026-10-27-sqs-delete-verification.json): 65 synthetic scenarios, 195 decisions, 60/60 negative controls, 33/33 exact probes, baseline + 54 lossless deltas and forged CSV/duplicate ID rejection, real AWS and external effects 0
+Executed V8-isolate [producer](tools/experiment_sqs_delete_ack.js), separately implemented [primitive verifier](tools/verify_sqs_delete_ack.js), [scenario evidence](evidence/2026-10-27-sqs-delete-scenarios.json), [decision CSV](evidence/2026-10-27-sqs-delete-decisions.csv) and [verification receipt](evidence/2026-10-27-sqs-delete-verification.json): 65 synthetic scenarios, 195 decisions, 60/60 negative controls, 33/33 exact probes, baseline + 64 lossless deltas and forged CSV/duplicate ID rejection, real AWS and external effects 0
 
 [AWS DeleteMessage](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_DeleteMessage.html) explicitly warns old handle can return success without deleting, [AWS FIFO dedup](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/using-messagededuplicationid-property.html) defines five-minute window, [Google Pub/Sub exactly-once](https://docs.cloud.google.com/pubsub/docs/exactly-once-delivery) is different-product comparison only
 
@@ -741,3 +741,17 @@ October Monthly index updated with zero derived research credit, latest audit 20
 V8 model producer/verifier EXECUTED PASS_WITH_LIMITS, standalone Node CLI, full Python checker, live AWS SQS, real external sink and independent semantic authority NOT_EXECUTED
 
 Same-date adversarial reference-model correction: original unmerged 46/138 head `babf17181ed652017ac0550fb0aac337055ec497` admitted 9/9 implicit numeric-string coercion unsafe COMPLETE or RETRY_ALLOWED results; corrected same Daily/PR to 55/165 with 9/9 type-safety probes rejected, no second window or credit, persisted-source V8 replay only
+
+## Ballast current-state advance — 2026-10-28
+
+One NATIVE [Azure Copy Blob Daily](records/2026-10-28.md) tests HTTP 202 asynchronous acceptance, `x-ms-copy-status`, exact source/destination/copyId/incarnation, authorized downstream A+B effects, prior authoritative MISS and protected current completion
+
+Executed V8 [producer](tools/experiment_azure_copy_integrity.js), separately coded [verifier](tools/verify_azure_copy_integrity.js), [compact primitive pack](evidence/2026-10-28-azure-copy-scenarios.json), [decision CSV](evidence/2026-10-28-azure-copy-decisions.csv) and [verification receipt](evidence/2026-10-28-azure-copy-verification.json): 46 authored scenarios, 138 decisions, 44/44 negatives, 46/46 exact probes, 138/138 reconstruction, 44/46 and 38/46 weak proxy disagreements, real Azure calls and external effects 0
+
+[Microsoft Copy Blob REST](https://learn.microsoft.com/en-us/rest/api/storageservices/copy-blob) distinguishes pending copy from completion, [Abort Copy Blob](https://learn.microsoft.com/en-us/rest/api/storageservices/abort-copy-blob) preserves zero-length metadata, [Google Cloud Storage rewrite](https://docs.cloud.google.com/storage/docs/json_api/v1/objects/rewrite) is independent-publisher but different-product comparison only
+
+Source/destination/incarnation binding omissions exposed by three same-window semantic attacks were repaired before evidence delivery, verifier remains implementation PARTIAL / data-source NONE / semantic-contract SHARED / authority NONE
+
+October Monthly synchronized, latest audit 2026-10-20..25 remains current, 2026-10-26..28 not due, CASE/METHOD/NOTES/Special/Audit 0, one Daily and one bounded research window
+
+V8 isolate producer/verifier EXECUTED PASS_WITH_LIMITS, native Node CLI, complete Python checker, live Azure/external sink and independent semantic authority NOT_EXECUTED
