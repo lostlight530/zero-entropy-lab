@@ -755,3 +755,7 @@ Source/destination/incarnation binding omissions exposed by three same-window se
 October Monthly synchronized, latest audit 2026-10-20..25 remains current, 2026-10-26..28 not due, CASE/METHOD/NOTES/Special/Audit 0, one Daily and one bounded research window
 
 V8 isolate producer/verifier EXECUTED PASS_WITH_LIMITS, native Node CLI, complete Python checker, live Azure/external sink and independent semantic authority NOT_EXECUTED
+
+## Azure Copy Blob post-merge correction — 2026-10-28
+
+[Post-merge adversarial correction](corrections/2026-10-28-azure-copy-postmerge.md) preserves the original 46/138 Daily and supplements it with 56/168 corrected V8 replay, 10/10 formerly unsafe shared-contract cases rejected, zero new research/window/CASE/NOTES credit, Node CLI / full checker / live Azure / independent authority NOT_EXECUTED

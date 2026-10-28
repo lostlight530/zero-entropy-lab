@@ -1,0 +1,139 @@
+{
+  "schema": "ballast.azure-copy.postmerge-correction/1",
+  "researchLogicalDate": "2026-10-28",
+  "correctionUTC": "2026-10-28T05:30:16.082Z",
+  "reviewBaseMainSha": "6ee64d5fdc3cba60f1741c320c9f3eb8c5a0c881",
+  "originalMergedPr": "https://github.com/lostlight530/zero-entropy-lab/pull/736",
+  "originalReviewedHead": "4799bd0ff603e495dbfd7a11e936a11052e9c076",
+  "originalMergeCommit": "49d12847a96fcb5767a222fe3b9ebbbbbb07ce62",
+  "original": {
+    "producerBlobSha": "5576820f3b45af7b8932ba7c1af401be99d19e88",
+    "verifierBlobSha": "008ba6f0b8e725dd396b84d65dcb639b20963c6f",
+    "scenarios": 46,
+    "decisions": 138,
+    "artifactMatch": "EXACT",
+    "originalLabelsPreserved": true
+  },
+  "corrected": {
+    "scenarios": 56,
+    "decisionRows": 168,
+    "referenceHistogram": {
+      "COMPLETE": 2,
+      "STOP_UNKNOWN": 22,
+      "RECONCILE": 29,
+      "EVIDENCE_CONFLICT": 1,
+      "RETRY_ALLOWED": 1,
+      "BLOCKED": 1
+    },
+    "negativeControls": 54,
+    "exactProbes": 56,
+    "allRowsReconstructed": 168,
+    "weakDisagreements": {
+      "http_proxy": 54,
+      "copy_status_proxy": 46
+    }
+  },
+  "adversarialReplay": [
+    {
+      "scenario": "prior_query_after_read",
+      "oldDecision": "COMPLETE",
+      "oldVerifier": "COMPLETE",
+      "correctedDecision": "STOP_UNKNOWN",
+      "correctedVerifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "prior_query_after_guard",
+      "oldDecision": "COMPLETE",
+      "oldVerifier": "COMPLETE",
+      "correctedDecision": "STOP_UNKNOWN",
+      "correctedVerifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "prior_query_after_commit",
+      "oldDecision": "COMPLETE",
+      "oldVerifier": "COMPLETE",
+      "correctedDecision": "STOP_UNKNOWN",
+      "correctedVerifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "source_changed_unknown",
+      "oldDecision": "COMPLETE",
+      "oldVerifier": "COMPLETE",
+      "correctedDecision": "RECONCILE",
+      "correctedVerifier": "RECONCILE"
+    },
+    {
+      "scenario": "source_changed_string",
+      "oldDecision": "COMPLETE",
+      "oldVerifier": "COMPLETE",
+      "correctedDecision": "RECONCILE",
+      "correctedVerifier": "RECONCILE"
+    },
+    {
+      "scenario": "copy_authority_failed",
+      "oldDecision": "COMPLETE",
+      "oldVerifier": "COMPLETE",
+      "correctedDecision": "STOP_UNKNOWN",
+      "correctedVerifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "copy_authority_unknown",
+      "oldDecision": "COMPLETE",
+      "oldVerifier": "COMPLETE",
+      "correctedDecision": "STOP_UNKNOWN",
+      "correctedVerifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "copy_authority_null",
+      "oldDecision": "COMPLETE",
+      "oldVerifier": "COMPLETE",
+      "correctedDecision": "STOP_UNKNOWN",
+      "correctedVerifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "retry_prior_after_read",
+      "oldDecision": "RETRY_ALLOWED",
+      "oldVerifier": "RETRY_ALLOWED",
+      "correctedDecision": "STOP_UNKNOWN",
+      "correctedVerifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "retry_prior_after_commit",
+      "oldDecision": "RETRY_ALLOWED",
+      "oldVerifier": "RETRY_ALLOWED",
+      "correctedDecision": "STOP_UNKNOWN",
+      "correctedVerifier": "STOP_UNKNOWN"
+    }
+  ],
+  "independence": {
+    "implementation": "PARTIAL",
+    "dataSource": "NONE",
+    "semanticContract": "SHARED",
+    "authority": "NONE"
+  },
+  "execution": {
+    "oldAndNewSources": "EXECUTED_V8_ISOLATE",
+    "primitiveVerifier": "EXECUTED_V8_ISOLATE",
+    "mutationReplay": "10/10",
+    "oldArtifactsChecked": "EXACT",
+    "nativeNodeCLI": "NOT_EXECUTED",
+    "fullPythonChecker": "NOT_EXECUTED",
+    "realAzureStorage": "NOT_EXECUTED",
+    "realEffectSink": "NOT_EXECUTED",
+    "independentAuthority": "NOT_EXECUTED"
+  },
+  "credit": {
+    "daily": 0,
+    "window": 0,
+    "case": 0,
+    "notes": 0,
+    "special": 0,
+    "audit": 0
+  },
+  "limits": [
+    "Old merged files are preserved without alteration",
+    "Only shared-contract synthetic facts and V8 execution were used",
+    "No real cloud/effect authority proof, no semantic-independent verifier",
+    "Full checker not executed in this correction run"
+  ]
+}
