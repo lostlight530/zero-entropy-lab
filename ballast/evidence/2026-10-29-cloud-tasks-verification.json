@@ -1,23 +1,30 @@
 {
   "logicalDate": "2026-10-29",
   "execution": "V8_ISOLATE_EXECUTED",
-  "summary": {
+  "revision": "SAME_DATE_REFERENCE_MODEL_CORRECTION",
+  "original": {
     "scenarios": 49,
     "rows": 147,
+    "producerBlob": "91d76898e06a22d16407a40c3508d09f6fe32231",
+    "verifierBlob": "d955f9cac7fb86853c5e5192f951f22f7f2bb177"
+  },
+  "summary": {
+    "scenarios": 63,
+    "rows": 189,
     "hist": {
       "COMPLETE": 5,
-      "STOP_UNKNOWN": 15,
-      "RECONCILE": 23,
-      "BLOCKED": 4,
+      "STOP_UNKNOWN": 22,
+      "RECONCILE": 28,
+      "BLOCKED": 6,
       "EVIDENCE_CONFLICT": 1,
       "RETRY_ALLOWED": 1
     },
     "positive": 5,
-    "negative": 44,
-    "exactProbes": 5,
+    "negative": 58,
+    "exactProbes": 19,
     "disagreements": {
-      "http_proxy": 45,
-      "name_proxy": 45
+      "http_proxy": 59,
+      "name_proxy": 59
     },
     "independence": {
       "implementation": "PARTIAL",
@@ -31,12 +38,67 @@
     "duplicate_scenario": "Error: VERIFIER_REJECT duplicate scenario",
     "unsafe_patch": "Error: VERIFIER_REJECT unsafe patch"
   },
-  "producer": "ballast/tools/experiment_cloud_tasks_deadline.js",
-  "verifier": "ballast/tools/verify_cloud_tasks_deadline.js",
+  "semanticAttacks": [
+    [
+      "task_intent_changed",
+      "STOP_UNKNOWN"
+    ],
+    [
+      "task_name_changed",
+      "STOP_UNKNOWN"
+    ],
+    [
+      "task_target_changed",
+      "STOP_UNKNOWN"
+    ],
+    [
+      "receipt_intent_changed",
+      "RECONCILE"
+    ],
+    [
+      "receipt_name_changed",
+      "RECONCILE"
+    ],
+    [
+      "receipt_target_changed",
+      "RECONCILE"
+    ],
+    [
+      "grant_scope_intent_changed",
+      "BLOCKED"
+    ],
+    [
+      "completion_scope_intent_changed",
+      "RECONCILE"
+    ],
+    [
+      "fence_scope_run_changed",
+      "STOP_UNKNOWN"
+    ],
+    [
+      "miss_permission_scope_intent_changed",
+      "STOP_UNKNOWN"
+    ],
+    [
+      "rebound_except_grant",
+      "BLOCKED"
+    ],
+    [
+      "rebound_except_completion",
+      "RECONCILE"
+    ],
+    [
+      "rebound_except_fence",
+      "STOP_UNKNOWN"
+    ],
+    [
+      "rebound_except_permission",
+      "STOP_UNKNOWN"
+    ]
+  ],
   "realCloudTasksRequests": 0,
   "realExternalEffects": 0,
   "checker": "NOT_EXECUTED",
   "nodeCli": "NOT_EXECUTED",
-  "sourceAuthority": "GOOGLE_DOCUMENTATION",
   "verifierAuthority": "NONE"
 }

@@ -35,7 +35,16 @@
       "nameAgeHours": 4,
       "oldFence": {
         "protected": true,
-        "tick": 55
+        "tick": 55,
+        "scope": {
+          "task": "task29",
+          "run": "run29",
+          "queue": "queue29",
+          "name": "task-name29",
+          "inc": "task-inc29",
+          "targetUid": "uid29",
+          "attempt": 1
+        }
       }
     },
     "prior": {
@@ -44,6 +53,9 @@
         "task": "task29",
         "run": "run29",
         "queue": "queue29",
+        "name": "task-name29",
+        "target": "target29",
+        "intent": "publish29",
         "inc": "task-inc29",
         "targetUid": "uid29",
         "required": [
@@ -67,6 +79,9 @@
         "uid": "a1",
         "task": "task29",
         "run": "run29",
+        "name": "task-name29",
+        "target": "target29",
+        "intent": "publish29",
         "attempt": 2,
         "inc": "task-inc29",
         "targetUid": "uid29",
@@ -78,6 +93,9 @@
         "uid": "b1",
         "task": "task29",
         "run": "run29",
+        "name": "task-name29",
+        "target": "target29",
+        "intent": "publish29",
         "attempt": 2,
         "inc": "task-inc29",
         "targetUid": "uid29",
@@ -89,14 +107,52 @@
       "id": "grant29",
       "from": 40,
       "to": 90,
-      "revokedAt": null
+      "revokedAt": null,
+      "scope": {
+        "task": "task29",
+        "run": "run29",
+        "queue": "queue29",
+        "name": "task-name29",
+        "target": "target29",
+        "targetUid": "uid29",
+        "inc": "task-inc29",
+        "intent": "publish29",
+        "required": [
+          "A:a1",
+          "B:b1"
+        ]
+      }
     },
     "permission": {
       "valid": true,
       "protected": true,
-      "guardAt": 98
+      "guardAt": 98,
+      "scope": {
+        "task": "task29",
+        "run": "run29",
+        "inc": "task-inc29",
+        "intent": "publish29",
+        "targetUid": "uid29",
+        "required": [
+          "A:a1",
+          "B:b1"
+        ]
+      }
     },
     "completion": {
+      "scope": {
+        "task": "task29",
+        "run": "run29",
+        "name": "task-name29",
+        "inc": "task-inc29",
+        "intent": "publish29",
+        "target": "target29",
+        "targetUid": "uid29",
+        "required": [
+          "A:a1",
+          "B:b1"
+        ]
+      },
       "targetUid": "uid29",
       "members": [
         {
@@ -165,6 +221,9 @@
           "uid": "c1",
           "task": "task29",
           "run": "run29",
+          "name": "task-name29",
+          "target": "target29",
+          "intent": "publish29",
           "attempt": 2,
           "inc": "task-inc29",
           "targetUid": "uid29",
@@ -452,6 +511,114 @@
       "id": "unprotected_completion_read",
       "changes": {
         "completion.observedRevision": 8
+      }
+    },
+    {
+      "id": "task_intent_changed",
+      "changes": {
+        "task.intent": "other-intent"
+      }
+    },
+    {
+      "id": "task_name_changed",
+      "changes": {
+        "task.name": "other-name"
+      }
+    },
+    {
+      "id": "task_target_changed",
+      "changes": {
+        "task.target": "other-target"
+      }
+    },
+    {
+      "id": "receipt_intent_changed",
+      "changes": {
+        "receipts.0.intent": "other-intent"
+      }
+    },
+    {
+      "id": "receipt_name_changed",
+      "changes": {
+        "receipts.0.name": "other-name"
+      }
+    },
+    {
+      "id": "receipt_target_changed",
+      "changes": {
+        "receipts.0.target": "other-target"
+      }
+    },
+    {
+      "id": "grant_scope_intent_changed",
+      "changes": {
+        "grant.scope.intent": "other-intent"
+      }
+    },
+    {
+      "id": "completion_scope_intent_changed",
+      "changes": {
+        "completion.scope.intent": "other-intent"
+      }
+    },
+    {
+      "id": "fence_scope_run_changed",
+      "changes": {
+        "dispatch.oldFence.scope.run": "other-run"
+      }
+    },
+    {
+      "id": "miss_permission_scope_intent_changed",
+      "changes": {
+        "prior.kind": "miss",
+        "receipts": [],
+        "completion.state": "unsatisfied",
+        "permission.scope.intent": "other-intent"
+      }
+    },
+    {
+      "id": "rebound_except_grant",
+      "changes": {
+        "task.intent": "new-intent",
+        "prior.query.intent": "new-intent",
+        "receipts.0.intent": "new-intent",
+        "receipts.1.intent": "new-intent",
+        "completion.scope.intent": "new-intent",
+        "permission.scope.intent": "new-intent"
+      }
+    },
+    {
+      "id": "rebound_except_completion",
+      "changes": {
+        "task.intent": "new-intent",
+        "prior.query.intent": "new-intent",
+        "receipts.0.intent": "new-intent",
+        "receipts.1.intent": "new-intent",
+        "grant.scope.intent": "new-intent",
+        "permission.scope.intent": "new-intent"
+      }
+    },
+    {
+      "id": "rebound_except_fence",
+      "changes": {
+        "task.name": "new-name",
+        "prior.query.name": "new-name",
+        "receipts.0.name": "new-name",
+        "receipts.1.name": "new-name",
+        "grant.scope.name": "new-name",
+        "completion.scope.name": "new-name"
+      }
+    },
+    {
+      "id": "rebound_except_permission",
+      "changes": {
+        "prior.kind": "miss",
+        "receipts": [],
+        "completion.state": "unsatisfied",
+        "task.intent": "new-intent",
+        "prior.query.intent": "new-intent",
+        "grant.scope.intent": "new-intent",
+        "completion.scope.intent": "new-intent"
       }
     }
   ]

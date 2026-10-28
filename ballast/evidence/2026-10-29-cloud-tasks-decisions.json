@@ -733,5 +733,215 @@
     "scenario": "unprotected_completion_read",
     "path": "full_reference",
     "decision": "RECONCILE"
+  },
+  {
+    "scenario": "task_intent_changed",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "task_intent_changed",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "task_intent_changed",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "task_name_changed",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "task_name_changed",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "task_name_changed",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "task_target_changed",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "task_target_changed",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "task_target_changed",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "receipt_intent_changed",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_intent_changed",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_intent_changed",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "receipt_name_changed",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_name_changed",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_name_changed",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "receipt_target_changed",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_target_changed",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_target_changed",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "grant_scope_intent_changed",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "grant_scope_intent_changed",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "grant_scope_intent_changed",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "scenario": "completion_scope_intent_changed",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "completion_scope_intent_changed",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "completion_scope_intent_changed",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "fence_scope_run_changed",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "fence_scope_run_changed",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "fence_scope_run_changed",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "miss_permission_scope_intent_changed",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_permission_scope_intent_changed",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "miss_permission_scope_intent_changed",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "rebound_except_grant",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "rebound_except_grant",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "rebound_except_grant",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "scenario": "rebound_except_completion",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "rebound_except_completion",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "rebound_except_completion",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "rebound_except_fence",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "rebound_except_fence",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "rebound_except_fence",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "rebound_except_permission",
+    "path": "http_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "rebound_except_permission",
+    "path": "name_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "rebound_except_permission",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
   }
 ]
