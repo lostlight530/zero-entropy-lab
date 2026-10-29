@@ -1,0 +1,28 @@
+{
+  "scenarios": 32,
+  "rows": 96,
+  "reference": {
+    "COMPLETE": 2,
+    "RECONCILE": 18,
+    "BLOCKED": 2,
+    "STOP_UNKNOWN": 8,
+    "EVIDENCE_CONFLICT": 1,
+    "RETRY_ALLOWED": 1
+  },
+  "ackDisagreements": 30,
+  "messageDisagreements": 30,
+  "verifierAgreements": 32,
+  "duplicateScenarioIds": false,
+  "wrongRowCount": false,
+  "unsafeReferenceCompletes": [],
+  "tamperRejected": true,
+  "implementationIndependence": "PARTIAL",
+  "dataSourceIndependence": "NONE",
+  "semanticContractIndependence": "SHARED",
+  "authorityIndependence": "NONE",
+  "execution": "V8_ISOLATE_EXECUTED",
+  "nativeNodeCLI": "NOT_EXECUTED",
+  "fullPythonChecker": "NOT_EXECUTED",
+  "livePubSub": "NOT_EXECUTED",
+  "externalSink": "NOT_EXECUTED"
+}

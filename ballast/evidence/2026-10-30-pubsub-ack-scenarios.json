@@ -1,0 +1,2582 @@
+[
+  {
+    "id": "baseline",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "ack_failed",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "FAILED",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "ack_stale_id",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack1",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "ack_region_drift",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "europe-west1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "ack_out_of_order",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 5,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "ack_deadline_expired",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 51,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "receipt_missing_B",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "receipt_duplicate_A",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "receipt_equal_count_A_C",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "C",
+          "effect": "C1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "receipt_extra_C",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "C",
+          "effect": "C1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "receipt_wrong_message",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "other-msg",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "receipt_wrong_target",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "other-uid",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "receipt_auth_expired",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 24
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "receipt_auth_not_yet",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 26,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "query_unknown",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "UNKNOWN",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "query_miss_conflict",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "MISS",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "query_uncovered",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": false,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "query_expired_retention",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 80,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "query_wrong_scope",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "C"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "membership_replaced",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "C"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "current_uid_changed",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid-new",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "current_revision_drift",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 8,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "current_guard_unprotected",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": false,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "current_read_after_guard",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 96,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "current_predicate_incomplete",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": false,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "current_unsatisfied",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "UNSATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "message_republished_new_id",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg-new",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 60
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 60
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "no_receipt_covered_miss_retry",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "MISS",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "UNSATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "no_receipt_unknown",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "UNKNOWN",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "UNSATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "no_receipt_miss_permission_denied",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "MISS",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "UNSATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": false,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "no_receipt_miss_guard_missing",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "MISS",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "UNSATISFIED",
+        "predicateComplete": true,
+        "protected": false,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  },
+  {
+    "id": "grant_revoked_after_effect",
+    "facts": {
+      "task": {
+        "id": "task30",
+        "run": "run30",
+        "intent": "publish30",
+        "target": "target30",
+        "targetUid": "uid30"
+      },
+      "delivery": {
+        "subscription": "sub30",
+        "message": "msg30",
+        "region": "us-central1",
+        "subscriberRegion": "us-central1",
+        "latestAck": "ack2",
+        "usedAck": "ack2",
+        "ack": "SUCCESS",
+        "deadline": 50,
+        "ackAt": 40,
+        "deliveryAt": 10
+      },
+      "required": [
+        "A",
+        "B"
+      ],
+      "query": {
+        "kind": "HIT",
+        "covered": true,
+        "exact": true,
+        "scopeMessage": "msg30",
+        "scopeTargetUid": "uid30",
+        "scopeMembers": [
+          "A",
+          "B"
+        ],
+        "watermark": 90,
+        "queryAt": 90,
+        "retentionUntil": 150,
+        "lifecycle": "ACTIVE"
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "effect": "A1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 20,
+          "grantFrom": 5,
+          "grantUntil": 21
+        },
+        {
+          "member": "B",
+          "effect": "B1",
+          "message": "msg30",
+          "targetUid": "uid30",
+          "effectAt": 25,
+          "grantFrom": 5,
+          "grantUntil": 26
+        }
+      ],
+      "current": {
+        "uid": "uid30",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "observedRevision": 7,
+        "guardedRevision": 7,
+        "state": "SATISFIED",
+        "predicateComplete": true,
+        "protected": true,
+        "readAt": 80,
+        "guardAt": 95,
+        "commitAt": 100
+      },
+      "permission": {
+        "allow": true,
+        "protected": true
+      }
+    }
+  }
+]

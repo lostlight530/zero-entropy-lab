@@ -1,0 +1,482 @@
+[
+  {
+    "scenario": "baseline",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "baseline",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "baseline",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "ack_failed",
+    "path": "ack_proxy",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "ack_failed",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "ack_failed",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "ack_stale_id",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "ack_stale_id",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "ack_stale_id",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "ack_region_drift",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "ack_region_drift",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "ack_region_drift",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "ack_out_of_order",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "ack_out_of_order",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "ack_out_of_order",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "ack_deadline_expired",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "ack_deadline_expired",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "ack_deadline_expired",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "receipt_missing_B",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_missing_B",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_missing_B",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "receipt_duplicate_A",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_duplicate_A",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_duplicate_A",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "receipt_equal_count_A_C",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_equal_count_A_C",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_equal_count_A_C",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "receipt_extra_C",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_extra_C",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_extra_C",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "receipt_wrong_message",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_wrong_message",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_wrong_message",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "receipt_wrong_target",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_wrong_target",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_wrong_target",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "receipt_auth_expired",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_auth_expired",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_auth_expired",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "scenario": "receipt_auth_not_yet",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_auth_not_yet",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "receipt_auth_not_yet",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "scenario": "query_unknown",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_unknown",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_unknown",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "query_miss_conflict",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_miss_conflict",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_miss_conflict",
+    "path": "full_reference",
+    "decision": "EVIDENCE_CONFLICT"
+  },
+  {
+    "scenario": "query_uncovered",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_uncovered",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_uncovered",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "query_expired_retention",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_expired_retention",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_expired_retention",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "query_wrong_scope",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_wrong_scope",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "query_wrong_scope",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "membership_replaced",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "membership_replaced",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "membership_replaced",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_uid_changed",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_uid_changed",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_uid_changed",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_revision_drift",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_revision_drift",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_revision_drift",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_guard_unprotected",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_guard_unprotected",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_guard_unprotected",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_read_after_guard",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_read_after_guard",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_read_after_guard",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_predicate_incomplete",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_predicate_incomplete",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_predicate_incomplete",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "current_unsatisfied",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_unsatisfied",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "current_unsatisfied",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "message_republished_new_id",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "message_republished_new_id",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "message_republished_new_id",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "no_receipt_covered_miss_retry",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "no_receipt_covered_miss_retry",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "no_receipt_covered_miss_retry",
+    "path": "full_reference",
+    "decision": "RETRY_ALLOWED"
+  },
+  {
+    "scenario": "no_receipt_unknown",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "no_receipt_unknown",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "no_receipt_unknown",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "no_receipt_miss_permission_denied",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "no_receipt_miss_permission_denied",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "no_receipt_miss_permission_denied",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "no_receipt_miss_guard_missing",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "no_receipt_miss_guard_missing",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "no_receipt_miss_guard_missing",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "grant_revoked_after_effect",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "grant_revoked_after_effect",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "grant_revoked_after_effect",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  }
+]
