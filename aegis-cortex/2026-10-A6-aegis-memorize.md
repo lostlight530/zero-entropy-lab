@@ -6505,3 +6505,187 @@ NATIVE_MODIFICATION_NOTE: only canonical A6 owner append; no Jules A1/A2, Ballas
 - October natural-month final is `NOT_DUE` until natural closure; later code/path/PR presence does not upgrade earlier `BLOCKED`, `UNKNOWN` or `NOT_EXECUTED` states
 - Prior month-owner blocks above are retained as point-in-time views; no original task-time author, external source, runtime, research-batch count, independent verification, or long-term doctrine is changed by this note
 - `SOURCE_IDENTITY != CONTENT_DECISION != RUNTIME_VERIFICATION`; unresolved audit gates require separately inspectable primary evidence before status promotion
+
+
+## A1_FULL_NATIVE_AEGIS_BALLAST_ARTIFACT_DECISIONS_2026_10_29
+
+- Independent GitHub maintenance; exact base 8a8a755bee38ded2dd2aac23d746b63e4fd0ed4e, N=Oct29 Shanghai, A1 Oct01–28.
+- Direct native-original content reads: Aegis 28 A1 and 28 A2 plus Ballast 28 Daily (84 daily source files), and four A3/four A4 weekly source files.
+- External publisher failure-mode evidence is not local host Kernel incident. Aegis protected host policy and Ballast research scope stay separate.
+- Day27 Aegis records are retrospective Oct28 custody assessments, not proof that Jules ran original Oct27 A1/A2; `ORIGINAL_UNKNOWN` retained.
+- Day01/02/04 and other recorded Aegis A2 BLOCKED do not become PASS merely because A1 file now exists in GitHub main.
+- Ballast scenario simulated V8/Python/SQLite checks are scoped to the declared fixtures; no live external effect, provider certification or host runtime replay inferred.
+- Monthly Aegis A6 owner is OPEN/PROVISIONAL_NOT_FINAL; 2026-10-29 native records are outside A1 and reserved for fresh A2.
+- A1 per-source artifact decisions below do not assert complete external source-semantic retesting or original native checker execution.
+### Date-level three-lane decisions
+### 2026-10-01 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-01-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-01-A2-doctrine-orient.md`: original declared **BLOCKED**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-01.md`: original result **PASS**; source topic **preflight validity versus persisted completion under admission and identity drift**; recorded boundary **preflight or admission success does not prove persisted completion**.
+- A1 action: BOUNDARY_UPDATE / retain original blocked doctrine; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-02 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-02-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-02-A2-doctrine-orient.md`: original declared **BLOCKED**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-02.md`: original result **PASS**; source topic **deletion acceptance versus cleanup-complete absence under finalizers and cascading ownership**; recorded boundary **accepted deletion or owner absence does not by itself prove cleanup-complete**.
+- A1 action: BOUNDARY_UPDATE / retain original blocked doctrine; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-03 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-03-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-03-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-03.md`: original result **PASS**; source topic **finalizer release versus independently verified external cleanup under controller provenance and effect-set completeness**; recorded boundary **control-plane disappearance or finalizer release does not independently prove external cleanup**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-04 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-04-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-04-A2-doctrine-orient.md`: original declared **BLOCKED**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-04.md`: original result **PASS**; source topic **ambiguous external creation recovery versus authoritative prior-effect absence under incomplete external identity**; recorded boundary **missing local create success or one negative lookup does not prove authoritative prior-effect miss**.
+- A1 action: BOUNDARY_UPDATE / retain original blocked doctrine; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-05 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-05-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-05-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-05.md`: original result **PASS**; source topic **target precondition identity versus authorization and completion under object reincarnation**; recorded boundary **UID or resourceVersion fences protect target identity/revision but do not prove authorization, prior-effect absence or task completion**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-06 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-06-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-06-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-06.md`: original result **PASS**; source topic **admission webhook side-effect declaration versus persisted effect and completion under later rejection**; recorded boundary **webhook allow or side-effect declaration does not prove persistence, reconciliation or task completion**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-07 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-07-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-07-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-07.md`: original result **PASS**; source topic **admission reinvocation observation versus final-object and task completion proof**; recorded boundary **reinvocation is an intermediate observation, not a final-state or completion receipt**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-08 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-08-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-08-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-08.md`: original result **PASS**; source topic **watch progress evidence versus membership-complete current state after history loss**; recorded boundary **resourceVersion or BOOKMARK progress does not prove membership-complete current task state**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-09 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-09-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-09-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-09.md`: original result **PASS**; source topic **indexed Job success criteria versus exact external effect-set completion**; recorded boundary **SuccessCriteriaMet or Complete cannot by itself prove task-defined external effects**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-10 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-10-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-10-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-10.md`: original result **PASS**; source topic **CronJob schedule observation versus exact external occurrence and current completion**; recorded boundary **CronJob lastScheduleTime, Job presence or Job Complete does not prove external task completion**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-11 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-11-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-11-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-11.md`: original result **PASS**; source topic **Actions cancellation and run-attempt identity versus external effect integrity**; recorded boundary **canceled workflow, newer attempt or matching receipt count alone cannot prove exact authorized task completion**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-12 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-12-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-12-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-12.md`: original result **PASS**; source topic **environment/OIDC trust versus effect-time authorization**; recorded boundary **model distinguishes admission from authorized external completion**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-13 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-13-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-13-A2-doctrine-orient.md`: original declared **DEGRADED_RECOVERY**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-13.md`: original result **PASS**; source topic **delegated token exchange/introspection/actor history versus effect-time authority and completion**; recorded boundary **issued token and preflight activity do not prove exact authorized external effects or current completion**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-14 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-14-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-14-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-14.md`: original result **PARTIAL**; source topic **event delivery identity and redelivery versus exact authorized effect completion**; recorded boundary **event source + id dedupe and delivery ack do not prove downstream effects or current completion, modeled prior query scope must bind exact task, target, member set and revision**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-15 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-15-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-15-A2-doctrine-orient.md`: original declared **BLOCKED**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-15.md`: original result **EXECUTED**; source topic **transactional outbox / offset progress versus exact external effect completion**; recorded boundary **SQLite local commits and modeled sinks do not prove cross-domain effect completion**.
+- A1 action: BOUNDARY_UPDATE / retain original blocked doctrine; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-16 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-16-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-16-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-16.md`: original result **V8**; source topic **saga compensation signals versus exact historical original/compensation and protected net-state**; recorded boundary **30 modeled scenarios and 26 negative controls, two reference omissions repaired, live Saga not tested**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-17 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-17-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-17-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-17.md`: original result **LOCAL_PYTHON**; source topic **compensation retry after idempotency-key expiry versus exact authorized historical refund and protected net-state**; recorded boundary **36 modeled scenarios, 144 decisions, 9 isolated sink trials; expired-key blind retry commits a duplicate only in the local simulation; live provider NOT_EXECUTED**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-18 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-18-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-18-A2-doctrine-orient.md`: original declared **BLOCKED**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-18.md`: original result **LOCAL_SQLITE**; source topic **lease handoff versus protected sink fencing and exact dynamic membership completion**; recorded boundary **30 locally executed SQLite scenarios and 90 decisions, stale-worker weak sink accepts an effect; live Kubernetes and external sink NOT_EXECUTED**.
+- A1 action: BOUNDARY_UPDATE / retain original blocked doctrine; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-19 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-19-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-19-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-19.md`: original result **EXECUTED**; source topic **regional replica visibility**; recorded boundary **bounded model, no live sink**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-20 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-20-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-20-A2-doctrine-orient.md`: original declared **BLOCKED**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-20.md`: original result **EXECUTED**; source topic **Continue-As-New run lineage versus stable business effect identity across response loss**; recorded boundary **35 bounded model scenarios, 105 decisions, 56/56 rejected mutations; run-B key re-accepts historical capture in local simulation, live Temporal and payment sink NOT_EXECUTED**.
+- A1 action: BOUNDARY_UPDATE / retain original blocked doctrine; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-21 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-21-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-21-A2-doctrine-orient.md`: original declared **BLOCKED**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-21.md`: original result **EXECUTED**; source topic **Step Functions DataLimitExceeded redrive versus preserved-success assumptions and exact external effect integrity**; recorded boundary **34 bounded scenarios, 102 decisions, 23/23 rejected mutations, real AWS and sink NOT_EXECUTED**.
+- A1 action: BOUNDARY_UPDATE / retain original blocked doctrine; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-22 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-22-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-22-A2-doctrine-orient.md`: original declared **BLOCKED**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-22.md`: original result **EXECUTED**; source topic **Temporal async Activity Task Token validity versus external effect completion**; recorded boundary **38 JavaScript isolate synthetic scenarios, 114 decisions, original 39/39 controls, same-day maintainer fixture replay 41/41 new negatives plus 3 positives, no real sink, original generator NOT_RECOVERED**.
+- A1 action: BOUNDARY_UPDATE / retain original blocked doctrine; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-23 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-23-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-23-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-23.md`: original result **EXECUTED**; source topic **Redis Streams XAUTOCLAIM PEL cursor and ownership versus external effect integrity**; recorded boundary **29 bounded synthetic scenarios and 87 decisions, original 24/24 mutations and 6/6 probes, independent same-day correction 13/13 exact-outcome probes, live Redis and sink NOT_EXECUTED**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-24 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-24-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-24-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-24.md`: original result **EXECUTED**; source topic **S3 CompleteMultipartUpload HTTP 200 embedded error versus exact authorized multipart publication and protected ordered part-set completion**; recorded boundary **60 bounded synthetic scenarios and 180 decisions, 53/53 negative controls, 24/24 probes, live S3 and independent sink NOT_EXECUTED**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-25 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-25-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-25-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-25.md`: original result **V8**; source topic **Temporal parent close and child started evidence versus exact historically authorized external effect-set completion**; recorded boundary **67 corrected synthetic scenarios, 201 decisions, 59/59 negatives and 40/40 exact probes, original 52/156 provenance retained, live Temporal and sink NOT_EXECUTED**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-26 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-26-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-26-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-26.md`: original result **V8**; source topic **Temporal Workflow Update ACCEPTED/COMPLETED versus exact authorized external effect-set completion**; recorded boundary **original 52 scenarios / 156 rows, same-date review corrected to 66 scenarios / 198 rows, 63/63 negative controls and forged CSV/duplicate-ID rejection, live Temporal/sink NOT_EXECUTED**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-27 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-27-A1-reliability-observe.md`: original declared **RETROSPECTIVE_ORIGINAL_UNKNOWN**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-27-A2-doctrine-orient.md`: original declared **PARTIAL_NO_DOCTRINE_DECISION_RETROSPECTIVE**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-27.md`: original result **V8**; source topic **SQS FIFO stale DeleteMessage receipt handle and dedup window versus exact downstream effect and delivery settlement**; recorded boundary **65 synthetic scenarios, 195 decisions, 60 non-COMPLETE controls, baseline + 64 deltas, no live AWS/sink**.
+- A1 action: BOUNDARY_UPDATE / retrospective original Aegis producer UNKNOWN; no separate research-batch, independent-verification or durable-doctrine credit.
+### 2026-10-28 — native Aegis A1/A2 and Ballast
+- Aegis A1 `aegis-cortex/2026-10-28-A1-reliability-observe.md`: original declared **SUCCESS**; evidence risk is an external reliability claim, not an observed host incident.
+- Aegis A2 `aegis-cortex/2026-10-28-A2-doctrine-orient.md`: original declared **SUCCESS_OR_BOUNDED_SUCCESS**; same-day A1 must have been source-time available, later Git path presence does not repair input-missing.
+- Ballast `ballast/records/2026-10-28.md`: original result **V8**; source topic **Azure Copy Blob asynchronous HTTP 202 and copy status versus authorized exact downstream effects and protected destination completion**; recorded boundary **46 synthetic scenarios, 138 decisions, 44 negatives, 46 exact probes, zero live Azure/sink**.
+- A1 action: NO_FOLLOW_UP / preserve source-limited producer outcome; no separate research-batch, independent-verification or durable-doctrine credit.
+### Due Aegis weekly A3/A4
+- W40 A3 SUCCESS / A4 SUCCESS_RECOVERY: exact W40–W43 A3 and A4 native source bodies reviewed; original task result retained without new decision credit.
+- W40: weekly A3 external signals cannot alone authorize A4 protected host modifications, new effectiveness measurements, or A6 permanent doctrine.
+- W41 A3 DEGRADED_EXTERNAL_ONLY / A4 DEGRADED_OBSERVATION_ONLY: exact W40–W43 A3 and A4 native source bodies reviewed; original task result retained without new decision credit.
+- W41: weekly A3 external signals cannot alone authorize A4 protected host modifications, new effectiveness measurements, or A6 permanent doctrine.
+- W42 A3 SUCCESS / A4 SUCCESS: exact W40–W43 A3 and A4 native source bodies reviewed; original task result retained without new decision credit.
+- W42: weekly A3 external signals cannot alone authorize A4 protected host modifications, new effectiveness measurements, or A6 permanent doctrine.
+- W43 A3 DEGRADED_NO_PROMOTION / A4 SUCCESS_BOUNDED_NO_HOST_CHANGE: exact W40–W43 A3 and A4 native source bodies reviewed; original task result retained without new decision credit.
+- W43: weekly A3 external signals cannot alone authorize A4 protected host modifications, new effectiveness measurements, or A6 permanent doctrine.
+### Ballast research and zero-kernel non-equivalence
+- Oct14 Ballast daily is PARTIAL; later controlled fixtures on other days do not change its original outcome.
+- Oct15 outbox consumer offset progress is not exact upstream effect settlement, regardless of adapter-event persistence.
+- Oct16 saga compensation cannot erase already committed downstream effects without their exact identity and authorized compensation receipts.
+- Oct17 retry after key expiration is not safe merely because a newer compensation envelope exists.
+- Oct18 lease handoff signal alone is not sink fencing; ownership checked at effect time remains a distinct gate.
+- Oct19 cross-region replica visibility is not proof of globally committed authorized effect.
+- Oct20 Continue-As-New run identity cannot be treated as a business-effect uniqueness key.
+- Oct21 DataLimitExceeded redrive cannot infer prior successful steps should re-execute.
+- Oct22 Temporal async Activity Task Token observation is not proof of effect authorized or precisely completed.
+- Oct23 Redis XAUTOCLAIM PEL cursor movement alone cannot prove one handler owns and committed the business operation.
+- Oct24 HTTP 200 with embedded CompleteMultipartUpload error cannot be classified successful S3 object completion.
+- Oct25 Temporal parent close policy needs child-start event identity and observed child effect.
+- Oct26 ACCEPTED Workflow Update does not imply COMPLETED and does not evidence action effect.
+- Oct27 stale SQS FIFO receipt-handle DeleteMessage acknowledgment cannot confirm the current message was removed.
+- Oct28 Azure Copy Blob initial response does not establish protected target content integrity, subsequent copy status or downstream effect.
+- Earlier Ballast evidence scenarios and Oct28 postmerge correction remain distinct from one native daily batch; no synthetic scenario count is recredited.
+- Aegis A1 A2 distinction is *native task IDs* and not this external A1 month-maintenance task.
+- W44 is OPEN Oct26–Nov01, and October natural-month A6 remains NOT_DUE; D30 Oct30 is audit checkpoint not current final.
+- Native checker, zero host code test, live cloud provider-effect verification, full Ballast scenario corpus semantic audit: NOT_EXECUTED in this pass.
+- Coverage decision: 84 native Daily plus eight Weekly originals and two current October owners read; other corpus and external effect verification PARTIAL/NOT_FULLY_ATTESTED.
+- Correction action limited to this later month-owner section; historical native records and original producers untouched.
