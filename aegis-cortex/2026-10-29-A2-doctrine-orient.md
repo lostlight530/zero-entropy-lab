@@ -77,6 +77,7 @@ Disposition: RESEARCH_WATCHLIST / NO_MANDATORY_KERNEL_CHANGE / NO_DEFENSE_CLAIM
 - Attribution discipline: local HMAC, JSONL linkage, NEXUS memory status and Ballast task histories do not independently establish filesystem path containment; security advisory != measured local rate.
 - Observable final target: any future authorized reproduction should record input path, allowed root, opened object identity and final target identity after operation, with rollback. Mere successful API return is not enough to show safe containment.
 - Local scope decision: no change to Zero Kernel, data/knowledge graph, Ballast scheduler or Aegis permanent doctrine based on external evidence alone.
+- Remaining Uncertainty: actual Zero dependency/OS/configuration, filesystem casefolding, symlink reachability, target authorization and the result of an independently run patched-version containment test remain UNKNOWN.
 
 ## NO_DECISION_SECTION
 - Daily A2 is orientation, not A3 Weekly decision or A4 protocol action.
