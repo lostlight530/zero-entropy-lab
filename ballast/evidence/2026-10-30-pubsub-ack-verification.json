@@ -1,17 +1,17 @@
 {
-  "scenarios": 32,
-  "rows": 96,
+  "scenarios": 47,
+  "rows": 141,
   "reference": {
     "COMPLETE": 2,
-    "RECONCILE": 18,
-    "BLOCKED": 2,
-    "STOP_UNKNOWN": 8,
+    "RECONCILE": 21,
+    "BLOCKED": 4,
+    "STOP_UNKNOWN": 18,
     "EVIDENCE_CONFLICT": 1,
     "RETRY_ALLOWED": 1
   },
-  "ackDisagreements": 30,
-  "messageDisagreements": 30,
-  "verifierAgreements": 32,
+  "ackDisagreements": 45,
+  "messageDisagreements": 45,
+  "verifierAgreements": 47,
   "duplicateScenarioIds": false,
   "wrongRowCount": false,
   "unsafeReferenceCompletes": [],
@@ -147,5 +147,6 @@
       "SEMANTIC_INDEPENDENCE"
     ],
     "researchCreditAdded": 0
-  }
+  },
+  "reviewVersion": "SAME_DATE_CORRECTED_CURRENT_WITH_ORIGINAL_PRESERVED"
 }
