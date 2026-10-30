@@ -1,0 +1,106 @@
+{
+  "schema": "ballast.servicebus.verification.2026-10-31",
+  "logical_date": "2026-10-31 Asia/Shanghai",
+  "evidence_access_date": "2026-10-31 Asia/Shanghai",
+  "actual_research_execution_utc": {
+    "first_bounded_V8_observed_completion": "2026-10-30T20:02:28.203Z",
+    "same_window_semantic_corrections_complete": "2026-10-30T20:04:27.998Z",
+    "persisted_source_replay_complete": "2026-10-30T20:04:43.752Z",
+    "exact_start": "NOT_RECORDED"
+  },
+  "base_main_sha": "2a27a262d976b6d883c54dc5669331adbeea19b0",
+  "source_blobs": {
+    "producer": "74d341da1d775f4213d54b7368e7b8a9b67d0502",
+    "verifier": "4a553b1efb4ecc1e26cfab63f1cfc75079361210",
+    "scenario_facts": "8326b93db22ff5b4a253e7065e8e7b7ee6504eb6",
+    "decision_rows": "0cbc47295c2334a65b7ca42f5655940acedbfdfa"
+  },
+  "execution": {
+    "producer": "EXECUTED_V8_ISOLATE",
+    "separately_coded_verifier": "EXECUTED_V8_ISOLATE",
+    "persisted_source_replay": "EXECUTED_V8_ISOLATE",
+    "scenario_states": 58,
+    "decision_rows": 174,
+    "paths": [
+      "send_proxy",
+      "settlement_proxy",
+      "full_reference"
+    ],
+    "reference_histogram": {
+      "COMPLETE": 4,
+      "RECONCILE": 25,
+      "STOP_UNKNOWN": 21,
+      "BLOCKED": 5,
+      "EVIDENCE_CONFLICT": 2,
+      "RETRY_ALLOWED": 1
+    },
+    "non_complete_controls": 54,
+    "send_proxy_disagreements": 54,
+    "settlement_proxy_disagreements": 52,
+    "primitive_verifier_reconstruction": "58/58 scenarios and 174/174 decision rows",
+    "adversarial_probes": 14,
+    "adversarial_unsafe_accepts": 0,
+    "forged_row_duplicate_id_count_mismatch_rejected": "3/3",
+    "persisted_source_to_persisted_facts_exact_match": true,
+    "actual_azure_calls": 0,
+    "actual_external_effects": 0,
+    "actual_independent_authority_queries": 0
+  },
+  "prototype_correction": {
+    "point_in_time_unmerged_prototype_blob": "a67f79f33dd1e78fb8abcb85345d6303704e6b95",
+    "status": "REJECTED_PRE_DELIVERY_SAME_WINDOW",
+    "observed_defect": "The first synthetic query model allowed watermark after queryAt and did not independently bind full attempt history, allowing a logically impossible covered MISS and potential unobserved attempt false completion",
+    "repair": "Require watermark <= queryAt, queryAt before guarded completion, explicit independent synthetic attempt-history scope and complete attempts, authoritative MISS coverage of actual old attempt end instead of future guardAt, add attempt-3 and query time adversarial probes",
+    "research_credit_added": 0
+  },
+  "verifier_independence": {
+    "implementation": "PARTIAL",
+    "data_source": "NONE",
+    "semantic_contract": "SHARED",
+    "authority": "NONE",
+    "notes": "Two separately coded primitive reconstructions share authored fixture schema and synthetic facts; source replay does not provide independent real-world semantics or historical authority"
+  },
+  "NOT_EXECUTED": [
+    "native Node CLI",
+    "complete python ballast/tools/check.py",
+    "live Azure Service Bus",
+    "real downstream non-idempotent effect sink",
+    "independent historical authorization authority",
+    "independent complete negative-query authority",
+    "trusted cross-service clock",
+    "semantic-contract-independent verification"
+  ],
+  "authoritative_sources": [
+    {
+      "publisher": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/duplicate-detection",
+      "access_date": "2026-10-31"
+    },
+    {
+      "publisher": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/message-transfers-locks-settlement",
+      "access_date": "2026-10-31"
+    },
+    {
+      "publisher": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-message-loss-and-duplicates",
+      "access_date": "2026-10-31"
+    },
+    {
+      "publisher": "Amazon Web Services",
+      "url": "https://aws.amazon.com/sqs/faqs/",
+      "access_date": "2026-10-31",
+      "limitation": "different-product comparison, not independent Azure behavior verification"
+    }
+  ],
+  "research_credit": {
+    "NATIVE_Daily": 1,
+    "independent_bounded_window": 1,
+    "new_CASE": 0,
+    "new_METHOD": 0,
+    "new_NOTES": 0,
+    "new_Special": 0,
+    "new_Audit_research_credit": 0,
+    "new_finding": 0
+  }
+}

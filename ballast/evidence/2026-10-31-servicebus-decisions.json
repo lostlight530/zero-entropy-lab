@@ -1,0 +1,353 @@
+{
+  "schema": "ballast.servicebus.decisions.2026-10-31",
+  "decisions": [
+    {
+      "id": "baseline",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "COMPLETE"
+    },
+    {
+      "id": "revoked_after_authorized_effect",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "COMPLETE"
+    },
+    {
+      "id": "scheduled_duplicate_accepted_but_dropped",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "RECONCILE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "dedup_window_expired_new_delivery",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "partition_changed",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "session_partition_mismatch",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "message_id_reused",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "lock_lost_after_effect",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "RECONCILE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "stale_settle_generation",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "stale_settle_delivery",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "settlement_unknown",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "RECONCILE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_missing_B",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "receipt_duplicate_A_same_count",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "receipt_extra_C_same_count",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "receipt_extra_C_third",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "receipt_wrong_effect",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "receipt_wrong_task",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "receipt_wrong_run",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "receipt_wrong_incarnation",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "receipt_after_guard",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_attempt3_uncovered",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "receipt_untrusted_authority",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "historical_grant_expired",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "BLOCKED"
+    },
+    {
+      "id": "historical_grant_wrong_intent",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "BLOCKED"
+    },
+    {
+      "id": "historical_grant_missing_authority",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "BLOCKED"
+    },
+    {
+      "id": "positive_receipt_vs_covered_miss",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "query_wrong_partition",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_missing_attempt2",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_stale_watermark",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_future_watermark",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_prior_end_missing",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "attempt3_history_uncovered",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "attempt_history_incomplete",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "attempt_history_wrong_scope",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "attempt_history_end_uncovered",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_retention_expired",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_after_guard",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_history_pruned",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_member_missing",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_unknown",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "member_replacement_same_count",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "target_uid_recreated",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "guard_revision_stale",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "guard_not_protected",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "guard_compare_not_bound_to_commit",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "guard_wrong_intent",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "current_state_B_pending",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RECONCILE"
+    },
+    {
+      "id": "covered_miss_safe_retry",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "RETRY_ALLOWED"
+    },
+    {
+      "id": "covered_miss_permission_revoked",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "BLOCKED"
+    },
+    {
+      "id": "covered_miss_permission_wrong_run",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "BLOCKED"
+    },
+    {
+      "id": "covered_miss_no_old_worker_fence",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "covered_miss_no_idempotency",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "covered_miss_no_explicit_retry",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "covered_miss_watermark_short",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "covered_miss_wrong_query_scope",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "covered_miss_positive_conflict",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "scheduled_duplicate_historical_effect_proven",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "COMPLETE"
+    },
+    {
+      "id": "expired_dedup_window_historical_effect_proven",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "COMPLETE"
+    }
+  ]
+}
