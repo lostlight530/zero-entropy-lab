@@ -778,3 +778,9 @@ Same-date adversarial reference-model correction remains in the original Draft P
 Second same-date reference-model correction also preserves unmerged first-correction head d2b621176ecf44a02a5523bff4637c67d2164a31 as point-in-time evidence, five unsafe RETRY_ALLOWED cases now safe-stop or reconcile, no extra research/window credit
 
 Same-date independent maintainer replay of earlier head `159050d80783bcd05f0254ef71a1e971a18f710e` found 3 additional unsafe COMPLETE outcomes from future prior-query evidence and attempt-3 history not covered by the two-attempt fence; corrected to 71/213 with 3/3 STOP_UNKNOWN, original 68/204 retained in Git provenance, no new research-window credit
+
+## 2026-10-30 as-of month-to-date deep research synthesis
+
+[October as-of evidence rollup](records/2026-10.md) distinguishes 30 NATIVE Daily dates including one still-unmerged 2026-10-30 Draft at review, five completed nonoverlapping derived audits (one cross-month), a not-yet-due 2026-10-26..31 audit, and no new CASE/NOTES research promotion or monthly maintenance certificate
+
+Same-date [Pub/Sub Daily](records/2026-10-30.md) adversarial review preserves original 32/96 Git head `4d26b6244b6e7b8c0444a5ad82899267804f4575` and corrects to 47/141 synthetic V8 decisions, 15 new unsafe-input probes safely rejected and 141/141 separately coded shared-contract verifier reconstruction, no new Daily/window credit, live cloud effect and independent authority NOT_EXECUTED

@@ -478,5 +478,230 @@
     "scenario": "grant_revoked_after_effect",
     "path": "full_reference",
     "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_task_id_drift",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_task_id_drift",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_task_id_drift",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "adversarial_run_drift",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_run_drift",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_run_drift",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "adversarial_intent_drift",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_intent_drift",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_intent_drift",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "adversarial_subscription_drift",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_subscription_drift",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_subscription_drift",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "adversarial_duplicate_effect_id",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_duplicate_effect_id",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_duplicate_effect_id",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "adversarial_future_query",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_future_query",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_future_query",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "adversarial_fractional_watermark",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_fractional_watermark",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_fractional_watermark",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "adversarial_grant_type_string",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_grant_type_string",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_grant_type_string",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "scenario": "adversarial_retry_wrong_run",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_retry_wrong_run",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_retry_wrong_run",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "adversarial_retry_future_query",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_retry_future_query",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_retry_future_query",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "adversarial_completion_scope_drift",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_completion_scope_drift",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_completion_scope_drift",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "adversarial_delivery_attempt_three",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_delivery_attempt_three",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_delivery_attempt_three",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "adversarial_receipt_attempt_three",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_receipt_attempt_three",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_receipt_attempt_three",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "scenario": "adversarial_push_subscription",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_push_subscription",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_push_subscription",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "scenario": "adversarial_grant_revoked_before_effect",
+    "path": "ack_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_grant_revoked_before_effect",
+    "path": "message_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "scenario": "adversarial_grant_revoked_before_effect",
+    "path": "full_reference",
+    "decision": "BLOCKED"
   }
 ]
