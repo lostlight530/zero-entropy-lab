@@ -5,22 +5,24 @@
   "actual_research_execution_utc": {
     "first_bounded_V8_observed_completion": "2026-10-30T20:02:28.203Z",
     "same_window_semantic_corrections_complete": "2026-10-30T20:04:27.998Z",
-    "persisted_source_replay_complete": "2026-10-30T20:04:43.752Z",
-    "exact_start": "NOT_RECORDED"
+    "persisted_source_replay_complete": "2026-10-30T20:08:28.491Z",
+    "exact_start": "NOT_RECORDED",
+    "post_pr_type_attack_observed": "2026-10-30T20:07:58.362Z",
+    "same_day_post_pr_correction": "2026-10-30T20:08:13.422Z"
   },
   "base_main_sha": "2a27a262d976b6d883c54dc5669331adbeea19b0",
   "source_blobs": {
-    "producer": "74d341da1d775f4213d54b7368e7b8a9b67d0502",
-    "verifier": "4a553b1efb4ecc1e26cfab63f1cfc75079361210",
-    "scenario_facts": "8326b93db22ff5b4a253e7065e8e7b7ee6504eb6",
-    "decision_rows": "0cbc47295c2334a65b7ca42f5655940acedbfdfa"
+    "producer": "548f92239edcf29f57b43680e7414691e7af953d",
+    "verifier": "d62d8153173b245b19afa2488ede43113dc02b08",
+    "scenario_facts": "deb5e24fb81c5c31bc0bc3453d438b5e4d263ada",
+    "decision_rows": "e3207cfb5897280d73fdf6992cdd61e536e04eaf"
   },
   "execution": {
     "producer": "EXECUTED_V8_ISOLATE",
     "separately_coded_verifier": "EXECUTED_V8_ISOLATE",
     "persisted_source_replay": "EXECUTED_V8_ISOLATE",
-    "scenario_states": 58,
-    "decision_rows": 174,
+    "scenario_states": 63,
+    "decision_rows": 189,
     "paths": [
       "send_proxy",
       "settlement_proxy",
@@ -29,16 +31,16 @@
     "reference_histogram": {
       "COMPLETE": 4,
       "RECONCILE": 25,
-      "STOP_UNKNOWN": 21,
+      "STOP_UNKNOWN": 26,
       "BLOCKED": 5,
       "EVIDENCE_CONFLICT": 2,
       "RETRY_ALLOWED": 1
     },
-    "non_complete_controls": 54,
-    "send_proxy_disagreements": 54,
-    "settlement_proxy_disagreements": 52,
-    "primitive_verifier_reconstruction": "58/58 scenarios and 174/174 decision rows",
-    "adversarial_probes": 14,
+    "non_complete_controls": 59,
+    "send_proxy_disagreements": 59,
+    "settlement_proxy_disagreements": 57,
+    "primitive_verifier_reconstruction": "63/63 scenarios and 189/189 decision rows",
+    "adversarial_probes": 19,
     "adversarial_unsafe_accepts": 0,
     "forged_row_duplicate_id_count_mismatch_rejected": "3/3",
     "persisted_source_to_persisted_facts_exact_match": true,
@@ -102,5 +104,21 @@
     "new_Special": 0,
     "new_Audit_research_credit": 0,
     "new_finding": 0
+  },
+  "post_pr_same_date_correction": {
+    "original_draft_head": "867054736c9f8405c383766a9578530f0eda7454",
+    "fault_observed_utc": "2026-10-30T20:07:58.362Z",
+    "five_shared_reference_verifier_false_accepts": [
+      "broker settlement timestamp numeric string falsely COMPLETE",
+      "guard time numeric string falsely COMPLETE",
+      "commit time numeric string falsely COMPLETE",
+      "both revisions numeric strings falsely COMPLETE",
+      "retry permission time numeric string falsely RETRY_ALLOWED"
+    ],
+    "repair": "Both producer reference and separately coded verifier require Number.isInteger for settlement/guard/commit times, target and guard revision, and permission time, adding five named scenarios and five adversarial probes",
+    "corrected_utc": "2026-10-30T20:08:13.422Z",
+    "persisted_replay_utc": "2026-10-30T20:08:28.491Z",
+    "extra_research_unit": 0,
+    "extra_independent_window": 0
   }
 }

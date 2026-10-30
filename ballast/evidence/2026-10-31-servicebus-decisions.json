@@ -284,6 +284,36 @@
       "full_reference": "RECONCILE"
     },
     {
+      "id": "broker_settle_time_string",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "guard_time_string",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "guard_commit_time_string",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "revision_numeric_string",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
+      "id": "retry_permission_time_string",
+      "send_proxy": "COMPLETE",
+      "settlement_proxy": "COMPLETE",
+      "full_reference": "STOP_UNKNOWN"
+    },
+    {
       "id": "covered_miss_safe_retry",
       "send_proxy": "COMPLETE",
       "settlement_proxy": "COMPLETE",

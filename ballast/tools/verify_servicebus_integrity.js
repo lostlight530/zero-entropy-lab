@@ -5,6 +5,7 @@ function verifier(s){
  const identity=(x,y)=>!!x&&!!y&&fields.filter(k=>typeof x[k]==="string"&&x[k]===y[k]).length===fields.length;
  const set=(a,b)=>Array.isArray(a)&&a.length===b.length&&new Set(a).size===a.length&&b.every(x=>a.indexOf(x)!==-1);
  const {scope,broker,query,target,guard,permission,retry,receipts}=s;
+ if(![broker.settleAt,guard.at,guard.commitAt,target.revision,guard.revision,permission.at].every(Number.isInteger))return U;
  if(!broker.accepted||[broker.message,broker.partition,broker.session].join("/")!==[scope.message,scope.partition,scope.session].join("/"))return R;
  if(broker.lock==="UNKNOWN")return U;
  if(broker.lock!=="SETTLED"||broker.delivery!==broker.settledDelivery||!Number.isInteger(broker.generation)||broker.generation!==broker.settledGeneration||!(broker.settleAt<guard.at))return R;

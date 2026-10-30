@@ -9287,6 +9287,934 @@
       }
     },
     {
+      "id": "broker_settle_time_string",
+      "state": {
+        "scope": {
+          "task": "t31",
+          "run": "r31",
+          "intent": "i31",
+          "target": "tg31",
+          "uid": "u31",
+          "message": "m31",
+          "partition": "p31",
+          "session": "p31"
+        },
+        "broker": {
+          "accepted": true,
+          "message": "m31",
+          "partition": "p31",
+          "session": "p31",
+          "scheduled": false,
+          "dropped": false,
+          "withinWindow": true,
+          "lock": "SETTLED",
+          "delivery": "d31",
+          "settledDelivery": "d31",
+          "generation": 2,
+          "settledGeneration": 2,
+          "settleAt": "60"
+        },
+        "receipts": [
+          {
+            "member": "A",
+            "effect": "effect-A",
+            "attempt": 1,
+            "scope": {
+              "task": "t31",
+              "run": "r31",
+              "intent": "i31",
+              "target": "tg31",
+              "uid": "u31",
+              "message": "m31",
+              "partition": "p31",
+              "session": "p31"
+            },
+            "at": 20,
+            "grant": {
+              "scope": {
+                "task": "t31",
+                "run": "r31",
+                "intent": "i31",
+                "target": "tg31",
+                "uid": "u31",
+                "message": "m31",
+                "partition": "p31",
+                "session": "p31"
+              },
+              "from": 10,
+              "until": 50,
+              "subject": "worker31",
+              "authority": "approval31"
+            },
+            "authority": "sink31"
+          },
+          {
+            "member": "B",
+            "effect": "effect-B",
+            "attempt": 2,
+            "scope": {
+              "task": "t31",
+              "run": "r31",
+              "intent": "i31",
+              "target": "tg31",
+              "uid": "u31",
+              "message": "m31",
+              "partition": "p31",
+              "session": "p31"
+            },
+            "at": 25,
+            "grant": {
+              "scope": {
+                "task": "t31",
+                "run": "r31",
+                "intent": "i31",
+                "target": "tg31",
+                "uid": "u31",
+                "message": "m31",
+                "partition": "p31",
+                "session": "p31"
+              },
+              "from": 10,
+              "until": 50,
+              "subject": "worker31",
+              "authority": "approval31"
+            },
+            "authority": "sink31"
+          }
+        ],
+        "query": {
+          "kind": "HIT",
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            1,
+            2
+          ],
+          "at": 80,
+          "watermark": 80,
+          "priorAttemptEnd": 70,
+          "retentionUntil": 150,
+          "lifecycle": "ACTIVE",
+          "complete": true,
+          "authority": "sink31"
+        },
+        "history": {
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "attempts": [
+            1,
+            2
+          ],
+          "complete": true,
+          "source": "controller31",
+          "lastAttemptEnd": 70
+        },
+        "target": {
+          "uid": "u31",
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          }
+        },
+        "guard": {
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "protected": true,
+          "commitBound": true,
+          "uid": "u31",
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "at": 95,
+          "commitAt": 100
+        },
+        "permission": {
+          "valid": true,
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "subject": "worker31",
+          "at": 94
+        },
+        "retry": {
+          "explicit": true,
+          "oldWorkerFenced": true,
+          "idempotencyBound": true
+        }
+      }
+    },
+    {
+      "id": "guard_time_string",
+      "state": {
+        "scope": {
+          "task": "t31",
+          "run": "r31",
+          "intent": "i31",
+          "target": "tg31",
+          "uid": "u31",
+          "message": "m31",
+          "partition": "p31",
+          "session": "p31"
+        },
+        "broker": {
+          "accepted": true,
+          "message": "m31",
+          "partition": "p31",
+          "session": "p31",
+          "scheduled": false,
+          "dropped": false,
+          "withinWindow": true,
+          "lock": "SETTLED",
+          "delivery": "d31",
+          "settledDelivery": "d31",
+          "generation": 2,
+          "settledGeneration": 2,
+          "settleAt": 60
+        },
+        "receipts": [
+          {
+            "member": "A",
+            "effect": "effect-A",
+            "attempt": 1,
+            "scope": {
+              "task": "t31",
+              "run": "r31",
+              "intent": "i31",
+              "target": "tg31",
+              "uid": "u31",
+              "message": "m31",
+              "partition": "p31",
+              "session": "p31"
+            },
+            "at": 20,
+            "grant": {
+              "scope": {
+                "task": "t31",
+                "run": "r31",
+                "intent": "i31",
+                "target": "tg31",
+                "uid": "u31",
+                "message": "m31",
+                "partition": "p31",
+                "session": "p31"
+              },
+              "from": 10,
+              "until": 50,
+              "subject": "worker31",
+              "authority": "approval31"
+            },
+            "authority": "sink31"
+          },
+          {
+            "member": "B",
+            "effect": "effect-B",
+            "attempt": 2,
+            "scope": {
+              "task": "t31",
+              "run": "r31",
+              "intent": "i31",
+              "target": "tg31",
+              "uid": "u31",
+              "message": "m31",
+              "partition": "p31",
+              "session": "p31"
+            },
+            "at": 25,
+            "grant": {
+              "scope": {
+                "task": "t31",
+                "run": "r31",
+                "intent": "i31",
+                "target": "tg31",
+                "uid": "u31",
+                "message": "m31",
+                "partition": "p31",
+                "session": "p31"
+              },
+              "from": 10,
+              "until": 50,
+              "subject": "worker31",
+              "authority": "approval31"
+            },
+            "authority": "sink31"
+          }
+        ],
+        "query": {
+          "kind": "HIT",
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            1,
+            2
+          ],
+          "at": 80,
+          "watermark": 80,
+          "priorAttemptEnd": 70,
+          "retentionUntil": 150,
+          "lifecycle": "ACTIVE",
+          "complete": true,
+          "authority": "sink31"
+        },
+        "history": {
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "attempts": [
+            1,
+            2
+          ],
+          "complete": true,
+          "source": "controller31",
+          "lastAttemptEnd": 70
+        },
+        "target": {
+          "uid": "u31",
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          }
+        },
+        "guard": {
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "protected": true,
+          "commitBound": true,
+          "uid": "u31",
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "at": "95",
+          "commitAt": 100
+        },
+        "permission": {
+          "valid": true,
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "subject": "worker31",
+          "at": 94
+        },
+        "retry": {
+          "explicit": true,
+          "oldWorkerFenced": true,
+          "idempotencyBound": true
+        }
+      }
+    },
+    {
+      "id": "guard_commit_time_string",
+      "state": {
+        "scope": {
+          "task": "t31",
+          "run": "r31",
+          "intent": "i31",
+          "target": "tg31",
+          "uid": "u31",
+          "message": "m31",
+          "partition": "p31",
+          "session": "p31"
+        },
+        "broker": {
+          "accepted": true,
+          "message": "m31",
+          "partition": "p31",
+          "session": "p31",
+          "scheduled": false,
+          "dropped": false,
+          "withinWindow": true,
+          "lock": "SETTLED",
+          "delivery": "d31",
+          "settledDelivery": "d31",
+          "generation": 2,
+          "settledGeneration": 2,
+          "settleAt": 60
+        },
+        "receipts": [
+          {
+            "member": "A",
+            "effect": "effect-A",
+            "attempt": 1,
+            "scope": {
+              "task": "t31",
+              "run": "r31",
+              "intent": "i31",
+              "target": "tg31",
+              "uid": "u31",
+              "message": "m31",
+              "partition": "p31",
+              "session": "p31"
+            },
+            "at": 20,
+            "grant": {
+              "scope": {
+                "task": "t31",
+                "run": "r31",
+                "intent": "i31",
+                "target": "tg31",
+                "uid": "u31",
+                "message": "m31",
+                "partition": "p31",
+                "session": "p31"
+              },
+              "from": 10,
+              "until": 50,
+              "subject": "worker31",
+              "authority": "approval31"
+            },
+            "authority": "sink31"
+          },
+          {
+            "member": "B",
+            "effect": "effect-B",
+            "attempt": 2,
+            "scope": {
+              "task": "t31",
+              "run": "r31",
+              "intent": "i31",
+              "target": "tg31",
+              "uid": "u31",
+              "message": "m31",
+              "partition": "p31",
+              "session": "p31"
+            },
+            "at": 25,
+            "grant": {
+              "scope": {
+                "task": "t31",
+                "run": "r31",
+                "intent": "i31",
+                "target": "tg31",
+                "uid": "u31",
+                "message": "m31",
+                "partition": "p31",
+                "session": "p31"
+              },
+              "from": 10,
+              "until": 50,
+              "subject": "worker31",
+              "authority": "approval31"
+            },
+            "authority": "sink31"
+          }
+        ],
+        "query": {
+          "kind": "HIT",
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            1,
+            2
+          ],
+          "at": 80,
+          "watermark": 80,
+          "priorAttemptEnd": 70,
+          "retentionUntil": 150,
+          "lifecycle": "ACTIVE",
+          "complete": true,
+          "authority": "sink31"
+        },
+        "history": {
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "attempts": [
+            1,
+            2
+          ],
+          "complete": true,
+          "source": "controller31",
+          "lastAttemptEnd": 70
+        },
+        "target": {
+          "uid": "u31",
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          }
+        },
+        "guard": {
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "protected": true,
+          "commitBound": true,
+          "uid": "u31",
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "at": 95,
+          "commitAt": "100"
+        },
+        "permission": {
+          "valid": true,
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "subject": "worker31",
+          "at": 94
+        },
+        "retry": {
+          "explicit": true,
+          "oldWorkerFenced": true,
+          "idempotencyBound": true
+        }
+      }
+    },
+    {
+      "id": "revision_numeric_string",
+      "state": {
+        "scope": {
+          "task": "t31",
+          "run": "r31",
+          "intent": "i31",
+          "target": "tg31",
+          "uid": "u31",
+          "message": "m31",
+          "partition": "p31",
+          "session": "p31"
+        },
+        "broker": {
+          "accepted": true,
+          "message": "m31",
+          "partition": "p31",
+          "session": "p31",
+          "scheduled": false,
+          "dropped": false,
+          "withinWindow": true,
+          "lock": "SETTLED",
+          "delivery": "d31",
+          "settledDelivery": "d31",
+          "generation": 2,
+          "settledGeneration": 2,
+          "settleAt": 60
+        },
+        "receipts": [
+          {
+            "member": "A",
+            "effect": "effect-A",
+            "attempt": 1,
+            "scope": {
+              "task": "t31",
+              "run": "r31",
+              "intent": "i31",
+              "target": "tg31",
+              "uid": "u31",
+              "message": "m31",
+              "partition": "p31",
+              "session": "p31"
+            },
+            "at": 20,
+            "grant": {
+              "scope": {
+                "task": "t31",
+                "run": "r31",
+                "intent": "i31",
+                "target": "tg31",
+                "uid": "u31",
+                "message": "m31",
+                "partition": "p31",
+                "session": "p31"
+              },
+              "from": 10,
+              "until": 50,
+              "subject": "worker31",
+              "authority": "approval31"
+            },
+            "authority": "sink31"
+          },
+          {
+            "member": "B",
+            "effect": "effect-B",
+            "attempt": 2,
+            "scope": {
+              "task": "t31",
+              "run": "r31",
+              "intent": "i31",
+              "target": "tg31",
+              "uid": "u31",
+              "message": "m31",
+              "partition": "p31",
+              "session": "p31"
+            },
+            "at": 25,
+            "grant": {
+              "scope": {
+                "task": "t31",
+                "run": "r31",
+                "intent": "i31",
+                "target": "tg31",
+                "uid": "u31",
+                "message": "m31",
+                "partition": "p31",
+                "session": "p31"
+              },
+              "from": 10,
+              "until": 50,
+              "subject": "worker31",
+              "authority": "approval31"
+            },
+            "authority": "sink31"
+          }
+        ],
+        "query": {
+          "kind": "HIT",
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            1,
+            2
+          ],
+          "at": 80,
+          "watermark": 80,
+          "priorAttemptEnd": 70,
+          "retentionUntil": 150,
+          "lifecycle": "ACTIVE",
+          "complete": true,
+          "authority": "sink31"
+        },
+        "history": {
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "attempts": [
+            1,
+            2
+          ],
+          "complete": true,
+          "source": "controller31",
+          "lastAttemptEnd": 70
+        },
+        "target": {
+          "uid": "u31",
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": "7",
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          }
+        },
+        "guard": {
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "protected": true,
+          "commitBound": true,
+          "uid": "u31",
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": "7",
+          "at": 95,
+          "commitAt": 100
+        },
+        "permission": {
+          "valid": true,
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "subject": "worker31",
+          "at": 94
+        },
+        "retry": {
+          "explicit": true,
+          "oldWorkerFenced": true,
+          "idempotencyBound": true
+        }
+      }
+    },
+    {
+      "id": "retry_permission_time_string",
+      "state": {
+        "scope": {
+          "task": "t31",
+          "run": "r31",
+          "intent": "i31",
+          "target": "tg31",
+          "uid": "u31",
+          "message": "m31",
+          "partition": "p31",
+          "session": "p31"
+        },
+        "broker": {
+          "accepted": true,
+          "message": "m31",
+          "partition": "p31",
+          "session": "p31",
+          "scheduled": false,
+          "dropped": false,
+          "withinWindow": true,
+          "lock": "SETTLED",
+          "delivery": "d31",
+          "settledDelivery": "d31",
+          "generation": 2,
+          "settledGeneration": 2,
+          "settleAt": 60
+        },
+        "receipts": [],
+        "query": {
+          "kind": "MISS",
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            1,
+            2
+          ],
+          "at": 96,
+          "watermark": 96,
+          "priorAttemptEnd": 70,
+          "retentionUntil": 150,
+          "lifecycle": "ACTIVE",
+          "complete": true,
+          "authority": "sink31"
+        },
+        "history": {
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "attempts": [
+            1,
+            2
+          ],
+          "complete": true,
+          "source": "controller31",
+          "lastAttemptEnd": 70
+        },
+        "target": {
+          "uid": "u31",
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "states": {
+            "A": "PENDING",
+            "B": "PENDING"
+          }
+        },
+        "guard": {
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "protected": true,
+          "commitBound": true,
+          "uid": "u31",
+          "members": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "at": 98,
+          "commitAt": 100
+        },
+        "permission": {
+          "valid": true,
+          "scope": {
+            "task": "t31",
+            "run": "r31",
+            "intent": "i31",
+            "target": "tg31",
+            "uid": "u31",
+            "message": "m31",
+            "partition": "p31",
+            "session": "p31"
+          },
+          "subject": "worker31",
+          "at": "94"
+        },
+        "retry": {
+          "explicit": true,
+          "oldWorkerFenced": true,
+          "idempotencyBound": true
+        }
+      }
+    },
+    {
       "id": "covered_miss_safe_retry",
       "state": {
         "scope": {

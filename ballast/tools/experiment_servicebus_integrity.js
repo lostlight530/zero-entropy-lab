@@ -60,6 +60,11 @@ function definitions(){
  ["guard_compare_not_bound_to_commit",s=>{s.guard.commitBound=false}],
  ["guard_wrong_intent",s=>{s.guard.scope.intent="other"}],
  ["current_state_B_pending",s=>{s.target.states.B="PENDING"}],
+ ["broker_settle_time_string",s=>{s.broker.settleAt="60"}],
+ ["guard_time_string",s=>{s.guard.at="95"}],
+ ["guard_commit_time_string",s=>{s.guard.commitAt="100"}],
+ ["revision_numeric_string",s=>{s.target.revision="7";s.guard.revision="7"}],
+ ["retry_permission_time_string",s=>{miss(s);s.permission.at="94"}],
  ["covered_miss_safe_retry",s=>{miss(s)}],
  ["covered_miss_permission_revoked",s=>{miss(s);s.permission.valid=false}],
  ["covered_miss_permission_wrong_run",s=>{miss(s);s.permission.scope.run="other"}],
@@ -80,6 +85,7 @@ function setEq(a,b){return Array.isArray(a)&&Array.isArray(b)&&a.length===b.leng
 
 function reference(s){
  const U="STOP_UNKNOWN",R="RECONCILE",B="BLOCKED",q=s.query,b=s.broker,g=s.guard,t=s.target,sc=s.scope;
+ if(![b.settleAt,g.at,g.commitAt,t.revision,g.revision,s.permission.at].every(Number.isInteger))return U;
  if(b.accepted!==true||b.message!==sc.message||b.partition!==sc.partition||b.session!==sc.session)return R;
  if(b.lock==="UNKNOWN")return U;
  if(b.lock!=="SETTLED"||b.delivery!==b.settledDelivery||!Number.isInteger(b.generation)||b.generation!==b.settledGeneration||!(b.settleAt<g.at))return R;
@@ -110,6 +116,7 @@ function verifier(s){
  const identity=(x,y)=>!!x&&!!y&&fields.filter(k=>typeof x[k]==="string"&&x[k]===y[k]).length===fields.length;
  const set=(a,b)=>Array.isArray(a)&&a.length===b.length&&new Set(a).size===a.length&&b.every(x=>a.indexOf(x)!==-1);
  const {scope,broker,query,target,guard,permission,retry,receipts}=s;
+ if(![broker.settleAt,guard.at,guard.commitAt,target.revision,guard.revision,permission.at].every(Number.isInteger))return U;
  if(!broker.accepted||[broker.message,broker.partition,broker.session].join("/")!==[scope.message,scope.partition,scope.session].join("/"))return R;
  if(broker.lock==="UNKNOWN")return U;
  if(broker.lock!=="SETTLED"||broker.delivery!==broker.settledDelivery||!Number.isInteger(broker.generation)||broker.generation!==broker.settledGeneration||!(broker.settleAt<guard.at))return R;
@@ -161,7 +168,12 @@ function produce(){
   ["uncovered_attempt",s=>{s.receipts[0].attempt=3}],
   ["covered_miss_conflict",s=>{s.query.kind="MISS";s.guard.at=98;s.query.at=96;s.query.watermark=96}],
   ["partition_mismatch",s=>{s.broker.partition="other"}],
-  ["settlement_epoch",s=>{s.broker.settledGeneration=1}]
+  ["settlement_epoch",s=>{s.broker.settledGeneration=1}],
+  ["broker_settle_string",s=>{s.broker.settleAt="60"}],
+  ["guard_time_string",s=>{s.guard.at="95"}],
+  ["guard_commit_string",s=>{s.guard.commitAt="100"}],
+  ["revision_string",s=>{s.target.revision="7";s.guard.revision="7"}],
+  ["retry_permission_string",s=>{s.receipts=[];s.query.kind="MISS";s.guard.at=98;s.query.at=96;s.query.watermark=96;s.target.states={A:"PENDING",B:"PENDING"};s.permission.at="94"}]
  ]){let s=fixture();patch(s);const a=reference(s),b=verifier(s);if(a!==b||a==="COMPLETE"||a==="RETRY_ALLOWED")throw Error("ADVERSARIAL_UNSAFE "+name+" "+a+" "+b);attacks.push({name,decision:a})}
  const checkRows=(states,decisions)=>{if(states.length!==decisions.length)throw Error("count");const ids=new Set();for(let i=0;i<states.length;i++){let {id,state}=states[i],row=decisions[i];if(ids.has(id)||id!==row.id)throw Error("duplicate/mismatch");ids.add(id);if(row.full_reference!==verifier(state)||row.send_proxy!==(state.broker.accepted?"COMPLETE":"RECONCILE")||row.settlement_proxy!==(state.broker.lock==="SETTLED"?"COMPLETE":"RECONCILE"))throw Error("forged decision")}};
  checkRows(scenarios,rows);
