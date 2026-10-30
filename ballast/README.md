@@ -33,6 +33,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-20 至 2026-10-25](audits/2026-10-20--2026-10-25.md)
+- 最新合并后修正对账: [2026-10-30 PR #754 post-merge reconciliation](corrections/2026-10-30-pubsub-merge-reconciliation.md)
 - 2026-09-26 至 2026-10-01 已形成新的 6 日 derived audit, 其中 2026-09-26 为 RECONSTRUCTION / NOT_RUN / UNVERIFIED. 该 audit 仅做派生审计, 新增实验数量 0, 新增长期结论数量 0, 不重复创建重叠 audit
 - 当前方法: [METHOD.md](METHOD.md)
 - 控制案例: [CASES.md](CASES.md)
@@ -788,3 +789,13 @@ Same-date [Pub/Sub Daily](records/2026-10-30.md) adversarial review preserves or
 2026-10-30 targeted month-to-date maintenance recorded as `PARTIAL` in [October ledger](records/2026-10.md), replacing stale NOT_RUN/TODO placeholders with actually checked Daily/Audit/index evidence and explicit outstanding final-day work, not with a forced checker PASS
 
 October 28 index now distinguishes 46/138 original evidence from 56/168 [merged correction](corrections/2026-10-28-azure-copy-postmerge.md); October 29 final 71/213 and October 30 same-date Draft 47/141 also retain point-in-time provenance, no additional research credit
+
+## 2026-10-30 post-merge status reconciliation
+
+At earlier 2026-10-30T00:18:41Z as-of review, 29 October Daily records were on main and [October 30 Daily](records/2026-10-30.md) was in Draft PR #754, that was the correct point-in-time observation
+
+[PR #754](https://github.com/lostlight530/zero-entropy-lab/pull/754) subsequently merged at 2026-10-30T01:10:38Z / Asia/Shanghai 09:10:38, merge commit `94eee047968cd2d32ccef38e774caca0e1023086`, reviewed head `ce0494efcca81ceeac8d9771fb676941f8687a91`, resulting in all 30 October 01..30 Dailies present in main and no still-open October 30 Draft
+
+The [bounded correction record](corrections/2026-10-30-pubsub-merge-reconciliation.md) and [October Monthly ledger](records/2026-10.md) preserve the original pre-merge snapshot and current merged state as separate observations, no new Daily, six-day audit, research window, CASE, NOTES or finding
+
+Monthly targeted maintenance stays PARTIAL until calendar-month end, real service effects, complete Python checker and native Node CLI remain NOT_EXECUTED, no script run required to reconcile verified GitHub lifecycle evidence
