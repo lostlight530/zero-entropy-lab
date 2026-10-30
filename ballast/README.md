@@ -784,3 +784,7 @@ Same-date independent maintainer replay of earlier head `159050d80783bcd05f0254e
 [October as-of evidence rollup](records/2026-10.md) distinguishes 30 NATIVE Daily dates including one still-unmerged 2026-10-30 Draft at review, five completed nonoverlapping derived audits (one cross-month), a not-yet-due 2026-10-26..31 audit, and no new CASE/NOTES research promotion or monthly maintenance certificate
 
 Same-date [Pub/Sub Daily](records/2026-10-30.md) adversarial review preserves original 32/96 Git head `4d26b6244b6e7b8c0444a5ad82899267804f4575` and corrects to 47/141 synthetic V8 decisions, 15 new unsafe-input probes safely rejected and 141/141 separately coded shared-contract verifier reconstruction, no new Daily/window credit, live cloud effect and independent authority NOT_EXECUTED
+
+2026-10-30 targeted month-to-date maintenance recorded as `PARTIAL` in [October ledger](records/2026-10.md), replacing stale NOT_RUN/TODO placeholders with actually checked Daily/Audit/index evidence and explicit outstanding final-day work, not with a forced checker PASS
+
+October 28 index now distinguishes 46/138 original evidence from 56/168 [merged correction](corrections/2026-10-28-azure-copy-postmerge.md); October 29 final 71/213 and October 30 same-date Draft 47/141 also retain point-in-time provenance, no additional research credit
