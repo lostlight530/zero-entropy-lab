@@ -1,0 +1,152 @@
+{
+  "scenarios": 47,
+  "rows": 141,
+  "reference": {
+    "COMPLETE": 2,
+    "RECONCILE": 21,
+    "BLOCKED": 4,
+    "STOP_UNKNOWN": 18,
+    "EVIDENCE_CONFLICT": 1,
+    "RETRY_ALLOWED": 1
+  },
+  "ackDisagreements": 45,
+  "messageDisagreements": 45,
+  "verifierAgreements": 47,
+  "duplicateScenarioIds": false,
+  "wrongRowCount": false,
+  "unsafeReferenceCompletes": [],
+  "tamperRejected": true,
+  "implementationIndependence": "PARTIAL",
+  "dataSourceIndependence": "NONE",
+  "semanticContractIndependence": "SHARED",
+  "authorityIndependence": "NONE",
+  "execution": "V8_ISOLATE_EXECUTED",
+  "nativeNodeCLI": "NOT_EXECUTED",
+  "fullPythonChecker": "NOT_EXECUTED",
+  "livePubSub": "NOT_EXECUTED",
+  "externalSink": "NOT_EXECUTED",
+  "originalPointInTime": {
+    "head": "4d26b6244b6e7b8c0444a5ad82899267804f4575",
+    "producerBlob": "f649e50c1b8b21179321bafecef6d1fcd4e6fb13",
+    "verifierBlob": "24b5680f2d3502426cda78744b459899a9611ac0",
+    "originalScenarios": 32,
+    "originalDecisions": 96,
+    "originalPersistedEvidenceReplay": "EXACT",
+    "originalReferenceLabelsPreserved": "32/32"
+  },
+  "independentSameDateReview": {
+    "executionUTC": "2026-10-30T00:18:41.114Z",
+    "status": "PASS_WITH_LIMITS",
+    "correctedScenarios": 47,
+    "correctedRows": 141,
+    "hist": {
+      "COMPLETE": 2,
+      "RECONCILE": 21,
+      "BLOCKED": 4,
+      "STOP_UNKNOWN": 18,
+      "EVIDENCE_CONFLICT": 1,
+      "RETRY_ALLOWED": 1
+    },
+    "disagreements": {
+      "ack_proxy": 45,
+      "message_proxy": 45
+    },
+    "adversarialProbes": [
+      {
+        "id": "adversarial_task_id_drift",
+        "outcome": "STOP_UNKNOWN"
+      },
+      {
+        "id": "adversarial_run_drift",
+        "outcome": "STOP_UNKNOWN"
+      },
+      {
+        "id": "adversarial_intent_drift",
+        "outcome": "STOP_UNKNOWN"
+      },
+      {
+        "id": "adversarial_subscription_drift",
+        "outcome": "STOP_UNKNOWN"
+      },
+      {
+        "id": "adversarial_duplicate_effect_id",
+        "outcome": "RECONCILE"
+      },
+      {
+        "id": "adversarial_future_query",
+        "outcome": "STOP_UNKNOWN"
+      },
+      {
+        "id": "adversarial_fractional_watermark",
+        "outcome": "STOP_UNKNOWN"
+      },
+      {
+        "id": "adversarial_grant_type_string",
+        "outcome": "BLOCKED"
+      },
+      {
+        "id": "adversarial_retry_wrong_run",
+        "outcome": "STOP_UNKNOWN"
+      },
+      {
+        "id": "adversarial_retry_future_query",
+        "outcome": "STOP_UNKNOWN"
+      },
+      {
+        "id": "adversarial_completion_scope_drift",
+        "outcome": "RECONCILE"
+      },
+      {
+        "id": "adversarial_delivery_attempt_three",
+        "outcome": "STOP_UNKNOWN"
+      },
+      {
+        "id": "adversarial_receipt_attempt_three",
+        "outcome": "RECONCILE"
+      },
+      {
+        "id": "adversarial_push_subscription",
+        "outcome": "STOP_UNKNOWN"
+      },
+      {
+        "id": "adversarial_grant_revoked_before_effect",
+        "outcome": "BLOCKED"
+      }
+    ],
+    "forgedTests": [
+      {
+        "id": "forged-row",
+        "rejected": true
+      },
+      {
+        "id": "duplicate-id",
+        "rejected": true
+      },
+      {
+        "id": "fake-effect",
+        "rejected": true
+      }
+    ],
+    "verifier": {
+      "pass": true,
+      "failures": [],
+      "scenarioCount": 47,
+      "rowCount": 141
+    },
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    },
+    "notExecuted": [
+      "FULL_PYTHON_CHECKER",
+      "NODE_CLI",
+      "LIVE_PUBSUB",
+      "EXTERNAL_SINK",
+      "SEMANTIC_INDEPENDENCE"
+    ],
+    "researchCreditAdded": 0
+  },
+  "reviewVersion": "SAME_DATE_CORRECTED_CURRENT_WITH_ORIGINAL_PRESERVED"
+}

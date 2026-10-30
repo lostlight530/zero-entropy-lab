@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-29 Cloud Tasks dispatch deadline and downstream effect integrity](records/2026-10-29.md)
+- 最新 Daily: [2026-10-30 Pub/Sub exactly-once ACK identity and downstream effect integrity](records/2026-10-30.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-20 至 2026-10-25](audits/2026-10-20--2026-10-25.md)
@@ -778,3 +778,13 @@ Same-date adversarial reference-model correction remains in the original Draft P
 Second same-date reference-model correction also preserves unmerged first-correction head d2b621176ecf44a02a5523bff4637c67d2164a31 as point-in-time evidence, five unsafe RETRY_ALLOWED cases now safe-stop or reconcile, no extra research/window credit
 
 Same-date independent maintainer replay of earlier head `159050d80783bcd05f0254ef71a1e971a18f710e` found 3 additional unsafe COMPLETE outcomes from future prior-query evidence and attempt-3 history not covered by the two-attempt fence; corrected to 71/213 with 3/3 STOP_UNKNOWN, original 68/204 retained in Git provenance, no new research-window credit
+
+## 2026-10-30 as-of month-to-date deep research synthesis
+
+[October as-of evidence rollup](records/2026-10.md) distinguishes 30 NATIVE Daily dates including one still-unmerged 2026-10-30 Draft at review, five completed nonoverlapping derived audits (one cross-month), a not-yet-due 2026-10-26..31 audit, and no new CASE/NOTES research promotion or monthly maintenance certificate
+
+Same-date [Pub/Sub Daily](records/2026-10-30.md) adversarial review preserves original 32/96 Git head `4d26b6244b6e7b8c0444a5ad82899267804f4575` and corrects to 47/141 synthetic V8 decisions, 15 new unsafe-input probes safely rejected and 141/141 separately coded shared-contract verifier reconstruction, no new Daily/window credit, live cloud effect and independent authority NOT_EXECUTED
+
+2026-10-30 targeted month-to-date maintenance recorded as `PARTIAL` in [October ledger](records/2026-10.md), replacing stale NOT_RUN/TODO placeholders with actually checked Daily/Audit/index evidence and explicit outstanding final-day work, not with a forced checker PASS
+
+October 28 index now distinguishes 46/138 original evidence from 56/168 [merged correction](corrections/2026-10-28-azure-copy-postmerge.md); October 29 final 71/213 and October 30 same-date Draft 47/141 also retain point-in-time provenance, no additional research credit
