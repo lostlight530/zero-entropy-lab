@@ -116,5 +116,21 @@
     "external sink",
     "independent historical approval authority",
     "semantic-contract-independent verifier"
-  ]
+  ],
+  "persistedSourceReplay": {
+    "atUTC": "2026-10-31T20:04:14.552Z",
+    "environment": "V8 isolate dynamic source evaluation of exact persisted GitHub blobs, not native Node CLI",
+    "sourceHead": "78d8fc78ec0a6dc502f231cc5474860df4961050",
+    "producerBlob": "ce9af6a9f1e834a11e7e6db909b42d9abc535641",
+    "verifierBlob": "c76f39555a1759baf5795c6d7bdfa897ed0dfc83",
+    "scenarioBlob": "df49748f0d0b246ebbca9ea6f2bb826b13f657cf",
+    "traceBlob": "3765e94e8697b9399ef801dba691ab3d6581bab3",
+    "decisionBlob": "dd13869482d430e02404a9dd28e06c8510cf46d3",
+    "traceEqual": true,
+    "decisionEqual": true,
+    "verifierEqual": true,
+    "scenarios": 40,
+    "decisions": 120,
+    "negativeProbes": 15
+  }
 }
