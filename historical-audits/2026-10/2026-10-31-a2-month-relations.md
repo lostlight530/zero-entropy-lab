@@ -86,259 +86,252 @@
 - Evidence basis: GitHub merged PR metadata/diffs, A1 successor files/comments, A2 current-main read-back, GitHub review submissions and A2 head Check Runs observed in this maintenance conversation. No fresh external scientific test executed.
 - Decision: `POSTMERGE_GITHUB_COMPLETE / STRICT_A1_ADMISSION_CONDITIONAL / NO_HISTORY_REWRITE`.
 
-## 2026-10-31 A2 successor — full September/October exact-file format gate
+## 2026-10-31 A2 successor: September/October source-object evidence
 
-- Fresh source: `main` commit `190236abe36fe8bd0f45b51836263e2a412ca52f`; Git tree `190236abe36fe8bd0f45b51836263e2a412ca52f`; recursive tree untruncated=`true`.
-- Audit scope includes September and October Aegis A1/A2 daily, A3/A4 weekly, A6 monthly, separate Ballast daily/monthly and dated maintenance. Every row below is one distinct existing file verified in the Git tree.
-- Path and nonzero byte checks are current structural delivery evidence only; each row includes immutable current blob SHA prefix and its exact byte count. They are not Jules/Research runner receipts or Markdown body correctness certification.
-- A1 original source freeze, A2 monthly evolution, Ballast synthetic-model runs, GitHub PR/merge, and a native real-world incident must remain different validation dimensions.
-- Ballast 2026-10-31 63 synthetic V8 scenarios remain bounded synthetic-model evidence, not Azure/live deployment. An external stop-signal source finding does not constitute a local outage.
-- W36–W43 weekly A3/A4 objects are within both months; ISO W44 includes November 1 and is OPEN/NOT_DUE at this cutoff, so its not-yet-final weekly artifact is not a proven missing execution.
-- Monthly A6 October remains OPEN/MONTH_TO_DATE/NOT_FINAL. September A6 and Ballast month statements keep their own run-authority timestamps; do not infer native closure from maintenance.
-- This audit is one append-only successor to merged A2 #766 (86 original added lines); it does not retroactively change the original PR, and it avoids writing into protected native or monthly producer artifacts.
-- A2 effective follow-on format evidence derives from distinct exact blob observations, not a copied boilerplate line count. No new runtime or scientific test is executed by this report.
+- This is forward-only supplementary audit evidence on current main, not a retroactive change to merged A2 PR #766.
+- Every distinct row has a real repository path, immutable blob SHA prefix, byte size and structural verdict, as returned by the untruncated recursive Git tree.
+- The path-level verdict does not establish actual production execution, body-level content acceptance, model performance, security claims, or final month closure.
+- Date scope: September 1–30 and October 1–31; appropriate native Aegis daily/weekly/monthly, related records and maintenance are identified individually.
+- W44 not yet closed; October month OPEN. A1, A2, native and D7/D10/D14/D30 audit identities remain separate.
+- Bounded-model-only results are not live-cloud execution. Existing prior-month author-time claims remain unchanged.
 
-### Individual object-level path / SHA / byte-size decisions
+- Tree `190236abe36fe8bd0f45b51836263e2a412ca52f`; truncated=false; selected files=231.
 
-| Owner family | Current-main path | Blob SHA prefix | Bytes | Structural verdict |
-|---|---|---|---:|---|
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-01-A1-reliability-observe.md` | `9ab34d4b7fd03fdf` | 7071 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-01-A2-doctrine-orient.md` | `d62b930154b9e6a1` | 7294 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-02-A1-reliability-observe.md` | `fe1219f63f926c93` | 8279 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-02-A2-doctrine-orient.md` | `c7ea3a91ce2bb21a` | 7516 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-03-A1-reliability-observe.md` | `f760d3cb5d9a0972` | 11405 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-03-A2-doctrine-orient.md` | `a01fd0f78f12f942` | 8763 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-04-A1-reliability-observe.md` | `c276547524685300` | 8686 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-04-A2-doctrine-orient.md` | `b91d3b92b5abdae9` | 7017 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-05-A1-reliability-observe.md` | `15fd56fea4afae30` | 7656 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-05-A2-doctrine-orient.md` | `445fdd722594a37c` | 6391 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-06-A1-reliability-observe.md` | `c8bca10e77ac4aca` | 5465 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-06-A2-doctrine-orient.md` | `9bceac113a83589d` | 5848 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-07-A1-reliability-observe.md` | `2fdb74df8cf15fbc` | 7123 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-07-A2-doctrine-orient.md` | `4a4c5c967c36017a` | 4931 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-08-A1-reliability-observe.md` | `39be320137a0cb8c` | 4981 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-08-A2-doctrine-orient.md` | `163a8120fa312aa4` | 6332 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-09-A1-reliability-observe.md` | `0b81e3ec116566a4` | 5580 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-09-A2-doctrine-orient.md` | `4174cb2482038396` | 6144 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-10-A1-reliability-observe.md` | `5165c206f2ee108c` | 10701 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-10-A2-doctrine-orient.md` | `2a1af97aca42f266` | 10152 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-11-A1-reliability-observe.md` | `1417a1d29ed45e91` | 7987 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-11-A2-doctrine-orient.md` | `f95efe445ec1324e` | 9419 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-12-A1-reliability-observe.md` | `328158d9d411d164` | 8001 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-12-A2-doctrine-orient.md` | `ecebbf50e970072a` | 5495 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-13-A1-reliability-observe.md` | `ac468d09fcdce7c7` | 5980 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-13-A2-doctrine-orient.md` | `22d969f5904adbc8` | 4584 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-14-A1-reliability-observe.md` | `9507281da23b4e85` | 5921 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-14-A2-doctrine-orient.md` | `2ff2581b72022c5a` | 5709 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-15-A1-reliability-observe.md` | `400d45d0d537b8eb` | 5240 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-15-A2-doctrine-orient.md` | `eba44f45ee6a6f2a` | 7584 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-16-A1-reliability-observe.md` | `43150c4d646b9c1e` | 5846 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-16-A2-doctrine-orient.md` | `201cc40c312403c1` | 5323 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-17-A1-reliability-observe.md` | `92f5e8a7fb8ce618` | 5803 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-17-A2-doctrine-orient.md` | `b15e5a7ffc0aa15c` | 3924 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-18-A1-reliability-observe.md` | `ace992ae6a0e2e73` | 7373 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-18-A2-doctrine-orient.md` | `bbbf1b96ca8debee` | 6798 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-19-A1-reliability-observe.md` | `5b2149c8f1d86713` | 7529 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-19-A2-doctrine-orient.md` | `293508be75701fbe` | 3307 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-20-A1-reliability-observe.md` | `7bb00178fac58c72` | 6776 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-20-A2-doctrine-orient.md` | `85eb173f9fa9529f` | 3612 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-21-A1-reliability-observe.md` | `fb4b3fe32bb9fdc3` | 5947 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-21-A2-doctrine-orient.md` | `33c6ca7b6cd33141` | 6559 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-22-A1-reliability-observe.md` | `63c36d5aa8d5e14c` | 6980 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-22-A2-doctrine-orient.md` | `add76917a868713b` | 7557 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-23-A1-reliability-observe.md` | `822536515d2b6ba7` | 8271 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-23-A2-doctrine-orient.md` | `155f67608190bacf` | 4687 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-24-A1-reliability-observe.md` | `d69b0044e03ebde4` | 6741 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-24-A2-doctrine-orient.md` | `c27b08ca53948e59` | 6820 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-25-A1-reliability-observe.md` | `80caaeb6f08603da` | 6522 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-25-A2-doctrine-orient.md` | `e0c09a4ca8df0e23` | 7591 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-26-A1-reliability-observe.md` | `64a3378f128cd8c5` | 8458 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-26-A2-doctrine-orient.md` | `df7c0ca2222018a3` | 4502 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-27-A1-reliability-observe.md` | `4cdbc85dfbbddfbd` | 6581 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-27-A2-doctrine-orient.md` | `fafa2b3e3ee4ecaa` | 8238 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-28-A1-reliability-observe.md` | `57ba88bc28f8c96f` | 6307 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-28-A2-doctrine-orient.md` | `3b5034ac3f81fd54` | 7135 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-29-A1-reliability-observe.md` | `df3e220c6ec3deb4` | 6680 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-29-A2-doctrine-orient.md` | `cbc7a30c1379099b` | 7308 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-30-A1-reliability-observe.md` | `38dae5386b4f0bd2` | 6358 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-30-A2-doctrine-orient.md` | `cad3c2f4636eb2b0` | 7080 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-09-A5-drift-reflect.md` | `a2e2471e91920acb` | 22353 | PATH_NONEMPTY |
-| `NATIVE_MONTHLY` | `aegis-cortex/2026-09-A6-aegis-memorize.md` | `24f16374ba015101` | 2845 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-01-A1-reliability-observe.md` | `461882e16809ef9b` | 6438 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-01-A2-doctrine-orient.md` | `450bb5e41ba1f4f5` | 3188 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-02-A1-reliability-observe.md` | `abe20d48251fc368` | 6538 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-02-A2-doctrine-orient.md` | `c590dffb8dc28fb7` | 4018 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-03-A1-reliability-observe.md` | `0f37ab4b605a2400` | 6295 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-03-A2-doctrine-orient.md` | `3c95e23cfa6187d0` | 6600 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-04-A1-reliability-observe.md` | `88fcc05dd273fbb3` | 5967 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-04-A2-doctrine-orient.md` | `08f105bfae915c99` | 1834 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-05-A1-reliability-observe.md` | `11701da8dff9882e` | 6137 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-05-A2-doctrine-orient.md` | `98139f531397d66b` | 6438 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-06-A1-reliability-observe.md` | `56abc25eca5f0e9e` | 6238 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-06-A2-doctrine-orient.md` | `6cb80c4d899b533c` | 7015 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-07-A1-reliability-observe.md` | `12c9266cc5f1fe08` | 8403 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-07-A2-doctrine-orient.md` | `9bd6c75a310832f7` | 9117 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-08-A1-reliability-observe.md` | `5c91de675c4dc78a` | 5910 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-08-A2-doctrine-orient.md` | `9815107064b4fed9` | 11624 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-09-A1-reliability-observe.md` | `e5b385ba25e8a4ef` | 6609 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-09-A2-doctrine-orient.md` | `2f96bb0dd5891a93` | 16037 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-10-A1-reliability-observe.md` | `bfbe8f099a7413cd` | 6407 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-10-A2-doctrine-orient.md` | `ce4f369d35fda91d` | 6626 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-11-A1-reliability-observe.md` | `bc3c4ba9cf48045b` | 5959 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-11-A2-doctrine-orient.md` | `d3882e3530ce9855` | 7757 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-12-A1-reliability-observe.md` | `72d7f662d70f5c73` | 6876 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-12-A2-doctrine-orient.md` | `6ed3797a34699a9e` | 8336 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-13-A1-reliability-observe.md` | `a5d0ca039bbe4b93` | 7596 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-13-A2-doctrine-orient.md` | `1404e3a91cb6f4b1` | 9874 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-14-A1-reliability-observe.md` | `1def392d03eb7bb0` | 6178 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-14-A2-doctrine-orient.md` | `c7b33ecece64b24d` | 7932 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-15-A1-reliability-observe.md` | `293272cf6ae77efc` | 7671 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-15-A2-doctrine-orient.md` | `896901e892647ab1` | 3670 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-16-A1-reliability-observe.md` | `372a99054cd4cd55` | 5743 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-16-A2-doctrine-orient.md` | `454d6a632ad13c2f` | 6642 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-17-A1-reliability-observe.md` | `32bc7fefb64671e1` | 6621 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-17-A2-doctrine-orient.md` | `7d839226fcf97532` | 7415 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-18-A1-reliability-observe.md` | `cb4df7bb2ca43662` | 5728 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-18-A2-doctrine-orient.md` | `de4fa530ab13e81a` | 3670 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-19-A1-reliability-observe.md` | `f0edcb5ce06fbc06` | 8532 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-19-A2-doctrine-orient.md` | `6a9798bba6967b02` | 8251 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-20-A1-reliability-observe.md` | `4adfe9ac3a632103` | 11398 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-20-A2-doctrine-orient.md` | `14c2e2d8dcc85fc0` | 15588 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-21-A1-reliability-observe.md` | `9c397544e16158d0` | 8493 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-21-A2-doctrine-orient.md` | `3bee2ab7f45d9be1` | 6514 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-22-A1-reliability-observe.md` | `97f64b6c675e7169` | 12786 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-22-A2-doctrine-orient.md` | `57671395b1249051` | 10636 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-23-A1-reliability-observe.md` | `a48c1172dee8b8c7` | 10487 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-23-A2-doctrine-orient.md` | `a46cde6671b65d40` | 8921 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-24-A1-reliability-observe.md` | `1ed35d655b031683` | 8436 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-24-A2-doctrine-orient.md` | `694eac2dc0f2656b` | 8905 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-25-A1-reliability-observe.md` | `8f57bef1f90eaf5e` | 6951 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-25-A2-doctrine-orient.md` | `2b1d0eed8acd75ed` | 10798 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-26-A1-reliability-observe.md` | `30fefde5e5c96bcf` | 6907 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-26-A2-doctrine-orient.md` | `01cd8158ead1b3e0` | 6835 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-27-A1-reliability-observe.md` | `53d4dbe817789f69` | 5067 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-27-A2-doctrine-orient.md` | `641b7054846396f0` | 4570 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-28-A1-reliability-observe.md` | `deadb66b7dcb829b` | 7449 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-28-A2-doctrine-orient.md` | `52e49166852337d1` | 10263 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-29-A1-reliability-observe.md` | `0febd738331638bc` | 5891 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-29-A2-doctrine-orient.md` | `78caa2ce28a2657a` | 9206 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-30-A1-reliability-observe.md` | `af96b4c1422edd34` | 5843 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-30-A2-doctrine-orient.md` | `3f2e299288b44f86` | 8997 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-31-A1-reliability-observe.md` | `635f05927dd7adae` | 8078 | PATH_NONEMPTY |
-| `NATIVE_DAILY` | `aegis-cortex/2026-10-31-A2-doctrine-orient.md` | `ff70234743bd6632` | 9559 | PATH_NONEMPTY |
-| `NATIVE_MONTHLY` | `aegis-cortex/2026-10-A6-aegis-memorize.md` | `e987827cf07afbee` | 596483 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W36-A3-discipline-decide.md` | `e799a5d2afbe1a22` | 9868 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W36-A4-protocol-act.md` | `3531c58171e6b6ef` | 7287 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W37-A3-discipline-decide.md` | `654808f8ff7df211` | 8560 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W37-A4-protocol-act.md` | `d7c04f02e3ed69f3` | 5669 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W38-A3-discipline-decide.md` | `b88d200bdcd650f4` | 10874 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W38-A4-protocol-act.md` | `efd92af104d6fb36` | 7325 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W39-A3-discipline-decide.md` | `8c3937e37207de02` | 10304 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W39-A4-protocol-act.md` | `67767c38511b3634` | 5932 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W40-A3-discipline-decide.md` | `041a3ed3b1ab9b36` | 8940 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W40-A4-protocol-act.md` | `21206290b54a7044` | 6696 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W41-A3-discipline-decide.md` | `ae751ae48f27d6c3` | 9341 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W41-A4-protocol-act.md` | `4be8b4fd999ee217` | 6619 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W42-A3-discipline-decide.md` | `a6098c04acb1cdca` | 6733 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W42-A4-protocol-act.md` | `c91936228660b814` | 3990 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W43-A3-discipline-decide.md` | `07911070de810482` | 6165 | PATH_NONEMPTY |
-| `NATIVE_WEEKLY` | `aegis-cortex/2026-W43-A4-protocol-act.md` | `7d6c81562c02a53e` | 4335 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-01.md` | `95d43c63206ca4a0` | 17153 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-02.md` | `abacc0a2f4db3469` | 7988 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-03.md` | `d47a4fc6048f5c1d` | 13052 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-04.md` | `c2d5a9362d79880e` | 16958 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-05.md` | `f0f6682c8e78e20c` | 10117 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-06.md` | `c9b5c968b5de59e0` | 18799 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-07.md` | `c191bef40799d53c` | 17699 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-08.md` | `71c20cd283e8afaa` | 6326 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-09.md` | `063ea598b1db76e8` | 16328 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-10.md` | `e2c8350c6a94ca03` | 17354 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-11.md` | `8760469d272a5ec1` | 16491 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-12.md` | `b8727c367f2d663c` | 16023 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-13.md` | `4db850b7e8a97f97` | 14863 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-14.md` | `f93e3be7f9864541` | 14980 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-15.md` | `520d5740a57aca79` | 15158 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-16.md` | `ecb1d6cd08019266` | 16354 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-17.md` | `cdea9104f02586bb` | 14081 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-18.md` | `5c8ee8f9d54e45cf` | 8363 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-19.md` | `10532b004b192718` | 15000 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-20.md` | `3ee8b23d22b1ef7c` | 10474 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-21.md` | `bbd1c0423f9e268b` | 11312 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-22.md` | `9fd4c71cd29fa6b9` | 12573 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-23.md` | `5595b8b1a6e80555` | 7865 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-24.md` | `8a3dd281f6a2b3aa` | 11575 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-25.md` | `cf4312c314256210` | 8157 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-26.md` | `de7c038d883a5077` | 3903 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-27.md` | `55dd7c0928b601f1` | 7299 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-28.md` | `6c933a1cd291913a` | 9585 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-29.md` | `9ad12a09058e61fe` | 12993 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-09-30.md` | `4bb750afcef7f1fd` | 13792 | PATH_NONEMPTY |
-| `BALLAST_MONTHLY` | `ballast/records/2026-09.md` | `53e62b74b7d9f2e4` | 63125 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-01.md` | `21a2dbd84f4a7e05` | 12421 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-02.md` | `1081112e8ef7f9c1` | 12361 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-03.md` | `82df0f7d4e36c844` | 16562 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-04.md` | `649882d3a0bbb793` | 16760 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-05.md` | `b5ac70417e44bd8b` | 11168 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-06.md` | `2ad5c5ce4a3fc422` | 9276 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-07.md` | `7f20b476517f31e4` | 11410 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-08.md` | `8d24c4cfc5362b7c` | 21159 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-09.md` | `cce84778a3f75246` | 12343 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-10.md` | `d2702d66363b0e8a` | 13882 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-11.md` | `b35c69acee29b194` | 15372 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-12.md` | `02fe0896ac9c41ae` | 9594 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-13.md` | `cc09eb3e1746cf4e` | 16962 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-14.md` | `98a752267cd0c2be` | 18894 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-15.md` | `2f94b0b736cd8e3f` | 9229 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-16.md` | `5cf129e2d6d31ce1` | 10297 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-17.md` | `4f76b71274f8a724` | 11965 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-18.md` | `9d0aa4b7d2dc10b5` | 13441 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-19.md` | `84488c6de94120a4` | 7542 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-20.md` | `86adc547bc9a745f` | 7129 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-21.md` | `1d6f82a47c714da7` | 10878 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-22.md` | `d0989c17f7f3412d` | 16260 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-23.md` | `4c96e39a7a2438ac` | 14390 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-24.md` | `84ff6b00559f6062` | 15680 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-25.md` | `0cf46aa7a78f7faf` | 16740 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-26.md` | `3216f2469d8eba59` | 18555 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-27.md` | `4bbc526db77db03b` | 18926 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-28.md` | `c8475c6e88c258c0` | 16246 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-29.md` | `48d86d75a01563c2` | 19643 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-30.md` | `d2b5294687430f2d` | 14360 | PATH_NONEMPTY |
-| `BALLAST_DAILY` | `ballast/records/2026-10-31.md` | `b7477a22f51169f7` | 17630 | PATH_NONEMPTY |
-| `BALLAST_MONTHLY` | `ballast/records/2026-10.md` | `53991d5821169e11` | 38671 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-09/2026-09-a1-evidence-freeze.md` | `a54d62aac7740cf5` | 10600 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-09/2026-09-a2-close-reconciliation.md` | `50bbabf42ea0f909` | 9629 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-01-external-independent-gpt-review.md` | `20fe8922187a4c9a` | 12222 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-02-september-d30-independent-gpt-audit.md` | `9d594f6fe2f78c60` | 7000 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-14-d14-pattern-formation.md` | `d3e9aebae370557b` | 7778 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-20-a1-source-custody.md` | `6593b37e96b6153d` | 23783 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-20-a2-month-relation.md` | `2cd58f2d503469a9` | 28328 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-21-a1-source-custody.md` | `90a48297f87a5d2c` | 17304 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-21-a2-month-relation.md` | `c81f51878dc66126` | 16457 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-23-a1-source-custody.md` | `db20f4c0009277bd` | 15481 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-23-a2-month-relation.md` | `e4d40abd0ca60735` | 13589 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-24-a1-source-custody.md` | `7e37d74c0dfa5701` | 12021 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-24-a2-month-relation.md` | `91742ceecd53c737` | 12938 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-25-a1-source-custody.md` | `7d6e0551bd2e9644` | 82304 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-25-a2-month-relation.md` | `74ad0db9343fea5b` | 25063 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-26-a1-source-custody.md` | `d8b340076c9aea93` | 60357 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-26-a2-month-relation.md` | `8125d4970cf7b0fd` | 24649 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-27-a1-a2-coverage-reconciliation.md` | `27def6fe664cb083` | 18093 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-27-a1-source-custody.md` | `e9093a3f605deb83` | 14124 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-27-a2-month-relation.md` | `89b5769da6194d43` | 14439 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-28-a1-source-custody.md` | `f7ce2594b5dfda99` | 53019 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-28-a2-month-relation.md` | `4d80d5ce38fbae6e` | 58094 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-28-october-native-weekly-gap-recovery-register.md` | `4eb65dc689b1567c` | 22974 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-28-sop-minimal-acceptance-audit.md` | `aa5220ee3fa447bb` | 6569 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-30-a1-source-content-review.md` | `cd54808b99aa8ff8` | 47773 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-31-a1-source-custody.md` | `ec746ef74dc02b00` | 17008 | PATH_NONEMPTY |
-| `MAINTENANCE` | `historical-audits/2026-10/2026-10-31-a2-month-relations.md` | `a5e4148820ea33cd` | 10352 | PATH_NONEMPTY |
+### Source-specific structural verification rows
+| Path | Git blob SHA (prefix) | Bytes | Path/nonzero status |
+|---|---|---:|---|
+| aegis-cortex/2026-09-01-A1-reliability-observe.md | 9ab34d4b7fd03fdf | 7071 | NONEMPTY |
+| aegis-cortex/2026-09-01-A2-doctrine-orient.md | d62b930154b9e6a1 | 7294 | NONEMPTY |
+| aegis-cortex/2026-09-02-A1-reliability-observe.md | fe1219f63f926c93 | 8279 | NONEMPTY |
+| aegis-cortex/2026-09-02-A2-doctrine-orient.md | c7ea3a91ce2bb21a | 7516 | NONEMPTY |
+| aegis-cortex/2026-09-03-A1-reliability-observe.md | f760d3cb5d9a0972 | 11405 | NONEMPTY |
+| aegis-cortex/2026-09-03-A2-doctrine-orient.md | a01fd0f78f12f942 | 8763 | NONEMPTY |
+| aegis-cortex/2026-09-04-A1-reliability-observe.md | c276547524685300 | 8686 | NONEMPTY |
+| aegis-cortex/2026-09-04-A2-doctrine-orient.md | b91d3b92b5abdae9 | 7017 | NONEMPTY |
+| aegis-cortex/2026-09-05-A1-reliability-observe.md | 15fd56fea4afae30 | 7656 | NONEMPTY |
+| aegis-cortex/2026-09-05-A2-doctrine-orient.md | 445fdd722594a37c | 6391 | NONEMPTY |
+| aegis-cortex/2026-09-06-A1-reliability-observe.md | c8bca10e77ac4aca | 5465 | NONEMPTY |
+| aegis-cortex/2026-09-06-A2-doctrine-orient.md | 9bceac113a83589d | 5848 | NONEMPTY |
+| aegis-cortex/2026-09-07-A1-reliability-observe.md | 2fdb74df8cf15fbc | 7123 | NONEMPTY |
+| aegis-cortex/2026-09-07-A2-doctrine-orient.md | 4a4c5c967c36017a | 4931 | NONEMPTY |
+| aegis-cortex/2026-09-08-A1-reliability-observe.md | 39be320137a0cb8c | 4981 | NONEMPTY |
+| aegis-cortex/2026-09-08-A2-doctrine-orient.md | 163a8120fa312aa4 | 6332 | NONEMPTY |
+| aegis-cortex/2026-09-09-A1-reliability-observe.md | 0b81e3ec116566a4 | 5580 | NONEMPTY |
+| aegis-cortex/2026-09-09-A2-doctrine-orient.md | 4174cb2482038396 | 6144 | NONEMPTY |
+| aegis-cortex/2026-09-10-A1-reliability-observe.md | 5165c206f2ee108c | 10701 | NONEMPTY |
+| aegis-cortex/2026-09-10-A2-doctrine-orient.md | 2a1af97aca42f266 | 10152 | NONEMPTY |
+| aegis-cortex/2026-09-11-A1-reliability-observe.md | 1417a1d29ed45e91 | 7987 | NONEMPTY |
+| aegis-cortex/2026-09-11-A2-doctrine-orient.md | f95efe445ec1324e | 9419 | NONEMPTY |
+| aegis-cortex/2026-09-12-A1-reliability-observe.md | 328158d9d411d164 | 8001 | NONEMPTY |
+| aegis-cortex/2026-09-12-A2-doctrine-orient.md | ecebbf50e970072a | 5495 | NONEMPTY |
+| aegis-cortex/2026-09-13-A1-reliability-observe.md | ac468d09fcdce7c7 | 5980 | NONEMPTY |
+| aegis-cortex/2026-09-13-A2-doctrine-orient.md | 22d969f5904adbc8 | 4584 | NONEMPTY |
+| aegis-cortex/2026-09-14-A1-reliability-observe.md | 9507281da23b4e85 | 5921 | NONEMPTY |
+| aegis-cortex/2026-09-14-A2-doctrine-orient.md | 2ff2581b72022c5a | 5709 | NONEMPTY |
+| aegis-cortex/2026-09-15-A1-reliability-observe.md | 400d45d0d537b8eb | 5240 | NONEMPTY |
+| aegis-cortex/2026-09-15-A2-doctrine-orient.md | eba44f45ee6a6f2a | 7584 | NONEMPTY |
+| aegis-cortex/2026-09-16-A1-reliability-observe.md | 43150c4d646b9c1e | 5846 | NONEMPTY |
+| aegis-cortex/2026-09-16-A2-doctrine-orient.md | 201cc40c312403c1 | 5323 | NONEMPTY |
+| aegis-cortex/2026-09-17-A1-reliability-observe.md | 92f5e8a7fb8ce618 | 5803 | NONEMPTY |
+| aegis-cortex/2026-09-17-A2-doctrine-orient.md | b15e5a7ffc0aa15c | 3924 | NONEMPTY |
+| aegis-cortex/2026-09-18-A1-reliability-observe.md | ace992ae6a0e2e73 | 7373 | NONEMPTY |
+| aegis-cortex/2026-09-18-A2-doctrine-orient.md | bbbf1b96ca8debee | 6798 | NONEMPTY |
+| aegis-cortex/2026-09-19-A1-reliability-observe.md | 5b2149c8f1d86713 | 7529 | NONEMPTY |
+| aegis-cortex/2026-09-19-A2-doctrine-orient.md | 293508be75701fbe | 3307 | NONEMPTY |
+| aegis-cortex/2026-09-20-A1-reliability-observe.md | 7bb00178fac58c72 | 6776 | NONEMPTY |
+| aegis-cortex/2026-09-20-A2-doctrine-orient.md | 85eb173f9fa9529f | 3612 | NONEMPTY |
+| aegis-cortex/2026-09-21-A1-reliability-observe.md | fb4b3fe32bb9fdc3 | 5947 | NONEMPTY |
+| aegis-cortex/2026-09-21-A2-doctrine-orient.md | 33c6ca7b6cd33141 | 6559 | NONEMPTY |
+| aegis-cortex/2026-09-22-A1-reliability-observe.md | 63c36d5aa8d5e14c | 6980 | NONEMPTY |
+| aegis-cortex/2026-09-22-A2-doctrine-orient.md | add76917a868713b | 7557 | NONEMPTY |
+| aegis-cortex/2026-09-23-A1-reliability-observe.md | 822536515d2b6ba7 | 8271 | NONEMPTY |
+| aegis-cortex/2026-09-23-A2-doctrine-orient.md | 155f67608190bacf | 4687 | NONEMPTY |
+| aegis-cortex/2026-09-24-A1-reliability-observe.md | d69b0044e03ebde4 | 6741 | NONEMPTY |
+| aegis-cortex/2026-09-24-A2-doctrine-orient.md | c27b08ca53948e59 | 6820 | NONEMPTY |
+| aegis-cortex/2026-09-25-A1-reliability-observe.md | 80caaeb6f08603da | 6522 | NONEMPTY |
+| aegis-cortex/2026-09-25-A2-doctrine-orient.md | e0c09a4ca8df0e23 | 7591 | NONEMPTY |
+| aegis-cortex/2026-09-26-A1-reliability-observe.md | 64a3378f128cd8c5 | 8458 | NONEMPTY |
+| aegis-cortex/2026-09-26-A2-doctrine-orient.md | df7c0ca2222018a3 | 4502 | NONEMPTY |
+| aegis-cortex/2026-09-27-A1-reliability-observe.md | 4cdbc85dfbbddfbd | 6581 | NONEMPTY |
+| aegis-cortex/2026-09-27-A2-doctrine-orient.md | fafa2b3e3ee4ecaa | 8238 | NONEMPTY |
+| aegis-cortex/2026-09-28-A1-reliability-observe.md | 57ba88bc28f8c96f | 6307 | NONEMPTY |
+| aegis-cortex/2026-09-28-A2-doctrine-orient.md | 3b5034ac3f81fd54 | 7135 | NONEMPTY |
+| aegis-cortex/2026-09-29-A1-reliability-observe.md | df3e220c6ec3deb4 | 6680 | NONEMPTY |
+| aegis-cortex/2026-09-29-A2-doctrine-orient.md | cbc7a30c1379099b | 7308 | NONEMPTY |
+| aegis-cortex/2026-09-30-A1-reliability-observe.md | 38dae5386b4f0bd2 | 6358 | NONEMPTY |
+| aegis-cortex/2026-09-30-A2-doctrine-orient.md | cad3c2f4636eb2b0 | 7080 | NONEMPTY |
+| aegis-cortex/2026-09-A5-drift-reflect.md | a2e2471e91920acb | 22353 | NONEMPTY |
+| aegis-cortex/2026-09-A6-aegis-memorize.md | 24f16374ba015101 | 2845 | NONEMPTY |
+| aegis-cortex/2026-10-01-A1-reliability-observe.md | 461882e16809ef9b | 6438 | NONEMPTY |
+| aegis-cortex/2026-10-01-A2-doctrine-orient.md | 450bb5e41ba1f4f5 | 3188 | NONEMPTY |
+| aegis-cortex/2026-10-02-A1-reliability-observe.md | abe20d48251fc368 | 6538 | NONEMPTY |
+| aegis-cortex/2026-10-02-A2-doctrine-orient.md | c590dffb8dc28fb7 | 4018 | NONEMPTY |
+| aegis-cortex/2026-10-03-A1-reliability-observe.md | 0f37ab4b605a2400 | 6295 | NONEMPTY |
+| aegis-cortex/2026-10-03-A2-doctrine-orient.md | 3c95e23cfa6187d0 | 6600 | NONEMPTY |
+| aegis-cortex/2026-10-04-A1-reliability-observe.md | 88fcc05dd273fbb3 | 5967 | NONEMPTY |
+| aegis-cortex/2026-10-04-A2-doctrine-orient.md | 08f105bfae915c99 | 1834 | NONEMPTY |
+| aegis-cortex/2026-10-05-A1-reliability-observe.md | 11701da8dff9882e | 6137 | NONEMPTY |
+| aegis-cortex/2026-10-05-A2-doctrine-orient.md | 98139f531397d66b | 6438 | NONEMPTY |
+| aegis-cortex/2026-10-06-A1-reliability-observe.md | 56abc25eca5f0e9e | 6238 | NONEMPTY |
+| aegis-cortex/2026-10-06-A2-doctrine-orient.md | 6cb80c4d899b533c | 7015 | NONEMPTY |
+| aegis-cortex/2026-10-07-A1-reliability-observe.md | 12c9266cc5f1fe08 | 8403 | NONEMPTY |
+| aegis-cortex/2026-10-07-A2-doctrine-orient.md | 9bd6c75a310832f7 | 9117 | NONEMPTY |
+| aegis-cortex/2026-10-08-A1-reliability-observe.md | 5c91de675c4dc78a | 5910 | NONEMPTY |
+| aegis-cortex/2026-10-08-A2-doctrine-orient.md | 9815107064b4fed9 | 11624 | NONEMPTY |
+| aegis-cortex/2026-10-09-A1-reliability-observe.md | e5b385ba25e8a4ef | 6609 | NONEMPTY |
+| aegis-cortex/2026-10-09-A2-doctrine-orient.md | 2f96bb0dd5891a93 | 16037 | NONEMPTY |
+| aegis-cortex/2026-10-10-A1-reliability-observe.md | bfbe8f099a7413cd | 6407 | NONEMPTY |
+| aegis-cortex/2026-10-10-A2-doctrine-orient.md | ce4f369d35fda91d | 6626 | NONEMPTY |
+| aegis-cortex/2026-10-11-A1-reliability-observe.md | bc3c4ba9cf48045b | 5959 | NONEMPTY |
+| aegis-cortex/2026-10-11-A2-doctrine-orient.md | d3882e3530ce9855 | 7757 | NONEMPTY |
+| aegis-cortex/2026-10-12-A1-reliability-observe.md | 72d7f662d70f5c73 | 6876 | NONEMPTY |
+| aegis-cortex/2026-10-12-A2-doctrine-orient.md | 6ed3797a34699a9e | 8336 | NONEMPTY |
+| aegis-cortex/2026-10-13-A1-reliability-observe.md | a5d0ca039bbe4b93 | 7596 | NONEMPTY |
+| aegis-cortex/2026-10-13-A2-doctrine-orient.md | 1404e3a91cb6f4b1 | 9874 | NONEMPTY |
+| aegis-cortex/2026-10-14-A1-reliability-observe.md | 1def392d03eb7bb0 | 6178 | NONEMPTY |
+| aegis-cortex/2026-10-14-A2-doctrine-orient.md | c7b33ecece64b24d | 7932 | NONEMPTY |
+| aegis-cortex/2026-10-15-A1-reliability-observe.md | 293272cf6ae77efc | 7671 | NONEMPTY |
+| aegis-cortex/2026-10-15-A2-doctrine-orient.md | 896901e892647ab1 | 3670 | NONEMPTY |
+| aegis-cortex/2026-10-16-A1-reliability-observe.md | 372a99054cd4cd55 | 5743 | NONEMPTY |
+| aegis-cortex/2026-10-16-A2-doctrine-orient.md | 454d6a632ad13c2f | 6642 | NONEMPTY |
+| aegis-cortex/2026-10-17-A1-reliability-observe.md | 32bc7fefb64671e1 | 6621 | NONEMPTY |
+| aegis-cortex/2026-10-17-A2-doctrine-orient.md | 7d839226fcf97532 | 7415 | NONEMPTY |
+| aegis-cortex/2026-10-18-A1-reliability-observe.md | cb4df7bb2ca43662 | 5728 | NONEMPTY |
+| aegis-cortex/2026-10-18-A2-doctrine-orient.md | de4fa530ab13e81a | 3670 | NONEMPTY |
+| aegis-cortex/2026-10-19-A1-reliability-observe.md | f0edcb5ce06fbc06 | 8532 | NONEMPTY |
+| aegis-cortex/2026-10-19-A2-doctrine-orient.md | 6a9798bba6967b02 | 8251 | NONEMPTY |
+| aegis-cortex/2026-10-20-A1-reliability-observe.md | 4adfe9ac3a632103 | 11398 | NONEMPTY |
+| aegis-cortex/2026-10-20-A2-doctrine-orient.md | 14c2e2d8dcc85fc0 | 15588 | NONEMPTY |
+| aegis-cortex/2026-10-21-A1-reliability-observe.md | 9c397544e16158d0 | 8493 | NONEMPTY |
+| aegis-cortex/2026-10-21-A2-doctrine-orient.md | 3bee2ab7f45d9be1 | 6514 | NONEMPTY |
+| aegis-cortex/2026-10-22-A1-reliability-observe.md | 97f64b6c675e7169 | 12786 | NONEMPTY |
+| aegis-cortex/2026-10-22-A2-doctrine-orient.md | 57671395b1249051 | 10636 | NONEMPTY |
+| aegis-cortex/2026-10-23-A1-reliability-observe.md | a48c1172dee8b8c7 | 10487 | NONEMPTY |
+| aegis-cortex/2026-10-23-A2-doctrine-orient.md | a46cde6671b65d40 | 8921 | NONEMPTY |
+| aegis-cortex/2026-10-24-A1-reliability-observe.md | 1ed35d655b031683 | 8436 | NONEMPTY |
+| aegis-cortex/2026-10-24-A2-doctrine-orient.md | 694eac2dc0f2656b | 8905 | NONEMPTY |
+| aegis-cortex/2026-10-25-A1-reliability-observe.md | 8f57bef1f90eaf5e | 6951 | NONEMPTY |
+| aegis-cortex/2026-10-25-A2-doctrine-orient.md | 2b1d0eed8acd75ed | 10798 | NONEMPTY |
+| aegis-cortex/2026-10-26-A1-reliability-observe.md | 30fefde5e5c96bcf | 6907 | NONEMPTY |
+| aegis-cortex/2026-10-26-A2-doctrine-orient.md | 01cd8158ead1b3e0 | 6835 | NONEMPTY |
+| aegis-cortex/2026-10-27-A1-reliability-observe.md | 53d4dbe817789f69 | 5067 | NONEMPTY |
+| aegis-cortex/2026-10-27-A2-doctrine-orient.md | 641b7054846396f0 | 4570 | NONEMPTY |
+| aegis-cortex/2026-10-28-A1-reliability-observe.md | deadb66b7dcb829b | 7449 | NONEMPTY |
+| aegis-cortex/2026-10-28-A2-doctrine-orient.md | 52e49166852337d1 | 10263 | NONEMPTY |
+| aegis-cortex/2026-10-29-A1-reliability-observe.md | 0febd738331638bc | 5891 | NONEMPTY |
+| aegis-cortex/2026-10-29-A2-doctrine-orient.md | 78caa2ce28a2657a | 9206 | NONEMPTY |
+| aegis-cortex/2026-10-30-A1-reliability-observe.md | af96b4c1422edd34 | 5843 | NONEMPTY |
+| aegis-cortex/2026-10-30-A2-doctrine-orient.md | 3f2e299288b44f86 | 8997 | NONEMPTY |
+| aegis-cortex/2026-10-31-A1-reliability-observe.md | 635f05927dd7adae | 8078 | NONEMPTY |
+| aegis-cortex/2026-10-31-A2-doctrine-orient.md | ff70234743bd6632 | 9559 | NONEMPTY |
+| aegis-cortex/2026-10-A6-aegis-memorize.md | e987827cf07afbee | 596483 | NONEMPTY |
+| aegis-cortex/2026-W36-A3-discipline-decide.md | e799a5d2afbe1a22 | 9868 | NONEMPTY |
+| aegis-cortex/2026-W36-A4-protocol-act.md | 3531c58171e6b6ef | 7287 | NONEMPTY |
+| aegis-cortex/2026-W37-A3-discipline-decide.md | 654808f8ff7df211 | 8560 | NONEMPTY |
+| aegis-cortex/2026-W37-A4-protocol-act.md | d7c04f02e3ed69f3 | 5669 | NONEMPTY |
+| aegis-cortex/2026-W38-A3-discipline-decide.md | b88d200bdcd650f4 | 10874 | NONEMPTY |
+| aegis-cortex/2026-W38-A4-protocol-act.md | efd92af104d6fb36 | 7325 | NONEMPTY |
+| aegis-cortex/2026-W39-A3-discipline-decide.md | 8c3937e37207de02 | 10304 | NONEMPTY |
+| aegis-cortex/2026-W39-A4-protocol-act.md | 67767c38511b3634 | 5932 | NONEMPTY |
+| aegis-cortex/2026-W40-A3-discipline-decide.md | 041a3ed3b1ab9b36 | 8940 | NONEMPTY |
+| aegis-cortex/2026-W40-A4-protocol-act.md | 21206290b54a7044 | 6696 | NONEMPTY |
+| aegis-cortex/2026-W41-A3-discipline-decide.md | ae751ae48f27d6c3 | 9341 | NONEMPTY |
+| aegis-cortex/2026-W41-A4-protocol-act.md | 4be8b4fd999ee217 | 6619 | NONEMPTY |
+| aegis-cortex/2026-W42-A3-discipline-decide.md | a6098c04acb1cdca | 6733 | NONEMPTY |
+| aegis-cortex/2026-W42-A4-protocol-act.md | c91936228660b814 | 3990 | NONEMPTY |
+| aegis-cortex/2026-W43-A3-discipline-decide.md | 07911070de810482 | 6165 | NONEMPTY |
+| aegis-cortex/2026-W43-A4-protocol-act.md | 7d6c81562c02a53e | 4335 | NONEMPTY |
+| ballast/records/2026-09-01.md | 95d43c63206ca4a0 | 17153 | NONEMPTY |
+| ballast/records/2026-09-02.md | abacc0a2f4db3469 | 7988 | NONEMPTY |
+| ballast/records/2026-09-03.md | d47a4fc6048f5c1d | 13052 | NONEMPTY |
+| ballast/records/2026-09-04.md | c2d5a9362d79880e | 16958 | NONEMPTY |
+| ballast/records/2026-09-05.md | f0f6682c8e78e20c | 10117 | NONEMPTY |
+| ballast/records/2026-09-06.md | c9b5c968b5de59e0 | 18799 | NONEMPTY |
+| ballast/records/2026-09-07.md | c191bef40799d53c | 17699 | NONEMPTY |
+| ballast/records/2026-09-08.md | 71c20cd283e8afaa | 6326 | NONEMPTY |
+| ballast/records/2026-09-09.md | 063ea598b1db76e8 | 16328 | NONEMPTY |
+| ballast/records/2026-09-10.md | e2c8350c6a94ca03 | 17354 | NONEMPTY |
+| ballast/records/2026-09-11.md | 8760469d272a5ec1 | 16491 | NONEMPTY |
+| ballast/records/2026-09-12.md | b8727c367f2d663c | 16023 | NONEMPTY |
+| ballast/records/2026-09-13.md | 4db850b7e8a97f97 | 14863 | NONEMPTY |
+| ballast/records/2026-09-14.md | f93e3be7f9864541 | 14980 | NONEMPTY |
+| ballast/records/2026-09-15.md | 520d5740a57aca79 | 15158 | NONEMPTY |
+| ballast/records/2026-09-16.md | ecb1d6cd08019266 | 16354 | NONEMPTY |
+| ballast/records/2026-09-17.md | cdea9104f02586bb | 14081 | NONEMPTY |
+| ballast/records/2026-09-18.md | 5c8ee8f9d54e45cf | 8363 | NONEMPTY |
+| ballast/records/2026-09-19.md | 10532b004b192718 | 15000 | NONEMPTY |
+| ballast/records/2026-09-20.md | 3ee8b23d22b1ef7c | 10474 | NONEMPTY |
+| ballast/records/2026-09-21.md | bbd1c0423f9e268b | 11312 | NONEMPTY |
+| ballast/records/2026-09-22.md | 9fd4c71cd29fa6b9 | 12573 | NONEMPTY |
+| ballast/records/2026-09-23.md | 5595b8b1a6e80555 | 7865 | NONEMPTY |
+| ballast/records/2026-09-24.md | 8a3dd281f6a2b3aa | 11575 | NONEMPTY |
+| ballast/records/2026-09-25.md | cf4312c314256210 | 8157 | NONEMPTY |
+| ballast/records/2026-09-26.md | de7c038d883a5077 | 3903 | NONEMPTY |
+| ballast/records/2026-09-27.md | 55dd7c0928b601f1 | 7299 | NONEMPTY |
+| ballast/records/2026-09-28.md | 6c933a1cd291913a | 9585 | NONEMPTY |
+| ballast/records/2026-09-29.md | 9ad12a09058e61fe | 12993 | NONEMPTY |
+| ballast/records/2026-09-30.md | 4bb750afcef7f1fd | 13792 | NONEMPTY |
+| ballast/records/2026-09.md | 53e62b74b7d9f2e4 | 63125 | NONEMPTY |
+| ballast/records/2026-10-01.md | 21a2dbd84f4a7e05 | 12421 | NONEMPTY |
+| ballast/records/2026-10-02.md | 1081112e8ef7f9c1 | 12361 | NONEMPTY |
+| ballast/records/2026-10-03.md | 82df0f7d4e36c844 | 16562 | NONEMPTY |
+| ballast/records/2026-10-04.md | 649882d3a0bbb793 | 16760 | NONEMPTY |
+| ballast/records/2026-10-05.md | b5ac70417e44bd8b | 11168 | NONEMPTY |
+| ballast/records/2026-10-06.md | 2ad5c5ce4a3fc422 | 9276 | NONEMPTY |
+| ballast/records/2026-10-07.md | 7f20b476517f31e4 | 11410 | NONEMPTY |
+| ballast/records/2026-10-08.md | 8d24c4cfc5362b7c | 21159 | NONEMPTY |
+| ballast/records/2026-10-09.md | cce84778a3f75246 | 12343 | NONEMPTY |
+| ballast/records/2026-10-10.md | d2702d66363b0e8a | 13882 | NONEMPTY |
+| ballast/records/2026-10-11.md | b35c69acee29b194 | 15372 | NONEMPTY |
+| ballast/records/2026-10-12.md | 02fe0896ac9c41ae | 9594 | NONEMPTY |
+| ballast/records/2026-10-13.md | cc09eb3e1746cf4e | 16962 | NONEMPTY |
+| ballast/records/2026-10-14.md | 98a752267cd0c2be | 18894 | NONEMPTY |
+| ballast/records/2026-10-15.md | 2f94b0b736cd8e3f | 9229 | NONEMPTY |
+| ballast/records/2026-10-16.md | 5cf129e2d6d31ce1 | 10297 | NONEMPTY |
+| ballast/records/2026-10-17.md | 4f76b71274f8a724 | 11965 | NONEMPTY |
+| ballast/records/2026-10-18.md | 9d0aa4b7d2dc10b5 | 13441 | NONEMPTY |
+| ballast/records/2026-10-19.md | 84488c6de94120a4 | 7542 | NONEMPTY |
+| ballast/records/2026-10-20.md | 86adc547bc9a745f | 7129 | NONEMPTY |
+| ballast/records/2026-10-21.md | 1d6f82a47c714da7 | 10878 | NONEMPTY |
+| ballast/records/2026-10-22.md | d0989c17f7f3412d | 16260 | NONEMPTY |
+| ballast/records/2026-10-23.md | 4c96e39a7a2438ac | 14390 | NONEMPTY |
+| ballast/records/2026-10-24.md | 84ff6b00559f6062 | 15680 | NONEMPTY |
+| ballast/records/2026-10-25.md | 0cf46aa7a78f7faf | 16740 | NONEMPTY |
+| ballast/records/2026-10-26.md | 3216f2469d8eba59 | 18555 | NONEMPTY |
+| ballast/records/2026-10-27.md | 4bbc526db77db03b | 18926 | NONEMPTY |
+| ballast/records/2026-10-28.md | c8475c6e88c258c0 | 16246 | NONEMPTY |
+| ballast/records/2026-10-29.md | 48d86d75a01563c2 | 19643 | NONEMPTY |
+| ballast/records/2026-10-30.md | d2b5294687430f2d | 14360 | NONEMPTY |
+| ballast/records/2026-10-31.md | b7477a22f51169f7 | 17630 | NONEMPTY |
+| ballast/records/2026-10.md | 53991d5821169e11 | 38671 | NONEMPTY |
+| historical-audits/2026-09/2026-09-a1-evidence-freeze.md | a54d62aac7740cf5 | 10600 | NONEMPTY |
+| historical-audits/2026-09/2026-09-a2-close-reconciliation.md | 50bbabf42ea0f909 | 9629 | NONEMPTY |
+| historical-audits/2026-10/2026-10-01-external-independent-gpt-review.md | 20fe8922187a4c9a | 12222 | NONEMPTY |
+| historical-audits/2026-10/2026-10-02-september-d30-independent-gpt-audit.md | 9d594f6fe2f78c60 | 7000 | NONEMPTY |
+| historical-audits/2026-10/2026-10-14-d14-pattern-formation.md | d3e9aebae370557b | 7778 | NONEMPTY |
+| historical-audits/2026-10/2026-10-20-a1-source-custody.md | 6593b37e96b6153d | 23783 | NONEMPTY |
+| historical-audits/2026-10/2026-10-20-a2-month-relation.md | 2cd58f2d503469a9 | 28328 | NONEMPTY |
+| historical-audits/2026-10/2026-10-21-a1-source-custody.md | 90a48297f87a5d2c | 17304 | NONEMPTY |
+| historical-audits/2026-10/2026-10-21-a2-month-relation.md | c81f51878dc66126 | 16457 | NONEMPTY |
+| historical-audits/2026-10/2026-10-23-a1-source-custody.md | db20f4c0009277bd | 15481 | NONEMPTY |
+| historical-audits/2026-10/2026-10-23-a2-month-relation.md | e4d40abd0ca60735 | 13589 | NONEMPTY |
+| historical-audits/2026-10/2026-10-24-a1-source-custody.md | 7e37d74c0dfa5701 | 12021 | NONEMPTY |
+| historical-audits/2026-10/2026-10-24-a2-month-relation.md | 91742ceecd53c737 | 12938 | NONEMPTY |
+| historical-audits/2026-10/2026-10-25-a1-source-custody.md | 7d6e0551bd2e9644 | 82304 | NONEMPTY |
+| historical-audits/2026-10/2026-10-25-a2-month-relation.md | 74ad0db9343fea5b | 25063 | NONEMPTY |
+| historical-audits/2026-10/2026-10-26-a1-source-custody.md | d8b340076c9aea93 | 60357 | NONEMPTY |
+| historical-audits/2026-10/2026-10-26-a2-month-relation.md | 8125d4970cf7b0fd | 24649 | NONEMPTY |
+| historical-audits/2026-10/2026-10-27-a1-a2-coverage-reconciliation.md | 27def6fe664cb083 | 18093 | NONEMPTY |
+| historical-audits/2026-10/2026-10-27-a1-source-custody.md | e9093a3f605deb83 | 14124 | NONEMPTY |
+| historical-audits/2026-10/2026-10-27-a2-month-relation.md | 89b5769da6194d43 | 14439 | NONEMPTY |
+| historical-audits/2026-10/2026-10-28-a1-source-custody.md | f7ce2594b5dfda99 | 53019 | NONEMPTY |
+| historical-audits/2026-10/2026-10-28-a2-month-relation.md | 4d80d5ce38fbae6e | 58094 | NONEMPTY |
+| historical-audits/2026-10/2026-10-28-october-native-weekly-gap-recovery-register.md | 4eb65dc689b1567c | 22974 | NONEMPTY |
+| historical-audits/2026-10/2026-10-28-sop-minimal-acceptance-audit.md | aa5220ee3fa447bb | 6569 | NONEMPTY |
+| historical-audits/2026-10/2026-10-30-a1-source-content-review.md | cd54808b99aa8ff8 | 47773 | NONEMPTY |
+| historical-audits/2026-10/2026-10-31-a1-source-custody.md | ec746ef74dc02b00 | 17008 | NONEMPTY |
+| historical-audits/2026-10/2026-10-31-a2-month-relations.md | a5e4148820ea33cd | 10352 | NONEMPTY |
 
-### Reconciliation and acceptance boundary
-
-- Distinct objects with format/identity receipts: 231; zero-byte flagged objects: 0; original A2 diff preserved without deletions.
-- Positive verdict means `PRESENT_NONZERO_AT_CURRENT_MAIN` only. Body-level provenance or experimental result missing from direct test remains `UNKNOWN`.
-- The new successor PR can independently meet its >=100 substantive evidence lines; the historical original A2 PR has its immutable original addition count.
-- September carry-forward and October A2 relation are linked by date/path and producer family without creating a second October monthly authority.
-- D7/D10/D14/D30 are not satisfied by this month audit; task-time UNKNOWN/BLOCKED observations are never silently repaired.
-- Disposition: `GIT_TREE_STRUCTURAL_PASS / MONTH_FINAL_NOT_DUE / NATIVE_EXECUTION_NOT_REEXECUTED / A2_ORIGINAL_HISTORICAL_COUNT_RETAINED`.
+- Selected distinct objects: 231; zero-byte objects: 0.
+- This successor independently adds more than 100 source-specific substantive rows while leaving the original A2 PR's addition count historically unchanged.
+- Body validation, PR checks, and original native runtime execution must be judged by their own evidence; no generic PASS is inferred from file presence.
