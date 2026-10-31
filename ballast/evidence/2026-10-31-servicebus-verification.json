@@ -1,0 +1,124 @@
+{
+  "schema": "ballast.servicebus.verification.2026-10-31",
+  "logical_date": "2026-10-31 Asia/Shanghai",
+  "evidence_access_date": "2026-10-31 Asia/Shanghai",
+  "actual_research_execution_utc": {
+    "first_bounded_V8_observed_completion": "2026-10-30T20:02:28.203Z",
+    "same_window_semantic_corrections_complete": "2026-10-30T20:04:27.998Z",
+    "persisted_source_replay_complete": "2026-10-30T20:08:28.491Z",
+    "exact_start": "NOT_RECORDED",
+    "post_pr_type_attack_observed": "2026-10-30T20:07:58.362Z",
+    "same_day_post_pr_correction": "2026-10-30T20:08:13.422Z"
+  },
+  "base_main_sha": "2a27a262d976b6d883c54dc5669331adbeea19b0",
+  "source_blobs": {
+    "producer": "548f92239edcf29f57b43680e7414691e7af953d",
+    "verifier": "d62d8153173b245b19afa2488ede43113dc02b08",
+    "scenario_facts": "deb5e24fb81c5c31bc0bc3453d438b5e4d263ada",
+    "decision_rows": "e3207cfb5897280d73fdf6992cdd61e536e04eaf"
+  },
+  "execution": {
+    "producer": "EXECUTED_V8_ISOLATE",
+    "separately_coded_verifier": "EXECUTED_V8_ISOLATE",
+    "persisted_source_replay": "EXECUTED_V8_ISOLATE",
+    "scenario_states": 63,
+    "decision_rows": 189,
+    "paths": [
+      "send_proxy",
+      "settlement_proxy",
+      "full_reference"
+    ],
+    "reference_histogram": {
+      "COMPLETE": 4,
+      "RECONCILE": 25,
+      "STOP_UNKNOWN": 26,
+      "BLOCKED": 5,
+      "EVIDENCE_CONFLICT": 2,
+      "RETRY_ALLOWED": 1
+    },
+    "non_complete_controls": 59,
+    "send_proxy_disagreements": 59,
+    "settlement_proxy_disagreements": 57,
+    "primitive_verifier_reconstruction": "63/63 scenarios and 189/189 decision rows",
+    "adversarial_probes": 19,
+    "adversarial_unsafe_accepts": 0,
+    "forged_row_duplicate_id_count_mismatch_rejected": "3/3",
+    "persisted_source_to_persisted_facts_exact_match": true,
+    "actual_azure_calls": 0,
+    "actual_external_effects": 0,
+    "actual_independent_authority_queries": 0
+  },
+  "prototype_correction": {
+    "point_in_time_unmerged_prototype_blob": "a67f79f33dd1e78fb8abcb85345d6303704e6b95",
+    "status": "REJECTED_PRE_DELIVERY_SAME_WINDOW",
+    "observed_defect": "The first synthetic query model allowed watermark after queryAt and did not independently bind full attempt history, allowing a logically impossible covered MISS and potential unobserved attempt false completion",
+    "repair": "Require watermark <= queryAt, queryAt before guarded completion, explicit independent synthetic attempt-history scope and complete attempts, authoritative MISS coverage of actual old attempt end instead of future guardAt, add attempt-3 and query time adversarial probes",
+    "research_credit_added": 0
+  },
+  "verifier_independence": {
+    "implementation": "PARTIAL",
+    "data_source": "NONE",
+    "semantic_contract": "SHARED",
+    "authority": "NONE",
+    "notes": "Two separately coded primitive reconstructions share authored fixture schema and synthetic facts; source replay does not provide independent real-world semantics or historical authority"
+  },
+  "NOT_EXECUTED": [
+    "native Node CLI",
+    "complete python ballast/tools/check.py",
+    "live Azure Service Bus",
+    "real downstream non-idempotent effect sink",
+    "independent historical authorization authority",
+    "independent complete negative-query authority",
+    "trusted cross-service clock",
+    "semantic-contract-independent verification"
+  ],
+  "authoritative_sources": [
+    {
+      "publisher": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/duplicate-detection",
+      "access_date": "2026-10-31"
+    },
+    {
+      "publisher": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/message-transfers-locks-settlement",
+      "access_date": "2026-10-31"
+    },
+    {
+      "publisher": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-message-loss-and-duplicates",
+      "access_date": "2026-10-31"
+    },
+    {
+      "publisher": "Amazon Web Services",
+      "url": "https://aws.amazon.com/sqs/faqs/",
+      "access_date": "2026-10-31",
+      "limitation": "different-product comparison, not independent Azure behavior verification"
+    }
+  ],
+  "research_credit": {
+    "NATIVE_Daily": 1,
+    "independent_bounded_window": 1,
+    "new_CASE": 0,
+    "new_METHOD": 0,
+    "new_NOTES": 0,
+    "new_Special": 0,
+    "new_Audit_research_credit": 0,
+    "new_finding": 0
+  },
+  "post_pr_same_date_correction": {
+    "original_draft_head": "867054736c9f8405c383766a9578530f0eda7454",
+    "fault_observed_utc": "2026-10-30T20:07:58.362Z",
+    "five_shared_reference_verifier_false_accepts": [
+      "broker settlement timestamp numeric string falsely COMPLETE",
+      "guard time numeric string falsely COMPLETE",
+      "commit time numeric string falsely COMPLETE",
+      "both revisions numeric strings falsely COMPLETE",
+      "retry permission time numeric string falsely RETRY_ALLOWED"
+    ],
+    "repair": "Both producer reference and separately coded verifier require Number.isInteger for settlement/guard/commit times, target and guard revision, and permission time, adding five named scenarios and five adversarial probes",
+    "corrected_utc": "2026-10-30T20:08:13.422Z",
+    "persisted_replay_utc": "2026-10-30T20:08:28.491Z",
+    "extra_research_unit": 0,
+    "extra_independent_window": 0
+  }
+}

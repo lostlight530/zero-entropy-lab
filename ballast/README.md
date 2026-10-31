@@ -29,10 +29,10 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-30 Pub/Sub exactly-once ACK identity and downstream effect integrity](records/2026-10-30.md)
+- 最新 Daily: [2026-10-31 Azure Service Bus duplicate detection and PeekLock downstream effect integrity](records/2026-10-31.md)
 - 当前月度事实源: [2026-10](records/2026-10.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
-- 最新完整周期审计: [2026-10-20 至 2026-10-25](audits/2026-10-20--2026-10-25.md)
+- 最新完整周期审计: [2026-10-26 至 2026-10-31](audits/2026-10-26--2026-10-31.md)
 - 最新合并后修正对账: [2026-10-30 PR #754 post-merge reconciliation](corrections/2026-10-30-pubsub-merge-reconciliation.md)
 - 2026-09-26 至 2026-10-01 已形成新的 6 日 derived audit, 其中 2026-09-26 为 RECONSTRUCTION / NOT_RUN / UNVERIFIED. 该 audit 仅做派生审计, 新增实验数量 0, 新增长期结论数量 0, 不重复创建重叠 audit
 - 当前方法: [METHOD.md](METHOD.md)
@@ -799,3 +799,21 @@ At earlier 2026-10-30T00:18:41Z as-of review, 29 October Daily records were on m
 The [bounded correction record](corrections/2026-10-30-pubsub-merge-reconciliation.md) and [October Monthly ledger](records/2026-10.md) preserve the original pre-merge snapshot and current merged state as separate observations, no new Daily, six-day audit, research window, CASE, NOTES or finding
 
 Monthly targeted maintenance stays PARTIAL until calendar-month end, real service effects, complete Python checker and native Node CLI remain NOT_EXECUTED, no script run required to reconcile verified GitHub lifecycle evidence
+
+## Ballast current-state advance — 2026-10-31
+
+One NATIVE [Azure Service Bus Daily](records/2026-10-31.md) studies send-side accepted-but-dropped duplicate detection, scheduled collisions, MessageId+PartitionKey/session identity and PeekLock settlement generation versus exact historically authorized downstream A+B effects and protected current completion
+
+Bounded V8 isolate [producer](tools/experiment_servicebus_integrity.js), [separately coded verifier](tools/verify_servicebus_integrity.js), [primitive scenario facts](evidence/2026-10-31-servicebus-scenarios.json), [decision rows](evidence/2026-10-31-servicebus-decisions.json) and [verification receipt](evidence/2026-10-31-servicebus-verification.json): 63 authored scenarios, 189 model decisions, 59 non-COMPLETE controls, 19 adversarial probes, 3 forged-input rejections, reference COMPLETE 4 / RECONCILE 25 / STOP_UNKNOWN 26 / BLOCKED 5 / EVIDENCE_CONFLICT 2 / RETRY_ALLOWED 1, send/settlement weak proxy disagreement 59/63 and 57/63, exact GitHub source replay in V8, real Azure and external effects 0
+
+Same-date post-PR adversarial review of original Draft head `867054736c9f8405c383766a9578530f0eda7454` found 5 shared-contract false accepts caused by numeric-string time/revision/permission coercion, corrected in the same Daily/PR with 5 new scenarios and 5 new adversarial probes, current 63/189, no extra independent research credit
+
+Same-window reference-model correction rejected an impossible future query watermark and incomplete attempt-history scope, replaced query self-declaration with separately modeled complete history/old-attempt end and retained original prototype only as rejected point-in-time source evidence, no second Daily or research-window credit
+
+[Sixth six-date derived audit](audits/2026-10-26--2026-10-31.md) covers 2026-10-26..31 without overlap, six current per-date model versions total 368 synthetic scenario instances / 1104 decision rows as historical derived arithmetic, only October 31 source replay was executed this audit turn, no six-day live service replay
+
+[Microsoft duplicate detection](https://learn.microsoft.com/en-us/azure/service-bus-messaging/duplicate-detection) and [Microsoft lock/settlement](https://learn.microsoft.com/en-us/azure/service-bus-messaging/message-transfers-locks-settlement) were accessed 2026-10-31 Asia/Shanghai, vendor contract is not independent Azure live effect evidence
+
+October Monthly now indexes 31 NATIVE dated Dailies and six derived audits as of 2026-10-31 early morning, CASE/METHOD/NOTES/Special/finding 0, final end-of-day monthly maintenance seal NOT_EXECUTED, `Monthly Maintenance Status: PARTIAL` remains accurate
+
+EXECUTED V8 isolate producer and separate verifier, persisted-source replay and static changed-file contract review PASS_WITH_LIMITS, native Node CLI, full Python checker, live Azure, independent receipt/approval authority and semantic-independent verification NOT_EXECUTED
