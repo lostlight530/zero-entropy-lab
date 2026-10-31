@@ -95,6 +95,76 @@
         "name": "wrong_effect_identity",
         "decision": "RECONCILE",
         "safe": true
+      },
+      {
+        "name": "target_B_pending",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "query_wrong_member",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "query_missing_members",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "query_authority_missing",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "effect_after_guard",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "guard_members_changed",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "extra_target_state",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "retry_wrong_uid",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "retry_member_drift",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "retry_guard_wrong_order",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "retry_wrong_revision",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "retry_permission_scope",
+        "decision": "BLOCKED",
+        "safe": true
+      },
+      {
+        "name": "retry_query_authority",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "retry_query_member_drift",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
       }
     ],
     "positiveRevocationControl": "COMPLETE",
@@ -118,6 +188,22 @@
     "semantic-contract-independent verifier"
   ],
   "persistedSourceReplay": {
+    "atUTC": "2026-10-31T23:16:05.191Z",
+    "environment": "V8 isolate replay with revised persisted source semantics, NOT native Node CLI",
+    "sourceHead": "2f3236ad7aabb3eb225167ecaf84041f11eacfb6",
+    "producerBlob": "996f8dbe00c63a29e757df87d1507ed5fe4a3b05",
+    "verifierBlob": "311c21fd6e20a675f3a6abca9cf6df507c097d5f",
+    "scenarioBlob": "14917f9b9b39f625bad7fe94da4ee9cb1a351fea",
+    "traceBlob": "f12c97d97380aa06e2bba26cecf45bfa1b08e637",
+    "decisionBlob": "dd13869482d430e02404a9dd28e06c8510cf46d3",
+    "traceEqual": true,
+    "decisionEqual": true,
+    "verifierEqual": true,
+    "scenarios": 40,
+    "decisions": 120,
+    "negativeProbes": 29
+  },
+  "priorPersistedSourceReplay": {
     "atUTC": "2026-10-31T20:04:14.552Z",
     "environment": "V8 isolate dynamic source evaluation of exact persisted GitHub blobs, not native Node CLI",
     "sourceHead": "78d8fc78ec0a6dc502f231cc5474860df4961050",
@@ -132,5 +218,15 @@
     "scenarios": 40,
     "decisions": 120,
     "negativeProbes": 15
+  },
+  "maintainerCorrection": {
+    "atUTC": "2026-10-31T23:16:05.191Z",
+    "originalDraftHead": "a9d9bbd487847ac62e4410864aeb19968982385f",
+    "originalAttackObservations": 17,
+    "originalUnsafeAccepts": 12,
+    "observedFailure": "shared producer+verifier unsafe COMPLETE/RETRY_ALLOWED from missing current predicate, query scope/authority, retry and time fences",
+    "postCorrectionAdversarialProbes": 29,
+    "scope": "same Daily and same PR, no independent research window added",
+    "independence": "implementation PARTIAL, data-source NONE, semantic-contract SHARED, authority NONE"
   }
 }
