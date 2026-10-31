@@ -1,5 +1,5 @@
 'use strict';
-const verify = function verify(items,traces,decisions){
+const verify = function verify(items,traces,decisions,options={}){
  const errors=[],tm=new Map(),dm=new Map(),hist={},diff={token_proxy:0,txn_proxy:0},ids=new Set();
  for(const s of items){if(ids.has(s.id))errors.push("duplicate scenario "+s.id);ids.add(s.id)}
  for(const t of traces){if(tm.has(t.id))errors.push("duplicate trace "+t.id);tm.set(t.id,t)}
@@ -96,10 +96,14 @@ const verify = function verify(items,traces,decisions){
   const p=JSON.parse(JSON.stringify(baseline));p.permission.allowed=false;p.permission.approval=false;
   if(ref(p,original.events)!=="COMPLETE")errors.push("historical grant positive control");
  }
+ if(options.skipForgeryTests===true)return {ok:errors.length===0,errors};
  const forged=decisions.map(x=>({...x}));forged[0].decision="FORGED";
- const forgedRejected=forged[0].decision!==dm.get(forged[0].id+"|"+forged[0].path);
- const duplicateRejected=new Set([...items.map(x=>x.id),items[0].id]).size!==items.length+1;
- const missingPathRejected=decisions.length-1!==items.length*3;
+ const forgedResult=verify(items,traces,forged,{skipForgeryTests:true});
+ const duplicateResult=verify([...items,JSON.parse(JSON.stringify(items[0]))],traces,decisions,{skipForgeryTests:true});
+ const missingPathResult=verify(items,traces,decisions.slice(1),{skipForgeryTests:true});
+ const forgedRejected=!forgedResult.ok&&forgedResult.errors.some(x=>x.startsWith("decision "));
+ const duplicateRejected=!duplicateResult.ok&&duplicateResult.errors.some(x=>x.startsWith("duplicate scenario "));
+ const missingPathRejected=!missingPathResult.ok&&missingPathResult.errors.some(x=>x==="cardinality"||x.startsWith("decision "));
  if(!forgedRejected||!duplicateRejected||!missingPathRejected)errors.push("forged tests");
  return {ok:errors.length===0,errors,scenarios:items.length,decisions:decisions.length,histogram:hist,disagreements:diff,probes,positiveRevocationControl:"COMPLETE",forgedRejected,duplicateRejected,missingPathRejected,independence:{implementation:"PARTIAL",dataSource:"NONE",semanticContract:"SHARED",authority:"NONE"}};
 };
