@@ -32,7 +32,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -42,7 +44,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -50,11 +54,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -62,7 +75,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -94,7 +113,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -104,7 +125,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -112,11 +135,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -124,7 +156,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -165,7 +203,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -175,7 +215,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -183,11 +225,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -195,7 +246,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -244,7 +301,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -254,7 +313,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -262,11 +323,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -274,7 +344,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -323,7 +399,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -333,7 +411,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -341,11 +421,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -353,7 +442,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -394,7 +489,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -404,7 +501,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -412,11 +511,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -424,7 +532,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -465,7 +579,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -475,7 +591,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -483,11 +601,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -495,7 +622,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -519,7 +652,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -529,7 +664,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -537,11 +674,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -549,7 +695,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -579,11 +731,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -591,7 +752,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -623,7 +790,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -631,11 +800,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -643,7 +821,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -675,7 +859,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -685,7 +871,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -693,11 +881,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -705,7 +902,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -737,7 +940,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -747,7 +952,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -755,11 +962,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -767,7 +983,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -799,7 +1021,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -809,7 +1033,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -819,7 +1045,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -827,11 +1055,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -839,7 +1076,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -871,7 +1114,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -881,7 +1126,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "old",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -889,11 +1136,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -901,7 +1157,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -933,7 +1195,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -943,7 +1207,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 3
+          "attempt": 3,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -951,11 +1217,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -963,7 +1238,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -995,7 +1276,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1005,7 +1288,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1013,11 +1298,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1025,7 +1319,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1057,7 +1357,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1067,7 +1369,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1075,11 +1379,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1087,7 +1400,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1119,7 +1438,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1129,7 +1450,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1137,11 +1460,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1149,7 +1481,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1181,7 +1519,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1191,7 +1531,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1199,11 +1541,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1211,7 +1562,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1243,7 +1600,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1253,7 +1612,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1261,11 +1622,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1273,7 +1643,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1305,7 +1681,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1315,7 +1693,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1323,11 +1703,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1335,7 +1724,13 @@
           "commitAt": 100,
           "commitBound": false,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1367,7 +1762,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1377,7 +1774,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1385,11 +1784,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1397,7 +1805,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 8
+          "commitRevision": 8,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1429,7 +1843,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1439,7 +1855,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1447,11 +1865,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1459,7 +1886,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1491,7 +1924,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1501,7 +1936,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1509,11 +1946,20 @@
           "at": 80,
           "watermark": 90,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1521,7 +1967,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1553,7 +2005,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1563,7 +2017,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1571,11 +2027,20 @@
           "at": 80,
           "watermark": 60,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1583,7 +2048,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1615,7 +2086,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1625,7 +2098,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1633,11 +2108,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 70,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1645,7 +2129,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1677,7 +2167,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1687,7 +2179,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1695,11 +2189,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/old",
+          "scope": "t11/r11/old/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1707,7 +2210,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1739,7 +2248,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1749,7 +2260,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1757,11 +2270,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1769,7 +2291,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1801,7 +2329,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1811,7 +2341,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1819,11 +2351,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1831,7 +2372,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1863,7 +2410,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -1873,7 +2422,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -1881,11 +2432,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1893,7 +2453,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1923,11 +2489,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1935,7 +2510,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1948,11 +2529,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1960,7 +2550,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1973,11 +2569,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -1985,7 +2590,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -1998,11 +2609,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -2010,7 +2630,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -2023,11 +2649,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -2035,7 +2670,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -2048,11 +2689,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -2060,7 +2710,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -2092,7 +2748,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -2102,7 +2760,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -2110,11 +2770,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -2122,7 +2791,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": "7"
+          "commitRevision": "7",
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -2154,7 +2829,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -2164,7 +2841,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -2172,11 +2851,20 @@
           "at": "80",
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -2184,7 +2872,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -2216,7 +2910,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -2226,7 +2922,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -2234,11 +2932,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -2246,7 +2953,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     },
@@ -2278,7 +2991,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "sink_receipt",
@@ -2288,7 +3003,9 @@
           "task": "t11",
           "run": "r11",
           "uid": "u11",
-          "attempt": 1
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
         },
         {
           "kind": "query",
@@ -2296,11 +3013,20 @@
           "at": 80,
           "watermark": 80,
           "retentionUntil": 200,
-          "scope": "t11/r11/u11",
+          "scope": "t11/r11/u11/i11",
           "attempts": [
             1
           ],
-          "lifecycle": "ACTIVE"
+          "lifecycle": "ACTIVE",
+          "authority": "sim_sink_t11",
+          "members": [
+            "A",
+            "B"
+          ],
+          "effectIds": [
+            "effect-A",
+            "effect-B"
+          ]
         },
         {
           "kind": "guard",
@@ -2308,7 +3034,13 @@
           "commitAt": 100,
           "commitBound": true,
           "readRevision": 7,
-          "commitRevision": 7
+          "commitRevision": 7,
+          "scope": "t11/r11/u11/i11",
+          "uid": "u11",
+          "members": [
+            "A",
+            "B"
+          ]
         }
       ]
     }
