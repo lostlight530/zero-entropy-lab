@@ -7034,3 +7034,25 @@ NATIVE_MODIFICATION_NOTE: only canonical A6 owner append; no Jules A1/A2, Ballas
 - Decision: APPEND_EVIDENCE_RELATION / NO_ORIGINAL_REWRITE / NO_AUTOMATIC_A2 / NO_PERIODIC_AUDIT_CREDIT / NO_VERIFIED_MEMORY_PROMOTION
 - Executable tests, external re-certification, deployment outcome and scientific experiments: NOT_EXECUTED_BY_THIS_A1
 - Evidence Delta: NEW_EVIDENCE = exact core original file/PR OIDs through Oct30; CORRECTED_INTERPRETATION = custody and execution/validation separate; UNCHANGED_BOUNDARY = prior failures remain dated; NEW_COUNTEREVIDENCE = untested or historic blocked inputs prevent blanket PASS; UNKNOWN_RETAINED = ten-repo A1 gate and operational effect; NEXT_RETEST_CONDITION = all-ten merged A1 and refreshed main for N-day A2
+
+## A2_2026_10_31_CURRENT_MONTH_RELATIONAL_EVOLUTION
+
+- Period: 2026-10 month version, current N-day October31 Asia/Shanghai, before natural Final
+- Producer: INDEPENDENT_MAINTENANCE_A2 / NOT_ORIGINAL_NATIVE_DAILY
+- Exact pre-A2 merged main: f8f2323bb9d7949b40d8867c7994adc52dbce447
+- New dated A2 evidence: `historical-audits/2026-10/2026-10-31-a2-month-relations.md` on this same branch, valid after merger only
+- A1 admission: 8 original ≥100-line A1 records + 2 distinct 209-line successor records; original #446/#361 defects remain in history
+- State: MONTH_OPEN / MONTH_TO_DATE / W44_OPEN / NOT_FINAL
+- Previous A1 and A2 monthly evolution blocks preserved byte-for-byte
+### Current month relationships
+- Oct31 Aegis native A1 and A2 blobs 635f05927dd7adae27d4b17afff56effeab95f70 / ff70234743bd6632b75464c7d10c6704adfd2b4d
+- arXiv:2610.06191v1 stopping-loop author evidence not local incident or host-control implementation
+- Ballast Oct31 b7477a22f51169f7496fa6bc8d7230a3e9b4938a, 63 synthetic scenarios, bounded V8 only, zero live Azure effect
+- Oct30 GHSA-v38p-wf49-hx2j separate external risk lineage, no combined local incident
+- W44 OPEN, October OPEN/NOT_FINAL, host defense UNKNOWN
+### Decision and validation
+- Original 2026-10-01..30 source-time statuses and correction history preserved; Oct31 included only as newly dated N input
+- A2 admission != Native A2 task completion != D30 periodic audit != independently verified science
+- GitHub source/relation review performed; full executable worktree, native tests, independent external recertification and host/runtime tests NOT_EXECUTED
+- No automatic original Weekly or Monthly Final, no original native/Archive rewrite, no Memory promotion
+- NEXT_RETEST: native authority and current runnable exact-revision evidence after natural boundary or when reproducible validators become available
