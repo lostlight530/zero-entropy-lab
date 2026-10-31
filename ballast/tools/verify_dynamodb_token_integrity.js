@@ -13,11 +13,17 @@ const verify = function verify(items,traces,decisions){
   if(![q.at,q.watermark,q.retentionUntil,h.lastEnd,g.start,g.end,p.at,p.validUntil,z.revision,b.at,b.commitAt,b.readRevision,b.commitRevision,...c.map(x=>x.at),...fx.map(x=>x.at)].every(int))return "STOP_UNKNOWN";
   if(h.complete!==true||!Array.isArray(h.attempts)||!Array.isArray(q.attempts)||!h.attempts.every(int)||!q.attempts.every(int))return "STOP_UNKNOWN";
   const same=(a,b)=>a.length===b.length&&new Set(a).size===a.length&&new Set(b).size===b.length&&a.every(x=>b.includes(x));
-  if(!same(h.attempts,q.attempts)||q.scope!==[t.id,t.run,t.uid].join("/")||q.watermark>q.at||q.watermark<h.lastEnd||q.retentionUntil<q.at||q.lifecycle!=="ACTIVE")return "STOP_UNKNOWN";
+  if(!same(h.attempts,q.attempts)||q.scope!==[t.id,t.run,t.uid,t.intent].join("/")||q.watermark>q.at||q.watermark<h.lastEnd||q.retentionUntil<q.at||q.lifecycle!=="ACTIVE")return "STOP_UNKNOWN";
+  const scoped=[t.id,t.run,t.uid,t.intent].join("/");
+  const exact=(a,b)=>Array.isArray(a)&&Array.isArray(b)&&a.length===b.length&&new Set(a).size===a.length&&new Set(b).size===b.length&&a.every(x=>b.includes(x));
+  if(q.scope!==scoped||h.scope!==scoped||h.authority!=="sim_attempts_t11"||q.authority!=="sim_sink_t11"||!exact(q.members,t.members)||!exact(q.effectIds,t.members.map(x=>"effect-"+x))||q.at<=h.lastEnd||q.retentionUntil<b.commitAt)return "STOP_UNKNOWN";
+  if(g.intent!==t.intent||g.authority!=="sim_approver_t11"||!exact(g.members,t.members))return "BLOCKED";
+  if(z.uid!==t.uid||!exact(z.members,t.members)||b.uid!==t.uid||b.scope!==scoped||!exact(b.members,t.members)||b.commitBound!==true||b.readRevision!==z.revision||b.commitRevision!==z.revision||q.at>=b.at||b.at>=b.commitAt)return "RECONCILE";
   if(q.status==="miss"){
    if(fx.length)return "EVIDENCE_CONFLICT";
    if(c.length)return "RECONCILE";
-   if(p.allowed!==true||p.approval!==true||p.credential!==true||p.at>p.validUntil)return "BLOCKED";
+   if(p.allowed!==true||p.approval!==true||p.credential!==true||p.scope!==scoped||p.at<q.at||p.at>b.at||p.validUntil<b.commitAt)return "BLOCKED";
+   if(!z.states||!exact(Object.keys(z.states),t.members)||Object.values(z.states).some(state=>state==="DONE"))return "RECONCILE";
    return s.retry.fenced===true&&s.retry.sinkDedup===true&&b.commitBound===true?"RETRY_ALLOWED":"STOP_UNKNOWN";
   }
   if(q.status!=="hit")return "STOP_UNKNOWN";
@@ -25,10 +31,10 @@ const verify = function verify(items,traces,decisions){
   if(!fx.length)return "STOP_UNKNOWN";
   if(!same(fx.map(e=>e.member),t.members))return "RECONCILE";
   for(const e of fx){
-   if(e.effectId!=="effect-"+e.member||e.task!==t.id||e.run!==t.run||e.uid!==t.uid||!h.attempts.includes(e.attempt))return "RECONCILE";
+   if(e.effectId!=="effect-"+e.member||e.task!==t.id||e.run!==t.run||e.uid!==t.uid||e.authority!=="sim_sink_t11"||e.grantAuthority!=="sim_approver_t11"||!h.attempts.includes(e.attempt)||e.at<c[0].at||e.at>q.watermark||e.at>=q.at||e.at>=b.at)return "RECONCILE";
    if(e.at<g.start||e.at>g.end||g.task!==t.id||g.run!==t.run||g.uid!==t.uid||!g.members.includes(e.member))return "BLOCKED";
   }
-  if(z.uid!==t.uid||!same(z.members,t.members)||b.commitBound!==true||b.readRevision!==z.revision||b.commitRevision!==z.revision||q.at>=b.at||b.at>=b.commitAt)return "RECONCILE";
+  if(!z.states||!exact(Object.keys(z.states),t.members)||!t.members.every(member=>z.states[member]==="DONE"))return "RECONCILE";
   return "COMPLETE";
  }
  for(const s of items){
@@ -68,6 +74,25 @@ const verify = function verify(items,traces,decisions){
   probe("duplicate_txn",(_s,t)=>t.events.push({...t.events.find(e=>e.kind==="txn_commit"),txnId:"txn-2",at:601}));
   probe("wrong_txn_intent",(_s,t)=>t.events.find(e=>e.kind==="txn_commit").intent="other");
   probe("wrong_effect_identity",(_s,t)=>t.events.find(e=>e.kind==="sink_receipt").effectId="other");
+  probe("target_B_pending",(s,_t)=>s.target.states.B="PENDING");
+  probe("query_wrong_member",(_s,t)=>t.events.find(e=>e.kind==="query").members=["A","C"]);
+  probe("query_missing_members",(_s,t)=>t.events.find(e=>e.kind==="query").members=[]);
+  probe("query_authority_missing",(_s,t)=>t.events.find(e=>e.kind==="query").authority=null);
+  probe("effect_after_guard",(s,t)=>{s.grant.end=120;t.events.find(e=>e.kind==="sink_receipt"&&e.member==="B").at=105});
+  probe("guard_members_changed",(_s,t)=>t.events.find(e=>e.kind==="guard").members=["A","C"]);
+  probe("extra_target_state",(s,_t)=>s.target.states.C="DONE");
+  const retrySeed=items.find(x=>x.id==="covered_miss_retry"),retryTrace=tm.get("covered_miss_retry");
+  if(!retrySeed||!retryTrace)errors.push("missing retry probe seed");
+  else{
+   function retryProbe(name,change){const s=JSON.parse(JSON.stringify(retrySeed)),t=JSON.parse(JSON.stringify(retryTrace));change(s,t);const d=ref(s,t.events);probes.push({name,decision:d,safe:d!=="COMPLETE"&&d!=="RETRY_ALLOWED"});if(d==="COMPLETE"||d==="RETRY_ALLOWED")errors.push("unsafe probe "+name)}
+   retryProbe("retry_wrong_uid",(s,_t)=>s.target.uid="new");
+   retryProbe("retry_member_drift",(s,_t)=>s.target.members=["A","C"]);
+   retryProbe("retry_guard_wrong_order",(_s,t)=>t.events.find(e=>e.kind==="guard").at=105);
+   retryProbe("retry_wrong_revision",(_s,t)=>t.events.find(e=>e.kind==="guard").readRevision=6);
+   retryProbe("retry_permission_scope",(s,_t)=>s.permission.scope="other");
+   retryProbe("retry_query_authority",(_s,t)=>t.events.find(e=>e.kind==="query").authority=null);
+   retryProbe("retry_query_member_drift",(_s,t)=>t.events.find(e=>e.kind==="query").members=["A","C"]);
+  }
   const p=JSON.parse(JSON.stringify(baseline));p.permission.allowed=false;p.permission.approval=false;
   if(ref(p,original.events)!=="COMPLETE")errors.push("historical grant positive control");
  }
