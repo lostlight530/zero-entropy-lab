@@ -188,11 +188,11 @@
     "semantic-contract-independent verifier"
   ],
   "persistedSourceReplay": {
-    "atUTC": "2026-10-31T23:16:05.191Z",
+    "atUTC": "2026-10-31T23:18:24.532Z",
     "environment": "V8 isolate replay with revised persisted source semantics, NOT native Node CLI",
-    "sourceHead": "2f3236ad7aabb3eb225167ecaf84041f11eacfb6",
+    "sourceHead": "14f562ad9f7257ac5590b1f68a5d0bbba871d995",
     "producerBlob": "996f8dbe00c63a29e757df87d1507ed5fe4a3b05",
-    "verifierBlob": "311c21fd6e20a675f3a6abca9cf6df507c097d5f",
+    "verifierBlob": "3b453c0abcc792ccfb14aea650d3088efbef865b",
     "scenarioBlob": "14917f9b9b39f625bad7fe94da4ee9cb1a351fea",
     "traceBlob": "f12c97d97380aa06e2bba26cecf45bfa1b08e637",
     "decisionBlob": "dd13869482d430e02404a9dd28e06c8510cf46d3",
@@ -227,6 +227,36 @@
     "observedFailure": "shared producer+verifier unsafe COMPLETE/RETRY_ALLOWED from missing current predicate, query scope/authority, retry and time fences",
     "postCorrectionAdversarialProbes": 29,
     "scope": "same Daily and same PR, no independent research window added",
-    "independence": "implementation PARTIAL, data-source NONE, semantic-contract SHARED, authority NONE"
+    "independence": "implementation PARTIAL, data-source NONE, semantic-contract SHARED, authority NONE",
+    "forgeryTests": "three actual verify(...,{skipForgeryTests:true}) rejections on mutated payloads, not only boolean checks",
+    "forgeryOutcomes": [
+      {
+        "name": "forged",
+        "ok": false,
+        "errorCount": 1,
+        "firstErrors": [
+          "decision baseline token_proxy"
+        ]
+      },
+      {
+        "name": "duplicate",
+        "ok": false,
+        "errorCount": 2,
+        "firstErrors": [
+          "duplicate scenario baseline",
+          "cardinality"
+        ]
+      },
+      {
+        "name": "missing",
+        "ok": false,
+        "errorCount": 2,
+        "firstErrors": [
+          "cardinality",
+          "decision baseline token_proxy"
+        ]
+      }
+    ],
+    "forgeryFixedAtUTC": "2026-10-31T23:18:24.532Z"
   }
 }
