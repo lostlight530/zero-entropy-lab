@@ -1,0 +1,4884 @@
+{
+  "schema": "ballast-dynamodb-token-schema-1",
+  "logicalDate": "2026-11-01",
+  "executionAtUTC": "2026-10-31T20:03:36.581Z",
+  "baseSha": "2d6693dc95f1b10d1d101b3ce1fe86ea43426185",
+  "scenarios": [
+    {
+      "id": "baseline",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "response_lost",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": false
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "replay_200_seconds",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": false
+        },
+        {
+          "at": 200,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "replay_601_seconds",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": false
+        },
+        {
+          "at": 601,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "replay_600_model_boundary",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": false
+        },
+        {
+          "at": 600,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "within_window_payload_mismatch",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": false
+        },
+        {
+          "at": 200,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+C",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "within_window_intent_mismatch",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": false
+        },
+        {
+          "at": 200,
+          "token": "k11",
+          "intent": "other",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "transaction_canceled",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true,
+          "fail": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "no_external_receipts",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "missing_B",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "duplicate_A_same_count",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "replace_B_with_C",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "C",
+          "effectId": "effect-C",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "extra_C",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "C",
+          "effectId": "effect-C",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "wrong_receipt_uid",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "old",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "wrong_receipt_attempt",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 3,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "grant_expired",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 22,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "grant_wrong_scope",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "old",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "current_permission_revoked",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": false,
+        "approval": false,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "target_uid_changed",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "new",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "membership_replaced",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "C"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "guard_not_protected",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": false,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "guard_revision_drift",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 8,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "guard_after_commit",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 120,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "future_watermark",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 90,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "watermark_before_attempt",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 60,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "retention_expired",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 70,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "query_wrong_scope",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/old/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "attempt_history_uncovered",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1,
+          3
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "query_unknown",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "unknown",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "positive_receipt_vs_miss",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "miss",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "PENDING",
+          "B": "PENDING"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "aggregate_hit_no_members",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "covered_miss_retry",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [],
+      "effects": [],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "miss",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "PENDING",
+          "B": "PENDING"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "miss_permission_revoked",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [],
+      "effects": [],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "miss",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": false,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "PENDING",
+          "B": "PENDING"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "miss_no_fence",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [],
+      "effects": [],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "miss",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "PENDING",
+          "B": "PENDING"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": false,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "miss_no_sink_dedup",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [],
+      "effects": [],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "miss",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "PENDING",
+          "B": "PENDING"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": false
+      }
+    },
+    {
+      "id": "miss_history_incomplete",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [],
+      "effects": [],
+      "history": {
+        "complete": false,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "miss",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "PENDING",
+          "B": "PENDING"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "string_guard_revision",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": "7",
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "string_query_time",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": "80",
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "string_effect_time",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": "25",
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    },
+    {
+      "id": "wrong_txn_intent",
+      "task": {
+        "id": "t11",
+        "run": "r11",
+        "intent": "i11",
+        "uid": "u11",
+        "payload": "A+B",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "submits": [
+        {
+          "at": 0,
+          "token": "k11",
+          "intent": "other",
+          "payload": "A+B",
+          "delivered": true
+        }
+      ],
+      "effects": [
+        {
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        },
+        {
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1,
+          "authority": "sim_sink_t11",
+          "grantAuthority": "sim_approver_t11"
+        }
+      ],
+      "history": {
+        "complete": true,
+        "attempts": [
+          1
+        ],
+        "lastEnd": 70,
+        "scope": "t11/r11/u11/i11",
+        "authority": "sim_attempts_t11"
+      },
+      "query": {
+        "status": "hit",
+        "at": 80,
+        "watermark": 80,
+        "retentionUntil": 200,
+        "scope": "t11/r11/u11/i11",
+        "attempts": [
+          1
+        ],
+        "lifecycle": "ACTIVE",
+        "authority": "sim_sink_t11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "effectIds": [
+          "effect-A",
+          "effect-B"
+        ]
+      },
+      "grant": {
+        "start": 10,
+        "end": 50,
+        "task": "t11",
+        "run": "r11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "intent": "i11",
+        "authority": "sim_approver_t11"
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "at": 95,
+        "validUntil": 150,
+        "scope": "t11/r11/u11/i11"
+      },
+      "target": {
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ],
+        "revision": 7,
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "at": 98,
+        "commitAt": 100,
+        "commitBound": true,
+        "readRevision": 7,
+        "commitRevision": 7,
+        "scope": "t11/r11/u11/i11",
+        "uid": "u11",
+        "members": [
+          "A",
+          "B"
+        ]
+      },
+      "retry": {
+        "fenced": true,
+        "sinkDedup": true
+      }
+    }
+  ]
+}

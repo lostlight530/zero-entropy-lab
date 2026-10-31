@@ -1,0 +1,607 @@
+{
+  "schema": "ballast-dynamodb-token-schema-1",
+  "logicalDate": "2026-11-01",
+  "executionAtUTC": "2026-10-31T20:03:36.581Z",
+  "decisions": [
+    {
+      "id": "baseline",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "baseline",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "baseline",
+      "path": "full_reference",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "response_lost",
+      "path": "token_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "response_lost",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "response_lost",
+      "path": "full_reference",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "replay_200_seconds",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "replay_200_seconds",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "replay_200_seconds",
+      "path": "full_reference",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "replay_601_seconds",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "replay_601_seconds",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "replay_601_seconds",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "replay_600_model_boundary",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "replay_600_model_boundary",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "replay_600_model_boundary",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "within_window_payload_mismatch",
+      "path": "token_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "within_window_payload_mismatch",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "within_window_payload_mismatch",
+      "path": "full_reference",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "within_window_intent_mismatch",
+      "path": "token_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "within_window_intent_mismatch",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "within_window_intent_mismatch",
+      "path": "full_reference",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "transaction_canceled",
+      "path": "token_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "transaction_canceled",
+      "path": "txn_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "transaction_canceled",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "no_external_receipts",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "no_external_receipts",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "no_external_receipts",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "missing_B",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "missing_B",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "missing_B",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "duplicate_A_same_count",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "duplicate_A_same_count",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "duplicate_A_same_count",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "replace_B_with_C",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "replace_B_with_C",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "replace_B_with_C",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "extra_C",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "extra_C",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "extra_C",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "wrong_receipt_uid",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "wrong_receipt_uid",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "wrong_receipt_uid",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "wrong_receipt_attempt",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "wrong_receipt_attempt",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "wrong_receipt_attempt",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "grant_expired",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "grant_expired",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "grant_expired",
+      "path": "full_reference",
+      "decision": "BLOCKED"
+    },
+    {
+      "id": "grant_wrong_scope",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "grant_wrong_scope",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "grant_wrong_scope",
+      "path": "full_reference",
+      "decision": "BLOCKED"
+    },
+    {
+      "id": "current_permission_revoked",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "current_permission_revoked",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "current_permission_revoked",
+      "path": "full_reference",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "target_uid_changed",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "target_uid_changed",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "target_uid_changed",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "membership_replaced",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "membership_replaced",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "membership_replaced",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "guard_not_protected",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "guard_not_protected",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "guard_not_protected",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "guard_revision_drift",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "guard_revision_drift",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "guard_revision_drift",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "guard_after_commit",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "guard_after_commit",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "guard_after_commit",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "future_watermark",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "future_watermark",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "future_watermark",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "watermark_before_attempt",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "watermark_before_attempt",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "watermark_before_attempt",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "retention_expired",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "retention_expired",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "retention_expired",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_wrong_scope",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "query_wrong_scope",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "query_wrong_scope",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "attempt_history_uncovered",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "attempt_history_uncovered",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "attempt_history_uncovered",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_unknown",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "query_unknown",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "query_unknown",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "positive_receipt_vs_miss",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "positive_receipt_vs_miss",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "positive_receipt_vs_miss",
+      "path": "full_reference",
+      "decision": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "aggregate_hit_no_members",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "aggregate_hit_no_members",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "aggregate_hit_no_members",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "covered_miss_retry",
+      "path": "token_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "covered_miss_retry",
+      "path": "txn_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "covered_miss_retry",
+      "path": "full_reference",
+      "decision": "RETRY_ALLOWED"
+    },
+    {
+      "id": "miss_permission_revoked",
+      "path": "token_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "miss_permission_revoked",
+      "path": "txn_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "miss_permission_revoked",
+      "path": "full_reference",
+      "decision": "BLOCKED"
+    },
+    {
+      "id": "miss_no_fence",
+      "path": "token_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "miss_no_fence",
+      "path": "txn_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "miss_no_fence",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "miss_no_sink_dedup",
+      "path": "token_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "miss_no_sink_dedup",
+      "path": "txn_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "miss_no_sink_dedup",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "miss_history_incomplete",
+      "path": "token_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "miss_history_incomplete",
+      "path": "txn_proxy",
+      "decision": "RECONCILE"
+    },
+    {
+      "id": "miss_history_incomplete",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "string_guard_revision",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "string_guard_revision",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "string_guard_revision",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "string_query_time",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "string_query_time",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "string_query_time",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "string_effect_time",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "string_effect_time",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "string_effect_time",
+      "path": "full_reference",
+      "decision": "STOP_UNKNOWN"
+    },
+    {
+      "id": "wrong_txn_intent",
+      "path": "token_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "wrong_txn_intent",
+      "path": "txn_proxy",
+      "decision": "COMPLETE"
+    },
+    {
+      "id": "wrong_txn_intent",
+      "path": "full_reference",
+      "decision": "RECONCILE"
+    }
+  ]
+}

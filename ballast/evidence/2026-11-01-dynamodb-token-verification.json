@@ -1,0 +1,262 @@
+{
+  "schema": "ballast-dynamodb-token-schema-1",
+  "logicalDate": "2026-11-01",
+  "executionAtUTC": "2026-10-31T20:03:36.581Z",
+  "baseSha": "2d6693dc95f1b10d1d101b3ce1fe86ea43426185",
+  "verification": {
+    "ok": true,
+    "errors": [],
+    "scenarios": 40,
+    "decisions": 120,
+    "histogram": {
+      "COMPLETE": 6,
+      "RECONCILE": 15,
+      "STOP_UNKNOWN": 14,
+      "BLOCKED": 3,
+      "EVIDENCE_CONFLICT": 1,
+      "RETRY_ALLOWED": 1
+    },
+    "disagreements": {
+      "token_proxy": 36,
+      "txn_proxy": 33
+    },
+    "probes": [
+      {
+        "name": "duplicate_receipt",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "extra_member",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "missing_B",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "future_watermark",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "miss_conflict",
+        "decision": "EVIDENCE_CONFLICT",
+        "safe": true
+      },
+      {
+        "name": "uncovered_attempt",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "guard_not_bound",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "string_revision",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "string_query_at",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "membership_replacement",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "uid_drift",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "grant_expiry",
+        "decision": "BLOCKED",
+        "safe": true
+      },
+      {
+        "name": "duplicate_txn",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "wrong_txn_intent",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "wrong_effect_identity",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "target_B_pending",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "query_wrong_member",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "query_missing_members",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "query_authority_missing",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "effect_after_guard",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "guard_members_changed",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "extra_target_state",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "retry_wrong_uid",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "retry_member_drift",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "retry_guard_wrong_order",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "retry_wrong_revision",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "retry_permission_scope",
+        "decision": "BLOCKED",
+        "safe": true
+      },
+      {
+        "name": "retry_query_authority",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "retry_query_member_drift",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      }
+    ],
+    "positiveRevocationControl": "COMPLETE",
+    "forgedRejected": true,
+    "duplicateRejected": true,
+    "missingPathRejected": true,
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    }
+  },
+  "entry": "V8 isolate produce(scenarios) and separately coded verify(scenarios,traces,decisions)",
+  "notExecuted": [
+    "native Node CLI",
+    "full python ballast/tools/check.py",
+    "live AWS DynamoDB",
+    "external sink",
+    "independent historical approval authority",
+    "semantic-contract-independent verifier"
+  ],
+  "persistedSourceReplay": {
+    "atUTC": "2026-10-31T23:18:24.532Z",
+    "environment": "V8 isolate replay with revised persisted source semantics, NOT native Node CLI",
+    "sourceHead": "14f562ad9f7257ac5590b1f68a5d0bbba871d995",
+    "producerBlob": "996f8dbe00c63a29e757df87d1507ed5fe4a3b05",
+    "verifierBlob": "3b453c0abcc792ccfb14aea650d3088efbef865b",
+    "scenarioBlob": "14917f9b9b39f625bad7fe94da4ee9cb1a351fea",
+    "traceBlob": "f12c97d97380aa06e2bba26cecf45bfa1b08e637",
+    "decisionBlob": "dd13869482d430e02404a9dd28e06c8510cf46d3",
+    "traceEqual": true,
+    "decisionEqual": true,
+    "verifierEqual": true,
+    "scenarios": 40,
+    "decisions": 120,
+    "negativeProbes": 29
+  },
+  "priorPersistedSourceReplay": {
+    "atUTC": "2026-10-31T20:04:14.552Z",
+    "environment": "V8 isolate dynamic source evaluation of exact persisted GitHub blobs, not native Node CLI",
+    "sourceHead": "78d8fc78ec0a6dc502f231cc5474860df4961050",
+    "producerBlob": "ce9af6a9f1e834a11e7e6db909b42d9abc535641",
+    "verifierBlob": "c76f39555a1759baf5795c6d7bdfa897ed0dfc83",
+    "scenarioBlob": "df49748f0d0b246ebbca9ea6f2bb826b13f657cf",
+    "traceBlob": "3765e94e8697b9399ef801dba691ab3d6581bab3",
+    "decisionBlob": "dd13869482d430e02404a9dd28e06c8510cf46d3",
+    "traceEqual": true,
+    "decisionEqual": true,
+    "verifierEqual": true,
+    "scenarios": 40,
+    "decisions": 120,
+    "negativeProbes": 15
+  },
+  "maintainerCorrection": {
+    "atUTC": "2026-10-31T23:16:05.191Z",
+    "originalDraftHead": "a9d9bbd487847ac62e4410864aeb19968982385f",
+    "originalAttackObservations": 17,
+    "originalUnsafeAccepts": 12,
+    "observedFailure": "shared producer+verifier unsafe COMPLETE/RETRY_ALLOWED from missing current predicate, query scope/authority, retry and time fences",
+    "postCorrectionAdversarialProbes": 29,
+    "scope": "same Daily and same PR, no independent research window added",
+    "independence": "implementation PARTIAL, data-source NONE, semantic-contract SHARED, authority NONE",
+    "forgeryTests": "three actual verify(...,{skipForgeryTests:true}) rejections on mutated payloads, not only boolean checks",
+    "forgeryOutcomes": [
+      {
+        "name": "forged",
+        "ok": false,
+        "errorCount": 1,
+        "firstErrors": [
+          "decision baseline token_proxy"
+        ]
+      },
+      {
+        "name": "duplicate",
+        "ok": false,
+        "errorCount": 2,
+        "firstErrors": [
+          "duplicate scenario baseline",
+          "cardinality"
+        ]
+      },
+      {
+        "name": "missing",
+        "ok": false,
+        "errorCount": 2,
+        "firstErrors": [
+          "cardinality",
+          "decision baseline token_proxy"
+        ]
+      }
+    ],
+    "forgeryFixedAtUTC": "2026-10-31T23:18:24.532Z"
+  }
+}
