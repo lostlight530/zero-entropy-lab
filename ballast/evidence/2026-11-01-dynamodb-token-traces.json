@@ -1,0 +1,2316 @@
+{
+  "schema": "ballast-dynamodb-token-schema-1",
+  "logicalDate": "2026-11-01",
+  "executionAtUTC": "2026-10-31T20:03:36.581Z",
+  "model": "synthetic in-process token cache and authored sink, no live AWS",
+  "traces": [
+    {
+      "id": "baseline",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "response_lost",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": false
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "replay_200_seconds",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": false
+        },
+        {
+          "kind": "txn_response",
+          "at": 200,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "IDEMPOTENT_REPLAY",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "replay_601_seconds",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": false
+        },
+        {
+          "kind": "txn_commit",
+          "at": 601,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-2"
+        },
+        {
+          "kind": "txn_response",
+          "at": 601,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "replay_600_model_boundary",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": false
+        },
+        {
+          "kind": "txn_commit",
+          "at": 600,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-2"
+        },
+        {
+          "kind": "txn_response",
+          "at": 600,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "within_window_payload_mismatch",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": false
+        },
+        {
+          "kind": "txn_response",
+          "at": 200,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+C",
+          "status": "IDEMPOTENT_MISMATCH",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "within_window_intent_mismatch",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": false
+        },
+        {
+          "kind": "txn_response",
+          "at": 200,
+          "token": "k11",
+          "intent": "other",
+          "payload": "A+B",
+          "status": "IDEMPOTENT_MISMATCH",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "transaction_canceled",
+      "events": [
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "TXN_CANCELED",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "no_external_receipts",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "missing_B",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "duplicate_A_same_count",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "replace_B_with_C",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "C",
+          "effectId": "effect-C",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "extra_C",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "C",
+          "effectId": "effect-C",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "wrong_receipt_uid",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "old",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "wrong_receipt_attempt",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 3
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "grant_expired",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "grant_wrong_scope",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "current_permission_revoked",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "target_uid_changed",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "membership_replaced",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "guard_not_protected",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": false,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "guard_revision_drift",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 8
+        }
+      ]
+    },
+    {
+      "id": "guard_after_commit",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 120,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "future_watermark",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 90,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "watermark_before_attempt",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 60,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "retention_expired",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 70,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "query_wrong_scope",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/old",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "attempt_history_uncovered",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "query_unknown",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "unknown",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "positive_receipt_vs_miss",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "miss",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "aggregate_hit_no_members",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "covered_miss_retry",
+      "events": [
+        {
+          "kind": "query",
+          "status": "miss",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "miss_permission_revoked",
+      "events": [
+        {
+          "kind": "query",
+          "status": "miss",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "miss_no_fence",
+      "events": [
+        {
+          "kind": "query",
+          "status": "miss",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "miss_no_sink_dedup",
+      "events": [
+        {
+          "kind": "query",
+          "status": "miss",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "miss_history_incomplete",
+      "events": [
+        {
+          "kind": "query",
+          "status": "miss",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "string_guard_revision",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": "7"
+        }
+      ]
+    },
+    {
+      "id": "string_query_time",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": "80",
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "string_effect_time",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "i11",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": "25",
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    },
+    {
+      "id": "wrong_txn_intent",
+      "events": [
+        {
+          "kind": "txn_commit",
+          "at": 0,
+          "token": "k11",
+          "intent": "other",
+          "payload": "A+B",
+          "txnId": "txn-1"
+        },
+        {
+          "kind": "txn_response",
+          "at": 0,
+          "token": "k11",
+          "intent": "other",
+          "payload": "A+B",
+          "status": "SUCCESS",
+          "delivered": true
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 20,
+          "member": "A",
+          "effectId": "effect-A",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "sink_receipt",
+          "at": 25,
+          "member": "B",
+          "effectId": "effect-B",
+          "task": "t11",
+          "run": "r11",
+          "uid": "u11",
+          "attempt": 1
+        },
+        {
+          "kind": "query",
+          "status": "hit",
+          "at": 80,
+          "watermark": 80,
+          "retentionUntil": 200,
+          "scope": "t11/r11/u11",
+          "attempts": [
+            1
+          ],
+          "lifecycle": "ACTIVE"
+        },
+        {
+          "kind": "guard",
+          "at": 98,
+          "commitAt": 100,
+          "commitBound": true,
+          "readRevision": 7,
+          "commitRevision": 7
+        }
+      ]
+    }
+  ]
+}

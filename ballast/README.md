@@ -29,8 +29,8 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-10-31 Azure Service Bus duplicate detection and PeekLock downstream effect integrity](records/2026-10-31.md)
-- 当前月度事实源: [2026-10](records/2026-10.md)
+- 最新 Daily: [2026-11-01 DynamoDB token expiry and external effect integrity](records/2026-11-01.md)
+- 当前月度事实源: [2026-11](records/2026-11.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-26 至 2026-10-31](audits/2026-10-26--2026-10-31.md)
 - 最新合并后修正对账: [2026-10-30 PR #754 post-merge reconciliation](corrections/2026-10-30-pubsub-merge-reconciliation.md)

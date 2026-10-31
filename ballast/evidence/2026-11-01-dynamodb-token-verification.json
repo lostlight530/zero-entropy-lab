@@ -1,0 +1,120 @@
+{
+  "schema": "ballast-dynamodb-token-schema-1",
+  "logicalDate": "2026-11-01",
+  "executionAtUTC": "2026-10-31T20:03:36.581Z",
+  "baseSha": "2d6693dc95f1b10d1d101b3ce1fe86ea43426185",
+  "verification": {
+    "ok": true,
+    "errors": [],
+    "scenarios": 40,
+    "decisions": 120,
+    "histogram": {
+      "COMPLETE": 6,
+      "RECONCILE": 15,
+      "STOP_UNKNOWN": 14,
+      "BLOCKED": 3,
+      "EVIDENCE_CONFLICT": 1,
+      "RETRY_ALLOWED": 1
+    },
+    "disagreements": {
+      "token_proxy": 36,
+      "txn_proxy": 33
+    },
+    "probes": [
+      {
+        "name": "duplicate_receipt",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "extra_member",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "missing_B",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "future_watermark",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "miss_conflict",
+        "decision": "EVIDENCE_CONFLICT",
+        "safe": true
+      },
+      {
+        "name": "uncovered_attempt",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "guard_not_bound",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "string_revision",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "string_query_at",
+        "decision": "STOP_UNKNOWN",
+        "safe": true
+      },
+      {
+        "name": "membership_replacement",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "uid_drift",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "grant_expiry",
+        "decision": "BLOCKED",
+        "safe": true
+      },
+      {
+        "name": "duplicate_txn",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "wrong_txn_intent",
+        "decision": "RECONCILE",
+        "safe": true
+      },
+      {
+        "name": "wrong_effect_identity",
+        "decision": "RECONCILE",
+        "safe": true
+      }
+    ],
+    "positiveRevocationControl": "COMPLETE",
+    "forgedRejected": true,
+    "duplicateRejected": true,
+    "missingPathRejected": true,
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    }
+  },
+  "entry": "V8 isolate produce(scenarios) and separately coded verify(scenarios,traces,decisions)",
+  "notExecuted": [
+    "native Node CLI",
+    "full python ballast/tools/check.py",
+    "live AWS DynamoDB",
+    "external sink",
+    "independent historical approval authority",
+    "semantic-contract-independent verifier"
+  ]
+}
