@@ -5,14 +5,14 @@ Repository: lostlight530/zero-entropy-lab
 System: aegis-cortex
 Target Logical Date: 2026-10-31 Asia/Shanghai
 Producer: GPT_NATIVE_POST_MERGE_REVIEW / NOT_JULES_REPLAY / NOT_INDEPENDENT_GPT_A1_A2
-Base merged main at review: `6e7ed749c6fb27aef7e04f6bb5e6704adfd2b4d`
-Run Identity: zero-entropy-lab/aegis/reconciliation/2026-10-31/GPT_NATIVE_POST_MERGE_REVIEW/6e7ed749c6fb27aef7e04f6bb5e6704adfd2b4d/a2-typed-risk-fields-01
+Base merged main at review: `6e7ed749c6fb27aef7e04f6bb5e670c6a5c79a5a`
+Run Identity: zero-entropy-lab/aegis/reconciliation/2026-10-31/GPT_NATIVE_POST_MERGE_REVIEW/6e7ed749c6fb27aef7e04f6bb5e670c6a5c79a5a/a2-typed-risk-fields-01
 Review Status: EXISTING_ARGUMENT_SUPPORTED_AS_DOCUMENTARY_MAPPING / ORIGINAL_A2_SCHEMA_INCOMPLETE / NOT_VALIDATED_BY_NATIVE_CHECKER
 
 ## Original read identities
 
 - A1: `aegis-cortex/2026-10-31-A1-reliability-observe.md`, blob `635f05927dd7adae27d4b17afff56effeab95f70`, merged [PR #762](https://github.com/lostlight530/zero-entropy-lab/pull/762), merge commit `306b962acb0d3ec3cd68a6a2234d8b639be30164`.
-- A2: `aegis-cortex/2026-10-31-A2-doctrine-orient.md`, blob `ff70234743bd6632b75464c7d10c6704adfd2b4d`, merged [PR #763](https://github.com/lostlight530/zero-entropy-lab/pull/763), merge commit `6e7ed749c6fb27aef7e04f6bb5e6704adfd2b4d`.
+- A2: `aegis-cortex/2026-10-31-A2-doctrine-orient.md`, blob `ff70234743bd6632b75464c7d10c6704adfd2b4d`, merged [PR #763](https://github.com/lostlight530/zero-entropy-lab/pull/763), merge commit `6e7ed749c6fb27aef7e04f6bb5e670c6a5c79a5a`.
 - Source lineage: original authors' `arXiv:2610.06191v1` paper, cited in both A1 and A2. Two documents and the paper's own appendices do **not** create multiple independent source lines.
 
 ## Exact H1-equivalent upstream A1 state projection
