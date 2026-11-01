@@ -764,3 +764,74 @@ CONTINUE_WATCH_ONLY
 ```
 
 The 2026-09-23 blocked A2 and all earlier blocked/substitute/reconciliation histories remain unchanged.
+
+---
+
+## 2026-11-01 GPT Native A5 — September retrospective natural-month reflection
+
+CORTEX_RUN_HEADER
+Cortex: aegis-cortex
+Host Repository: zero-entropy-lab
+Task ID: A5
+Canonical Identity: zero/aegis/A5
+Cadence: Monthly
+Loop Stage: Reflect
+Run Month: 2026-09
+Target Month: 2026-09
+Month Closure Status: CLOSED
+Execution Time Asia/Shanghai: 2026-11-01T17:16:02.375+08:00
+Agent: GPT-6
+Producer: GPT_NATIVE_RETROSPECTIVE_SUCCESSOR / NOT_JULES_REPLAY
+Record Provenance: HUMAN_AUTHORIZED_SUBSTITUTE
+Original Execution Status: ORIGINAL_JULES_FINAL_A5_NOT_ESTABLISHED / HISTORICAL_A6_BLOCKED
+Current Path Status: PROPOSED_FOR_MERGE_AT_AUTHORING
+Task Status: RETROSPECTIVE_DOCUMENTARY_REFLECTION_COMPLETE_WITH_ORIGINAL_EXECUTION_GAPS
+Base Main SHA: 4c9aa26c932dbb6fd828ef01c8220d56a557cc9d
+Run Identity: zero/aegis/A5/2026-09/GPT_NATIVE/4c9aa26c932dbb6fd828ef01c8220d56a557cc9d/dated-postboundary-reflect
+Daily Coverage Matrix: 30/30 A1 and 30/30 A2 current paths; multiple historically blocked dependency chains
+Weekly Coverage Matrix: W36-W39 A3/A4 canonical paths; cross-month W40 source exists later as postmonth closure context, not Sep30 source-time input
+Inherited Evidence: September A1/A2 primary records, W36-W39 and W40 crossmonth weekly, original blocked A6, existing early A5 month-to-date
+Independent Evidence Added: NONE / NO_ORIGINAL_JULES_REPLAY
+Missing Inputs Preserved: original Sep23 and Sep26 A2 INPUT_MISSING/BLOCKED, Sep10/15 substitute producer, Sep9 rewrite provenance, W39 historical incomplete reading, other original blocked states
+External Risk State: MULTIPLE_EXTERNAL_FAILURE_CLASSES / CLAIM_AND_VERSION_SCOPED
+Local Incident State: NO_LOCAL_INCIDENT_EVIDENCE_FROM_REVIEW / NO_LOCAL_ABSENCE_PROOF
+Proof Boundary Calibration: DOCUMENTARY_SOURCE_REVIEW_NOT_KERNEL_MEASUREMENT; past later-week or later-file availability cannot upgrade original earlier A6 input
+Boundary Violation: NO
+
+INPUT_RECORD
+- Current merged main `4c9aa26c932dbb6fd828ef01c8220d56a557cc9d` after October maintenance. Historical September A5 OPEN sections through Sep24 remain intact as prior dated observations.
+- All September dated `aegis-cortex/2026-09-DD-A1-reliability-observe.md` and `...-A2-doctrine-orient.md` current paths are present. Presence does not establish originally successful 60-stage execution.
+- 2026-09-30 A1 `38dae5386b4f0bd2dc916fb36a863e4c6f2c1ad1` and A2 `cad3c2f4636eb2b09d361a8626d65e8299d72ab0` are Jules-native external paper analysis; source arXiv:2609.23215v1, original paper-scoped reported sycophantic explanation in an Active-Inference task. No direct Zero Kernel incident or reproduced false-completion behavior claimed.
+- W39 A3 `8c3937e37207de021793431d7f17ba6c067214a6` itself distinguishes current 7/7 path coverage from incomplete originally executed upstream A1/A2 pairs. W40 (2026-09-28..2026-10-04) did not close by September 30.
+- Original September A6 `aegis-cortex/2026-09-A6-aegis-memorize.md` remains JULES_NATIVE / BLOCKED on 2026-10-01 12:00 Shanghai because it read the earlier `OPEN / NOT_FINAL` A5. THIS later A5 cannot make that original A6 successful or eligible at its task time.
+- This new section uses repository records, not an external source recertification or native checker rerun.
+
+RELIABILITY_REVIEW
+- Recurrent external failure families: unsupported completion, over-privileged action/tool selection, memory-poisoning and source laundering, source-derived operational risk, error/rollback/atomicity, and sycophantic interpretability. These are heterogeneous evidence classes and cannot be tallied as Aegis-local incident frequencies.
+- The Sep30 author-paper rates and assertions are controlled author experiment evidence only; transferring them to the local system requires comparable runtime, agent, harness and denial/receipt instrumentation.
+- W39's originally incomplete dependency flow means no evidence-supported 'all Sep A1→A2 succeeded' declaration. Future source-level improvements are forward corrections, not independent second producer execution.
+- CHECKER_PASS or shared explanation labels do not prove local semantic correctness or valid external completion; structural output may coexist with a source-specific or action-level failure.
+
+DRIFT_AND_FAILURE_LOG
+- Sep23 and Sep26 original A2 task-time input gaps: RETAIN BLOCKED. Later A1 source path does not repair original run.
+- Sep30 explanation/sycophancy research: EXTERNAL_RISK_CLASS only, NO_LOCAL_EVIDENCE, applicability UNKNOWN.
+- Sep monthly original A6: BLOCKED before final A5; its existence is valid failure evidence, not a silently promotable memory result.
+- Crossmonth W40: later closed report contributes present explanatory context only, not historical Sep30 availability.
+
+CORRECTION_NOTES
+- NEW_EVIDENCE: current September calendar is naturally closed and primary-source paths can be audited in a retrospective record.
+- CORRECTED_INTERPRETATION: A5 early `OPEN` is a historic month-to-date checkpoint; September's natural calendar is no longer open, but original A6 predecessor at its execution was still invalid.
+- UNCHANGED_BOUNDARY: RISK != INCIDENT; AUTHORIZATION != COMPLETION; CURRENT_PATH != TASK_TIME_INPUT.
+- NEW_COUNTEREVIDENCE: a high external paper-specific explainability-error rate cannot quantify Aegis-local failures in a different task setting; historical W39 missing source-time inputs prevent full success.
+- UNKNOWN_RETAINED: local incident/defense effectiveness, true source-independent reproduction, all originally executed task receipts.
+- NEXT_RETEST_CONDITION: current exact Host/Kernel dependency and testable effect receipts under a representative configuration, with per-run provenance.
+
+HANDOFF_TO_A6
+- A later GPT Native successor A6 may consume this A5 only after this appended section is actually merged into current main. It must preserve original October 1 Jules A6 BLOCKED.
+- No new durable doctrine promotion from this retrospective review; limited carry-forward distinctions only, with no historic task-time repair claim.
+
+BOUNDARY_CHECK
+Boundary Violation: NO
+Only this canonical September A5 gains a forward dated research section.
+Original A6, historic A1-A4, Ballast/Kernel/NEXUS/Actions remain untouched.
+Full native checker, runtime, source recertification and independent test NOT_EXECUTED.
