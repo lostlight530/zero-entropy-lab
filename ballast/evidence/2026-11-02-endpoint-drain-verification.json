@@ -9,15 +9,15 @@
   "scenarioCount": 39,
   "decisionRows": 117,
   "referenceHistogram": {
-    "COMPLETE": 4,
-    "RECONCILE": 19,
+    "COMPLETE": 2,
+    "RECONCILE": 21,
     "STOP_UNKNOWN": 12,
     "BLOCKED": 3,
     "EVIDENCE_CONFLICT": 1
   },
   "weakDisagreements": {
     "ready_proxy": 36,
-    "snapshot_proxy": 30
+    "snapshot_proxy": 32
   },
   "verifier": {
     "ok": true,
@@ -64,5 +64,241 @@
     }
   ],
   "realKubernetesCalls": 0,
-  "realProxyCalls": 0
+  "realProxyCalls": 0,
+  "maintainerReview": {
+    "atUTC": "2026-11-01T23:09:08.703Z",
+    "originalDraftHead": "9a47aab8c35a557ab13ca834cd2ca3cc2e0a5e13",
+    "originalMutations": 22,
+    "originalUnsafeComplete": 16,
+    "correctedProbes": [
+      {
+        "name": "future_receipt_watermark",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      },
+      {
+        "name": "future_ledger_watermark",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      },
+      {
+        "name": "receipt_query_after_commit",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      },
+      {
+        "name": "receipt_query_attempt_duplicate",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      },
+      {
+        "name": "receipt_query_attempt_extra",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      },
+      {
+        "name": "receipt_query_retention_until_before_commit",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      },
+      {
+        "name": "receipt_query_without_scope",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      },
+      {
+        "name": "receipt_query_unbound_effect_set",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      },
+      {
+        "name": "receipt_query_no_retention_lifecycle",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      },
+      {
+        "name": "ledger_no_target_selector_binding",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      },
+      {
+        "name": "ledger_no_task_run_attempt",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      },
+      {
+        "name": "endpoint_changed_slice_resource_version",
+        "decision": "RECONCILE",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected RECONCILE got COMPLETE"
+        ]
+      },
+      {
+        "name": "endpoint_state_ready_true",
+        "decision": "RECONCILE",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/ready_proxy expected RECONCILE got COMPLETE"
+        ]
+      },
+      {
+        "name": "guard_reference_unbound_ledger_uid",
+        "decision": "RECONCILE",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected RECONCILE got COMPLETE"
+        ]
+      },
+      {
+        "name": "receipt_effect_grant_not_checked",
+        "decision": "BLOCKED",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected BLOCKED got COMPLETE"
+        ]
+      },
+      {
+        "name": "grant_authority_missing",
+        "decision": "BLOCKED",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected BLOCKED got COMPLETE"
+        ]
+      },
+      {
+        "name": "query_missing_effect_set",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      },
+      {
+        "name": "query_missing_attempts",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      },
+      {
+        "name": "ledger_future_query_at",
+        "decision": "RECONCILE",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected RECONCILE got COMPLETE"
+        ]
+      },
+      {
+        "name": "ledger_lifecycle_retention",
+        "decision": "STOP_UNKNOWN",
+        "safe": true,
+        "verifierRejected": true,
+        "errors": [
+          "primitive trace provenance baseline",
+          "decision baseline/full_reference expected STOP_UNKNOWN got COMPLETE"
+        ]
+      }
+    ],
+    "changedReferenceRows": [
+      {
+        "id": "ready_override_positive",
+        "path": "full_reference",
+        "decision": "RECONCILE"
+      },
+      {
+        "id": "stale_ledger_watermark",
+        "path": "full_reference",
+        "decision": "RECONCILE"
+      },
+      {
+        "id": "receipt_query_future_watermark",
+        "path": "full_reference",
+        "decision": "STOP_UNKNOWN"
+      }
+    ],
+    "notExecuted": [
+      "native Node CLI",
+      "full python ballast/tools/check.py",
+      "live Kubernetes",
+      "real proxy/effect sink",
+      "authority and semantic independence"
+    ],
+    "sameDaily": true,
+    "sameResearchWindow": true,
+    "semanticContractIndependence": "SHARED",
+    "authorityIndependence": "NONE"
+  }
 }

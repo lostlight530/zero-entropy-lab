@@ -51,6 +51,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -67,17 +75,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -97,6 +111,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -158,6 +173,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -174,17 +197,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -204,6 +233,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -265,6 +295,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -281,17 +319,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -311,6 +355,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -372,6 +417,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -388,17 +441,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -418,6 +477,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -479,6 +539,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -495,17 +563,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -525,6 +599,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -595,6 +670,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -611,17 +694,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -641,6 +730,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -711,6 +801,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -727,17 +825,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -757,6 +861,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -818,6 +923,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -834,17 +947,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -864,6 +983,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -925,6 +1045,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -941,17 +1069,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -971,6 +1105,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -1032,6 +1167,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -1048,17 +1191,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -1078,6 +1227,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 41,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -1139,6 +1289,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -1155,17 +1313,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -1185,6 +1349,7 @@
         "atomic": false,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -1246,6 +1411,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -1258,11 +1431,16 @@
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -1282,6 +1460,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -1343,6 +1522,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -1359,17 +1546,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-2",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -1389,6 +1582,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -1450,6 +1644,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -1466,7 +1668,8 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         },
         {
           "effect": "drain",
@@ -1475,17 +1678,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -1505,6 +1714,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -1566,6 +1776,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -1582,7 +1800,8 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         },
         {
           "effect": "drain",
@@ -1591,17 +1810,23 @@
           "attempt": 1,
           "uid": "pod-extra",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -1621,6 +1846,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -1682,6 +1908,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -1698,17 +1932,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 21,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -1728,6 +1968,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -1789,6 +2030,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -1805,17 +2054,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 4,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -1835,6 +2090,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -1896,6 +2152,14 @@
       "receiptQuery": {
         "status": "unknown",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -1912,17 +2176,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -1942,6 +2212,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -2003,6 +2274,14 @@
       "receiptQuery": {
         "status": "authoritative miss",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -2019,17 +2298,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -2049,6 +2334,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -2110,6 +2396,14 @@
       "receiptQuery": {
         "status": "authoritative miss",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -2122,11 +2416,16 @@
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -2146,6 +2445,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -2207,6 +2507,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -2223,17 +2531,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -2253,6 +2567,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -2314,6 +2629,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -2330,17 +2653,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -2360,6 +2689,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -2421,6 +2751,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -2437,17 +2775,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -2467,6 +2811,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -2528,6 +2873,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -2544,17 +2897,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": false,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -2574,6 +2933,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -2635,6 +2995,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -2651,17 +3019,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -2685,6 +3059,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -2746,6 +3121,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -2762,17 +3145,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -2792,6 +3181,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -2853,6 +3243,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -2869,17 +3267,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 31,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -2899,6 +3303,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -2960,6 +3365,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -2976,17 +3389,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -3006,6 +3425,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-02",
         "selector": "old=blue",
         "members": [
@@ -3067,6 +3487,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -3083,17 +3511,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -3113,6 +3547,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=green",
         "members": [
@@ -3174,6 +3609,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -3190,17 +3633,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -3224,6 +3673,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -3285,6 +3735,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [],
         "watermark": 24,
@@ -3299,17 +3757,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -3329,6 +3793,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -3390,6 +3855,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -3406,17 +3879,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -3436,6 +3915,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -3497,6 +3977,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -3513,17 +4001,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -3543,6 +4037,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -3604,6 +4099,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -3620,17 +4123,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -3650,6 +4159,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -3711,6 +4221,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -3727,17 +4245,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -3757,6 +4281,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -3818,6 +4343,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -3834,17 +4367,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -3864,6 +4403,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -3925,6 +4465,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -3941,17 +4489,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": "5",
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -3971,6 +4525,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -4032,6 +4587,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -4048,17 +4611,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": "12",
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -4078,6 +4647,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [
@@ -4139,6 +4709,14 @@
       "receiptQuery": {
         "status": "hit",
         "authority": "synthetic-receipt",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "effects": [
+          "drain"
+        ],
+        "lifecycle": "ACTIVE",
         "exact": true,
         "coveredAttempts": [
           1
@@ -4155,17 +4733,23 @@
           "attempt": 1,
           "uid": "pod-old-uid-1",
           "time": 12,
-          "grant": "grant-01"
+          "grant": "grant-01",
+          "grantAuthority": "synthetic-grant"
         }
       ],
       "grant": {
         "id": "grant-01",
         "scope": "pod-old-uid-1",
+        "authority": "synthetic-grant",
         "from": 5,
         "until": 20
       },
       "ledger": {
         "authority": "synthetic-ledger",
+        "identity": "ledger-02",
+        "scope": "task-drain-02/run-02/1/svc-01/pod-old-uid-1",
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
         "complete": true,
         "coveredUIDs": [
           "pod-old-uid-1"
@@ -4185,6 +4769,7 @@
         "atomic": true,
         "at": 30,
         "listRV": 40,
+        "ledgerIdentity": "ledger-02",
         "serviceUID": "svc-01",
         "selector": "old=blue",
         "members": [

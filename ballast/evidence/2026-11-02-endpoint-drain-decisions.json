@@ -57,7 +57,7 @@
   {
     "id": "ready_override_positive",
     "path": "full_reference",
-    "decision": "COMPLETE"
+    "decision": "RECONCILE"
   },
   {
     "id": "replaced_pod_same_name_ip",
@@ -342,7 +342,7 @@
   {
     "id": "stale_ledger_watermark",
     "path": "full_reference",
-    "decision": "STOP_UNKNOWN"
+    "decision": "RECONCILE"
   },
   {
     "id": "incomplete_ledger_coverage",
@@ -507,7 +507,7 @@
   {
     "id": "receipt_query_future_watermark",
     "path": "full_reference",
-    "decision": "COMPLETE"
+    "decision": "STOP_UNKNOWN"
   },
   {
     "id": "nil_serving_is_not_drained",
