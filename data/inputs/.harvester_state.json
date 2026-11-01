@@ -2740,16 +2740,16 @@
           "tree_sha": "93f5e8368ee95cb26e0a589d502194c9ca22aa23"
         },
         "docs/design/nixl_kv_push_connector.md": {
-          "blob_sha": "d29a21629e967066e3480c95aa7234a7d90c7dc4",
-          "commit_sha": "f5aa164b514819fea7dffa245457f04965cb9309",
-          "content_hash": "410668ba8dc5e296ec116067086be240e34e1d3c86eee99cd77be6042f169518",
+          "blob_sha": "afdf84a9bd02d858dbb7efe8cfd472ff09408cc2",
+          "commit_sha": "564ac0de1b228568cafcbfbe8ccaccc82d6023eb",
+          "content_hash": "c6130a1b2a57f9eeb65d46c41c42b557c4476aa30de3fc8e3963e8e66aaa5fc8",
           "entity_id": "external_doc_vllm_project_vllm_docs_design_nixl_kv_push_connector_md",
-          "observed_blob_sha": "d29a21629e967066e3480c95aa7234a7d90c7dc4",
-          "observed_commit_sha": "f5aa164b514819fea7dffa245457f04965cb9309",
-          "observed_tree_sha": "a3d5111d0cd74525d3e9cb0331ac02039b3b5607",
-          "output": "current/serving-inference/vllm_project_vllm/docs__design__nixl_kv_push_connector.md__d29a21629e96__f5aa164b5148.md",
-          "sha": "d29a21629e967066e3480c95aa7234a7d90c7dc4",
-          "tree_sha": "a3d5111d0cd74525d3e9cb0331ac02039b3b5607"
+          "observed_blob_sha": "afdf84a9bd02d858dbb7efe8cfd472ff09408cc2",
+          "observed_commit_sha": "564ac0de1b228568cafcbfbe8ccaccc82d6023eb",
+          "observed_tree_sha": "476b6e1ad4b02cdbd8762bdbfd394aee23a36556",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__nixl_kv_push_connector.md__afdf84a9bd02__564ac0de1b22.md",
+          "sha": "afdf84a9bd02d858dbb7efe8cfd472ff09408cc2",
+          "tree_sha": "476b6e1ad4b02cdbd8762bdbfd394aee23a36556"
         },
         "docs/design/optimization_levels.md": {
           "blob_sha": "4f96778d2ee2765a28e7588a4a02f797a389f66a",
@@ -2980,24 +2980,24 @@
           "tree_sha": "cfeb3173928b2b51eb943c8f1dacbc9c3ebf57b4"
         }
       },
-      "last_checked_at": "2026-10-31T01:11:22.127462+00:00"
+      "last_checked_at": "2026-11-01T00:32:19.815839+00:00"
     },
     "volcengine/verl": {
       "documents": {
         "README.md": {
-          "blob_sha": "48f45890662c07d087698ac2227f129bfbce7119",
-          "commit_sha": "10db40d0da4d59150bb389960b77585f81a89b8d",
-          "content_hash": "5a7296d054c5ae6ede153717d1b4b7252d9208a7da045346ce0747a8ee39a20c",
+          "blob_sha": "d8fdf22513b4c8b176ee355151ee8a12d4e51256",
+          "commit_sha": "8df5baeed0f5ecdd7f870d83bc3d79194816e2a9",
+          "content_hash": "17efb8d5c5e62ce14b4c50a3d10ebfdc25329faf9a0525e4a1d65a5a24e2b1ac",
           "entity_id": "external_doc_volcengine_verl_readme_md",
-          "observed_blob_sha": "48f45890662c07d087698ac2227f129bfbce7119",
-          "observed_commit_sha": "10db40d0da4d59150bb389960b77585f81a89b8d",
-          "observed_tree_sha": "b7c68d848d5f06a48e48e27c2786702eccba993f",
-          "output": "current/memory-context-sandbox/volcengine_verl/README.md__48f45890662c__10db40d0da4d.md",
-          "sha": "48f45890662c07d087698ac2227f129bfbce7119",
-          "tree_sha": "b7c68d848d5f06a48e48e27c2786702eccba993f"
+          "observed_blob_sha": "d8fdf22513b4c8b176ee355151ee8a12d4e51256",
+          "observed_commit_sha": "8df5baeed0f5ecdd7f870d83bc3d79194816e2a9",
+          "observed_tree_sha": "b3db2f2e4a5d6bd3caebef25c91a1db96915cb9a",
+          "output": "current/memory-context-sandbox/volcengine_verl/README.md__d8fdf22513b4__8df5baeed0f5.md",
+          "sha": "d8fdf22513b4c8b176ee355151ee8a12d4e51256",
+          "tree_sha": "b3db2f2e4a5d6bd3caebef25c91a1db96915cb9a"
         }
       },
-      "last_checked_at": "2026-09-11T23:39:20.769400+00:00"
+      "last_checked_at": "2026-11-01T00:32:37.045428+00:00"
     },
     "zai-org/Open-AutoGLM": {
       "documents": {
