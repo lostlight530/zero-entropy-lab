@@ -1,0 +1,512 @@
+[
+  {
+    "id": "baseline",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "baseline",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "baseline",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "terminating_still_serving",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "terminating_still_serving",
+    "path": "snapshot_proxy",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "terminating_still_serving",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "inflight_after_ready_false",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "inflight_after_ready_false",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "inflight_after_ready_false",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "ready_override_positive",
+    "path": "ready_proxy",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "ready_override_positive",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "ready_override_positive",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "replaced_pod_same_name_ip",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "replaced_pod_same_name_ip",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "replaced_pod_same_name_ip",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "duplicate_endpoint_uid",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_endpoint_uid",
+    "path": "snapshot_proxy",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "duplicate_endpoint_uid",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "extra_old_endpoint",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra_old_endpoint",
+    "path": "snapshot_proxy",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "extra_old_endpoint",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "incomplete_slice_list",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "incomplete_slice_list",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "incomplete_slice_list",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "watch_compacted",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "watch_compacted",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "watch_compacted",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "guard_rv_drift",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_rv_drift",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_rv_drift",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "guard_not_atomic",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_not_atomic",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_not_atomic",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "missing_receipt",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "missing_receipt",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "missing_receipt",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "wrong_receipt_uid",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_receipt_uid",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_receipt_uid",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "duplicate_receipt",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_receipt",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_receipt",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "extra_receipt",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra_receipt",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra_receipt",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "grant_expired_at_effect",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_expired_at_effect",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_expired_at_effect",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "grant_not_yet_valid",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_not_yet_valid",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_not_yet_valid",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "prior_unknown",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "prior_unknown",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "prior_unknown",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "positive_receipt_vs_authoritative_miss",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "positive_receipt_vs_authoritative_miss",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "positive_receipt_vs_authoritative_miss",
+    "path": "full_reference",
+    "decision": "EVIDENCE_CONFLICT"
+  },
+  {
+    "id": "miss_without_receipt",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "miss_without_receipt",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "miss_without_receipt",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "current_permission_revoked_completed",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "current_permission_revoked_completed",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "current_permission_revoked_completed",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "current_permission_revoked_incomplete",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "current_permission_revoked_incomplete",
+    "path": "snapshot_proxy",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "current_permission_revoked_incomplete",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "stale_ledger_watermark",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "stale_ledger_watermark",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "stale_ledger_watermark",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "incomplete_ledger_coverage",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "incomplete_ledger_coverage",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "incomplete_ledger_coverage",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "duplicate_ledger_member",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_ledger_member",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_ledger_member",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "traffic_fence_missing",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "traffic_fence_missing",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "traffic_fence_missing",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_after_commit",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_after_commit",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_after_commit",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "service_uid_drift",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "service_uid_drift",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "service_uid_drift",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "selector_drift",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "selector_drift",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "selector_drift",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "extra_ledger_member",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra_ledger_member",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra_ledger_member",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "missing_query_attempt",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "missing_query_attempt",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "missing_query_attempt",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "guard_membership_drift",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_membership_drift",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_membership_drift",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "ledger_retention_expired",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "ledger_retention_expired",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "ledger_retention_expired",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "receipt_query_future_watermark",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_query_future_watermark",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_query_future_watermark",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  }
+]
