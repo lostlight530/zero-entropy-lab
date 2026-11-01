@@ -508,5 +508,80 @@
     "id": "receipt_query_future_watermark",
     "path": "full_reference",
     "decision": "COMPLETE"
+  },
+  {
+    "id": "nil_serving_is_not_drained",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "nil_serving_is_not_drained",
+    "path": "snapshot_proxy",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "nil_serving_is_not_drained",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "old_endpoint_not_terminating",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "old_endpoint_not_terminating",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "old_endpoint_not_terminating",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "string_grant_start",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "string_grant_start",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "string_grant_start",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "string_receipt_time",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "string_receipt_time",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "string_receipt_time",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "string_ledger_watermark",
+    "path": "ready_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "string_ledger_watermark",
+    "path": "snapshot_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "string_ledger_watermark",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
   }
 ]

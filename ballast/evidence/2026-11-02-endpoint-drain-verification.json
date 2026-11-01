@@ -1,27 +1,29 @@
 {
-  "executedUTC": "2026-11-01T20:02:07.116Z",
+  "executedUTC": "2026-11-01T20:04:10.980Z",
   "logicalDate": "2026-11-02 Asia/Shanghai",
   "baseSHA": "8eb40e0d66b7db27908b7a5e1d1fd1fb716be15a",
+  "previousDraftHead": "fe78651e805699eb71c8224665708ba046098efd",
+  "originalExecutionUTC": "2026-11-01T20:02:07.116Z",
   "sourceVerifiedDate": "2026-11-02",
-  "producerEnvironment": "V8 isolated JavaScript via connector orchestration, not Node CLI",
-  "scenarioCount": 34,
-  "decisionRows": 102,
+  "producerEnvironment": "V8 isolate, not Node CLI",
+  "scenarioCount": 39,
+  "decisionRows": 117,
   "referenceHistogram": {
     "COMPLETE": 4,
-    "RECONCILE": 17,
-    "STOP_UNKNOWN": 9,
+    "RECONCILE": 19,
+    "STOP_UNKNOWN": 12,
     "BLOCKED": 3,
     "EVIDENCE_CONFLICT": 1
   },
   "weakDisagreements": {
-    "ready_proxy": 31,
-    "snapshot_proxy": 26
+    "ready_proxy": 36,
+    "snapshot_proxy": 30
   },
   "verifier": {
     "ok": true,
     "errors": [],
-    "scenarios": 34,
-    "decisionsChecked": 102,
+    "scenarios": 39,
+    "decisionsChecked": 117,
     "independence": {
       "implementation": "PARTIAL",
       "dataSource": "NONE",
@@ -50,7 +52,7 @@
       "rejected": true,
       "errors": [
         "cardinality",
-        "decision receipt_query_future_watermark/full_reference expected COMPLETE got undefined"
+        "decision string_ledger_watermark/full_reference expected STOP_UNKNOWN got undefined"
       ]
     },
     {

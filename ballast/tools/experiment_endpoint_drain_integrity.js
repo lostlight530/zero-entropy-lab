@@ -44,7 +44,12 @@ function scenarios() {
     missing_query_attempt:s=>{s.receiptQuery.coveredAttempts=[]},
     guard_membership_drift:s=>{s.guard.members=["pod-old-uid-2"]},
     ledger_retention_expired:s=>{s.ledger.retentionUntil=25},
-    receipt_query_future_watermark:s=>{s.receiptQuery.watermark=35}
+    receipt_query_future_watermark:s=>{s.receiptQuery.watermark=35},
+    nil_serving_is_not_drained:s=>{s.snapshot.slices[0].endpoints[0].serving=null},
+    old_endpoint_not_terminating:s=>{s.snapshot.slices[0].endpoints[0].terminating=false},
+    string_grant_start:s=>{s.grant.from="5"},
+    string_receipt_time:s=>{s.receipts[0].time="12"},
+    string_ledger_watermark:s=>{s.ledger.watermark="28"}
   };
   return Object.entries(changes).map(([id,fn])=>{const state=clone(base);fn(state);return {id,state}});
 }
@@ -63,8 +68,10 @@ function reference(t) {
  const task=t.task,s=list.snapshot,q=prior.query,rs=prior.receipts,g=auth.grant,l=ledger.ledger,c=commit.guard;
  if(q.status==="authoritative miss"&&rs.length) return "EVIDENCE_CONFLICT";
  if(q.status!=="hit"||!q.exact||q.authority!=="synthetic-receipt"||!q.coveredAttempts.includes(task.attempt)||q.watermark<q.queryAt||q.queryAt>q.retentionUntil) return "STOP_UNKNOWN";
+ if(![q.watermark,q.queryAt,q.retentionUntil,g.from,g.until,l.watermark,l.queryAt,l.retentionUntil,c.at,c.listRV,s.listRV].every(Number.isSafeInteger)) return "STOP_UNKNOWN";
  if(rs.length!==1) return rs.length===0?"STOP_UNKNOWN":"RECONCILE";
  const r=rs[0];
+ if(!Number.isSafeInteger(r.time)) return "STOP_UNKNOWN";
  if(r.effect!=="drain"||r.task!==task.id||r.run!==task.run||r.attempt!==task.attempt||r.uid!==task.required[0]||r.grant!==g.id) return "RECONCILE";
  if(r.time<g.from||r.time>g.until||g.scope!==r.uid||r.time>q.queryAt||r.time>c.at) return "BLOCKED";
  if(!s.complete||!s.watchContinuous||s.watchCompacted||!l.complete||l.watermark<l.queryAt||l.queryAt>l.retentionUntil||l.authority!=="synthetic-ledger") return "STOP_UNKNOWN";
@@ -73,7 +80,7 @@ function reference(t) {
  const all=s.slices.flatMap(v=>v.endpoints);
  const unique=arr=>new Set(arr).size===arr.length;
  if(!unique(s.slices.map(v=>v.uid))||!unique(all.map(e=>e.uid))||!unique(old.map(e=>e.uid))||!unique(task.required)||!unique(c.members)||!unique(l.coveredUIDs)||!unique(l.inflight.map(e=>e.uid))) return "RECONCILE";
- if(s.slices.some(v=>v.serviceUID!==task.serviceUID)||old.length!==task.required.length||old.some(e=>!task.required.includes(e.uid)||e.serving===true)||c.members.length!==task.required.length||c.members.some(uid=>!task.required.includes(uid))||l.coveredUIDs.length!==task.required.length||l.coveredUIDs.some(uid=>!task.required.includes(uid))||l.inflight.length!==task.required.length||l.inflight.some(e=>!task.required.includes(e.uid)||e.count!==0)||!l.trafficFence) return "RECONCILE";
+ if(s.slices.some(v=>v.serviceUID!==task.serviceUID)||old.length!==task.required.length||old.some(e=>!task.required.includes(e.uid)||e.serving!==false||e.terminating!==true)||c.members.length!==task.required.length||c.members.some(uid=>!task.required.includes(uid))||l.coveredUIDs.length!==task.required.length||l.coveredUIDs.some(uid=>!task.required.includes(uid))||l.inflight.length!==task.required.length||l.inflight.some(e=>!task.required.includes(e.uid)||e.count!==0)||!l.trafficFence) return "RECONCILE";
  return "COMPLETE";
 }
 function produce() {

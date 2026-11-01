@@ -3658,5 +3658,540 @@
         "ledgerWatermark": 28
       }
     }
+  },
+  {
+    "id": "nil_serving_is_not_drained",
+    "state": {
+      "task": {
+        "id": "task-drain-02",
+        "run": "run-02",
+        "attempt": 1,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "required": [
+          "pod-old-uid-1"
+        ],
+        "currentPermission": true
+      },
+      "snapshot": {
+        "listRV": 40,
+        "complete": true,
+        "watchContinuous": true,
+        "watchCompacted": false,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "slices": [
+          {
+            "uid": "slice-1",
+            "rv": 40,
+            "serviceUID": "svc-01",
+            "endpoints": [
+              {
+                "uid": "pod-old-uid-1",
+                "name": "old-pod",
+                "ip": "10.0.0.1",
+                "role": "old",
+                "ready": false,
+                "serving": null,
+                "terminating": true
+              },
+              {
+                "uid": "pod-new-uid-1",
+                "name": "new-pod",
+                "ip": "10.0.0.2",
+                "role": "new",
+                "ready": true,
+                "serving": true,
+                "terminating": false
+              }
+            ]
+          }
+        ]
+      },
+      "receiptQuery": {
+        "status": "hit",
+        "authority": "synthetic-receipt",
+        "exact": true,
+        "coveredAttempts": [
+          1
+        ],
+        "watermark": 24,
+        "queryAt": 24,
+        "retentionUntil": 100
+      },
+      "receipts": [
+        {
+          "effect": "drain",
+          "task": "task-drain-02",
+          "run": "run-02",
+          "attempt": 1,
+          "uid": "pod-old-uid-1",
+          "time": 12,
+          "grant": "grant-01"
+        }
+      ],
+      "grant": {
+        "id": "grant-01",
+        "scope": "pod-old-uid-1",
+        "from": 5,
+        "until": 20
+      },
+      "ledger": {
+        "authority": "synthetic-ledger",
+        "complete": true,
+        "coveredUIDs": [
+          "pod-old-uid-1"
+        ],
+        "inflight": [
+          {
+            "uid": "pod-old-uid-1",
+            "count": 0
+          }
+        ],
+        "watermark": 28,
+        "queryAt": 28,
+        "retentionUntil": 100,
+        "trafficFence": true
+      },
+      "guard": {
+        "atomic": true,
+        "at": 30,
+        "listRV": 40,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "ledgerWatermark": 28
+      }
+    }
+  },
+  {
+    "id": "old_endpoint_not_terminating",
+    "state": {
+      "task": {
+        "id": "task-drain-02",
+        "run": "run-02",
+        "attempt": 1,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "required": [
+          "pod-old-uid-1"
+        ],
+        "currentPermission": true
+      },
+      "snapshot": {
+        "listRV": 40,
+        "complete": true,
+        "watchContinuous": true,
+        "watchCompacted": false,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "slices": [
+          {
+            "uid": "slice-1",
+            "rv": 40,
+            "serviceUID": "svc-01",
+            "endpoints": [
+              {
+                "uid": "pod-old-uid-1",
+                "name": "old-pod",
+                "ip": "10.0.0.1",
+                "role": "old",
+                "ready": false,
+                "serving": false,
+                "terminating": false
+              },
+              {
+                "uid": "pod-new-uid-1",
+                "name": "new-pod",
+                "ip": "10.0.0.2",
+                "role": "new",
+                "ready": true,
+                "serving": true,
+                "terminating": false
+              }
+            ]
+          }
+        ]
+      },
+      "receiptQuery": {
+        "status": "hit",
+        "authority": "synthetic-receipt",
+        "exact": true,
+        "coveredAttempts": [
+          1
+        ],
+        "watermark": 24,
+        "queryAt": 24,
+        "retentionUntil": 100
+      },
+      "receipts": [
+        {
+          "effect": "drain",
+          "task": "task-drain-02",
+          "run": "run-02",
+          "attempt": 1,
+          "uid": "pod-old-uid-1",
+          "time": 12,
+          "grant": "grant-01"
+        }
+      ],
+      "grant": {
+        "id": "grant-01",
+        "scope": "pod-old-uid-1",
+        "from": 5,
+        "until": 20
+      },
+      "ledger": {
+        "authority": "synthetic-ledger",
+        "complete": true,
+        "coveredUIDs": [
+          "pod-old-uid-1"
+        ],
+        "inflight": [
+          {
+            "uid": "pod-old-uid-1",
+            "count": 0
+          }
+        ],
+        "watermark": 28,
+        "queryAt": 28,
+        "retentionUntil": 100,
+        "trafficFence": true
+      },
+      "guard": {
+        "atomic": true,
+        "at": 30,
+        "listRV": 40,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "ledgerWatermark": 28
+      }
+    }
+  },
+  {
+    "id": "string_grant_start",
+    "state": {
+      "task": {
+        "id": "task-drain-02",
+        "run": "run-02",
+        "attempt": 1,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "required": [
+          "pod-old-uid-1"
+        ],
+        "currentPermission": true
+      },
+      "snapshot": {
+        "listRV": 40,
+        "complete": true,
+        "watchContinuous": true,
+        "watchCompacted": false,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "slices": [
+          {
+            "uid": "slice-1",
+            "rv": 40,
+            "serviceUID": "svc-01",
+            "endpoints": [
+              {
+                "uid": "pod-old-uid-1",
+                "name": "old-pod",
+                "ip": "10.0.0.1",
+                "role": "old",
+                "ready": false,
+                "serving": false,
+                "terminating": true
+              },
+              {
+                "uid": "pod-new-uid-1",
+                "name": "new-pod",
+                "ip": "10.0.0.2",
+                "role": "new",
+                "ready": true,
+                "serving": true,
+                "terminating": false
+              }
+            ]
+          }
+        ]
+      },
+      "receiptQuery": {
+        "status": "hit",
+        "authority": "synthetic-receipt",
+        "exact": true,
+        "coveredAttempts": [
+          1
+        ],
+        "watermark": 24,
+        "queryAt": 24,
+        "retentionUntil": 100
+      },
+      "receipts": [
+        {
+          "effect": "drain",
+          "task": "task-drain-02",
+          "run": "run-02",
+          "attempt": 1,
+          "uid": "pod-old-uid-1",
+          "time": 12,
+          "grant": "grant-01"
+        }
+      ],
+      "grant": {
+        "id": "grant-01",
+        "scope": "pod-old-uid-1",
+        "from": "5",
+        "until": 20
+      },
+      "ledger": {
+        "authority": "synthetic-ledger",
+        "complete": true,
+        "coveredUIDs": [
+          "pod-old-uid-1"
+        ],
+        "inflight": [
+          {
+            "uid": "pod-old-uid-1",
+            "count": 0
+          }
+        ],
+        "watermark": 28,
+        "queryAt": 28,
+        "retentionUntil": 100,
+        "trafficFence": true
+      },
+      "guard": {
+        "atomic": true,
+        "at": 30,
+        "listRV": 40,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "ledgerWatermark": 28
+      }
+    }
+  },
+  {
+    "id": "string_receipt_time",
+    "state": {
+      "task": {
+        "id": "task-drain-02",
+        "run": "run-02",
+        "attempt": 1,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "required": [
+          "pod-old-uid-1"
+        ],
+        "currentPermission": true
+      },
+      "snapshot": {
+        "listRV": 40,
+        "complete": true,
+        "watchContinuous": true,
+        "watchCompacted": false,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "slices": [
+          {
+            "uid": "slice-1",
+            "rv": 40,
+            "serviceUID": "svc-01",
+            "endpoints": [
+              {
+                "uid": "pod-old-uid-1",
+                "name": "old-pod",
+                "ip": "10.0.0.1",
+                "role": "old",
+                "ready": false,
+                "serving": false,
+                "terminating": true
+              },
+              {
+                "uid": "pod-new-uid-1",
+                "name": "new-pod",
+                "ip": "10.0.0.2",
+                "role": "new",
+                "ready": true,
+                "serving": true,
+                "terminating": false
+              }
+            ]
+          }
+        ]
+      },
+      "receiptQuery": {
+        "status": "hit",
+        "authority": "synthetic-receipt",
+        "exact": true,
+        "coveredAttempts": [
+          1
+        ],
+        "watermark": 24,
+        "queryAt": 24,
+        "retentionUntil": 100
+      },
+      "receipts": [
+        {
+          "effect": "drain",
+          "task": "task-drain-02",
+          "run": "run-02",
+          "attempt": 1,
+          "uid": "pod-old-uid-1",
+          "time": "12",
+          "grant": "grant-01"
+        }
+      ],
+      "grant": {
+        "id": "grant-01",
+        "scope": "pod-old-uid-1",
+        "from": 5,
+        "until": 20
+      },
+      "ledger": {
+        "authority": "synthetic-ledger",
+        "complete": true,
+        "coveredUIDs": [
+          "pod-old-uid-1"
+        ],
+        "inflight": [
+          {
+            "uid": "pod-old-uid-1",
+            "count": 0
+          }
+        ],
+        "watermark": 28,
+        "queryAt": 28,
+        "retentionUntil": 100,
+        "trafficFence": true
+      },
+      "guard": {
+        "atomic": true,
+        "at": 30,
+        "listRV": 40,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "ledgerWatermark": 28
+      }
+    }
+  },
+  {
+    "id": "string_ledger_watermark",
+    "state": {
+      "task": {
+        "id": "task-drain-02",
+        "run": "run-02",
+        "attempt": 1,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "required": [
+          "pod-old-uid-1"
+        ],
+        "currentPermission": true
+      },
+      "snapshot": {
+        "listRV": 40,
+        "complete": true,
+        "watchContinuous": true,
+        "watchCompacted": false,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "slices": [
+          {
+            "uid": "slice-1",
+            "rv": 40,
+            "serviceUID": "svc-01",
+            "endpoints": [
+              {
+                "uid": "pod-old-uid-1",
+                "name": "old-pod",
+                "ip": "10.0.0.1",
+                "role": "old",
+                "ready": false,
+                "serving": false,
+                "terminating": true
+              },
+              {
+                "uid": "pod-new-uid-1",
+                "name": "new-pod",
+                "ip": "10.0.0.2",
+                "role": "new",
+                "ready": true,
+                "serving": true,
+                "terminating": false
+              }
+            ]
+          }
+        ]
+      },
+      "receiptQuery": {
+        "status": "hit",
+        "authority": "synthetic-receipt",
+        "exact": true,
+        "coveredAttempts": [
+          1
+        ],
+        "watermark": 24,
+        "queryAt": 24,
+        "retentionUntil": 100
+      },
+      "receipts": [
+        {
+          "effect": "drain",
+          "task": "task-drain-02",
+          "run": "run-02",
+          "attempt": 1,
+          "uid": "pod-old-uid-1",
+          "time": 12,
+          "grant": "grant-01"
+        }
+      ],
+      "grant": {
+        "id": "grant-01",
+        "scope": "pod-old-uid-1",
+        "from": 5,
+        "until": 20
+      },
+      "ledger": {
+        "authority": "synthetic-ledger",
+        "complete": true,
+        "coveredUIDs": [
+          "pod-old-uid-1"
+        ],
+        "inflight": [
+          {
+            "uid": "pod-old-uid-1",
+            "count": 0
+          }
+        ],
+        "watermark": "28",
+        "queryAt": 28,
+        "retentionUntil": 100,
+        "trafficFence": true
+      },
+      "guard": {
+        "atomic": true,
+        "at": 30,
+        "listRV": 40,
+        "serviceUID": "svc-01",
+        "selector": "old=blue",
+        "members": [
+          "pod-old-uid-1"
+        ],
+        "ledgerWatermark": 28
+      }
+    }
   }
 ]

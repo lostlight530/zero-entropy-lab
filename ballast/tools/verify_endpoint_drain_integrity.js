@@ -20,17 +20,19 @@ function verify(scenarios,traces,decisions) {
   const distinct=x=>new Set(x).size===x.length;
   if(b.query.status==="authoritative miss"&&b.receipts.length>0)full="EVIDENCE_CONFLICT";
   else if(b.query.status!=="hit"||b.query.exact!==true||b.query.authority!=="synthetic-receipt"||!b.query.coveredAttempts.includes(task.attempt)||b.query.watermark<b.query.queryAt||b.query.queryAt>b.query.retentionUntil)full="STOP_UNKNOWN";
+  else if(![b.query.watermark,b.query.queryAt,b.query.retentionUntil,g.from,g.until,l.watermark,l.queryAt,l.retentionUntil,c.at,c.listRV,a.listRV].every(Number.isSafeInteger))full="STOP_UNKNOWN";
   else if(b.receipts.length===0)full="STOP_UNKNOWN";
   else if(b.receipts.length!==1)full="RECONCILE";
   else {
    const r=b.receipts[0];
-   if(r.effect!=="drain"||r.task!==task.id||r.run!==task.run||r.attempt!==task.attempt||r.uid!==task.required[0]||r.grant!==g.id)full="RECONCILE";
+   if(!Number.isSafeInteger(r.time))full="STOP_UNKNOWN";
+   else if(r.effect!=="drain"||r.task!==task.id||r.run!==task.run||r.attempt!==task.attempt||r.uid!==task.required[0]||r.grant!==g.id)full="RECONCILE";
    else if(!(r.time>=g.from&&r.time<=g.until&&g.scope===r.uid&&r.time<=b.query.queryAt&&r.time<=c.at))full="BLOCKED";
    else if(!a.complete||!a.watchContinuous||a.watchCompacted||!l.complete||l.watermark<l.queryAt||l.queryAt>l.retentionUntil||l.authority!=="synthetic-ledger")full="STOP_UNKNOWN";
    else if(!c.atomic||c.at<l.queryAt||c.listRV!==a.listRV||c.serviceUID!==a.serviceUID||c.selector!==a.selector||c.serviceUID!==task.serviceUID||c.selector!==task.selector||c.ledgerWatermark!==l.watermark)full="RECONCILE";
    else {
     const all=a.slices.flatMap(x=>x.endpoints),oldIds=old.map(e=>e.uid);
-    if(!distinct(a.slices.map(x=>x.uid))||!distinct(all.map(e=>e.uid))||!distinct(oldIds)||!distinct(task.required)||!distinct(c.members)||!distinct(l.coveredUIDs)||!distinct(l.inflight.map(e=>e.uid))||a.slices.some(x=>x.serviceUID!==task.serviceUID)||oldIds.length!==task.required.length||old.some(e=>!task.required.includes(e.uid)||e.serving===true)||c.members.length!==task.required.length||c.members.some(x=>!task.required.includes(x))||l.coveredUIDs.length!==task.required.length||l.coveredUIDs.some(x=>!task.required.includes(x))||l.inflight.length!==task.required.length||l.inflight.some(x=>!task.required.includes(x.uid)||x.count!==0)||!l.trafficFence)full="RECONCILE";
+    if(!distinct(a.slices.map(x=>x.uid))||!distinct(all.map(e=>e.uid))||!distinct(oldIds)||!distinct(task.required)||!distinct(c.members)||!distinct(l.coveredUIDs)||!distinct(l.inflight.map(e=>e.uid))||a.slices.some(x=>x.serviceUID!==task.serviceUID)||oldIds.length!==task.required.length||old.some(e=>!task.required.includes(e.uid)||e.serving!==false||e.terminating!==true)||c.members.length!==task.required.length||c.members.some(x=>!task.required.includes(x))||l.coveredUIDs.length!==task.required.length||l.coveredUIDs.some(x=>!task.required.includes(x))||l.inflight.length!==task.required.length||l.inflight.some(x=>!task.required.includes(x.uid)||x.count!==0)||!l.trafficFence)full="RECONCILE";
    }
   }
   const expected=[expectedReady,expectedSnapshot,full];
