@@ -43,8 +43,8 @@
 - Any separate future restoration of audit artifacts requires a contract-specific retention and minimality decision; do not restore automatically
 
 ## Repository-specific evidence boundary
-- Aegis 10/31 external stopping 论文不是 Zero 本地故障；Ballast 10/31 synthetic V8 replay 不是 live Azure effect。Ballast 2026-09-08/23/26 的 NOT_RUN/UNVERIFIED 不增加实验信用。
-- Host Kernel、哈希链、持久化状态与外部论文的层级保持分离。
+- Aegis 10/31 external stopping 论文不是 Zero 本地故障；Ballast 10/31 synthetic V8 replay 不是 live Azure effect.Ballast 2026-09-08/23/26 的 NOT_RUN/UNVERIFIED 不增加实验信用.
+- Host Kernel、哈希链、持久化状态与外部论文的层级保持分离.
 - `CURRENT_PATH_PRESENT != ORIGINAL_NATIVE_EXECUTION`
 - `HISTORICAL_PR_DELIVERY != CURRENT_MAIN_RETENTION`
 - `LATER_SUCCESS != EARLIER_SUCCESS`
