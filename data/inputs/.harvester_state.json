@@ -335,16 +335,16 @@
     "agentclientprotocol/agent-client-protocol": {
       "documents": {
         "CHANGELOG.md": {
-          "blob_sha": "1a7df330570a2482a4117c6bd228390a0ffc1ad9",
-          "commit_sha": "a965f1f14e06865bee5da58f009c789ab9f630e5",
-          "content_hash": "1c863eef4adf508ae84bad146d799007238ae9f9128002e1d88ba5598feeabc4",
+          "blob_sha": "1d2b993dc388e9b2efeca81a504e989951d909cb",
+          "commit_sha": "212f0cace08a42309c7cbcefb74119b9d02d24bc",
+          "content_hash": "c61aac4f82fa0aa858520bb10f468d091c9ad06379e555a7821317e635ee0fab",
           "entity_id": "external_doc_agentclientprotocol_agent_client_protocol_changelog_md",
-          "observed_blob_sha": "1a7df330570a2482a4117c6bd228390a0ffc1ad9",
-          "observed_commit_sha": "a965f1f14e06865bee5da58f009c789ab9f630e5",
-          "observed_tree_sha": "71b10a5e28ec45bd6b7515201b36548c51ed208f",
-          "output": "current/protocols/agentclientprotocol_agent_client_protocol/CHANGELOG.md__1a7df330570a__a965f1f14e06.md",
-          "sha": "1a7df330570a2482a4117c6bd228390a0ffc1ad9",
-          "tree_sha": "71b10a5e28ec45bd6b7515201b36548c51ed208f"
+          "observed_blob_sha": "1d2b993dc388e9b2efeca81a504e989951d909cb",
+          "observed_commit_sha": "212f0cace08a42309c7cbcefb74119b9d02d24bc",
+          "observed_tree_sha": "1480e77747c3464028286e174dd3d817c57a8473",
+          "output": "current/protocols/agentclientprotocol_agent_client_protocol/CHANGELOG.md__1d2b993dc388__212f0cace08a.md",
+          "sha": "1d2b993dc388e9b2efeca81a504e989951d909cb",
+          "tree_sha": "1480e77747c3464028286e174dd3d817c57a8473"
         },
         "README.md": {
           "blob_sha": "1b4fbc172daae9b829cf8337bd92d99b2855e721",
@@ -359,7 +359,7 @@
           "tree_sha": "f0ba014baa23f3e5f8701da24a43464e21d2cbaf"
         }
       },
-      "last_checked_at": "2026-10-31T01:11:05.879173+00:00"
+      "last_checked_at": "2026-11-02T01:05:54.833419+00:00"
     },
     "agentscope-ai/agentscope": {
       "documents": {
