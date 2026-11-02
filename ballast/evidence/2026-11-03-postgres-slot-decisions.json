@@ -1,0 +1,602 @@
+[
+  {
+    "id": "baseline",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "baseline",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "baseline",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "checkpoint_without_sink",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "checkpoint_without_sink",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "checkpoint_without_sink",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "crash_after_A_before_B",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "crash_after_A_before_B",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "crash_after_A_before_B",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "replayed_delivery_twice",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "replayed_delivery_twice",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "replayed_delivery_twice",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_sink_A",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_sink_A",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_sink_A",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "same_slot_name_new_epoch",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "same_slot_name_new_epoch",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "same_slot_name_new_epoch",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "same_lsn_different_xid",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "same_lsn_different_xid",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "same_lsn_different_xid",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_wrong_xid",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_xid",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_xid",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_wrong_slot_epoch",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_slot_epoch",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_slot_epoch",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_wrong_target_uid",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_target_uid",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_target_uid",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "extra_effect_C",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra_effect_C",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra_effect_C",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "same_count_A_C",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "same_count_A_C",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "same_count_A_C",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "positive_receipt_and_miss",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "positive_receipt_and_miss",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "positive_receipt_and_miss",
+    "path": "full_reference",
+    "decision": "EVIDENCE_CONFLICT"
+  },
+  {
+    "id": "query_future_watermark",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_future_watermark",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_future_watermark",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_scope_wrong_run",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_scope_wrong_run",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_scope_wrong_run",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_wrong_authority",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_wrong_authority",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_wrong_authority",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_retention_expired",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_retention_expired",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_retention_expired",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_lifecycle_unknown",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_lifecycle_unknown",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_lifecycle_unknown",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "attempt_three_uncovered",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "attempt_three_uncovered",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "attempt_three_uncovered",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_attempt_two_only",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_attempt_two_only",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_attempt_two_only",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "permission_revoked_historical_complete",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "permission_revoked_historical_complete",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "permission_revoked_historical_complete",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "historical_grant_expired",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "historical_grant_expired",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "historical_grant_expired",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "grant_wrong_epoch",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_wrong_epoch",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_wrong_epoch",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "member_revision_drift",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "member_revision_drift",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "member_revision_drift",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "guard_revision_drift",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_revision_drift",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_revision_drift",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "guard_not_commit_bound",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_not_commit_bound",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_not_commit_bound",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "guard_uid_replaced",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_uid_replaced",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_uid_replaced",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "member_state_not_done",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "member_state_not_done",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "member_state_not_done",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "checkpoint_only_no_transaction",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "checkpoint_only_no_transaction",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "checkpoint_only_no_transaction",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "unknown_no_receipt",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "unknown_no_receipt",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "unknown_no_receipt",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "covered_miss_safe_retry",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "covered_miss_safe_retry",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "covered_miss_safe_retry",
+    "path": "full_reference",
+    "decision": "RETRY_ALLOWED"
+  },
+  {
+    "id": "covered_miss_permission_revoked",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "covered_miss_permission_revoked",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "covered_miss_permission_revoked",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "covered_miss_dedup_expired",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "covered_miss_dedup_expired",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "covered_miss_dedup_expired",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "covered_miss_no_attempt_coverage",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "covered_miss_no_attempt_coverage",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "covered_miss_no_attempt_coverage",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "receipt_time_future_of_query",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_time_future_of_query",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_time_future_of_query",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "guard_commit_before_receipt",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_commit_before_receipt",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_commit_before_receipt",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "numeric_string_revision",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "numeric_string_revision",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "numeric_string_revision",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "numeric_string_watermark",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "numeric_string_watermark",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "numeric_string_watermark",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "extra_member_only_in_guard",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra_member_only_in_guard",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra_member_only_in_guard",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "checkpoint_behind_lsn",
+    "path": "checkpoint_proxy",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "checkpoint_behind_lsn",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "checkpoint_behind_lsn",
+    "path": "full_reference",
+    "decision": "COMPLETE"
+  }
+]
