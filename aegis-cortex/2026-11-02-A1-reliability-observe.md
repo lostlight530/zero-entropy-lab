@@ -103,5 +103,6 @@ Independent Verification: POST_MERGE_READ_OF_ORIGINAL_ISSUE_AND_REPRODUCER / NO_
 Local Incident Evidence: NO_LOCAL_EVIDENCE
 Host Applicability: UNKNOWN
 Evidence Limitation: reported replay of superseded WAITING runs does not prove effect-level duplication in Zero runtime
+Uncertainty: UPSTREAM_REPORTER_HYPOTHESIS_NOT_MAINTAINER_CONFIRMED / NO_FIXED_VERSION_REPLAY / ZERO_LOCAL_APPLICABILITY_UNKNOWN
 Correction Source: https://github.com/google/adk-python/issues/7905
 Counterevidence: correctly active WAITING runs may require rerun, while the reporter's superseded-case hypothesis remains unverified
