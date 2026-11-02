@@ -69,3 +69,17 @@ Rationale: bounded external mechanisms are documented but not shown locally repe
 ## BOUNDARY_CHECK
 - Only dated W44 A3 proposed. Native Aegis checker and external reproducer tests: NOT_EXECUTED
 - Historical producer and negative evidence retained, source lineage not double counted, host modifications NONE
+
+## POST_MERGE_CONTRACT_RECONCILIATION — 2026-11-02
+Correction Type: ADDITIVE_METADATA_COMPLETENESS / ORIGINAL_BODY_PRESERVED
+Correction Basis: current main aegis-cortex/check.py active weekly provenance fields
+Record Provenance: HUMAN_AUTHORIZED_SUBSTITUTE
+Daily Coverage Matrix: 2026_W44_A1_7_PATHS_A2_7_PATHS / OCT27_ORIGINAL_UNVERIFIED
+Inherited Evidence: SEVEN_DATE_PAIRED_SOURCE_REVIEW / NO_INDEPENDENT_LOCAL_RUNTIME_EVIDENCE
+Independent Evidence Added: NONE / DOCUMENTARY_REVIEW_ONLY
+Missing Inputs Preserved: OCT27_ORIGINAL_A1_A2_EXECUTION_AND_UPSTREAM_TIME_UNKNOWN
+External Risk State: SOURCE_SCOPED_REPORTS_AND_ADVISORIES / LOCAL_APPLICABILITY_UNKNOWN
+Local Incident State: NO_LOCAL_INCIDENT_EVIDENCE
+Historical Execution State: OCT27_ORIGINAL_SOURCE_TIME_RECEIPTS_UNKNOWN
+Current Delivery State: MERGED_MAIN_VISIBLE_PR_781
+Evidence Limitation: W44 NO_DECISION and external reports do not authorize Kernel/Doctrine changes
