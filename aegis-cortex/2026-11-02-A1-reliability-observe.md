@@ -89,3 +89,19 @@ Needs A2 Verification: YES / pin reporter revision, execute repro and task-mode 
 - Only this dated Aegis A1 file is proposed; old source records, host data/kernel, Ballast, NEXUS, Actions and historical archives stay unchanged.
 - Full private task control and private memory are not published.
 - Original issue read; fixed-version Python repro, official Aegis structural checker, Zero runtime and effect receipt tests: NOT_EXECUTED.
+
+## POST_MERGE_CONTRACT_RECONCILIATION — 2026-11-02
+Correction Type: ADDITIVE_METADATA_COMPLETENESS / ORIGINAL_BODY_PRESERVED
+Correction Basis: current main aegis-cortex/check.py active daily provenance fields
+Record Provenance: HUMAN_AUTHORIZED_SUBSTITUTE
+Original Execution Status: GPT_NATIVE_PROSPECTIVE_DOCUMENTARY_OBSERVATION / NOT_JULES_REPLAY
+Current Path Status: MERGED_MAIN_VISIBLE_PR_780
+Evidence Class: EXTERNAL_FAILURE_MODE_EVIDENCE / UPSTREAM_REPORTER_CLAIM
+Source Identity: google/adk-python issue 7905 / upstream 2026-10-31
+Source Authority For Claim: ORIGINAL_REPORTER_REPRODUCTION_AND_HYPOTHESIS / NOT_MAINTAINER_CONFIRMED
+Independent Verification: POST_MERGE_READ_OF_ORIGINAL_ISSUE_AND_REPRODUCER / NO_NATIVE_REPLAY
+Local Incident Evidence: NO_LOCAL_EVIDENCE
+Host Applicability: UNKNOWN
+Evidence Limitation: reported replay of superseded WAITING runs does not prove effect-level duplication in Zero runtime
+Correction Source: https://github.com/google/adk-python/issues/7905
+Counterevidence: correctly active WAITING runs may require rerun, while the reporter's superseded-case hypothesis remains unverified
