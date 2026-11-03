@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-11-02 EndpointSlice drain completion boundary](records/2026-11-02.md)
+- 最新 Daily: [2026-11-03 PostgreSQL logical slot crash replay and sink completion](records/2026-11-03.md)
 - 当前月度事实源: [2026-11](records/2026-11.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-26 至 2026-10-31](audits/2026-10-26--2026-10-31.md)
@@ -817,3 +817,11 @@ Same-window reference-model correction rejected an impossible future query water
 October Monthly now indexes 31 NATIVE dated Dailies and six derived audits as of 2026-10-31 early morning, CASE/METHOD/NOTES/Special/finding 0, final end-of-day monthly maintenance seal NOT_EXECUTED, `Monthly Maintenance Status: PARTIAL` remains accurate
 
 EXECUTED V8 isolate producer and separate verifier, persisted-source replay and static changed-file contract review PASS_WITH_LIMITS, native Node CLI, full Python checker, live Azure, independent receipt/approval authority and semantic-independent verification NOT_EXECUTED
+
+## Ballast current-state advance — 2026-11-03
+
+One NATIVE [PostgreSQL logical slot replay Daily](records/2026-11-03.md) tests source checkpoint LSN and CDC delivery proxies against exact external A+B receipts, slot epoch/XID identity, historical authorization, prior evidence, dynamic membership and protected current completion
+
+Bounded V8 isolate producer and separately coded trace verifier EXECUTED / PASS_WITH_LIMITS: 40 scenarios, 120 decisions, 509 authored events, 8/8 tampered verifier calls rejected, model-relative weak-path disagreements checkpoint 37/40 and delivery 36/40
+
+November Monthly synchronized, audit NOT_DUE, CASE/METHOD/NOTES/Special 0, native Node CLI, full Python checker, real PostgreSQL/Debezium/external sink and independent semantic authority NOT_EXECUTED

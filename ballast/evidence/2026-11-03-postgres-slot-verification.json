@@ -1,0 +1,168 @@
+{
+  "executionUTC": "2026-11-03T00:42:42.595Z",
+  "logicalDate": "2026-11-03 Asia/Shanghai",
+  "originalExecutionUTC": "2026-11-02T20:07:17.166Z",
+  "baseSha": "2950d0b517936ce693f470ce760d346e3f5f3905",
+  "priorHeadSha": "980945455b8cd993ed60f14cb53a3b7c38cb7009",
+  "entrypoint": "Cloud V8 isolated Function: fetched patched source makeScenarios(); produce(); verify(); 12 actual tamper invocations",
+  "scenarioCount": 47,
+  "traceCount": 47,
+  "eventCount": 596,
+  "decisionCount": 141,
+  "hist": {
+    "COMPLETE": 4,
+    "STOP_UNKNOWN": 15,
+    "RECONCILE": 22,
+    "EVIDENCE_CONFLICT": 2,
+    "BLOCKED": 4
+  },
+  "disagreements": {
+    "checkpoint_proxy": 44,
+    "delivery_proxy": 43
+  },
+  "verification": {
+    "pass": true,
+    "errors": [],
+    "scenarioCount": 47,
+    "traceCount": 47,
+    "decisionCount": 141,
+    "implementation": "PARTIAL",
+    "dataSource": "NONE",
+    "semanticContract": "SHARED",
+    "authority": "NONE"
+  },
+  "adversarial": [
+    {
+      "name": "receipt_missing",
+      "rejected": true,
+      "errors": [
+        "decision mismatch baseline full_reference expected RECONCILE observed [\"COMPLETE\"]"
+      ]
+    },
+    {
+      "name": "extra_member",
+      "rejected": true,
+      "errors": [
+        "decision mismatch baseline full_reference expected RECONCILE observed [\"COMPLETE\"]"
+      ]
+    },
+    {
+      "name": "future_watermark",
+      "rejected": true,
+      "errors": [
+        "decision mismatch baseline full_reference expected STOP_UNKNOWN observed [\"COMPLETE\"]"
+      ]
+    },
+    {
+      "name": "numeric_string_guard",
+      "rejected": true,
+      "errors": [
+        "decision mismatch baseline full_reference expected RECONCILE observed [\"COMPLETE\"]"
+      ]
+    },
+    {
+      "name": "missing_path",
+      "rejected": true,
+      "errors": [
+        "cardinality",
+        "decision mismatch baseline full_reference expected COMPLETE observed []"
+      ]
+    },
+    {
+      "name": "duplicate_scenario",
+      "rejected": true,
+      "errors": [
+        "cardinality",
+        "duplicate scenario baseline",
+        "trace identity cardinality"
+      ]
+    },
+    {
+      "name": "forged_decision",
+      "rejected": true,
+      "errors": [
+        "decision mismatch baseline full_reference expected COMPLETE observed [\"RETRY_ALLOWED\"]"
+      ]
+    },
+    {
+      "name": "receipt_vs_miss",
+      "rejected": true,
+      "errors": [
+        "decision mismatch baseline full_reference expected EVIDENCE_CONFLICT observed [\"COMPLETE\"]"
+      ]
+    },
+    {
+      "name": "forged_conflict_retry",
+      "rejected": true,
+      "errors": [
+        "decision mismatch query_conflicting_flags_no_receipts full_reference expected EVIDENCE_CONFLICT observed [\"RETRY_ALLOWED\"]"
+      ]
+    },
+    {
+      "name": "forged_duplicate_required_complete",
+      "rejected": true,
+      "errors": [
+        "decision mismatch duplicate_required_identity full_reference expected RECONCILE observed [\"COMPLETE\"]"
+      ]
+    },
+    {
+      "name": "forged_extra_membership_complete",
+      "rejected": true,
+      "errors": [
+        "decision mismatch extra_membership_state_C full_reference expected RECONCILE observed [\"COMPLETE\"]"
+      ]
+    },
+    {
+      "name": "forged_unprotected_retry",
+      "rejected": true,
+      "errors": [
+        "decision mismatch covered_miss_safe_retry full_reference expected STOP_UNKNOWN observed [\"RETRY_ALLOWED\"]"
+      ]
+    }
+  ],
+  "regressionDecisions": {
+    "query_conflicting_flags_no_receipts": "EVIDENCE_CONFLICT",
+    "duplicate_required_identity": "RECONCILE",
+    "extra_membership_state_C": "RECONCILE",
+    "permission_string_false_on_miss": "BLOCKED",
+    "query_positive_string": "STOP_UNKNOWN",
+    "transaction_present_string": "RECONCILE",
+    "query_miss_string": "STOP_UNKNOWN",
+    "covered_miss_safe_retry": "STOP_UNKNOWN"
+  },
+  "previousSnapshot": {
+    "headSha": "980945455b8cd993ed60f14cb53a3b7c38cb7009",
+    "scenarios": 40,
+    "decisions": 120,
+    "events": 509,
+    "tamperProbes": 8,
+    "verificationBlobSha": "12f8a12428f969d6f477b4d7855a21adc58bae3b"
+  },
+  "credit": {
+    "nativeDaily": 1,
+    "independentResearchWindows": 1,
+    "extraResearchWindowsFromReview": 0,
+    "audit": 0,
+    "case": 0,
+    "method": 0,
+    "notes": 0,
+    "special": 0
+  },
+  "sourceIndependence": {
+    "implementation": "PARTIAL",
+    "dataSource": "NONE",
+    "semanticContract": "SHARED",
+    "authority": "NONE"
+  },
+  "notExecuted": [
+    "native Node CLI",
+    "full Python ballast/tools/check.py",
+    "GitHub Actions PR run for ballast-only paths",
+    "live PostgreSQL logical slot crash replay",
+    "Debezium connector",
+    "external effect sink",
+    "independent authorization and effect authority",
+    "protected retry-time permission/dedup",
+    "trusted cross-service temporal ordering"
+  ]
+}
