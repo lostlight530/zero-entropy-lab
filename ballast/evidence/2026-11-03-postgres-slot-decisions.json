@@ -462,7 +462,7 @@
   {
     "id": "covered_miss_safe_retry",
     "path": "full_reference",
-    "decision": "RETRY_ALLOWED"
+    "decision": "STOP_UNKNOWN"
   },
   {
     "id": "covered_miss_permission_revoked",
@@ -583,6 +583,111 @@
     "id": "extra_member_only_in_guard",
     "path": "full_reference",
     "decision": "RECONCILE"
+  },
+  {
+    "id": "query_conflicting_flags_no_receipts",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_conflicting_flags_no_receipts",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_conflicting_flags_no_receipts",
+    "path": "full_reference",
+    "decision": "EVIDENCE_CONFLICT"
+  },
+  {
+    "id": "duplicate_required_identity",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_required_identity",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_required_identity",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "extra_membership_state_C",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra_membership_state_C",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra_membership_state_C",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "permission_string_false_on_miss",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "permission_string_false_on_miss",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "permission_string_false_on_miss",
+    "path": "full_reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "query_positive_string",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_positive_string",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_positive_string",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "transaction_present_string",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "transaction_present_string",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "transaction_present_string",
+    "path": "full_reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "query_miss_string",
+    "path": "checkpoint_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_miss_string",
+    "path": "delivery_proxy",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_miss_string",
+    "path": "full_reference",
+    "decision": "STOP_UNKNOWN"
   },
   {
     "id": "checkpoint_behind_lsn",

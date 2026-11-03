@@ -42,6 +42,13 @@ function makeScenarios(){
  ["numeric_string_revision",s=>{s.guard.revision="9"}],
  ["numeric_string_watermark",s=>{s.query.watermark="50"}],
  ["extra_member_only_in_guard",s=>{s.guard.ids=["A","B","C"]}],
+ ["query_conflicting_flags_no_receipts",s=>{s.receipts=[];s.query.positive=true;s.query.miss=true}],
+ ["duplicate_required_identity",s=>{s.required=["A","A"]}],
+ ["extra_membership_state_C",s=>{s.members.states.C="DONE"}],
+ ["permission_string_false_on_miss",s=>{s.receipts=[];s.query.positive=false;s.query.miss=true;s.permission.allowed="false"}],
+ ["query_positive_string",s=>{s.query.positive="true"}],
+ ["transaction_present_string",s=>{s.transaction.present="true"}],
+ ["query_miss_string",s=>{s.query.miss="false"}],
  ["checkpoint_behind_lsn",s=>{s.checkpoint=110}]
  ];
  return specs.map(([id,mutate])=>{const state=JSON.parse(JSON.stringify(base));mutate(state);return {id,state,intervention:id==="baseline"?"none":id}});
@@ -49,24 +56,24 @@ function makeScenarios(){
 function produce(scenarios){
  function same(a,b){return JSON.stringify(a)===JSON.stringify(b)}
  function validNumber(x){return Number.isSafeInteger(x)&&x>=0}
- function eqSet(a,b){return Array.isArray(a)&&a.length===b.length&&new Set(a).size===a.length&&b.every(v=>a.includes(v))}
+ function eqSet(a,b){return Array.isArray(a)&&Array.isArray(b)&&a.length>0&&a.length===b.length&&new Set(a).size===a.length&&new Set(b).size===b.length&&a.every(x=>typeof x==="string"&&x.length>0)&&b.every(x=>typeof x==="string"&&x.length>0)&&b.every(v=>a.includes(v))}
  function ref(s){
   const r=s.receipts,q=s.query,tx=s.transaction;
-  if(r.length&&q.miss)return "EVIDENCE_CONFLICT";
-  if(!tx.present||tx.slotEpoch!==s.slotEpoch||tx.xid!==s.xid||tx.lsn!==s.lsn)return "RECONCILE";
-  const exactQ=q.authority==="sink-journal"&&q.exact===true&&q.slotEpoch===s.slotEpoch&&q.xid===s.xid&&q.lsn===s.lsn&&q.task===s.task&&q.run===s.run&&same(q.attempts,s.attempts)&&new Set(q.attempts).size===q.attempts.length&&q.lifecycle==="ACTIVE"&&[q.watermark,q.lastEnd,q.queryAt,q.retentionUntil].every(validNumber)&&q.watermark>=q.lastEnd&&q.watermark<=q.queryAt&&q.retentionUntil>=q.queryAt;
+  if((q.positive===true&&q.miss===true)||(r.length&&q.miss===true))return "EVIDENCE_CONFLICT";
+  if(tx.present!==true||tx.slotEpoch!==s.slotEpoch||tx.xid!==s.xid||tx.lsn!==s.lsn)return "RECONCILE";
+  const exactQ=typeof q.positive==="boolean"&&typeof q.miss==="boolean"&&q.authority==="sink-journal"&&q.exact===true&&q.slotEpoch===s.slotEpoch&&q.xid===s.xid&&q.lsn===s.lsn&&q.task===s.task&&q.run===s.run&&same(q.attempts,s.attempts)&&new Set(q.attempts).size===q.attempts.length&&q.lifecycle==="ACTIVE"&&[q.watermark,q.lastEnd,q.queryAt,q.retentionUntil].every(validNumber)&&q.watermark>=q.lastEnd&&q.watermark<=q.queryAt&&q.retentionUntil>=q.queryAt;
   if(!exactQ)return "STOP_UNKNOWN";
   if(!r.length){
-   if(!q.miss)return "STOP_UNKNOWN";
-   if(!s.permission.allowed||!s.permission.approval||!s.permission.credential)return "BLOCKED";
-   const d=s.dedup;
-   return d.authority==="sink-journal"&&d.exact===true&&eqSet(d.ids,s.required)&&validNumber(d.retentionUntil)&&d.retentionUntil>=q.queryAt?"RETRY_ALLOWED":"STOP_UNKNOWN";
+   if(q.miss!==true)return "STOP_UNKNOWN";
+   if(s.permission.allowed!==true||s.permission.approval!==true||s.permission.credential!==true)return "BLOCKED";
+   // A read-time MISS and retention timestamp do not prove a protected permission/dedup gate at retry effect time
+   return "STOP_UNKNOWN";
   }
-  if(!q.positive)return "STOP_UNKNOWN";
+  if(q.positive!==true)return "STOP_UNKNOWN";
   if(!eqSet(r.map(x=>x.member),s.required))return "RECONCILE";
   if(r.some(x=>x.task!==s.task||x.run!==s.run||!s.attempts.includes(x.attempt)||x.slotEpoch!==s.slotEpoch||x.xid!==s.xid||x.lsn!==s.lsn||x.uid!==s.uid||x.state!=="DONE"||!validNumber(x.at)||x.at>q.watermark||x.at>q.queryAt))return "RECONCILE";
   if(s.grant.authority!=="approval-ledger"||s.grant.slotEpoch!==s.slotEpoch||![s.grant.from,s.grant.to].every(validNumber)||r.some(x=>x.at<s.grant.from||x.at>s.grant.to))return "BLOCKED";
-  if(s.members.uid!==s.uid||s.members.revision!==s.revision||!eqSet(s.members.ids,s.required)||s.required.some(x=>s.members.states[x]!=="DONE"))return "RECONCILE";
+  if(s.members.uid!==s.uid||s.members.revision!==s.revision||!eqSet(s.members.ids,s.required)||!eqSet(Object.keys(s.members.states||{}),s.required)||s.required.some(x=>s.members.states[x]!=="DONE"))return "RECONCILE";
   if(s.guard.uid!==s.uid||s.guard.revision!==s.revision||!eqSet(s.guard.ids,s.required)||s.guard.commitBound!==true||!validNumber(s.guard.commitAt)||s.guard.commitAt<Math.max(...r.map(x=>x.at))||s.guard.commitAt<q.queryAt)return "RECONCILE";
   return "COMPLETE";
  }

@@ -4503,6 +4503,790 @@
     "intervention": "extra_member_only_in_guard"
   },
   {
+    "id": "query_conflicting_flags_no_receipts",
+    "state": {
+      "task": "task-cdc-03",
+      "run": "run-cdc-03",
+      "slot": "orders_slot",
+      "slotEpoch": "slot-generation-7",
+      "xid": "tx-81",
+      "lsn": 120,
+      "uid": "target-uid-7",
+      "revision": 9,
+      "required": [
+        "A",
+        "B"
+      ],
+      "attempts": [
+        1,
+        2
+      ],
+      "delivered": 1,
+      "checkpoint": 120,
+      "transaction": {
+        "present": true,
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120
+      },
+      "receipts": [],
+      "grant": {
+        "authority": "approval-ledger",
+        "from": 10,
+        "to": 30,
+        "slotEpoch": "slot-generation-7"
+      },
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120,
+        "task": "task-cdc-03",
+        "run": "run-cdc-03",
+        "attempts": [
+          1,
+          2
+        ],
+        "watermark": 50,
+        "lastEnd": 30,
+        "queryAt": 60,
+        "retentionUntil": 200,
+        "lifecycle": "ACTIVE",
+        "positive": true,
+        "miss": true
+      },
+      "members": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitBound": true,
+        "commitAt": 70
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "epoch": "perm-7"
+      },
+      "dedup": {
+        "authority": "sink-journal",
+        "exact": true,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "retentionUntil": 200
+      }
+    },
+    "intervention": "query_conflicting_flags_no_receipts"
+  },
+  {
+    "id": "duplicate_required_identity",
+    "state": {
+      "task": "task-cdc-03",
+      "run": "run-cdc-03",
+      "slot": "orders_slot",
+      "slotEpoch": "slot-generation-7",
+      "xid": "tx-81",
+      "lsn": 120,
+      "uid": "target-uid-7",
+      "revision": 9,
+      "required": [
+        "A",
+        "A"
+      ],
+      "attempts": [
+        1,
+        2
+      ],
+      "delivered": 1,
+      "checkpoint": 120,
+      "transaction": {
+        "present": true,
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "task": "task-cdc-03",
+          "run": "run-cdc-03",
+          "attempt": 2,
+          "slotEpoch": "slot-generation-7",
+          "xid": "tx-81",
+          "lsn": 120,
+          "uid": "target-uid-7",
+          "at": 20,
+          "state": "DONE"
+        },
+        {
+          "member": "B",
+          "task": "task-cdc-03",
+          "run": "run-cdc-03",
+          "attempt": 2,
+          "slotEpoch": "slot-generation-7",
+          "xid": "tx-81",
+          "lsn": 120,
+          "uid": "target-uid-7",
+          "at": 21,
+          "state": "DONE"
+        }
+      ],
+      "grant": {
+        "authority": "approval-ledger",
+        "from": 10,
+        "to": 30,
+        "slotEpoch": "slot-generation-7"
+      },
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120,
+        "task": "task-cdc-03",
+        "run": "run-cdc-03",
+        "attempts": [
+          1,
+          2
+        ],
+        "watermark": 50,
+        "lastEnd": 30,
+        "queryAt": 60,
+        "retentionUntil": 200,
+        "lifecycle": "ACTIVE",
+        "positive": true,
+        "miss": false
+      },
+      "members": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitBound": true,
+        "commitAt": 70
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "epoch": "perm-7"
+      },
+      "dedup": {
+        "authority": "sink-journal",
+        "exact": true,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "retentionUntil": 200
+      }
+    },
+    "intervention": "duplicate_required_identity"
+  },
+  {
+    "id": "extra_membership_state_C",
+    "state": {
+      "task": "task-cdc-03",
+      "run": "run-cdc-03",
+      "slot": "orders_slot",
+      "slotEpoch": "slot-generation-7",
+      "xid": "tx-81",
+      "lsn": 120,
+      "uid": "target-uid-7",
+      "revision": 9,
+      "required": [
+        "A",
+        "B"
+      ],
+      "attempts": [
+        1,
+        2
+      ],
+      "delivered": 1,
+      "checkpoint": 120,
+      "transaction": {
+        "present": true,
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "task": "task-cdc-03",
+          "run": "run-cdc-03",
+          "attempt": 2,
+          "slotEpoch": "slot-generation-7",
+          "xid": "tx-81",
+          "lsn": 120,
+          "uid": "target-uid-7",
+          "at": 20,
+          "state": "DONE"
+        },
+        {
+          "member": "B",
+          "task": "task-cdc-03",
+          "run": "run-cdc-03",
+          "attempt": 2,
+          "slotEpoch": "slot-generation-7",
+          "xid": "tx-81",
+          "lsn": 120,
+          "uid": "target-uid-7",
+          "at": 21,
+          "state": "DONE"
+        }
+      ],
+      "grant": {
+        "authority": "approval-ledger",
+        "from": 10,
+        "to": 30,
+        "slotEpoch": "slot-generation-7"
+      },
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120,
+        "task": "task-cdc-03",
+        "run": "run-cdc-03",
+        "attempts": [
+          1,
+          2
+        ],
+        "watermark": 50,
+        "lastEnd": 30,
+        "queryAt": 60,
+        "retentionUntil": 200,
+        "lifecycle": "ACTIVE",
+        "positive": true,
+        "miss": false
+      },
+      "members": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE",
+          "C": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitBound": true,
+        "commitAt": 70
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "epoch": "perm-7"
+      },
+      "dedup": {
+        "authority": "sink-journal",
+        "exact": true,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "retentionUntil": 200
+      }
+    },
+    "intervention": "extra_membership_state_C"
+  },
+  {
+    "id": "permission_string_false_on_miss",
+    "state": {
+      "task": "task-cdc-03",
+      "run": "run-cdc-03",
+      "slot": "orders_slot",
+      "slotEpoch": "slot-generation-7",
+      "xid": "tx-81",
+      "lsn": 120,
+      "uid": "target-uid-7",
+      "revision": 9,
+      "required": [
+        "A",
+        "B"
+      ],
+      "attempts": [
+        1,
+        2
+      ],
+      "delivered": 1,
+      "checkpoint": 120,
+      "transaction": {
+        "present": true,
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120
+      },
+      "receipts": [],
+      "grant": {
+        "authority": "approval-ledger",
+        "from": 10,
+        "to": 30,
+        "slotEpoch": "slot-generation-7"
+      },
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120,
+        "task": "task-cdc-03",
+        "run": "run-cdc-03",
+        "attempts": [
+          1,
+          2
+        ],
+        "watermark": 50,
+        "lastEnd": 30,
+        "queryAt": 60,
+        "retentionUntil": 200,
+        "lifecycle": "ACTIVE",
+        "positive": false,
+        "miss": true
+      },
+      "members": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitBound": true,
+        "commitAt": 70
+      },
+      "permission": {
+        "allowed": "false",
+        "approval": true,
+        "credential": true,
+        "epoch": "perm-7"
+      },
+      "dedup": {
+        "authority": "sink-journal",
+        "exact": true,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "retentionUntil": 200
+      }
+    },
+    "intervention": "permission_string_false_on_miss"
+  },
+  {
+    "id": "query_positive_string",
+    "state": {
+      "task": "task-cdc-03",
+      "run": "run-cdc-03",
+      "slot": "orders_slot",
+      "slotEpoch": "slot-generation-7",
+      "xid": "tx-81",
+      "lsn": 120,
+      "uid": "target-uid-7",
+      "revision": 9,
+      "required": [
+        "A",
+        "B"
+      ],
+      "attempts": [
+        1,
+        2
+      ],
+      "delivered": 1,
+      "checkpoint": 120,
+      "transaction": {
+        "present": true,
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "task": "task-cdc-03",
+          "run": "run-cdc-03",
+          "attempt": 2,
+          "slotEpoch": "slot-generation-7",
+          "xid": "tx-81",
+          "lsn": 120,
+          "uid": "target-uid-7",
+          "at": 20,
+          "state": "DONE"
+        },
+        {
+          "member": "B",
+          "task": "task-cdc-03",
+          "run": "run-cdc-03",
+          "attempt": 2,
+          "slotEpoch": "slot-generation-7",
+          "xid": "tx-81",
+          "lsn": 120,
+          "uid": "target-uid-7",
+          "at": 21,
+          "state": "DONE"
+        }
+      ],
+      "grant": {
+        "authority": "approval-ledger",
+        "from": 10,
+        "to": 30,
+        "slotEpoch": "slot-generation-7"
+      },
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120,
+        "task": "task-cdc-03",
+        "run": "run-cdc-03",
+        "attempts": [
+          1,
+          2
+        ],
+        "watermark": 50,
+        "lastEnd": 30,
+        "queryAt": 60,
+        "retentionUntil": 200,
+        "lifecycle": "ACTIVE",
+        "positive": "true",
+        "miss": false
+      },
+      "members": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitBound": true,
+        "commitAt": 70
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "epoch": "perm-7"
+      },
+      "dedup": {
+        "authority": "sink-journal",
+        "exact": true,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "retentionUntil": 200
+      }
+    },
+    "intervention": "query_positive_string"
+  },
+  {
+    "id": "transaction_present_string",
+    "state": {
+      "task": "task-cdc-03",
+      "run": "run-cdc-03",
+      "slot": "orders_slot",
+      "slotEpoch": "slot-generation-7",
+      "xid": "tx-81",
+      "lsn": 120,
+      "uid": "target-uid-7",
+      "revision": 9,
+      "required": [
+        "A",
+        "B"
+      ],
+      "attempts": [
+        1,
+        2
+      ],
+      "delivered": 1,
+      "checkpoint": 120,
+      "transaction": {
+        "present": "true",
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "task": "task-cdc-03",
+          "run": "run-cdc-03",
+          "attempt": 2,
+          "slotEpoch": "slot-generation-7",
+          "xid": "tx-81",
+          "lsn": 120,
+          "uid": "target-uid-7",
+          "at": 20,
+          "state": "DONE"
+        },
+        {
+          "member": "B",
+          "task": "task-cdc-03",
+          "run": "run-cdc-03",
+          "attempt": 2,
+          "slotEpoch": "slot-generation-7",
+          "xid": "tx-81",
+          "lsn": 120,
+          "uid": "target-uid-7",
+          "at": 21,
+          "state": "DONE"
+        }
+      ],
+      "grant": {
+        "authority": "approval-ledger",
+        "from": 10,
+        "to": 30,
+        "slotEpoch": "slot-generation-7"
+      },
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120,
+        "task": "task-cdc-03",
+        "run": "run-cdc-03",
+        "attempts": [
+          1,
+          2
+        ],
+        "watermark": 50,
+        "lastEnd": 30,
+        "queryAt": 60,
+        "retentionUntil": 200,
+        "lifecycle": "ACTIVE",
+        "positive": true,
+        "miss": false
+      },
+      "members": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitBound": true,
+        "commitAt": 70
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "epoch": "perm-7"
+      },
+      "dedup": {
+        "authority": "sink-journal",
+        "exact": true,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "retentionUntil": 200
+      }
+    },
+    "intervention": "transaction_present_string"
+  },
+  {
+    "id": "query_miss_string",
+    "state": {
+      "task": "task-cdc-03",
+      "run": "run-cdc-03",
+      "slot": "orders_slot",
+      "slotEpoch": "slot-generation-7",
+      "xid": "tx-81",
+      "lsn": 120,
+      "uid": "target-uid-7",
+      "revision": 9,
+      "required": [
+        "A",
+        "B"
+      ],
+      "attempts": [
+        1,
+        2
+      ],
+      "delivered": 1,
+      "checkpoint": 120,
+      "transaction": {
+        "present": true,
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "task": "task-cdc-03",
+          "run": "run-cdc-03",
+          "attempt": 2,
+          "slotEpoch": "slot-generation-7",
+          "xid": "tx-81",
+          "lsn": 120,
+          "uid": "target-uid-7",
+          "at": 20,
+          "state": "DONE"
+        },
+        {
+          "member": "B",
+          "task": "task-cdc-03",
+          "run": "run-cdc-03",
+          "attempt": 2,
+          "slotEpoch": "slot-generation-7",
+          "xid": "tx-81",
+          "lsn": 120,
+          "uid": "target-uid-7",
+          "at": 21,
+          "state": "DONE"
+        }
+      ],
+      "grant": {
+        "authority": "approval-ledger",
+        "from": 10,
+        "to": 30,
+        "slotEpoch": "slot-generation-7"
+      },
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "slotEpoch": "slot-generation-7",
+        "xid": "tx-81",
+        "lsn": 120,
+        "task": "task-cdc-03",
+        "run": "run-cdc-03",
+        "attempts": [
+          1,
+          2
+        ],
+        "watermark": 50,
+        "lastEnd": 30,
+        "queryAt": 60,
+        "retentionUntil": 200,
+        "lifecycle": "ACTIVE",
+        "positive": true,
+        "miss": "false"
+      },
+      "members": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "target-uid-7",
+        "revision": 9,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitBound": true,
+        "commitAt": 70
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true,
+        "epoch": "perm-7"
+      },
+      "dedup": {
+        "authority": "sink-journal",
+        "exact": true,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "retentionUntil": 200
+      }
+    },
+    "intervention": "query_miss_string"
+  },
+  {
     "id": "checkpoint_behind_lsn",
     "state": {
       "task": "task-cdc-03",
