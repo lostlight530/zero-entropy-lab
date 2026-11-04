@@ -1,0 +1,82 @@
+[
+  {
+    "id": "baseline",
+    "path": "count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "baseline",
+    "path": "reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "missing_B",
+    "path": "count",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "missing_B",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "duplicate_A",
+    "path": "count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_A",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "extra_C",
+    "path": "count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra_C",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "revoked_now",
+    "path": "count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "revoked_now",
+    "path": "reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_invalid",
+    "path": "count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_invalid",
+    "path": "reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "guard_drift",
+    "path": "count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_drift",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "miss_conflict",
+    "path": "count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "miss_conflict",
+    "path": "reference",
+    "decision": "EVIDENCE_CONFLICT"
+  }
+]
