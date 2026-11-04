@@ -1,0 +1,850 @@
+[
+  {
+    "id": "baseline",
+    "state": {
+      "contract": {
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "revision": 7,
+        "epoch": "epoch-4",
+        "required": [
+          "A",
+          "B"
+        ],
+        "attempts": [
+          1,
+          2
+        ]
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 20,
+          "state": "DONE"
+        },
+        {
+          "member": "B",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 21,
+          "state": "DONE"
+        }
+      ],
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "attempts": [
+          1,
+          2
+        ],
+        "members": [
+          "A",
+          "B"
+        ],
+        "watermark": 40,
+        "lastEnd": 30,
+        "queryAt": 50,
+        "retentionUntil": 100,
+        "lifecycle": "ACTIVE",
+        "positive": true,
+        "miss": false
+      },
+      "grant": {
+        "authority": "approval-ledger",
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "from": 10,
+        "to": 30
+      },
+      "membership": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitAt": 60,
+        "commitBound": true
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true
+      }
+    },
+    "intervention": "baseline"
+  },
+  {
+    "id": "missing_B",
+    "state": {
+      "contract": {
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "revision": 7,
+        "epoch": "epoch-4",
+        "required": [
+          "A",
+          "B"
+        ],
+        "attempts": [
+          1,
+          2
+        ]
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 20,
+          "state": "DONE"
+        }
+      ],
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "attempts": [
+          1,
+          2
+        ],
+        "members": [
+          "A",
+          "B"
+        ],
+        "watermark": 40,
+        "lastEnd": 30,
+        "queryAt": 50,
+        "retentionUntil": 100,
+        "lifecycle": "ACTIVE",
+        "positive": true,
+        "miss": false
+      },
+      "grant": {
+        "authority": "approval-ledger",
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "from": 10,
+        "to": 30
+      },
+      "membership": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitAt": 60,
+        "commitBound": true
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true
+      }
+    },
+    "intervention": "missing_B"
+  },
+  {
+    "id": "duplicate_A",
+    "state": {
+      "contract": {
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "revision": 7,
+        "epoch": "epoch-4",
+        "required": [
+          "A",
+          "B"
+        ],
+        "attempts": [
+          1,
+          2
+        ]
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 20,
+          "state": "DONE"
+        },
+        {
+          "member": "A",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 20,
+          "state": "DONE"
+        }
+      ],
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "attempts": [
+          1,
+          2
+        ],
+        "members": [
+          "A",
+          "B"
+        ],
+        "watermark": 40,
+        "lastEnd": 30,
+        "queryAt": 50,
+        "retentionUntil": 100,
+        "lifecycle": "ACTIVE",
+        "positive": true,
+        "miss": false
+      },
+      "grant": {
+        "authority": "approval-ledger",
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "from": 10,
+        "to": 30
+      },
+      "membership": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitAt": 60,
+        "commitBound": true
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true
+      }
+    },
+    "intervention": "duplicate_A"
+  },
+  {
+    "id": "extra_C",
+    "state": {
+      "contract": {
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "revision": 7,
+        "epoch": "epoch-4",
+        "required": [
+          "A",
+          "B"
+        ],
+        "attempts": [
+          1,
+          2
+        ]
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 20,
+          "state": "DONE"
+        },
+        {
+          "member": "B",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 21,
+          "state": "DONE"
+        },
+        {
+          "member": "C",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 21,
+          "state": "DONE"
+        }
+      ],
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "attempts": [
+          1,
+          2
+        ],
+        "members": [
+          "A",
+          "B"
+        ],
+        "watermark": 40,
+        "lastEnd": 30,
+        "queryAt": 50,
+        "retentionUntil": 100,
+        "lifecycle": "ACTIVE",
+        "positive": true,
+        "miss": false
+      },
+      "grant": {
+        "authority": "approval-ledger",
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "from": 10,
+        "to": 30
+      },
+      "membership": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitAt": 60,
+        "commitBound": true
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true
+      }
+    },
+    "intervention": "extra_C"
+  },
+  {
+    "id": "revoked_now",
+    "state": {
+      "contract": {
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "revision": 7,
+        "epoch": "epoch-4",
+        "required": [
+          "A",
+          "B"
+        ],
+        "attempts": [
+          1,
+          2
+        ]
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 20,
+          "state": "DONE"
+        },
+        {
+          "member": "B",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 21,
+          "state": "DONE"
+        }
+      ],
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "attempts": [
+          1,
+          2
+        ],
+        "members": [
+          "A",
+          "B"
+        ],
+        "watermark": 40,
+        "lastEnd": 30,
+        "queryAt": 50,
+        "retentionUntil": 100,
+        "lifecycle": "ACTIVE",
+        "positive": true,
+        "miss": false
+      },
+      "grant": {
+        "authority": "approval-ledger",
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "from": 10,
+        "to": 30
+      },
+      "membership": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitAt": 60,
+        "commitBound": true
+      },
+      "permission": {
+        "allowed": false,
+        "approval": true,
+        "credential": true
+      }
+    },
+    "intervention": "revoked_now"
+  },
+  {
+    "id": "grant_invalid",
+    "state": {
+      "contract": {
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "revision": 7,
+        "epoch": "epoch-4",
+        "required": [
+          "A",
+          "B"
+        ],
+        "attempts": [
+          1,
+          2
+        ]
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 20,
+          "state": "DONE"
+        },
+        {
+          "member": "B",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 21,
+          "state": "DONE"
+        }
+      ],
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "attempts": [
+          1,
+          2
+        ],
+        "members": [
+          "A",
+          "B"
+        ],
+        "watermark": 40,
+        "lastEnd": 30,
+        "queryAt": 50,
+        "retentionUntil": 100,
+        "lifecycle": "ACTIVE",
+        "positive": true,
+        "miss": false
+      },
+      "grant": {
+        "authority": "approval-ledger",
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "from": 10,
+        "to": 19
+      },
+      "membership": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitAt": 60,
+        "commitBound": true
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true
+      }
+    },
+    "intervention": "grant_invalid"
+  },
+  {
+    "id": "guard_drift",
+    "state": {
+      "contract": {
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "revision": 7,
+        "epoch": "epoch-4",
+        "required": [
+          "A",
+          "B"
+        ],
+        "attempts": [
+          1,
+          2
+        ]
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 20,
+          "state": "DONE"
+        },
+        {
+          "member": "B",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 21,
+          "state": "DONE"
+        }
+      ],
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "attempts": [
+          1,
+          2
+        ],
+        "members": [
+          "A",
+          "B"
+        ],
+        "watermark": 40,
+        "lastEnd": 30,
+        "queryAt": 50,
+        "retentionUntil": 100,
+        "lifecycle": "ACTIVE",
+        "positive": true,
+        "miss": false
+      },
+      "grant": {
+        "authority": "approval-ledger",
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "from": 10,
+        "to": 30
+      },
+      "membership": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 8,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitAt": 60,
+        "commitBound": true
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true
+      }
+    },
+    "intervention": "guard_drift"
+  },
+  {
+    "id": "miss_conflict",
+    "state": {
+      "contract": {
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "revision": 7,
+        "epoch": "epoch-4",
+        "required": [
+          "A",
+          "B"
+        ],
+        "attempts": [
+          1,
+          2
+        ]
+      },
+      "receipts": [
+        {
+          "member": "A",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 20,
+          "state": "DONE"
+        },
+        {
+          "member": "B",
+          "task": "task-04",
+          "run": "run-04",
+          "attempt": 2,
+          "uid": "uid-4",
+          "revision": 7,
+          "epoch": "epoch-4",
+          "at": 21,
+          "state": "DONE"
+        }
+      ],
+      "query": {
+        "authority": "sink-journal",
+        "exact": true,
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "attempts": [
+          1,
+          2
+        ],
+        "members": [
+          "A",
+          "B"
+        ],
+        "watermark": 40,
+        "lastEnd": 30,
+        "queryAt": 50,
+        "retentionUntil": 100,
+        "lifecycle": "ACTIVE",
+        "positive": true,
+        "miss": true
+      },
+      "grant": {
+        "authority": "approval-ledger",
+        "task": "task-04",
+        "run": "run-04",
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "from": 10,
+        "to": 30
+      },
+      "membership": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        }
+      },
+      "guard": {
+        "uid": "uid-4",
+        "epoch": "epoch-4",
+        "revision": 7,
+        "ids": [
+          "A",
+          "B"
+        ],
+        "commitAt": 60,
+        "commitBound": true
+      },
+      "permission": {
+        "allowed": true,
+        "approval": true,
+        "credential": true
+      }
+    },
+    "intervention": "miss_conflict"
+  }
+]

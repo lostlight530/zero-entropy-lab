@@ -1,0 +1,298 @@
+{
+  "executionUTC": "2026-11-04T04:53:44.018Z",
+  "logicalDate": "2026-11-04 Asia/Shanghai",
+  "kind": "SAME_DAY_MAINTAINER_RECONSTRUCTION",
+  "originalHead": "2b8318b3b559b02692ca3f2e08dbaa8aec692009",
+  "originalInlineRaw": "NOT_PERSISTED",
+  "scenarioCount": 8,
+  "traceCount": 8,
+  "eventCount": 64,
+  "decisionCount": 16,
+  "disagreements": 6,
+  "referenceHistogram": {
+    "COMPLETE": 2,
+    "RECONCILE": 4,
+    "BLOCKED": 1,
+    "EVIDENCE_CONFLICT": 1
+  },
+  "verification": {
+    "pass": true,
+    "errors": [],
+    "scenarios": 8,
+    "traces": 8,
+    "decisions": 16,
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    }
+  },
+  "modelProbes": [
+    {
+      "name": "required_duplicate",
+      "result": "STOP_UNKNOWN",
+      "safe": true
+    },
+    {
+      "name": "receipt_task",
+      "result": "RECONCILE",
+      "safe": true
+    },
+    {
+      "name": "receipt_run",
+      "result": "RECONCILE",
+      "safe": true
+    },
+    {
+      "name": "receipt_attempt",
+      "result": "RECONCILE",
+      "safe": true
+    },
+    {
+      "name": "receipt_uid",
+      "result": "RECONCILE",
+      "safe": true
+    },
+    {
+      "name": "receipt_epoch",
+      "result": "RECONCILE",
+      "safe": true
+    },
+    {
+      "name": "receipt_revision",
+      "result": "RECONCILE",
+      "safe": true
+    },
+    {
+      "name": "query_attempt_scope",
+      "result": "STOP_UNKNOWN",
+      "safe": true
+    },
+    {
+      "name": "query_wrong_run",
+      "result": "STOP_UNKNOWN",
+      "safe": true
+    },
+    {
+      "name": "query_untrusted_authority",
+      "result": "STOP_UNKNOWN",
+      "safe": true
+    },
+    {
+      "name": "query_future_watermark",
+      "result": "STOP_UNKNOWN",
+      "safe": true
+    },
+    {
+      "name": "query_lagging_watermark",
+      "result": "STOP_UNKNOWN",
+      "safe": true
+    },
+    {
+      "name": "query_retention",
+      "result": "STOP_UNKNOWN",
+      "safe": true
+    },
+    {
+      "name": "query_lifecycle",
+      "result": "STOP_UNKNOWN",
+      "safe": true
+    },
+    {
+      "name": "query_type",
+      "result": "STOP_UNKNOWN",
+      "safe": true
+    },
+    {
+      "name": "attempts_duplicate",
+      "result": "STOP_UNKNOWN",
+      "safe": true
+    },
+    {
+      "name": "membership_extra_state",
+      "result": "RECONCILE",
+      "safe": true
+    },
+    {
+      "name": "membership_revision",
+      "result": "RECONCILE",
+      "safe": true
+    },
+    {
+      "name": "guard_no_atom",
+      "result": "RECONCILE",
+      "safe": true
+    },
+    {
+      "name": "guard_early",
+      "result": "RECONCILE",
+      "safe": true
+    },
+    {
+      "name": "guard_extra",
+      "result": "RECONCILE",
+      "safe": true
+    },
+    {
+      "name": "grant_wrong_epoch",
+      "result": "BLOCKED",
+      "safe": true
+    },
+    {
+      "name": "grant_wrong_authority",
+      "result": "BLOCKED",
+      "safe": true
+    },
+    {
+      "name": "permission_type",
+      "result": "STOP_UNKNOWN",
+      "safe": true
+    },
+    {
+      "name": "covered_miss_no_receipt",
+      "result": "STOP_UNKNOWN",
+      "safe": true
+    },
+    {
+      "name": "covered_miss_revoked",
+      "result": "BLOCKED",
+      "safe": true
+    },
+    {
+      "name": "positive_miss_empty",
+      "result": "EVIDENCE_CONFLICT",
+      "safe": true
+    },
+    {
+      "name": "positive_miss_receipt",
+      "result": "EVIDENCE_CONFLICT",
+      "safe": true
+    }
+  ],
+  "verifierTamper": [
+    {
+      "name": "remove_receipt",
+      "rejected": true,
+      "errors": [
+        "decision baseline count",
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "add_receipt",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "forged_missing_B_complete",
+      "rejected": true,
+      "errors": [
+        "decision missing_B reference"
+      ]
+    },
+    {
+      "name": "forged_revoked_blocked",
+      "rejected": true,
+      "errors": [
+        "decision revoked_now reference"
+      ]
+    },
+    {
+      "name": "duplicate_scenario",
+      "rejected": true,
+      "errors": [
+        "cardinality",
+        "scenario id baseline",
+        "unmatched trace"
+      ]
+    },
+    {
+      "name": "duplicate_trace",
+      "rejected": true,
+      "errors": [
+        "cardinality",
+        "duplicate trace"
+      ]
+    },
+    {
+      "name": "duplicate_decision",
+      "rejected": true,
+      "errors": [
+        "cardinality",
+        "duplicate decision",
+        "decision baseline count"
+      ]
+    },
+    {
+      "name": "missing_decision",
+      "rejected": true,
+      "errors": [
+        "cardinality",
+        "decision baseline count"
+      ]
+    },
+    {
+      "name": "grant_invalid",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "watermark_invalid",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "membership_extra",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "guard_unprotected",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "positive_miss",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "extra_event",
+      "rejected": true,
+      "errors": [
+        "unexpected event baseline"
+      ]
+    }
+  ],
+  "credit": {
+    "originalDaily": 1,
+    "originalWindows": 1,
+    "additionalReviewResearchWindows": 0,
+    "audit": 0,
+    "case": 0,
+    "method": 0,
+    "notes": 0,
+    "special": 0
+  },
+  "notExecuted": [
+    "native Node CLI",
+    "full Python check.py",
+    "live effect sink",
+    "independent authorization issuer",
+    "real protected commit",
+    "semantic-contract-independent verifier"
+  ]
+}
