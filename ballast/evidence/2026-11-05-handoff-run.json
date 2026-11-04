@@ -1,0 +1,117 @@
+{
+  "executedUTC": "2026-11-04T20:04:15Z",
+  "logicalDate": "2026-11-05 Asia/Shanghai",
+  "mainBase": "e08f16baf8e80a90c4fc3ea935d87e71ac6a6afb",
+  "execution": "cloud V8 Function eval, fixtures(), produce(), verify(), tamper probes",
+  "scenarioCount": 20,
+  "traceCount": 20,
+  "eventCount": 177,
+  "decisionCount": 60,
+  "referenceHistogram": {
+    "COMPLETE": 1,
+    "BLOCKED": 9,
+    "STOP_UNKNOWN": 4,
+    "RETRY_REQUIRES_NEW_FENCE": 1,
+    "EVIDENCE_CONFLICT": 1,
+    "RECONCILE": 4
+  },
+  "weakDisagreements": {
+    "weak_precheck": 19,
+    "weak_receipt": 17
+  },
+  "verifier": {
+    "pass": true,
+    "errors": [],
+    "scenarios": 20,
+    "traceEvents": 177,
+    "decisions": 60,
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    }
+  },
+  "tamper": [
+    {
+      "name": "forged_complete",
+      "rejected": true,
+      "errors": [
+        "decision stale_handoff reference"
+      ]
+    },
+    {
+      "name": "remove_decision",
+      "rejected": true,
+      "errors": [
+        "cardinality",
+        "decision late_effect reference"
+      ]
+    },
+    {
+      "name": "duplicate_decision",
+      "rejected": true,
+      "errors": [
+        "cardinality",
+        "duplicate identity",
+        "decision baseline weak_precheck"
+      ]
+    },
+    {
+      "name": "duplicate_trace",
+      "rejected": true,
+      "errors": [
+        "cardinality",
+        "duplicate identity"
+      ]
+    },
+    {
+      "name": "duplicate_scenario",
+      "rejected": true,
+      "errors": [
+        "cardinality",
+        "duplicate scenario baseline"
+      ]
+    },
+    {
+      "name": "extra_receipt",
+      "rejected": true,
+      "errors": [
+        "extra event baseline"
+      ]
+    },
+    {
+      "name": "wrong_owner",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "query_miss",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "missing_commit",
+      "rejected": true,
+      "errors": [
+        "event multiplicity baseline COMMIT",
+        "extra event baseline"
+      ]
+    }
+  ],
+  "externalEffects": 0,
+  "authoritativeQueries": 0,
+  "sourceVerificationDate": "2026-11-05 Asia/Shanghai",
+  "notExecuted": [
+    "full Python checker",
+    "native Node CLI",
+    "real GitHub Actions cancellation experiment",
+    "Temporal workflow runtime",
+    "real protected effect sink",
+    "independent authority"
+  ]
+}
