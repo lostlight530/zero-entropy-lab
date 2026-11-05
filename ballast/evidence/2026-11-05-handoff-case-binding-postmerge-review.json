@@ -1,0 +1,192 @@
+{
+  "kind": "POST_MERGE_CORRECTION",
+  "reviewUTC": "2026-11-05T05:10:03.765Z",
+  "logicalDate": "2026-11-05 Asia/Shanghai",
+  "mainBefore": "12ecc3f09995f93168682fc3a95ba9ce5969da7f",
+  "originalPR": "https://github.com/lostlight530/zero-entropy-lab/pull/793",
+  "sourceBlobShas": {
+    "ballast/tools/replay_handoff_2026_11_05.js": "6260b0070f159c6aeaf1c1b20bf5438382573ab6",
+    "ballast/tools/verify_handoff_2026_11_05.js": "aabdd493b48ba2d323cb725d4a00c1a6439382ae",
+    "ballast/evidence/2026-11-05-handoff-cases.json": "a0d77aca27c871884b1d6b1c5d75bf15d93d9310",
+    "ballast/evidence/2026-11-05-handoff-traces.json": "e5044354776e2673746dce2b68d0da7e390a2c76",
+    "ballast/evidence/2026-11-05-handoff-decisions.json": "78c7f85b19b8b34cafe576e71cfcb106b858afa8"
+  },
+  "runEntry": "Cloud V8 Function fixtures, produce, verify, verifyCaseTraceBinding",
+  "baseline": {
+    "fixture": true,
+    "traces": true,
+    "decisions": true,
+    "old": {
+      "pass": true,
+      "errors": [],
+      "scenarios": 44,
+      "traces": 44,
+      "traceEvents": 392,
+      "decisions": 132,
+      "independence": {
+        "implementation": "PARTIAL",
+        "dataSource": "NONE",
+        "semanticContract": "SHARED",
+        "authority": "NONE"
+      }
+    },
+    "new": {
+      "pass": true,
+      "errors": [],
+      "cases": 44,
+      "traces": 44,
+      "events": 392,
+      "independence": {
+        "implementation": "SEPARATE_EVENT_PROJECTION",
+        "dataSource": "SHARED",
+        "semanticContract": "SHARED",
+        "authority": "NONE"
+      }
+    }
+  },
+  "probeCount": 15,
+  "oldAccepted": 14,
+  "newRejected": 15,
+  "probes": [
+    {
+      "name": "grant",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "primitive mismatch baseline"
+      ]
+    },
+    {
+      "name": "permission",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "primitive mismatch baseline"
+      ]
+    },
+    {
+      "name": "effect",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "primitive mismatch baseline"
+      ]
+    },
+    {
+      "name": "attempt",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "primitive mismatch baseline"
+      ]
+    },
+    {
+      "name": "target",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "primitive mismatch baseline"
+      ]
+    },
+    {
+      "name": "guard",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "primitive mismatch baseline"
+      ]
+    },
+    {
+      "name": "intervention",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "intervention mismatch baseline"
+      ]
+    },
+    {
+      "name": "no_state",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "case schema baseline",
+        "missing state baseline"
+      ]
+    },
+    {
+      "name": "extra_member",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "primitive mismatch baseline"
+      ]
+    },
+    {
+      "name": "extra_effect",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "state schema baseline"
+      ]
+    },
+    {
+      "name": "receipt_time",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "primitive mismatch baseline"
+      ]
+    },
+    {
+      "name": "query_attempt",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "primitive mismatch baseline"
+      ]
+    },
+    {
+      "name": "no_grant",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "state schema baseline"
+      ]
+    },
+    {
+      "name": "duplicate_id",
+      "oldPass": false,
+      "correctedRejected": true,
+      "errors": [
+        "duplicate/invalid case identity",
+        "unmatched identity"
+      ]
+    },
+    {
+      "name": "extra_case_field",
+      "oldPass": true,
+      "correctedRejected": true,
+      "errors": [
+        "case schema baseline"
+      ]
+    }
+  ],
+  "credit": {
+    "daily": 0,
+    "researchWindow": 0,
+    "case": 0,
+    "method": 0,
+    "notes": 0,
+    "audit": 0,
+    "special": 0,
+    "finding": 0
+  },
+  "notExecuted": [
+    "full Python checker",
+    "native Node CLI",
+    "real effect sink",
+    "independent issuer",
+    "protected transaction",
+    "semantic independent authority"
+  ]
+}
