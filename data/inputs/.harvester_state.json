@@ -674,16 +674,16 @@
           "tree_sha": "70516d8392dd4d2fc866dc441587c15b6fa6041f"
         },
         "docs/decisions/0001-agent-run-response.md": {
-          "blob_sha": "e8a5ac0776ad301c7cd368cec34e8dd1098c930a",
-          "commit_sha": "3c670707766a8455da6491a9049cc9d575e019f0",
-          "content_hash": "67f51a9b0a3d44c05d93f6bbe0702f23a8e86ac1c5d81be42b2453617b89e32c",
+          "blob_sha": "01f8dec506c39ea9eeeb3ca04d46c041a9ee2280",
+          "commit_sha": "230a3aa0bba19b6bf5a7b4f427bcb25cb16c7105",
+          "content_hash": "9ad3487d12ed49ab2df80aceadfc626700bba7fbddf2db5981388ba2de143520",
           "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0001_agent_run_response_md",
-          "observed_blob_sha": "e8a5ac0776ad301c7cd368cec34e8dd1098c930a",
-          "observed_commit_sha": "3c670707766a8455da6491a9049cc9d575e019f0",
-          "observed_tree_sha": "c84a44533c2e8383c712d6ea7a414a3d6e742d90",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0001-agent-run-response.md__e8a5ac0776ad__3c670707766a.md",
-          "sha": "e8a5ac0776ad301c7cd368cec34e8dd1098c930a",
-          "tree_sha": "c84a44533c2e8383c712d6ea7a414a3d6e742d90"
+          "observed_blob_sha": "01f8dec506c39ea9eeeb3ca04d46c041a9ee2280",
+          "observed_commit_sha": "230a3aa0bba19b6bf5a7b4f427bcb25cb16c7105",
+          "observed_tree_sha": "feed38caa121f5471897d40b790c65eb73befdf9",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0001-agent-run-response.md__01f8dec506c3__230a3aa0bba1.md",
+          "sha": "01f8dec506c39ea9eeeb3ca04d46c041a9ee2280",
+          "tree_sha": "feed38caa121f5471897d40b790c65eb73befdf9"
         },
         "docs/decisions/0002-agent-tools.md": {
           "blob_sha": "e42bcdf6eb313cef725e2cadb2de8e43e80fbcff",
@@ -758,16 +758,16 @@
           "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
         },
         "docs/decisions/0008-python-subpackages.md": {
-          "blob_sha": "fc2db44f807e7c2467753c4f4e33ee9dd3943727",
-          "commit_sha": "1cd06c5a2058a172eebadf5d9d7c3fa45c519520",
-          "content_hash": "164cd905bb8725dfb8251124eff5f02da486d201dc84cca915a1ffc55f066053",
+          "blob_sha": "5ae4b94ea007b092bf631560e82009f7dd008220",
+          "commit_sha": "230a3aa0bba19b6bf5a7b4f427bcb25cb16c7105",
+          "content_hash": "5f92a10c6694c0ada94a91aee2db564810556ef925ccbbd02101e5a565318832",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0008_python_subpackages_md_fdd5a792b262",
-          "observed_blob_sha": "fc2db44f807e7c2467753c4f4e33ee9dd3943727",
-          "observed_commit_sha": "1cd06c5a2058a172eebadf5d9d7c3fa45c519520",
-          "observed_tree_sha": "6001296b016121b81d8bfa35b172c0f0c3312cef",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0008-python-subpackages.md__fc2db44f807e__1cd06c5a2058.md",
-          "sha": "fc2db44f807e7c2467753c4f4e33ee9dd3943727",
-          "tree_sha": "6001296b016121b81d8bfa35b172c0f0c3312cef"
+          "observed_blob_sha": "5ae4b94ea007b092bf631560e82009f7dd008220",
+          "observed_commit_sha": "230a3aa0bba19b6bf5a7b4f427bcb25cb16c7105",
+          "observed_tree_sha": "feed38caa121f5471897d40b790c65eb73befdf9",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0008-python-subpackages.md__5ae4b94ea007__230a3aa0bba1.md",
+          "sha": "5ae4b94ea007b092bf631560e82009f7dd008220",
+          "tree_sha": "feed38caa121f5471897d40b790c65eb73befdf9"
         },
         "docs/decisions/0009-support-long-running-operations.md": {
           "blob_sha": "c44cabc500dab022ae88c56de5a1d6f8b2b58b97",
@@ -890,16 +890,16 @@
           "tree_sha": "6f8b23f6e1d9616e7048b6be74892c14a50a044d"
         },
         "docs/decisions/0019-python-context-compaction-strategy.md": {
-          "blob_sha": "1cdd15bb02108543728850f8ed75b03c3b838768",
-          "commit_sha": "3c670707766a8455da6491a9049cc9d575e019f0",
-          "content_hash": "67a3c97e5c8fb3895e7ea539e9b02e6f53508e2fcc87ede614b261fc4d4261a4",
+          "blob_sha": "7130aafd7e1a15bf9334fab2ce2127e0f57cebfb",
+          "commit_sha": "230a3aa0bba19b6bf5a7b4f427bcb25cb16c7105",
+          "content_hash": "7faee49d20dfdb1b9003f1f058360ed59bc30bc2f5b84db3ae5ed97c2f0dd7c5",
           "entity_id": "doc_microsoft_agent_framework_docs_decisions_0019_python_context_compaction_strategy_md_8fffb185d1a8",
-          "observed_blob_sha": "1cdd15bb02108543728850f8ed75b03c3b838768",
-          "observed_commit_sha": "3c670707766a8455da6491a9049cc9d575e019f0",
-          "observed_tree_sha": "c84a44533c2e8383c712d6ea7a414a3d6e742d90",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0019-python-context-compaction-strategy.md__1cdd15bb0210__3c670707766a.md",
-          "sha": "1cdd15bb02108543728850f8ed75b03c3b838768",
-          "tree_sha": "c84a44533c2e8383c712d6ea7a414a3d6e742d90"
+          "observed_blob_sha": "7130aafd7e1a15bf9334fab2ce2127e0f57cebfb",
+          "observed_commit_sha": "230a3aa0bba19b6bf5a7b4f427bcb25cb16c7105",
+          "observed_tree_sha": "feed38caa121f5471897d40b790c65eb73befdf9",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0019-python-context-compaction-strategy.md__7130aafd7e1a__230a3aa0bba1.md",
+          "sha": "7130aafd7e1a15bf9334fab2ce2127e0f57cebfb",
+          "tree_sha": "feed38caa121f5471897d40b790c65eb73befdf9"
         },
         "docs/decisions/0020-foundry-agent-type-naming.md": {
           "blob_sha": "03d43f64ac5e30dc72cbc8796472ff5d01725aaf",
@@ -1262,16 +1262,28 @@
           "tree_sha": "b987d8ad187b8be4f6c21c815650147baeeca03e"
         },
         "docs/decisions/0045-python-mcp-v2-client-lifecycle.md": {
-          "blob_sha": "57d389fc760da3aafded79d208a18542595fb2b2",
-          "commit_sha": "6afcecd428dd5c50166552171ca58afc455f7084",
-          "content_hash": "f691da59040a9c2dd5baacabf68f2c2fda1029bc014e6e10b8ba1ea34b92cf6e",
+          "blob_sha": "6e51ab6266f403a2266b51360b55cc852975fbd9",
+          "commit_sha": "230a3aa0bba19b6bf5a7b4f427bcb25cb16c7105",
+          "content_hash": "bc08eacc5ed78a6751b1ad1aa5fc45d9434a768f46061d99237b2faf370e054b",
           "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0045_python_mcp_v2_client_lifecycle_md",
-          "observed_blob_sha": "57d389fc760da3aafded79d208a18542595fb2b2",
-          "observed_commit_sha": "6afcecd428dd5c50166552171ca58afc455f7084",
-          "observed_tree_sha": "9459cfb81298c9f09551a59e510d83f7eb6b7feb",
-          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0045-python-mcp-v2-client-lifecycle.md__57d389fc760d__6afcecd428dd.md",
-          "sha": "57d389fc760da3aafded79d208a18542595fb2b2",
-          "tree_sha": "9459cfb81298c9f09551a59e510d83f7eb6b7feb"
+          "observed_blob_sha": "6e51ab6266f403a2266b51360b55cc852975fbd9",
+          "observed_commit_sha": "230a3aa0bba19b6bf5a7b4f427bcb25cb16c7105",
+          "observed_tree_sha": "feed38caa121f5471897d40b790c65eb73befdf9",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0045-python-mcp-v2-client-lifecycle.md__6e51ab6266f4__230a3aa0bba1.md",
+          "sha": "6e51ab6266f403a2266b51360b55cc852975fbd9",
+          "tree_sha": "feed38caa121f5471897d40b790c65eb73befdf9"
+        },
+        "docs/decisions/0047-dotnet-workflow-owned-mcp-sessions.md": {
+          "blob_sha": "69a4902fa6f4300f9533d9c2a525e6929b3f75ba",
+          "commit_sha": "230a3aa0bba19b6bf5a7b4f427bcb25cb16c7105",
+          "content_hash": "0d1e8ad04512ed056180e341b60c11f81c4e6321b6fb2c889a885158af53742b",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0047_dotnet_workflow_owned_mcp_sessions_md",
+          "observed_blob_sha": "69a4902fa6f4300f9533d9c2a525e6929b3f75ba",
+          "observed_commit_sha": "230a3aa0bba19b6bf5a7b4f427bcb25cb16c7105",
+          "observed_tree_sha": "feed38caa121f5471897d40b790c65eb73befdf9",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0047-dotnet-workflow-owned-mcp-sessions.md__69a4902fa6f4__230a3aa0bba1.md",
+          "sha": "69a4902fa6f4300f9533d9c2a525e6929b3f75ba",
+          "tree_sha": "feed38caa121f5471897d40b790c65eb73befdf9"
         },
         "docs/decisions/0048-dotnet-declarative-state-ownership.md": {
           "blob_sha": "0a41e8366f0a0ad2480a5c7f308dd0bc3d5106fd",
@@ -1284,6 +1296,18 @@
           "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0048-dotnet-declarative-state-ownership.md__0a41e8366f0a__4d28d0a4ba77.md",
           "sha": "0a41e8366f0a0ad2480a5c7f308dd0bc3d5106fd",
           "tree_sha": "59307ea29981c43e881db632106b2ddbe5992f90"
+        },
+        "docs/decisions/0049-dotnet-declarative-http-allowed-hosts.md": {
+          "blob_sha": "202c5ee751e1d7776e115f374d0a5173283bb51f",
+          "commit_sha": "230a3aa0bba19b6bf5a7b4f427bcb25cb16c7105",
+          "content_hash": "90724cc4c02166a720a6394f1533590a5804c1749dddfd86b49d415cae717e93",
+          "entity_id": "external_doc_microsoft_agent_framework_docs_decisions_0049_dotnet_declarative_http_allowed_hosts_md",
+          "observed_blob_sha": "202c5ee751e1d7776e115f374d0a5173283bb51f",
+          "observed_commit_sha": "230a3aa0bba19b6bf5a7b4f427bcb25cb16c7105",
+          "observed_tree_sha": "feed38caa121f5471897d40b790c65eb73befdf9",
+          "output": "current/agent-runtime/microsoft_agent_framework/docs__decisions__0049-dotnet-declarative-http-allowed-hosts.md__202c5ee751e1__230a3aa0bba1.md",
+          "sha": "202c5ee751e1d7776e115f374d0a5173283bb51f",
+          "tree_sha": "feed38caa121f5471897d40b790c65eb73befdf9"
         },
         "docs/decisions/README.md": {
           "blob_sha": "55c48a7089dde103d2ec7bc3c9d16412989fe2e7",
@@ -1334,7 +1358,7 @@
           "tree_sha": "b8c431a5f4f7cf761e996b971d645f5324add9e4"
         }
       },
-      "last_checked_at": "2026-10-30T01:24:38.196635+00:00"
+      "last_checked_at": "2026-11-05T01:52:58.109851+00:00"
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "documents": {
@@ -2824,16 +2848,16 @@
           "tree_sha": "0ba719be3faeea8731eeee79b860a2b4c5104487"
         },
         "docs/design/torch_compile.md": {
-          "blob_sha": "1ffc0ac53a40dcd41202b68975edf46e2a4b9fb2",
-          "commit_sha": "b3a87b2d04e6439e2a1aef0cbf9ca65328076c86",
-          "content_hash": "5ffe17ecb6b62f8746003b33868c69e790e41cfa94286fb07ccee1ce39e56a57",
+          "blob_sha": "2b3c6016403d442cec7f23c056de685497f49941",
+          "commit_sha": "7ecc83a9877552a5f4be31c133ab8502dd40f50e",
+          "content_hash": "2472b2626928a9adb7f918534eb9823b8b5928476c575cbbf601a2f884f27c9a",
           "entity_id": "doc_vllm_project_vllm_docs_design_torch_compile_md_4dc0da0c7d65",
-          "observed_blob_sha": "1ffc0ac53a40dcd41202b68975edf46e2a4b9fb2",
-          "observed_commit_sha": "b3a87b2d04e6439e2a1aef0cbf9ca65328076c86",
-          "observed_tree_sha": "f93d2a5bd7dff4e8c76036499ae8984fac06351a",
-          "output": "current/serving-inference/vllm_project_vllm/docs__design__torch_compile.md__1ffc0ac53a40__b3a87b2d04e6.md",
-          "sha": "1ffc0ac53a40dcd41202b68975edf46e2a4b9fb2",
-          "tree_sha": "f93d2a5bd7dff4e8c76036499ae8984fac06351a"
+          "observed_blob_sha": "2b3c6016403d442cec7f23c056de685497f49941",
+          "observed_commit_sha": "7ecc83a9877552a5f4be31c133ab8502dd40f50e",
+          "observed_tree_sha": "d11bc4e60d5cef90d5b2385ff6b8a985269ff2e7",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__torch_compile.md__2b3c6016403d__7ecc83a98775.md",
+          "sha": "2b3c6016403d442cec7f23c056de685497f49941",
+          "tree_sha": "d11bc4e60d5cef90d5b2385ff6b8a985269ff2e7"
         },
         "docs/design/torch_compile_multimodal.md": {
           "blob_sha": "bb30de56bc147ef1008a15baaefc1abfe98744d6",
@@ -2980,7 +3004,7 @@
           "tree_sha": "cfeb3173928b2b51eb943c8f1dacbc9c3ebf57b4"
         }
       },
-      "last_checked_at": "2026-11-04T01:45:16.041728+00:00"
+      "last_checked_at": "2026-11-05T01:53:13.624770+00:00"
     },
     "volcengine/verl": {
       "documents": {
