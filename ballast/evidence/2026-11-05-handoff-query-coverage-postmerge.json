@@ -1,0 +1,231 @@
+{
+  "kind": "POST_MERGE_QUERY_COVERAGE_CORRECTION",
+  "logicalDate": "2026-11-05 Asia/Shanghai",
+  "actualExecutionUTC": "2026-11-05T05:15:25.632Z",
+  "baseMainSha": "92aad402ace4cd855d916809ae9d7a8f6311a63b",
+  "originalResearchPR": 793,
+  "mergedBindingPR": 794,
+  "originalFiles": {
+    "ballast/tools/replay_handoff_2026_11_05.js": "6260b0070f159c6aeaf1c1b20bf5438382573ab6",
+    "ballast/tools/verify_handoff_2026_11_05.js": "aabdd493b48ba2d323cb725d4a00c1a6439382ae",
+    "ballast/tools/verify_handoff_case_binding_2026_11_05.js": "41468b29e3f405f980fbc36aaf0e833b1c56d349",
+    "ballast/evidence/2026-11-05-handoff-cases.json": "a0d77aca27c871884b1d6b1c5d75bf15d93d9310",
+    "ballast/evidence/2026-11-05-handoff-traces.json": "e5044354776e2673746dce2b68d0da7e390a2c76",
+    "ballast/evidence/2026-11-05-handoff-decisions.json": "78c7f85b19b8b34cafe576e71cfcb106b858afa8"
+  },
+  "execution": "cloud V8 Function fixtures(), produce(), original verify(), PR794 verifyCaseTraceBinding(), coverageRows(), verifyQueryCoverage()",
+  "original44": {
+    "sourcePersistedExact": true,
+    "originalVerifier": {
+      "pass": true,
+      "errors": [],
+      "scenarios": 44,
+      "traces": 44,
+      "traceEvents": 392,
+      "decisions": 132,
+      "independence": {
+        "implementation": "PARTIAL",
+        "dataSource": "NONE",
+        "semanticContract": "SHARED",
+        "authority": "NONE"
+      }
+    },
+    "bindingVerifier": {
+      "pass": true,
+      "errors": [],
+      "cases": 44,
+      "traces": 44,
+      "events": 392,
+      "independence": {
+        "implementation": "SEPARATE_EVENT_PROJECTION",
+        "dataSource": "SHARED",
+        "semanticContract": "SHARED",
+        "authority": "NONE"
+      }
+    },
+    "newCoverageReviewer": {
+      "pass": true,
+      "errors": [],
+      "scenarios": 44,
+      "traces": 44,
+      "events": 392,
+      "decisionCount": 132,
+      "changes": [],
+      "independence": {
+        "implementation": "PARTIAL",
+        "dataSource": "SHARED",
+        "semanticContract": "SHARED",
+        "authority": "NONE"
+      }
+    }
+  },
+  "extended47": {
+    "legacyVerifier": {
+      "pass": true,
+      "errors": [],
+      "scenarios": 47,
+      "traces": 47,
+      "traceEvents": 419,
+      "decisions": 141,
+      "independence": {
+        "implementation": "PARTIAL",
+        "dataSource": "NONE",
+        "semanticContract": "SHARED",
+        "authority": "NONE"
+      }
+    },
+    "bindingVerifier": {
+      "pass": true,
+      "errors": [],
+      "cases": 47,
+      "traces": 47,
+      "events": 419,
+      "independence": {
+        "implementation": "SEPARATE_EVENT_PROJECTION",
+        "dataSource": "SHARED",
+        "semanticContract": "SHARED",
+        "authority": "NONE"
+      }
+    },
+    "uncorrectedReviewer": {
+      "pass": false,
+      "errors": [
+        "query-scope correction mismatch"
+      ],
+      "scenarios": 47,
+      "traces": 47,
+      "events": 419,
+      "decisionCount": 141,
+      "changes": [
+        {
+          "id": "query_coverage_end_before_effect",
+          "path": "reference",
+          "old": "COMPLETE",
+          "corrected": "STOP_UNKNOWN"
+        },
+        {
+          "id": "query_coverage_end_zero",
+          "path": "reference",
+          "old": "COMPLETE",
+          "corrected": "STOP_UNKNOWN"
+        }
+      ],
+      "independence": {
+        "implementation": "PARTIAL",
+        "dataSource": "SHARED",
+        "semanticContract": "SHARED",
+        "authority": "NONE"
+      }
+    },
+    "correctedReviewer": {
+      "pass": true,
+      "errors": [],
+      "scenarios": 47,
+      "traces": 47,
+      "events": 419,
+      "decisionCount": 141,
+      "changes": [
+        {
+          "id": "query_coverage_end_before_effect",
+          "path": "reference",
+          "old": "COMPLETE",
+          "corrected": "STOP_UNKNOWN"
+        },
+        {
+          "id": "query_coverage_end_zero",
+          "path": "reference",
+          "old": "COMPLETE",
+          "corrected": "STOP_UNKNOWN"
+        }
+      ],
+      "independence": {
+        "implementation": "PARTIAL",
+        "dataSource": "SHARED",
+        "semanticContract": "SHARED",
+        "authority": "NONE"
+      }
+    }
+  },
+  "controls": [
+    {
+      "id": "query_coverage_end_before_effect",
+      "lastEnd": 11,
+      "commitAt": 12,
+      "original": "COMPLETE",
+      "corrected": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_coverage_end_zero",
+      "lastEnd": 0,
+      "commitAt": 12,
+      "original": "COMPLETE",
+      "corrected": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_coverage_end_equal_effect",
+      "lastEnd": 12,
+      "commitAt": 12,
+      "original": "COMPLETE",
+      "corrected": "COMPLETE"
+    }
+  ],
+  "probes": [
+    {
+      "name": "case_receipt_attempt",
+      "oldAccepted": true,
+      "combinedRejected": true,
+      "errors": [
+        "case-to-trace binding verification failed"
+      ]
+    },
+    {
+      "name": "case_approval",
+      "oldAccepted": true,
+      "combinedRejected": true,
+      "errors": [
+        "case-to-trace binding verification failed"
+      ]
+    },
+    {
+      "name": "case_extra_effect",
+      "oldAccepted": true,
+      "combinedRejected": true,
+      "errors": [
+        "case-to-trace binding verification failed"
+      ]
+    },
+    {
+      "name": "case_guard_revision",
+      "oldAccepted": true,
+      "combinedRejected": true,
+      "errors": [
+        "case-to-trace binding verification failed"
+      ]
+    }
+  ],
+  "credit": {
+    "newDaily": 0,
+    "newResearchWindow": 0,
+    "case": 0,
+    "method": 0,
+    "notes": 0,
+    "audit": 0,
+    "special": 0,
+    "finding": 0
+  },
+  "limits": {
+    "implementation": "PARTIAL",
+    "dataSource": "SHARED",
+    "semanticContract": "SHARED",
+    "authority": "NONE"
+  },
+  "notExecuted": [
+    "full Python checker",
+    "native Node CLI",
+    "real Temporal or GitHub Actions execution",
+    "independent effect sink",
+    "independent authorization issuer",
+    "real authoritative MISS",
+    "protected transaction"
+  ]
+}
