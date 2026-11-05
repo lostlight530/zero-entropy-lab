@@ -1,30 +1,42 @@
 {
-  "executedUTC": "2026-11-04T20:04:15Z",
+  "executedUTC": "2026-11-05T04:49:06.290Z",
   "logicalDate": "2026-11-05 Asia/Shanghai",
-  "mainBase": "e08f16baf8e80a90c4fc3ea935d87e71ac6a6afb",
-  "execution": "cloud V8 Function eval, fixtures(), produce(), verify(), tamper probes",
-  "scenarioCount": 20,
-  "traceCount": 20,
-  "eventCount": 177,
-  "decisionCount": 60,
+  "researchOriginUTC": "2026-11-04T20:04:15Z",
+  "stage": "SAME_DAY_MAINTAINER_REVIEW",
+  "originalHead": "382500d9cfe37ed06f90cac3e5653d2067117ef5",
+  "originalCounts": {
+    "scenarios": 20,
+    "events": 177,
+    "decisions": 60,
+    "tamper": 9
+  },
+  "initialAdversarialMutations": {
+    "count": 18,
+    "unsafeAccepted": 13,
+    "note": "Original reference read from GitHub head, results verified before repair"
+  },
+  "scenarioCount": 44,
+  "traceCount": 44,
+  "eventCount": 392,
+  "decisionCount": 132,
   "referenceHistogram": {
     "COMPLETE": 1,
-    "BLOCKED": 9,
-    "STOP_UNKNOWN": 4,
-    "RETRY_REQUIRES_NEW_FENCE": 1,
-    "EVIDENCE_CONFLICT": 1,
-    "RECONCILE": 4
+    "BLOCKED": 12,
+    "STOP_UNKNOWN": 18,
+    "EVIDENCE_CONFLICT": 2,
+    "RECONCILE": 11
   },
   "weakDisagreements": {
-    "weak_precheck": 19,
-    "weak_receipt": 17
+    "weak_precheck": 43,
+    "weak_receipt": 39
   },
-  "verifier": {
+  "verification": {
     "pass": true,
     "errors": [],
-    "scenarios": 20,
-    "traceEvents": 177,
-    "decisions": 60,
+    "scenarios": 44,
+    "traces": 44,
+    "traceEvents": 392,
+    "decisions": 132,
     "independence": {
       "implementation": "PARTIAL",
       "dataSource": "NONE",
@@ -32,20 +44,208 @@
       "authority": "NONE"
     }
   },
-  "tamper": [
+  "negativeScenarios": [
     {
-      "name": "forged_complete",
+      "id": "stale_handoff",
+      "result": "BLOCKED"
+    },
+    {
+      "id": "cancel_after_precheck",
+      "result": "BLOCKED"
+    },
+    {
+      "id": "revoked_approval",
+      "result": "BLOCKED"
+    },
+    {
+      "id": "expired_credential",
+      "result": "BLOCKED"
+    },
+    {
+      "id": "stale_commit_generation",
+      "result": "BLOCKED"
+    },
+    {
+      "id": "non_atomic_commit",
+      "result": "BLOCKED"
+    },
+    {
+      "id": "missing_receipt",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "uncovered_miss",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "covered_miss",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "conflicting_hit_miss",
+      "result": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "wrong_target_incarnation",
+      "result": "RECONCILE"
+    },
+    {
+      "id": "extra_member",
+      "result": "RECONCILE"
+    },
+    {
+      "id": "duplicate_member",
+      "result": "RECONCILE"
+    },
+    {
+      "id": "guard_revision_drift",
+      "result": "RECONCILE"
+    },
+    {
+      "id": "expired_query_retention",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "unauthorized_historical",
+      "result": "BLOCKED"
+    },
+    {
+      "id": "unknown_effect_identity",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "untrusted_sink",
+      "result": "BLOCKED"
+    },
+    {
+      "id": "late_effect",
+      "result": "BLOCKED"
+    },
+    {
+      "id": "receipt_wrong_attempt",
+      "result": "RECONCILE"
+    },
+    {
+      "id": "receipt_wrong_task",
+      "result": "RECONCILE"
+    },
+    {
+      "id": "receipt_wrong_run",
+      "result": "RECONCILE"
+    },
+    {
+      "id": "receipt_wrong_member",
+      "result": "RECONCILE"
+    },
+    {
+      "id": "receipt_wrong_state",
+      "result": "RECONCILE"
+    },
+    {
+      "id": "query_wrong_attempt",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_uncovered_attempt",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_wrong_run",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_lifecycle_pruned",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_retention_string",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_time_string",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_time_string",
+      "result": "RECONCILE"
+    },
+    {
+      "id": "grant_start_string",
+      "result": "BLOCKED"
+    },
+    {
+      "id": "permission_string_false",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "owner_generation_string",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "unknown_task",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "grant_missing_authority",
+      "result": "BLOCKED"
+    },
+    {
+      "id": "grant_wrong_run",
+      "result": "BLOCKED"
+    },
+    {
+      "id": "query_negative_hit",
+      "result": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "miss_no_attempt_coverage",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "membership_extra_state",
+      "result": "RECONCILE"
+    },
+    {
+      "id": "query_future_watermark",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "precheck_after_commit",
+      "result": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_stale_last_end",
+      "result": "STOP_UNKNOWN"
+    }
+  ],
+  "adversarial": [
+    {
+      "name": "forged_stale_complete",
       "rejected": true,
       "errors": [
         "decision stale_handoff reference"
       ]
     },
     {
-      "name": "remove_decision",
+      "name": "forged_wrong_attempt_complete",
+      "rejected": true,
+      "errors": [
+        "decision receipt_wrong_attempt reference"
+      ]
+    },
+    {
+      "name": "forged_miss_retry",
+      "rejected": true,
+      "errors": [
+        "decision covered_miss reference"
+      ]
+    },
+    {
+      "name": "removed_decision",
       "rejected": true,
       "errors": [
         "cardinality",
-        "decision late_effect reference"
+        "decision query_stale_last_end reference"
       ]
     },
     {
@@ -53,8 +253,17 @@
       "rejected": true,
       "errors": [
         "cardinality",
-        "duplicate identity",
+        "duplicate decision identity",
         "decision baseline weak_precheck"
+      ]
+    },
+    {
+      "name": "duplicate_case",
+      "rejected": true,
+      "errors": [
+        "cardinality",
+        "duplicate/invalid scenario baseline",
+        "trace orphan"
       ]
     },
     {
@@ -62,15 +271,16 @@
       "rejected": true,
       "errors": [
         "cardinality",
-        "duplicate identity"
+        "duplicate trace identity"
       ]
     },
     {
-      "name": "duplicate_scenario",
+      "name": "remove_commit",
       "rejected": true,
       "errors": [
-        "cardinality",
-        "duplicate scenario baseline"
+        "event multiplicity baseline COMMIT",
+        "extra event baseline",
+        "decision baseline reference"
       ]
     },
     {
@@ -81,37 +291,136 @@
       ]
     },
     {
-      "name": "wrong_owner",
+      "name": "unknown_event",
       "rejected": true,
       "errors": [
-        "decision baseline reference"
-      ]
-    },
-    {
-      "name": "query_miss",
-      "rejected": true,
-      "errors": [
-        "decision baseline reference"
-      ]
-    },
-    {
-      "name": "missing_commit",
-      "rejected": true,
-      "errors": [
-        "event multiplicity baseline COMMIT",
         "extra event baseline"
+      ]
+    },
+    {
+      "name": "wrong_receipt_attempt",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "wrong_receipt_run",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "unknown_grant_authority",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "grant_expired",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "wrong_query_scope",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "query_retention_string",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "permission_false_string",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "membership_extra_state",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "positive_and_miss",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "guard_lost",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "owner_changed",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "target_swapped",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "precheck_after_commit",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
+      ]
+    },
+    {
+      "name": "grant_generation_string",
+      "rejected": true,
+      "errors": [
+        "decision baseline reference"
       ]
     }
   ],
-  "externalEffects": 0,
-  "authoritativeQueries": 0,
-  "sourceVerificationDate": "2026-11-05 Asia/Shanghai",
+  "authority": "NONE",
+  "independence": {
+    "implementation": "PARTIAL",
+    "dataSource": "NONE",
+    "semanticContract": "SHARED",
+    "authority": "NONE"
+  },
+  "credit": {
+    "Daily": 1,
+    "originalResearchWindow": 1,
+    "additionalMaintenanceResearchWindow": 0,
+    "Audit": 0,
+    "CASE": 0,
+    "METHOD": 0,
+    "NOTES": 0,
+    "Special": 0,
+    "durableFinding": 0
+  },
   "notExecuted": [
-    "full Python checker",
+    "full Python ballast/tools/check.py",
     "native Node CLI",
-    "real GitHub Actions cancellation experiment",
-    "Temporal workflow runtime",
-    "real protected effect sink",
-    "independent authority"
+    "real GitHub Actions/Temporal cancellation",
+    "real external effect sink",
+    "independent grant authority",
+    "authoritative negative effect query",
+    "protected compare-and-effect"
   ]
 }

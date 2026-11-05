@@ -147,7 +147,7 @@
   {
     "id": "covered_miss",
     "path": "reference",
-    "decision": "RETRY_REQUIRES_NEW_FENCE"
+    "decision": "STOP_UNKNOWN"
   },
   {
     "id": "conflicting_hit_miss",
@@ -298,5 +298,365 @@
     "id": "late_effect",
     "path": "reference",
     "decision": "BLOCKED"
+  },
+  {
+    "id": "receipt_wrong_attempt",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_attempt",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_attempt",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_wrong_task",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_task",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_task",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_wrong_run",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_run",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_run",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_wrong_member",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_member",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_member",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_wrong_state",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_state",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_state",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "query_wrong_attempt",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_wrong_attempt",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_wrong_attempt",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_uncovered_attempt",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_uncovered_attempt",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_uncovered_attempt",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_wrong_run",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_wrong_run",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_wrong_run",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_lifecycle_pruned",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_lifecycle_pruned",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_lifecycle_pruned",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_retention_string",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_retention_string",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_retention_string",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_time_string",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_time_string",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_time_string",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "receipt_time_string",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_time_string",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_time_string",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "grant_start_string",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_start_string",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_start_string",
+    "path": "reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "permission_string_false",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "permission_string_false",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "permission_string_false",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "owner_generation_string",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "owner_generation_string",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "owner_generation_string",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "unknown_task",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "unknown_task",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "unknown_task",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "grant_missing_authority",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_missing_authority",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_missing_authority",
+    "path": "reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "grant_wrong_run",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_wrong_run",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_wrong_run",
+    "path": "reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "query_negative_hit",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_negative_hit",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_negative_hit",
+    "path": "reference",
+    "decision": "EVIDENCE_CONFLICT"
+  },
+  {
+    "id": "miss_no_attempt_coverage",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "miss_no_attempt_coverage",
+    "path": "weak_receipt",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "miss_no_attempt_coverage",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "membership_extra_state",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "membership_extra_state",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "membership_extra_state",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "query_future_watermark",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_future_watermark",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_future_watermark",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "precheck_after_commit",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "precheck_after_commit",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "precheck_after_commit",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_stale_last_end",
+    "path": "weak_precheck",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_stale_last_end",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_stale_last_end",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
   }
 ]
