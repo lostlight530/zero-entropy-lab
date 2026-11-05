@@ -33,7 +33,8 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 - 当前月度事实源: [2026-11](records/2026-11.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-10-26 至 2026-10-31](audits/2026-10-26--2026-10-31.md)
-- 最新合并后修正对账: [2026-11-05 handoff case-to-trace integrity](corrections/2026-11-05-handoff-case-trace-binding-postmerge.md)
+- 最新合并后修正对账: [2026-11-05 handoff query coverage-end](corrections/2026-11-05-handoff-query-coverage-postmerge.md)
+- 前期 handoff 证据绑定修正: [2026-11-05 case-to-trace](corrections/2026-11-05-handoff-case-trace-binding-postmerge.md)
 - 前期合并后修正对账: [2026-10-30 PR #754 post-merge reconciliation](corrections/2026-10-30-pubsub-merge-reconciliation.md)
 - 2026-09-26 至 2026-10-01 已形成新的 6 日 derived audit, 其中 2026-09-26 为 RECONSTRUCTION / NOT_RUN / UNVERIFIED. 该 audit 仅做派生审计, 新增实验数量 0, 新增长期结论数量 0, 不重复创建重叠 audit
 - 当前方法: [METHOD.md](METHOD.md)
