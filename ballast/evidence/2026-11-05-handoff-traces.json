@@ -1,0 +1,4308 @@
+[
+  {
+    "id": "baseline",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "stale_handoff",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w1",
+        "delegateGeneration": 1
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w1",
+        "generation": 1,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 1,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "cancel_after_precheck",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": false,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "revoked_approval",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": false,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "expired_credential",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": false
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "stale_commit_generation",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 1,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "non_atomic_commit",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": false,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "missing_receipt",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "UNKNOWN",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      }
+    ]
+  },
+  {
+    "id": "uncovered_miss",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "MISS",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 10,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      }
+    ]
+  },
+  {
+    "id": "covered_miss",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "MISS",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      }
+    ]
+  },
+  {
+    "id": "conflicting_hit_miss",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "MISS",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "wrong_target_incarnation",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-6",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "extra_member",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A",
+          "B"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "duplicate_member",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A",
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "guard_revision_drift",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 6,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "expired_query_retention",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 20,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "unauthorized_historical",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 11,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "unknown_effect_identity",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-other",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "untrusted_sink",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "cache"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "late_effect",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 16,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 16,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "receipt_wrong_attempt",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P0",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "receipt_wrong_task",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "wrong",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "receipt_wrong_run",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "wrong",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "receipt_wrong_member",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "C",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "receipt_wrong_state",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "PENDING",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "query_wrong_attempt",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P0",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "query_uncovered_attempt",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "query_wrong_run",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "wrong",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "query_lifecycle_pruned",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "PRUNED",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "query_retention_string",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": "30",
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "query_time_string",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": "22",
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "receipt_time_string",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": "12",
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "grant_start_string",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": "1",
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "permission_string_false",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": "false",
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "owner_generation_string",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": "2",
+        "delegate": "w2",
+        "delegateGeneration": "2"
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": "2",
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": "2",
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": "2",
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "unknown_task",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "grant_missing_authority",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "grant_wrong_run",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "wrong",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "query_negative_hit",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": true,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "miss_no_attempt_coverage",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "MISS",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      }
+    ]
+  },
+  {
+    "id": "membership_extra_state",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE",
+          "B": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "query_future_watermark",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 1000,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "precheck_after_commit",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 13
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 12,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  },
+  {
+    "id": "query_stale_last_end",
+    "events": [
+      {
+        "kind": "INTENT",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "effect": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "OWNER",
+        "owner": "w2",
+        "generation": 2,
+        "delegate": "w2",
+        "delegateGeneration": 2
+      },
+      {
+        "kind": "PERMISSION",
+        "permit": true,
+        "approval": true,
+        "credential": true
+      },
+      {
+        "kind": "GRANT",
+        "authority": "grant-ledger",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "subject": "w2",
+        "generation": 2,
+        "from": 1,
+        "to": 15,
+        "action": "charge-A",
+        "target": "uid-5"
+      },
+      {
+        "kind": "PRECHECK",
+        "generation": 2,
+        "at": 9
+      },
+      {
+        "kind": "COMMIT",
+        "generation": 2,
+        "at": 12,
+        "atomic": true,
+        "issuer": "sink-guard"
+      },
+      {
+        "kind": "QUERY",
+        "task": "T5",
+        "run": "R5",
+        "attempt": "P1",
+        "attempts": [
+          "P1"
+        ],
+        "exact": true,
+        "lastEnd": 21,
+        "lifecycle": "ACTIVE",
+        "negative": false,
+        "state": "HIT",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "watermark": 20,
+        "retentionUntil": 30,
+        "at": 22,
+        "authority": "sink-journal"
+      },
+      {
+        "kind": "CURRENT",
+        "states": {
+          "A": "DONE"
+        },
+        "revision": 5,
+        "target": "uid-5",
+        "members": [
+          "A"
+        ],
+        "done": [
+          "A"
+        ],
+        "guardRevision": 5,
+        "protected": true
+      },
+      {
+        "kind": "RECEIPT",
+        "task": "T5",
+        "run": "R5",
+        "member": "A",
+        "state": "DONE",
+        "effect": "charge-A",
+        "target": "uid-5",
+        "attempt": "P1",
+        "at": 12,
+        "authorized": true
+      }
+    ]
+  }
+]
