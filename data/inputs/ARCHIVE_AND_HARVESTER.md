@@ -17,12 +17,6 @@
 | `data/knowledge/**/*.jsonl` | 可回放事实账本 | 逐行校验、稳定排序、确定性去重 |
 | `data/cortex.db` | 可重建查询索引 | 可以重建和压缩，不作为唯一事实源 |
 
-## 来源类型与前向迁移
-
-- Profile 的路径通配只从 `.md`、`.mdx`、`.markdown`、`.rst`、`.txt`、`.py` 和 `.ipynb` 文本候选中选取，JPG、PDF 等二进制文件不得进入活动快照.
-- 对候选 Blob 严格解码 UTF-8，并拒绝 NUL 字节，不以替换字符伪装不可读来源.
-- 下一次获准的 apply 会把先前误选的二进制 current 快照原样移入 archive，并从活动状态移除对应路径；已存在的 archive 不改写、不重新摄取.
-
 ## 有界活动证据与迁移
 
 - Profile 路径通配只允许 `.md`、`.mdx`、`.markdown`、`.rst`、`.txt`、`.py` 和 `.ipynb` 文本候选，JPG、PDF 等二进制文件不得进入活动快照.
