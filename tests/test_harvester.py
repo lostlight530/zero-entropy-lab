@@ -42,7 +42,7 @@ class HarvesterContracts(unittest.TestCase):
 
     def test_blob_text_rejects_invalid_utf8_and_nul_bytes(self):
         harvester = Harvester.__new__(Harvester)
-        for payload in (b"\\xff", b"heading\\x00body"):
+        for payload in (bytes([0xff]), b"heading" + bytes([0]) + b"body"):
             harvester._api = Mock(return_value={
                 "encoding": "base64",
                 "content": base64.b64encode(payload).decode("ascii"),
