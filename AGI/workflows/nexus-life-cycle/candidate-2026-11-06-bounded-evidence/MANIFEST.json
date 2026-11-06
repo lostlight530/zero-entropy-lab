@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "record_kind": "WORKFLOW_GENERATION_CANDIDATE",
+  "record_status": "DRAFT_NOT_MAIN_NOT_REGISTERED",
+  "lineage_role": "BOUNDED_ACTIVE_SOURCE_EVIDENCE",
+  "capture_date": "2026-11-06",
+  "capture_timezone": "Asia/Shanghai",
+  "repository": "lostlight530/zero-entropy-lab",
+  "source_commit_sha": "5b360ed531812107cdd8fc1d26c808dcb393a4b8",
+  "canonical_executable_source": ".github/workflows/nexus-life-cycle.yml",
+  "source_workflow_name": "NEXUS CORTEX Life Cycle",
+  "source_workflow_blob_sha": "30bea759d044dc0c834fcd0dd155dcb311c0e61b",
+  "source_content_sha256": "9db5b1b0961ff60bb3625ffd6ebd15d6b070ac4f4a7ce820a5135eb2b16130b2",
+  "source_byte_count": 12662,
+  "source_line_count": 209,
+  "source_jobs": [
+    "validate",
+    "apply"
+  ],
+  "source_triggers": [
+    "schedule",
+    "push",
+    "pull_request",
+    "workflow_dispatch"
+  ],
+  "architecture_change": [
+    "text-only source candidate boundary",
+    "strict UTF-8 and NUL rejection",
+    "bounded pinned references for oversized current snapshots",
+    "archive-before-replace forward migration",
+    "post-harvest active evidence gate"
+  ],
+  "agi_backup_path": "AGI/workflows/backups/nexus-life-cycle/candidate-2026-11-06-bounded-evidence/nexus-life-cycle.yml",
+  "agi_copy_is_active_github_action": false,
+  "executable_from_agi": false,
+  "workflowhub_registered": false,
+  "workflowhub_id": "2334",
+  "external_update_authorized": false,
+  "migration_window": {
+    "from": "2026-08-31",
+    "through": "2026-11-06",
+    "main_snapshot_documents": 236,
+    "oversized_current_snapshots": 14,
+    "binary_current_snapshots": 2,
+    "status": "NOT_EXECUTED_REQUIRES_MERGED_AUTHORIZED_APPLY"
+  },
+  "predecessor_record": "AGI/workflows/nexus-life-cycle/recovered-2026-08-31-receipt",
+  "recovery_rule": "Resolve source_commit_sha, verify the canonical workflow Git blob and SHA-256, then run repository-specific validation. The AGI copy is inert and must never receive apply credentials."
+}
