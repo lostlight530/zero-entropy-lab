@@ -16,6 +16,9 @@ from pathlib import Path
 from document_hygiene import atomic_write, render_snapshot, validate_owned_punctuation
 
 
+TEXT_SOURCE_SUFFIXES = frozenset({'.md', '.mdx', '.markdown', '.rst', '.txt', '.py', '.ipynb'})
+
+
 class Harvester:
     def __init__(self, root=None):
         here = Path(__file__).resolve()
@@ -233,7 +236,13 @@ class Harvester:
         blob = self._api(f"https://api.github.com/repos/{repo}/git/blobs/{sha}")
         if not isinstance(blob, dict) or blob.get("encoding") != "base64":
             raise ValueError(f"unsupported blob encoding: {repo}@{sha}")
-        return base64.b64decode(blob["content"]).decode("utf-8", errors="replace")
+        raw = base64.b64decode(blob["content"])
+        if 0 in raw:
+            raise ValueError(f"non-text source blob: {repo}@{sha}")
+        try:
+            return raw.decode("utf-8")
+        except UnicodeDecodeError as exc:
+            raise ValueError(f"non-text source blob: {repo}@{sha}") from exc
 
     @staticmethod
     def _move_to_archive(source, destination):
@@ -265,6 +274,8 @@ class Harvester:
     @staticmethod
     def _selected(path, patterns, ignored):
         value = path.lower()
+        if Path(value).suffix not in TEXT_SOURCE_SUFFIXES:
+            return False
         if any(fnmatch.fnmatch(value, pattern.lower()) for pattern in ignored):
             return False
         return value == "readme.md" or any(fnmatch.fnmatch(value, pattern.lower()) for pattern in patterns)
