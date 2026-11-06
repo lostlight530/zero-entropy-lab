@@ -62,3 +62,21 @@
 - Neither a new forward correction nor its additions can retroactively lift the original strict acceptance. A subsequent successor, if justified and separately accepted, must retain distinct identity and dated source authority.
 - This appendix does not assert native runtime test, live external source requery, CI or full-worktree verification. Original history stays immutable, and Draft remains awaiting maintainer decision.
 - Status: NUMERIC_ORIGINAL_DELIVERY_VERIFIED / STRICT_ORIGINAL_SUBSTANTIVE_NOT_CLOSED / DATED_FORWARD_REPAIR_SUBMITTED.
+
+## 2026-11-06 exact original-diff line-screening ledger
+
+- This is an exact original PR additions screening, not a later replacement of its original acceptance or a new native production run.
+- Structural exclusions: blank, heading, Markdown separator and code fence. Numbered source/contract rows and SHA/blob references are flags only; numbering, uniqueness of printed text or exact blob custody alone do not prove one new independent substantive judgment.
+- Nonstructural maximum = original GitHub additions minus structural exclusions, an upper bound **not an accepted semantic count**. A strict PASS needs a reviewed original-diff inclusion/exclusion ledger documenting 100 distinct source-specific original decisions.
+
+| Original | GitHub additions | Structural excluded | Numbered rows flagged | Source/identity references flagged | Nonstructural maximum | Strict verdict |
+|---|---:|---:|---:|---:|---:|---|
+| [#785](https://github.com/lostlight530/zero-entropy-lab/pull/785/files) | 166 | 24 | 127 | 1 | 142 | NOT_CERTIFIED |
+| [#786](https://github.com/lostlight530/zero-entropy-lab/pull/786/files) | 170 | 24 | 128 | 3 | 146 | NOT_CERTIFIED |
+
+### Exact line anchors
+- #785: `historical-audits/2026-11/2026-11-02-a1-source-content-review.md`; first numbered original diff line anchors `historical-audits/2026-11/2026-11-02-a1-source-content-review.md#L17`, `historical-audits/2026-11/2026-11-02-a1-source-content-review.md#L18`, `historical-audits/2026-11/2026-11-02-a1-source-content-review.md#L19`. These lines must be reviewed against original native source evidence and compared with earlier A1/A2, not mechanically accepted.
+- #786: `historical-audits/2026-11/2026-11-02-a2-month-relations.md`; first numbered original diff line anchors `historical-audits/2026-11/2026-11-02-a2-month-relations.md#L20`, `historical-audits/2026-11/2026-11-02-a2-month-relations.md#L21`, `historical-audits/2026-11/2026-11-02-a2-month-relations.md#L22`. These lines must be reviewed against original native source evidence and compared with earlier A1/A2, not mechanically accepted.
+
+- Delivered numeric originals: PASS. >=100 independent substantive original-line gate: NOT_CERTIFIED. Later correction lines do not change original additions or truth at task time.
+- Native runner, current full-worktree tests, external source recertification and semantic outcome certification remain separate from this documentary original diff screening.
