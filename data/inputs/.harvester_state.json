@@ -2704,16 +2704,16 @@
           "tree_sha": "0c3f96c9f829a04e2a866436a2bbe65bb5808481"
         },
         "docs/design/mm_processing.md": {
-          "blob_sha": "2198fb107f1ad9bea230ca7c2c1f993dbdef87ee",
-          "commit_sha": "ba2d99fd4a81dc20d77a454f8fb76c62993d77a2",
-          "content_hash": "987d6b81634b536dba8c6010ab365f1bb4051a2fb3a8bd5a694b02101544e12a",
+          "blob_sha": "abc7561ccc18f00324fd6c2aeecd0a4d5102a1f1",
+          "commit_sha": "0f0172d90329d0dc3d867c0881d156f25c16b8bf",
+          "content_hash": "bcd27ba813919ebc896fe3401ad766f811be425f1b2f8b3d863f873fe2d06ec4",
           "entity_id": "doc_vllm_project_vllm_docs_design_mm_processing_md_18d6c947e649",
-          "observed_blob_sha": "2198fb107f1ad9bea230ca7c2c1f993dbdef87ee",
-          "observed_commit_sha": "ba2d99fd4a81dc20d77a454f8fb76c62993d77a2",
-          "observed_tree_sha": "c07a0c2312db77d6d02667d887a94a62730fc741",
-          "output": "current/serving-inference/vllm_project_vllm/docs__design__mm_processing.md__2198fb107f1a__ba2d99fd4a81.md",
-          "sha": "2198fb107f1ad9bea230ca7c2c1f993dbdef87ee",
-          "tree_sha": "c07a0c2312db77d6d02667d887a94a62730fc741"
+          "observed_blob_sha": "abc7561ccc18f00324fd6c2aeecd0a4d5102a1f1",
+          "observed_commit_sha": "0f0172d90329d0dc3d867c0881d156f25c16b8bf",
+          "observed_tree_sha": "f2ddcbbfd60db36a11fa6e6367e0f80d8a87070a",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__mm_processing.md__abc7561ccc18__0f0172d90329.md",
+          "sha": "abc7561ccc18f00324fd6c2aeecd0a4d5102a1f1",
+          "tree_sha": "f2ddcbbfd60db36a11fa6e6367e0f80d8a87070a"
         },
         "docs/design/model_runner_v2.md": {
           "blob_sha": "cabc3526b19e6cd7df4f7ad4b51e3ea29925feb5",
@@ -3004,7 +3004,7 @@
           "tree_sha": "cfeb3173928b2b51eb943c8f1dacbc9c3ebf57b4"
         }
       },
-      "last_checked_at": "2026-11-05T01:53:13.624770+00:00"
+      "last_checked_at": "2026-11-06T01:53:22.566767+00:00"
     },
     "volcengine/verl": {
       "documents": {
