@@ -378,6 +378,45 @@ class HarvesterContracts(unittest.TestCase):
     def test_readme_is_explicitly_selected(self):
         self.assertTrue(Harvester._selected("README.md", ["docs/**"], []))
 
+    def test_binary_files_are_not_selected_by_broad_globs(self):
+        patterns = ["examples/basic/**"]
+        self.assertTrue(Harvester._selected("examples/basic/hello_world.py", patterns, []))
+        self.assertTrue(Harvester._selected("examples/basic/hello_world_jupyter.ipynb", patterns, []))
+        self.assertFalse(Harvester._selected("examples/basic/media/image_bison.jpg", patterns, []))
+        self.assertFalse(Harvester._selected("examples/basic/media/system-card.pdf", patterns, []))
+
+    def test_previously_selected_binary_is_archived_without_reingestion(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            harvester = Harvester.__new__(Harvester)
+            harvester.inputs = Path(tmp)
+            current = harvester.inputs / "current" / "test" / "owner_repo"
+            current.mkdir(parents=True)
+            snapshot = current / "examples__basic__media__image.jpg__old.md"
+            snapshot.write_text("sealed historical source", encoding="utf-8")
+            harvester.state = {"repositories": {"owner/repo": {"documents": {
+                "examples/basic/media/image.jpg": {
+                    "blob_sha": "old", "commit_sha": "commit-sha",
+                    "tree_sha": "tree-sha", "observed_blob_sha": "old",
+                    "output": snapshot.relative_to(harvester.inputs).as_posix(),
+                }
+            }}}}
+            harvester._api = Mock(side_effect=[
+                {"default_branch": "main"},
+                {"sha": "commit-sha", "commit": {"tree": {"sha": "tree-sha"}}},
+                {"tree": [{"type": "blob", "path": "examples/basic/media/image.jpg", "sha": "old"}], "truncated": False},
+            ])
+            harvester.dry = False
+            changed = harvester._source({
+                "repo": "owner/repo", "documents": ["examples/basic/**"],
+                "ignore_patterns": [], "layer": "test", "primary_owner": "zero",
+            })
+            self.assertEqual(changed, [])
+            self.assertFalse(snapshot.exists())
+            archived = list((harvester.inputs / "archive").rglob(snapshot.name))
+            self.assertEqual(len(archived), 1)
+            self.assertEqual(archived[0].read_text(encoding="utf-8"), "sealed historical source")
+            self.assertNotIn("examples/basic/media/image.jpg", harvester.state["repositories"]["owner/repo"]["documents"])
+
     def test_unlisted_external_link_is_not_selected(self):
         self.assertFalse(Harvester._selected("external/repo.md", ["docs/**"], []))
 
