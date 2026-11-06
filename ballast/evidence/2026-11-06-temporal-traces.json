@@ -1,0 +1,5243 @@
+[
+  {
+    "id": "baseline",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "revoked_before_effect",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 10,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "revocation_unknown",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": null,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "time_interval_overlap",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 2,
+          "revocation": 13,
+          "revokeError": 2
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "receipt_extra",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "C",
+          "effect": "effect-C",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "receipt_duplicate",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "target_recreated",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid6",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "miss_conflict",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "MISS",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "uncovered_query",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 11,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "guard_lost",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": false,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "current_permission_revoked_positive",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": false
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "effect_permission_revoked",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": false,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "grant_interval_overlap",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 11,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 2,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "grant_expired_before_effect",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 10,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "later_revocation_positive",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 2,
+          "revocation": 30,
+          "revokeError": 2
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "receipt_wrong_task",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "other",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "receipt_wrong_run",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "other",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "receipt_wrong_attempt",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P0",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "receipt_wrong_target",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid6",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "receipt_wrong_effect",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-C",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "receipt_time_mismatch",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 13,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "query_wrong_attempt",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P0",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "query_missing_attempts",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "query_wrong_effect_set",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "C"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "query_expired_retention",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 18,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "query_future_watermark",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 21,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "query_pre_effect_watermark",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 11,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "query_lifecycle_pruned",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "PRUNED"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "duplicate_required_effect",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "A"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "extra_current_membership",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B",
+            "C"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE",
+            "C": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "guard_revision_drift",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 6,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "membership_revision_drift",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 6,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "missing_issuer",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_grant_attempt",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P0",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_grant_target",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid6",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "non_boolean_effect_permission",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": "true",
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "non_numeric_clock_error",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": "0",
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "missing_receipts",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "UNKNOWN",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      }
+    ]
+  },
+  {
+    "id": "covered_miss_no_receipts",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "MISS",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      }
+    ]
+  },
+  {
+    "id": "uncovered_miss_with_receipts",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "MISS",
+          "authority": "untrusted-cache",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "current_state_extra",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE",
+            "C": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "current_observed_before_effect",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 10
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "query_wrong_target",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid6",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": true,
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "query_nonboolean_exact",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "AUTHORITY",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "subject": "executor-1",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "from": 0,
+          "to": 40,
+          "active": true,
+          "effectPermission": true,
+          "currentPermission": true
+        }
+      },
+      {
+        "kind": "TEMPORAL",
+        "data": {
+          "effect": 12,
+          "effectError": 0,
+          "revocation": 20,
+          "revokeError": 0
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "state": "HIT",
+          "authority": "synthetic-effect-journal",
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "attempts": [
+            "P1"
+          ],
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "exact": "true",
+          "watermark": 18,
+          "lastEnd": 16,
+          "at": 19,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "effectSet": [
+            "A",
+            "B"
+          ],
+          "members": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "protected": true,
+          "observedAt": 19
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "effect-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T6",
+          "run": "R6",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "effect-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  }
+]

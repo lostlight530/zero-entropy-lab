@@ -1,0 +1,114 @@
+{
+  "status": "PASS_WITH_LIMITS",
+  "executionUTC": "2026-11-05T23:32:05.357Z",
+  "logicalDate": "2026-11-06 Asia/Shanghai",
+  "kind": "MAINTAINER_RECONSTRUCTION",
+  "originalDailyHead": "a7b808a417765d95bf55f065835de45abc5e3510",
+  "original10TrialSource": "NOT_PERSISTED",
+  "nativeNodeCLI": "NOT_EXECUTED",
+  "fullPythonChecker": "NOT_EXECUTED",
+  "externalIssuerTSAEffectSink": "NOT_EXECUTED",
+  "scenarios": 44,
+  "traces": 44,
+  "primitiveEvents": 305,
+  "decisions": 88,
+  "weakReferenceDisagreements": 39,
+  "referenceHistogram": {
+    "COMPLETE": 3,
+    "BLOCKED": 6,
+    "STOP_UNKNOWN": 19,
+    "RECONCILE": 15,
+    "EVIDENCE_CONFLICT": 1
+  },
+  "verification": {
+    "pass": true,
+    "errors": [],
+    "scenarios": 44,
+    "traces": 44,
+    "primitiveEvents": 305,
+    "decisions": 88,
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    }
+  },
+  "tamper": [
+    {
+      "id": "forged_reference",
+      "rejected": true,
+      "firstError": "decision mismatch time_interval_overlap reference expected STOP_UNKNOWN"
+    },
+    {
+      "id": "missing_decision",
+      "rejected": true,
+      "firstError": "cardinality"
+    },
+    {
+      "id": "duplicate_decision",
+      "rejected": true,
+      "firstError": "cardinality"
+    },
+    {
+      "id": "duplicate_scenario",
+      "rejected": true,
+      "firstError": "cardinality"
+    },
+    {
+      "id": "missing_trace",
+      "rejected": true,
+      "firstError": "cardinality"
+    },
+    {
+      "id": "changed_primitive_grant",
+      "rejected": true,
+      "firstError": "case-to-trace binding baseline"
+    },
+    {
+      "id": "changed_case_without_trace",
+      "rejected": true,
+      "firstError": "case-to-trace binding baseline"
+    },
+    {
+      "id": "extra_primitive_event",
+      "rejected": true,
+      "firstError": "unexpected event baseline"
+    },
+    {
+      "id": "duplicated_receipt_event",
+      "rejected": true,
+      "firstError": "case-to-trace binding baseline"
+    },
+    {
+      "id": "orphan_decision",
+      "rejected": true,
+      "firstError": "cardinality"
+    },
+    {
+      "id": "unexpected_path",
+      "rejected": true,
+      "firstError": "cardinality"
+    },
+    {
+      "id": "changed_trace_identity",
+      "rejected": true,
+      "firstError": "trace identity coverage"
+    }
+  ],
+  "tamperRejected": 12,
+  "negativeUnsafeAccepts": [],
+  "positiveControlFailures": [],
+  "realEffects": 0,
+  "independence": {
+    "implementation": "PARTIAL",
+    "dataSource": "NONE",
+    "semanticContract": "SHARED",
+    "authority": "NONE"
+  },
+  "notes": "All facts synthetic; verifier reconstructs decision from primitive events and binds case/trace, but shares schema and semantic assumptions, and original 10-trial source is unavailable",
+  "producerBlobSHA": "d2aedf1f818466cd76e12bdc0ac8dc7bda5f58c7",
+  "verifierBlobSHA": "0274c151d98fba5dca6173ffaeebef13bf7fd34c",
+  "runnerBlobSHA": "876661273ba990a99d4ff780360644d7d544a495",
+  "executionEntry": "cloud V8 Function(loaded source) => cases() => produce() => verify() => 12 tamper calls"
+}

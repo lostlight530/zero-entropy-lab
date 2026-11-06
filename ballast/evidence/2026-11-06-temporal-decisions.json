@@ -1,0 +1,442 @@
+[
+  {
+    "id": "baseline",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "baseline",
+    "path": "reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "revoked_before_effect",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "revoked_before_effect",
+    "path": "reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "revocation_unknown",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "revocation_unknown",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "time_interval_overlap",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "time_interval_overlap",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "receipt_extra",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_extra",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_duplicate",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_duplicate",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "target_recreated",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "target_recreated",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "miss_conflict",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "miss_conflict",
+    "path": "reference",
+    "decision": "EVIDENCE_CONFLICT"
+  },
+  {
+    "id": "uncovered_query",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "uncovered_query",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "guard_lost",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_lost",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "current_permission_revoked_positive",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "current_permission_revoked_positive",
+    "path": "reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "effect_permission_revoked",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "effect_permission_revoked",
+    "path": "reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "grant_interval_overlap",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_interval_overlap",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "grant_expired_before_effect",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_expired_before_effect",
+    "path": "reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "later_revocation_positive",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "later_revocation_positive",
+    "path": "reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_task",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_task",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_wrong_run",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_run",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_wrong_attempt",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_attempt",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_wrong_target",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_target",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_wrong_effect",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_wrong_effect",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "receipt_time_mismatch",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "receipt_time_mismatch",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "query_wrong_attempt",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_wrong_attempt",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_missing_attempts",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_missing_attempts",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_wrong_effect_set",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_wrong_effect_set",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_expired_retention",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_expired_retention",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_future_watermark",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_future_watermark",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_pre_effect_watermark",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_pre_effect_watermark",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_lifecycle_pruned",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_lifecycle_pruned",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "duplicate_required_effect",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_required_effect",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "extra_current_membership",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra_current_membership",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "guard_revision_drift",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_revision_drift",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "membership_revision_drift",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "membership_revision_drift",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "missing_issuer",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "missing_issuer",
+    "path": "reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "wrong_grant_attempt",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_grant_attempt",
+    "path": "reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "wrong_grant_target",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_grant_target",
+    "path": "reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "non_boolean_effect_permission",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "non_boolean_effect_permission",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "non_numeric_clock_error",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "non_numeric_clock_error",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "missing_receipts",
+    "path": "weak_receipt",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "missing_receipts",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "covered_miss_no_receipts",
+    "path": "weak_receipt",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "covered_miss_no_receipts",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "uncovered_miss_with_receipts",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "uncovered_miss_with_receipts",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "current_state_extra",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "current_state_extra",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "current_observed_before_effect",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "current_observed_before_effect",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "query_wrong_target",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_wrong_target",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_nonboolean_exact",
+    "path": "weak_receipt",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_nonboolean_exact",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  }
+]
