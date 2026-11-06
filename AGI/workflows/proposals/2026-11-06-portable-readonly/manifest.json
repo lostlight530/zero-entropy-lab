@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "PROSPECTIVE_WORKFLOWHUB_PORTABILITY_CONTRACT",
+  "proposal_date": "2026-11-06",
+  "repository": "lostlight530/zero-entropy-lab",
+  "state": "DRAFT_DESIGN_UNIMPLEMENTED",
+  "publication": {
+    "workflowhub_workflow_id": 2334,
+    "prior_registration_url": "https://workflowhub.eu/workflows/2334",
+    "new_external_version": null,
+    "new_doi": null,
+    "published": false
+  },
+  "source": {
+    "git_ref": "main",
+    "pinned_commit_sha": "da462f542f29d27f5ab5ff23f7a5061d0ea07720",
+    "canonical_workflow_path": ".github/workflows/nexus-life-cycle.yml",
+    "git_blob_sha": "b5c6c276dcabb66cb22ca1d3945beccc3a5146e2",
+    "historical_content_sha256": "7cb3facd3dbf13deaa537c927d69cc69ccc5e0506b6cc17221bd1801fc4399b3",
+    "historical_note": "Workflow identity is pinned to exact source; publication history and source chronology are independent"
+  },
+  "existing_native": {
+    "read_only_job": "validate",
+    "guarded_authority_job": "apply",
+    "test_command": "python tests/run_tests.py",
+    "source_runtime": "src/kernel/protocol/nexus.py",
+    "source_lifecycle_guard": "src/kernel/orchestration/lifecycle_guard.py",
+    "state_domain": "data/knowledge",
+    "publication_adapter": "NOT_PRESENT"
+  },
+  "portable_proposal": {
+    "scope": "OFFLINE_READ_ONLY_COMPUTATIONAL_AND_VERIFICATION_SUBWORKFLOW",
+    "status": "NOT_IMPLEMENTED_NOT_EXECUTED",
+    "prospective_input_classes": [
+      "pinned immutable evidence fixture",
+      "versioned schema and topic/profile fixture",
+      "exact repository/code revision",
+      "expected output assertions"
+    ],
+    "prospective_outputs": [
+      "bounded deterministic result or explicit non-determinism diagnostics",
+      "source and schema validation receipt",
+      "pass/fail/indeterminate gate verdict",
+      "replay provenance and content digests"
+    ],
+    "must_demonstrate": [
+      "a clean-room execution independent of repository write credentials",
+      "twice-run output equality after removing explicitly variable timestamps",
+      "synthetic invalid-input negative test",
+      "source identity and fixture digest verification",
+      "report if any stage requires unavailable external services"
+    ],
+    "denied_in_portable_mode": [
+      "schedule/push triggers",
+      "external live harvesting",
+      "automatic protected-state writes",
+      "secret-bearing privileged jobs",
+      "GitHub main branch mutation",
+      "workflowhub publication without maintainer review",
+      "production research/biological truth claims"
+    ]
+  },
+  "reference_example": {
+    "repository": "lostlight530/life-science-ecosystem-lab",
+    "reference_commit_sha": "bafb9ce5049764a102d4f23ac0c30c397442c194",
+    "native_run_url": "https://github.com/lostlight530/life-science-ecosystem-lab/actions/runs/42030165535",
+    "verified_jobs": [
+      "Knowledge Workflow",
+      "Portable package",
+      "Repository contracts",
+      "Evidence Tool",
+      "validate"
+    ],
+    "note": "Those successful jobs verify LS only, not this host's portability."
+  },
+  "status_boundaries": [
+    "This document is not a WorkflowHub publication or new version",
+    "Current NEXUS GitHub Actions workflow is still the only executable scheduler",
+    "The archived AGI generations and registered earlier versions remain unchanged",
+    "Future executable packages require separate code, CI receipts and human review"
+  ]
+}
