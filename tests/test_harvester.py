@@ -40,6 +40,16 @@ class HarvesterContracts(unittest.TestCase):
             "https://api.github.com/repos/owner/repo/git/blobs/old-sha"
         )
 
+    def test_blob_text_rejects_invalid_utf8_and_nul_bytes(self):
+        harvester = Harvester.__new__(Harvester)
+        for payload in (b"\\xff", b"heading\\x00body"):
+            harvester._api = Mock(return_value={
+                "encoding": "base64",
+                "content": base64.b64encode(payload).decode("ascii"),
+            })
+            with self.assertRaisesRegex(ValueError, "non-text source blob"):
+                harvester._blob_text("owner/repo", "blob-sha")
+
     def test_removed_source_is_archived_and_removed_from_state(self):
         with tempfile.TemporaryDirectory() as tmp:
             harvester = Harvester.__new__(Harvester)
