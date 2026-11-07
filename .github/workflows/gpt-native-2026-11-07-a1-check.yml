@@ -1,0 +1,36 @@
+name: GPT Native 2026-11-07 zero-entropy-lab targeted verification
+on:
+  push:
+    branches:
+      - gpt-native/2026-11-07-a1-reliability-observe
+permissions:
+  contents: read
+jobs:
+  verify-native-record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: gpt-native/2026-11-07-a1-reliability-observe
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Targeted source and document contracts
+        run: |
+          set -euo pipefail
+          git rev-parse HEAD
+          python3 --version
+          python3 aegis-cortex/check.py aegis-cortex/2026-11-07-A1-reliability-observe.md
+      - name: Check canonical identity and bounded outputs
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('aegis-cortex/2026-11-07-A1-reliability-observe.md')
+          s=p.read_text(); assert 'External Risk:' in s and 'Local Incident Evidence:' in s
+          print('A1_CANONICAL_RECORD_VERIFIED',p)
+          PY
+      - name: No run-time write to repository tree
+        run: |
+          set -euo pipefail
+          test -z "$(git status --porcelain)"
