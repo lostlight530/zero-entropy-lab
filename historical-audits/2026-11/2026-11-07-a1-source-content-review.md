@@ -12,10 +12,10 @@
 - No runtime, external publisher re-execution, host effect, independent CI or numeric line-gate certification is asserted
 
 ## Complete scoped current-main object inventory
-- Scoped native + dated maintenance paths: 34
+- Scoped native + dated maintenance paths: 65
 - Exact blob match to predecessor matrix: 25; changed predecessor blobs: 1; predecessor-unmapped objects: 8
-- Object-level status is one of UNCHANGED_REUSE_PREVIOUS_REVIEW, SHA_DRIFT_REVIEW_REQUIRED, NEW_N_MINUS_1_INPUT or UNMAPPED_PRIOR_OBJECT
-- `UNCHANGED_REUSE_PREVIOUS_REVIEW` means the prior decision can be inherited *if* its scope remains valid; it is not a fresh full text review or independent verification
+- A1 object-level decisions use NO_FOLLOW_UP, APPEND_RELATION, BOUNDARY_UPDATE, UNKNOWN and NOT_DUE; explanations identify inherited review vs present source vs blocked execution
+- Same-blob NO_FOLLOW_UP inherits the predecessor A1 assessment; it is not fresh independent semantic review
 - Current rolling monthly owner after Nov7 is a temporal snapshot, not a Nov6 as-of observation
 
 | Exact scoped path | Current Git blob | A1 custody disposition | Previously covered blob |
@@ -55,6 +55,48 @@
 | `historical-audits/2026-11/2026-11-06-a2-month-relations.md` | `9d8ee6ffb1b0e07c38cfc9bcc194b00d27f4e678` | NO_FOLLOW_UP / PREDECESSOR_MAINTENANCE | — |
 | `historical-audits/2026-11/2026-11-06-original-a1a2-semantic-forward-reconciliation.md` | `318c41c77ac7e5b5a821b159ba8fcdb89302c679` | NO_FOLLOW_UP / PREDECESSOR_MAINTENANCE | — |
 
+| `AGI/workflows/backups/nexus-life-cycle/candidate-2026-11-06-bounded-evidence/nexus-life-cycle.yml` | `30bea759d044dc0c834fcd0dd155dcb311c0e61b` | UNKNOWN / INERT_SPECIAL_CANDIDATE_NO_APPLY | — |
+| `AGI/workflows/nexus-life-cycle/candidate-2026-11-06-bounded-evidence/MANIFEST.json` | `2d0a0c6489ae11a3cca463dd62ad9cf0ae0534f0` | UNKNOWN / INERT_SPECIAL_CANDIDATE_NO_APPLY | — |
+| `AGI/workflows/nexus-life-cycle/candidate-2026-11-06-bounded-evidence/README.md` | `de97a3acacb2d3374802e8069918d880ed86c6a5` | UNKNOWN / INERT_SPECIAL_CANDIDATE_NO_APPLY | — |
+| `ballast/corrections/2026-11-05-handoff-case-trace-binding-postmerge.md` | `543460bd62901c4b3c71bf7d0ef68879d37cfbde` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `543460bd62901c4b3c71bf7d0ef68879d37cfbde` |
+| `ballast/corrections/2026-11-05-handoff-query-coverage-postmerge.md` | `33c4b027eaff933ed1bd6a70df53c3d7b0b05f44` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `33c4b027eaff933ed1bd6a70df53c3d7b0b05f44` |
+| `ballast/evidence/2026-11-01-dynamodb-token-decisions.json` | `dd13869482d430e02404a9dd28e06c8510cf46d3` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `dd13869482d430e02404a9dd28e06c8510cf46d3` |
+| `ballast/evidence/2026-11-01-dynamodb-token-scenarios.json` | `14917f9b9b39f625bad7fe94da4ee9cb1a351fea` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `14917f9b9b39f625bad7fe94da4ee9cb1a351fea` |
+| `ballast/evidence/2026-11-01-dynamodb-token-traces.json` | `f12c97d97380aa06e2bba26cecf45bfa1b08e637` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `f12c97d97380aa06e2bba26cecf45bfa1b08e637` |
+| `ballast/evidence/2026-11-01-dynamodb-token-verification.json` | `e9bce805418668f2bac92f374c42fddd20359e77` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `e9bce805418668f2bac92f374c42fddd20359e77` |
+| `ballast/evidence/2026-11-02-endpoint-drain-decisions.json` | `19b5538acd8ef2f30c2b9c2b7eb22169248fd838` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `19b5538acd8ef2f30c2b9c2b7eb22169248fd838` |
+| `ballast/evidence/2026-11-02-endpoint-drain-scenarios.json` | `8f1806f11f17f9f326a636cd876db61c5b46cb59` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `8f1806f11f17f9f326a636cd876db61c5b46cb59` |
+| `ballast/evidence/2026-11-02-endpoint-drain-traces.json` | `5a7e0cbbc8bf5be1d127c48b34b8201bb76525b4` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `5a7e0cbbc8bf5be1d127c48b34b8201bb76525b4` |
+| `ballast/evidence/2026-11-02-endpoint-drain-verification.json` | `c4e0d6818a7dec336081b2c896a60ce448aa7923` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `c4e0d6818a7dec336081b2c896a60ce448aa7923` |
+| `ballast/evidence/2026-11-03-postgres-slot-decisions.json` | `3e66bbf86cdcfe17c168c824738238ed689e10b4` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `3e66bbf86cdcfe17c168c824738238ed689e10b4` |
+| `ballast/evidence/2026-11-03-postgres-slot-scenarios.json` | `11df2f6395a51c882fe547fa779160fbf8209477` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `11df2f6395a51c882fe547fa779160fbf8209477` |
+| `ballast/evidence/2026-11-03-postgres-slot-traces.json` | `e63e7c20e5512af42f2ce9bd69e6c3cf0479f2ae` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `e63e7c20e5512af42f2ce9bd69e6c3cf0479f2ae` |
+| `ballast/evidence/2026-11-03-postgres-slot-verification.json` | `16e002e8ab05154ed934c73b7b5c258507508dbc` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `16e002e8ab05154ed934c73b7b5c258507508dbc` |
+| `ballast/evidence/2026-11-04-permission-history-cases.json` | `a8626d1381cae518c13004290b39428824deed68` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `a8626d1381cae518c13004290b39428824deed68` |
+| `ballast/evidence/2026-11-04-permission-history-decisions.json` | `bc7c8d1da7dac16552aff200d6d3ddcf8823f06d` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `bc7c8d1da7dac16552aff200d6d3ddcf8823f06d` |
+| `ballast/evidence/2026-11-04-permission-history-review.json` | `c9e7f21992ab3c6e4a3515c2e7e2c54d354326cd` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `c9e7f21992ab3c6e4a3515c2e7e2c54d354326cd` |
+| `ballast/evidence/2026-11-04-permission-history-traces.json` | `a9f5792ceab4f257700d65d78206c8fbfa8ae309` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `a9f5792ceab4f257700d65d78206c8fbfa8ae309` |
+| `ballast/evidence/2026-11-05-handoff-case-binding-postmerge-review.json` | `dac09616c9f8376f65a976296982e2ffbce346f8` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `dac09616c9f8376f65a976296982e2ffbce346f8` |
+| `ballast/evidence/2026-11-05-handoff-cases.json` | `a0d77aca27c871884b1d6b1c5d75bf15d93d9310` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `a0d77aca27c871884b1d6b1c5d75bf15d93d9310` |
+| `ballast/evidence/2026-11-05-handoff-decisions.json` | `78c7f85b19b8b34cafe576e71cfcb106b858afa8` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `78c7f85b19b8b34cafe576e71cfcb106b858afa8` |
+| `ballast/evidence/2026-11-05-handoff-query-coverage-postmerge.json` | `e38d34ce52582aae0f9af1458cae7d31216dcd01` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `e38d34ce52582aae0f9af1458cae7d31216dcd01` |
+| `ballast/evidence/2026-11-05-handoff-run.json` | `6faa56a33d74fa0b662df0e3090dafdf63709b6a` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `6faa56a33d74fa0b662df0e3090dafdf63709b6a` |
+| `ballast/evidence/2026-11-05-handoff-traces.json` | `e5044354776e2673746dce2b68d0da7e390a2c76` | NO_FOLLOW_UP / EXACT_PRIOR_A1_BLOB_RETAINED | `e5044354776e2673746dce2b68d0da7e390a2c76` |
+| `ballast/evidence/2026-11-06-temporal-cases.json` | `0df5cdca9198b8433b2a78035d4b05e3f2462b43` | APPEND_RELATION / MAINTAINER_RECONSTRUCTION_INPUT | — |
+| `ballast/evidence/2026-11-06-temporal-decisions.json` | `0912b4b7be8f13306e617d92a560e1dbd8bf2c3e` | APPEND_RELATION / MAINTAINER_RECONSTRUCTION_INPUT | — |
+| `ballast/evidence/2026-11-06-temporal-review.json` | `9e252feefcdbf38d92605a651c76665c17d8b872` | APPEND_RELATION / MAINTAINER_RECONSTRUCTION_INPUT | — |
+| `ballast/evidence/2026-11-06-temporal-traces.json` | `1d9750bdc2c24d0ff63a2699534b6f45e90fad5f` | APPEND_RELATION / MAINTAINER_RECONSTRUCTION_INPUT | — |
+
+## Ballast inherited evidence, fresh Nov6 reconstruction and NEXUS Special boundary
+- Fixed coverage omission: 24 Ballast Nov1–5 evidence/correction objects that were already in the previous merged A1 and remain byte-identical on main are now individually restored to the denominator; they are NOT reinterpreted as new independent studies
+- Explicit Nov6 evidence quartet (`temporal-cases`, `temporal-decisions`, `temporal-traces`, `temporal-review`) belongs to the Nov6 cutoff and is distinct from the 10 authored cloud-V8 Daily trials
+- `temporal-review.json` states `kind=MAINTAINER_RECONSTRUCTION`, `original10TrialSource=NOT_PERSISTED`, 44 scenarios, 44 traces, 305 primitive events, 88 decisions, and 39 weak/reference disagreements; these values are reported output, not a rerun in this A1
+- `temporal-review.json` states `nativeNodeCLI=NOT_EXECUTED`, `fullPythonChecker=NOT_EXECUTED` and `externalIssuerTSAEffectSink=NOT_EXECUTED`; its `PASS_WITH_LIMITS` cannot be generalized to production authorization or effect durability
+- The 44-case maintainer reconstruction and original ten synthetic Daily trials have distinct producer/harness/identity and cannot be silently merged into one 54-trial validated experiment
+- Ballast evidence is derived from synthetic issuer, grant ledger and effect journal; a `reference=COMPLETE` result is not an external issuer or sink receipt
+- The NEXUS Nov6 candidate manifest names 236 current snapshots, 14 oversized and 2 binary; it is a source-level manifest with migration `NOT_EXECUTED_REQUIRES_MERGED_AUTHORIZED_APPLY`
+- NEXUS `AGI` backup YAML is inert, `workflowhub_registered=false`, `external_update_authorized=false`; no active apply, authority change or WorkflowHub #2334 registration is inferred
+
 ## New cutoff source-specific decisions and falsifiers
 - **01 / Aegis Nov6 H1:** `aegis-cortex/2026-11-06-A1-reliability-observe.md` records upstream in-memory event aliasing and SQLite busy timeout as external risks, not Zero incidents
 - **02 / Memory ownership:** The ADK code under default event deep-copy and explicit light-copy modes has different object alias guarantees; generic 'memory isolated' would be false
@@ -91,3 +133,7 @@
 - NO_FOLLOW_UP on an identical predecessor blob **inherits** the preceding 2026-11-06 A1 review rather than claiming an individual re-read; APPEND_RELATION is recorded in this new report only, not in the historical native owning file
 - A BOUNDARY_UPDATE on a rolling owner is a temporal interpretation change in this audit, not permission to rewrite the native monthly owner
 - UNKNOWN retains a true coverage/semantic quality gap; no false full-content review or strict >=100 acceptance is inferred
+
+## Coverage correction ledger — 2026-11-07
+- Additional valid paths captured: 31; original A1 branch content updated before merge, not a successor and not a change to previously merged A1 source
+- This corrects the coverage denominator only; each added row remains non-substantive for strict >=100 newly researched line acceptance
