@@ -11,7 +11,15 @@ Logical Date: 2026-11-07
 Logical Timezone: Asia/Shanghai
 Agent: GPT-6 / GPT_NATIVE / NOT_JULES_REPLAY
 Producer Identity: HUMAN_REQUESTED_GPT_NATIVE
-Record Provenance: FORWARD_NATIVE_ORIENTATION
+Record Provenance: HUMAN_AUTHORIZED_SUBSTITUTE
+Evidence Class: EXTERNAL_RISK_CLASS / SOURCE_CODE_VERIFICATION
+Source Identity: google/adk-python@10711d0532373f526a4438c8c0bcb93c4e81419c + google/adk-python@ba142cf8e91b045aa0b435f71dbd7c3e686efa45
+Source Authority For Claim: FIRST_PARTY_SOURCE_AND_TEST_DIFF / NO_LOCAL_DEFENSE_PROOF
+Independent Verification: SOURCE_PATCHES_REOPENED / AUTHOR_TESTS_NOT_EXECUTED
+Original Execution Status: GPT_NATIVE_BOUNDED_SOURCE_ORIENTATION
+Current Path Status: NEW_DRAFT_PROPOSAL_NOT_MERGED
+Local Applicability: UNKNOWN / NO_HOST_KERNEL_AUDIT
+Remaining Uncertainty: LOCAL_INCIDENT_AND_DEPLOYMENT_UNVERIFIED
 Base Main SHA: 1606588cf1481ec86aa8c370ffc73c3e28c1b872
 Run Identity: zero-entropy-lab/aegis/A2/2026-11-07/GPT_NATIVE/1606588cf1481ec86aa8c370ffc73c3e28c1b872/first-party-source-orientation
 Upstream A1: aegis-cortex/2026-11-07-A1-reliability-observe.md
