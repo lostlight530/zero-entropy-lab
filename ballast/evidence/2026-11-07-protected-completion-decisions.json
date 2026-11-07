@@ -1,0 +1,502 @@
+[
+  {
+    "id": "baseline",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "baseline",
+    "path": "reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "permission_revoked",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "permission_revoked",
+    "path": "reference",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "unknown_prior",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "unknown_prior",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "miss_conflict",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "miss_conflict",
+    "path": "reference",
+    "decision": "EVIDENCE_CONFLICT"
+  },
+  {
+    "id": "duplicate",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "extra",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "extra",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "guard_lost",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_lost",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "historical_denied",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "historical_denied",
+    "path": "reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "toctou",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "toctou",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "missing_B",
+    "path": "weak_count",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "missing_B",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "duplicate_A_same_count",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_A_same_count",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "wrong_receipt_task",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_receipt_task",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "wrong_receipt_run",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_receipt_run",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "wrong_receipt_attempt",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_receipt_attempt",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "wrong_receipt_target",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_receipt_target",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "wrong_receipt_effect",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_receipt_effect",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "wrong_receipt_time",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_receipt_time",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "wrong_receipt_status",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_receipt_status",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "wrong_query_task",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_query_task",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "wrong_query_attempt",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_query_attempt",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "uncovered_attempts",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "uncovered_attempts",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "wrong_query_target",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_query_target",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "wrong_query_members",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_query_members",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "uncovered_watermark",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "uncovered_watermark",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "uncovered_last_end",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "uncovered_last_end",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "future_watermark",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "future_watermark",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "retention_expired",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "retention_expired",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "lifecycle_pruned",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "lifecycle_pruned",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "cache_not_authority",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "cache_not_authority",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "nonboolean_exact",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "nonboolean_exact",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "uncovered_miss",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "uncovered_miss",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "wrong_grant_attempt",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_grant_attempt",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "wrong_grant_action",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "wrong_grant_action",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "grant_expired",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_expired",
+    "path": "reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "grant_not_yet_valid",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_not_yet_valid",
+    "path": "reference",
+    "decision": "BLOCKED"
+  },
+  {
+    "id": "grant_wrong_target",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_wrong_target",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "grant_missing_issuer",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_missing_issuer",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "grant_type_coercion",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "grant_type_coercion",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "target_recreated",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "target_recreated",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "current_member_replaced",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "current_member_replaced",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "current_extra_state",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "current_extra_state",
+    "path": "reference",
+    "decision": "RECONCILE"
+  },
+  {
+    "id": "membership_revision_drift",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "membership_revision_drift",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "guard_revision_drift",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "guard_revision_drift",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "current_not_verified_after_effect",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "current_not_verified_after_effect",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "duplicate_required_members",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "duplicate_required_members",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "query_timed_string",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "query_timed_string",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "nonboolean_atomic",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "nonboolean_atomic",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "nonboolean_permission",
+    "path": "weak_count",
+    "decision": "COMPLETE"
+  },
+  {
+    "id": "nonboolean_permission",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "no_receipts_unknown",
+    "path": "weak_count",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "no_receipts_unknown",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "covered_miss_no_receipts",
+    "path": "weak_count",
+    "decision": "STOP_UNKNOWN"
+  },
+  {
+    "id": "covered_miss_no_receipts",
+    "path": "reference",
+    "decision": "STOP_UNKNOWN"
+  }
+]

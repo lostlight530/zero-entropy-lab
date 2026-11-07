@@ -1,0 +1,141 @@
+{
+  "status": "PASS_WITH_LIMITS",
+  "logicalDate": "2026-11-07 Asia/Shanghai",
+  "executionUTC": "2026-11-07T05:37:05.639Z",
+  "source": "new maintainer reconstruction from original nine-row Daily; not original unpersisted V8 code",
+  "originalResearchHead": "d8f8e1f4b9fe3d2be51027279bfd10774a6d0001",
+  "scenarios": 50,
+  "primitiveEvents": 397,
+  "decisions": 100,
+  "weakReferenceDisagreements": 46,
+  "referenceHistogram": {
+    "COMPLETE": 2,
+    "STOP_UNKNOWN": 30,
+    "EVIDENCE_CONFLICT": 1,
+    "RECONCILE": 14,
+    "BLOCKED": 3
+  },
+  "verified": {
+    "pass": true,
+    "errors": [],
+    "scenarios": 50,
+    "traces": 50,
+    "events": 397,
+    "decisions": 100,
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    }
+  },
+  "original9ReferenceMismatches": [],
+  "negativeUnsafeAccepts": [],
+  "positiveControlFailures": [],
+  "verifierTamper": [
+    {
+      "id": "forged_complete",
+      "rejected": true,
+      "error": "incorrect toctou reference wanted STOP_UNKNOWN"
+    },
+    {
+      "id": "missing_decision",
+      "rejected": true,
+      "error": "container cardinality"
+    },
+    {
+      "id": "duplicate_decision",
+      "rejected": true,
+      "error": "container cardinality"
+    },
+    {
+      "id": "unexpected_decision_path",
+      "rejected": true,
+      "error": "container cardinality"
+    },
+    {
+      "id": "orphan_decision",
+      "rejected": true,
+      "error": "container cardinality"
+    },
+    {
+      "id": "duplicate_case",
+      "rejected": true,
+      "error": "container cardinality"
+    },
+    {
+      "id": "duplicate_trace",
+      "rejected": true,
+      "error": "container cardinality"
+    },
+    {
+      "id": "missing_trace",
+      "rejected": true,
+      "error": "container cardinality"
+    },
+    {
+      "id": "case_auth_changed",
+      "rejected": true,
+      "error": "case/trace mismatch baseline"
+    },
+    {
+      "id": "trace_auth_changed",
+      "rejected": true,
+      "error": "case/trace mismatch baseline"
+    },
+    {
+      "id": "case_query_scope_changed",
+      "rejected": true,
+      "error": "case/trace mismatch baseline"
+    },
+    {
+      "id": "trace_query_scope_changed",
+      "rejected": true,
+      "error": "case/trace mismatch baseline"
+    },
+    {
+      "id": "trace_guard_changed",
+      "rejected": true,
+      "error": "case/trace mismatch baseline"
+    },
+    {
+      "id": "duplicate_receipt_primitive",
+      "rejected": true,
+      "error": "case/trace mismatch baseline"
+    },
+    {
+      "id": "unexpected_event",
+      "rejected": true,
+      "error": "extra event baseline"
+    },
+    {
+      "id": "missing_permission_event",
+      "rejected": true,
+      "error": "event multiplicity baseline PERMISSION"
+    }
+  ],
+  "tamperRejected": 16,
+  "realEffects": 0,
+  "independence": {
+    "implementation": "PARTIAL",
+    "dataSource": "NONE",
+    "semanticContract": "SHARED",
+    "authority": "NONE"
+  },
+  "nativeNodeCLI": "NOT_EXECUTED",
+  "fullPythonChecker": "NOT_EXECUTED",
+  "independentAuthority": "NOT_EXECUTED",
+  "credit": {
+    "newDaily": 0,
+    "newResearchWindow": 0,
+    "newCase": 0,
+    "newMethod": 0,
+    "newNotes": 0,
+    "newAudit": 0,
+    "newFindings": 0
+  },
+  "producerBlobSHA": "55215423eac9865bc56f9577d0ccd87c29f1001e",
+  "verifierBlobSHA": "f5238ef3a1805f0009f419bad4323b0c914f1668",
+  "runnerBlobSHA": "ea750da972df8f30e78c9375add1461a8eb6838f",
+  "entry": "V8 loaded exact GitHub JS source: cases() => produce() => verify() + runReview() with 16 mutations"
+}

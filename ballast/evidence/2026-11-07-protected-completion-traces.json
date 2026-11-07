@@ -1,0 +1,6161 @@
+[
+  {
+    "id": "baseline",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "permission_revoked",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": false
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "unknown_prior",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "unknown",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "miss_conflict",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "miss",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "duplicate",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "extra",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "C",
+          "effect": "commit-C",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "guard_lost",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": false,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "historical_denied",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": false,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "toctou",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": false
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "missing_B",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "duplicate_A_same_count",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_receipt_task",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "X",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_receipt_run",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "X",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_receipt_attempt",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P0",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_receipt_target",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid8",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_receipt_effect",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-C",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_receipt_time",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 13,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_receipt_status",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "ACKED"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_query_task",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "X",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_query_attempt",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P0",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "uncovered_attempts",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_query_target",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid8",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_query_members",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "C"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "uncovered_watermark",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 10,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "uncovered_last_end",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 11,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "future_watermark",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 99,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "retention_expired",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 21,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "lifecycle_pruned",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "PRUNED"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cache_not_authority",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "cache",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "nonboolean_exact",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": "true",
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "uncovered_miss",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "cache",
+          "state": "miss",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_grant_attempt",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P0",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong_grant_action",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "different",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "grant_expired",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 11
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "grant_not_yet_valid",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 13,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "grant_wrong_target",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid8",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "grant_missing_issuer",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "grant_type_coercion",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": "true",
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "target_recreated",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid8",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "current_member_replaced",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "C"
+          ],
+          "done": [
+            "A",
+            "C"
+          ],
+          "states": {
+            "A": "DONE",
+            "C": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "current_extra_state",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE",
+            "C": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "membership_revision_drift",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 8,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "guard_revision_drift",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 8,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "current_not_verified_after_effect",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 10,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "duplicate_required_members",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "A"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "query_timed_string",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": "15",
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "nonboolean_atomic",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": "true"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "nonboolean_permission",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": "false"
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "hit",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "A",
+          "effect": "commit-A",
+          "at": 12,
+          "state": "DONE"
+        }
+      },
+      {
+        "kind": "RECEIPT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "target": "uid7",
+          "member": "B",
+          "effect": "commit-B",
+          "at": 12,
+          "state": "DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "no_receipts_unknown",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "unknown",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "covered_miss_no_receipts",
+    "events": [
+      {
+        "kind": "INTENT",
+        "data": {
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      {
+        "kind": "PERMISSION",
+        "data": {
+          "now": true
+        }
+      },
+      {
+        "kind": "EFFECT_TIME",
+        "data": {
+          "at": 12
+        }
+      },
+      {
+        "kind": "GRANT",
+        "data": {
+          "issuer": "synthetic-grant-ledger",
+          "enabled": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "from": 1,
+          "to": 20
+        }
+      },
+      {
+        "kind": "QUERY",
+        "data": {
+          "authority": "synthetic-journal",
+          "state": "miss",
+          "exact": true,
+          "task": "T7",
+          "run": "R7",
+          "attempt": "P1",
+          "action": "commit-A+B",
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "attempts": [
+            "P1"
+          ],
+          "watermark": 20,
+          "lastEnd": 15,
+          "at": 22,
+          "retentionUntil": 40,
+          "lifecycle": "ACTIVE"
+        }
+      },
+      {
+        "kind": "CURRENT",
+        "data": {
+          "target": "uid7",
+          "members": [
+            "A",
+            "B"
+          ],
+          "done": [
+            "A",
+            "B"
+          ],
+          "states": {
+            "A": "DONE",
+            "B": "DONE"
+          },
+          "revision": 7,
+          "guardRevision": 7,
+          "membershipRevision": 7,
+          "verifiedAt": 24,
+          "protected": true,
+          "atomic": true
+        }
+      }
+    ]
+  }
+]
