@@ -278,3 +278,39 @@
 - Added distinct source-scoped reasoning lines: 21 files × five review dimensions = 105. Existing SHA custody matrix and prior original content are excluded from the 105-line count
 - Material claims remain conditional on exact upstream original source and synthetic-vs-real distinction; no broad local failure claims promoted
 - Original GitHub additions, PR-head CI/checks and per-line substance must be re-queried before declaring original strict gate PASS
+
+
+## Cross-date Aegis/Ballast relationship audit — 25 substantive source comparisons
+- These are distinct from machine inventory and original producer experiments. Relation-level reasoning is not counted as source independence or newly executed runtime evidence
+
+1. Nov01 forked transcript branch omission and Nov07 waiting-node replay are both history-sensitive but operate at different layers: reader reconstruction versus re-executing a node with consumed input
+2. Nov02 superseded WAITING and Nov07 explicit rerun_on_resume are not one universal rule; a decision must bind active/latest run identity and trigger provenance
+3. Nov03 ping-only stream and Nov07 MCP terminated session both expose transport liveness ambiguity, but one may leave a connection open while the other reports explicit server rejection
+4. Nov04 approval-tool demo and Nov07 retry-after-lost-reply both require effect-side authority; prompt-compliant messages or a retry allowance cannot establish historical committed effect
+5. Nov05 shared user:/app: lost update and Nov06 mutable event-history aliasing are separate state ownership defects: concurrency between sessions versus references escaping a copy boundary
+6. Nov05 Redis WATCH protection and Nov06 SQLite lock timeout cannot be counted as equivalent database remedies because serialization mechanisms and process scopes differ
+7. Nov01 Aegis source commit history omission cannot be counted as a Ballast effect identity proof, since missing transcript entries may coexist with real external committed effects
+8. Nov02 Aegis repeated waiting-state mutation is a source reporter observation and Ballast Nov05 old-worker generation conflict is an authored synthetic model; neither independently replicates the other
+9. Nov03 Aegis keepalive content-idle issue and Ballast Nov02 EndpointSlice ready=false proxy expose false liveness in unrelated domains; similar decision shape is not identical empirical evidence
+10. Nov04 Aegis approval prompt mismatch and Ballast Nov04 historical grant revocation demonstrate why CURRENT_PERMISSION and HISTORICAL_EFFECT_AUTHORITY are distinct temporal axes
+11. Nov05 Aegis scoped-state concurrency and Ballast Nov03 CDC slot replay both need write-side effect logs, but the physical stores and authoritative receipts are completely different
+12. Nov06 Aegis timeout boundary and Ballast Nov06 temporal uncertainty both preserve unknown after bounded waits, but one measures lock waiting while the other models overlapping clock intervals
+13. Nov07 Aegis conditional MCP retry and Ballast Nov01 DynamoDB token expiry both permit duplicate side-effect counterexamples, without showing a direct shared implementation
+14. Ballast Nov01 reviewed 40 scenarios after source-and-verifier mutation while Ballast Nov03 reviewed 47 cases; neither the scenario totals nor the verifier decision totals are independent local incident counts
+15. Ballast Nov02 correction from nil serving interpreted false to true changed the authored reference output; previous producer verdict remains historical even if current file shows the repaired semantics
+16. Ballast Nov03 and Nov05 initially had producer/verifier agreement that missed semantic defect classes; same-shared-contract agreement must not be called authority-independent proof
+17. Ballast Nov04 synthetic currentPermission=false positive historical authorization control and Nov07 matching permitted-historical-effect control prohibit retroactive revocation assumptions
+18. Ballast Nov05 delegated owner-generation mismatch and Nov07 target-incarnation UID mismatch both show that simple stable task IDs do not protect against stale worker/target identities
+19. Ballast Nov06 original 10-case V8 source was not fully persisted; its later 44-case reconstruction cannot upgrade original event-lineage integrity
+20. Ballast Nov07 original 9 scenarios and later 50 reconstructed authored scenarios remain one logical Native research day; additional cases do not create a new Day or external authority
+21. Across Nov01–07 Ballast, reference outputs rely on authored authority and sink predicates; source-level case count must never be reported as deployed system accuracy
+22. GitHub-native research and same-day independent review must have distinct run IDs: a checker re-run or a maintainer probe is not the original producer execution
+23. Current Ballast November rolling owner may include Nov08 data, so as-of Nov07 source cutoff requires a historical main snapshot rather than present path text alone
+24. Zero CodeQL 504 download failures after native merges affect validation availability but do not themselves prove an Aegis external issue was reproduced locally
+25. Every source-specific retest here requires task, run, attempt, target incarnation, exact effect set and authority receipt; omitting one invalidates a broad complete-claim even if a synthetic reference reports COMPLETE
+
+## Original A1 PR quality gate candidate
+- Initial PR draft NOT_MET statement remains visible in its Git history; current source-specific review updates this still-open original PR only
+- New analytical content: 105 per-source judgments plus 25 cross-date comparisons = 130 bounded substantive reasoning lines; exclude source path headers, numeric SHA matrix, metadata and older inherited material
+- Reviewed exact Nov01–07 Aegis/Zero and Ballast source documents, but did not run original SDK, native Ballast Node CLI or protected sink
+- Pending final GitHub adds/CI check and document-level consistency review before original acceptance claim
