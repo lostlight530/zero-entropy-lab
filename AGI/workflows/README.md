@@ -55,18 +55,20 @@ The reviewed path history spans 2026-03-13 through 2026-08-31
    - First baseline formally recorded in the AGI workflow-history surface
    - Role: frozen reference to the mature bounded lifecycle
 
-## Forward candidate after the reviewed historical lineage
+## Accepted forward generation after the reviewed historical lineage
 
 - `nexus-life-cycle/candidate-2026-11-06-bounded-evidence`
   - Source candidate commit: `5b360ed531812107cdd8fc1d26c808dcb393a4b8`
   - Role: text-only source qualification, bounded pinned active snapshots, archive-before-replace migration and an explicit post-harvest evidence gate
-  - Status: `DRAFT_NOT_MAIN_NOT_REGISTERED`
+  - Status: `MAIN_ACCEPTED_APPLY_VERIFIED_NOT_REGISTERED`
   - The inert byte-identical backup is under `AGI/workflows/backups`
-  - This candidate is not appended to the historical main-lineage revision inventory until its source commit is accepted into main
+  - Implementation PR #812 is merged; authorized apply run 42251718309 completed successfully
+  - The generation is accepted into the forward main lineage without rewriting the frozen historical revision inventory
+  - WorkflowHub #2334 remains unchanged and this generation is not asserted as an external registry version
 
 ## Lineage
 
-`Initial NEXUS CORTEX 2026-03-13` -> operational hardening -> `verified lifecycle 2026-05-21` -> `restricted persistence 2026-06-07` -> `approved-document harvesting 2026-07-11` -> later Git evolution -> `deterministic guarded lifecycle 2026-08-31` -> `layered human receipt 2026-08-31` -> `AGI original baseline 2026-10-07`
+`Initial NEXUS CORTEX 2026-03-13` -> operational hardening -> `verified lifecycle 2026-05-21` -> `restricted persistence 2026-06-07` -> `approved-document harvesting 2026-07-11` -> later Git evolution -> `deterministic guarded lifecycle 2026-08-31` -> `layered human receipt 2026-08-31` -> `AGI original baseline 2026-10-07` -> `bounded active-source evidence 2026-11-06`
 
 The 2026-10-07 original AGI baseline and the 2026-08-31 receipt generation share the same workflow Git blob; the former is a later capture checkpoint, not a new YAML modification
 
