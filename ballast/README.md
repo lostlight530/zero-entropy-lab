@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-11-07 protected completion versus historical occurrence](records/2026-11-07.md)
+- 最新 Daily: [2026-11-08 orchestrator termination versus in-flight child-effect quiescence](records/2026-11-08.md)
 - 当前月度事实源: [2026-11](records/2026-11.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-11-01 至 2026-11-06](audits/2026-11-01--2026-11-06.md)
