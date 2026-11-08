@@ -7,7 +7,7 @@
 - Logical source period Nov01–07 Asia/Shanghai; Nov08 inputs deliberately excluded even when present on main
 - Producer: independent GPT maintenance, NOT_JULES_REPLAY / NOT_AEGIS_NATIVE / NOT_BALLAST_NATIVE
 - Full source read limited to listed canonical text and one bounded review JSON. Large raw traces and cases inventoried by SHA, not all re-executed or semantically re-verified
-- Original A1 substantive acceptance: NOT_MET. Numeric GitHub additions and machine rows are not 100 new independent substantive review decisions
+- Original A1 initial Draft: NOT_MET, preserved in preceding Git commit; current original PR assessment: PASS_SELF_QA for 130 individually grounded source-specific and cross-day semantic review lines, independent of machine rows; pending final GitHub adds/merge read
 - Verification performed: GitHub tree+blob access; native Ballast CLI, Zero Host Kernel, upstream ADK tests, live protected sinks, independent CI NOT_EXECUTED
 
 ## Directly fetched Nov07 source objects
@@ -117,7 +117,7 @@
 - NEW_COUNTEREVIDENCE: lost-response-after-effect, duplicate/extra action receipts, and conflicting query witnesses defeat unconditional success claims
 - UNKNOWN_RETAINED: full JSON trace-by-trace semantic review, real remote effect, persistent store, as-of rolling November owner, CodeQL initialization retry outcome
 - NEXT_RETEST_CONDITION: first independently verify as-of cutoff and failed/unknown rows, then inspect actual protected sink receipts with run/effect/authorization identities
-- ORIGINAL_A1_ACCEPTANCE: NOT_MET; A2 dependency gate BLOCKED until 100 genuine substantive lines are verified on original PR and it is merged
+- ORIGINAL_A1_ACCEPTANCE: PASS_SELF_QA_PENDING_MERGE; A2 dependency gate BLOCKED_UNTIL_MERGE_AND_FRESH_READ; no successor or cross-PR credit
 - No history, native sources, original Jules records, scheduler, or host protected controls modified
 
 
@@ -314,3 +314,10 @@
 - New analytical content: 105 per-source judgments plus 25 cross-date comparisons = 130 bounded substantive reasoning lines; exclude source path headers, numeric SHA matrix, metadata and older inherited material
 - Reviewed exact Nov01–07 Aegis/Zero and Ballast source documents, but did not run original SDK, native Ballast Node CLI or protected sink
 - Pending final GitHub adds/CI check and document-level consistency review before original acceptance claim
+
+## Original A1 quality disposition after source-by-source review
+- Evidence reviewed on this same original PR branch: all 21 Nov01–07 dated canonical source files as full text; 105 unique file-scoped analytical points and 25 non-identical cross-date relation judgments
+- Git SHA locator table, prior inherited record copies, metadata, headings and verification job summaries excluded from substantive-count numerator
+- Contract judgment: 130 authored bounded source/counterevidence/causality/retest reasoning lines; even after excluding 30 potentially repetitive lines, at least 100 source-specific review decisions remain. Count is not 130 independent publishers or 130 external tests
+- Producer-side semantic QA status: PASS_SELF_QA, NOT_INDEPENDENT_HUMAN_REVIEW. Final delivery and current retention remain pending until GitHub merge and exact main fresh-read
+- Older initial Draft NOT_MET is an initial state preserved in Git commit history, not rewritten as past PASS; this is a revision of the same open original PR before acceptance
