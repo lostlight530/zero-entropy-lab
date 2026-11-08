@@ -265,11 +265,21 @@ class Harvester:
     def _move_to_archive(source, destination):
         destination.parent.mkdir(parents=True, exist_ok=True)
         if destination.exists():
-            if source.read_bytes() != destination.read_bytes():
-                raise FileExistsError(f"archive collision: {destination}")
-            source.unlink()
-            return
+            source_bytes = source.read_bytes()
+            if source_bytes == destination.read_bytes():
+                source.unlink()
+                return destination
+            digest = hashlib.sha256(source_bytes).hexdigest()
+            destination = destination.with_name(
+                f"{destination.stem}__representation-{digest[:16]}{destination.suffix}"
+            )
+            if destination.exists():
+                if source_bytes != destination.read_bytes():
+                    raise FileExistsError(f"archive collision: {destination}")
+                source.unlink()
+                return destination
         os.replace(source, destination)
+        return destination
 
     def _api(self, url):
         headers = {"Accept": "application/vnd.github+json", "User-Agent": "Nexus-Document-Harvester/3"}
@@ -349,7 +359,7 @@ class Harvester:
             if stale == target:
                 continue
             destination = archive / stale.name
-            self._move_to_archive(stale, destination)
+            destination = self._move_to_archive(stale, destination)
             archived.append(destination.relative_to(self.inputs).as_posix())
         return archived
 

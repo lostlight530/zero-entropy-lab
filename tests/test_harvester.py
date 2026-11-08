@@ -105,7 +105,7 @@ class HarvesterContracts(unittest.TestCase):
                 harvester.state["repositories"]["owner/repo"]["documents"],
             )
 
-    def test_archive_collision_never_overwrites_different_content(self):
+    def test_archive_collision_preserves_both_representations_deterministically(self):
         with tempfile.TemporaryDirectory() as tmp:
             harvester = Harvester.__new__(Harvester)
             harvester.inputs = Path(tmp)
@@ -127,16 +127,37 @@ class HarvesterContracts(unittest.TestCase):
 
             with patch("harvester.dt.datetime") as clock:
                 clock.now.return_value.strftime.return_value = "2026/07"
-                with self.assertRaisesRegex(FileExistsError, "archive collision"):
-                    harvester._archive_stale(
-                        current / "README.md__new.md",
-                        "README.md",
-                        "test",
-                        "owner_repo",
-                    )
+                archived = harvester._archive_stale(
+                    current / "README.md__new.md",
+                    "README.md",
+                    "test",
+                    "owner_repo",
+                )
 
-            self.assertEqual(stale.read_text(encoding="utf-8"), "current")
+            digest = hashlib.sha256(b"current").hexdigest()[:16]
+            variant = archive.with_name(
+                f"{archive.stem}__representation-{digest}{archive.suffix}"
+            )
+            self.assertFalse(stale.exists())
             self.assertEqual(archive.read_text(encoding="utf-8"), "sealed")
+            self.assertEqual(variant.read_text(encoding="utf-8"), "current")
+            self.assertEqual(
+                archived,
+                [variant.relative_to(harvester.inputs).as_posix()],
+            )
+
+            stale.write_text("current", encoding="utf-8")
+            with patch("harvester.dt.datetime") as clock:
+                clock.now.return_value.strftime.return_value = "2026/07"
+                repeated = harvester._archive_stale(
+                    current / "README.md__new.md",
+                    "README.md",
+                    "test",
+                    "owner_repo",
+                )
+            self.assertFalse(stale.exists())
+            self.assertEqual(repeated, [variant.relative_to(harvester.inputs).as_posix()])
+            self.assertEqual(len(list(archive.parent.glob("README.md__same*.md"))), 2)
 
     def test_source_snapshot_uses_pinned_commit_tree_and_blob(self):
         with tempfile.TemporaryDirectory() as tmp:
