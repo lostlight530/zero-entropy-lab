@@ -24,12 +24,19 @@ The native `validate` and conditional `apply` jobs remain separate, and only the
 - Binary source paths observed in active state: `2`
 - Migration status at capture: `NOT_EXECUTED_REQUIRES_MERGED_AUTHORIZED_APPLY`
 - Existing archive content is never edited or re-ingested
-- The next authorized native apply must archive replaced current files first, update active state, verify provenance and content hashes, rebuild the active graph and pass the final write boundary
+- The authorized native apply was required to archive replaced current files first, update active state, verify provenance and content hashes, rebuild the active graph and pass the final write boundary
+
+## Post-acceptance outcome
+
+- Implementation PR [#812](https://github.com/lostlight530/zero-entropy-lab/pull/812) merged at `2026-11-06T16:21:43Z` as `7ee4f6214dda7f45c6e8d6792475a7de09243458`
+- Authorized native apply [run 42251718309](https://github.com/lostlight530/zero-entropy-lab/actions/runs/42251718309) completed successfully and produced commit `1470de9c3ee5155477899f579fa4f40c129660b5`
+- Migration status after apply: `EXECUTED_AND_VERIFIED`
+- WorkflowHub #2334 was not updated by this repository apply and remains outside the verified acceptance result
 
 ## Verification boundary
 
 The candidate workflow copy is inert under `AGI/**`
 
-Successful pull-request validation proves repository tests and read-only contracts for the candidate commit, not a production migration, external WorkflowHub publication or successful native apply
+Pull-request validation established the read-only candidate contract; the later authorized native apply is recorded separately above as production migration evidence
 
 WorkflowHub #2334 and all frozen historical generations remain unchanged
