@@ -63,6 +63,8 @@ External Risk: REACTIVE_INPUT_GUARDRAIL_VERDICT / RETRY_ADMISSION_RACE
 Source Evidence: one first-party upstream implementation and test change
 Local Incident: NO_LOCAL_EVIDENCE / NOT_CLAIMED
 Existing Defense: UNKNOWN / ZERO_HOST_NOT_INSPECTED_FOR_THIS_DEPENDENCY
+Local Incident Evidence: NONE_ATTESTED / EXTERNAL_RISK_ONLY
+Local Evidence: NO_LOCAL_EVIDENCE / NO_HOST_DEPENDENCY_VERIFICATION
 Measured Effectiveness: NOT_COMPUTED
 Validated External Outcome: NOT_EXECUTED
 Applicability: STACK_AND_VERSION_SPECIFIC / HOST_UNKNOWN
