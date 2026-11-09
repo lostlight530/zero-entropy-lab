@@ -2512,16 +2512,16 @@
           "tree_sha": "77ccecb9638817035346a9ae1f4bbebe90c6c1ae"
         },
         "docs/design/cuda_graphs_multimodal.md": {
-          "blob_sha": "2d9e7557983b737126c3682012931a888a4314e6",
-          "commit_sha": "cf5cea2da37d3dfed27d2e0aa3041c3e553c2d57",
-          "content_hash": "80019f63d8f7d22ede0f0460c9fbecdc0837113aae383f8587546e5374ae1ebd",
+          "blob_sha": "e9a1ce20163f22514582a3832099075e55aa07d5",
+          "commit_sha": "3b33a845c6733a50aafae933c10ac0be0f18be93",
+          "content_hash": "23a68dea5834142f18dc55d33b8e68d79bf204783d4bb2f4dd23757b9b9c1df1",
           "entity_id": "external_doc_vllm_project_vllm_docs_design_cuda_graphs_multimodal_md",
-          "observed_blob_sha": "2d9e7557983b737126c3682012931a888a4314e6",
-          "observed_commit_sha": "cf5cea2da37d3dfed27d2e0aa3041c3e553c2d57",
-          "observed_tree_sha": "77ccecb9638817035346a9ae1f4bbebe90c6c1ae",
-          "output": "current/serving-inference/vllm_project_vllm/docs__design__cuda_graphs_multimodal.md__2d9e7557983b__cf5cea2da37d.md",
-          "sha": "2d9e7557983b737126c3682012931a888a4314e6",
-          "tree_sha": "77ccecb9638817035346a9ae1f4bbebe90c6c1ae"
+          "observed_blob_sha": "e9a1ce20163f22514582a3832099075e55aa07d5",
+          "observed_commit_sha": "3b33a845c6733a50aafae933c10ac0be0f18be93",
+          "observed_tree_sha": "13a06383d12f20210d0a5f4d3ba78c53ff5294e5",
+          "output": "current/serving-inference/vllm_project_vllm/docs__design__cuda_graphs_multimodal.md__e9a1ce20163f__3b33a845c673.md",
+          "sha": "e9a1ce20163f22514582a3832099075e55aa07d5",
+          "tree_sha": "13a06383d12f20210d0a5f4d3ba78c53ff5294e5"
         },
         "docs/design/custom_op.md": {
           "blob_sha": "84faeaeff42eb05b8612f7a57ff3f151e5fdf6f4",
@@ -2980,7 +2980,7 @@
           "tree_sha": "cfeb3173928b2b51eb943c8f1dacbc9c3ebf57b4"
         }
       },
-      "last_checked_at": "2026-11-08T06:43:49.268796+00:00"
+      "last_checked_at": "2026-11-09T01:17:25.896403+00:00"
     },
     "volcengine/verl": {
       "documents": {
