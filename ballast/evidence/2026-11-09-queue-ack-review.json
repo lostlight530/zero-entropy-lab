@@ -1,0 +1,2515 @@
+{
+  "schema": "ballast-2026-11-09-maintainer-review-JS_ENGINE-synthetic",
+  "receipt": {
+    "status": "PASS_WITH_LIMITS",
+    "executionUTC": "2026-11-09T00:31:02.100Z",
+    "logicalDate": "2026-11-09 Asia/Shanghai",
+    "referenceBaseline": "13ba3547450c7a87df29b39facf15d2a287967b4",
+    "originalResearch": "10 scenarios, 30 decisions, sha256 4af04c2212d9292d2175e040f13f48353398dcd0b8efa5c1de24289f3da43ec3 unchanged",
+    "reviewScenarios": 32,
+    "reviewDecisions": 96,
+    "weakReferenceDisagreements": 30,
+    "modelVerifierAgreements": 32,
+    "referenceHistogram": {
+      "MODEL_COMPLETE": 3,
+      "STOP_UNKNOWN": 22,
+      "STOP_EFFECT_SET_MISMATCH": 4,
+      "EVIDENCE_CONFLICT": 1,
+      "UNAUTHORIZED_OCCURRENCE": 2
+    },
+    "positiveControls": 3,
+    "positiveFailures": [],
+    "unsafeNegativeAccepts": [],
+    "implementationDisagreements": [],
+    "tamperProbes": 8,
+    "tamperRejected": 8,
+    "tamperFailed": [],
+    "realQueueCalls": 0,
+    "realEffectSinkCalls": 0,
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    },
+    "nodeCLI": "NOT_EXECUTED",
+    "fullPythonChecker": "NOT_EXECUTED",
+    "liveQueues": "NOT_EXECUTED",
+    "independentAuthority": "NOT_EXECUTED",
+    "credit": {
+      "newDaily": 0,
+      "newResearchWindow": 0,
+      "newCases": 0,
+      "newMethod": 0,
+      "newNotes": 0,
+      "newAudit": 0,
+      "newDurableFinding": 0
+    }
+  },
+  "rows": [
+    {
+      "id": "baseline",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "MODEL_COMPLETE",
+      "verifier": "MODEL_COMPLETE"
+    },
+    {
+      "id": "ack_lost_after_effect",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": false
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "RETRY",
+      "reference": "MODEL_COMPLETE",
+      "verifier": "MODEL_COMPLETE"
+    },
+    {
+      "id": "permission_revoked_after_authorized_effect",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "MODEL_COMPLETE",
+      "verifier": "MODEL_COMPLETE"
+    },
+    {
+      "id": "ack_only_no_receipts",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "missing_B",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "duplicate_A_plus_B",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_EFFECT_SET_MISMATCH",
+      "verifier": "STOP_EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "equal_count_A_plus_C",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "C",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_EFFECT_SET_MISMATCH",
+      "verifier": "STOP_EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "extra_member_C",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "C",
+            "at": 48,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_EFFECT_SET_MISMATCH",
+      "verifier": "STOP_EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "covered_negative_conflicts_positive",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [
+          {
+            "effect": "A",
+            "status": "MISS",
+            "ok": true,
+            "exact": true,
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "at": 90,
+            "watermark": 90,
+            "retentionFrom": 0,
+            "retentionUntil": 100
+          }
+        ],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "EVIDENCE_CONFLICT",
+      "verifier": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "uncovered_negative_claim_conflict",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [
+          {
+            "ok": true,
+            "exact": false,
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "at": 90,
+            "watermark": 90,
+            "retentionFrom": 0,
+            "retentionUntil": 100,
+            "effect": "A",
+            "status": "MISS"
+          }
+        ],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "effect_time_grant_invalid",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 30,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "UNAUTHORIZED_OCCURRENCE",
+      "verifier": "UNAUTHORIZED_OCCURRENCE"
+    },
+    {
+      "id": "grant_missing_provenance",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": false
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "grant_wrong_issuer",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "someone-else",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "UNAUTHORIZED_OCCURRENCE",
+      "verifier": "UNAUTHORIZED_OCCURRENCE"
+    },
+    {
+      "id": "query_outage",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": false,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_identity_unscoped",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": false,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_wrong_attempt",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-2",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_before_commit",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 70,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "watermark_before_commit",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 70,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "retention_start_after_attempt",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 30,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "retention_end_before_query",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 65
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_wrong_target_incarnation",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-recreated",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_wrong_run",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-other",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_wrong_message",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "message-other",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_duplicate_at_different_time",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 47,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_EFFECT_SET_MISMATCH",
+      "verifier": "STOP_EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "membership_revision_drift",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 6,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "target_recreated_at_commit",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-new",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "unguarded_completion",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": false,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "predicate_false",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": false,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "commit_before_effect_B",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 42
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "malformed_effect_identity",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "A"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "malformed_permission_type",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "from": 20,
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": "true",
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "missing_grant_timestamp",
+      "facts": {
+        "intent": {
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "effects": [
+            "A",
+            "B"
+          ],
+          "revision": 5,
+          "attemptStarted": 10
+        },
+        "ack": {
+          "success": true
+        },
+        "receipts": [
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "A",
+            "at": 40,
+            "authority": "issuer-09"
+          },
+          {
+            "task": "task-09",
+            "run": "run-09",
+            "attempt": "attempt-1",
+            "target": "uid-09",
+            "message": "msg-09",
+            "effect": "B",
+            "at": 45,
+            "authority": "issuer-09"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-09",
+          "task": "task-09",
+          "until": 60,
+          "proven": true
+        },
+        "query": {
+          "ok": true,
+          "exact": true,
+          "task": "task-09",
+          "run": "run-09",
+          "attempt": "attempt-1",
+          "target": "uid-09",
+          "message": "msg-09",
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negative": [],
+        "currentPermission": false,
+        "completion": {
+          "predicate": true,
+          "guarded": true,
+          "target": "uid-09",
+          "revision": 5,
+          "commitAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    }
+  ],
+  "tamper": [
+    {
+      "id": "forged_verdict",
+      "rejected": true
+    },
+    {
+      "id": "missing_case",
+      "rejected": true
+    },
+    {
+      "id": "duplicated_case",
+      "rejected": true
+    },
+    {
+      "id": "mutated_auth_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "mutated_receipt_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "mutated_target_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "mutated_query_watermark_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "mutated_extra_member_without_decision",
+      "rejected": true
+    }
+  ]
+}

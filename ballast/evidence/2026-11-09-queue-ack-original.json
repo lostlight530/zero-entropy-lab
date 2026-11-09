@@ -1,0 +1,296 @@
+{
+  "schema": "ballast-2026-11-09-bounded-synthetic",
+  "cases": [
+    {
+      "facts": {
+        "scenario": "baseline",
+        "message_id": "m1",
+        "task_id": "t1",
+        "attempt_id": "a1",
+        "target_uid": "uid1",
+        "effect_ids": [
+          "A",
+          "B"
+        ],
+        "ack_success": true,
+        "effect_time_authorized": true,
+        "exact_receipts": [
+          "A",
+          "B"
+        ],
+        "query_ok": true,
+        "watermark_covers": true,
+        "retention_covers": true,
+        "extra_effect": null,
+        "negative_conflicts_positive": false,
+        "current_permission": true,
+        "current_predicate": true,
+        "protected_commit": true
+      },
+      "weak": "COMPLETE",
+      "reference": "COMPLETE",
+      "verifier": "COMPLETE"
+    },
+    {
+      "facts": {
+        "scenario": "ack_only",
+        "message_id": "m1",
+        "task_id": "t1",
+        "attempt_id": "a1",
+        "target_uid": "uid1",
+        "effect_ids": [
+          "A",
+          "B"
+        ],
+        "ack_success": true,
+        "effect_time_authorized": true,
+        "exact_receipts": [],
+        "query_ok": true,
+        "watermark_covers": true,
+        "retention_covers": true,
+        "extra_effect": null,
+        "negative_conflicts_positive": false,
+        "current_permission": true,
+        "current_predicate": true,
+        "protected_commit": true
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "facts": {
+        "scenario": "redelivered_effect",
+        "message_id": "m1",
+        "task_id": "t1",
+        "attempt_id": "a1",
+        "target_uid": "uid1",
+        "effect_ids": [
+          "A",
+          "B"
+        ],
+        "ack_success": false,
+        "effect_time_authorized": true,
+        "exact_receipts": [
+          "A",
+          "B"
+        ],
+        "query_ok": true,
+        "watermark_covers": true,
+        "retention_covers": true,
+        "extra_effect": null,
+        "negative_conflicts_positive": false,
+        "current_permission": true,
+        "current_predicate": true,
+        "protected_commit": true
+      },
+      "weak": "RETRY",
+      "reference": "COMPLETE",
+      "verifier": "COMPLETE"
+    },
+    {
+      "facts": {
+        "scenario": "expired_ack_id",
+        "message_id": "m1",
+        "task_id": "t1",
+        "attempt_id": "a1",
+        "target_uid": "uid1",
+        "effect_ids": [
+          "A",
+          "B"
+        ],
+        "ack_success": false,
+        "effect_time_authorized": true,
+        "exact_receipts": [],
+        "query_ok": true,
+        "watermark_covers": true,
+        "retention_covers": true,
+        "extra_effect": null,
+        "negative_conflicts_positive": false,
+        "current_permission": true,
+        "current_predicate": true,
+        "protected_commit": true
+      },
+      "weak": "RETRY",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "facts": {
+        "scenario": "unknown_receipt",
+        "message_id": "m1",
+        "task_id": "t1",
+        "attempt_id": "a1",
+        "target_uid": "uid1",
+        "effect_ids": [
+          "A",
+          "B"
+        ],
+        "ack_success": true,
+        "effect_time_authorized": true,
+        "exact_receipts": [],
+        "query_ok": false,
+        "watermark_covers": true,
+        "retention_covers": true,
+        "extra_effect": null,
+        "negative_conflicts_positive": false,
+        "current_permission": true,
+        "current_predicate": true,
+        "protected_commit": true
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "facts": {
+        "scenario": "extra_member",
+        "message_id": "m1",
+        "task_id": "t1",
+        "attempt_id": "a1",
+        "target_uid": "uid1",
+        "effect_ids": [
+          "A",
+          "B"
+        ],
+        "ack_success": true,
+        "effect_time_authorized": true,
+        "exact_receipts": [
+          "A",
+          "B"
+        ],
+        "query_ok": true,
+        "watermark_covers": true,
+        "retention_covers": true,
+        "extra_effect": "C",
+        "negative_conflicts_positive": false,
+        "current_permission": true,
+        "current_predicate": true,
+        "protected_commit": true
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_EFFECT_SET_MISMATCH",
+      "verifier": "STOP_EFFECT_SET_MISMATCH"
+    },
+    {
+      "facts": {
+        "scenario": "receipt_conflict",
+        "message_id": "m1",
+        "task_id": "t1",
+        "attempt_id": "a1",
+        "target_uid": "uid1",
+        "effect_ids": [
+          "A",
+          "B"
+        ],
+        "ack_success": true,
+        "effect_time_authorized": true,
+        "exact_receipts": [
+          "A",
+          "B"
+        ],
+        "query_ok": true,
+        "watermark_covers": true,
+        "retention_covers": true,
+        "extra_effect": null,
+        "negative_conflicts_positive": true,
+        "current_permission": true,
+        "current_predicate": true,
+        "protected_commit": true
+      },
+      "weak": "COMPLETE",
+      "reference": "EVIDENCE_CONFLICT",
+      "verifier": "EVIDENCE_CONFLICT"
+    },
+    {
+      "facts": {
+        "scenario": "revoked_at_effect",
+        "message_id": "m1",
+        "task_id": "t1",
+        "attempt_id": "a1",
+        "target_uid": "uid1",
+        "effect_ids": [
+          "A",
+          "B"
+        ],
+        "ack_success": true,
+        "effect_time_authorized": false,
+        "exact_receipts": [
+          "A",
+          "B"
+        ],
+        "query_ok": true,
+        "watermark_covers": true,
+        "retention_covers": true,
+        "extra_effect": null,
+        "negative_conflicts_positive": false,
+        "current_permission": true,
+        "current_predicate": true,
+        "protected_commit": true
+      },
+      "weak": "COMPLETE",
+      "reference": "UNAUTHORIZED_OCCURRENCE",
+      "verifier": "UNAUTHORIZED_OCCURRENCE"
+    },
+    {
+      "facts": {
+        "scenario": "stale_watermark",
+        "message_id": "m1",
+        "task_id": "t1",
+        "attempt_id": "a1",
+        "target_uid": "uid1",
+        "effect_ids": [
+          "A",
+          "B"
+        ],
+        "ack_success": true,
+        "effect_time_authorized": true,
+        "exact_receipts": [
+          "A",
+          "B"
+        ],
+        "query_ok": true,
+        "watermark_covers": false,
+        "retention_covers": true,
+        "extra_effect": null,
+        "negative_conflicts_positive": false,
+        "current_permission": true,
+        "current_predicate": true,
+        "protected_commit": true
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "facts": {
+        "scenario": "retention_gap",
+        "message_id": "m1",
+        "task_id": "t1",
+        "attempt_id": "a1",
+        "target_uid": "uid1",
+        "effect_ids": [
+          "A",
+          "B"
+        ],
+        "ack_success": true,
+        "effect_time_authorized": true,
+        "exact_receipts": [
+          "A",
+          "B"
+        ],
+        "query_ok": true,
+        "watermark_covers": true,
+        "retention_covers": false,
+        "extra_effect": null,
+        "negative_conflicts_positive": false,
+        "current_permission": true,
+        "current_predicate": true,
+        "protected_commit": true
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    }
+  ]
+}
