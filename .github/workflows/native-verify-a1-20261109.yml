@@ -1,0 +1,24 @@
+name: GPT Native verify A1 20261109
+on:
+  push:
+    branches:
+      - gpt-native/aegis-a1-20261109
+permissions:
+  contents: read
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - name: Checkout complete prospective branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Record revision and runtime
+        run: |
+          git rev-parse HEAD
+          python3 --version
+      - name: Native repository contract A1
+        run: python3 aegis-cortex/check.py aegis-cortex/2026-11-09-A1-reliability-observe.md
+      - name: No unverified write
+        run: test -z "$(git status --porcelain)"
