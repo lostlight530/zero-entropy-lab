@@ -1,5 +1,5 @@
 {
-  "schema": "ballast-2026-11-09-maintainer-review-v8-synthetic",
+  "schema": "ballast-2026-11-09-maintainer-review-JS_ENGINE-synthetic",
   "receipt": {
     "status": "PASS_WITH_LIMITS",
     "executionUTC": "2026-11-09T00:31:02.100Z",
