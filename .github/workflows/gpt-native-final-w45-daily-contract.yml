@@ -21,3 +21,5 @@ jobs:
           git status --short
           git diff --exit-code
           test -z "$(git diff --name-only)"
+
+# Revalidation carrier after explicit A2 uncertainty/evidence-class correction
