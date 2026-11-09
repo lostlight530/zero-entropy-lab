@@ -148,7 +148,7 @@ function review(){
   const badTamper=tamper.filter(x=>!x.rejected).map(x=>x.id);
   const status=!discrepancies.length&&!unsafe.length&&!badPos.length&&!badTamper.length&&checkLedger(rows)?"PASS_WITH_LIMITS":"FAIL";
   const histogram={};for(const x of rows)histogram[x.reference]=(histogram[x.reference]||0)+1;
-  return {schema:"ballast-2026-11-09-maintainer-review-v8-synthetic",receipt:{
+  return {schema:"ballast-2026-11-09-maintainer-review-JS_ENGINE-synthetic",receipt:{
     status,executionUTC:new Date().toISOString(),logicalDate:"2026-11-09 Asia/Shanghai",referenceBaseline:"13ba3547450c7a87df29b39facf15d2a287967b4",
     originalResearch:"10 scenarios, 30 decisions, sha256 4af04c2212d9292d2175e040f13f48353398dcd0b8efa5c1de24289f3da43ec3 unchanged",
     reviewScenarios:rows.length,reviewDecisions:rows.length*3,weakReferenceDisagreements:rows.filter(x=>x.reference!==x.weak).length,
