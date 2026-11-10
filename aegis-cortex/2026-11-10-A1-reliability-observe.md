@@ -13,7 +13,7 @@ Execution Time UTC: 2026-11-10 (exact GitHub commit time in delivery provenance)
 Execution Time Asia/Shanghai: 2026-11-10
 Agent: GPT-6 / GPT_NATIVE / NOT_JULES_REPLAY
 Producer Identity: HUMAN_REQUESTED_GPT_NATIVE
-Record Provenance: HUMAN_AUTHORIZED_PROSPECTIVE_NATIVE_PRODUCTION
+Record Provenance: HUMAN_AUTHORIZED_SUBSTITUTE
 Base Main SHA: a94b7280d1e7c45c25a6f1f963a61dc118c7cee8
 Run Identity: zero-entropy-lab/aegis/A1/2026-11-10/GPT_NATIVE/a94b7280d1e7c45c25a6f1f963a61dc118c7cee8/adk-connectors-operation-gate-01
 Network Status: GITHUB_PRIMARY_COMMIT_AND_PATCH_READ
@@ -59,6 +59,7 @@ Limitations: deadline is checked only after a nonterminal poll response; duratio
 ### SIG-20261110-A01 — TERMINAL_ERROR_AS_EMPTY_SCHEMA_AND_UNBOUNDED_POLL
 Signal ID: SIG-20261110-A01
 Source IDs: SRC-20261110-A01
+External Evidence: original Google ADK committed patch and authored regression source, no local runtime receipt.
 Failure Mechanism: before the patch, a `done=true,error={...}` response could be returned to a caller as though no response/schema were available; downstream tools might appear absent rather than explicitly failed. A sequence of `done=false` responses had no explicit operation-level deadline.
 Original Code Evidence: `src/google/adk/tools/application_integration_tool/clients/connections_client.py` adds `_DEFAULT_OPERATION_TIMEOUT_SECONDS = 300`, sets `deadline = time.monotonic() + ...`, checks it on nonterminal polls and raises on non-null terminal `error`.
 Authored Regression Test Evidence: `tests/unittests/tools/application_integration_tool/clients/test_connections_client.py` adds a `done=true,error` case expecting `ValueError`, and mocks monotonic values `[0,1,301]` for timeout. Tests are READ, NOT_EXECUTED.
