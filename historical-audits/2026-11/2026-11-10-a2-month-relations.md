@@ -124,3 +124,46 @@
 - No host/kernel update, cancellation receipt or hidden orchestration effect verified by this source-custody A2
 - A2 must satisfy its own ≥100 substantive-line and GitHub additions strict numeric gates, independent of A1
 - Next trigger Nov11 A1 cutoff Nov10 and A2 full-month Nov11, contingent on actual new native and merged A1
+
+## Current-day native source content cross-examination — direct independent A2 reads
+- This supplemental source analysis is a new reviewer inspection of already-merged native artifacts; it does not perform SDK, Ballast or host runtime operations
+### Current-day source fidelity: aegis-cortex/2026-11-10-A1-reliability-observe.md
+- Exact current-main original file blob `27e1e35e488804f673b1ad465f576d89c9f38190`, 100 text lines; review is at already-merged Nov10 A1 main, not a later PR candidate
+- Source structure: # A1 Daily Reliability Observe — 2026-11-10 / ## CORTEX_RUN_HEADER / ## INPUT_RECORD / ## EXTERNAL_SOURCE_RECORDS
+- Identifying source/commit excerpt: Execution Time UTC: 2026-11-10 (exact GitHub commit time in delivery provenance); source claim isn't an execution receipt
+- Negative or uncertainty excerpt: Source Status: FIRST_PARTY_IMPLEMENTATION_AND_TEST_SOURCE / RUNTIME_NOT_EXECUTED; unmatched branch remains UNKNOWN
+- Counterexample/limitation: Source Status: FIRST_PARTY_IMPLEMENTATION_AND_TEST_SOURCE / RUNTIME_NOT_EXECUTED; no independent checker was executed by this A2
+- Identity separation: Observe stage and publisher source are inputs to same-day Orient, not a second downstream effect
+- A2 disposition: READ_CURRENT_MAIN / SOURCE_CLAIM_ONLY_UNLESS_EXECUTION_RECEIPT / NO_NATIVE_WRITE
+### Current-day source fidelity: aegis-cortex/2026-11-10-A2-doctrine-orient.md
+- Exact current-main original file blob `a0fe9e7b9880a554ee70698a4dfb35f1e901f281`, 111 text lines; review is at already-merged Nov10 A1 main, not a later PR candidate
+- Source structure: # A2 Daily Aegis Doctrine Orient — 2026-11-10 / ## CORTEX_RUN_HEADER / ## INPUT_RECORD / ## SOURCE_VERIFICATION_RECORDS
+- Identifying source/commit excerpt: Base Main SHA: 4d6c6cf5d619c29a2b0ef31d9d00f78273377844; source claim isn't an execution receipt
+- Negative or uncertainty excerpt: Local Applicability: UNKNOWN / LOCAL_DEPENDENCY_AND_CONNECTOR_PATH_NOT_VERIFIED; unmatched branch remains UNKNOWN
+- Counterexample/limitation: Local Applicability: UNKNOWN / LOCAL_DEPENDENCY_AND_CONNECTOR_PATH_NOT_VERIFIED; no independent checker was executed by this A2
+- Identity separation: Orient stage must bind to the merged Observe blob and preserve same-source dependency
+- A2 disposition: READ_CURRENT_MAIN / SOURCE_CLAIM_ONLY_UNLESS_EXECUTION_RECEIPT / NO_NATIVE_WRITE
+### Current-day source fidelity: ballast/records/2026-11-10.md
+- Exact current-main original file blob `136fa26677f71d026e17e4f5ddd43b84212991de`, 156 text lines; review is at already-merged Nov10 A1 main, not a later PR candidate
+- Source structure: # Ballast Daily 2026-11-10 / ## 研究摘要 / ## 研究问题 / ## 来源依据
+- Identifying source/commit excerpt: Verifier Authority / Independence: implementation PARTIAL / data-source NONE / semantic-contract SHARED / authority NONE; source claim isn't an execution receipt
+- Negative or uncertainty excerpt: | stale | COMPLETE | STOP_UNKNOWN | STOP_UNKNOWN |; unmatched branch remains UNKNOWN
+- Counterexample/limitation: Prior-effect Evidence: unknown; no independent checker was executed by this A2
+- Identity separation: scenario input, trace, receipt, reviewer output and external effect are different objects
+- A2 disposition: READ_CURRENT_MAIN / SOURCE_CLAIM_ONLY_UNLESS_EXECUTION_RECEIPT / NO_NATIVE_WRITE
+### Current-day source fidelity: ballast/evidence/2026-11-10-receipt-multiset.json
+- Exact current-main original file blob `2f2828f2ad69d6585f98e2e80dcfc83e0d125af1`, 2 text lines; review is at already-merged Nov10 A1 main, not a later PR candidate
+- Source structure: NO_MARKDOWN_HEADING; JSON source schema not inferred from heading
+- Identifying source/commit excerpt: NO_EXPRESS_SOURCE_ID_LINE; source claim isn't an execution receipt
+- Negative or uncertainty excerpt: [{"ack":true,"consistent":true,"coverage":true,"fence":true,"grant":true,"id":"valid","receipts":["A","B"],"reference":"COMPLETE","verifier":"COMPLETE","weak":"COMPLETE"},{"ack":true,"consistent":true,"coverage":true,"fence":true,"grant":true,"id":"d; unmatched branch remains UNKNOWN
+- Counterexample/limitation: [{"ack":true,"consistent":true,"coverage":true,"fence":true,"grant":true,"id":"valid","receipts":["A","B"],"reference":"COMPLETE","verifier":"COMPLETE","weak":"COMPLETE"},{"ack":true,"consistent":true,"coverage":true,"fence":true,"grant":true,"id":"d; no independent checker was executed by this A2
+- Identity separation: scenario input, trace, receipt, reviewer output and external effect are different objects
+- A2 disposition: READ_CURRENT_MAIN / SOURCE_CLAIM_ONLY_UNLESS_EXECUTION_RECEIPT / NO_NATIVE_WRITE
+### Current-day source fidelity: ballast/evidence/2026-11-10-receipt-multiset-review.json
+- Exact current-main original file blob `f309121961be920b217403589b67030069b39a04`, 3267 text lines; review is at already-merged Nov10 A1 main, not a later PR candidate
+- Source structure: NO_MARKDOWN_HEADING; JSON source schema not inferred from heading
+- Identifying source/commit excerpt: "originalSevenScenarios": "7 synthetic cases / 21 decisions / 6 weak-reference disagreements / SHA256 f1a7dce10c9daedc18ac7d5fee216d4048db83e722c5c5f677bf38c730f7a4d3",; source claim isn't an execution receipt
+- Negative or uncertainty excerpt: "STOP_UNKNOWN": 28,; unmatched branch remains UNKNOWN
+- Counterexample/limitation: "STOP_UNKNOWN": 28,; no independent checker was executed by this A2
+- Identity separation: scenario input, trace, receipt, reviewer output and external effect are different objects
+- A2 disposition: READ_CURRENT_MAIN / SOURCE_CLAIM_ONLY_UNLESS_EXECUTION_RECEIPT / NO_NATIVE_WRITE
