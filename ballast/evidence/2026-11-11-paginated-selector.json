@@ -1,0 +1,308 @@
+{
+  "logical_date": "2026-11-11",
+  "execution": "isolated JavaScript V8 through GitHub connector orchestration",
+  "environment": "synthetic authored fixtures; no Node CLI",
+  "base_sha": "fad8bd68ad46319d6ba361ac85522c8b3e4870f6",
+  "rows": [
+    {
+      "id": "valid",
+      "pages": [
+        [
+          "A"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "snapshot": [
+        10,
+        10
+      ],
+      "complete": true,
+      "continuation": true,
+      "member": [
+        "A",
+        "B"
+      ],
+      "memberUid": [
+        "a1",
+        "b1"
+      ],
+      "query": true,
+      "grant": true,
+      "positive": true,
+      "negative": false,
+      "protected": true,
+      "weak": "COMPLETE",
+      "reference": "COMPLETE",
+      "verifier": "COMPLETE"
+    },
+    {
+      "id": "page-expired-410",
+      "pages": [
+        [
+          "A"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "snapshot": [
+        10,
+        11
+      ],
+      "complete": true,
+      "continuation": false,
+      "member": [
+        "A",
+        "B"
+      ],
+      "memberUid": [
+        "a1",
+        "b1"
+      ],
+      "query": true,
+      "grant": true,
+      "positive": true,
+      "negative": false,
+      "protected": true,
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "mixed-page-same-count",
+      "pages": [
+        [
+          "A"
+        ],
+        [
+          "C"
+        ]
+      ],
+      "snapshot": [
+        10,
+        11
+      ],
+      "complete": true,
+      "continuation": false,
+      "member": [
+        "A",
+        "C"
+      ],
+      "memberUid": [
+        "a1",
+        "c1"
+      ],
+      "query": true,
+      "grant": true,
+      "positive": true,
+      "negative": false,
+      "protected": true,
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "partial-pagination",
+      "pages": [
+        [
+          "A"
+        ],
+        []
+      ],
+      "snapshot": [
+        10,
+        10
+      ],
+      "complete": false,
+      "continuation": true,
+      "member": [
+        "A"
+      ],
+      "memberUid": [
+        "a1"
+      ],
+      "query": true,
+      "grant": true,
+      "positive": true,
+      "negative": false,
+      "protected": true,
+      "weak": "STOP",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "reincarnated-B",
+      "pages": [
+        [
+          "A"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "snapshot": [
+        10,
+        10
+      ],
+      "complete": true,
+      "continuation": true,
+      "member": [
+        "A",
+        "B"
+      ],
+      "memberUid": [
+        "a1",
+        "b2"
+      ],
+      "query": true,
+      "grant": true,
+      "positive": true,
+      "negative": false,
+      "protected": true,
+      "weak": "COMPLETE",
+      "reference": "MEMBERSHIP_MISMATCH",
+      "verifier": "MEMBERSHIP_MISMATCH"
+    },
+    {
+      "id": "query-unknown",
+      "pages": [
+        [
+          "A"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "snapshot": [
+        10,
+        10
+      ],
+      "complete": true,
+      "continuation": true,
+      "member": [
+        "A",
+        "B"
+      ],
+      "memberUid": [
+        "a1",
+        "b1"
+      ],
+      "query": false,
+      "grant": true,
+      "positive": true,
+      "negative": false,
+      "protected": true,
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "positive-negative-conflict",
+      "pages": [
+        [
+          "A"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "snapshot": [
+        10,
+        10
+      ],
+      "complete": true,
+      "continuation": true,
+      "member": [
+        "A",
+        "B"
+      ],
+      "memberUid": [
+        "a1",
+        "b1"
+      ],
+      "query": true,
+      "grant": true,
+      "positive": true,
+      "negative": true,
+      "protected": true,
+      "weak": "COMPLETE",
+      "reference": "EVIDENCE_CONFLICT",
+      "verifier": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "effect-time-revoked",
+      "pages": [
+        [
+          "A"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "snapshot": [
+        10,
+        10
+      ],
+      "complete": true,
+      "continuation": true,
+      "member": [
+        "A",
+        "B"
+      ],
+      "memberUid": [
+        "a1",
+        "b1"
+      ],
+      "query": true,
+      "grant": false,
+      "positive": true,
+      "negative": false,
+      "protected": true,
+      "weak": "COMPLETE",
+      "reference": "UNAUTHORIZED_OCCURRENCE",
+      "verifier": "UNAUTHORIZED_OCCURRENCE"
+    },
+    {
+      "id": "completion-race",
+      "pages": [
+        [
+          "A"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "snapshot": [
+        10,
+        10
+      ],
+      "complete": true,
+      "continuation": true,
+      "member": [
+        "A",
+        "B"
+      ],
+      "memberUid": [
+        "a1",
+        "b1"
+      ],
+      "query": true,
+      "grant": true,
+      "positive": true,
+      "negative": false,
+      "protected": false,
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    }
+  ],
+  "summary": {
+    "scenarios": 9,
+    "decisions": 27,
+    "weak_disagreements": 8,
+    "verifier_agreements": 9,
+    "negative_safe_stop": 8
+  }
+}
