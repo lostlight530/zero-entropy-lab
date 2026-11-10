@@ -1,0 +1,3266 @@
+{
+  "schema": "ballast-2026-11-10-maintainer-review-synthetic",
+  "receipt": {
+    "status": "PASS_WITH_LIMITS",
+    "executionUTC": "2026-11-10T00:48:51.894Z",
+    "logicalDate": "2026-11-10 Asia/Shanghai",
+    "originalHead": "83fdd4cb0f905f037b0ed02d3ce435349d40e0f5",
+    "originalSevenScenarios": "7 synthetic cases / 21 decisions / 6 weak-reference disagreements / SHA256 f1a7dce10c9daedc18ac7d5fee216d4048db83e722c5c5f677bf38c730f7a4d3",
+    "maintainerAuthoredCases": 41,
+    "maintainerDecisions": 123,
+    "weakReferenceDisagreements": 39,
+    "referenceHistogram": {
+      "MODEL_COMPLETE": 3,
+      "STOP_UNKNOWN": 28,
+      "EFFECT_SET_MISMATCH": 6,
+      "EVIDENCE_CONFLICT": 1,
+      "UNAUTHORIZED_OCCURRENCE": 3
+    },
+    "verifierAgreements": 41,
+    "positiveControls": 3,
+    "positiveFailures": [],
+    "unsafeNegativeAccepts": [],
+    "tamperProbes": 16,
+    "tamperRejected": 16,
+    "tamperFailures": [],
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    },
+    "executed": "ISOLATED_V8",
+    "nodeCLI": "NOT_EXECUTED",
+    "fullPythonChecker": "NOT_EXECUTED",
+    "realEffectSink": "NOT_EXECUTED",
+    "liveBroker": "NOT_EXECUTED",
+    "independentAuthority": "NOT_EXECUTED",
+    "newCredit": {
+      "daily": 0,
+      "independentResearchWindows": 0,
+      "cases": 0,
+      "method": 0,
+      "notes": 0,
+      "audit": 0,
+      "special": 0,
+      "durableFindings": 0
+    }
+  },
+  "rows": [
+    {
+      "id": "valid",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "MODEL_COMPLETE",
+      "verifier": "MODEL_COMPLETE"
+    },
+    {
+      "id": "lost_ack_after_effect",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": false,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "STOP",
+      "reference": "MODEL_COMPLETE",
+      "verifier": "MODEL_COMPLETE"
+    },
+    {
+      "id": "current_permission_enabled",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": true,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "MODEL_COMPLETE",
+      "verifier": "MODEL_COMPLETE"
+    },
+    {
+      "id": "missing_B",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "STOP",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "no_receipts_ack",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "STOP",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "duplicate_receipt_row",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "duplicate_effect_different_receipt",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A-alt",
+            "at": 48,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "duplicated_receipt_id_two_effects",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-A",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "extra_C",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "C",
+            "receiptId": "receipt-C",
+            "at": 49,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "count_equal_A_C",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "C",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "duplicate_A_A_B",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "another-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "positive_covered_negative",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "ok": true,
+            "exact": true,
+            "at": 90,
+            "watermark": 90,
+            "retentionFrom": 0,
+            "retentionUntil": 100,
+            "status": "MISS",
+            "effectId": "A"
+          }
+        ],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "EVIDENCE_CONFLICT",
+      "verifier": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "positive_unscoped_negative",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "ok": true,
+            "exact": false,
+            "at": 90,
+            "watermark": 90,
+            "retentionFrom": 0,
+            "retentionUntil": 100,
+            "status": "MISS",
+            "effectId": "A"
+          }
+        ],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "negative_missing_retention",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "ok": true,
+            "exact": true,
+            "at": 90,
+            "watermark": 90,
+            "retentionFrom": 25,
+            "retentionUntil": 100,
+            "status": "MISS",
+            "effectId": "B"
+          }
+        ],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "negative_for_nonmember",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "ok": true,
+            "exact": true,
+            "at": 90,
+            "watermark": 90,
+            "retentionFrom": 0,
+            "retentionUntil": 100,
+            "status": "MISS",
+            "effectId": "C"
+          }
+        ],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "revoked_at_effect",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 30,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "UNAUTHORIZED_OCCURRENCE",
+      "verifier": "UNAUTHORIZED_OCCURRENCE"
+    },
+    {
+      "id": "grant_unknown",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": false,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "grant_wrong_issuer",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "other-issuer",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "UNAUTHORIZED_OCCURRENCE",
+      "verifier": "UNAUTHORIZED_OCCURRENCE"
+    },
+    {
+      "id": "missing_grant_start",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_failed",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": false,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_not_exact",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": false,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_wrong_attempt",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "new-attempt",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_too_early",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 70,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "watermark_too_old",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 70,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "retention_starts_late",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 20,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "retention_ends_before_query",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 70
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_wrong_task",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "another-task",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_wrong_run",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "another-run",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_wrong_attempt",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "another-attempt",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_wrong_message",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "another-message",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_wrong_incarnation",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "reborn-uid",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_issuer_mismatch",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "unbound-issuer"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "UNAUTHORIZED_OCCURRENCE",
+      "verifier": "UNAUTHORIZED_OCCURRENCE"
+    },
+    {
+      "id": "expected_membership_duplicate",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "A"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "expected_membership_extra",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B",
+            "D"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "completion_wrong_revision",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 8,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "completion_wrong_target",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "reborn-uid",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "completion_not_guarded",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": false,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "completion_predicate_false",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": false,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "completion_before_B_effect",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 42
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "current_permission_malformed",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": 40,
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": "false",
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_timestamp_malformed",
+      "facts": {
+        "intent": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "expectedEffects": [
+            "A",
+            "B"
+          ],
+          "revision": 7,
+          "attemptStartedAt": 10
+        },
+        "ack": true,
+        "receipts": [
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "A",
+            "receiptId": "receipt-A",
+            "at": "40",
+            "issuer": "issuer-10"
+          },
+          {
+            "taskId": "task-10",
+            "runId": "run-10",
+            "attemptId": "attempt-10",
+            "messageId": "message-10",
+            "targetUid": "uid-10",
+            "effectId": "B",
+            "receiptId": "receipt-B",
+            "at": 45,
+            "issuer": "issuer-10"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-10",
+          "verified": true,
+          "startsAt": 20,
+          "endsAt": 70,
+          "taskId": "task-10"
+        },
+        "query": {
+          "taskId": "task-10",
+          "runId": "run-10",
+          "attemptId": "attempt-10",
+          "messageId": "message-10",
+          "targetUid": "uid-10",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "negatives": [],
+        "currentPermission": false,
+        "completion": {
+          "targetUid": "uid-10",
+          "revision": 7,
+          "predicate": true,
+          "guarded": true,
+          "committedAt": 80
+        }
+      },
+      "weak": "MODEL_COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    }
+  ],
+  "probes": [
+    {
+      "id": "forged_reference",
+      "rejected": true
+    },
+    {
+      "id": "forged_verifier",
+      "rejected": true
+    },
+    {
+      "id": "missing_case",
+      "rejected": true
+    },
+    {
+      "id": "duplicate_case",
+      "rejected": true
+    },
+    {
+      "id": "altered_receipt_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "duplicate_receipt_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "altered_grant_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "altered_scope_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "altered_query_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "altered_retention_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "altered_target_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "altered_predicate_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "altered_guard_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "altered_commit_time_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "injected_negative_without_decision",
+      "rejected": true
+    },
+    {
+      "id": "altered_current_permission_type_without_decision",
+      "rejected": true
+    }
+  ]
+}
