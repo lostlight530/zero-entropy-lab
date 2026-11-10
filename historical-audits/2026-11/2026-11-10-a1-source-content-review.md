@@ -113,23 +113,125 @@
 - Actual decision: classify external risk, local incident, existing defense and measured effectiveness separately; A1→A2 same-date main dependency applies
 - Evidence constraint: source commit and authored tests are one upstream lineage, not multiple independent runtime witnesses
 - Per-file state: PRESENT_AND_BODY_READ / NO_SOURCE_FILE_REWRITE / NO_RUNTIME_REEXECUTION
-<!-- PENDING_REVIEW:aegis-cortex/2026-11-08-A1-reliability-observe.md:b25f3f2c906d3844d3c76ca9e315522c2d502c94:8247 -->
-<!-- PENDING_REVIEW:aegis-cortex/2026-11-08-A2-doctrine-orient.md:d39ece70a87b88bc7260ce7e877a4b6eae467c1c:7786 -->
-<!-- PENDING_REVIEW:aegis-cortex/2026-11-09-A1-reliability-observe.md:aa889f794af042a656184df76c9fd67b14d00d19:8036 -->
-<!-- PENDING_REVIEW:aegis-cortex/2026-11-09-A2-doctrine-orient.md:e478a8a1cfdf6663099115b3d3e4ce6254aaec49:8321 -->
-<!-- PENDING_REVIEW:aegis-cortex/2026-W45-A3-discipline-decide.md:0a8e833116440493c99129163498c5866b494008:10883 -->
-<!-- PENDING_REVIEW:aegis-cortex/2026-W45-A4-protocol-act.md:8eb9d1ea512f2d6ec22b685fac79cdf937b242cb:6584 -->
-<!-- PENDING_REVIEW:ballast/records/2026-11-01.md:6b08be2d99a3d50932fa21dd02eaee48a78e7228:13532 -->
-<!-- PENDING_REVIEW:ballast/records/2026-11-02.md:c306b917a8bb93b3c6c2936e1d05592709f57639:13444 -->
-<!-- PENDING_REVIEW:ballast/records/2026-11-03.md:72b5641773009588fbea7c906a8c54ca8edd8363:12891 -->
-<!-- PENDING_REVIEW:ballast/records/2026-11-04.md:084fba335a4c9957a6ebed633cc3126f95a304e5:9911 -->
-<!-- PENDING_REVIEW:ballast/records/2026-11-05.md:a43bb301ae9509877d722ab3105b8d1a918cb342:12687 -->
-<!-- PENDING_REVIEW:ballast/records/2026-11-06.md:7d72f51be44fabc990fe5c0a848fa6825aca17b6:13028 -->
-<!-- PENDING_REVIEW:ballast/records/2026-11-07.md:1f6583cd14fabaa8623be6d898d3e3a505af319b:13100 -->
-<!-- PENDING_REVIEW:ballast/records/2026-11-08.md:b0416799dd6ef13a7639b19e524888ac27de4d8f:14305 -->
-<!-- PENDING_REVIEW:ballast/records/2026-11-09.md:6ddc1740d733d700bdd13f4a421c33782c5e795b:12999 -->
-<!-- PENDING_REVIEW:historical-audits/2026-11/2026-11-09-a1-source-content-review.md:bc1633c2e41447f0e89884c1ebd13ff6abe14b04:5378 -->
-<!-- PENDING_REVIEW:historical-audits/2026-11/2026-11-09-a2-month-relations.md:0f793d4734b1e5d1a1749b0e749591b2b375330d:4303 -->
+### aegis-cortex/2026-11-08-A1-reliability-observe.md
+- Current main blob: `b25f3f2c906d3844d3c76ca9e315522c2d502c94`, bytes 8247, text lines 96; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # A1 Daily Reliability Observe — 2026-11-08; source domain: AEGIS_NATIVE; first cited URI: https://github.com/langchain-ai/langgraph/commit/e5e37b5d70dbfd93c7006bd90a658c6179a95946
+- Status/failure vocabulary: UNKNOWN | NOT_EXECUTED; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: failure mechanism source identity must not be conflated with local Zero incident or installed defense
+- Counterevidence gate: authored upstream fixture is not executed proof; local kernel applicability requires separately verified revision
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### aegis-cortex/2026-11-08-A2-doctrine-orient.md
+- Current main blob: `d39ece70a87b88bc7260ce7e877a4b6eae467c1c`, bytes 7786, text lines 103; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # A2 Daily Aegis Doctrine Orient — 2026-11-08; source domain: AEGIS_NATIVE; first cited URI: https://github.com/lostlight530/zero-entropy-lab/pull/824
+- Status/failure vocabulary: UNKNOWN | OPEN | NOT_COMPUTED | NO_DECISION | NOT_DUE | NOT_EXECUTED; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: failure mechanism source identity must not be conflated with local Zero incident or installed defense
+- Counterevidence gate: authored upstream fixture is not executed proof; local kernel applicability requires separately verified revision
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### aegis-cortex/2026-11-09-A1-reliability-observe.md
+- Current main blob: `aa889f794af042a656184df76c9fd67b14d00d19`, bytes 8036, text lines 99; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # A1 Daily Reliability Observe — 2026-11-09; source domain: AEGIS_NATIVE; first cited URI: https://github.com/openai/openai-agents-python/commit/8ea4333b4f223340739c3039e1a7720082493580
+- Status/failure vocabulary: UNKNOWN | NOT_COMPUTED | SUCCESS | NOT_DUE | OPEN | NOT_EXECUTED; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: failure mechanism source identity must not be conflated with local Zero incident or installed defense
+- Counterevidence gate: authored upstream fixture is not executed proof; local kernel applicability requires separately verified revision
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### aegis-cortex/2026-11-09-A2-doctrine-orient.md
+- Current main blob: `e478a8a1cfdf6663099115b3d3e4ce6254aaec49`, bytes 8321, text lines 106; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # A2 Daily Aegis Doctrine Orient — 2026-11-09; source domain: AEGIS_NATIVE; first cited URI: https://github.com/lostlight530/zero-entropy-lab/pull/830
+- Status/failure vocabulary: UNKNOWN | NOT_COMPUTED | NOT_EXECUTED; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: failure mechanism source identity must not be conflated with local Zero incident or installed defense
+- Counterevidence gate: authored upstream fixture is not executed proof; local kernel applicability requires separately verified revision
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### aegis-cortex/2026-W45-A3-discipline-decide.md
+- Current main blob: `0a8e833116440493c99129163498c5866b494008`, bytes 10883, text lines 94; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # A3 Weekly Discipline Decide — 2026-W45; source domain: AEGIS_NATIVE; first cited URI: NO_EXTERNAL_URL
+- Status/failure vocabulary: NO_DECISION | NOT_COMPUTED | NOT_EXECUTED; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: failure mechanism source identity must not be conflated with local Zero incident or installed defense
+- Counterevidence gate: authored upstream fixture is not executed proof; local kernel applicability requires separately verified revision
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### aegis-cortex/2026-W45-A4-protocol-act.md
+- Current main blob: `8eb9d1ea512f2d6ec22b685fac79cdf937b242cb`, bytes 6584, text lines 80; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # A4 Weekly Protocol Act — 2026-W45; source domain: AEGIS_NATIVE; first cited URI: https://github.com/lostlight530/zero-entropy-lab/pull/831
+- Status/failure vocabulary: NO_DECISION | UNKNOWN | NOT_EXECUTED; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: failure mechanism source identity must not be conflated with local Zero incident or installed defense
+- Counterevidence gate: authored upstream fixture is not executed proof; local kernel applicability requires separately verified revision
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### ballast/records/2026-11-01.md
+- Current main blob: `6b08be2d99a3d50932fa21dd02eaee48a78e7228`, bytes 13532, text lines 163; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # Ballast Daily 2026-11-01; source domain: BALLAST_NATIVE; first cited URI: NO_EXTERNAL_URL
+- Status/failure vocabulary: BLOCKED | NOT_EXECUTED | UNKNOWN; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: case, runner, effect-receipt and final completion are separate; don't equate event trace with external effect
+- Counterevidence gate: workflow log can validate bounded runner output only, not unseen backend effects
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### ballast/records/2026-11-02.md
+- Current main blob: `c306b917a8bb93b3c6c2936e1d05592709f57639`, bytes 13444, text lines 171; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # Ballast Daily 2026-11-02; source domain: BALLAST_NATIVE; first cited URI: NO_EXTERNAL_URL
+- Status/failure vocabulary: BLOCKED | NOT_EXECUTED | UNKNOWN; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: case, runner, effect-receipt and final completion are separate; don't equate event trace with external effect
+- Counterevidence gate: workflow log can validate bounded runner output only, not unseen backend effects
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### ballast/records/2026-11-03.md
+- Current main blob: `72b5641773009588fbea7c906a8c54ca8edd8363`, bytes 12891, text lines 150; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # Ballast Daily 2026-11-03; source domain: BALLAST_NATIVE; first cited URI: https://github.com/debezium/debezium/blob/main/documentation/modules/ROOT/pages/connectors/postgresql.adoc
+- Status/failure vocabulary: UNKNOWN | BLOCKED | NOT_EXECUTED; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: case, runner, effect-receipt and final completion are separate; don't equate event trace with external effect
+- Counterevidence gate: workflow log can validate bounded runner output only, not unseen backend effects
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### ballast/records/2026-11-04.md
+- Current main blob: `084fba335a4c9957a6ebed633cc3126f95a304e5`, bytes 9911, text lines 155; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # Ballast Daily 2026-11-04; source domain: BALLAST_NATIVE; first cited URI: https://github.com/temporalio/documentation/blob/main/docs/encyclopedia/workflow/cancellation-and-termination.mdx
+- Status/failure vocabulary: UNKNOWN | NOT_EXECUTED | BLOCKED; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: case, runner, effect-receipt and final completion are separate; don't equate event trace with external effect
+- Counterevidence gate: workflow log can validate bounded runner output only, not unseen backend effects
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### ballast/records/2026-11-05.md
+- Current main blob: `a43bb301ae9509877d722ab3105b8d1a918cb342`, bytes 12687, text lines 149; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # Ballast Daily 2026-11-05; source domain: BALLAST_NATIVE; first cited URI: https://github.com/temporalio/documentation/blob/main/docs/encyclopedia/workflow/cancellation-and-termination.mdx
+- Status/failure vocabulary: UNKNOWN | BLOCKED | NOT_EXECUTED; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: case, runner, effect-receipt and final completion are separate; don't equate event trace with external effect
+- Counterevidence gate: workflow log can validate bounded runner output only, not unseen backend effects
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### ballast/records/2026-11-06.md
+- Current main blob: `7d72f51be44fabc990fe5c0a848fa6825aca17b6`, bytes 13028, text lines 159; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # Ballast Daily 2026-11-06; source domain: BALLAST_NATIVE; first cited URI: NO_EXTERNAL_URL
+- Status/failure vocabulary: NOT_EXECUTED | BLOCKED | UNKNOWN | NOT_DUE; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: case, runner, effect-receipt and final completion are separate; don't equate event trace with external effect
+- Counterevidence gate: workflow log can validate bounded runner output only, not unseen backend effects
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### ballast/records/2026-11-07.md
+- Current main blob: `1f6583cd14fabaa8623be6d898d3e3a505af319b`, bytes 13100, text lines 163; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # Ballast Daily 2026-11-07; source domain: BALLAST_NATIVE; first cited URI: NO_EXTERNAL_URL
+- Status/failure vocabulary: BLOCKED | NOT_EXECUTED; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: case, runner, effect-receipt and final completion are separate; don't equate event trace with external effect
+- Counterevidence gate: workflow log can validate bounded runner output only, not unseen backend effects
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### ballast/records/2026-11-08.md
+- Current main blob: `b0416799dd6ef13a7639b19e524888ac27de4d8f`, bytes 14305, text lines 169; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # Ballast Daily 2026-11-08; source domain: BALLAST_NATIVE; first cited URI: NO_EXTERNAL_URL
+- Status/failure vocabulary: UNKNOWN | NOT_EXECUTED; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: case, runner, effect-receipt and final completion are separate; don't equate event trace with external effect
+- Counterevidence gate: workflow log can validate bounded runner output only, not unseen backend effects
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### ballast/records/2026-11-09.md
+- Current main blob: `6ddc1740d733d700bdd13f4a421c33782c5e795b`, bytes 12999, text lines 154; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # Ballast Daily 2026-11-09; source domain: BALLAST_NATIVE; first cited URI: NO_EXTERNAL_URL
+- Status/failure vocabulary: UNKNOWN | NOT_EXECUTED; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: case, runner, effect-receipt and final completion are separate; don't equate event trace with external effect
+- Counterevidence gate: workflow log can validate bounded runner output only, not unseen backend effects
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### historical-audits/2026-11/2026-11-09-a1-source-content-review.md
+- Current main blob: `bc1633c2e41447f0e89884c1ebd13ff6abe14b04`, bytes 5378, text lines 58; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # Independent A1 — zero-entropy-lab — 2026-11-09 source custody; source domain: HISTORICAL_A1_A2; first cited URI: NO_EXTERNAL_URL
+- Status/failure vocabulary: NOT_DUE | OPEN | FINAL; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: dated maintenance provenance stays a distinct source and does not repair original strict 100-line acceptance
+- Counterevidence gate: only original PR files/additions and its merge receipt can establish original PR acceptance
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
+### historical-audits/2026-11/2026-11-09-a2-month-relations.md
+- Current main blob: `0f793d4734b1e5d1a1749b0e749591b2b375330d`, bytes 4303, text lines 50; exact file body fetched from `72cd1ac22daa`
+- Authored subject: # Independent A2 — zero-entropy-lab — 2026-11-09 month relations; source domain: HISTORICAL_A1_A2; first cited URI: https://github.com/lostlight530/zero-entropy-lab/pull/835
+- Status/failure vocabulary: FINAL | UNKNOWN | OPEN | NOT_DUE; preserve original producer and period rather than upgrading author-time claims
+- Review judgment: dated maintenance provenance stays a distinct source and does not repair original strict 100-line acceptance
+- Counterevidence gate: only original PR files/additions and its merge receipt can establish original PR acceptance
+- Per-file result: PRESENT_AND_BODY_READ / NO_NATIVE_REPLAY / NO_HISTORY_OVERWRITE
 
 ## Cutoff, relation and dependency
 - A1 coverage is month-start through Nov09; material from Nov10 is expressly excluded until a separately refreshed A2
@@ -137,4 +239,4 @@
 - No local host incident, external effect, new Ballast experiment or source SDK test is inferred from this document
 - Prior A1 and A2 existing merged records provide historical context only; they are not re-executed by this A1
 - Next gate: replace pending source reads, verify full diff and merged PR, then fresh-read current main before A2
-- Status before remaining reads: PARTIAL / PENDING_CONTENT_REVIEW; no A2 can begin from this unmerged branch
+- Current reviewer status: 31/31 selected objects directly read; source and historical acceptance limitations explicitly carried; A2 still requires an independently merged A1 and new-main read
