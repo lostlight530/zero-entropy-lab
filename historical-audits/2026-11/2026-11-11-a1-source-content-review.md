@@ -1,0 +1,186 @@
+# 2026-11-11 ORIGINAL A1 — Zero / Aegis / Ballast independent source custody
+
+## Exact identity, author-time and data denominator
+- REPOSITORY: lostlight530/zero-entropy-lab; TASK: independent-maintenance/A1; LOGICAL_DATE: 2026-11-11 Asia/Shanghai; PINNED_PRE_A1_MAIN: b3a69d8eb98ee2a91d93348ffc40ac0cdcdc52e3
+- NATIVE_DATE_SCOPE: Nov01–10, 10 Aegis A1 + 10 Aegis A2 + 10 Ballast Daily = 30 independent dated source files, plus W45 A3/A4 (32 native artifacts)
+- BODY_READ_SUPPORT: W45 A3/A4, Ballast monthly rolling owner, Ballast README, Aegis EVIDENCE_POLICY, Nov10 original A1/A2, and Nov10 D10 independently retrieved at pinned main
+- Producer of this record is a GPT Native independent reviewer; historical Aegis producer identity and Ballast native experimental producers are not rewritten
+- Native risk taxonomy: EXTERNAL_RISK_CLASS != LOCAL_REPOSITORY_INCIDENT != LOCAL_RUNTIME_OUTCOME; source patch does not establish measured Zero Host Kernel failure
+- Ballast research taxonomy: actual synthetic controlled model decisions != real Kubernetes/DynamoDB/PostgreSQL effects or production authorization
+- Time coordinates are date assigned, actual executed date, effect-time authorization, source publication, PR merge, current path and later correction
+- Nov11 Aegis and Ballast are excluded from this A1 by MonthStart→N−1; their merged input is reserved for original A2
+- 2026-11-10 original independent A1 PR #842 (242 additions) and A2 #843 (169 additions) are earlier delivery objects, never recycled for Nov11 original acceptance
+- Historical 2026-10-31 A2 original acceptance stays 0/10, despite Nov01 successor/cleanup/reconciliation and regardless of this new delivery
+- Validation carried out here: pinned current-main document body and Git identity, no runtime replay of Zero, Aegis, Ballast, vendor SDK, or original producer harness
+
+## Nov01–10 individual source and decision adjudication
+### 2026-11-01 — original Aegis risk versus Ballast independent model
+- Aegis A1 blob `ed6308903e67353b96c40eba29c0af0520b97089`: `aegis-cortex/2026-11-01-A1-reliability-observe.md` documents upstream SDK published bug/fix has one versioned release issuer
+- Original A1 claim class for 2026-11-01: external reported or implementation risk; upstream SDK published bug/fix has one versioned release issuer does not establish a Zero Kernel incident or local controlled reproduction
+- Aegis A1 source quality: original first-party patch, issue or release is attributable to its publisher; no issuer fixture is counted as an independent verification window
+- Aegis A1 decision: PRESERVE_SOURCE_BOUNDARY / NO_FOLLOW_UP; no supported change to local defense or historical incident ledger from this source alone
+- Aegis A2 blob `6ad42cedcf12323bc424d86f6e6a84c5438f0d6c`: `aegis-cortex/2026-11-01-A2-doctrine-orient.md` narrows the initial risk: forked transcript builder and explicit still-unfixed surface
+- Aegis A2 counterevidence: forked transcript builder and explicit still-unfixed surface; it may test a source-contract hypothesis but not automatically promote doctrine, measured failure rate or verified host mitigation
+- Aegis A1→A2 same-date relation is a dependent analysis pair; present paths alone do not prove original execution-order availability or independent publisher count
+- Ballast blob `6b08be2d99a3d50932fa21dd02eaee48a78e7228`: `ballast/records/2026-11-01.md` controls the question DynamoDB 10-minute token expiry does not prove historical external A+B effects
+- Ballast safety boundary: DynamoDB 10-minute token expiry does not prove historical external A+B effects; a bounded synthetic reference/verifier comparison is not an actual external effect or protected production commit
+- Ballast exact-gate interpretation: historical receipt occurrence, effect-time authorization, current permission and protected completion must remain separate in this 2026-11-01 evidence unit
+- Ballast credit: one original Daily assigned date; later maintenance review does not add an experiment, second execution window, CASE or NOTES finding
+- Relation delta: upstream SDK published bug/fix has one versioned release issuer is an external Aegis source class while DynamoDB 10-minute token expiry does not prove historical external A+B effects is a local controlled Ballast hypothesis; semantic analogy is not shared execution proof
+- Per-file result for 2026-11-01: THREE_BODIES_READ / KEEP_ORIGINAL_UNKNOWN_AND_NEGATIVES; no corrective rewrite, no manufactured negative evidence or extra source credit
+### 2026-11-02 — original Aegis risk versus Ballast independent model
+- Aegis A1 blob `3db29f246a0690f1583902a1e449534b7011ddbd`: `aegis-cortex/2026-11-02-A1-reliability-observe.md` documents ADK superseded waiting-run replay originates from one reporter issue
+- Original A1 claim class for 2026-11-02: external reported or implementation risk; ADK superseded waiting-run replay originates from one reporter issue does not establish a Zero Kernel incident or local controlled reproduction
+- Aegis A1 source quality: original first-party patch, issue or release is attributable to its publisher; no issuer fixture is counted as an independent verification window
+- Aegis A1 decision: PRESERVE_SOURCE_BOUNDARY / NO_FOLLOW_UP; no supported change to local defense or historical incident ledger from this source alone
+- Aegis A2 blob `7ec5d2b5cb3ec30915cf7b5bcd21ea634fbde24e`: `aegis-cortex/2026-11-02-A2-doctrine-orient.md` narrows the initial risk: reporter repro without upstream fix or independent fixed-version execution
+- Aegis A2 counterevidence: reporter repro without upstream fix or independent fixed-version execution; it may test a source-contract hypothesis but not automatically promote doctrine, measured failure rate or verified host mitigation
+- Aegis A1→A2 same-date relation is a dependent analysis pair; present paths alone do not prove original execution-order availability or independent publisher count
+- Ballast blob `c306b917a8bb93b3c6c2936e1d05592709f57639`: `ballast/records/2026-11-02.md` controls the question Kubernetes EndpointSlice terminating versus serving and zero-inflight drain
+- Ballast safety boundary: Kubernetes EndpointSlice terminating versus serving and zero-inflight drain; a bounded synthetic reference/verifier comparison is not an actual external effect or protected production commit
+- Ballast exact-gate interpretation: historical receipt occurrence, effect-time authorization, current permission and protected completion must remain separate in this 2026-11-02 evidence unit
+- Ballast credit: one original Daily assigned date; later maintenance review does not add an experiment, second execution window, CASE or NOTES finding
+- Relation delta: ADK superseded waiting-run replay originates from one reporter issue is an external Aegis source class while Kubernetes EndpointSlice terminating versus serving and zero-inflight drain is a local controlled Ballast hypothesis; semantic analogy is not shared execution proof
+- Per-file result for 2026-11-02: THREE_BODIES_READ / KEEP_ORIGINAL_UNKNOWN_AND_NEGATIVES; no corrective rewrite, no manufactured negative evidence or extra source credit
+### 2026-11-03 — original Aegis risk versus Ballast independent model
+- Aegis A1 blob `5a99278c42bbf9ba22c38f44125cb77e5fe9972f`: `aegis-cortex/2026-11-03-A1-reliability-observe.md` documents ADK keepalive progress is not terminal liveness guarantee
+- Original A1 claim class for 2026-11-03: external reported or implementation risk; ADK keepalive progress is not terminal liveness guarantee does not establish a Zero Kernel incident or local controlled reproduction
+- Aegis A1 source quality: original first-party patch, issue or release is attributable to its publisher; no issuer fixture is counted as an independent verification window
+- Aegis A1 decision: PRESERVE_SOURCE_BOUNDARY / NO_FOLLOW_UP; no supported change to local defense or historical incident ledger from this source alone
+- Aegis A2 blob `5f3f65f9296396c16cea141acbc23e3d71293c09`: `aegis-cortex/2026-11-03-A2-doctrine-orient.md` narrows the initial risk: pinned streaming decoder code does not reproduce reporter wall-clock hang
+- Aegis A2 counterevidence: pinned streaming decoder code does not reproduce reporter wall-clock hang; it may test a source-contract hypothesis but not automatically promote doctrine, measured failure rate or verified host mitigation
+- Aegis A1→A2 same-date relation is a dependent analysis pair; present paths alone do not prove original execution-order availability or independent publisher count
+- Ballast blob `72b5641773009588fbea7c906a8c54ca8edd8363`: `ballast/records/2026-11-03.md` controls the question PostgreSQL slot checkpoint/LSN is not exact downstream effect-set completion
+- Ballast safety boundary: PostgreSQL slot checkpoint/LSN is not exact downstream effect-set completion; a bounded synthetic reference/verifier comparison is not an actual external effect or protected production commit
+- Ballast exact-gate interpretation: historical receipt occurrence, effect-time authorization, current permission and protected completion must remain separate in this 2026-11-03 evidence unit
+- Ballast credit: one original Daily assigned date; later maintenance review does not add an experiment, second execution window, CASE or NOTES finding
+- Relation delta: ADK keepalive progress is not terminal liveness guarantee is an external Aegis source class while PostgreSQL slot checkpoint/LSN is not exact downstream effect-set completion is a local controlled Ballast hypothesis; semantic analogy is not shared execution proof
+- Per-file result for 2026-11-03: THREE_BODIES_READ / KEEP_ORIGINAL_UNKNOWN_AND_NEGATIVES; no corrective rewrite, no manufactured negative evidence or extra source credit
+### 2026-11-04 — original Aegis risk versus Ballast independent model
+- Aegis A1 blob `208f8fa21debce7c098e093fab663a0d300bf3b4`: `aegis-cortex/2026-11-04-A1-reliability-observe.md` documents model instruction alone is not enforceable human approval gate
+- Original A1 claim class for 2026-11-04: external reported or implementation risk; model instruction alone is not enforceable human approval gate does not establish a Zero Kernel incident or local controlled reproduction
+- Aegis A1 source quality: original first-party patch, issue or release is attributable to its publisher; no issuer fixture is counted as an independent verification window
+- Aegis A1 decision: PRESERVE_SOURCE_BOUNDARY / NO_FOLLOW_UP; no supported change to local defense or historical incident ledger from this source alone
+- Aegis A2 blob `9c08452527716d9f8b081f1c6a004e68b63bc90c`: `aegis-cortex/2026-11-04-A2-doctrine-orient.md` narrows the initial risk: pinned Python HITL demo and YAML variant do not run reporter POC
+- Aegis A2 counterevidence: pinned Python HITL demo and YAML variant do not run reporter POC; it may test a source-contract hypothesis but not automatically promote doctrine, measured failure rate or verified host mitigation
+- Aegis A1→A2 same-date relation is a dependent analysis pair; present paths alone do not prove original execution-order availability or independent publisher count
+- Ballast blob `084fba335a4c9957a6ebed633cc3126f95a304e5`: `ballast/records/2026-11-04.md` controls the question revoked current permission cannot void historically authorized A+B effects
+- Ballast safety boundary: revoked current permission cannot void historically authorized A+B effects; a bounded synthetic reference/verifier comparison is not an actual external effect or protected production commit
+- Ballast exact-gate interpretation: historical receipt occurrence, effect-time authorization, current permission and protected completion must remain separate in this 2026-11-04 evidence unit
+- Ballast credit: one original Daily assigned date; later maintenance review does not add an experiment, second execution window, CASE or NOTES finding
+- Relation delta: model instruction alone is not enforceable human approval gate is an external Aegis source class while revoked current permission cannot void historically authorized A+B effects is a local controlled Ballast hypothesis; semantic analogy is not shared execution proof
+- Per-file result for 2026-11-04: THREE_BODIES_READ / KEEP_ORIGINAL_UNKNOWN_AND_NEGATIVES; no corrective rewrite, no manufactured negative evidence or extra source credit
+### 2026-11-05 — original Aegis risk versus Ballast independent model
+- Aegis A1 blob `46022b22b70781fe1ddc9ea2afb4466e2e544951`: `aegis-cortex/2026-11-05-A1-reliability-observe.md` documents cross-session scoped state lost-update patch and author tests
+- Original A1 claim class for 2026-11-05: external reported or implementation risk; cross-session scoped state lost-update patch and author tests does not establish a Zero Kernel incident or local controlled reproduction
+- Aegis A1 source quality: original first-party patch, issue or release is attributable to its publisher; no issuer fixture is counted as an independent verification window
+- Aegis A1 decision: PRESERVE_SOURCE_BOUNDARY / NO_FOLLOW_UP; no supported change to local defense or historical incident ledger from this source alone
+- Aegis A2 blob `0ab829c6e60fd51f8b0919580958e9c14b7d78c0`: `aegis-cortex/2026-11-05-A2-doctrine-orient.md` narrows the initial risk: Redis watched-scope merge versus DB row-lock race remain separate backend paths
+- Aegis A2 counterevidence: Redis watched-scope merge versus DB row-lock race remain separate backend paths; it may test a source-contract hypothesis but not automatically promote doctrine, measured failure rate or verified host mitigation
+- Aegis A1→A2 same-date relation is a dependent analysis pair; present paths alone do not prove original execution-order availability or independent publisher count
+- Ballast blob `a43bb301ae9509877d722ab3105b8d1a918cb342`: `ballast/records/2026-11-05.md` controls the question delegated worker-1/worker-2 ownership handoff fences commit identity
+- Ballast safety boundary: delegated worker-1/worker-2 ownership handoff fences commit identity; a bounded synthetic reference/verifier comparison is not an actual external effect or protected production commit
+- Ballast exact-gate interpretation: historical receipt occurrence, effect-time authorization, current permission and protected completion must remain separate in this 2026-11-05 evidence unit
+- Ballast credit: one original Daily assigned date; later maintenance review does not add an experiment, second execution window, CASE or NOTES finding
+- Relation delta: cross-session scoped state lost-update patch and author tests is an external Aegis source class while delegated worker-1/worker-2 ownership handoff fences commit identity is a local controlled Ballast hypothesis; semantic analogy is not shared execution proof
+- Per-file result for 2026-11-05: THREE_BODIES_READ / KEEP_ORIGINAL_UNKNOWN_AND_NEGATIVES; no corrective rewrite, no manufactured negative evidence or extra source credit
+### 2026-11-06 — original Aegis risk versus Ballast independent model
+- Aegis A1 blob `7cdf481996c7ecad141f8b963183cd3db21c1339`: `aegis-cortex/2026-11-06-A1-reliability-observe.md` documents mutable in-memory event alias and SQLite lock contention are distinct risks
+- Original A1 claim class for 2026-11-06: external reported or implementation risk; mutable in-memory event alias and SQLite lock contention are distinct risks does not establish a Zero Kernel incident or local controlled reproduction
+- Aegis A1 source quality: original first-party patch, issue or release is attributable to its publisher; no issuer fixture is counted as an independent verification window
+- Aegis A1 decision: PRESERVE_SOURCE_BOUNDARY / NO_FOLLOW_UP; no supported change to local defense or historical incident ledger from this source alone
+- Aegis A2 blob `049549e50ca428033cf16d49c77f4a4218a0d3dd`: `aegis-cortex/2026-11-06-A2-doctrine-orient.md` narrows the initial risk: SQLite busy timeout and current-state protection are not the same predicate
+- Aegis A2 counterevidence: SQLite busy timeout and current-state protection are not the same predicate; it may test a source-contract hypothesis but not automatically promote doctrine, measured failure rate or verified host mitigation
+- Aegis A1→A2 same-date relation is a dependent analysis pair; present paths alone do not prove original execution-order availability or independent publisher count
+- Ballast blob `7d72f51be44fabc990fe5c0a848fa6825aca17b6`: `ballast/records/2026-11-06.md` controls the question revocation uncertainty intervals can overlap nominal effect-time order
+- Ballast safety boundary: revocation uncertainty intervals can overlap nominal effect-time order; a bounded synthetic reference/verifier comparison is not an actual external effect or protected production commit
+- Ballast exact-gate interpretation: historical receipt occurrence, effect-time authorization, current permission and protected completion must remain separate in this 2026-11-06 evidence unit
+- Ballast credit: one original Daily assigned date; later maintenance review does not add an experiment, second execution window, CASE or NOTES finding
+- Relation delta: mutable in-memory event alias and SQLite lock contention are distinct risks is an external Aegis source class while revocation uncertainty intervals can overlap nominal effect-time order is a local controlled Ballast hypothesis; semantic analogy is not shared execution proof
+- Per-file result for 2026-11-06: THREE_BODIES_READ / KEEP_ORIGINAL_UNKNOWN_AND_NEGATIVES; no corrective rewrite, no manufactured negative evidence or extra source credit
+### 2026-11-07 — original Aegis risk versus Ballast independent model
+- Aegis A1 blob `2cf71b1ce8d270346a3b2ccb7d34167fdcd6ac2c`: `aegis-cortex/2026-11-07-A1-reliability-observe.md` documents stale MCP session and waiting-node replay can duplicate operational effects
+- Original A1 claim class for 2026-11-07: external reported or implementation risk; stale MCP session and waiting-node replay can duplicate operational effects does not establish a Zero Kernel incident or local controlled reproduction
+- Aegis A1 source quality: original first-party patch, issue or release is attributable to its publisher; no issuer fixture is counted as an independent verification window
+- Aegis A1 decision: PRESERVE_SOURCE_BOUNDARY / NO_FOLLOW_UP; no supported change to local defense or historical incident ledger from this source alone
+- Aegis A2 blob `5458e12c0aca18a75cbd7c481b93257967ffcb79`: `aegis-cortex/2026-11-07-A2-doctrine-orient.md` narrows the initial risk: session-terminated retry gate and resumed input identity need separate checks
+- Aegis A2 counterevidence: session-terminated retry gate and resumed input identity need separate checks; it may test a source-contract hypothesis but not automatically promote doctrine, measured failure rate or verified host mitigation
+- Aegis A1→A2 same-date relation is a dependent analysis pair; present paths alone do not prove original execution-order availability or independent publisher count
+- Ballast blob `1f6583cd14fabaa8623be6d898d3e3a505af319b`: `ballast/records/2026-11-07.md` controls the question positive receipts alone cannot prove effect-time authorization and protected completion
+- Ballast safety boundary: positive receipts alone cannot prove effect-time authorization and protected completion; a bounded synthetic reference/verifier comparison is not an actual external effect or protected production commit
+- Ballast exact-gate interpretation: historical receipt occurrence, effect-time authorization, current permission and protected completion must remain separate in this 2026-11-07 evidence unit
+- Ballast credit: one original Daily assigned date; later maintenance review does not add an experiment, second execution window, CASE or NOTES finding
+- Relation delta: stale MCP session and waiting-node replay can duplicate operational effects is an external Aegis source class while positive receipts alone cannot prove effect-time authorization and protected completion is a local controlled Ballast hypothesis; semantic analogy is not shared execution proof
+- Per-file result for 2026-11-07: THREE_BODIES_READ / KEEP_ORIGINAL_UNKNOWN_AND_NEGATIVES; no corrective rewrite, no manufactured negative evidence or extra source credit
+### 2026-11-08 — original Aegis risk versus Ballast independent model
+- Aegis A1 blob `b25f3f2c906d3844d3c76ca9e315522c2d502c94`: `aegis-cortex/2026-11-08-A1-reliability-observe.md` documents prefix aliasing in nested subgraph namespace risks identity collision
+- Original A1 claim class for 2026-11-08: external reported or implementation risk; prefix aliasing in nested subgraph namespace risks identity collision does not establish a Zero Kernel incident or local controlled reproduction
+- Aegis A1 source quality: original first-party patch, issue or release is attributable to its publisher; no issuer fixture is counted as an independent verification window
+- Aegis A1 decision: PRESERVE_SOURCE_BOUNDARY / NO_FOLLOW_UP; no supported change to local defense or historical incident ledger from this source alone
+- Aegis A2 blob `d39ece70a87b88bc7260ce7e877a4b6eae467c1c`: `aegis-cortex/2026-11-08-A2-doctrine-orient.md` narrows the initial risk: segment-aware namespace selection requires same-source counterexample coverage
+- Aegis A2 counterevidence: segment-aware namespace selection requires same-source counterexample coverage; it may test a source-contract hypothesis but not automatically promote doctrine, measured failure rate or verified host mitigation
+- Aegis A1→A2 same-date relation is a dependent analysis pair; present paths alone do not prove original execution-order availability or independent publisher count
+- Ballast blob `b0416799dd6ef13a7639b19e524888ac27de4d8f`: `ballast/records/2026-11-08.md` controls the question orchestrator termination cannot prove in-flight child side-effects quiesced
+- Ballast safety boundary: orchestrator termination cannot prove in-flight child side-effects quiesced; a bounded synthetic reference/verifier comparison is not an actual external effect or protected production commit
+- Ballast exact-gate interpretation: historical receipt occurrence, effect-time authorization, current permission and protected completion must remain separate in this 2026-11-08 evidence unit
+- Ballast credit: one original Daily assigned date; later maintenance review does not add an experiment, second execution window, CASE or NOTES finding
+- Relation delta: prefix aliasing in nested subgraph namespace risks identity collision is an external Aegis source class while orchestrator termination cannot prove in-flight child side-effects quiesced is a local controlled Ballast hypothesis; semantic analogy is not shared execution proof
+- Per-file result for 2026-11-08: THREE_BODIES_READ / KEEP_ORIGINAL_UNKNOWN_AND_NEGATIVES; no corrective rewrite, no manufactured negative evidence or extra source credit
+### 2026-11-09 — original Aegis risk versus Ballast independent model
+- Aegis A1 blob `aa889f794af042a656184df76c9fd67b14d00d19`: `aegis-cortex/2026-11-09-A1-reliability-observe.md` documents streamed guardrail verdict at retry boundary can admit unverified attempt
+- Original A1 claim class for 2026-11-09: external reported or implementation risk; streamed guardrail verdict at retry boundary can admit unverified attempt does not establish a Zero Kernel incident or local controlled reproduction
+- Aegis A1 source quality: original first-party patch, issue or release is attributable to its publisher; no issuer fixture is counted as an independent verification window
+- Aegis A1 decision: PRESERVE_SOURCE_BOUNDARY / NO_FOLLOW_UP; no supported change to local defense or historical incident ledger from this source alone
+- Aegis A2 blob `e478a8a1cfdf6663099115b3d3e4ce6254aaec49`: `aegis-cortex/2026-11-09-A2-doctrine-orient.md` narrows the initial risk: retry-gate predicate and negative cases do not certify local host behavior
+- Aegis A2 counterevidence: retry-gate predicate and negative cases do not certify local host behavior; it may test a source-contract hypothesis but not automatically promote doctrine, measured failure rate or verified host mitigation
+- Aegis A1→A2 same-date relation is a dependent analysis pair; present paths alone do not prove original execution-order availability or independent publisher count
+- Ballast blob `6ddc1740d733d700bdd13f4a421c33782c5e795b`: `ballast/records/2026-11-09.md` controls the question queue ACK cannot prove exact A+B effect-set or exclude extra C
+- Ballast safety boundary: queue ACK cannot prove exact A+B effect-set or exclude extra C; a bounded synthetic reference/verifier comparison is not an actual external effect or protected production commit
+- Ballast exact-gate interpretation: historical receipt occurrence, effect-time authorization, current permission and protected completion must remain separate in this 2026-11-09 evidence unit
+- Ballast credit: one original Daily assigned date; later maintenance review does not add an experiment, second execution window, CASE or NOTES finding
+- Relation delta: streamed guardrail verdict at retry boundary can admit unverified attempt is an external Aegis source class while queue ACK cannot prove exact A+B effect-set or exclude extra C is a local controlled Ballast hypothesis; semantic analogy is not shared execution proof
+- Per-file result for 2026-11-09: THREE_BODIES_READ / KEEP_ORIGINAL_UNKNOWN_AND_NEGATIVES; no corrective rewrite, no manufactured negative evidence or extra source credit
+### 2026-11-10 — original Aegis risk versus Ballast independent model
+- Aegis A1 blob `27e1e35e488804f673b1ad465f576d89c9f38190`: `aegis-cortex/2026-11-10-A1-reliability-observe.md` documents connector terminal-error and timeout handling are separate from schema success
+- Original A1 claim class for 2026-11-10: external reported or implementation risk; connector terminal-error and timeout handling are separate from schema success does not establish a Zero Kernel incident or local controlled reproduction
+- Aegis A1 source quality: original first-party patch, issue or release is attributable to its publisher; no issuer fixture is counted as an independent verification window
+- Aegis A1 decision: PRESERVE_SOURCE_BOUNDARY / NO_FOLLOW_UP; no supported change to local defense or historical incident ledger from this source alone
+- Aegis A2 blob `a0fe9e7b9880a554ee70698a4dfb35f1e901f281`: `aegis-cortex/2026-11-10-A2-doctrine-orient.md` narrows the initial risk: a 300-second poll policy is not an end-to-end external effect deadline
+- Aegis A2 counterevidence: a 300-second poll policy is not an end-to-end external effect deadline; it may test a source-contract hypothesis but not automatically promote doctrine, measured failure rate or verified host mitigation
+- Aegis A1→A2 same-date relation is a dependent analysis pair; present paths alone do not prove original execution-order availability or independent publisher count
+- Ballast blob `136fa26677f71d026e17e4f5ddd43b84212991de`: `ballast/records/2026-11-10.md` controls the question receipt multiset duplicates and missing protected boundary can fake completion
+- Ballast safety boundary: receipt multiset duplicates and missing protected boundary can fake completion; a bounded synthetic reference/verifier comparison is not an actual external effect or protected production commit
+- Ballast exact-gate interpretation: historical receipt occurrence, effect-time authorization, current permission and protected completion must remain separate in this 2026-11-10 evidence unit
+- Ballast credit: one original Daily assigned date; later maintenance review does not add an experiment, second execution window, CASE or NOTES finding
+- Relation delta: connector terminal-error and timeout handling are separate from schema success is an external Aegis source class while receipt multiset duplicates and missing protected boundary can fake completion is a local controlled Ballast hypothesis; semantic analogy is not shared execution proof
+- Per-file result for 2026-11-10: THREE_BODIES_READ / KEEP_ORIGINAL_UNKNOWN_AND_NEGATIVES; no corrective rewrite, no manufactured negative evidence or extra source credit
+
+## Weekly, monthly, provenance and subsequent dependency checks
+- W45 Aegis A3 source blob 0a8e833116440493c99129163498c5866b494008 is a weekly discipline decision, not a new Daily source or an independent host incident
+- W45 Aegis A4 source blob 8eb9d1ea512f2d6ec22b685fac79cdf937b242cb is an inherited weekly protocol position, not an executed preventive measure
+- W45 naturally closed after Nov08; W46 Nov09–10 did not exist as inputs to the original closed W45 decisions and must remain in their own weekly window
+- November Aegis A5/A6 month-final chain is NOT_DUE before natural November closure, regardless of currently present Daily records
+- Ballast November rolling owner blob 06c7efbe9031b7cc4e3780bb3107f58cadd4e8c4 currently covers Nov11; this A1 relies only on dated Nov01–10 original Daily source records
+- Ballast README blob 86107c453dc3f4f58ad2630a518ac9369fb32d5e retains CASE/NOTES thresholds and does not license a finding promotion from a single November synthetic run
+- Aegis EVIDENCE_POLICY blob 4977de3ac6cc8fbfd59bb0f7ebbb1957a9f22d84 preserves external failure reports, repository structural checks, local incidents and local runtime outcome as separate evidence classes
+- Original Nov10 A1 blob aa2054621655ee6ad134776690b3897e49c6e804 is a cutoff Nov09 historical custody artifact; it does not include Nov10 in its original A1 denominator
+- Original Nov10 A2 blob 8eface0c3145839c566f40eaf993e9d5387d5bdb is a Nov01–10 relationship predecessor and cannot be replaced by the current A1
+- D10 Nov01–10 audit blob 7015c207781d3fb79e01fb772c22bba23f09c9b6 is an independent cross-window reconciliation, not a native experiment or maintenance A1/A2
+- Same-day Ballast maintainer review replay for Nov03 does not grant another research-window credit; it strengthens a single original experiment if verified
+- Nov01 DynamoDB token after retention expiry can admit a new effect; string equality does not prove historical effect identity or current protected completion
+- Nov02 EndpointSlice terminating and serving flags belong to a source-time cluster snapshot; no live Kubernetes cluster experiment is inferred from authored model cases
+- Nov03 Postgres LSN checkpoint and CDC delivery cannot prove downstream exact sink membership without a coherent authoritative identity witness
+- Nov04 current permission revocation versus historical authorization and present completion are independent gates, not contradictory temporal facts
+- Nov05 worker generation fence must be checked atomically at effect commit; an earlier successful precheck does not close the execution-to-effect race
+- Nov06 effect-time and revocation uncertainty intervals require uncertainty-aware ordering; nominal timestamps do not imply strict historical sequencing
+- Nov07 extra receipts or duplicate identities are counterexamples against count-based protected completion, even when positive receipt count matches
+- Nov08 orchestrator terminal state is not an authoritative child quiescence or no-effect receipt; child in-flight work may survive parent termination
+- Nov09 message broker ACK and target effect-set A+B+C need distinct object identities, so transport ACK cannot prove semantic task success
+- Nov10 multiset receipt IDs and extra-effect membership must be validated before promoting derived completion; a deduplicated set loses material identity
+- Daily evidence cannot be rewritten because later upstream source changes, a new current blob or a corrected monthly owner become available
+- No current file defect is established solely from source-content correctness or an external issuer bug; native historical bodies deliberately stay byte-identical
+- Source selection, local risk-classification and release applicability are separately bounded and cannot be inferred from GitHub Pages job successes
+- Human-authorized PR merging does not replace independent reviewer receipt; producer, reviewer and merger are separately attributed
+- Original A1 hard gate is this PR's own GitHub additions and own >=100 substantive review lines, not any successor's cumulative line count
+- A2 gate is this merged A1, its re-read blob and Nov11 merged native Aegis/ Ballast source inputs; future success is not presumed
+- Final A1 judgement before write: 32 dated native artifacts body-read, exact blobs retained; source-level checks only, no environment/runtime PASS claimed
