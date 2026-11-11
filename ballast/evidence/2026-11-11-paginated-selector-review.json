@@ -1,0 +1,6356 @@
+{
+  "schema": "ballast-selector-2026-11-11-maintainer-synthetic",
+  "receipt": {
+    "status": "PASS_WITH_LIMITS",
+    "executionUTC": "2026-11-11T08:36:36.840Z",
+    "logicalDate": "2026-11-11 Asia/Shanghai",
+    "originalResearch": "9 original scenarios / 27 decisions / 8 weak-reference disagreements, immutable",
+    "referenceHead": "9e6b8f2e5fd48565ce989aef566dcf4dd4aab2b9",
+    "syntheticScenarios": 49,
+    "syntheticDecisions": 147,
+    "referenceHistogram": {
+      "MODEL_COMPLETE": 2,
+      "STOP_UNKNOWN": 29,
+      "MEMBERSHIP_MISMATCH": 7,
+      "EFFECT_SET_MISMATCH": 6,
+      "UNAUTHORIZED_OCCURRENCE": 4,
+      "EVIDENCE_CONFLICT": 1
+    },
+    "weakReferenceDisagreements": 47,
+    "verifierAgreements": 49,
+    "negativeUnsafeAccepts": [],
+    "positiveControlFailures": [],
+    "tamperProbes": 18,
+    "tamperRejected": 18,
+    "initialReviewFailure": "Earlier isolated V8 review had 17/18 tamper rejects, forged verifier label accepted by ledger; this implementation checks stored verifier labels",
+    "externalEffects": 0,
+    "implementationIndependence": "PARTIAL",
+    "dataSourceIndependence": "NONE",
+    "semanticContractIndependence": "SHARED",
+    "authorityIndependence": "NONE",
+    "nativeNodeCLI": "NOT_EXECUTED",
+    "fullPythonChecker": "NOT_EXECUTED",
+    "liveKubernetes": "NOT_EXECUTED",
+    "liveEtcd": "NOT_EXECUTED",
+    "externalSink": "NOT_EXECUTED",
+    "additionalCredit": {
+      "Daily": 0,
+      "ResearchWindow": 0,
+      "CASE": 0,
+      "METHOD": 0,
+      "NOTES": 0,
+      "Audit": 0,
+      "Special": 0,
+      "Finding": 0
+    }
+  },
+  "rows": [
+    {
+      "id": "baseline",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "MODEL_COMPLETE",
+      "verifier": "MODEL_COMPLETE"
+    },
+    {
+      "id": "permission_revoked_later",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": false,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "MODEL_COMPLETE",
+      "verifier": "MODEL_COMPLETE"
+    },
+    {
+      "id": "expired_410",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 410,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "mixed_RV",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 11,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "expired_token_reused",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "expired",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "selector_drift",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s2",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_fingerprint_drift",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q2",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "same_count_A_C",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "C",
+                "uid": "c1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "MEMBERSHIP_MISMATCH",
+      "verifier": "MEMBERSHIP_MISMATCH"
+    },
+    {
+      "id": "reincarnated_B",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b2"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "MEMBERSHIP_MISMATCH",
+      "verifier": "MEMBERSHIP_MISMATCH"
+    },
+    {
+      "id": "duplicate_page_A",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "MEMBERSHIP_MISMATCH",
+      "verifier": "MEMBERSHIP_MISMATCH"
+    },
+    {
+      "id": "extra_page_C",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              },
+              {
+                "name": "C",
+                "uid": "c1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "MEMBERSHIP_MISMATCH",
+      "verifier": "MEMBERSHIP_MISMATCH"
+    },
+    {
+      "id": "missing_page_B",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": []
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "STOP",
+      "reference": "MEMBERSHIP_MISMATCH",
+      "verifier": "MEMBERSHIP_MISMATCH"
+    },
+    {
+      "id": "extra_third_page",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "page_wrong_index",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 2,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "page_missing_RV",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "page_RV_string",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": "10",
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "page_member_wrong_type",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": {
+                  "value": "b1"
+                }
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "MEMBERSHIP_MISMATCH",
+      "verifier": "MEMBERSHIP_MISMATCH"
+    },
+    {
+      "id": "duplicate_receipt_A",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "duplicate_receipt_ID",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "receipt_A_C_equal_count",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eC",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "receipt_extra_C",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-c",
+            "effect": "eC",
+            "name": "C",
+            "uid": "c1",
+            "at": 40,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "missing_receipt_B",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "receipt_wrong_uid",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b2",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "id": "receipt_wrong_run",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "rX",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_wrong_attempt",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "aX",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_wrong_target_selector",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "sX",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "receipt_fake_issuer",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "fake"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "UNAUTHORIZED_OCCURRENCE",
+      "verifier": "UNAUTHORIZED_OCCURRENCE"
+    },
+    {
+      "id": "effect_after_completion",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 100,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "UNAUTHORIZED_OCCURRENCE",
+      "verifier": "UNAUTHORIZED_OCCURRENCE"
+    },
+    {
+      "id": "grant_expired",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 41,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "UNAUTHORIZED_OCCURRENCE",
+      "verifier": "UNAUTHORIZED_OCCURRENCE"
+    },
+    {
+      "id": "grant_unproved",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": false,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "grant_missing_effect_B",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "UNAUTHORIZED_OCCURRENCE",
+      "verifier": "UNAUTHORIZED_OCCURRENCE"
+    },
+    {
+      "id": "positive_negative_conflict",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "ok": true,
+            "exact": true,
+            "at": 90,
+            "watermark": 90,
+            "retentionFrom": 0,
+            "retentionUntil": 100,
+            "effect": "eA",
+            "status": "MISS"
+          }
+        ],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "EVIDENCE_CONFLICT",
+      "verifier": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "uncovered_negative",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "ok": true,
+            "exact": false,
+            "at": 90,
+            "watermark": 90,
+            "retentionFrom": 0,
+            "retentionUntil": 100,
+            "effect": "eA",
+            "status": "MISS"
+          }
+        ],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_unavailable",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": false,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_wrong_attempt",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a2",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_watermark_stale",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 79,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "query_before_commit",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 79,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "retention_missing_attempt",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 11,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "retention_expired",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 89
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "completion_revision_drift",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 11,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "completion_guard_false",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": false,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "completion_predicate_false",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": false,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "completion_wrong_selector",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "sX",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "completion_missing_member_guard",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "completion_extra_effect_guard",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB",
+            "eC"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "commit_time_missing",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "current_permission_bad_type",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": "true",
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "duplicate_expected_member",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "id": "duplicate_member_within_page",
+      "facts": {
+        "ident": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11"
+        },
+        "required": [
+          {
+            "name": "A",
+            "uid": "a1",
+            "effect": "eA"
+          },
+          {
+            "name": "B",
+            "uid": "b1",
+            "effect": "eB"
+          }
+        ],
+        "startedAt": 10,
+        "pages": [
+          {
+            "index": 0,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": null,
+            "tokenOut": "token0",
+            "members": [
+              {
+                "name": "A",
+                "uid": "a1"
+              },
+              {
+                "name": "A",
+                "uid": "a1"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "status": 200,
+            "collectionRV": 10,
+            "selector": "s11",
+            "queryHash": "q11",
+            "tokenIn": "token0",
+            "tokenOut": null,
+            "members": [
+              {
+                "name": "B",
+                "uid": "b1"
+              }
+            ]
+          }
+        ],
+        "receipts": [
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eA",
+            "effect": "eA",
+            "name": "A",
+            "uid": "a1",
+            "at": 40,
+            "issuer": "issuer11"
+          },
+          {
+            "task": "t11",
+            "run": "r11",
+            "attempt": "a11",
+            "selector": "s11",
+            "receiptId": "rc-eB",
+            "effect": "eB",
+            "name": "B",
+            "uid": "b1",
+            "at": 45,
+            "issuer": "issuer11"
+          }
+        ],
+        "misses": [],
+        "currentPermission": true,
+        "query": {
+          "task": "t11",
+          "run": "r11",
+          "attempt": "a11",
+          "selector": "s11",
+          "ok": true,
+          "exact": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 100
+        },
+        "grant": {
+          "issuer": "issuer11",
+          "task": "t11",
+          "from": 20,
+          "until": 65,
+          "proven": true,
+          "effects": [
+            "eA",
+            "eB"
+          ]
+        },
+        "completion": {
+          "guarded": true,
+          "predicate": true,
+          "selector": "s11",
+          "observedRV": 10,
+          "commitRV": 10,
+          "at": 80,
+          "targetUIDs": [
+            "a1",
+            "b1"
+          ],
+          "effectIDs": [
+            "eA",
+            "eB"
+          ]
+        }
+      },
+      "weak": "COMPLETE",
+      "reference": "MEMBERSHIP_MISMATCH",
+      "verifier": "MEMBERSHIP_MISMATCH"
+    }
+  ],
+  "tamper": [
+    {
+      "id": "forged_reference",
+      "rejected": true
+    },
+    {
+      "id": "forged_verifier",
+      "rejected": true
+    },
+    {
+      "id": "missing_case",
+      "rejected": true
+    },
+    {
+      "id": "duplicate_case",
+      "rejected": true
+    },
+    {
+      "id": "unknown_case",
+      "rejected": true
+    },
+    {
+      "id": "changed_page_RV",
+      "rejected": true
+    },
+    {
+      "id": "changed_page_member",
+      "rejected": true
+    },
+    {
+      "id": "changed_page_token",
+      "rejected": true
+    },
+    {
+      "id": "duplicate_receipt",
+      "rejected": true
+    },
+    {
+      "id": "duplicate_receipt_ID",
+      "rejected": true
+    },
+    {
+      "id": "receipt_issuer_forgery",
+      "rejected": true
+    },
+    {
+      "id": "grant_expired",
+      "rejected": true
+    },
+    {
+      "id": "contradictory_MISS",
+      "rejected": true
+    },
+    {
+      "id": "query_identity_drift",
+      "rejected": true
+    },
+    {
+      "id": "query_watermark_stale",
+      "rejected": true
+    },
+    {
+      "id": "guard_removed",
+      "rejected": true
+    },
+    {
+      "id": "completion_RV_drift",
+      "rejected": true
+    },
+    {
+      "id": "permission_type_mutation",
+      "rejected": true
+    }
+  ]
+}
