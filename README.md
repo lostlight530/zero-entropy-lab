@@ -24,6 +24,7 @@ Zero dependency is an implementation constraint. It is not a claim that inputs, 
 
 ## Research and Evidence Surfaces
 
+- [Documentation index](./docs/README.md) — finite navigation for the repository constitution and dated research records.
 The repository separates implementation, external-source evidence, local state, and research interpretation.
 
 - [`aegis-cortex/README.md`](./aegis-cortex/README.md) is the durable guide to the Aegis reliability/evidence research surface and separates its long-lived policy from time-scoped A1–A6 artifacts.
