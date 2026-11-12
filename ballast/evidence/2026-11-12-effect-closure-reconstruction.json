@@ -1,0 +1,2740 @@
+{
+  "status": "PASS_WITH_LIMITS",
+  "fixtures": [
+    {
+      "scenario": "valid",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "extra_effect",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-C",
+            "effect": "E-C",
+            "memberUid": "uid-C1",
+            "at": 50,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "stale_grant",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 42,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "wrong_incarnation",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B2",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "revoked_current",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": false,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "unknown_prior",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": false,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "evidence_conflict",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "exact": true,
+            "ok": true,
+            "at": 90,
+            "watermark": 90,
+            "retentionFrom": 0,
+            "retentionUntil": 120,
+            "status": "MISS",
+            "effect": "E-A"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "duplicate_receipt_id",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "duplicate_effect_A",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-A",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "wrong_run",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R-old",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "wrong_attempt",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A-old",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "wrong_target",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-new",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "missing_effect_id",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "query_watermark_stale",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 79,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "query_retention_gap",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 11,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "query_unscoped",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": false,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "query_too_early",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 79,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "negative_uncovered",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "exact": false,
+            "ok": true,
+            "at": 90,
+            "watermark": 90,
+            "retentionFrom": 0,
+            "retentionUntil": 120,
+            "status": "MISS",
+            "effect": "E-A"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "completion_revision_change",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 5,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "completion_no_guard",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": false,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "completion_effect_outside_set",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B",
+            "E-C"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "effect_after_commit",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 81,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "duplicate_member_definition",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "permission_nonboolean",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": "false",
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "grant_missing_issuer",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "missing_receipt_B",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "extra_member_in_completion",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1",
+            "uid-C1"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "negative_wrong_effect",
+      "facts": {
+        "id": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12"
+        },
+        "members": [
+          {
+            "effect": "E-A",
+            "memberUid": "uid-A1"
+          },
+          {
+            "effect": "E-B",
+            "memberUid": "uid-B1"
+          }
+        ],
+        "revision": 4,
+        "attemptStart": 10,
+        "permissionNow": true,
+        "receipts": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-A",
+            "effect": "E-A",
+            "memberUid": "uid-A1",
+            "at": 40,
+            "issuer": "issuer-12"
+          },
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "receiptId": "rc-E-B",
+            "effect": "E-B",
+            "memberUid": "uid-B1",
+            "at": 45,
+            "issuer": "issuer-12"
+          }
+        ],
+        "misses": [
+          {
+            "task": "T12",
+            "run": "R12",
+            "attempt": "A12",
+            "targetUid": "target-12",
+            "exact": true,
+            "ok": true,
+            "at": 90,
+            "watermark": 90,
+            "retentionFrom": 0,
+            "retentionUntil": 120,
+            "status": "MISS",
+            "effect": "unknown"
+          }
+        ],
+        "grant": {
+          "issuer": "issuer-12",
+          "task": "T12",
+          "from": 20,
+          "until": 70,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "proven": true
+        },
+        "query": {
+          "task": "T12",
+          "run": "R12",
+          "attempt": "A12",
+          "targetUid": "target-12",
+          "exact": true,
+          "ok": true,
+          "at": 90,
+          "watermark": 90,
+          "retentionFrom": 0,
+          "retentionUntil": 120
+        },
+        "completion": {
+          "predicate": true,
+          "guard": true,
+          "revision": 4,
+          "targetUid": "target-12",
+          "commitAt": 80,
+          "effects": [
+            "E-A",
+            "E-B"
+          ],
+          "members": [
+            "uid-A1",
+            "uid-B1"
+          ]
+        }
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "scenario": "valid",
+      "weak": "COMPLETE",
+      "reference": "MODEL_COMPLETE",
+      "verifier": "MODEL_COMPLETE"
+    },
+    {
+      "scenario": "extra_effect",
+      "weak": "COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "scenario": "stale_grant",
+      "weak": "COMPLETE",
+      "reference": "UNAUTHORIZED_OCCURRENCE",
+      "verifier": "UNAUTHORIZED_OCCURRENCE"
+    },
+    {
+      "scenario": "wrong_incarnation",
+      "weak": "COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "scenario": "revoked_current",
+      "weak": "COMPLETE",
+      "reference": "MODEL_COMPLETE",
+      "verifier": "MODEL_COMPLETE"
+    },
+    {
+      "scenario": "unknown_prior",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "evidence_conflict",
+      "weak": "COMPLETE",
+      "reference": "EVIDENCE_CONFLICT",
+      "verifier": "EVIDENCE_CONFLICT"
+    },
+    {
+      "scenario": "duplicate_receipt_id",
+      "weak": "COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "scenario": "duplicate_effect_A",
+      "weak": "COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "scenario": "wrong_run",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "wrong_attempt",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "wrong_target",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "missing_effect_id",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "query_watermark_stale",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "query_retention_gap",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "query_unscoped",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "query_too_early",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "negative_uncovered",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "completion_revision_change",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "completion_no_guard",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "completion_effect_outside_set",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "effect_after_commit",
+      "weak": "COMPLETE",
+      "reference": "UNAUTHORIZED_OCCURRENCE",
+      "verifier": "UNAUTHORIZED_OCCURRENCE"
+    },
+    {
+      "scenario": "duplicate_member_definition",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "permission_nonboolean",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "grant_missing_issuer",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "missing_receipt_B",
+      "weak": "STOP",
+      "reference": "EFFECT_SET_MISMATCH",
+      "verifier": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "scenario": "extra_member_in_completion",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "negative_wrong_effect",
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN",
+      "verifier": "STOP_UNKNOWN"
+    }
+  ],
+  "tamper": [
+    {
+      "name": "forged_reference",
+      "rejected": true
+    },
+    {
+      "name": "forged_verifier",
+      "rejected": true
+    },
+    {
+      "name": "missing_row",
+      "rejected": true
+    },
+    {
+      "name": "duplicate_row",
+      "rejected": true
+    },
+    {
+      "name": "changed_raw_effect",
+      "rejected": true
+    },
+    {
+      "name": "changed_target_uid",
+      "rejected": true
+    },
+    {
+      "name": "changed_grant",
+      "rejected": true
+    },
+    {
+      "name": "changed_negative",
+      "rejected": true
+    },
+    {
+      "name": "changed_watermark",
+      "rejected": true
+    },
+    {
+      "name": "changed_completion",
+      "rejected": true
+    }
+  ],
+  "receipt": {
+    "schema": "ballast-2026-11-12-recovered-reconstruction",
+    "logicalDate": "2026-11-12 Asia/Shanghai",
+    "actualExecutionUTC": "2026-11-12T00:38:33.932Z",
+    "originalReport": "7 authored scenarios / 5 weak-versus-reference differences, original code and raw output unavailable, NOT reproduced byte-for-byte",
+    "reconstructionType": "SAME_DATE_RECONSTRUCTION_OF_REPORTED_STUDY_NOT_NEW_WINDOW",
+    "scenarios": 28,
+    "decisionRows": 84,
+    "weakReferenceDisagreements": 26,
+    "modelVerifierAgreements": 28,
+    "positiveControls": 2,
+    "negativeSafeStop": 26,
+    "referenceHistogram": {
+      "MODEL_COMPLETE": 2,
+      "EFFECT_SET_MISMATCH": 5,
+      "UNAUTHORIZED_OCCURRENCE": 2,
+      "STOP_UNKNOWN": 18,
+      "EVIDENCE_CONFLICT": 1
+    },
+    "tamperProbes": 10,
+    "tamperRejected": 10,
+    "independence": {
+      "implementation": "PARTIAL",
+      "dataSource": "NONE",
+      "semanticContract": "SHARED",
+      "authority": "NONE"
+    },
+    "liveEffects": 0,
+    "realAuthority": "NOT_EXECUTED",
+    "nativeNodeCLI": "NOT_EXECUTED",
+    "fullPythonChecker": "NOT_EXECUTED",
+    "credit": {
+      "newDaily": 1,
+      "originalReportedResearchWindow": 1,
+      "additionalIndependentResearchWindow": 0,
+      "CASE": 0,
+      "METHOD": 0,
+      "NOTES": 0,
+      "Special": 0,
+      "durableFinding": 0
+    }
+  }
+}
