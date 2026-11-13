@@ -31,6 +31,12 @@ Keep a change with the surface that owns it:
 5. Add or update proportionate tests for behavior changes.
 6. Keep unrelated cleanup out of the same pull request.
 
+### Longitudinal reliability review / 长期可靠性数据审查
+
+变更状态连续性、授权、恢复或数据展示时，必须分别指出真实输入、前态、后态、执行身份、权限批准、失败路径、复现命令与实际结果；仓库配置、局部固定样例成功、公开展示和 DOI 归档各有证据范围，不能推出全系统已完成或无错误；贡献不得篡改历史原始记录的生产者和时间边界
+
+For state-continuity, authorization, recovery or display changes, identify actual input, pre/post state, executor, approval, failure path, replay command and observed result. Configuration, fixture success, public display and DOI archive have separate scope and cannot prove full-system completion or zero failure. Preserve historical producer and cutoff identity
+
 ## Evidence boundaries
 
 Do not collapse distinct evidence surfaces:

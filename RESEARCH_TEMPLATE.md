@@ -86,6 +86,11 @@ State one question that can be contradicted by evidence
 - Support condition:
 - Falsifier:
 
+### Reliable state and version evidence / 状态与版本证据字段
+
+- 中文：记录输入账本或 fixture、源 Git SHA、运行环境／权限、工具调用、可观察状态转移、失败及恢复证据、所属观察窗口与原始／聚合口径；软件 concept DOI 不表示当次运行通过，引用冻结版本时使用其对应 version DOI
+- English: Specify input ledger/fixture, Git SHA, execution environment/permissions, tool calls, observable state transitions, failure/recovery evidence, observation period and raw/aggregate denominator. A software-family concept DOI is not a PASS receipt; cite the corresponding version DOI for a frozen release
+
 ## Evidence or source basis / 证据基础
 
 For each material source or input record identity, authority, time, supported proposition, limitation, and independence where relevant

@@ -49,6 +49,12 @@ repository publication != runtime reproduction
 archived publication != later main revision
 ```
 
+### Long-term evidence and stage status / 长期证据与阶段状态
+
+**中文**：`src/kernel/` 是当前可执行实现；本仓的 Ledger、Aegis、Ballast、周期性研究和外部信源记录各有自己的输入、状态与责任边界；阶段展示应标明来源文件、Git revision、运行者及实际运行时点、覆盖窗口、原始／聚合口径和成功／失败／BLOCKED／NOT_EXECUTED 状态；`requirements.txt` 是保留的仓库依赖／工具链契约，不能根据其内容看似为空就擅自删除；状态确定性不等于外部来源可信，也不证明任意任务无失败
+
+**English**: `src/kernel/` is current executable implementation; ledgers, Aegis, Ballast, periodic research and external-source records retain distinct inputs, statuses and owners. Stage views must identify source paths, Git revision, producer and actual run time, coverage, raw/aggregate denominator and PASS/FAILED/BLOCKED/NOT_EXECUTED state. The repository's `requirements.txt` is retained as a tooling/dependency contract, not a file to delete merely because it lists no third-party packages. Determinism does not authenticate external sources or guarantee all tasks succeed
+
 ## Verification
 
 ```bash

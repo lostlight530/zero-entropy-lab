@@ -105,6 +105,12 @@ Unknown, unavailable, unexecuted, and unobserved states stay explicit. Do not cl
 
 These support openness and reuse; they do not establish scientific validity.
 
+### Data-plane and observation-plane separation / 数据层与观察口径分离
+
+**中文**：原始状态账本、独立研究 observation、GitHub Actions 收据、定期汇总、前端数据显示和冻结归档，均不能被当成相同数据源；长期判断需要输入身份、日期、状态连续性、错误恢复与审批边界，以及实际可复核的失败／反例；旧 Jules 与当前 GPT Native 的生产者记录按原身份保存，不追改为同一执行
+
+**English**: Raw state ledgers, independent research observations, GitHub Actions receipts, periodic aggregates, frontend displays and frozen archives are not equivalent sources. Longitudinal claims need input identity, dates, state continuity, recovery/approval boundaries and inspectable failures or counterexamples. Historical Jules and prospective GPT Native producer records retain their own identities rather than being relabeled as one run
+
 ## Scholarly metadata discipline
 
 Before future scholarly-metadata publication or revision, preserve Canonical Type, One-line Positioning, Primary Domains, Non-goals, accurate structured subjects where supported, and 5–7 defining keywords. Do not rewrite technically precise descriptions into classifier-facing marketing copy or use keyword stuffing.
