@@ -1,5 +1,10 @@
 # Release and Archival Policy
 
+> **Bilingual reading guide / 双语阅读指引（2026-11-13）**  
+> **中文**：本文件属于可靠状态转换、Agent Runtime 容错与执行证据边界的公开仓库说明；发布版本、归档 DOI、当前 main 和实验结果分别取证；历史截止点与执行状态不因本次双语整理而改变  
+> **English**: This root document belongs to fault-tolerant state transitions, agent-runtime contracts, and bounded execution evidence; Release versions, archival DOIs, current main, and experimental results are separate evidentiary objects. Historical cutoffs and execution status are not changed by this bilingual documentation update
+
+
 This repository treats `main` as the current repository state and release tags as immutable point-in-time snapshots.
 
 ## Policy
@@ -47,6 +52,12 @@ The fourth archived version is [v2026.10-fourteen-day-evidence-checkpoint](https
 - Software-family concept DOI: [10.5281/zenodo.22791081](https://doi.org/10.5281/zenodo.22791081)
 
 Use the version DOI for this exact checkpoint and the concept DOI for the software family. `CITATION.cff` and CodeMeta retain the family identifier and recorded September 16 baseline date. Later changes to `main` belong to subsequent repository state; the checkpoint tag remains unchanged.
+
+### 固定软件归档与可演进的可靠性证据 / Fixed releases and evolving reliability evidence
+
+**中文**：`main` 的代码和失败恢复研究可演进，但 Git tag 与 Zenodo version DOI 归档的仍是指定版本；concept DOI `10.5281/zenodo.22791081` 指向软件家族；只有确切来源修订、运行命令、环境、输入、输出和结果比较才能支撑新的复现主张，发布与下载统计不是系统可靠性、外部采用或科研证实
+
+**English**: The implementation and failure-recovery research on `main` evolve, while Git tags and Zenodo version DOIs preserve specific archival snapshots; concept DOI `10.5281/zenodo.22791081` names the software family. A reproducibility claim needs source revision, actual command, environment, inputs, outputs and comparison. Releases and download counts do not measure reliability or independent scientific adoption
 
 ## Open-science reuse and research records
 

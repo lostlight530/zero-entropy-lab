@@ -1,10 +1,17 @@
 # Security Policy
 
+
 ## Supported State
 
 Security fixes apply to the latest commit on `main`.
 
 Historical snapshots, generated reports, feature branches, and pull requests are not maintained as independent release lines.
+
+### 中文安全报告与权限范围 / Private vulnerability reporting and authority
+
+安全疑虑请使用下方 GitHub 私密漏洞报告渠道，勿在公开 PR、日志和研究附件中泄露凭据或可利用细节；状态一致性、哈希、权限配置与外部输入可信度互不等价，安全主张需单独验证
+
+Use the private vulnerability channel below, not public PRs or logs, for credentials or exploit detail. State consistency, hashes, permission configuration and trust in external inputs are distinct; security claims require their own checks
 
 ## Private Reporting
 

@@ -1,5 +1,10 @@
 # Research Template / 科研记录模板
 
+> **Bilingual reading guide / 双语阅读指引（2026-11-13）**  
+> **中文**：本文件属于可靠状态转换、Agent Runtime 容错与执行证据边界的公开仓库说明；模板只对新研究记录生效，旧结果保留原始时间状态；历史截止点与执行状态不因本次双语整理而改变  
+> **English**: This root document belongs to fault-tolerant state transitions, agent-runtime contracts, and bounded execution evidence; The template governs new records only; historical results keep their original temporal state. Historical cutoffs and execution status are not changed by this bilingual documentation update
+
+
 Status: prospective research-record template
 Scope: new research records only; durable open-research method is owned by `OPEN_RESEARCH.md`
 
@@ -7,7 +12,7 @@ Scope: new research records only; durable open-research method is owned by `OPEN
 
 English is the canonical/default language of this template. Chinese labels and guidance are provided for accessibility. If bilingual wording diverges, the English instruction governs; repository-native contracts remain authoritative over this template.
 
-英文为本模板的默认与规范语言；中文标签与说明用于辅助理解。若双语表述出现差异，以英文说明为准；仓库原生 contract 对本模板始终具有更高权威。
+英文为本模板的默认与规范语言；中文标签与说明用于辅助理解；若双语表述出现差异，以英文说明为准；仓库原生 contract 对本模板始终具有更高权威；
 
 Historical records are not rewritten by this template
 
@@ -80,6 +85,11 @@ State one question that can be contradicted by evidence
 - Proposed explanation:
 - Support condition:
 - Falsifier:
+
+### Reliable state and version evidence / 状态与版本证据字段
+
+- 中文：记录输入账本或 fixture、源 Git SHA、运行环境／权限、工具调用、可观察状态转移、失败及恢复证据、所属观察窗口与原始／聚合口径；软件 concept DOI 不表示当次运行通过，引用冻结版本时使用其对应 version DOI
+- English: Specify input ledger/fixture, Git SHA, execution environment/permissions, tool calls, observable state transitions, failure/recovery evidence, observation period and raw/aggregate denominator. A software-family concept DOI is not a PASS receipt; cite the corresponding version DOI for a frozen release
 
 ## Evidence or source basis / 证据基础
 

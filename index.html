@@ -755,6 +755,147 @@
         text-align: left;
       }
     }
+
+/* Zero workflow-first public presentation, 2026-11-13 */
+[id] { scroll-margin-top:80px }
+.wf-primary {padding:70px 0 24px}
+.wf-kicker {font:700 .73rem var(--mono);letter-spacing:.13em;color:#7de9ff;text-transform:uppercase;margin-bottom:12px}
+.wf-hero-grid {display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,.65fr);align-items:center;gap:40px}
+.wf-primary h1{font-size:clamp(2.45rem,5.2vw,5rem);line-height:1.08;letter-spacing:-.045em;color:#f4fbff;max-width:850px}
+.wf-primary h1 em {font-style:normal;background:linear-gradient(100deg,#69ebff,#f5faff,#ff80b7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wf-lead {font-size:1.02rem;color:#aec7db;line-height:1.9;margin:20px 0;max-width:740px}
+.wf-actions,.wf-links {display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.wf-actions a{padding:11px 17px;border-radius:11px;border:1px solid rgba(83,221,241,.4);color:#e0f9ff;background:rgba(83,221,241,.08);text-decoration:none;font:.85rem var(--mono)}
+.wf-actions a:last-child{border-color:rgba(251,191,36,.36);color:#ffe1a8;background:rgba(251,191,36,.05)}
+.wf-actions a:hover,.wf-actions a:focus-visible{background:rgba(83,221,241,.16)}
+.wf-context{padding:24px;border:1px solid rgba(83,221,241,.3);border-radius:21px;background:linear-gradient(150deg,rgba(18,40,60,.85),rgba(21,11,34,.84));box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.wf-context .wf-track{padding:9px 0 9px 14px;margin:11px 0;border-left:3px solid var(--zero);font-size:.96rem;line-height:1.5}
+.wf-context .wf-track:last-of-type{border-color:var(--welcome)}
+.wf-context small{display:block;font:.71rem var(--mono);color:#92aabc;margin-top:4px}
+.wf-context p{color:#a7bfd0;border-top:1px solid var(--line);padding-top:12px;margin-top:15px;font-size:.84rem}
+.wf-block{padding:44px 0 12px}
+.wf-heading {max-width:850px;margin-bottom:24px}
+.wf-heading h2 {font-size:clamp(1.75rem,3.2vw,2.55rem);line-height:1.2;color:#f4faff}
+.wf-heading p{color:#a6bdcf;line-height:1.8;margin-top:9px}
+.wf-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:15px 0}
+.wf-step,.wf-term,.wf-era{background:linear-gradient(160deg,rgba(18,30,49,.9),rgba(7,12,24,.9));border:1px solid rgba(132,164,196,.24);border-radius:17px;padding:20px}
+.wf-step {min-height:175px}
+.wf-no{font:700 .72rem var(--mono);color:#68deee;letter-spacing:.09em}
+.wf-step h3,.wf-term h3,.wf-era h3{font-size:1.19rem;color:#effaff;margin:9px 0 6px}
+.wf-step p,.wf-term p,.wf-era p{font-size:.87rem;line-height:1.8;color:#a9bfd3}
+.wf-gate{padding:16px 18px;border-radius:13px;background:rgba(251,191,36,.055);border:1px solid rgba(251,191,36,.28);color:#e9d6ad;font-size:.9rem}
+.wf-gate b{color:#ffe5b1}
+.wf-small-note{color:#93abc0;font-size:.8rem;line-height:1.75;margin-top:13px}
+.wf-host-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.wf-host{background:rgba(5,20,33,.86);border:1px solid rgba(0,240,255,.3);border-radius:20px;padding:24px}
+.wf-host.welcome{border-color:rgba(255,42,133,.35);background:rgba(30,12,29,.7)}
+.wf-host h3{color:#fff;font-size:1.48rem;margin-bottom:7px}
+.wf-host p{color:#b1c5d5;line-height:1.8;font-size:.9rem}
+.wf-path{display:block;border:1px solid rgba(142,169,195,.15);background:rgba(1,7,16,.6);border-radius:9px;padding:12px;margin:13px 0;color:#d8f3ff;font:.79rem/1.8 var(--mono);overflow-wrap:anywhere}
+.wf-host dd,.wf-host dt{font-size:.85rem;line-height:1.8}
+.wf-host dl{display:grid;grid-template-columns:85px 1fr;gap:8px 11px}
+.wf-host dt{color:#86a3b8}.wf-host dd{color:#d4e5f0}
+.wf-links a{font:.8rem var(--mono);text-decoration:underline;text-underline-offset:4px;color:#9beeff}
+.wf-host.welcome .wf-links a{color:#ffc0da}
+.wf-glossary,.wf-eras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.wf-term h3{font-size:1rem}
+.wf-era .wf-date {font:700 .75rem var(--mono);color:#ffdc90}
+.wf-era h3{margin:12px 0}
+.wf-boundary{border-left:3px solid var(--gold);padding:8px 0 8px 15px;color:#a7bed2;font-size:.86rem;line-height:1.8;margin-top:20px}
+.wf-history-marker{border-top:1px dashed rgba(251,191,36,.4);background:linear-gradient(rgba(251,191,36,.04),transparent);padding:35px 0 5px;margin-top:45px}
+.wf-history-marker h2{font-size:clamp(1.55rem,3vw,2.35rem);color:#ffe6b3}
+.wf-history-marker p{max-width:870px;color:#acbfd0;line-height:1.8;margin-top:9px}
+.hero h2.wf-old-title {font-size:clamp(2.45rem,5vw,4.8rem);line-height:1.12;color:#fff}
+.wf-mobile {display:none;position:relative;margin-left:8px}
+.wf-mobile summary{list-style:none;cursor:pointer;border:1px solid rgba(148,163,184,.35);padding:9px 13px;border-radius:9px;font:.78rem var(--mono);color:#e8f9ff}
+.wf-mobile summary::-webkit-details-marker{display:none}
+.wf-mobile-panel{position:absolute;z-index:90;right:0;top:calc(100% + 12px);min-width:min(310px,calc(100vw - 30px));display:grid;gap:2px;border-radius:13px;padding:9px;background:#0c1425;border:1px solid rgba(148,163,184,.3);box-shadow:0 22px 45px rgba(0,0,0,.4)}
+.wf-mobile-panel a{padding:10px 12px;border-radius:7px;color:#d3ecfa;text-decoration:none;font:.84rem var(--mono)}
+.wf-mobile-panel a:hover,.wf-mobile-panel a:focus-visible{background:rgba(83,221,241,.15)}
+@media(max-width:1000px){.wf-flow{grid-template-columns:repeat(2,1fr)}.wf-glossary{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.wf-hero-grid,.wf-eras{grid-template-columns:1fr}.wf-mobile{display:block}.wf-primary{padding-top:45px}.nav-links{margin-left:auto}}
+@media(max-width:680px){.wf-flow,.wf-host-grid,.wf-glossary{grid-template-columns:1fr}.wf-step{min-height:0}.wf-host dl{grid-template-columns:1fr}.wf-host dt{margin-top:8px}.wf-block{padding-top:34px}}
+
+
+/* Workflow-first historical data gallery: new responsive presentation, original source retained separately. */
+.wf-history-data { position:relative; padding: 0 0 20px; background:linear-gradient(180deg,rgba(9,16,30,.28),rgba(5,8,17,.08)); }
+.wf-history-data .hero {padding:28px 0 16px;}
+.wf-history-data .hero .wrap {position:relative;isolation:isolate;overflow:hidden;border:1px solid rgba(251,191,36,.26);border-radius:24px;padding:34px 38px;background:linear-gradient(112deg,rgba(25,30,45,.96),rgba(12,18,34,.93) 60%,rgba(36,13,32,.67));box-shadow:0 18px 52px rgba(0,0,0,.22)}
+.wf-history-data .hero .wrap::before {content:"";position:absolute;z-index:-1;width:360px;height:360px;right:-90px;top:-205px;border-radius:50%;background:radial-gradient(circle,rgba(255,133,186,.17),transparent 72%);pointer-events:none}
+.wf-history-data .eyebrow {border-radius:8px;letter-spacing:.065em;font-size:.75rem;padding:7px 11px;margin-bottom:16px}
+.wf-history-data .eyebrow .pulse {animation:none;box-shadow:none}
+.wf-history-data .wf-old-title{font-size:clamp(2rem,4.3vw,3.55rem);max-width:780px;letter-spacing:-.055em;line-height:1.12;margin-bottom:17px}
+.wf-history-data .wf-old-title .grad {display:block;font-size:.83em;line-height:1.25}
+.wf-history-data .hero-copy{font-size:.95rem;max-width:740px;line-height:1.85;margin-bottom:17px}
+.wf-history-data .hero-actions {gap:8px;margin-top:4px}
+.wf-history-data .hero-actions .btn {min-height:41px;border-radius:9px;font-size:.76rem;padding:9px 13px}
+.wf-exhibit-nav {padding:9px 0 18px}
+.wf-exhibit-nav .wrap {display:flex;gap:7px;flex-wrap:wrap;align-items:center;border:1px solid rgba(151,177,205,.17);padding:10px;border-radius:13px;background:rgba(9,16,29,.86)}
+.wf-exhibit-nav .wf-exhibit-label {font:700 .72rem var(--mono);letter-spacing:.07em;color:#ffe1a7;margin:0 10px 0 8px}
+.wf-exhibit-nav a {font:.77rem var(--mono);color:#bbd2e4;text-decoration:none;border:1px solid transparent;border-radius:8px;padding:8px 10px;min-height:36px;display:inline-flex;align-items:center}
+.wf-exhibit-nav a:hover,.wf-exhibit-nav a:focus-visible{border-color:rgba(115,225,243,.35);background:rgba(115,225,243,.085);color:#fff}
+.wf-history-data .section{padding:23px 0}
+.wf-history-data .section-head{align-items:end;margin-bottom:18px}
+.wf-history-data .section-kicker{font-size:.72rem;letter-spacing:.13em;color:#eac98b;margin-bottom:7px}
+.wf-history-data .section-head h2,.wf-history-data .card h2{font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.22;letter-spacing:-.035em;color:#f3f7ff}
+.wf-history-data .section-desc{max-width:800px;font-size:.88rem;line-height:1.8;margin-top:9px;color:#b0c4d3}
+.wf-history-data .card{background:linear-gradient(150deg,rgba(20,31,50,.96),rgba(8,13,27,.96));border:1px solid rgba(147,170,193,.19);border-radius:17px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.16)}
+.wf-history-data .grid{gap:13px}
+.wf-history-data .metric{border-top:3px solid rgba(0,240,255,.68);min-height:150px;display:flex;flex-direction:column;justify-content:center}
+.wf-history-data .metric.welcome{border-color:rgba(255,82,153,.7)}
+.wf-history-data .metric-label{color:#abc1d2;font-size:.75rem;letter-spacing:.06em;line-height:1.4}
+.wf-history-data .metric-value{font-size:clamp(2rem,4vw,3rem);font-variant-numeric:tabular-nums;letter-spacing:-.04em;margin-bottom:9px}
+.wf-history-data .metric-note{color:#adc1d4;font-size:.81rem;line-height:1.5}
+.wf-history-data .bars{gap:17px}
+.wf-history-data .bar-row{grid-template-columns:minmax(108px,135px) minmax(0,1fr) 68px;gap:12px}
+.wf-history-data .bar-label{color:#b5c9d7;line-height:1.4;font-size:.75rem}
+.wf-history-data .bar-track{height:11px;border-radius:7px;background:rgba(190,211,229,.08);border-color:rgba(141,167,194,.16)}
+.wf-history-data .bar-fill{background:linear-gradient(90deg,#00a2c7,#51deed);border-radius:7px}
+.wf-history-data .bar-fill.welcome{background:linear-gradient(90deg,#b83d7a,#ff76b0)}
+.wf-history-data .bar-value{text-align:right;font-variant-numeric:tabular-nums;font-weight:800;color:#e8f3ff}
+.wf-data-note{font-size:.78rem;color:#8ea9bd;line-height:1.65;margin-top:15px}
+.wf-history-data .mini{background:rgba(9,17,31,.85);border:1px solid rgba(149,181,202,.18);border-radius:12px;padding:13px}
+.wf-history-data .mini b {font-variant-numeric:tabular-nums;color:#f2f9ff;font-size:1.42rem}
+.wf-history-data .mini span{line-height:1.55;font-size:.68rem;letter-spacing:.025em}
+.wf-history-data .lane{padding:0;border-radius:18px;box-shadow:0 16px 36px rgba(0,0,0,.22)}
+.wf-history-data .lane.zero{border-top:3px solid #36cde0}
+.wf-history-data .lane.welcome{border-top:3px solid #ee6ba5}
+.wf-history-data .lane-head {padding:21px 22px 19px;background:rgba(7,17,34,.6);align-items:center}
+.wf-history-data .lane-head .repo-name{font-size:1.18rem}
+.wf-history-data .lane-body{padding:20px 22px 23px}
+.wf-history-data .lane-number {width:40px;height:40px;border-radius:10px}
+.wf-history-data .lane .tag{border-radius:8px;font-size:.66rem;padding:5px 7px;line-height:1.4}
+.wf-history-data .lane-head>.tag {background:rgba(255,255,255,.045)}
+.wf-history-data .mini-metrics {gap:9px;margin-bottom:19px}
+.wf-history-data .steps{gap:8px}
+.wf-history-data .step {grid-template-columns:32px minmax(0,1fr) auto;gap:11px;padding:12px;background:rgba(6,14,29,.62);border-color:rgba(140,169,195,.16);border-radius:11px}
+.wf-history-data .step::before {width:29px;height:29px;border-radius:8px;background:rgba(255,255,255,.045);color:#a7d8e5}
+.wf-history-data .step-main{font-size:.9rem;line-height:1.4}
+.wf-history-data .step-sub{font-size:.79rem;line-height:1.65;overflow-wrap:anywhere}
+.wf-history-data .step>.tag {color:#a8bfd1;border-color:rgba(156,182,202,.18)}
+.wf-history-data .matrix {padding:0;overflow-x:auto;overscroll-behavior-x:contain;border-radius:17px}
+.wf-history-data .matrix-row {min-width:720px;grid-template-columns:minmax(160px,.85fr) repeat(2,minmax(258px,1.25fr));min-height:53px;border-color:rgba(146,174,196,.14)}
+.wf-history-data .matrix-row:nth-child(2n+1):not(.matrix-head){background:rgba(89,128,165,.035)}
+.wf-history-data .matrix-head {background:rgba(33,51,76,.78);font-size:.79rem;color:#f2f8ff}
+.wf-history-data .matrix-cell {padding:13px 15px;font-size:.82rem;line-height:1.65;border-color:rgba(156,182,203,.13);overflow-wrap:anywhere}
+.wf-history-data .matrix-cell:first-child {color:#d6e5f0;font-weight:700}
+.wf-history-data .matrix-head .matrix-cell{color:#eef7ff}
+.wf-history-data .matrix .yes{font-weight:600;color:#95e4c4}
+.wf-history-data .terminal{border-radius:16px;border:1px solid rgba(96,191,214,.26);background:#07101b}
+.wf-history-data .terminal-head{height:auto;min-height:55px;padding:14px 18px;background:#111e2c;color:#b7d4e2;font-size:.78rem}
+.wf-history-data .terminal-body {padding:14px 18px;font-size:.8rem;overflow-x:auto}
+.wf-history-data .log-line {display:block;white-space:normal;overflow-wrap:anywhere;line-height:1.7;padding:7px 1px;margin:0;color:#adbed0;border-bottom:1px solid rgba(136,169,196,.08)}
+.wf-history-data .log-line.sep {height:16px;background:transparent;border-bottom:1px dashed rgba(163,192,211,.28)}
+.wf-history-data .archive-terminal{opacity:1;margin-top:15px;border-color:rgba(251,191,36,.19);box-shadow:none}
+.wf-history-data .archive-terminal summary{padding:17px 20px;font-size:.8rem;color:#f5ddb1;background:rgba(251,191,36,.045)}
+.wf-history-data .archive-terminal[open] summary {border-bottom:1px solid rgba(251,191,36,.19)}
+.wf-history-data .explain-card {background:rgba(16,25,41,.92);padding:20px}
+.wf-history-data .explain-card h3 {font-size:1.02rem;color:#f0f8ff}
+.wf-history-data .explain-card p{font-size:.86rem;line-height:1.78;color:#a8bfd0}
+.wf-history-data .explain-card a{color:#9be8ff;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:900px){.wf-history-data .grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.wf-history-data .grid-2{grid-template-columns:1fr}.wf-history-data .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.wf-history-data .matrix-row{grid-template-columns:minmax(160px,.85fr) repeat(2,minmax(258px,1.25fr))}.wf-exhibit-nav .wrap{gap:2px}}
+@media(max-width:600px){.wf-history-data .hero .wrap {padding:24px 18px}.wf-history-data .grid-4{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.wf-history-data .metric{min-height:136px;padding:16px}.wf-history-data .metric-value{font-size:clamp(1.6rem,7vw,2.15rem)}.wf-history-data .metric-label{font-size:.64rem}.wf-history-data .grid-3{grid-template-columns:1fr}.wf-history-data .mini-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.wf-history-data .mini{padding:9px}.wf-history-data .mini b{font-size:1.05rem}.wf-history-data .mini span{font-size:.58rem}.wf-history-data .lane-head{padding:15px;align-items:flex-start}.wf-history-data .lane-head .repo-name{font-size:1rem;overflow-wrap:anywhere}.wf-history-data .lane-body{padding:14px}.wf-history-data .step{grid-template-columns:30px minmax(0,1fr);gap:8px}.wf-history-data .step>.tag{grid-column:2;width:max-content;max-width:100%}.wf-history-data .bar-row{grid-template-columns:minmax(85px,100px) minmax(0,1fr) 48px;gap:8px}.wf-history-data .bar-value{font-size:.72rem}.wf-exhibit-nav .wrap{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;white-space:nowrap}.wf-exhibit-nav a{flex:none}.wf-exhibit-nav .wf-exhibit-label{flex:none}.wf-history-data .terminal-body{padding:10px 12px}.wf-history-data .log-line{font-size:.72rem}}
+
   </style>
 </head>
 <body class="lang-zh">
@@ -766,16 +907,124 @@
         <span>NEXUS FLOW</span>
       </a>
       <div class="nav-links">
-        <a href="#usage"><span class="zh">年度用量</span><span class="en">Usage</span></a>
-        <a href="#lanes"><span class="zh">双工作流</span><span class="en">Lanes</span></a>
-        <a href="#matrix"><span class="zh">步骤对比</span><span class="en">Matrix</span></a>
-        <a href="#explain"><span class="zh">0基础解析</span><span class="en">Basics</span></a>
+        <a href="#flow"><span class="zh">基础流程</span><span class="en">Core Flow</span></a>
+        <a href="#hosts"><span class="zh">双仓</span><span class="en">Two Hosts</span></a>
+        <a href="#glossary"><span class="zh">0基础</span><span class="en">Basics</span></a>
+        <a href="#lineage">AGI</a>
+        <a href="#history"><span class="zh">历史</span><span class="en">History</span></a>
         <button class="lang-btn" id="langBtn" type="button">ZH / EN</button>
       </div>
+      <details class="wf-mobile" id="wfMobile"><summary><span class="zh">导航 ☰</span><span class="en">Menu ☰</span></summary>
+        <div class="wf-mobile-panel"><a href="#flow"><span class="zh">基础流程</span><span class="en">Core Flow</span></a><a href="#hosts"><span class="zh">双仓独立执行</span><span class="en">Two Hosts</span></a><a href="#glossary"><span class="zh">0 基础术语</span><span class="en">Basics</span></a><a href="#lineage">AGI <span class="zh">历史谱系</span><span class="en">Lineage</span></a><a href="#history"><span class="zh">历史展馆</span><span class="en">History</span></a><a href="#usage"><span class="zh">历史用量</span><span class="en">Usage</span></a><a href="#logs"><span class="zh">历史日志</span><span class="en">Logs</span></a></div>
+      </details>
     </div>
   </nav>
 
   <main id="top">
+
+    <!-- Stable core flow precedes the original 2026-08-07 historical exhibit. -->
+    <section class="wf-primary" aria-labelledby="core-title">
+      <div class="wrap wf-hero-grid">
+        <div>
+          <div class="wf-kicker">NEXUS CORTEX · CORE WORKFLOW · TWO INDEPENDENT REPOSITORIES</div>
+          <h1 id="core-title"><span class="zh">先理解固定的 <em>NEXUS 工作流</em></span><span class="en">Understand the stable <em>NEXUS workflow</em></span></h1>
+          <p class="wf-lead"><span class="zh">两仓独立运行同类的采集、图谱、记忆、分析与受控持久化流程；先看长期不变的基本逻辑，再通过零基础术语和 AGI 历史版本理解它如何演进；这里不是实时监控台，也不是把两仓合成一个 Agent Runtime</span><span class="en">Two independent repositories run comparable harvesting, graph, memory, analysis and guarded-persistence stages. Start with the enduring core, then learn the terms and trace changes through AGI. This is neither live telemetry nor a unified cross-repository agent runtime.</span></p>
+          <div class="wf-actions">
+            <a href="#flow"><span class="zh">查看固定流程</span><span class="en">Explore core flow</span> ↓</a>
+            <a href="#history"><span class="zh">查看原版历史数据</span><span class="en">Explore original historical data</span> ↓</a>
+          </div>
+        </div>
+        <aside class="wf-context">
+          <div class="wf-kicker">TWO HOSTS · SHARED PATTERN</div>
+          <div class="wf-track"><strong>zero-entropy-lab</strong><small>Kernel · data/knowledge · Hash chain</small></div>
+          <div class="wf-track"><strong>welcome-to-github</strong><small>Brain · docs/brain/knowledge · Graph</small></div>
+          <p><span class="zh">相同的核心阶段，不同的存储、测试、保护路径与独立执行状态</span><span class="en">Shared core phases, different storage, tests, protected paths and independent execution state</span></p>
+        </aside>
+      </div>
+    </section>
+    <section class="wf-block" id="flow">
+      <div class="wrap">
+        <header class="wf-heading"><div class="wf-kicker">01 / STABLE EXECUTION PATTERN</div>
+          <h2><span class="zh">两仓共同的固定处理流程</span><span class="en">One stable lifecycle pattern across both hosts</span></h2>
+          <p><span class="zh">2026-08-07 两仓已包含这些基础阶段；8 月 31 日以后演进的是验证和应用边界，而不是重新设计认知处理链</span><span class="en">Both repositories already had these core stages on 2026-08-07. Later evolution strengthened validation and application boundaries rather than replacing the processing chain</span></p></header>
+        <div class="wf-gate"><b>BEFORE · <span class="zh">执行前检查</span><span class="en">Preflight</span></b> — <span class="zh">检查代码、测试和活动知识账本；现行版本将只读验证与可写应用分离</span><span class="en">Check code, tests and active ledgers; current workflows separate read-only validation from writable Apply</span></div>
+        <div class="wf-flow"><article class="wf-step"><div class="wf-no">STAGE 01</div><h3>Harvest</h3><p><span class="zh">采集经批准的外部来源，并保留来源身份</span><span class="en">Collect approved external sources and preserve provenance</span></p></article>
+<article class="wf-step"><div class="wf-no">STAGE 02</div><h3>Project</h3><p><span class="zh">把来源证据投影成图谱实体与关系</span><span class="en">Project sourced evidence into graph entities and relations</span></p></article>
+<article class="wf-step"><div class="wf-no">STAGE 03</div><h3>Canonicalize</h3><p><span class="zh">整理知识记录并隔离受保护的研究目录</span><span class="en">Canonicalize records and isolate protected research paths</span></p></article>
+<article class="wf-step"><div class="wf-no">STAGE 04</div><h3>Rebuild</h3><p><span class="zh">从知识记录重建当前记忆与图谱状态</span><span class="en">Rebuild memory and graph state from retained knowledge</span></p></article>
+<article class="wf-step"><div class="wf-no">STAGE 05</div><h3>Ingest</h3><p><span class="zh">摄取限定范围的本仓材料，再做隔离检查</span><span class="en">Ingest bounded repository material, then re-check isolation</span></p></article>
+<article class="wf-step"><div class="wf-no">STAGE 06</div><h3>Ponder</h3><p><span class="zh">对图谱做有边界的分析和观察</span><span class="en">Produce bounded analysis and graph observations</span></p></article>
+<article class="wf-step"><div class="wf-no">STAGE 07</div><h3>Evolve</h3><p><span class="zh">生成报告及后续任务建议，不自动证明研究结论</span><span class="en">Generate reports and proposals, not validated scientific conclusions</span></p></article>
+<article class="wf-step"><div class="wf-no">STAGE 08</div><h3>Verify / Apply</h3><p><span class="zh">通过测试、图谱、写入范围与冲突检查后才持久化</span><span class="en">Persist only after tests, graph, path and conflict gates pass</span></p></article></div>
+        <div class="wf-gate"><b>AFTER · <span class="zh">执行证据</span><span class="en">Execution evidence</span></b> — <span class="zh">在通过权限、写入目录与主分支冲突检查后，记录候选清单和执行回执；不等于验证外部资料的真伪</span><span class="en">After permission, path and main-conflict checks, record candidates and receipts; this does not prove external sources are true</span></div>
+        <p class="wf-small-note"><span class="zh">此图是可读的阶段概括，真实 YAML 还包含阶段间的重复校验、图谱重建与隔离；精确执行顺序请阅读各仓当前 YAML</span><span class="en">This is a readable phase summary. Executable YAML also contains intermediate repeated checks, graph rebuilds and isolation. See each current YAML for exact order</span></p>
+      </div>
+    </section>
+    <section class="wf-block" id="hosts">
+      <div class="wrap">
+        <header class="wf-heading"><div class="wf-kicker">02 / HOST CONTRACTS</div>
+          <h2><span class="zh">相同基础流程，不同执行边界</span><span class="en">Same core flow, separate execution boundaries</span></h2>
+          <p><span class="zh">两仓不是共享状态的统一服务，各自维护自己的源代码、知识记录、验证规则与保护目录</span><span class="en">These are not one state-sharing service. Each owns its code, knowledge records, verification rules and protected paths</span></p></header>
+        <div class="wf-host-grid">
+          <article class="wf-host"><div class="wf-kicker">01 · ZERO / KERNEL</div><h3>zero-entropy-lab</h3>
+            <p><span class="zh">以本仓 Kernel 和知识图谱为执行对象，明确隔离 Aegis、Ballast 和前端材料</span><span class="en">Operates over its local kernel and graph, explicitly isolating Aegis, Ballast and frontend material</span></p>
+            <code class="wf-path">src/kernel/protocol/nexus.py<br>data/{inputs,knowledge,memories}/</code>
+            <dl><dt><span class="zh">验证</span><span class="en">Validation</span></dt><dd>tests/run_tests.py · canonical graph · hash chain</dd><dt><span class="zh">隔离</span><span class="en">Isolation</span></dt><dd>Aegis / Ballast / index.html / assets / scripts / styles</dd></dl>
+            <div class="wf-links"><a href="https://github.com/lostlight530/zero-entropy-lab/blob/main/.github/workflows/nexus-life-cycle.yml" target="_blank" rel="noopener noreferrer"><span class="zh">活动工作流</span><span class="en">Active YAML</span></a><a href="https://github.com/lostlight530/zero-entropy-lab/tree/main/AGI/workflows" target="_blank" rel="noopener noreferrer"><span class="zh">AGI 封存目录</span><span class="en">AGI archive</span></a></div>
+          </article>
+          <article class="wf-host welcome"><div class="wf-kicker">02 · WELCOME / BRAIN</div><h3>welcome-to-github</h3>
+            <p><span class="zh">以本仓 Brain 和知识记录为执行对象，明确隔离 Horizon、Parallax 等独立研究</span><span class="en">Operates over its own brain and knowledge, explicitly isolating Horizon and Parallax research</span></p>
+            <code class="wf-path">docs/brain/nexus.py<br>docs/brain/{inputs,knowledge,memories}/</code>
+            <dl><dt><span class="zh">验证</span><span class="en">Validation</span></dt><dd>unittest discover -s tests · canonical entities/relations</dd><dt><span class="zh">隔离</span><span class="en">Isolation</span></dt><dd>Horizon / Parallax</dd></dl>
+            <div class="wf-links"><a href="https://github.com/lostlight530/welcome-to-github/blob/main/.github/workflows/nexus-life-cycle.yml" target="_blank" rel="noopener noreferrer"><span class="zh">活动工作流</span><span class="en">Active YAML</span></a><a href="https://github.com/lostlight530/welcome-to-github/tree/main/AGI/workflows" target="_blank" rel="noopener noreferrer"><span class="zh">AGI 封存目录</span><span class="en">AGI archive</span></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="wf-block" id="glossary">
+      <div class="wrap">
+        <header class="wf-heading"><div class="wf-kicker">03 / ZERO-PREREQUISITE EXPLANATIONS</div>
+          <h2><span class="zh">从零理解 GitHub Actions 与 NEXUS 术语</span><span class="en">Understand GitHub Actions and NEXUS from zero</span></h2>
+          <p><span class="zh">不预设 CI/CD 或 Agent 开发经验；术语在两种语言中对应同一个机制，而不是两套独立解释</span><span class="en">No CI/CD or agent-development background assumed. Chinese and English explain the same mechanisms</span></p></header>
+        <div class="wf-glossary"><article class="wf-term"><h3>Workflow</h3><p><span class="zh">仓库中的自动化配方，定义什么事件会运行哪些任务</span><span class="en">An automation recipe mapping events to jobs</span></p></article>
+<article class="wf-term"><h3>Trigger</h3><p><span class="zh">触发工作流的定时、提交、PR 或手动操作</span><span class="en">A schedule, push, PR or manual action starting a workflow</span></p></article>
+<article class="wf-term"><h3>Job / Step</h3><p><span class="zh">Job 是运行单元，Step 是其中的具体命令</span><span class="en">Job is an execution unit; step is a command inside it</span></p></article>
+<article class="wf-term"><h3>Runner</h3><p><span class="zh">GitHub 提供的临时执行机器，不是长期记忆</span><span class="en">Temporary GitHub execution machine, not persistent memory</span></p></article>
+<article class="wf-term"><h3>Harvest</h3><p><span class="zh">从指定外部来源读取材料；读到不等于证实</span><span class="en">Read approved external material; collection is not verification</span></p></article>
+<article class="wf-term"><h3>Project</h3><p><span class="zh">将有来源身份的材料映射为图谱关系</span><span class="en">Map provenance-aware material into graph relations</span></p></article>
+<article class="wf-term"><h3>Canonicalize</h3><p><span class="zh">去重、整理和隔离图谱数据</span><span class="en">Normalize, de-duplicate and isolate graph records</span></p></article>
+<article class="wf-term"><h3>Rebuild / Ingest</h3><p><span class="zh">重建记忆，再将限定的本仓材料纳入处理</span><span class="en">Rebuild memory and ingest bounded local material</span></p></article>
+<article class="wf-term"><h3>Ponder / Evolve</h3><p><span class="zh">生成分析、报告及候选任务，不等于自主科研结论</span><span class="en">Generate analyses, reports and candidate tasks, not autonomous scientific proof</span></p></article>
+<article class="wf-term"><h3>Evidence Gate</h3><p><span class="zh">在向下游传播前检查输入的格式、大小与来源哈希</span><span class="en">Check source type, size and provenance hashes before downstream processing</span></p></article>
+<article class="wf-term"><h3>Guarded Apply</h3><p><span class="zh">检查写入范围、main 基线和冲突后才允许提交</span><span class="en">Commit only after path, main-baseline and conflict checks</span></p></article>
+<article class="wf-term"><h3>Manifest / Receipt</h3><p><span class="zh">机器可读候选清单与人类可读的执行回执</span><span class="en">Machine-readable candidate manifest and human-readable execution receipt</span></p></article>
+<article class="wf-term"><h3>AGI Lineage</h3><p><span class="zh">封存历史 YAML、Git 提交、校验身份和演进记录；不执行这些副本</span><span class="en">Archived YAML, Git commits, hashes and lineage; backups are not executable Actions</span></p></article></div>
+      </div>
+    </section>
+    <section class="wf-block" id="lineage">
+      <div class="wrap">
+        <header class="wf-heading"><div class="wf-kicker">04 / AGI WORKFLOW LINEAGE</div>
+          <h2><span class="zh">循着两仓 AGI 封存，理解版本演化</span><span class="en">Follow both AGI archives to understand evolution</span></h2>
+          <p><span class="zh">保留真实历史候选、问题与修复关系，不把今天的工作流覆盖旧版；历史记录是证据，AGI 里的 YAML 不是正在执行的 Actions</span><span class="en">Preserve actual candidates, limitations and corrections; do not replace historical YAML with today's version. AGI copies are evidence, not active Actions</span></p></header>
+        <div class="wf-eras">
+          <article class="wf-era"><div class="wf-date">2026-08-07 / ORIGINAL VIEW</div><h3><span class="zh">核心流程已经存在</span><span class="en">Core workflow already existed</span></h3><p><span class="zh">两个独立的 consciousness Job 各自执行采集、重建、摄取、分析、演进、校验和提交；旧版主页完整保留在下方</span><span class="en">Two independent consciousness jobs each covered harvest, memory, analysis, verification and commit. The original homepage exhibit is retained below</span></p>
+            <div class="wf-links"><a href="https://github.com/lostlight530/zero-entropy-lab/blob/dcb709f8b89ced04a65d5973f8748d7c5e928ac0/.github/workflows/nexus-life-cycle.yml" target="_blank" rel="noopener noreferrer">Zero YAML</a><a href="https://github.com/lostlight530/welcome-to-github/blob/b78a2f4722d766f6fdfc956da852b671db354d9d/.github/workflows/nexus-life-cycle.yml" target="_blank" rel="noopener noreferrer">Welcome YAML</a></div></article>
+          <article class="wf-era"><div class="wf-date">2026-08-31 / CONTROL PLANE</div><h3><span class="zh">只读验证与受控应用</span><span class="en">Read-only validation and guarded apply</span></h3><p><span class="zh">工作流被拆为 validate 和 apply，增加 PR 验证、Manifest、冲突保护与 Human Receipt，不改变基础认知阶段</span><span class="en">Workflows split into validate and apply; PR checks, manifests, conflict guards and human receipts were added without replacing core stages</span></p>
+            <div class="wf-links"><a href="https://github.com/lostlight530/zero-entropy-lab/tree/main/AGI/workflows/nexus-life-cycle/recovered-2026-08-31-receipt" target="_blank" rel="noopener noreferrer">Zero AGI</a><a href="https://github.com/lostlight530/welcome-to-github/tree/main/AGI/workflows/nexus-life-cycle/recovered-2026-08-31-receipt" target="_blank" rel="noopener noreferrer">Welcome AGI</a></div></article>
+          <article class="wf-era"><div class="wf-date">2026-11-06 / SOURCE BOUNDARY</div><h3><span class="zh">有界的活动来源证据</span><span class="en">Bounded active-source evidence</span></h3><p><span class="zh">新增来源格式、大小和哈希约束，超大快照先归档再转为固定引用；这是对原流程的加固，不是新架构</span><span class="en">Source type, size and hash gates were added; oversized snapshots are archived before pinning. This hardens the existing flow rather than replacing it</span></p>
+            <div class="wf-links"><a href="https://github.com/lostlight530/zero-entropy-lab/tree/main/AGI/workflows/nexus-life-cycle/candidate-2026-11-06-bounded-evidence" target="_blank" rel="noopener noreferrer">Zero AGI</a><a href="https://github.com/lostlight530/welcome-to-github/tree/main/AGI/workflows/nexus-life-cycle/candidate-2026-11-06-bounded-evidence" target="_blank" rel="noopener noreferrer">Welcome AGI</a></div></article>
+        </div>
+        <div class="wf-boundary"><span class="zh">AGI/workflows 保存版本谱系、源提交和非活动备份，.github/workflows 才是当前 Actions 入口；WorkflowHub 版本登记不等于完整历史顺序，静态主页不等于当日之外的运行证明</span><span class="en">AGI/workflows stores lineage, source commits and inert backups; .github/workflows is the active Actions entry. WorkflowHub registrations are not the whole chronological history, and a static page is not proof of later execution</span></div>
+      </div>
+    </section>
+    <section class="wf-history-marker" id="history">
+      <div class="wrap"><div class="wf-kicker">05 / PRESERVED AUGUST EXHIBIT</div>
+        <h2><span class="zh">完整保留原版历史展示</span><span class="en">Original historical exhibit, fully retained</span></h2>
+        <p><span class="zh">以下原样保留 2026-08-07 快照窗口的工作流用量、计算成本、步骤对比、两仓日志和 2026-06-28 历史日志；它们是带日期的历史观察，不是实时统计，不与当前运行结果混算</span><span class="en">The historical usage, compute budget, workflow lanes, stage matrix, August 7 logs and June 28 log archive remain below. They are dated observations, not live metrics to mix with current runs</span></p>
+        <div class="wf-links"><a href="https://github.com/lostlight530/zero-entropy-lab/blob/90cdde37f592dabee4d7474bc4de9ba53716dfec/docs/public-surface/2026-11-13-pre-workflow-first-index.html" target="_blank" rel="noopener noreferrer"><span class="zh">查看改版前完整 HTML</span><span class="en">Inspect exact pre-redesign HTML</span></a><a href="#usage"><span class="zh">跳到历史用量</span><span class="en">Historic usage</span></a><a href="#logs"><span class="zh">跳到原始运行日志</span><span class="en">Original logs</span></a></div>
+      </div>
+    </section>
+    <div class="wf-history-data" id="legacy-exhibit">
     <section class="hero">
       <div class="wrap">
         <div class="eyebrow">
@@ -783,10 +1032,10 @@
           <span class="zh">2026-02-12 → 2026-08-07 · GitHub Actions Last-year snapshot</span>
           <span class="en">2026-02-12 → 2026-08-07 · GitHub Actions Last-year snapshot</span>
         </div>
-        <h1>
+        <h2 class="wf-old-title">
           NEXUS LIFE-CYCLE
           <span class="grad">WORKFLOW VISUALIZER</span>
-        </h1>
+        </h2>
         <p class="hero-copy zh">
           这是 zero-entropy-lab 与 welcome-to-github 的双工作流可视化主页, 用一页展示年度用量, 运行效率, 失败成本, 步骤差异, 以及实际运行日志证据
         </p>
@@ -801,6 +1050,19 @@
         </div>
       </div>
     </section>
+
+    <nav class="wf-exhibit-nav" aria-label="Historical data sections / 历史数据导航">
+      <div class="wrap">
+        <span class="wf-exhibit-label">08.07 / <span class="zh">历史数据</span><span class="en">HISTORICAL DATA</span></span>
+        <a href="#usage"><span class="zh">负载</span><span class="en">Usage</span></a>
+        <a href="#budget"><span class="zh">计算成本</span><span class="en">Budget</span></a>
+        <a href="#efficiency"><span class="zh">效率与失败</span><span class="en">Efficiency</span></a>
+        <a href="#lanes"><span class="zh">双仓步骤</span><span class="en">Lanes</span></a>
+        <a href="#matrix"><span class="zh">对比矩阵</span><span class="en">Matrix</span></a>
+        <a href="#logs"><span class="zh">运行日志</span><span class="en">Logs</span></a>
+        <a href="#explain"><span class="zh">原版术语</span><span class="en">Original glossary</span></a>
+      </div>
+    </nav>
 
     <section class="section" id="usage">
       <div class="wrap">
@@ -848,7 +1110,7 @@
 
     <section class="section">
       <div class="wrap grid grid-2">
-        <article class="card">
+        <article class="card" id="budget">
           <div class="section-kicker">Compute Budget</div>
           <h2><span class="zh">计算预算</span><span class="en">Compute budget</span></h2>
           <p class="section-desc zh">
@@ -860,28 +1122,29 @@
           <div class="bars" style="margin-top:1.1rem">
             <div class="bar-row">
               <div class="bar-label">Zero minutes</div>
-              <div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div>
+              <div class="bar-track"><div class="bar-fill zero" style="--w:55%"></div></div>
               <div class="bar-value">3,870</div>
             </div>
             <div class="bar-row">
               <div class="bar-label">Welcome minutes</div>
-              <div class="bar-track"><div class="bar-fill" style="--w:41%"></div></div>
+              <div class="bar-track"><div class="bar-fill welcome" style="--w:100%"></div></div>
               <div class="bar-value">7,045</div>
             </div>
             <div class="bar-row">
               <div class="bar-label">Zero runs</div>
-              <div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div>
+              <div class="bar-track"><div class="bar-fill zero" style="--w:55%"></div></div>
               <div class="bar-value">3,172</div>
             </div>
             <div class="bar-row">
               <div class="bar-label">Welcome runs</div>
-              <div class="bar-track"><div class="bar-fill" style="--w:42%"></div></div>
+              <div class="bar-track"><div class="bar-fill welcome" style="--w:100%"></div></div>
               <div class="bar-value">5,786</div>
             </div>
           </div>
+          <p class="wf-data-note"><span class="zh">每个指标按两个仓库中的较大数值归一化为 100%，原始数值及统计窗口保持不变</span><span class="en">Each metric pair is scaled independently to its larger value (100%); source numbers and observation window are unchanged</span></p>
         </article>
 
-        <article class="card">
+        <article class="card" id="efficiency">
           <div class="section-kicker">Efficiency And Failure Cost</div>
           <h2><span class="zh">效率与失败成本</span><span class="en">Efficiency and failure cost</span></h2>
           <p class="section-desc zh">
@@ -1077,10 +1340,10 @@
             <div class="section-kicker">Run Log Evidence</div>
             <h2><span class="zh">运行日志证据</span><span class="en">Run-log evidence</span></h2>
             <p class="section-desc zh">
-              以下数据来自 2026-08-07 最新一次两仓同步运行, 不是样例, 是可验证的公开记录
+              以下数据是当时记录的 2026-08-07 两仓同步运行历史观察，不是今天的实时状态
             </p>
             <p class="section-desc en">
-              The following data is from the August 7, 2026 synchronized run — not a sample, but a verifiable public record
+              Historical observations recorded for the August 7, 2026 synchronized run, not a live status feed
             </p>
           </div>
         </div>
@@ -1088,7 +1351,7 @@
         <div class="terminal">
           <div class="terminal-head">
             <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-            <div>CURRENT · 2026-08-07</div>
+            <div>SNAPSHOT · 2026-08-07</div>
           </div>
           <div class="terminal-body">
             <div class="log-line"><b class="zero-text">[zero]</b> <strong>verify</strong> 30 backend files compiled, 7 test modules, all OK</div>
@@ -1199,23 +1462,24 @@
         <article class="card explain-card" style="padding: 1.35rem 1.5rem;">
           <h3 class="zh">当前仓库</h3>
           <h3 class="en">Current Repository</h3>
-          <p class="zh">本页保留双工作流历史展示 当前实现 可靠性边界与 Aegis 研究文档以仓库 current main 为准</p>
-          <p class="en">This page preserves the historical dual-workflow exhibit Current implementation reliability boundaries and Aegis research documentation follow repository current main</p>
+          <p class="zh">这里保留两仓流程与历史记录的分层展示，当前实现以各仓 main 的实际工作流为准，Aegis 研究材料不作为首页跳转入口</p>
+          <p class="en">This page separates the current workflows from preserved history; current implementation is governed by each repository's main branch, while protected Aegis research is not a homepage navigation target</p>
           <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem;font-family:var(--mono);font-size:.8rem;">
             <a href="https://github.com/lostlight530/zero-entropy-lab" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             <a href="https://github.com/lostlight530/zero-entropy-lab/blob/main/README.md" target="_blank" rel="noopener noreferrer">README ↗</a>
-            <a href="https://github.com/lostlight530/zero-entropy-lab/blob/main/aegis-cortex/README.md" target="_blank" rel="noopener noreferrer">Aegis ↗</a>
+
           </div>
         </article>
       </div>
     </section>
+    </div> <!-- /wf-history-data -->
 
   </main>
 
   <footer class="footer">
     <div class="wrap footer-inner">
       <div>
-        <span class="zh">© 2026 NEXUS FLOW · 2026-02-12 → 2026-08-07 · single-file homepage</span>
+        <span class="zh">© 2026 NEXUS FLOW · Core lifecycle &amp; 2026-08-07 historical exhibit</span>
         <span class="en">© 2026 NEXUS FLOW · 2026-02-12 → 2026-08-07 · single-file homepage</span>
       </div>
       <div>
@@ -1225,6 +1489,11 @@
   </footer>
 
   <script>
+    const wfMobile = document.getElementById("wfMobile")
+    if (wfMobile) {
+      wfMobile.querySelectorAll("a").forEach(a => a.addEventListener("click", () => { wfMobile.open = false }))
+      document.addEventListener("keydown", event => { if (event.key === "Escape") wfMobile.open = false })
+    }
     const button = document.getElementById("langBtn")
     const body = document.body
 
