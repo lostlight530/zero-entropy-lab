@@ -1,5 +1,10 @@
 # Security Policy
 
+> **Bilingual reading guide / 双语阅读指引（2026-11-13）**  
+> **中文**：本文件属于可靠状态转换、Agent Runtime 容错与执行证据边界的公开仓库说明；区分安全报告程序、已测故障模式与尚未验证的安全性质；历史截止点与执行状态不因本次双语整理而改变  
+> **English**: This root document belongs to fault-tolerant state transitions, agent-runtime contracts, and bounded execution evidence; Separate reporting procedures, tested failure modes, and unverified security properties. Historical cutoffs and execution status are not changed by this bilingual documentation update
+
+
 ## Supported State
 
 Security fixes apply to the latest commit on `main`.

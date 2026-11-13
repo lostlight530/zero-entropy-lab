@@ -1,5 +1,10 @@
 # Release and Archival Policy
 
+> **Bilingual reading guide / 双语阅读指引（2026-11-13）**  
+> **中文**：本文件属于可靠状态转换、Agent Runtime 容错与执行证据边界的公开仓库说明；发布版本、归档 DOI、当前 main 和实验结果分别取证；历史截止点与执行状态不因本次双语整理而改变  
+> **English**: This root document belongs to fault-tolerant state transitions, agent-runtime contracts, and bounded execution evidence; Release versions, archival DOIs, current main, and experimental results are separate evidentiary objects. Historical cutoffs and execution status are not changed by this bilingual documentation update
+
+
 This repository treats `main` as the current repository state and release tags as immutable point-in-time snapshots.
 
 ## Policy

@@ -1,5 +1,10 @@
 # Zero-Entropy Lab
 
+> **Bilingual reading guide / 双语阅读指引（2026-11-13）**  
+> **中文**：本文件属于可靠状态转换、Agent Runtime 容错与执行证据边界的公开仓库说明；查阅当前 src/kernel、实际测试和修订证据，不把概念名称当成运行能力；历史截止点与执行状态不因本次双语整理而改变  
+> **English**: This root document belongs to fault-tolerant state transitions, agent-runtime contracts, and bounded execution evidence; Check current src/kernel, actual tests, and revision-bound evidence rather than inferring runtime capability from names. Historical cutoffs and execution status are not changed by this bilingual documentation update
+
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22791081.svg)](https://doi.org/10.5281/zenodo.22791081)
 
 [Open Research / 开放科研](./OPEN_RESEARCH.md) · [Research Template / 科研模板](./RESEARCH_TEMPLATE.md)

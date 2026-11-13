@@ -1,5 +1,10 @@
 # Code of Conduct
 
+> **Bilingual reading guide / 双语阅读指引（2026-11-13）**  
+> **中文**：本文件属于可靠状态转换、Agent Runtime 容错与执行证据边界的公开仓库说明；公众协作行为遵循原始条款，双语导读不替代规则；历史截止点与执行状态不因本次双语整理而改变  
+> **English**: This root document belongs to fault-tolerant state transitions, agent-runtime contracts, and bounded execution evidence; Community conduct remains governed by the full original rules. Historical cutoffs and execution status are not changed by this bilingual documentation update
+
+
 ## Scope
 
 This code applies to repository Issues, pull requests, reviews, Discussions, and other public collaboration around this project.

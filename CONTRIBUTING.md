@@ -1,5 +1,10 @@
 # Contributing
 
+> **Bilingual reading guide / 双语阅读指引（2026-11-13）**  
+> **中文**：本文件属于可靠状态转换、Agent Runtime 容错与执行证据边界的公开仓库说明；变更必须区分实现、测试和当前治理证据；历史截止点与执行状态不因本次双语整理而改变  
+> **English**: This root document belongs to fault-tolerant state transitions, agent-runtime contracts, and bounded execution evidence; Separate implementation, tests, and current governance evidence for every proposed change. Historical cutoffs and execution status are not changed by this bilingual documentation update
+
+
 ## Open research contributions
 
 For research-method or positioning changes, start with [`OPEN_RESEARCH.md`](./OPEN_RESEARCH.md). For new bounded research records, use [`RESEARCH_TEMPLATE.md`](./RESEARCH_TEMPLATE.md). Repository-native implementation, evidence, and historical contracts remain authoritative for their own surfaces.
