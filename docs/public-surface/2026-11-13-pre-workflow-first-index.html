@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEXUS Life-Cycle Workflow Visualizer</title>
+  <meta name="description" content="Zero and Welcome GitHub Actions workflow visualizer with bilingual zero-basics explanation">
+  <style>
+    :root {
+      --bg: #05070d;
+      --bg2: #0b1020;
+      --panel: rgba(14, 22, 38, 0.82);
+      --panel2: rgba(8, 12, 22, 0.9);
+      --line: rgba(148, 163, 184, 0.18);
+      --muted: #94a3b8;
+      --text: #e5e7eb;
+      --white: #ffffff;
+      --zero: #00f0ff;
+      --welcome: #ff2a85;
+      --gold: #fbbf24;
+      --green: #34d399;
+      --red: #fb7185;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(0, 240, 255, 0.14), transparent 26rem),
+        radial-gradient(circle at 82% 18%, rgba(255, 42, 133, 0.16), transparent 25rem),
+        radial-gradient(circle at 50% 100%, rgba(251, 191, 36, 0.08), transparent 24rem),
+        linear-gradient(180deg, #05070d 0%, #090d18 45%, #030407 100%);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
+      z-index: -3;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: rgba(5, 7, 13, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+      color: var(--white);
+      font-family: var(--mono);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(0, 240, 255, 0.55);
+      box-shadow: 0 0 26px rgba(0, 240, 255, 0.22);
+      border-radius: 12px;
+      color: var(--zero);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .lang-btn {
+      border: 1px solid rgba(0, 240, 255, 0.45);
+      color: var(--zero);
+      background: rgba(0, 240, 255, 0.06);
+      padding: 0.55rem 0.8rem;
+      border-radius: 999px;
+      font-family: var(--mono);
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .lang-btn:hover {
+      transform: translateY(-1px);
+      background: rgba(0, 240, 255, 0.12);
+    }
+
+    .hero {
+      padding: 78px 0 48px;
+      position: relative;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.44rem 0.72rem;
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      border-radius: 999px;
+      background: rgba(251, 191, 36, 0.06);
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--gold);
+      box-shadow: 0 0 18px var(--gold);
+      animation: pulse 1.6s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.42; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.1); }
+    }
+
+    h1 {
+      max-width: 980px;
+      font-size: clamp(2.55rem, 6.4vw, 6.9rem);
+      line-height: 0.92;
+      letter-spacing: -0.07em;
+      color: var(--white);
+      margin-bottom: 1.3rem;
+    }
+
+    .grad {
+      background: linear-gradient(92deg, var(--zero), var(--welcome) 52%, var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-copy {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 44px;
+      padding: 0.72rem 1rem;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.045);
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 0.83rem;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .btn.zero {
+      border-color: rgba(0, 240, 255, 0.55);
+      color: var(--zero);
+    }
+
+    .btn.welcome {
+      border-color: rgba(255, 42, 133, 0.55);
+      color: var(--welcome);
+    }
+
+    .section {
+      padding: 34px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1.2rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .section-kicker {
+      font-family: var(--mono);
+      color: var(--gold);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 4vw, 3.1rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--white);
+    }
+
+    .section-desc {
+      color: var(--muted);
+      max-width: 620px;
+      margin-top: 0.7rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(14, 22, 38, 0.86), rgba(7, 10, 18, 0.86));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 1.1rem;
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.22);
+    }
+
+    .metric {
+      position: relative;
+      overflow: hidden;
+      min-height: 132px;
+    }
+
+    .metric::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -50% auto;
+      width: 130px;
+      height: 130px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.09), transparent 68%);
+    }
+
+    .metric-label {
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.7rem;
+    }
+
+    .metric-value {
+      font-family: var(--mono);
+      font-size: clamp(1.65rem, 4vw, 2.5rem);
+      line-height: 1;
+      color: var(--white);
+      font-weight: 900;
+      margin-bottom: 0.55rem;
+    }
+
+    .metric-note {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .metric.zero {
+      border-color: rgba(0, 240, 255, 0.24);
+    }
+
+    .metric.zero .metric-value {
+      color: var(--zero);
+    }
+
+    .metric.welcome {
+      border-color: rgba(255, 42, 133, 0.24);
+    }
+
+    .metric.welcome .metric-value {
+      color: var(--welcome);
+    }
+
+    .lane {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .lane-head {
+      padding: 1.2rem;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .lane-title {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .lane-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-family: var(--mono);
+      font-weight: 900;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line);
+    }
+
+    .lane.zero .lane-number {
+      color: var(--zero);
+      border-color: rgba(0, 240, 255, 0.45);
+      box-shadow: 0 0 28px rgba(0, 240, 255, 0.14);
+    }
+
+    .lane.welcome .lane-number {
+      color: var(--welcome);
+      border-color: rgba(255, 42, 133, 0.45);
+      box-shadow: 0 0 28px rgba(255, 42, 133, 0.14);
+    }
+
+    .repo-name {
+      color: var(--white);
+      font-weight: 850;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .repo-role {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      margin-top: 0.2rem;
+    }
+
+    .lane-body {
+      padding: 1.2rem;
+    }
+
+    .mini-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .mini {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 0.8rem;
+    }
+
+    .mini b {
+      display: block;
+      font-family: var(--mono);
+      font-size: 1.25rem;
+      color: var(--white);
+      margin-bottom: 0.1rem;
+    }
+
+    .mini span {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-family: var(--mono);
+      text-transform: uppercase;
+    }
+
+    .steps {
+      display: grid;
+      gap: 0.6rem;
+      counter-reset: step;
+    }
+
+    .step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 34px 1fr auto;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.75rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .step::before {
+      content: counter(step);
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--muted);
+    }
+
+    .step-main {
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    .step-sub {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 0.12rem;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 0.26rem 0.45rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .matrix {
+      overflow: hidden;
+    }
+
+    .matrix-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border-top: 1px solid var(--line);
+      min-height: 58px;
+    }
+
+    .matrix-row:first-child {
+      border-top: 0;
+    }
+
+    .matrix-cell {
+      padding: 0.9rem;
+      border-left: 1px solid var(--line);
+    }
+
+    .matrix-cell:first-child {
+      border-left: 0;
+    }
+
+    .matrix-head {
+      color: var(--white);
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .yes {
+      color: var(--green);
+      font-family: var(--mono);
+      font-weight: 800;
+    }
+
+    .no {
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    .warn {
+      color: var(--gold);
+      font-family: var(--mono);
+      font-weight: 800;
+    }
+
+    .bars {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 150px 1fr 90px;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .bar-label {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .bar-track {
+      height: 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      width: var(--w);
+      background: linear-gradient(90deg, var(--zero), var(--welcome));
+    }
+
+    .bar-value {
+      font-family: var(--mono);
+      color: var(--white);
+      text-align: right;
+      font-size: 0.82rem;
+    }
+
+    .terminal {
+      background: rgba(2, 6, 12, 0.92);
+      border: 1px solid rgba(0, 240, 255, 0.22);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: inset 0 0 40px rgba(0, 240, 255, 0.03);
+    }
+
+    .terminal-head {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.035);
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .dots {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--muted);
+      opacity: 0.7;
+    }
+
+    .dot:nth-child(1) { background: var(--red); }
+    .dot:nth-child(2) { background: var(--gold); }
+    .dot:nth-child(3) { background: var(--green); }
+
+    .terminal-body {
+      padding: 1rem;
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+
+    .log-line {
+      color: var(--muted);
+      margin-bottom: 0.48rem;
+      white-space: nowrap;
+    }
+
+    .log-line b.zero-text {
+      color: var(--zero);
+    }
+
+    .log-line b.welcome-text {
+      color: var(--welcome);
+    }
+
+    .log-line strong {
+      color: var(--white);
+    }
+
+    .log-line.sep {
+      height: 1px;
+      margin: 0.5rem 0;
+      background: rgba(255,255,255,0.06);
+      padding: 0;
+    }
+
+    .archive-terminal {
+      margin-top: 1.5rem;
+      opacity: 0.65;
+      background: rgba(2, 6, 12, 0.92);
+      border: 1px solid rgba(0, 240, 255, 0.22);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: inset 0 0 40px rgba(0, 240, 255, 0.03);
+    }
+
+    .archive-terminal summary {
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-family: inherit;
+      padding: 0.5rem 0;
+      user-select: none;
+    }
+
+    .archive-terminal summary:hover {
+      color: var(--white);
+      opacity: 1;
+    }
+
+    .explain-card h3 {
+      color: var(--white);
+      margin-bottom: 0.55rem;
+      font-size: 1.05rem;
+    }
+
+    .explain-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer {
+      padding: 52px 0 72px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 44px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+    }
+
+    .footer a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .lang-en .zh {
+      display: none !important;
+    }
+
+    .lang-zh .en {
+      display: none !important;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .nav-links a {
+        display: none;
+      }
+
+      .mini-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .matrix-row {
+        grid-template-columns: 1fr;
+      }
+
+      .matrix-cell {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .matrix-cell:first-child {
+        border-top: 0;
+      }
+
+      .bar-row {
+        grid-template-columns: 1fr;
+      }
+
+      .bar-value {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body class="lang-zh">
+  <div class="page-progress" id="pageProgress" aria-hidden="true"></div>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="NEXUS Life-Cycle Workflow Visualizer">
+        <span class="brand-mark">NX</span>
+        <span>NEXUS FLOW</span>
+      </a>
+      <div class="nav-links">
+        <a href="#usage"><span class="zh">年度用量</span><span class="en">Usage</span></a>
+        <a href="#lanes"><span class="zh">双工作流</span><span class="en">Lanes</span></a>
+        <a href="#matrix"><span class="zh">步骤对比</span><span class="en">Matrix</span></a>
+        <a href="#explain"><span class="zh">0基础解析</span><span class="en">Basics</span></a>
+        <button class="lang-btn" id="langBtn" type="button">ZH / EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          <span class="zh">2026-02-12 → 2026-08-07 · GitHub Actions Last-year snapshot</span>
+          <span class="en">2026-02-12 → 2026-08-07 · GitHub Actions Last-year snapshot</span>
+        </div>
+        <h1>
+          NEXUS LIFE-CYCLE
+          <span class="grad">WORKFLOW VISUALIZER</span>
+        </h1>
+        <p class="hero-copy zh">
+          这是 zero-entropy-lab 与 welcome-to-github 的双工作流可视化主页, 用一页展示年度用量, 运行效率, 失败成本, 步骤差异, 以及实际运行日志证据
+        </p>
+        <p class="hero-copy en">
+          A single-page visualizer for the zero-entropy-lab and welcome-to-github workflows, showing yearly usage, execution efficiency, failure cost, stage differences, and concrete run-log evidence
+        </p>
+        <div class="hero-actions">
+          <a class="btn zero" href="#zero-lane">1 · zero-entropy-lab</a>
+          <a class="btn welcome" href="#welcome-lane">2 · welcome-to-github</a>
+          <a class="btn" href="https://github.com/lostlight530/zero-entropy-lab" target="_blank" rel="noreferrer">GitHub Zero</a>
+          <a class="btn" href="https://github.com/lostlight530/welcome-to-github" target="_blank" rel="noreferrer">GitHub Welcome</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="usage">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Annual Actions Load</div>
+            <h2><span class="zh">年度负载对比</span><span class="en">Yearly load comparison</span></h2>
+            <p class="section-desc zh">
+              这里使用 GitHub Actions last year 数据, 1 是 zero, 2 是 welcome, 窗口 2026-02-12 → 2026-08-07
+            </p>
+            <p class="section-desc en">
+              This section uses the GitHub Actions last-year metrics, 1 is zero, 2 is welcome, window 2026-02-12 → 2026-08-07
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="card metric zero">
+            <div class="metric-label">1 · Zero total minutes</div>
+            <div class="metric-value">3,870</div>
+            <div class="metric-note zh">年度工作流总分钟数</div>
+            <div class="metric-note en">Total workflow minutes for last year</div>
+          </article>
+          <article class="card metric zero">
+            <div class="metric-label">1 · Zero job runs</div>
+            <div class="metric-value">3,172</div>
+            <div class="metric-note zh">年度 job run 总数</div>
+            <div class="metric-note en">Total job runs for last year</div>
+          </article>
+          <article class="card metric welcome">
+            <div class="metric-label">2 · Welcome total minutes</div>
+            <div class="metric-value">7,045</div>
+            <div class="metric-note zh">年度工作流总分钟数</div>
+            <div class="metric-note en">Total workflow minutes for last year</div>
+          </article>
+          <article class="card metric welcome">
+            <div class="metric-label">2 · Welcome job runs</div>
+            <div class="metric-value">5,786</div>
+            <div class="metric-note zh">年度 job run 总数</div>
+            <div class="metric-note en">Total job runs for last year</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap grid grid-2">
+        <article class="card">
+          <div class="section-kicker">Compute Budget</div>
+          <h2><span class="zh">计算预算</span><span class="en">Compute budget</span></h2>
+          <p class="section-desc zh">
+            Welcome 约消耗 Zero 的 1.82 倍 Actions 分钟, 两仓共享同一 NEXUS 生命周期骨架, 承担不同的责任边界
+          </p>
+          <p class="section-desc en">
+            Welcome uses about 1.82x the Actions minutes of Zero — both repos share the same NEXUS life-cycle skeleton while carrying different responsibility boundaries
+          </p>
+          <div class="bars" style="margin-top:1.1rem">
+            <div class="bar-row">
+              <div class="bar-label">Zero minutes</div>
+              <div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div>
+              <div class="bar-value">3,870</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Welcome minutes</div>
+              <div class="bar-track"><div class="bar-fill" style="--w:41%"></div></div>
+              <div class="bar-value">7,045</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Zero runs</div>
+              <div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div>
+              <div class="bar-value">3,172</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Welcome runs</div>
+              <div class="bar-track"><div class="bar-fill" style="--w:42%"></div></div>
+              <div class="bar-value">5,786</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="section-kicker">Efficiency And Failure Cost</div>
+          <h2><span class="zh">效率与失败成本</span><span class="en">Efficiency and failure cost</span></h2>
+          <p class="section-desc zh">
+            两边平均排队时间都是 3s, 失败率都是 2%, 差异主要在年度负载和失败分钟数, zero 约 70 failed minutes, welcome 是 26 failed minutes
+          </p>
+          <p class="section-desc en">
+            Both lanes have a 3s average queue time and 2% job failure rate, while the main difference is annual load and failed-job minutes, zero is about 70 failed minutes and welcome is 26
+          </p>
+          <div class="grid grid-3" style="margin-top:1.1rem">
+            <div class="mini"><b>37s</b><span>Zero avg run</span></div>
+            <div class="mini"><b>42s</b><span>Welcome avg run</span></div>
+            <div class="mini"><b>3s / 3s</b><span>Avg queue</span></div>
+            <div class="mini"><b>2%</b><span>Zero fail rate</span></div>
+            <div class="mini"><b>2%</b><span>Welcome fail rate</span></div>
+            <div class="mini"><b>70 / 26</b><span>Failed minutes</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="lanes">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Two Concrete Workflow Lanes</div>
+            <h2><span class="zh">两个具体工作流</span><span class="en">Two concrete workflow lanes</span></h2>
+            <p class="section-desc zh">
+              这不是泛生态展示, 而是把 zero 和 welcome 两条 NEXUS CORTEX Life Cycle 直接展开成可读步骤
+            </p>
+            <p class="section-desc en">
+              This is not a generic ecosystem page, it expands the zero and welcome NEXUS CORTEX Life Cycle workflows into readable stages
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="card lane zero" id="zero-lane">
+            <div class="lane-head">
+              <div class="lane-title">
+                <div class="lane-number">1</div>
+                <div>
+                  <div class="repo-name">zero-entropy-lab</div>
+                  <div class="repo-role zh">Integrity and State Core</div>
+                  <div class="repo-role en">Integrity and State Core</div>
+                </div>
+              </div>
+              <span class="tag">3,870 min</span>
+            </div>
+            <div class="lane-body">
+              <div class="mini-metrics">
+                <div class="mini"><b>3,172</b><span>job runs</span></div>
+                <div class="mini"><b>37s</b><span>avg run</span></div>
+                <div class="mini"><b>2%</b><span>failure</span></div>
+              </div>
+              <div class="steps">
+                <div class="step"><div><div class="step-main">Verify foundation</div><div class="step-sub zh">编译 30 后端文件 + 7 模块全部通过</div><div class="step-sub en">Compile 30 backend files + 7 modules all OK</div></div><span class="tag">zero only</span></div>
+                <div class="step"><div><div class="step-main">Document hygiene</div><div class="step-sub zh">维护 JSONL 知识库 · 1,687 记录</div><div class="step-sub en">Maintain JSONL knowledge base · 1,687 records</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Harvest signals</div><div class="step-sub zh">收割外部仓库情报 · 4 更新</div><div class="step-sub en">Harvest external signals · 4 updated</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Project mapping</div><div class="step-sub zh">投影文档→仓库关系 · 211 文档</div><div class="step-sub en">Project doc→repo relations · 211 docs</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Canonicalize + prune</div><div class="step-sub zh">规范化 888 实体 · 哈希链验证 · 保护路径裁剪</div><div class="step-sub en">Canonicalize 888 entities · hash chain · prune protected</div></div><span class="tag">zero focus</span></div>
+                <div class="step"><div><div class="step-main">Rebuild + ingest</div><div class="step-sub zh">1,687 记忆重建 + 35 文件映射入 Cortex</div><div class="step-sub en">1,687 memories + 35 files into Cortex</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Ponder</div><div class="step-sub zh">382 节点 · 211 边 · 密度 1.15 · FRAGMENTED</div><div class="step-sub en">382 nodes · 211 edges · density 1.15 · FRAGMENTED</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Evolve</div><div class="step-sub zh">净化 + 每日演化 · 认知报告 + 任务简报</div><div class="step-sub en">Purification + daily cycle · cognitive report</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Re-verify + commit</div><div class="step-sub zh">全部 7 模块重验 → 11 文件 · +1,477 −268</div><div class="step-sub en">7 modules re-verified → 11 files · +1,477 −268</div></div><span class="tag">writeback</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card lane welcome" id="welcome-lane">
+            <div class="lane-head">
+              <div class="lane-title">
+                <div class="lane-number">2</div>
+                <div>
+                  <div class="repo-name">welcome-to-github</div>
+                  <div class="repo-role zh">Harvester and Public Surface</div>
+                  <div class="repo-role en">Harvester and Public Surface</div>
+                </div>
+              </div>
+              <span class="tag">7,045 min</span>
+            </div>
+            <div class="lane-body">
+              <div class="mini-metrics">
+                <div class="mini"><b>5,786</b><span>job runs</span></div>
+                <div class="mini"><b>42s</b><span>avg run</span></div>
+                <div class="mini"><b>2%</b><span>failure</span></div>
+              </div>
+              <div class="steps">
+                <div class="step"><div><div class="step-main">Verify foundation</div><div class="step-sub zh">编译 15 生命周期文件 + 34 测试全部通过</div><div class="step-sub en">Compile 15 lifecycle files + 34 tests OK</div></div><span class="tag">welcome only</span></div>
+                <div class="step"><div><div class="step-main">Document hygiene</div><div class="step-sub zh">维护 JSONL 知识库 · 1,350 记录</div><div class="step-sub en">Maintain JSONL knowledge base · 1,350 records</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Harvest external facts</div><div class="step-sub zh">扫描外部 AI 仓库信号 · 全部已最新</div><div class="step-sub en">Scan external AI repos · all current</div></div><span class="tag">welcome only</span></div>
+                <div class="step"><div><div class="step-main">Project mapping</div><div class="step-sub zh">投影文档→仓库关系 · 20 文档</div><div class="step-sub en">Project doc→repo relations · 20 docs</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Canonicalize + prune</div><div class="step-sub zh">规范化 692 实体 · 保护路径裁剪</div><div class="step-sub en">Canonicalize 692 entities · prune protected</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Rebuild + ingest</div><div class="step-sub zh">Schema 重建 + 16 文件映射入 Cortex</div><div class="step-sub en">Rebuild from schema + 16 files into Cortex</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Ponder</div><div class="step-sub zh">PageRank 中心性 · 结构直觉 · 自驱目标</div><div class="step-sub en">PageRank centrality · structural intuition · self-driven goal</div></div><span class="tag">shared</span></div>
+                <div class="step"><div><div class="step-main">Evolve</div><div class="step-sub zh">AST 变异沙盒通过 · 信任网关活跃 · 量化仪表盘</div><div class="step-sub en">AST sandbox passed · Trust Gateway · quantitative dashboard</div></div><span class="tag">welcome focus</span></div>
+                <div class="step"><div><div class="step-main">Re-verify + commit</div><div class="step-sub zh">34 测试重验通过 → 4 文件 · +90 −15</div><div class="step-sub en">34 tests re-verified → 4 files · +90 −15</div></div><span class="tag">writeback</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="matrix">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Step Comparison Matrix</div>
+            <h2><span class="zh">步骤对比矩阵</span><span class="en">Step comparison matrix</span></h2>
+            <p class="section-desc zh">
+              两边共同拥有相同的 NEXUS 生命周期阶段, 但实施方式不同 — 比较同一阶段在不同仓库如何执行
+            </p>
+            <p class="section-desc en">
+              Both lanes share the same NEXUS life-cycle stages but implement them differently — comparing how each stage executes across repositories
+            </p>
+          </div>
+        </div>
+
+        <div class="card matrix">
+          <div class="matrix-row matrix-head">
+            <div class="matrix-cell">Stage</div>
+            <div class="matrix-cell">1 · zero</div>
+            <div class="matrix-cell">2 · welcome</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Compile & Verify</div>
+            <div class="matrix-cell yes">30 backend files compiled · 7 test modules all OK</div>
+            <div class="matrix-cell yes">15 lifecycle files compiled · 34 tests OK</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Document hygiene</div>
+            <div class="matrix-cell yes">1,687 records · 11 files · 0 duplicates</div>
+            <div class="matrix-cell yes">1,350 records · 10 files · 0 duplicates</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Harvest</div>
+            <div class="matrix-cell yes">0 failed · 4 updated</div>
+            <div class="matrix-cell yes">0 failed · 0 updated (all current)</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Project</div>
+            <div class="matrix-cell yes">211 docs · 39 repos · 211 relations</div>
+            <div class="matrix-cell yes">20 docs · 15 repos · 20 relations</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Canonicalize</div>
+            <div class="matrix-cell yes">888 entities · 799 relations · hash chain verified</div>
+            <div class="matrix-cell yes">692 entities · 658 relations · 0 dangling</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Prune protected</div>
+            <div class="matrix-cell yes">aegis-cortex, ballast, index.html, assets/**</div>
+            <div class="matrix-cell yes">horizon-cortex, parallax</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Rebuild</div>
+            <div class="matrix-cell yes">1,687 memories restored from knowledge fragments</div>
+            <div class="matrix-cell yes">from schemas + JSONL fragments</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Ingest</div>
+            <div class="matrix-cell yes">35 files mapped into Cortex</div>
+            <div class="matrix-cell yes">16 files mapped into Cortex</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Ponder</div>
+            <div class="matrix-cell yes">382 nodes · 211 edges · density 1.15 · FRAGMENTED</div>
+            <div class="matrix-cell yes">PageRank centrality · isolation risk · self-driven goal</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Evolve</div>
+            <div class="matrix-cell yes">purification · daily cycle · cognitive report</div>
+            <div class="matrix-cell yes">AST sandbox passed · Trust Gateway · quantitative dashboard</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Re-verify</div>
+            <div class="matrix-cell yes">7 modules all OK · foundation verification passed</div>
+            <div class="matrix-cell yes">34 tests re-verified · canonicalize + rebuild OK</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell">Commit</div>
+            <div class="matrix-cell yes">11 files · +1,477 −268 · cognitive update</div>
+            <div class="matrix-cell yes">4 files · +90 −15 · archive + ledger</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="logs">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Run Log Evidence</div>
+            <h2><span class="zh">运行日志证据</span><span class="en">Run-log evidence</span></h2>
+            <p class="section-desc zh">
+              以下数据来自 2026-08-07 最新一次两仓同步运行, 不是样例, 是可验证的公开记录
+            </p>
+            <p class="section-desc en">
+              The following data is from the August 7, 2026 synchronized run — not a sample, but a verifiable public record
+            </p>
+          </div>
+        </div>
+
+        <div class="terminal">
+          <div class="terminal-head">
+            <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div>CURRENT · 2026-08-07</div>
+          </div>
+          <div class="terminal-body">
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>verify</strong> 30 backend files compiled, 7 test modules, all OK</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>hygiene</strong> 1,687 records, 11 knowledge files, 0 duplicates</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>harvest</strong> 0 failed, 4 updated</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>project</strong> 211 docs, 39 repositories, 211 relations mapped</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>canonicalize</strong> 888 entities, 799 relations, hash chain verified (0 broken)</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>prune</strong> protected: aegis-cortex · ballast · index.html · assets · scripts · styles</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>rebuild</strong> 1,687 memories restored from knowledge fragments</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>ingest</strong> 35 files mapped into Cortex</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>ponder</strong> 382 nodes, 211 edges, FRAGMENTED_3_ORPHANS, density 1.15</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>evolve</strong> purification complete, cognitive report + 2 missions generated</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>re-verify</strong> 7 test modules all OK, foundation verification passed</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>commit</strong> 11 files, +1,477 −268, cognitive update pushed</div>
+            <div class="log-line sep"></div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>verify</strong> 15 lifecycle files compiled, 34 tests OK</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>hygiene</strong> 1,350 records, 10 knowledge files, 0 duplicates</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>harvest</strong> 0 failed, 0 updated (all sources current)</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>project</strong> 20 docs, 15 repositories, 20 relations mapped</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>canonicalize</strong> 692 entities, 658 relations, 0 duplicates, 0 dangling</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>prune</strong> protected: horizon-cortex · parallax</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>rebuild</strong> from schemas + JSONL fragments</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>ingest</strong> 16 files mapped into Cortex</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>ponder</strong> PageRank centrality: NEXUS System, isolation risk, self-driven goal</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>evolve</strong> AST sandbox passed, Trust Gateway active, quantitative dashboard rendered</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>re-verify</strong> 34 tests re-verified, canonicalize + rebuild OK</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>commit</strong> 4 files, +90 −15, archive + ledger updated</div>
+          </div>
+        </div>
+
+        <details class="terminal archive-terminal">
+          <summary class="archive-summary">HISTORICAL ARCHIVE · 2026-06-28 (click to expand)</summary>
+          <div class="terminal-body" style="margin-top:0.75rem">
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>rebuild</strong> Reconstruction Complete, 49397 memories restored</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>ingest</strong> 42 files mapped into Cortex</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>ponder</strong> nodes 70, topology HIGHLY_STRUCTURED_ZERO_ORPHANS, graph density 3.54</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>tests</strong> tests OK, MCP and server checks passed</div>
+            <div class="log-line"><b class="zero-text">[zero]</b> <strong>commit</strong> 10 files changed, 545 insertions, cognitive report created</div>
+            <div class="log-line sep"></div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>harvest</strong> transformers, nexent, astron-agent, vllm, dify, mediapipe, markitdown, python-genai</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>ingest</strong> 14 files mapped into Cortex</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>ponder</strong> isolation risk, structural intuition, PageRank centrality, self-driven goal</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>evolve</strong> AST sandbox passed, Trust Gateway Active, quantitative ledger rendered</div>
+            <div class="log-line"><b class="welcome-text">[welcome]</b> <strong>commit</strong> 15 files changed, 230 insertions, archive and ledger updated</div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="explain">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Zero-Basics Explanation</div>
+            <h2><span class="zh">0基础解析</span><span class="en">Zero-basics explanation</span></h2>
+            <p class="section-desc zh">
+              这部分给第一次看到 GitHub Actions 的人看, 不预设 CI/CD 背景
+            </p>
+            <p class="section-desc en">
+              This part is for people seeing GitHub Actions for the first time, no CI/CD background required
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card explain-card">
+            <h3 class="zh">什么是 workflow</h3>
+            <h3 class="en">What is a workflow</h3>
+            <p class="zh">workflow 是仓库里的自动流程, 通常放在 .github/workflows 目录, 它告诉 GitHub 什么时候运行, 运行哪些 job, 每个 job 做什么</p>
+            <p class="en">A workflow is an automated process stored in a repository, usually under .github/workflows, it tells GitHub when to run, which jobs to run, and what each job should do</p>
+          </article>
+          <article class="card explain-card">
+            <h3 class="zh">什么是 job run</h3>
+            <h3 class="en">What is a job run</h3>
+            <p class="zh">job run 是一次具体执行, 比如 checkout, setup python, rebuild, ingest, test, commit 都可以作为步骤出现在一次 job run 里</p>
+            <p class="en">A job run is one concrete execution, steps such as checkout, setup python, rebuild, ingest, test, and commit can appear inside a job run</p>
+          </article>
+          <article class="card explain-card">
+            <h3 class="zh">什么是 total minutes</h3>
+            <h3 class="en">What are total minutes</h3>
+            <p class="zh">total minutes 表示工作流在 runner 上消耗的总运行时间, 数字越高, 说明这一条 lane 年度执行负载越重</p>
+            <p class="en">Total minutes means the total runner time consumed by workflows — the higher the number, the greater the yearly execution volume</p>
+          </article>
+          <article class="card explain-card">
+            <h3 class="zh">为什么看 queue time</h3>
+            <h3 class="en">Why queue time matters</h3>
+            <p class="zh">queue time 是 job 等待 runner 的时间, 这里两边都是 3s, 表示调度等待不是主要差异, 差异主要来自实际执行量</p>
+            <p class="en">Queue time is how long a job waits for a runner, both lanes are 3s here, so scheduling delay is not the main difference, execution volume is</p>
+          </article>
+          <article class="card explain-card">
+            <h3 class="zh">为什么看 failure rate</h3>
+            <h3 class="en">Why failure rate matters</h3>
+            <p class="zh">failure rate 表示失败 job 的比例, 两边都是 2%, 说明稳定性同级, failed job usage 用来观察失败消耗的分钟成本</p>
+            <p class="en">Failure rate is the share of failed jobs, both lanes are 2%, so reliability is similar, failed job usage shows the minute cost of failed work</p>
+          </article>
+          <article class="card explain-card">
+            <h3 class="zh">怎么读这页</h3>
+            <h3 class="en">How to read this page</h3>
+            <p class="zh">先看 1 和 2 的年度数字, 再看两条 lane 的步骤, 最后用日志控制台验证这些数字背后的真实行为</p>
+            <p class="en">Start with the yearly numbers for 1 and 2, then read the two lanes, then use the log console to connect the metrics to concrete behavior</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: 28px 0 0;">
+      <div class="wrap">
+        <article class="card explain-card" style="padding: 1.35rem 1.5rem;">
+          <h3 class="zh">当前仓库</h3>
+          <h3 class="en">Current Repository</h3>
+          <p class="zh">本页保留双工作流历史展示 当前实现 可靠性边界与 Aegis 研究文档以仓库 current main 为准</p>
+          <p class="en">This page preserves the historical dual-workflow exhibit Current implementation reliability boundaries and Aegis research documentation follow repository current main</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem;font-family:var(--mono);font-size:.8rem;">
+            <a href="https://github.com/lostlight530/zero-entropy-lab" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://github.com/lostlight530/zero-entropy-lab/blob/main/README.md" target="_blank" rel="noopener noreferrer">README ↗</a>
+            <a href="https://github.com/lostlight530/zero-entropy-lab/blob/main/aegis-cortex/README.md" target="_blank" rel="noopener noreferrer">Aegis ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <span class="zh">© 2026 NEXUS FLOW · 2026-02-12 → 2026-08-07 · single-file homepage</span>
+        <span class="en">© 2026 NEXUS FLOW · 2026-02-12 → 2026-08-07 · single-file homepage</span>
+      </div>
+      <div>
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const button = document.getElementById("langBtn")
+    const body = document.body
+
+
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    const pageProgress = document.getElementById("pageProgress")
+
+    function updateReadingProgress() {
+      if (!pageProgress || prefersReducedMotion) return
+      const max = document.documentElement.scrollHeight - window.innerHeight
+      const value = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0
+      pageProgress.style.transform = `scaleX(${value})`
+    }
+
+    const revealTargets = [...document.querySelectorAll(".section-head, .card, .bar-row, .archive-terminal")]
+    revealTargets.forEach((node, index) => {
+      node.dataset.reveal = ""
+      node.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 45}ms`)
+    })
+
+    if (prefersReducedMotion) {
+      revealTargets.forEach(node => node.classList.add("is-visible"))
+    } else {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return
+          entry.target.classList.add("is-visible")
+          observer.unobserve(entry.target)
+        })
+      }, { threshold: 0.1, rootMargin: "0px 0px -6% 0px" })
+      revealTargets.forEach(node => revealObserver.observe(node))
+    }
+
+    document.querySelectorAll(".lane.zero, .metric.zero").forEach(node => {
+      node.addEventListener("mouseenter", () => body.classList.add("focus-zero"))
+      node.addEventListener("mouseleave", () => body.classList.remove("focus-zero"))
+      node.addEventListener("focusin", () => body.classList.add("focus-zero"))
+      node.addEventListener("focusout", () => body.classList.remove("focus-zero"))
+    })
+
+    document.querySelectorAll(".lane.welcome, .metric.welcome").forEach(node => {
+      node.addEventListener("mouseenter", () => body.classList.add("focus-welcome"))
+      node.addEventListener("mouseleave", () => body.classList.remove("focus-welcome"))
+      node.addEventListener("focusin", () => body.classList.add("focus-welcome"))
+      node.addEventListener("focusout", () => body.classList.remove("focus-welcome"))
+    })
+
+    window.addEventListener("scroll", updateReadingProgress, { passive: true })
+    window.addEventListener("resize", updateReadingProgress)
+    updateReadingProgress()
+
+
+    button.addEventListener("click", () => {
+      const isZh = body.classList.contains("lang-zh")
+      body.classList.toggle("lang-zh", !isZh)
+      body.classList.toggle("lang-en", isZh)
+      document.documentElement.lang = isZh ? "en" : "zh-CN"
+      button.textContent = isZh ? "EN / ZH" : "ZH / EN"
+    })
+  </script>
+</body>
+</html>
