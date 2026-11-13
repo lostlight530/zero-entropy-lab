@@ -816,6 +816,86 @@
 @media(max-width:900px){.wf-hero-grid,.wf-eras{grid-template-columns:1fr}.wf-mobile{display:block}.wf-primary{padding-top:45px}.nav-links{margin-left:auto}}
 @media(max-width:680px){.wf-flow,.wf-host-grid,.wf-glossary{grid-template-columns:1fr}.wf-step{min-height:0}.wf-host dl{grid-template-columns:1fr}.wf-host dt{margin-top:8px}.wf-block{padding-top:34px}}
 
+
+/* Workflow-first historical data gallery: new responsive presentation, original source retained separately. */
+.wf-history-data { position:relative; padding: 0 0 20px; background:linear-gradient(180deg,rgba(9,16,30,.28),rgba(5,8,17,.08)); }
+.wf-history-data .hero {padding:28px 0 16px;}
+.wf-history-data .hero .wrap {position:relative;isolation:isolate;overflow:hidden;border:1px solid rgba(251,191,36,.26);border-radius:24px;padding:34px 38px;background:linear-gradient(112deg,rgba(25,30,45,.96),rgba(12,18,34,.93) 60%,rgba(36,13,32,.67));box-shadow:0 18px 52px rgba(0,0,0,.22)}
+.wf-history-data .hero .wrap::before {content:"";position:absolute;z-index:-1;width:360px;height:360px;right:-90px;top:-205px;border-radius:50%;background:radial-gradient(circle,rgba(255,133,186,.17),transparent 72%);pointer-events:none}
+.wf-history-data .eyebrow {border-radius:8px;letter-spacing:.065em;font-size:.75rem;padding:7px 11px;margin-bottom:16px}
+.wf-history-data .eyebrow .pulse {animation:none;box-shadow:none}
+.wf-history-data .wf-old-title{font-size:clamp(2rem,4.3vw,3.55rem);max-width:780px;letter-spacing:-.055em;line-height:1.12;margin-bottom:17px}
+.wf-history-data .wf-old-title .grad {display:block;font-size:.83em;line-height:1.25}
+.wf-history-data .hero-copy{font-size:.95rem;max-width:740px;line-height:1.85;margin-bottom:17px}
+.wf-history-data .hero-actions {gap:8px;margin-top:4px}
+.wf-history-data .hero-actions .btn {min-height:41px;border-radius:9px;font-size:.76rem;padding:9px 13px}
+.wf-exhibit-nav {padding:9px 0 18px}
+.wf-exhibit-nav .wrap {display:flex;gap:7px;flex-wrap:wrap;align-items:center;border:1px solid rgba(151,177,205,.17);padding:10px;border-radius:13px;background:rgba(9,16,29,.86)}
+.wf-exhibit-nav .wf-exhibit-label {font:700 .72rem var(--mono);letter-spacing:.07em;color:#ffe1a7;margin:0 10px 0 8px}
+.wf-exhibit-nav a {font:.77rem var(--mono);color:#bbd2e4;text-decoration:none;border:1px solid transparent;border-radius:8px;padding:8px 10px;min-height:36px;display:inline-flex;align-items:center}
+.wf-exhibit-nav a:hover,.wf-exhibit-nav a:focus-visible{border-color:rgba(115,225,243,.35);background:rgba(115,225,243,.085);color:#fff}
+.wf-history-data .section{padding:23px 0}
+.wf-history-data .section-head{align-items:end;margin-bottom:18px}
+.wf-history-data .section-kicker{font-size:.72rem;letter-spacing:.13em;color:#eac98b;margin-bottom:7px}
+.wf-history-data .section-head h2,.wf-history-data .card h2{font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.22;letter-spacing:-.035em;color:#f3f7ff}
+.wf-history-data .section-desc{max-width:800px;font-size:.88rem;line-height:1.8;margin-top:9px;color:#b0c4d3}
+.wf-history-data .card{background:linear-gradient(150deg,rgba(20,31,50,.96),rgba(8,13,27,.96));border:1px solid rgba(147,170,193,.19);border-radius:17px;padding:22px;box-shadow:0 12px 30px rgba(0,0,0,.16)}
+.wf-history-data .grid{gap:13px}
+.wf-history-data .metric{border-top:3px solid rgba(0,240,255,.68);min-height:150px;display:flex;flex-direction:column;justify-content:center}
+.wf-history-data .metric.welcome{border-color:rgba(255,82,153,.7)}
+.wf-history-data .metric-label{color:#abc1d2;font-size:.75rem;letter-spacing:.06em;line-height:1.4}
+.wf-history-data .metric-value{font-size:clamp(2rem,4vw,3rem);font-variant-numeric:tabular-nums;letter-spacing:-.04em;margin-bottom:9px}
+.wf-history-data .metric-note{color:#adc1d4;font-size:.81rem;line-height:1.5}
+.wf-history-data .bars{gap:17px}
+.wf-history-data .bar-row{grid-template-columns:minmax(108px,135px) minmax(0,1fr) 68px;gap:12px}
+.wf-history-data .bar-label{color:#b5c9d7;line-height:1.4;font-size:.75rem}
+.wf-history-data .bar-track{height:11px;border-radius:7px;background:rgba(190,211,229,.08);border-color:rgba(141,167,194,.16)}
+.wf-history-data .bar-fill{background:linear-gradient(90deg,#00a2c7,#51deed);border-radius:7px}
+.wf-history-data .bar-fill.welcome{background:linear-gradient(90deg,#b83d7a,#ff76b0)}
+.wf-history-data .bar-value{text-align:right;font-variant-numeric:tabular-nums;font-weight:800;color:#e8f3ff}
+.wf-data-note{font-size:.78rem;color:#8ea9bd;line-height:1.65;margin-top:15px}
+.wf-history-data .mini{background:rgba(9,17,31,.85);border:1px solid rgba(149,181,202,.18);border-radius:12px;padding:13px}
+.wf-history-data .mini b {font-variant-numeric:tabular-nums;color:#f2f9ff;font-size:1.42rem}
+.wf-history-data .mini span{line-height:1.55;font-size:.68rem;letter-spacing:.025em}
+.wf-history-data .lane{padding:0;border-radius:18px;box-shadow:0 16px 36px rgba(0,0,0,.22)}
+.wf-history-data .lane.zero{border-top:3px solid #36cde0}
+.wf-history-data .lane.welcome{border-top:3px solid #ee6ba5}
+.wf-history-data .lane-head {padding:21px 22px 19px;background:rgba(7,17,34,.6);align-items:center}
+.wf-history-data .lane-head .repo-name{font-size:1.18rem}
+.wf-history-data .lane-body{padding:20px 22px 23px}
+.wf-history-data .lane-number {width:40px;height:40px;border-radius:10px}
+.wf-history-data .lane .tag{border-radius:8px;font-size:.66rem;padding:5px 7px;line-height:1.4}
+.wf-history-data .lane-head>.tag {background:rgba(255,255,255,.045)}
+.wf-history-data .mini-metrics {gap:9px;margin-bottom:19px}
+.wf-history-data .steps{gap:8px}
+.wf-history-data .step {grid-template-columns:32px minmax(0,1fr) auto;gap:11px;padding:12px;background:rgba(6,14,29,.62);border-color:rgba(140,169,195,.16);border-radius:11px}
+.wf-history-data .step::before {width:29px;height:29px;border-radius:8px;background:rgba(255,255,255,.045);color:#a7d8e5}
+.wf-history-data .step-main{font-size:.9rem;line-height:1.4}
+.wf-history-data .step-sub{font-size:.79rem;line-height:1.65;overflow-wrap:anywhere}
+.wf-history-data .step>.tag {color:#a8bfd1;border-color:rgba(156,182,202,.18)}
+.wf-history-data .matrix {padding:0;overflow-x:auto;overscroll-behavior-x:contain;border-radius:17px}
+.wf-history-data .matrix-row {min-width:720px;grid-template-columns:minmax(160px,.85fr) repeat(2,minmax(258px,1.25fr));min-height:53px;border-color:rgba(146,174,196,.14)}
+.wf-history-data .matrix-row:nth-child(2n+1):not(.matrix-head){background:rgba(89,128,165,.035)}
+.wf-history-data .matrix-head {background:rgba(33,51,76,.78);font-size:.79rem;color:#f2f8ff}
+.wf-history-data .matrix-cell {padding:13px 15px;font-size:.82rem;line-height:1.65;border-color:rgba(156,182,203,.13);overflow-wrap:anywhere}
+.wf-history-data .matrix-cell:first-child {color:#d6e5f0;font-weight:700}
+.wf-history-data .matrix-head .matrix-cell{color:#eef7ff}
+.wf-history-data .matrix .yes{font-weight:600;color:#95e4c4}
+.wf-history-data .terminal{border-radius:16px;border:1px solid rgba(96,191,214,.26);background:#07101b}
+.wf-history-data .terminal-head{height:auto;min-height:55px;padding:14px 18px;background:#111e2c;color:#b7d4e2;font-size:.78rem}
+.wf-history-data .terminal-body {padding:14px 18px;font-size:.8rem;overflow-x:auto}
+.wf-history-data .log-line {display:block;white-space:normal;overflow-wrap:anywhere;line-height:1.7;padding:7px 1px;margin:0;color:#adbed0;border-bottom:1px solid rgba(136,169,196,.08)}
+.wf-history-data .log-line.sep {height:16px;background:transparent;border-bottom:1px dashed rgba(163,192,211,.28)}
+.wf-history-data .archive-terminal{opacity:1;margin-top:15px;border-color:rgba(251,191,36,.19);box-shadow:none}
+.wf-history-data .archive-terminal summary{padding:17px 20px;font-size:.8rem;color:#f5ddb1;background:rgba(251,191,36,.045)}
+.wf-history-data .archive-terminal[open] summary {border-bottom:1px solid rgba(251,191,36,.19)}
+.wf-history-data .explain-card {background:rgba(16,25,41,.92);padding:20px}
+.wf-history-data .explain-card h3 {font-size:1.02rem;color:#f0f8ff}
+.wf-history-data .explain-card p{font-size:.86rem;line-height:1.78;color:#a8bfd0}
+.wf-history-data .explain-card a{color:#9be8ff;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:900px){.wf-history-data .grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.wf-history-data .grid-2{grid-template-columns:1fr}.wf-history-data .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.wf-history-data .matrix-row{grid-template-columns:minmax(160px,.85fr) repeat(2,minmax(258px,1.25fr))}.wf-exhibit-nav .wrap{gap:2px}}
+@media(max-width:600px){.wf-history-data .hero .wrap {padding:24px 18px}.wf-history-data .grid-4{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.wf-history-data .metric{min-height:136px;padding:16px}.wf-history-data .metric-value{font-size:clamp(1.6rem,7vw,2.15rem)}.wf-history-data .metric-label{font-size:.64rem}.wf-history-data .grid-3{grid-template-columns:1fr}.wf-history-data .mini-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.wf-history-data .mini{padding:9px}.wf-history-data .mini b{font-size:1.05rem}.wf-history-data .mini span{font-size:.58rem}.wf-history-data .lane-head{padding:15px;align-items:flex-start}.wf-history-data .lane-head .repo-name{font-size:1rem;overflow-wrap:anywhere}.wf-history-data .lane-body{padding:14px}.wf-history-data .step{grid-template-columns:30px minmax(0,1fr);gap:8px}.wf-history-data .step>.tag{grid-column:2;width:max-content;max-width:100%}.wf-history-data .bar-row{grid-template-columns:minmax(85px,100px) minmax(0,1fr) 48px;gap:8px}.wf-history-data .bar-value{font-size:.72rem}.wf-exhibit-nav .wrap{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;white-space:nowrap}.wf-exhibit-nav a{flex:none}.wf-exhibit-nav .wf-exhibit-label{flex:none}.wf-history-data .terminal-body{padding:10px 12px}.wf-history-data .log-line{font-size:.72rem}}
+
   </style>
 </head>
 <body class="lang-zh">
@@ -941,9 +1021,10 @@
       <div class="wrap"><div class="wf-kicker">05 / PRESERVED AUGUST EXHIBIT</div>
         <h2><span class="zh">完整保留原版历史展示</span><span class="en">Original historical exhibit, fully retained</span></h2>
         <p><span class="zh">以下原样保留 2026-08-07 快照窗口的工作流用量、计算成本、步骤对比、两仓日志和 2026-06-28 历史日志。它们是带日期的历史观察，不是实时统计，不与当前运行结果混算</span><span class="en">The historical usage, compute budget, workflow lanes, stage matrix, August 7 logs and June 28 log archive remain below. They are dated observations, not live metrics to mix with current runs</span></p>
-        <div class="wf-links"><a href="https://github.com/lostlight530/zero-entropy-lab/blob/main/docs/public-surface/2026-11-13-pre-workflow-first-index.html" target="_blank" rel="noopener noreferrer"><span class="zh">查看改版前完整 HTML</span><span class="en">Inspect exact pre-redesign HTML</span></a><a href="#usage"><span class="zh">跳到历史用量</span><span class="en">Historic usage</span></a><a href="#logs"><span class="zh">跳到原始运行日志</span><span class="en">Original logs</span></a></div>
+        <div class="wf-links"><a href="https://github.com/lostlight530/zero-entropy-lab/blob/90cdde37f592dabee4d7474bc4de9ba53716dfec/docs/public-surface/2026-11-13-pre-workflow-first-index.html" target="_blank" rel="noopener noreferrer"><span class="zh">查看改版前完整 HTML</span><span class="en">Inspect exact pre-redesign HTML</span></a><a href="#usage"><span class="zh">跳到历史用量</span><span class="en">Historic usage</span></a><a href="#logs"><span class="zh">跳到原始运行日志</span><span class="en">Original logs</span></a></div>
       </div>
     </section>
+    <div class="wf-history-data" id="legacy-exhibit">
     <section class="hero">
       <div class="wrap">
         <div class="eyebrow">
@@ -969,6 +1050,19 @@
         </div>
       </div>
     </section>
+
+    <nav class="wf-exhibit-nav" aria-label="Historical data sections / 历史数据导航">
+      <div class="wrap">
+        <span class="wf-exhibit-label">08.07 / <span class="zh">历史数据</span><span class="en">HISTORICAL DATA</span></span>
+        <a href="#usage"><span class="zh">负载</span><span class="en">Usage</span></a>
+        <a href="#budget"><span class="zh">计算成本</span><span class="en">Budget</span></a>
+        <a href="#efficiency"><span class="zh">效率与失败</span><span class="en">Efficiency</span></a>
+        <a href="#lanes"><span class="zh">双仓步骤</span><span class="en">Lanes</span></a>
+        <a href="#matrix"><span class="zh">对比矩阵</span><span class="en">Matrix</span></a>
+        <a href="#logs"><span class="zh">运行日志</span><span class="en">Logs</span></a>
+        <a href="#explain"><span class="zh">原版术语</span><span class="en">Original glossary</span></a>
+      </div>
+    </nav>
 
     <section class="section" id="usage">
       <div class="wrap">
@@ -1016,7 +1110,7 @@
 
     <section class="section">
       <div class="wrap grid grid-2">
-        <article class="card">
+        <article class="card" id="budget">
           <div class="section-kicker">Compute Budget</div>
           <h2><span class="zh">计算预算</span><span class="en">Compute budget</span></h2>
           <p class="section-desc zh">
@@ -1028,28 +1122,29 @@
           <div class="bars" style="margin-top:1.1rem">
             <div class="bar-row">
               <div class="bar-label">Zero minutes</div>
-              <div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div>
+              <div class="bar-track"><div class="bar-fill zero" style="--w:55%"></div></div>
               <div class="bar-value">3,870</div>
             </div>
             <div class="bar-row">
               <div class="bar-label">Welcome minutes</div>
-              <div class="bar-track"><div class="bar-fill" style="--w:41%"></div></div>
+              <div class="bar-track"><div class="bar-fill welcome" style="--w:100%"></div></div>
               <div class="bar-value">7,045</div>
             </div>
             <div class="bar-row">
               <div class="bar-label">Zero runs</div>
-              <div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div>
+              <div class="bar-track"><div class="bar-fill zero" style="--w:55%"></div></div>
               <div class="bar-value">3,172</div>
             </div>
             <div class="bar-row">
               <div class="bar-label">Welcome runs</div>
-              <div class="bar-track"><div class="bar-fill" style="--w:42%"></div></div>
+              <div class="bar-track"><div class="bar-fill welcome" style="--w:100%"></div></div>
               <div class="bar-value">5,786</div>
             </div>
           </div>
+          <p class="wf-data-note"><span class="zh">每个指标按两个仓库中的较大数值归一化为 100%，原始数值及统计窗口保持不变</span><span class="en">Each metric pair is scaled independently to its larger value (100%); source numbers and observation window are unchanged</span></p>
         </article>
 
-        <article class="card">
+        <article class="card" id="efficiency">
           <div class="section-kicker">Efficiency And Failure Cost</div>
           <h2><span class="zh">效率与失败成本</span><span class="en">Efficiency and failure cost</span></h2>
           <p class="section-desc zh">
@@ -1245,10 +1340,10 @@
             <div class="section-kicker">Run Log Evidence</div>
             <h2><span class="zh">运行日志证据</span><span class="en">Run-log evidence</span></h2>
             <p class="section-desc zh">
-              以下数据来自 2026-08-07 最新一次两仓同步运行, 不是样例, 是可验证的公开记录
+              以下数据是当时记录的 2026-08-07 两仓同步运行历史观察，不是今天的实时状态
             </p>
             <p class="section-desc en">
-              The following data is from the August 7, 2026 synchronized run — not a sample, but a verifiable public record
+              Historical observations recorded for the August 7, 2026 synchronized run, not a live status feed
             </p>
           </div>
         </div>
@@ -1256,7 +1351,7 @@
         <div class="terminal">
           <div class="terminal-head">
             <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-            <div>CURRENT · 2026-08-07</div>
+            <div>SNAPSHOT · 2026-08-07</div>
           </div>
           <div class="terminal-body">
             <div class="log-line"><b class="zero-text">[zero]</b> <strong>verify</strong> 30 backend files compiled, 7 test modules, all OK</div>
@@ -1377,13 +1472,14 @@
         </article>
       </div>
     </section>
+    </div> <!-- /wf-history-data -->
 
   </main>
 
   <footer class="footer">
     <div class="wrap footer-inner">
       <div>
-        <span class="zh">© 2026 NEXUS FLOW · 2026-02-12 → 2026-08-07 · single-file homepage</span>
+        <span class="zh">© 2026 NEXUS FLOW · Core lifecycle &amp; 2026-08-07 historical exhibit</span>
         <span class="en">© 2026 NEXUS FLOW · 2026-02-12 → 2026-08-07 · single-file homepage</span>
       </div>
       <div>
