@@ -29,10 +29,10 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-11-12 historical effect-set closure and target incarnation](records/2026-11-12.md)
+- 最新 Daily: [2026-11-13 equal-count receipt multiset and exact closure](records/2026-11-13.md)
 - 当前月度事实源: [2026-11](records/2026-11.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
-- 最新完整周期审计: [2026-11-01 至 2026-11-06](audits/2026-11-01--2026-11-06.md)
+- 最新完整周期审计: [2026-11-07 至 2026-11-12](audits/2026-11-07--2026-11-12.md)
 - 最新合并后修正对账: [2026-11-05 handoff query coverage-end](corrections/2026-11-05-handoff-query-coverage-postmerge.md)
 - 前期 handoff 证据绑定修正: [2026-11-05 case-to-trace](corrections/2026-11-05-handoff-case-trace-binding-postmerge.md)
 - 前期合并后修正对账: [2026-10-30 PR #754 post-merge reconciliation](corrections/2026-10-30-pubsub-merge-reconciliation.md)
