@@ -1,15 +1,17 @@
 # Authors
 
-> **Bilingual reading guide / 双语阅读指引（2026-11-13）**  
-> **中文**：本文件属于可靠状态转换、Agent Runtime 容错与执行证据边界的公开仓库说明；维护者身份和外部合作关系不能混同；历史截止点与执行状态不因本次双语整理而改变  
-> **English**: This root document belongs to fault-tolerant state transitions, agent-runtime contracts, and bounded execution evidence; Authorship is not equivalent to institutional endorsement. Historical cutoffs and execution status are not changed by this bilingual documentation update
-
 
 ## Primary author and maintainer
 
 - lostlight530
   - GitHub: https://github.com/lostlight530
   - Google Developer Program: https://me.developers.google.com/u/lostlight-love-CXX
+
+### 作者与独立证据 / Authorship and independent evidence
+
+中文：公开作者身份、仓库提交责任与外部科研验证是不同属性；引用 ORCID、个人开源参与及 Zenodo DOI 不能证明可靠性实验已经独立复现或获机构背书
+
+English: Public authorship, commit responsibility and independent research verification are distinct. ORCID, open-source participation and Zenodo DOI do not establish independent reproduction or institutional endorsement
 
 ## Public open-source identity
 

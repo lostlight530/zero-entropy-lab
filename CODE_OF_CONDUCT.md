@@ -1,9 +1,5 @@
 # Code of Conduct
 
-> **Bilingual reading guide / 双语阅读指引（2026-11-13）**  
-> **中文**：本文件属于可靠状态转换、Agent Runtime 容错与执行证据边界的公开仓库说明；公众协作行为遵循原始条款，双语导读不替代规则；历史截止点与执行状态不因本次双语整理而改变  
-> **English**: This root document belongs to fault-tolerant state transitions, agent-runtime contracts, and bounded execution evidence; Community conduct remains governed by the full original rules. Historical cutoffs and execution status are not changed by this bilingual documentation update
-
 
 ## Scope
 
@@ -19,6 +15,12 @@ Participants should:
 - correct material errors openly and preserve provenance when a historical record must remain auditable
 - respect privacy, security boundaries, attribution, copyright, and third-party licenses
 - avoid spam, harassment, discrimination, threats, impersonation, fabricated evidence, or knowingly misleading validation claims
+
+### 中文可靠性协作纪律 / Reliability-collaboration integrity
+
+讨论 Agent 状态恢复、授权连续性和周期统计时，应标明原始输入、发生时点、复现环境与失败状态；不得把未执行、自述成功、单次固定样例或模型输出当成普遍的运行保证
+
+For agent recovery, authorization continuity and longitudinal metrics, record real inputs, timing, replay environment and failures. Unexecuted tests, self-reported success, one fixture or model output cannot become general reliability guarantees
 
 ## Research and engineering integrity
 

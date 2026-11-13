@@ -1,15 +1,17 @@
 # Security Policy
 
-> **Bilingual reading guide / 双语阅读指引（2026-11-13）**  
-> **中文**：本文件属于可靠状态转换、Agent Runtime 容错与执行证据边界的公开仓库说明；区分安全报告程序、已测故障模式与尚未验证的安全性质；历史截止点与执行状态不因本次双语整理而改变  
-> **English**: This root document belongs to fault-tolerant state transitions, agent-runtime contracts, and bounded execution evidence; Separate reporting procedures, tested failure modes, and unverified security properties. Historical cutoffs and execution status are not changed by this bilingual documentation update
-
 
 ## Supported State
 
 Security fixes apply to the latest commit on `main`.
 
 Historical snapshots, generated reports, feature branches, and pull requests are not maintained as independent release lines.
+
+### 中文安全报告与权限范围 / Private vulnerability reporting and authority
+
+安全疑虑请使用下方 GitHub 私密漏洞报告渠道，勿在公开 PR、日志和研究附件中泄露凭据或可利用细节；状态一致性、哈希、权限配置与外部输入可信度互不等价，安全主张需单独验证
+
+Use the private vulnerability channel below, not public PRs or logs, for credentials or exploit detail. State consistency, hashes, permission configuration and trust in external inputs are distinct; security claims require their own checks
 
 ## Private Reporting
 
