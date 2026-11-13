@@ -1,5 +1,10 @@
 # Open Research / 开放科研
 
+> **Bilingual reading guide / 双语阅读指引（2026-11-13）**  
+> **中文**：本文件属于可靠状态转换、Agent Runtime 容错与执行证据边界的公开仓库说明；公开科研需要保留运行条件、来源和失败状态，不将零熵隐喻视为普遍证明；历史截止点与执行状态不因本次双语整理而改变  
+> **English**: This root document belongs to fault-tolerant state transitions, agent-runtime contracts, and bounded execution evidence; Open research must preserve conditions, sources, and failures; zero-entropy terminology is not a universal proof. Historical cutoffs and execution status are not changed by this bilingual documentation update
+
+
 Status: durable open-research production guide
 Scope: repository-level research positioning, research-production method, scholarly-metadata boundaries, and semantic-drift governance
 
@@ -7,7 +12,7 @@ Scope: repository-level research positioning, research-production method, schola
 
 English is the canonical and default language for this open-research contract. Chinese text is provided as an accessibility and interpretation aid. If a wording conflict appears, the English normative text governs; repository evidence and current owning contracts still outrank either translation.
 
-英文是本开放科研契约的默认与规范语言；中文用于辅助理解与可访问性。若中英文表述发生冲突，以英文规范文本为准，但仓库事实与当前 owning contract 的权威仍高于任何翻译。
+英文是本开放科研契约的默认与规范语言；中文用于辅助理解与可访问性；若中英文表述发生冲突，以英文规范文本为准，但仓库事实与当前 owning contract 的权威仍高于任何翻译；
 
 
 ## Authority
@@ -100,6 +105,12 @@ Unknown, unavailable, unexecuted, and unobserved states stay explicit. Do not cl
 
 These support openness and reuse; they do not establish scientific validity.
 
+### Data-plane and observation-plane separation / 数据层与观察口径分离
+
+**中文**：原始状态账本、独立研究 observation、GitHub Actions 收据、定期汇总、前端数据显示和冻结归档，均不能被当成相同数据源；长期判断需要输入身份、日期、状态连续性、错误恢复与审批边界，以及实际可复核的失败／反例；旧 Jules 与当前 GPT Native 的生产者记录按原身份保存，不追改为同一执行
+
+**English**: Raw state ledgers, independent research observations, GitHub Actions receipts, periodic aggregates, frontend displays and frozen archives are not equivalent sources. Longitudinal claims need input identity, dates, state continuity, recovery/approval boundaries and inspectable failures or counterexamples. Historical Jules and prospective GPT Native producer records retain their own identities rather than being relabeled as one run
+
 ## Scholarly metadata discipline
 
 Before future scholarly-metadata publication or revision, preserve Canonical Type, One-line Positioning, Primary Domains, Non-goals, accurate structured subjects where supported, and 5–7 defining keywords. Do not rewrite technically precise descriptions into classifier-facing marketing copy or use keyword stuffing.
@@ -163,8 +174,8 @@ external indexing != repository self-definition
 
 ## 中文摘要
 
-本文件定义的是仓库长期开放科研方法，而不是新的总宪法。共同骨架包括：研究问题、可证伪假设、证据与来源身份、固定对象/版本/环境、实际执行程序、原始观测、反例检查、有界结论、研究增量与复验条件。
+本文件定义的是仓库长期开放科研方法，而不是新的总宪法；共同骨架包括：研究问题、可证伪假设、证据与来源身份、固定对象/版本/环境、实际执行程序、原始观测、反例检查、有界结论、研究增量与复验条件；
 
-仓库仍由自身 implementation、methodology、evidence、history 等原生权威文件定义；OpenAlex、OpenAIRE、Zenodo、DataCite 等外部系统只能派生或传播仓库语义，不能反向定义仓库身份。
+仓库仍由自身 implementation、methodology、evidence、history 等原生权威文件定义；OpenAlex、OpenAIRE、Zenodo、DataCite 等外部系统只能派生或传播仓库语义，不能反向定义仓库身份；
 
-未来 scholarly metadata 应保持 canonical type、one-line positioning、primary domains、non-goals、少量高质量 subjects 与 5–7 个定义性 keywords。若外部分类偏移，先判断是否存在仓库自身歧义；没有歧义则记录为 downstream classifier noise，不为了分类器重写仓库本体。
+未来 scholarly metadata 应保持 canonical type、one-line positioning、primary domains、non-goals、少量高质量 subjects 与 5–7 个定义性 keywords；若外部分类偏移，先判断是否存在仓库自身歧义；没有歧义则记录为 downstream classifier noise，不为了分类器重写仓库本体；
