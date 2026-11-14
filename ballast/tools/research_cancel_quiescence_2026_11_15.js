@@ -3,7 +3,7 @@ const scenarios = [
 {id:"baseline_quiesced",events:[["dispatch","a"],["commit","a"],["receipt","a"],["cancel_request"],["cancel_ack"],["fence",2],["inflight_zero"],["closure",2]]},
 {id:"ack_only_inflight",events:[["dispatch","a"],["cancel_request"],["cancel_ack"]]},
 {id:"heartbeat_delayed",events:[["dispatch","a"],["cancel_request"],["cancel_ack"],["heartbeat","a"],["commit","a"]]},
-{id:"stale_generation_commit",events:[["dispatch","a"],["cancel_request"],["cancel_ack"],["fence",2],["commit","a",1],["receipt","a"]]},
+{id:"stale_generation_commit",events:[["dispatch","a"],["cancel_request"],["cancel_ack"],["fence",2],["commit","a",1],["receipt","a"],["inflight_zero"],["closure",2]]},
 {id:"best_effort_cancel_failed",events:[["dispatch","a"],["cancel_request"],["cancel_ack"],["cancel_failed"],["commit","a"]]},
 {id:"receipt_without_commit",events:[["dispatch","a"],["receipt","a"],["cancel_request"],["cancel_ack"],["fence",2],["inflight_zero"],["closure",2]]},
 {id:"covered_positive_miss_conflict",events:[["dispatch","a"],["commit","a"],["receipt","a"],["covered_miss","a"],["cancel_request"],["cancel_ack"],["fence",2],["inflight_zero"],["closure",2]]},
