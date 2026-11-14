@@ -142,17 +142,24 @@
         [
           "receipt",
           "a"
+        ],
+        [
+          "inflight_zero"
+        ],
+        [
+          "closure",
+          2
         ]
       ],
       "producer": {
         "id": "stale_generation_commit",
         "weak": "QUIESCENT",
-        "full": "UNKNOWN_QUIESCENCE",
+        "full": "STALE_COMMIT",
         "newEffectPermission": "DENY_NEW_EFFECT"
       },
       "verifier": {
         "id": "stale_generation_commit",
-        "decision": "UNKNOWN_QUIESCENCE",
+        "decision": "STALE_COMMIT",
         "sharedContract": "yes"
       }
     },
