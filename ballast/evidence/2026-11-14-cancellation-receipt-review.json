@@ -1,0 +1,281 @@
+{
+  "record": "2026-11-14",
+  "type": "POST_PRODUCER_MAINTAINER_RECONSTRUCTION",
+  "time_basis": "2026-11-14 Asia/Shanghai, precise replay second NOT_CAPTURED",
+  "historical_original_producer": "7 authored scenarios / 14 model decisions / 5 weak-reference disagreements claimed, source not retained",
+  "review_execution": "isolated Code Mode V8 producer and separately coded primitive reconstruction, no Node CLI",
+  "original_case_inputs_and_rebuilt_outputs": [
+    {
+      "id": "valid",
+      "primitive": {
+        "id": "valid",
+        "required": [
+          "a",
+          "b"
+        ],
+        "receipts": [
+          "a",
+          "b"
+        ],
+        "grant": "valid",
+        "permission": true,
+        "miss": false,
+        "extra": false,
+        "guard": true
+      },
+      "observed": {
+        "id": "valid",
+        "weak": "COMPLETE",
+        "ref": "COMPLETE",
+        "permission": "ALLOW_NEW_EFFECT"
+      },
+      "modelRebuild": {
+        "id": "valid",
+        "weak": "COMPLETE",
+        "ref": "COMPLETE",
+        "permission": "ALLOW_NEW_EFFECT"
+      }
+    },
+    {
+      "id": "duplicate",
+      "primitive": {
+        "id": "duplicate",
+        "required": [
+          "a",
+          "b"
+        ],
+        "receipts": [
+          "a",
+          "a"
+        ],
+        "grant": "valid",
+        "permission": true,
+        "miss": false,
+        "extra": false,
+        "guard": true
+      },
+      "observed": {
+        "id": "duplicate",
+        "weak": "COMPLETE",
+        "ref": "MISMATCH",
+        "permission": "ALLOW_NEW_EFFECT"
+      },
+      "modelRebuild": {
+        "id": "duplicate",
+        "weak": "COMPLETE",
+        "ref": "MISMATCH",
+        "permission": "ALLOW_NEW_EFFECT"
+      }
+    },
+    {
+      "id": "conflict",
+      "primitive": {
+        "id": "conflict",
+        "required": [
+          "a",
+          "b"
+        ],
+        "receipts": [
+          "a",
+          "b"
+        ],
+        "grant": "valid",
+        "permission": true,
+        "miss": true,
+        "extra": false,
+        "guard": true
+      },
+      "observed": {
+        "id": "conflict",
+        "weak": "COMPLETE",
+        "ref": "EVIDENCE_CONFLICT",
+        "permission": "ALLOW_NEW_EFFECT"
+      },
+      "modelRebuild": {
+        "id": "conflict",
+        "weak": "COMPLETE",
+        "ref": "EVIDENCE_CONFLICT",
+        "permission": "ALLOW_NEW_EFFECT"
+      }
+    },
+    {
+      "id": "unseen_extra",
+      "primitive": {
+        "id": "unseen_extra",
+        "required": [
+          "a",
+          "b"
+        ],
+        "receipts": [
+          "a",
+          "b"
+        ],
+        "grant": "valid",
+        "permission": true,
+        "miss": false,
+        "extra": true,
+        "guard": true
+      },
+      "observed": {
+        "id": "unseen_extra",
+        "weak": "COMPLETE",
+        "ref": "UNKNOWN",
+        "permission": "ALLOW_NEW_EFFECT"
+      },
+      "modelRebuild": {
+        "id": "unseen_extra",
+        "weak": "COMPLETE",
+        "ref": "UNKNOWN",
+        "permission": "ALLOW_NEW_EFFECT"
+      }
+    },
+    {
+      "id": "grant_invalid",
+      "primitive": {
+        "id": "grant_invalid",
+        "required": [
+          "a",
+          "b"
+        ],
+        "receipts": [
+          "a",
+          "b"
+        ],
+        "grant": "invalid",
+        "permission": true,
+        "miss": false,
+        "extra": false,
+        "guard": true
+      },
+      "observed": {
+        "id": "grant_invalid",
+        "weak": "COMPLETE",
+        "ref": "BLOCKED",
+        "permission": "ALLOW_NEW_EFFECT"
+      },
+      "modelRebuild": {
+        "id": "grant_invalid",
+        "weak": "COMPLETE",
+        "ref": "BLOCKED",
+        "permission": "ALLOW_NEW_EFFECT"
+      }
+    },
+    {
+      "id": "post_read_drift",
+      "primitive": {
+        "id": "post_read_drift",
+        "required": [
+          "a",
+          "b"
+        ],
+        "receipts": [
+          "a",
+          "b"
+        ],
+        "grant": "valid",
+        "permission": true,
+        "miss": false,
+        "extra": false,
+        "guard": false
+      },
+      "observed": {
+        "id": "post_read_drift",
+        "weak": "COMPLETE",
+        "ref": "UNKNOWN",
+        "permission": "ALLOW_NEW_EFFECT"
+      },
+      "modelRebuild": {
+        "id": "post_read_drift",
+        "weak": "COMPLETE",
+        "ref": "UNKNOWN",
+        "permission": "ALLOW_NEW_EFFECT"
+      }
+    },
+    {
+      "id": "cancelled",
+      "primitive": {
+        "id": "cancelled",
+        "required": [
+          "a",
+          "b"
+        ],
+        "receipts": [
+          "a",
+          "b"
+        ],
+        "grant": "valid",
+        "permission": false,
+        "miss": false,
+        "extra": false,
+        "guard": true
+      },
+      "observed": {
+        "id": "cancelled",
+        "weak": "COMPLETE",
+        "ref": "COMPLETE",
+        "permission": "DENY_NEW_EFFECT"
+      },
+      "modelRebuild": {
+        "id": "cancelled",
+        "weak": "COMPLETE",
+        "ref": "COMPLETE",
+        "permission": "DENY_NEW_EFFECT"
+      }
+    }
+  ],
+  "adversarial_review_only_probes": [
+    {
+      "id": "P1-omitted-extra-effect",
+      "originalModel": "COMPLETE",
+      "coverageAwareReview": "UNKNOWN_UNOBSERVED_EFFECT",
+      "challenge": "P1-omitted-extra-effect"
+    },
+    {
+      "id": "P2-forged-historical-issuer",
+      "originalModel": "COMPLETE",
+      "coverageAwareReview": "UNKNOWN_HISTORICAL_AUTHORITY",
+      "challenge": "P2-forged-historical-issuer"
+    },
+    {
+      "id": "P3-wrong-target-incarnation",
+      "originalModel": "COMPLETE",
+      "coverageAwareReview": "MISMATCH_TARGET_INCARNATION",
+      "challenge": "P3-wrong-target-incarnation"
+    },
+    {
+      "id": "P4-post-read-membership-drift",
+      "originalModel": "COMPLETE",
+      "coverageAwareReview": "UNKNOWN_MEMBERSHIP_TOCTOU",
+      "challenge": "P4-post-read-membership-drift"
+    },
+    {
+      "id": "P5-miss-coverage-not-proven",
+      "originalModel": "EVIDENCE_CONFLICT",
+      "coverageAwareReview": "UNKNOWN_PRIOR_EFFECT",
+      "challenge": "P5-miss-coverage-not-proven"
+    }
+  ],
+  "summary": {
+    "model_cases": 7,
+    "weak_reference_divergences": 5,
+    "limited_rebuild_agreements": 7,
+    "adversarial_probes": 5,
+    "original_reference_unsafe_assumptions": 5,
+    "real_effect_calls": 0,
+    "real_receipt_queries": 0,
+    "new_daily_credit": 0,
+    "new_independent_original_windows": 0
+  },
+  "independence": {
+    "implementation": "PARTIAL",
+    "data_source": "NONE",
+    "semantic_contract": "SHARED",
+    "authority": "NONE"
+  },
+  "limits": [
+    "Original producer byte-identical replay unavailable",
+    "Synthetic miss flag lacks exact identity, watermarks, scope and retention evidence",
+    "Coverage-aware review is a conservative model critique, not real authoritative sink verification",
+    "Original results, new review reconstruction and probe findings retain separate provenance"
+  ]
+}
