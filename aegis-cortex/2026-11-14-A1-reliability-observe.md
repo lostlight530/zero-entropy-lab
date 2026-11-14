@@ -11,6 +11,14 @@ Logical Date: 2026-11-14
 Logical Timezone: Asia/Shanghai
 Agent: GPT-6 / GPT_NATIVE / HUMAN_REQUESTED / NOT_JULES_REPLAY
 Producer Identity: HUMAN_REQUESTED_GPT_NATIVE
+Record Provenance: HUMAN_AUTHORIZED_SUBSTITUTE
+Source Identity: google/adk-python@12aab4aaaa1a72e3edcc65fa4f9d849896ea6c48
+Source Authority For Claim: FIRST_PARTY_IMPLEMENTATION_DIFF / NO_RUNTIME_RESULT
+Independent Verification: NOT_EXECUTED / ONE_AUTHOR_LINEAGE
+Host Applicability: UNKNOWN / ZERO_HOST_INTEGRATION_NOT_CHECKED
+Original Execution Status: GPT_NATIVE_BOUNDED_EXTERNAL_RISK_REVIEW_COMPLETED
+Current Path Status: DRAFT_PR_PENDING_REVIEW
+External Evidence: FIRST_PARTY_CODE_PATCH_AND_AUTHORED_TEST_SOURCE / NOT_EXECUTED
 Base Main SHA: 4310c93ff4d30a940f29f9ac33953ee3b0d0c6ec
 Run Identity: zero-entropy-lab/aegis/A1/2026-11-14/GPT_NATIVE/4310c93ff4d30a940f29f9ac33953ee3b0d0c6ec/adk-unconditional-inotify-observer-01
 Execution Time UTC: 2026-11-14 / exact research-start second NOT_CAPTURED
@@ -51,7 +59,9 @@ Claim Not Supported: confirmed Zero local resource leak, independently verified 
 Confidence: HIGH_FOR_SOURCE_PATCH / UNKNOWN_FOR_RUNTIME_GENERALIZATION
 Limitations: resource behavior depends on watchdog version, platform, application-construction count and reload flag. Single-created application is not proof of eventual exhaustion.
 
-## RAW_FAILURE_MECHANISM
+## RAW_RELIABILITY_SIGNAL_LOG
+
+### RAW_FAILURE_MECHANISM
 Risk ID: RISK-20261114-A01
 Signal: FILE_WATCHER_ALLOCATED_WHEN_AGENT_RELOAD_DISABLED
 Failure Mechanism: construction of an application without the reload capability still allocates a file-system Observer, which can hold an inotify instance and reader thread per application object. Repeated application creation in long-lived processes or tests can exhaust OS instance/thread resources even when no file reload was requested.
