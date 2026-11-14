@@ -1,0 +1,540 @@
+{
+  "logicalDate": "2026-11-15",
+  "type": "SYNTHETIC_CONTROLLED_STUDY",
+  "identity": {
+    "task": "T15",
+    "run": "R15",
+    "attempt": "A15",
+    "targetUid": "U15",
+    "generation": 1
+  },
+  "required": [
+    "a"
+  ],
+  "rows": [
+    {
+      "id": "baseline_quiesced",
+      "primitive": [
+        [
+          "dispatch",
+          "a"
+        ],
+        [
+          "commit",
+          "a"
+        ],
+        [
+          "receipt",
+          "a"
+        ],
+        [
+          "cancel_request"
+        ],
+        [
+          "cancel_ack"
+        ],
+        [
+          "fence",
+          2
+        ],
+        [
+          "inflight_zero"
+        ],
+        [
+          "closure",
+          2
+        ]
+      ],
+      "producer": {
+        "id": "baseline_quiesced",
+        "weak": "QUIESCENT",
+        "full": "QUIESCENT",
+        "newEffectPermission": "DENY_NEW_EFFECT"
+      },
+      "verifier": {
+        "id": "baseline_quiesced",
+        "decision": "QUIESCENT",
+        "sharedContract": "yes"
+      }
+    },
+    {
+      "id": "ack_only_inflight",
+      "primitive": [
+        [
+          "dispatch",
+          "a"
+        ],
+        [
+          "cancel_request"
+        ],
+        [
+          "cancel_ack"
+        ]
+      ],
+      "producer": {
+        "id": "ack_only_inflight",
+        "weak": "QUIESCENT",
+        "full": "UNKNOWN_QUIESCENCE",
+        "newEffectPermission": "DENY_NEW_EFFECT"
+      },
+      "verifier": {
+        "id": "ack_only_inflight",
+        "decision": "UNKNOWN_QUIESCENCE",
+        "sharedContract": "yes"
+      }
+    },
+    {
+      "id": "heartbeat_delayed",
+      "primitive": [
+        [
+          "dispatch",
+          "a"
+        ],
+        [
+          "cancel_request"
+        ],
+        [
+          "cancel_ack"
+        ],
+        [
+          "heartbeat",
+          "a"
+        ],
+        [
+          "commit",
+          "a"
+        ]
+      ],
+      "producer": {
+        "id": "heartbeat_delayed",
+        "weak": "QUIESCENT",
+        "full": "UNKNOWN_QUIESCENCE",
+        "newEffectPermission": "DENY_NEW_EFFECT"
+      },
+      "verifier": {
+        "id": "heartbeat_delayed",
+        "decision": "UNKNOWN_QUIESCENCE",
+        "sharedContract": "yes"
+      }
+    },
+    {
+      "id": "stale_generation_commit",
+      "primitive": [
+        [
+          "dispatch",
+          "a"
+        ],
+        [
+          "cancel_request"
+        ],
+        [
+          "cancel_ack"
+        ],
+        [
+          "fence",
+          2
+        ],
+        [
+          "commit",
+          "a",
+          1
+        ],
+        [
+          "receipt",
+          "a"
+        ]
+      ],
+      "producer": {
+        "id": "stale_generation_commit",
+        "weak": "QUIESCENT",
+        "full": "UNKNOWN_QUIESCENCE",
+        "newEffectPermission": "DENY_NEW_EFFECT"
+      },
+      "verifier": {
+        "id": "stale_generation_commit",
+        "decision": "UNKNOWN_QUIESCENCE",
+        "sharedContract": "yes"
+      }
+    },
+    {
+      "id": "best_effort_cancel_failed",
+      "primitive": [
+        [
+          "dispatch",
+          "a"
+        ],
+        [
+          "cancel_request"
+        ],
+        [
+          "cancel_ack"
+        ],
+        [
+          "cancel_failed"
+        ],
+        [
+          "commit",
+          "a"
+        ]
+      ],
+      "producer": {
+        "id": "best_effort_cancel_failed",
+        "weak": "QUIESCENT",
+        "full": "UNKNOWN_QUIESCENCE",
+        "newEffectPermission": "DENY_NEW_EFFECT"
+      },
+      "verifier": {
+        "id": "best_effort_cancel_failed",
+        "decision": "UNKNOWN_QUIESCENCE",
+        "sharedContract": "yes"
+      }
+    },
+    {
+      "id": "receipt_without_commit",
+      "primitive": [
+        [
+          "dispatch",
+          "a"
+        ],
+        [
+          "receipt",
+          "a"
+        ],
+        [
+          "cancel_request"
+        ],
+        [
+          "cancel_ack"
+        ],
+        [
+          "fence",
+          2
+        ],
+        [
+          "inflight_zero"
+        ],
+        [
+          "closure",
+          2
+        ]
+      ],
+      "producer": {
+        "id": "receipt_without_commit",
+        "weak": "QUIESCENT",
+        "full": "UNPROVEN_OCCURRENCE",
+        "newEffectPermission": "DENY_NEW_EFFECT"
+      },
+      "verifier": {
+        "id": "receipt_without_commit",
+        "decision": "UNPROVEN_OCCURRENCE",
+        "sharedContract": "yes"
+      }
+    },
+    {
+      "id": "covered_positive_miss_conflict",
+      "primitive": [
+        [
+          "dispatch",
+          "a"
+        ],
+        [
+          "commit",
+          "a"
+        ],
+        [
+          "receipt",
+          "a"
+        ],
+        [
+          "covered_miss",
+          "a"
+        ],
+        [
+          "cancel_request"
+        ],
+        [
+          "cancel_ack"
+        ],
+        [
+          "fence",
+          2
+        ],
+        [
+          "inflight_zero"
+        ],
+        [
+          "closure",
+          2
+        ]
+      ],
+      "producer": {
+        "id": "covered_positive_miss_conflict",
+        "weak": "QUIESCENT",
+        "full": "EVIDENCE_CONFLICT",
+        "newEffectPermission": "DENY_NEW_EFFECT"
+      },
+      "verifier": {
+        "id": "covered_positive_miss_conflict",
+        "decision": "EVIDENCE_CONFLICT",
+        "sharedContract": "yes"
+      }
+    },
+    {
+      "id": "duplicate_receipt",
+      "primitive": [
+        [
+          "dispatch",
+          "a"
+        ],
+        [
+          "commit",
+          "a"
+        ],
+        [
+          "receipt",
+          "a"
+        ],
+        [
+          "receipt",
+          "a"
+        ],
+        [
+          "cancel_request"
+        ],
+        [
+          "cancel_ack"
+        ],
+        [
+          "fence",
+          2
+        ],
+        [
+          "inflight_zero"
+        ],
+        [
+          "closure",
+          2
+        ]
+      ],
+      "producer": {
+        "id": "duplicate_receipt",
+        "weak": "QUIESCENT",
+        "full": "IDENTITY_CONFLICT",
+        "newEffectPermission": "DENY_NEW_EFFECT"
+      },
+      "verifier": {
+        "id": "duplicate_receipt",
+        "decision": "IDENTITY_CONFLICT",
+        "sharedContract": "yes"
+      }
+    },
+    {
+      "id": "unlisted_effect",
+      "primitive": [
+        [
+          "dispatch",
+          "a"
+        ],
+        [
+          "commit",
+          "a"
+        ],
+        [
+          "receipt",
+          "a"
+        ],
+        [
+          "commit",
+          "c"
+        ],
+        [
+          "receipt",
+          "c"
+        ],
+        [
+          "cancel_request"
+        ],
+        [
+          "cancel_ack"
+        ],
+        [
+          "fence",
+          2
+        ],
+        [
+          "inflight_zero"
+        ],
+        [
+          "closure",
+          2
+        ]
+      ],
+      "producer": {
+        "id": "unlisted_effect",
+        "weak": "QUIESCENT",
+        "full": "EXTRA_EFFECT",
+        "newEffectPermission": "DENY_NEW_EFFECT"
+      },
+      "verifier": {
+        "id": "unlisted_effect",
+        "decision": "EXTRA_EFFECT",
+        "sharedContract": "yes"
+      }
+    },
+    {
+      "id": "membership_drift_after_closure",
+      "primitive": [
+        [
+          "dispatch",
+          "a"
+        ],
+        [
+          "commit",
+          "a"
+        ],
+        [
+          "receipt",
+          "a"
+        ],
+        [
+          "cancel_request"
+        ],
+        [
+          "cancel_ack"
+        ],
+        [
+          "fence",
+          2
+        ],
+        [
+          "inflight_zero"
+        ],
+        [
+          "closure",
+          2
+        ],
+        [
+          "membership_revision",
+          3
+        ]
+      ],
+      "producer": {
+        "id": "membership_drift_after_closure",
+        "weak": "QUIESCENT",
+        "full": "TOCTOU",
+        "newEffectPermission": "DENY_NEW_EFFECT"
+      },
+      "verifier": {
+        "id": "membership_drift_after_closure",
+        "decision": "TOCTOU",
+        "sharedContract": "yes"
+      }
+    },
+    {
+      "id": "unknown_retention",
+      "primitive": [
+        [
+          "dispatch",
+          "a"
+        ],
+        [
+          "cancel_request"
+        ],
+        [
+          "cancel_ack"
+        ],
+        [
+          "fence",
+          2
+        ],
+        [
+          "inflight_zero"
+        ],
+        [
+          "closure",
+          2
+        ],
+        [
+          "uncovered_miss",
+          "a"
+        ]
+      ],
+      "producer": {
+        "id": "unknown_retention",
+        "weak": "QUIESCENT",
+        "full": "UNKNOWN_PRIOR_EFFECT",
+        "newEffectPermission": "DENY_NEW_EFFECT"
+      },
+      "verifier": {
+        "id": "unknown_retention",
+        "decision": "UNKNOWN_PRIOR_EFFECT",
+        "sharedContract": "yes"
+      }
+    },
+    {
+      "id": "extra_after_quiescence_claim",
+      "primitive": [
+        [
+          "dispatch",
+          "a"
+        ],
+        [
+          "commit",
+          "a"
+        ],
+        [
+          "receipt",
+          "a"
+        ],
+        [
+          "cancel_request"
+        ],
+        [
+          "cancel_ack"
+        ],
+        [
+          "fence",
+          2
+        ],
+        [
+          "inflight_zero"
+        ],
+        [
+          "closure",
+          2
+        ],
+        [
+          "commit",
+          "c"
+        ]
+      ],
+      "producer": {
+        "id": "extra_after_quiescence_claim",
+        "weak": "QUIESCENT",
+        "full": "EXTRA_EFFECT",
+        "newEffectPermission": "DENY_NEW_EFFECT"
+      },
+      "verifier": {
+        "id": "extra_after_quiescence_claim",
+        "decision": "EXTRA_EFFECT",
+        "sharedContract": "yes"
+      }
+    }
+  ],
+  "summary": {
+    "scenarios": 12,
+    "decisions": 24,
+    "weakFalseQuiescence": 11,
+    "limitedVerifierAgreements": 12,
+    "verifierDisagreements": [],
+    "realSinkCalls": 0,
+    "realReceiptQueries": 0
+  },
+  "independence": {
+    "implementation": "PARTIAL",
+    "dataSource": "NONE",
+    "semanticContract": "SHARED",
+    "authority": "NONE"
+  },
+  "provenance": "executed isolated Code Mode V8; not native Node CLI or real service"
+}
