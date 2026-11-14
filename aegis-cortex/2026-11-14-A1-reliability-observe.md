@@ -19,6 +19,7 @@ Host Applicability: UNKNOWN / ZERO_HOST_INTEGRATION_NOT_CHECKED
 Original Execution Status: GPT_NATIVE_BOUNDED_EXTERNAL_RISK_REVIEW_COMPLETED
 Current Path Status: DRAFT_PR_PENDING_REVIEW
 External Evidence: FIRST_PARTY_CODE_PATCH_AND_AUTHORED_TEST_SOURCE / NOT_EXECUTED
+Uncertainty: Actual runtime reproduction, affected release and Zero-local integration NOT_VERIFIED
 Base Main SHA: 4310c93ff4d30a940f29f9ac33953ee3b0d0c6ec
 Run Identity: zero-entropy-lab/aegis/A1/2026-11-14/GPT_NATIVE/4310c93ff4d30a940f29f9ac33953ee3b0d0c6ec/adk-unconditional-inotify-observer-01
 Execution Time UTC: 2026-11-14 / exact research-start second NOT_CAPTURED
