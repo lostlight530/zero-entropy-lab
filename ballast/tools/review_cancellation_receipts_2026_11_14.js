@@ -162,7 +162,9 @@ const probes = [
     "miss": false,
     "extra": false,
     "guard": true,
-    "latentExtraEffect": true
+    "latentExtraEffect": true,
+    "issuerWitness": true,
+    "effectSetClosed": true
   },
   {
     "id": "P2-forged-historical-issuer",
