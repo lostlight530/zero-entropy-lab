@@ -1,0 +1,151 @@
+{
+  "runtime": "Code Mode V8 isolated evaluation, 2026-11-16 Asia/Shanghai",
+  "fixtures": [
+    [
+      "covered_exact_miss",
+      1,
+      1,
+      12,
+      10,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      "global_watermark_only",
+      1,
+      0,
+      12,
+      10,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      "lagging_watermark",
+      1,
+      1,
+      9,
+      10,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      "expired_retention",
+      1,
+      1,
+      12,
+      10,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      "positive_miss_conflict",
+      1,
+      1,
+      12,
+      10,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      "extra_effect_member",
+      1,
+      1,
+      12,
+      10,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      "revoked_current_permission",
+      1,
+      1,
+      12,
+      10,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      "missing_exact_identity",
+      0,
+      1,
+      12,
+      10,
+      1,
+      0,
+      0,
+      1
+    ]
+  ],
+  "rows": [
+    {
+      "id": "covered_exact_miss",
+      "weak": "RETRY",
+      "reference": "RETRY_CONDITIONALLY",
+      "verifier": "RETRY_CONDITIONALLY"
+    },
+    {
+      "id": "global_watermark_only",
+      "weak": "RETRY",
+      "reference": "UNKNOWN_STOP",
+      "verifier": "UNKNOWN_STOP"
+    },
+    {
+      "id": "lagging_watermark",
+      "weak": "STOP",
+      "reference": "UNKNOWN_STOP",
+      "verifier": "UNKNOWN_STOP"
+    },
+    {
+      "id": "expired_retention",
+      "weak": "RETRY",
+      "reference": "UNKNOWN_STOP",
+      "verifier": "UNKNOWN_STOP"
+    },
+    {
+      "id": "positive_miss_conflict",
+      "weak": "RETRY",
+      "reference": "EVIDENCE_CONFLICT",
+      "verifier": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "extra_effect_member",
+      "weak": "RETRY",
+      "reference": "EXTRA_EFFECT",
+      "verifier": "EXTRA_EFFECT"
+    },
+    {
+      "id": "revoked_current_permission",
+      "weak": "RETRY",
+      "reference": "DENY_STOP",
+      "verifier": "DENY_STOP"
+    },
+    {
+      "id": "missing_exact_identity",
+      "weak": "RETRY",
+      "reference": "UNKNOWN_STOP",
+      "verifier": "UNKNOWN_STOP"
+    }
+  ],
+  "summary": {
+    "rows": 8,
+    "weakRetry": 7,
+    "referenceConditionalRetry": 1,
+    "agreements": 8
+  },
+  "external_effects": 0,
+  "authority_queries": 0
+}
