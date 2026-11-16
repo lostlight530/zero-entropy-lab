@@ -548,19 +548,19 @@
     "ggml-org/llama.cpp": {
       "documents": {
         "README.md": {
-          "blob_sha": "84e9eb5d929512ae10fbeb15d23df5af58480b50",
-          "commit_sha": "dd6b945be2188da875ab05a259ce94c6b2736e64",
-          "content_hash": "2060a4d2c7f6049c450f1c7104356f86ef3a982a1a8f56cbf70371126a63fba0",
+          "blob_sha": "3cacc8d534f292848be16722f639aeb78a425339",
+          "commit_sha": "9fba51d2c9a1b5cb5f0c47986c031334e2d7663a",
+          "content_hash": "ed147ed0103fdf400d61d69a6c7bac7a1dad44a6ff76852e2549fb3fcc78f202",
           "entity_id": "external_doc_ggml_org_llama.cpp_readme_md",
-          "observed_blob_sha": "84e9eb5d929512ae10fbeb15d23df5af58480b50",
-          "observed_commit_sha": "dd6b945be2188da875ab05a259ce94c6b2736e64",
-          "observed_tree_sha": "13057d7ffb5f0781fdfd7a9832fdc1b10755b9cd",
-          "output": "current/serving-inference/ggml_org_llama.cpp/README.md__84e9eb5d9295__dd6b945be218.md",
-          "sha": "84e9eb5d929512ae10fbeb15d23df5af58480b50",
-          "tree_sha": "13057d7ffb5f0781fdfd7a9832fdc1b10755b9cd"
+          "observed_blob_sha": "3cacc8d534f292848be16722f639aeb78a425339",
+          "observed_commit_sha": "9fba51d2c9a1b5cb5f0c47986c031334e2d7663a",
+          "observed_tree_sha": "d5afec5cfe0ec1f8b89310745cf23aaade761b5d",
+          "output": "current/serving-inference/ggml_org_llama.cpp/README.md__3cacc8d534f2__9fba51d2c9a1.md",
+          "sha": "3cacc8d534f292848be16722f639aeb78a425339",
+          "tree_sha": "d5afec5cfe0ec1f8b89310745cf23aaade761b5d"
         }
       },
-      "last_checked_at": "2026-11-12T02:35:04.172406+00:00"
+      "last_checked_at": "2026-11-16T01:28:22.668365+00:00"
     },
     "google/adk-python": {
       "documents": {
