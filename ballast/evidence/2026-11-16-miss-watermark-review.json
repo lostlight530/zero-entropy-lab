@@ -1,0 +1,83 @@
+{
+  "review_date": "2026-11-16 Asia/Shanghai",
+  "review_context": "Supplemental same-day maintainer review, zero additional Daily/window/CASE credit",
+  "source_baseline_head": "b2c000cfb7f88a619825eb0c066f54b3774e70bb",
+  "runtime": "Isolated Code Mode V8 evaluation of the code about to be committed, NOT native Node CLI",
+  "original_ledger_unchanged": true,
+  "boundary_fixtures": [
+    [
+      "positive_unbound_identity",
+      0,
+      1,
+      12,
+      10,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      "positive_expired_negative_witness",
+      1,
+      1,
+      12,
+      10,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      "positive_lagging_negative_witness",
+      1,
+      1,
+      9,
+      10,
+      1,
+      1,
+      0,
+      1
+    ]
+  ],
+  "boundary_rows": [
+    {
+      "id": "positive_unbound_identity",
+      "weak": "RETRY",
+      "reference": "UNKNOWN_STOP",
+      "verifier": "UNKNOWN_STOP"
+    },
+    {
+      "id": "positive_expired_negative_witness",
+      "weak": "RETRY",
+      "reference": "HIT_STOP",
+      "verifier": "HIT_STOP"
+    },
+    {
+      "id": "positive_lagging_negative_witness",
+      "weak": "STOP",
+      "reference": "HIT_STOP",
+      "verifier": "HIT_STOP"
+    }
+  ],
+  "synthetic_reference_attack": {
+    "id": "forged_authority_provenance",
+    "modelReference": "RETRY_CONDITIONALLY",
+    "omittedFact": "negative witness issuer and scope authority not authenticated",
+    "strongerContract": "UNKNOWN_STOP",
+    "kind": "SYNTHETIC_REFERENCE_GAP"
+  },
+  "agreements": 3,
+  "status": "EXECUTED_MODEL_ONLY",
+  "limitations": [
+    "same authored semantics shared by producer and verifier",
+    "positive receipt and exact identity are authored booleans",
+    "no real authoritative witness",
+    "no sink-side idempotency",
+    "TOCTOU not exercised"
+  ],
+  "not_executed": [
+    "native Node.js CLI",
+    "python ballast/tools/check.py",
+    "real effect sink"
+  ]
+}
