@@ -1,0 +1,296 @@
+{
+  "logical_date": "2026-11-17",
+  "base_sha": "0443b69925f2fc29d4c9d68a832fed53f77104ae",
+  "execution": "isolated V8 through Code Mode, no Node CLI",
+  "source_access_date": "2026-11-17",
+  "fixtures": [
+    [
+      "baseline",
+      "U1",
+      "U1",
+      "E1",
+      "S1",
+      "HIT",
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1,
+      1
+    ],
+    [
+      "target_recreated",
+      "U2",
+      "U1",
+      "E1",
+      "S1",
+      "HIT",
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1,
+      1
+    ],
+    [
+      "key_reused_for_E0",
+      "U1",
+      "U1",
+      "E0",
+      "S1",
+      "HIT",
+      [
+        "E0"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1,
+      1
+    ],
+    [
+      "untrusted_issuer",
+      "U1",
+      "U1",
+      "E1",
+      "X",
+      "HIT",
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1,
+      1
+    ],
+    [
+      "hit_miss_conflict",
+      "U1",
+      "U1",
+      "E1",
+      "S1",
+      "MISS",
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1,
+      1
+    ],
+    [
+      "duplicate_member",
+      "U1",
+      "U1",
+      "E1",
+      "S1",
+      "HIT",
+      [
+        "E1",
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1,
+      1
+    ],
+    [
+      "equal_count_extra",
+      "U1",
+      "U1",
+      "E1",
+      "S1",
+      "HIT",
+      [
+        "E1",
+        "E3"
+      ],
+      [
+        "E1",
+        "E2"
+      ],
+      1,
+      1,
+      1
+    ],
+    [
+      "permission_revoked",
+      "U1",
+      "U1",
+      "E1",
+      "S1",
+      "HIT",
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      0,
+      1,
+      1
+    ],
+    [
+      "historical_grant_invalid",
+      "U1",
+      "U1",
+      "E1",
+      "S1",
+      "HIT",
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      0,
+      1
+    ],
+    [
+      "unprotected_commit",
+      "U1",
+      "U1",
+      "E1",
+      "S1",
+      "HIT",
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1,
+      0
+    ],
+    [
+      "prior_unknown",
+      "U1",
+      null,
+      null,
+      null,
+      "UNKNOWN",
+      [],
+      [
+        "E1"
+      ],
+      1,
+      null,
+      1
+    ]
+  ],
+  "fields": [
+    "id",
+    "target",
+    "receiptTarget",
+    "receiptEffect",
+    "issuer",
+    "prior",
+    "members",
+    "required",
+    "permission",
+    "historyAuth",
+    "protected"
+  ],
+  "raw_stdout": [
+    {
+      "id": "baseline",
+      "weak": "COMPLETE",
+      "reference": "COMPLETE",
+      "verifier": "COMPLETE"
+    },
+    {
+      "id": "target_recreated",
+      "weak": "COMPLETE",
+      "reference": "TARGET_CONFLICT",
+      "verifier": "TARGET_CONFLICT"
+    },
+    {
+      "id": "key_reused_for_E0",
+      "weak": "COMPLETE",
+      "reference": "IDENTITY_CONFLICT",
+      "verifier": "IDENTITY_CONFLICT"
+    },
+    {
+      "id": "untrusted_issuer",
+      "weak": "COMPLETE",
+      "reference": "UNKNOWN_STOP",
+      "verifier": "UNKNOWN_STOP"
+    },
+    {
+      "id": "hit_miss_conflict",
+      "weak": "COMPLETE",
+      "reference": "EVIDENCE_CONFLICT",
+      "verifier": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "duplicate_member",
+      "weak": "COMPLETE",
+      "reference": "DUPLICATE_MEMBER",
+      "verifier": "DUPLICATE_MEMBER"
+    },
+    {
+      "id": "equal_count_extra",
+      "weak": "COMPLETE",
+      "reference": "EFFECT_SET_CONFLICT",
+      "verifier": "EFFECT_SET_CONFLICT"
+    },
+    {
+      "id": "permission_revoked",
+      "weak": "COMPLETE",
+      "reference": "COMPLETE_NO_NEW_EFFECT",
+      "verifier": "COMPLETE_NO_NEW_EFFECT"
+    },
+    {
+      "id": "historical_grant_invalid",
+      "weak": "COMPLETE",
+      "reference": "HISTORICAL_AUTH_INVALID",
+      "verifier": "HISTORICAL_AUTH_INVALID"
+    },
+    {
+      "id": "unprotected_commit",
+      "weak": "COMPLETE",
+      "reference": "TOCTOU_STOP",
+      "verifier": "TOCTOU_STOP"
+    },
+    {
+      "id": "prior_unknown",
+      "weak": "RETRY",
+      "reference": "UNKNOWN_STOP",
+      "verifier": "UNKNOWN_STOP"
+    }
+  ],
+  "summary": {
+    "scenarios": 11,
+    "weakComplete": 10,
+    "referenceComplete": 1,
+    "referenceNoNewEffect": 1,
+    "divergences": 10,
+    "agreements": 11
+  },
+  "reference_attack": {
+    "id": "forged_issuer_S1",
+    "missing": "cryptographic receipt issuer proof, actual attempt identity, effect-time clock, protected sink transaction",
+    "modeled": "COMPLETE",
+    "authorityAware": "UNKNOWN_STOP",
+    "kind": "REFERENCE_GAP"
+  },
+  "authority_independence": "NONE",
+  "semantic_independence": "SHARED",
+  "effect_sink_calls": 0,
+  "external_queries": 0
+}
