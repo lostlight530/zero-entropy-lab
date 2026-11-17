@@ -1,0 +1,139 @@
+{
+  "logical_date": "2026-11-17 Asia/Shanghai",
+  "review_type": "Same-day maintainer correction with no new daily or independent research unit",
+  "reference_original_ledger_blob_sha": "dbcb45343cc0e976961850be72fd4fc5531f2fac",
+  "source_head_before_review": "dbeb1acec84cbb9d32b02a1a7bbe389b53c89946",
+  "runtime": "Code Mode isolated V8 source evaluation, NOT native Node CLI",
+  "original_11_scenarios_retained": true,
+  "original_summary": {
+    "scenarios": 11,
+    "weakComplete": 10,
+    "referenceComplete": 1,
+    "referenceNoNewEffect": 1,
+    "divergences": 10,
+    "agreements": 11
+  },
+  "review_fixtures": [
+    [
+      "foreign_target_receipt_and_miss",
+      "U2",
+      "U1",
+      "E1",
+      "S1",
+      "MISS",
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1,
+      1
+    ],
+    [
+      "foreign_effect_receipt_and_miss",
+      "U1",
+      "U1",
+      "E0",
+      "S1",
+      "MISS",
+      [
+        "E0"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1,
+      1
+    ],
+    [
+      "missing_receipt_effect_and_miss",
+      "U1",
+      "U1",
+      null,
+      "S1",
+      "MISS",
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1,
+      1
+    ],
+    [
+      "duplicate_required",
+      "U1",
+      "U1",
+      "E1",
+      "S1",
+      "HIT",
+      [
+        "E1"
+      ],
+      [
+        "E1",
+        "E1"
+      ],
+      1,
+      1,
+      1
+    ]
+  ],
+  "review_rows": [
+    {
+      "id": "foreign_target_receipt_and_miss",
+      "weak": "COMPLETE",
+      "reference": "TARGET_CONFLICT",
+      "verifier": "TARGET_CONFLICT"
+    },
+    {
+      "id": "foreign_effect_receipt_and_miss",
+      "weak": "COMPLETE",
+      "reference": "IDENTITY_CONFLICT",
+      "verifier": "IDENTITY_CONFLICT"
+    },
+    {
+      "id": "missing_receipt_effect_and_miss",
+      "weak": "COMPLETE",
+      "reference": "UNKNOWN_STOP",
+      "verifier": "UNKNOWN_STOP"
+    },
+    {
+      "id": "duplicate_required",
+      "weak": "COMPLETE",
+      "reference": "DUPLICATE_REQUIRED",
+      "verifier": "DUPLICATE_REQUIRED"
+    }
+  ],
+  "review_agreements": 4,
+  "reference_attack": {
+    "id": "spoofed_S1_issuer_and_postcheck_race",
+    "model": "COMPLETE",
+    "missing": "authenticated issuer, exact task/run/attempt binding and protected sink commit coupled to a live revocation/target replacement",
+    "strongerContract": "UNKNOWN_STOP",
+    "type": "SYNTHETIC_REFERENCE_GAP"
+  },
+  "finding": "For contradictory prior MISS, bind positive receipt to the exact target incarnation and effect identity before labeling EVIDENCE_CONFLICT; an unmatched or absent receipt cannot establish same-effect contradiction",
+  "evidence_boundary": "All MISS and issuer labels are synthetic, no authoritative query or effect sink was used",
+  "credit": {
+    "daily": 0,
+    "independent_windows": 0,
+    "case": 0,
+    "method": 0,
+    "notes": 0,
+    "special": 0,
+    "audit": 0
+  },
+  "not_executed": [
+    "native Node CLI",
+    "full python ballast/tools/check.py",
+    "live authority query",
+    "real effect sink",
+    "semantic-contract independent verifier"
+  ]
+}
