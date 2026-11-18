@@ -6,8 +6,8 @@
 - Latest original start main SHA: `329b85e852f9ccbf3711e3da200886e199d92ff4`; Git tree truncated=false; 2430 current committed blobs; open PR count=0 at inspection
 - Previous original A1: `historical-audits/2026-11/2026-11-17-a1-source-content-review.md` @ `240e374c27dd0399c32159db92e93ad602021ca9`; source body reopened and historical disposition scoped to exact blob
 - Previous original A2: `historical-audits/2026-11/2026-11-17-a2-month-relations.md` @ `ceeb708096ec74d4b8f84340a149f6f11a299996`; relation text and present source identities do not confer new Native execution
-- Applicable A1 native source register: 40 present; daily expectation 17 × 3 = 51; missing expected Daily=17
-- Exact same path and blob from prior original A1: 38; changed/new sources reopened directly: 2
+- Applicable A1 native source register: 57 present; daily expectation 17 × 3 = 51; missing expected Daily=0
+- Exact same path and blob from prior original A1: 54; changed/new sources reopened directly: 3
 - Aegis identifies EXTERNAL_RISK ≠ LOCAL_INCIDENT ≠ EXISTING_DEFENSE ≠ MEASURED_EFFECTIVENESS
 - Ballast identifies actor, permission, intent, actual effect, authoritative receipt, exact miss, membership completeness and completion independently
 - Native Daily source, its auxiliary evidence JSON and source publisher are different evidence surfaces; auxiliary files do not create another independent Daily task identity
@@ -137,6 +137,58 @@
   - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
   - SOURCE_SCOPE: weekly decision and action ≠ an extra source publisher or month FINAL; prior reviewer path+blob source custody identical; no further local runtime proof asserted
 
+- SOURCE: `ballast/records/2026-11-01.md` @ `6b08be2d99a3d50932fa21dd02eaee48a78e7228`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-02.md` @ `c306b917a8bb93b3c6c2936e1d05592709f57639`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-03.md` @ `72b5641773009588fbea7c906a8c54ca8edd8363`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-04.md` @ `084fba335a4c9957a6ebed633cc3126f95a304e5`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-05.md` @ `a43bb301ae9509877d722ab3105b8d1a918cb342`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-06.md` @ `7d72f51be44fabc990fe5c0a848fa6825aca17b6`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-07.md` @ `1f6583cd14fabaa8623be6d898d3e3a505af319b`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-08.md` @ `b0416799dd6ef13a7639b19e524888ac27de4d8f`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-09.md` @ `6ddc1740d733d700bdd13f4a421c33782c5e795b`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-10.md` @ `136fa26677f71d026e17e4f5ddd43b84212991de`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-11.md` @ `58b346a2600424014c9a0f14edcbf5ae28219cf5`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-12.md` @ `c92602c3dca0c0e03ab69ca3875d70e5f12eadfc`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-13.md` @ `36643eaf04d7b1bebd1f4a8cb1d919e11b3af602`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-14.md` @ `f062b6d141c5ec04602c189ff80ead94b3486c4f`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-15.md` @ `16d34701c3f868f1d866d081612f7b47c8b16961`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-16.md` @ `1781542faf6bb7654d56b85456e3890762fb56bc`; owner=BALLAST_NATIVE
+  - DISPOSITION: EXACT_PRIOR_A1_PATH_BLOB / INHERITED_NO_FOLLOW_UP; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; prior A1 exact path/blob inherited, source-scoped status preserved
+- SOURCE: `ballast/records/2026-11-17.md` @ `aa3b61bffb0ac3554dff1864418d46958785d047`; owner=BALLAST_NATIVE
+  - DISPOSITION: DIRECT_TEXT_REVIEW / NEW_OR_DRIFTED / DEFER_UNEXECUTED_VERIFICATION; original producer and negative outcome retained
+  - SOURCE_SCOPE: synthetic effect/receipt != actual external settlement; reopened 167 lines with `# Ballast Daily 2026-11-17`, flags PARTIAL,NOT_EXECUTED,UNKNOWN
+
 ## Newly changed/source-inspected at current N−1 boundary
 - 2026-11-17_INPUT: `aegis-cortex/2026-11-17-A1-reliability-observe.md` blob `709099385dba9d98841c59c93022150d10fdf6b3`
   - DIRECT_READ: 97 lines, heading `# A1 Daily Reliability Observe — 2026-11-17 / incomplete Response usage custody`
@@ -145,24 +197,12 @@
   - DIRECT_READ: 94 lines, heading `# A2 Daily Doctrine Orient — 2026-11-17 / failed-attempt usage evidence boundary`
   - RETAINED_SOURCE_FLAGS: UNKNOWN / NOT_COMPUTED / NOT_EXECUTED; these are source-text flags, not a separately run verifier
 
+- 2026-11-17_INPUT: `ballast/records/2026-11-17.md` @ current source blob
+  - DIRECT_READ: 167 lines, heading `# Ballast Daily 2026-11-17`
+  - RETAINED_SOURCE_FLAGS: PARTIAL / NOT_EXECUTED / UNKNOWN; runtime effect/replay unverified
+
 ## Missing Daily input adjudication
-- MISSING: `ballast/records/2026-11/2026-11-01.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-02.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-03.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-04.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-05.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-06.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-07.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-08.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-09.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-10.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-11.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-12.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-13.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-14.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-15.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-16.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
-- MISSING: `ballast/records/2026-11/2026-11-17.md`; absent in main; runtime outcome UNKNOWN, no synthetic backfill
+- DAILY_DENOMINATOR: 51/51 canonical Aegis + Ballast Daily records present by correct owner paths; source execution still bounded
 
 ## Earlier original maintenance lineage (distinct from Native and current A1)
 - EARLIER_ORIGINAL: `historical-audits/2026-11/2026-11-02-a1-source-content-review.md` @ `c9ce2e27ef72e1a00e492667875201d20fbf9d42`
