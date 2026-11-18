@@ -1,0 +1,239 @@
+{
+  "logical_date": "2026-11-18 Asia/Shanghai",
+  "type": "SAME_DATE_MAINTAINER_REVIEW_NON_CREDIT",
+  "producer_original_head": "c7fa5b242267a8b261fd0660f6a3d05adea04a07",
+  "original_evidence_blob_sha": "b30a2c51a72c92577cca0cb78c8338f6ddb65db3",
+  "original_window_preserved": true,
+  "original_summary": {
+    "scenarios": 12,
+    "weakCompensated": 11,
+    "referenceBound": 1,
+    "divergences": 12,
+    "agreements": 12
+  },
+  "execution": "Isolated Code Mode V8 evaluation of exact revised JavaScript source, two JSON console records",
+  "review_fixtures": [
+    [
+      "both_effect_ids_absent",
+      null,
+      null,
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [],
+      [],
+      1,
+      1
+    ],
+    [
+      "both_target_uids_absent",
+      "E1",
+      "E1",
+      null,
+      null,
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1
+    ],
+    [
+      "empty_member_set",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [],
+      [],
+      1,
+      1
+    ],
+    [
+      "unbound_member_set",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [
+        "E9"
+      ],
+      [
+        "E9"
+      ],
+      1,
+      1
+    ],
+    [
+      "absent_compensation_id",
+      "E1",
+      null,
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1
+    ],
+    [
+      "null_observed_members",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      null,
+      1,
+      1
+    ],
+    [
+      "blank_target_id",
+      "E1",
+      "E1",
+      "U1",
+      " ",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1
+    ],
+    [
+      "malformed_member_identity",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      [
+        ""
+      ],
+      1,
+      1
+    ]
+  ],
+  "review_rows": [
+    {
+      "id": "both_effect_ids_absent",
+      "weak": "COMPENSATED",
+      "reference": "IDENTITY_UNKNOWN",
+      "verifier": "IDENTITY_UNKNOWN"
+    },
+    {
+      "id": "both_target_uids_absent",
+      "weak": "COMPENSATED",
+      "reference": "IDENTITY_UNKNOWN",
+      "verifier": "IDENTITY_UNKNOWN"
+    },
+    {
+      "id": "empty_member_set",
+      "weak": "COMPENSATED",
+      "reference": "MEMBERSHIP_UNKNOWN",
+      "verifier": "MEMBERSHIP_UNKNOWN"
+    },
+    {
+      "id": "unbound_member_set",
+      "weak": "COMPENSATED",
+      "reference": "EFFECT_MEMBERSHIP_UNBOUND",
+      "verifier": "EFFECT_MEMBERSHIP_UNBOUND"
+    },
+    {
+      "id": "absent_compensation_id",
+      "weak": "COMPENSATED",
+      "reference": "IDENTITY_UNKNOWN",
+      "verifier": "IDENTITY_UNKNOWN"
+    },
+    {
+      "id": "null_observed_members",
+      "weak": "COMPENSATED",
+      "reference": "MEMBERSHIP_UNKNOWN",
+      "verifier": "MEMBERSHIP_UNKNOWN"
+    },
+    {
+      "id": "blank_target_id",
+      "weak": "COMPENSATED",
+      "reference": "IDENTITY_UNKNOWN",
+      "verifier": "IDENTITY_UNKNOWN"
+    },
+    {
+      "id": "malformed_member_identity",
+      "weak": "COMPENSATED",
+      "reference": "MEMBERSHIP_UNKNOWN",
+      "verifier": "MEMBERSHIP_UNKNOWN"
+    }
+  ],
+  "review_count": 8,
+  "reference_attack": {
+    "id": "forged_issuer_attestation_and_unmodeled_concurrent_reversal",
+    "reference": "MODEL_COMPENSATION_BOUND",
+    "strongerContract": "UNKNOWN_STOP",
+    "missing": "authenticated issuer, real sink effect reversal, compensation effect-time authorization and atomic commit",
+    "provenance": "authored synthetic self-attack"
+  },
+  "limits": {
+    "implementation": "PARTIAL",
+    "data_source": "SHARED_SYNTHETIC",
+    "semantic_contract": "SHARED",
+    "authority": "NONE"
+  },
+  "not_executed": [
+    "full python ballast/tools/check.py",
+    "native Node CLI",
+    "real compensation effect sink",
+    "authenticated issuer",
+    "protected atomic completion"
+  ],
+  "credit_delta": {
+    "daily": 0,
+    "independent_window": 0,
+    "case": 0,
+    "method": 0,
+    "notes": 0,
+    "audit": 0,
+    "special": 0
+  }
+}
