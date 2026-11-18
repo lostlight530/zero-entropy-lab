@@ -31,6 +31,7 @@ function producer(a){
  else if(new Set(required).size!==required.length)reference="DUPLICATE_REQUIRED";
  else if(observed.length!==required.length||observed.some(x=>!required.includes(x)))reference="EFFECT_SET_CONFLICT";
  else if(!required.includes(e)||!observed.includes(ce))reference="EFFECT_MEMBERSHIP_UNBOUND";
+ else if(required.length>1)reference="MULTI_EFFECT_COMPENSATION_UNKNOWN";
  else if(guard!==1)reference="TOCTOU_STOP";
  else reference=permission===1?"MODEL_COMPENSATION_BOUND":"MODEL_NO_NEW_EFFECT";
  return {id,weak,reference};
@@ -50,6 +51,7 @@ function verifier(a){
  if(new Set(required).size!==required.length)return "DUPLICATE_REQUIRED";
  if(seen.size!==required.length||required.some(x=>!seen.has(x)))return "EFFECT_SET_CONFLICT";
  if(!required.includes(e)||!seen.has(ce))return "EFFECT_MEMBERSHIP_UNBOUND";
+ if(required.length>1)return "MULTI_EFFECT_COMPENSATION_UNKNOWN";
  if(guard!==1)return "TOCTOU_STOP";
  return permission===1?"MODEL_COMPENSATION_BOUND":"MODEL_NO_NEW_EFFECT";
 }
@@ -95,3 +97,14 @@ const referenceGap={
 };
 if(referenceGap.reference!=="MODEL_COMPENSATION_BOUND")throw Error("reference gap probe changed");
 console.log(JSON.stringify({reviewDate:"2026-11-18 Asia/Shanghai",kind:"MAINTAINER_REVIEW_NO_NEW_CREDIT",reviewFixtures,reviewRows,referenceGap}));
+
+const aggregateFixtures=[
+ ["two_effects_single_receipt","E1","E1","U1","U1","HIT","HIT",1,1,["E1","E2"],["E1","E2"],1,1],
+ ["three_effects_single_receipt","E1","E1","U1","U1","HIT","HIT",1,1,["E1","E2","E3"],["E1","E2","E3"],1,1]
+];
+const aggregateRows=aggregateFixtures.map(t=>({...producer(t),verifier:verifier(t)}));
+for(const row of aggregateRows) {
+ if(row.reference!=="MULTI_EFFECT_COMPENSATION_UNKNOWN"||row.verifier!==row.reference)throw Error("aggregate compensation proof gap "+row.id);
+}
+if(new Set([...tuples,...reviewFixtures,...aggregateFixtures].map(t=>t[0])).size!==tuples.length+reviewFixtures.length+aggregateFixtures.length)throw Error("duplicate aggregate test identity");
+console.log(JSON.stringify({kind:"SAME_DATE_AGGREGATE_REVIEW_NO_CREDIT",fixtures:aggregateFixtures,rows:aggregateRows}));

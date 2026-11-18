@@ -11,7 +11,7 @@
     "divergences": 12,
     "agreements": 12
   },
-  "execution": "Isolated Code Mode V8 evaluation of exact revised JavaScript source, two JSON console records",
+  "execution": "Isolated Code Mode V8 evaluation of exact revised JavaScript source, three JSON console records",
   "review_fixtures": [
     [
       "both_effect_ids_absent",
@@ -235,5 +235,73 @@
     "notes": 0,
     "audit": 0,
     "special": 0
-  }
+  },
+  "aggregate_review": {
+    "kind": "SAME_DATE_AGGREGATE_REVIEW_NO_CREDIT",
+    "observation": "One E1 compensation receipt cannot independently prove reverse effects for E2 or E3 even if required and observed sets have the same members",
+    "fixtures": [
+      [
+        "two_effects_single_receipt",
+        "E1",
+        "E1",
+        "U1",
+        "U1",
+        "HIT",
+        "HIT",
+        1,
+        1,
+        [
+          "E1",
+          "E2"
+        ],
+        [
+          "E1",
+          "E2"
+        ],
+        1,
+        1
+      ],
+      [
+        "three_effects_single_receipt",
+        "E1",
+        "E1",
+        "U1",
+        "U1",
+        "HIT",
+        "HIT",
+        1,
+        1,
+        [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        1,
+        1
+      ]
+    ],
+    "rows": [
+      {
+        "id": "two_effects_single_receipt",
+        "weak": "COMPENSATED",
+        "reference": "MULTI_EFFECT_COMPENSATION_UNKNOWN",
+        "verifier": "MULTI_EFFECT_COMPENSATION_UNKNOWN"
+      },
+      {
+        "id": "three_effects_single_receipt",
+        "weak": "COMPENSATED",
+        "reference": "MULTI_EFFECT_COMPENSATION_UNKNOWN",
+        "verifier": "MULTI_EFFECT_COMPENSATION_UNKNOWN"
+      }
+    ],
+    "shared_contract_agreements": 2,
+    "additional_credit": 0,
+    "result": "Synthetic bounded model only, not authoritative per-effect proof"
+  },
+  "review_total": 10
 }
