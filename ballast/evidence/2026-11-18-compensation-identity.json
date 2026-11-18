@@ -1,0 +1,359 @@
+{
+  "logical_date": "2026-11-18",
+  "base_sha": "a49e0824ed4eae6e4798c828b635217a460a9766",
+  "source_access_date": "2026-11-18 Asia/Shanghai",
+  "execution": "Code Mode isolated V8 exact source evaluation, not native Node CLI",
+  "fields": [
+    "id",
+    "originalEffect",
+    "compensatedEffect",
+    "originalTarget",
+    "compensationTarget",
+    "receipt",
+    "prior",
+    "effectTimeAuth",
+    "currentPermission",
+    "required",
+    "observed",
+    "protectedCompletion",
+    "issuerAuthenticated"
+  ],
+  "tuples": [
+    [
+      "baseline",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1
+    ],
+    [
+      "compensate_wrong_effect",
+      "E1",
+      "E0",
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1
+    ],
+    [
+      "compensate_old_target",
+      "E1",
+      "E1",
+      "U2",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1
+    ],
+    [
+      "compensation_receipt_only",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "HIT",
+      "UNKNOWN",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1
+    ],
+    [
+      "contradictory_miss",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "HIT",
+      "MISS",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1
+    ],
+    [
+      "duplicate_effect_member",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      [
+        "E1",
+        "E1"
+      ],
+      1,
+      1
+    ],
+    [
+      "equal_count_extra",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [
+        "E1",
+        "E2"
+      ],
+      [
+        "E1",
+        "E3"
+      ],
+      1,
+      1
+    ],
+    [
+      "historical_grant_invalid",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      0,
+      1,
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1
+    ],
+    [
+      "current_permission_revoked",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      0,
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1
+    ],
+    [
+      "unprotected_completion",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      0,
+      1
+    ],
+    [
+      "forged_issuer",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "HIT",
+      "HIT",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      0
+    ],
+    [
+      "unknown_receipt",
+      "E1",
+      "E1",
+      "U1",
+      "U1",
+      "UNKNOWN",
+      "UNKNOWN",
+      1,
+      1,
+      [
+        "E1"
+      ],
+      [
+        "E1"
+      ],
+      1,
+      1
+    ]
+  ],
+  "rows": [
+    {
+      "id": "baseline",
+      "weak": "COMPENSATED",
+      "reference": "MODEL_COMPENSATION_BOUND",
+      "verifier": "MODEL_COMPENSATION_BOUND"
+    },
+    {
+      "id": "compensate_wrong_effect",
+      "weak": "COMPENSATED",
+      "reference": "EFFECT_IDENTITY_CONFLICT",
+      "verifier": "EFFECT_IDENTITY_CONFLICT"
+    },
+    {
+      "id": "compensate_old_target",
+      "weak": "COMPENSATED",
+      "reference": "TARGET_INCAR_CONFLICT",
+      "verifier": "TARGET_INCAR_CONFLICT"
+    },
+    {
+      "id": "compensation_receipt_only",
+      "weak": "COMPENSATED",
+      "reference": "ORIGINAL_EFFECT_UNKNOWN",
+      "verifier": "ORIGINAL_EFFECT_UNKNOWN"
+    },
+    {
+      "id": "contradictory_miss",
+      "weak": "COMPENSATED",
+      "reference": "EVIDENCE_CONFLICT",
+      "verifier": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "duplicate_effect_member",
+      "weak": "COMPENSATED",
+      "reference": "DUPLICATE_MEMBER",
+      "verifier": "DUPLICATE_MEMBER"
+    },
+    {
+      "id": "equal_count_extra",
+      "weak": "COMPENSATED",
+      "reference": "EFFECT_SET_CONFLICT",
+      "verifier": "EFFECT_SET_CONFLICT"
+    },
+    {
+      "id": "historical_grant_invalid",
+      "weak": "COMPENSATED",
+      "reference": "HISTORICAL_AUTH_INVALID",
+      "verifier": "HISTORICAL_AUTH_INVALID"
+    },
+    {
+      "id": "current_permission_revoked",
+      "weak": "COMPENSATED",
+      "reference": "MODEL_NO_NEW_EFFECT",
+      "verifier": "MODEL_NO_NEW_EFFECT"
+    },
+    {
+      "id": "unprotected_completion",
+      "weak": "COMPENSATED",
+      "reference": "TOCTOU_STOP",
+      "verifier": "TOCTOU_STOP"
+    },
+    {
+      "id": "forged_issuer",
+      "weak": "COMPENSATED",
+      "reference": "ISSUER_UNKNOWN",
+      "verifier": "ISSUER_UNKNOWN"
+    },
+    {
+      "id": "unknown_receipt",
+      "weak": "RETRY",
+      "reference": "UNKNOWN_STOP",
+      "verifier": "UNKNOWN_STOP"
+    }
+  ],
+  "summary": {
+    "scenarios": 12,
+    "weakCompensated": 11,
+    "referenceBound": 1,
+    "divergences": 12,
+    "agreements": 12
+  },
+  "referenceAttack": {
+    "id": "issuer_flag_spoofed_after_cancel",
+    "originalBaselineReference": "MODEL_COMPENSATION_BOUND",
+    "missing": "authenticated compensation issuer, proof of reverse effect at external sink, original effect-time clock, compensation non-reversibility, atomic completion, concurrent new effect",
+    "strongerAuthorityAware": "UNKNOWN_STOP",
+    "kind": "REFERENCE_GAP"
+  },
+  "independence": {
+    "implementation": "PARTIAL",
+    "data_source": "NONE",
+    "semantic_contract": "SHARED",
+    "authority": "NONE"
+  },
+  "external_effects": 0,
+  "authoritative_queries": 0,
+  "credit": {
+    "daily": 1,
+    "original_bounded_window": 1,
+    "case": 0,
+    "notes": 0,
+    "method": 0,
+    "audit": 0,
+    "special": 0
+  }
+}
