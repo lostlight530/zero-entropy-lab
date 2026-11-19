@@ -42,7 +42,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -126,7 +126,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -168,7 +168,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -210,7 +210,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -252,7 +252,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -293,7 +293,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -336,7 +336,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -380,7 +380,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -425,7 +425,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -479,7 +479,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -521,7 +521,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -563,7 +563,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -595,7 +595,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -638,7 +638,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -682,7 +682,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -726,7 +726,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -770,7 +770,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -814,7 +814,7 @@
         "sinkFence": false,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -858,7 +858,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -902,7 +902,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -946,7 +946,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -988,7 +988,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": true
       }
@@ -1030,7 +1030,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
@@ -1074,7 +1074,7 @@
         "sinkFence": true,
         "keyBoundOp": "OP20",
         "completionProtected": true,
-        "historyActivityCompleted": false,
+        "historyActivityCompleted": true,
         "weakCurrentRunReceipt": false,
         "weakStoredKeyMatch": false
       }
