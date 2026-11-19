@@ -1,0 +1,150 @@
+# ORIGINAL Independent A2 2026-11-19 — Aegis/Ballast full November relationship maintenance
+
+## Authority, dependency, current source graph
+- Own task: `independent-maintenance/A2`, repository `lostlight530/zero-entropy-lab`, logical window `2026-11-01..19 Asia/Shanghai`, `MONTH_TO_DATE / NOT_FINAL`
+- Fresh post-A1 merged main `84eef0f1d0123ea2f02232e7a2352dbc122d9eb6`, recursive tree `truncated=false`, no conflicting open PR at preflight
+- Original A1 merged and reread from main: `historical-audits/2026-11/2026-11-19-a1-source-content-review.md` @ `40b0364668255436cc5f8bc889508f978f4d23c4`, canonical source graph 60/60 SHA exact
+- Previous dated A2 `historical-audits/2026-11/2026-11-18-a2-month-relations.md` @ `e86608c69fe9b39838fc9e83a6311446baa24b22`, maintained as previous November state, not simply duplicated text
+- Native source nodes now 63: 57 Daily documents across 19 dates + 6 closed-week owners W44/W45/W46; no due November monthly final
+- A2 relation producer is not Native A2; source claim, original task, GitHub merge, checker, effect sink and review are different truth planes
+- Actual reads: current Git tree, original merged A1 body, prior full-month A2 body, newest native source identities and GitHub PR state; local native checker, external runtime and independent TCK NOT_EXECUTED
+
+## Every retained November source path, exact blob and typed monthly relation
+- NODE `aegis-cortex/2026-11-01-A1-reliability-observe.md` @ `ed6308903e67353b96c40eba29c0af0520b97089` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-01-A2-doctrine-orient.md` @ `6ad42cedcf12323bc424d86f6e6a84c5438f0d6c` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-02-A1-reliability-observe.md` @ `3db29f246a0690f1583902a1e449534b7011ddbd` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-02-A2-doctrine-orient.md` @ `7ec5d2b5cb3ec30915cf7b5bcd21ea634fbde24e` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-03-A1-reliability-observe.md` @ `5a99278c42bbf9ba22c38f44125cb77e5fe9972f` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-03-A2-doctrine-orient.md` @ `5f3f65f9296396c16cea141acbc23e3d71293c09` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-04-A1-reliability-observe.md` @ `208f8fa21debce7c098e093fab663a0d300bf3b4` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-04-A2-doctrine-orient.md` @ `9c08452527716d9f8b081f1c6a004e68b63bc90c` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-05-A1-reliability-observe.md` @ `46022b22b70781fe1ddc9ea2afb4466e2e544951` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-05-A2-doctrine-orient.md` @ `0ab829c6e60fd51f8b0919580958e9c14b7d78c0` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-06-A1-reliability-observe.md` @ `7cdf481996c7ecad141f8b963183cd3db21c1339` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-06-A2-doctrine-orient.md` @ `049549e50ca428033cf16d49c77f4a4218a0d3dd` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-07-A1-reliability-observe.md` @ `2cf71b1ce8d270346a3b2ccb7d34167fdcd6ac2c` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-07-A2-doctrine-orient.md` @ `5458e12c0aca18a75cbd7c481b93257967ffcb79` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-08-A1-reliability-observe.md` @ `b25f3f2c906d3844d3c76ca9e315522c2d502c94` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-08-A2-doctrine-orient.md` @ `d39ece70a87b88bc7260ce7e877a4b6eae467c1c` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-09-A1-reliability-observe.md` @ `aa889f794af042a656184df76c9fd67b14d00d19` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-09-A2-doctrine-orient.md` @ `e478a8a1cfdf6663099115b3d3e4ce6254aaec49` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-10-A1-reliability-observe.md` @ `27e1e35e488804f673b1ad465f576d89c9f38190` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-10-A2-doctrine-orient.md` @ `a0fe9e7b9880a554ee70698a4dfb35f1e901f281` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-11-A1-reliability-observe.md` @ `8147c773face7c89c246fa8a85df0eed8f6c0820` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-11-A2-doctrine-orient.md` @ `c525af4d2a95829751e9ad5ec339f0edc7e46457` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-12-A1-reliability-observe.md` @ `6a772e4156d2df36567a650ed1cd9ca82e815720` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-12-A2-doctrine-orient.md` @ `42a1a82d32b453b9c5f8e0f699c55e471c16330b` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-13-A1-reliability-observe.md` @ `70c9fcf0d764a2a419cd595f5bb8067f5dd19eaa` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-13-A2-doctrine-orient.md` @ `49e1de49e2eb5fd4db5ec6ad9797c6c608937030` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-14-A1-reliability-observe.md` @ `a9879180152662caac82a1894174bd13cc60b30a` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-14-A2-doctrine-orient.md` @ `e4a4419f778dcc011e769f6536cd700fef3761c8` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-15-A1-reliability-observe.md` @ `bb06c0b1427be23152b6be2f4533bb54c74cf0a9` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-15-A2-doctrine-orient.md` @ `12cda2274adf18e7ddaad2bb2696c208a61da59c` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-16-A1-reliability-observe.md` @ `295a9172e758fc83d0c3a039c71da16a1fa15b25` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-16-A2-doctrine-orient.md` @ `e528202301297a7de0de5f8c64219da567bfd948` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-17-A1-reliability-observe.md` @ `709099385dba9d98841c59c93022150d10fdf6b3` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-17-A2-doctrine-orient.md` @ `19b56bc657df08d60f0d3e74692c40cf3794c5ad` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-18-A1-reliability-observe.md` @ `ab7809287aada5ba35f08f25e5a3c4bb56ac71b2` | AEGIS_EXTERNAL_RISK | A1_EXACT_SHA_INHERIT | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-18-A2-doctrine-orient.md` @ `1589281af888a426ad869b9d4be892568614814a` | AEGIS_ORIENT | A1_EXACT_SHA_INHERIT | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-11-19-A1-reliability-observe.md` @ `9ee86074ca6692b85424e811331aa5e4be0d89ce` | AEGIS_EXTERNAL_RISK | NEW_NATIVE_N19_RETAINED | SOURCE_CLASS_IS_NOT_DEPLOYED_HOST
+- NODE `aegis-cortex/2026-11-19-A2-doctrine-orient.md` @ `6e6f564d195280aa9eaa99c93a5f7d8f2cda2470` | AEGIS_ORIENT | NEW_NATIVE_N19_RETAINED | COUNTEREVIDENCE_NOT_SECOND_ISSUER
+- NODE `aegis-cortex/2026-W44-A3-discipline-decide.md` @ `b88ae147a170e0dd8eba6651bf3c96e368db43f9` | AEGIS_WEEKLY | A1_EXACT_SHA_INHERIT | CLOSED_WEEK_ONLY
+- NODE `aegis-cortex/2026-W44-A4-protocol-act.md` @ `a4038470fae3d158cd7d444e12064fdc2026af0c` | AEGIS_WEEKLY | A1_EXACT_SHA_INHERIT | CLOSED_WEEK_ONLY
+- NODE `aegis-cortex/2026-W45-A3-discipline-decide.md` @ `0a8e833116440493c99129163498c5866b494008` | AEGIS_WEEKLY | A1_EXACT_SHA_INHERIT | CLOSED_WEEK_ONLY
+- NODE `aegis-cortex/2026-W45-A4-protocol-act.md` @ `8eb9d1ea512f2d6ec22b685fac79cdf937b242cb` | AEGIS_WEEKLY | A1_EXACT_SHA_INHERIT | CLOSED_WEEK_ONLY
+- NODE `aegis-cortex/2026-W46-A3-discipline-decide.md` @ `7ef5cde4e767ab7f3c00b00a664e7a2fc950275e` | AEGIS_WEEKLY | A1_EXACT_SHA_INHERIT | CLOSED_WEEK_ONLY
+- NODE `aegis-cortex/2026-W46-A4-protocol-act.md` @ `05b9aa015fbd3730b330b4122c9ef38208980768` | AEGIS_WEEKLY | A1_EXACT_SHA_INHERIT | CLOSED_WEEK_ONLY
+- NODE `ballast/records/2026-11-01.md` @ `6b08be2d99a3d50932fa21dd02eaee48a78e7228` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-02.md` @ `c306b917a8bb93b3c6c2936e1d05592709f57639` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-03.md` @ `72b5641773009588fbea7c906a8c54ca8edd8363` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-04.md` @ `084fba335a4c9957a6ebed633cc3126f95a304e5` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-05.md` @ `a43bb301ae9509877d722ab3105b8d1a918cb342` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-06.md` @ `7d72f51be44fabc990fe5c0a848fa6825aca17b6` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-07.md` @ `1f6583cd14fabaa8623be6d898d3e3a505af319b` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-08.md` @ `b0416799dd6ef13a7639b19e524888ac27de4d8f` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-09.md` @ `6ddc1740d733d700bdd13f4a421c33782c5e795b` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-10.md` @ `136fa26677f71d026e17e4f5ddd43b84212991de` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-11.md` @ `58b346a2600424014c9a0f14edcbf5ae28219cf5` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-12.md` @ `c92602c3dca0c0e03ab69ca3875d70e5f12eadfc` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-13.md` @ `36643eaf04d7b1bebd1f4a8cb1d919e11b3af602` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-14.md` @ `f062b6d141c5ec04602c189ff80ead94b3486c4f` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-15.md` @ `16d34701c3f868f1d866d081612f7b47c8b16961` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-16.md` @ `1781542faf6bb7654d56b85456e3890762fb56bc` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-17.md` @ `aa3b61bffb0ac3554dff1864418d46958785d047` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-18.md` @ `92ad575bf9c29309dfe9ed0670d05c470eef175f` | BALLAST_ACTION_INTEGRITY | A1_EXACT_SHA_INHERIT | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+- NODE `ballast/records/2026-11-19.md` @ `e294fbb8026a384c82a22c1d17c8cfba71528eff` | BALLAST_ACTION_INTEGRITY | NEW_NATIVE_N19_RETAINED | ACTUAL_EXECUTION_SCOPE_SEPARATE_FROM_EFFECT
+
+## Full month date-pair evolution and associated original producer edges
+- DATE 2026-11-01 | nodes=3 | `aegis-cortex/2026-11-01-A1-reliability-observe.md`@ed6308903e67 + `aegis-cortex/2026-11-01-A2-doctrine-orient.md`@6ad42cedcf12 + `ballast/records/2026-11-01.md`@6b08be2d99a3 | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-02 | nodes=3 | `aegis-cortex/2026-11-02-A1-reliability-observe.md`@3db29f246a06 + `aegis-cortex/2026-11-02-A2-doctrine-orient.md`@7ec5d2b5cb3e + `ballast/records/2026-11-02.md`@c306b917a8bb | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-03 | nodes=3 | `aegis-cortex/2026-11-03-A1-reliability-observe.md`@5a99278c42bb + `aegis-cortex/2026-11-03-A2-doctrine-orient.md`@5f3f65f92963 + `ballast/records/2026-11-03.md`@72b564177300 | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-04 | nodes=3 | `aegis-cortex/2026-11-04-A1-reliability-observe.md`@208f8fa21deb + `aegis-cortex/2026-11-04-A2-doctrine-orient.md`@9c0845252771 + `ballast/records/2026-11-04.md`@084fba335a4c | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-05 | nodes=3 | `aegis-cortex/2026-11-05-A1-reliability-observe.md`@46022b22b707 + `aegis-cortex/2026-11-05-A2-doctrine-orient.md`@0ab829c6e60f + `ballast/records/2026-11-05.md`@a43bb301ae95 | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-06 | nodes=3 | `aegis-cortex/2026-11-06-A1-reliability-observe.md`@7cdf481996c7 + `aegis-cortex/2026-11-06-A2-doctrine-orient.md`@049549e50ca4 + `ballast/records/2026-11-06.md`@7d72f51be44f | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-07 | nodes=3 | `aegis-cortex/2026-11-07-A1-reliability-observe.md`@2cf71b1ce8d2 + `aegis-cortex/2026-11-07-A2-doctrine-orient.md`@5458e12c0aca + `ballast/records/2026-11-07.md`@1f6583cd14fa | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-08 | nodes=3 | `aegis-cortex/2026-11-08-A1-reliability-observe.md`@b25f3f2c906d + `aegis-cortex/2026-11-08-A2-doctrine-orient.md`@d39ece70a87b + `ballast/records/2026-11-08.md`@b0416799dd6e | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-09 | nodes=3 | `aegis-cortex/2026-11-09-A1-reliability-observe.md`@aa889f794af0 + `aegis-cortex/2026-11-09-A2-doctrine-orient.md`@e478a8a1cfdf + `ballast/records/2026-11-09.md`@6ddc1740d733 | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-10 | nodes=3 | `aegis-cortex/2026-11-10-A1-reliability-observe.md`@27e1e35e4888 + `aegis-cortex/2026-11-10-A2-doctrine-orient.md`@a0fe9e7b9880 + `ballast/records/2026-11-10.md`@136fa26677f7 | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-11 | nodes=3 | `aegis-cortex/2026-11-11-A1-reliability-observe.md`@8147c773face + `aegis-cortex/2026-11-11-A2-doctrine-orient.md`@c525af4d2a95 + `ballast/records/2026-11-11.md`@58b346a26004 | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-12 | nodes=3 | `aegis-cortex/2026-11-12-A1-reliability-observe.md`@6a772e4156d2 + `aegis-cortex/2026-11-12-A2-doctrine-orient.md`@42a1a82d32b4 + `ballast/records/2026-11-12.md`@c92602c3dca0 | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-13 | nodes=3 | `aegis-cortex/2026-11-13-A1-reliability-observe.md`@70c9fcf0d764 + `aegis-cortex/2026-11-13-A2-doctrine-orient.md`@49e1de49e2eb + `ballast/records/2026-11-13.md`@36643eaf04d7 | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-14 | nodes=3 | `aegis-cortex/2026-11-14-A1-reliability-observe.md`@a98791801526 + `aegis-cortex/2026-11-14-A2-doctrine-orient.md`@e4a4419f778d + `ballast/records/2026-11-14.md`@f062b6d141c5 | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-15 | nodes=3 | `aegis-cortex/2026-11-15-A1-reliability-observe.md`@bb06c0b1427b + `aegis-cortex/2026-11-15-A2-doctrine-orient.md`@12cda2274adf + `ballast/records/2026-11-15.md`@16d34701c3f8 | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-16 | nodes=3 | `aegis-cortex/2026-11-16-A1-reliability-observe.md`@295a9172e758 + `aegis-cortex/2026-11-16-A2-doctrine-orient.md`@e52820230129 + `ballast/records/2026-11-16.md`@1781542faf6b | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-17 | nodes=3 | `aegis-cortex/2026-11-17-A1-reliability-observe.md`@709099385dba + `aegis-cortex/2026-11-17-A2-doctrine-orient.md`@19b56bc657df + `ballast/records/2026-11-17.md`@aa3b61bffb0a | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-18 | nodes=3 | `aegis-cortex/2026-11-18-A1-reliability-observe.md`@ab7809287aad + `aegis-cortex/2026-11-18-A2-doctrine-orient.md`@1589281af888 + `ballast/records/2026-11-18.md`@92ad575bf9c2 | INHERITED_PREVIOUS_DAY_SOURCE_IDENTITY | never infer shared test/execution solely from date
+- DATE 2026-11-19 | nodes=3 | `aegis-cortex/2026-11-19-A1-reliability-observe.md`@9ee86074ca66 + `aegis-cortex/2026-11-19-A2-doctrine-orient.md`@6e6f564d1952 + `ballast/records/2026-11-19.md`@e294fbb8026a | N19_NEW_COUNTEREVIDENCE_WITH_SOURCE_ONLY_BOUNDARY | never infer shared test/execution solely from date
+
+## Earlier independent original A1/A2 dated-lineage graph (NOT Native execution)
+- ORIGINAL_REVIEW_CUT 2026-11-02 | `historical-audits/2026-11/2026-11-02-a1-source-content-review.md`@c9ce2e27ef72 ; `historical-audits/2026-11/2026-11-02-a2-month-relations.md`@ab330efe5f25 | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-03 | `historical-audits/2026-11/2026-11-03-a1-source-content-review.md`@792319bfd576 ; `historical-audits/2026-11/2026-11-03-a2-month-relations.md`@4011a643ecb1 | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-04 | `historical-audits/2026-11/2026-11-04-a1-source-content-review.md`@f49743a08fbc ; `historical-audits/2026-11/2026-11-04-a2-month-relations.md`@197e5b0f3351 | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-05 | `historical-audits/2026-11/2026-11-05-a1-source-content-review.md`@14583e1162df ; `historical-audits/2026-11/2026-11-05-a2-month-relations.md`@96a45e1612a1 | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-06 | `historical-audits/2026-11/2026-11-06-a1-source-content-review.md`@95ab50ed3fb1 ; `historical-audits/2026-11/2026-11-06-a2-month-relations.md`@9d8ee6ffb1b0 | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-07 | `historical-audits/2026-11/2026-11-07-a1-source-content-review.md`@1bc49c18e36f ; `historical-audits/2026-11/2026-11-07-a2-month-relations.md`@ba1e31b1a627 | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-08 | `historical-audits/2026-11/2026-11-08-a1-source-content-review.md`@c3bf4443f6c2 ; `historical-audits/2026-11/2026-11-08-a2-month-relations.md`@f995e49536f7 | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-09 | `historical-audits/2026-11/2026-11-09-a1-source-content-review.md`@bc1633c2e414 ; `historical-audits/2026-11/2026-11-09-a2-month-relations.md`@0f793d4734b1 | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-10 | `historical-audits/2026-11/2026-11-10-a1-source-content-review.md`@aa2054621655 ; `historical-audits/2026-11/2026-11-10-a2-month-relations.md`@8eface0c3145 | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-11 | `historical-audits/2026-11/2026-11-11-a1-source-content-review.md`@74bf41f40cb0 ; `historical-audits/2026-11/2026-11-11-a2-month-relations.md`@3c3561b4eccb | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-12 | `historical-audits/2026-11/2026-11-12-a1-source-content-review.md`@d8dd3f999755 ; `historical-audits/2026-11/2026-11-12-a2-month-relations.md`@6c6445b33d56 | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-13 | `historical-audits/2026-11/2026-11-13-a1-source-content-review.md`@fdfacd6d9552 ; `historical-audits/2026-11/2026-11-13-a2-month-relations.md`@0b87326a1f5f | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-14 | `historical-audits/2026-11/2026-11-14-a1-source-content-review.md`@3f963bea6596 ; `historical-audits/2026-11/2026-11-14-a2-month-relations.md`@647809109ddb | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-15 | `historical-audits/2026-11/2026-11-15-a1-source-content-review.md`@8bd1d45d41e8 ; `historical-audits/2026-11/2026-11-15-a2-month-relations.md`@6b95d0c91b08 | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-16 | `historical-audits/2026-11/2026-11-16-a1-source-content-review.md`@2a8cd288dd11 ; `historical-audits/2026-11/2026-11-16-a2-month-relations.md`@b55cc3c0d8d1 | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-17 | `historical-audits/2026-11/2026-11-17-a1-source-content-review.md`@240e374c27dd ; `historical-audits/2026-11/2026-11-17-a2-month-relations.md`@ceeb708096ec | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+- ORIGINAL_REVIEW_CUT 2026-11-18 | `historical-audits/2026-11/2026-11-18-a1-source-content-review.md`@1af99ffb5190 ; `historical-audits/2026-11/2026-11-18-a2-month-relations.md`@e86608c69fe9 | RETAINED_HISTORICAL_MAINTENANCE_IDENTITY_ONLY; no transfer of numeric additions or Native source credit
+
+## N19 Evidence Delta and falsifiable current relation status
+- 01 Nov19 Aegis A1 #897 first-party MCP Time ToolError branch sanitizes invalid timezone directory path; source risk not Zero-local incident
+- 02 Nov19 Aegis A2 #898 counterchecks alternate logs, valid inputs and compatibility; no local SDK/tool invocation
+- 03 Aegis A1/A2 same upstream issue #5559 / patch #5615 = one source lineage, not two issuers
+- 04 Ballast Nov19 one bounded V8 synthetic 16-case actor-fencing run is documented; do not equate with real effect sink
+- 05 Ballast compensation receipt without authenticated original effect membership and target incarnation is insufficient
+- 06 Revision compare-and-swap bit in an authored JavaScript model is not proven Kubernetes resourceVersion or real Temporal workflow
+- 07 Permission at time of event and current permission require separate grant ID and signed time reference
+- 08 Original-effect reversal and compensation worker success need independent source of truth and crash recovery
+- 09 EXTERNAL_RISK != LOCAL_INCIDENT != EXISTING_DEFENSE != MEASURED_EFFECTIVENESS throughout prior monthly evidence
+- 10 Original Aegis A1 risk classification cannot be upgraded to Kernel remediation without local test
+- 11 ToolError suppression does not establish server stdout/stderr or OpenTelemetry redaction
+- 12 Valid timezone input negative control must still succeed after mitigation
+- 13 Timestamp sort earlier month risks do not prove present Zero memory misselection in deployed environment
+- 14 W47 weekly A3/A4 open, future week final NOT_DUE; November A5/A6 FINAL NOT_DUE
+- 15 Ballast action-integrity checks are independent producer; do not count synthetic V8 as native Aegis SDK regression
+- STRENGTHENED: path+blob custody and targeted first-party source/counterevidence specificity only; no independent runtime effectiveness claim
+- WEAKENED: remaining counterexamples block generalized safety/completion assertions
+- CHANGED: Nov19 source and response controls add bounded current context; old dated claims remain fixed at their original observation times
+- CONFLICT: apparent source fix versus residual limitations are reconciled by preconditions and distinct test/maturity planes
+- INVALIDATED: not asserted for unchanged source evidence without a contrary original proof
+- UNKNOWN: host adoption, full native checker, effect sink, independent deployment, CI beyond matched workflow and conformance
+- Evidence lineage and historical acceptance are separately indexed; successor and cleanup cannot retroactively inflate original prior PR additions
+- W47 week Nov16–22 OPEN; its final report NOT_DUE; November final and D30 NOT_DUE, D7/D10/D14 independent
+- No changes to prior Native originals, other contributors' branches, Jules history, Kernel/Host, workflows or long-term Governance
+
+## Original PR acceptance and next execution conditions
+- NUMERIC_GATE: independent ORIGINAL A2 GitHub final additions >=100; assess final PR itself, not A1 or successor lines
+- SEMANTIC_GATE: full 19-date relation register, 63 exact source owner nodes, historical review cuts, newest evidence/uncertainty deltas; not 100 independent novel scientific findings
+- DEPENDENCY: merged A1 main/blob reread; Draft A1 is not an allowed dependency
+- CHECKER: only remote source/PR static evidence performed; native checker / scientific experiment NOT_EXECUTED
+- DELIVERY: new original Draft PR planned; no merge or final main-retention claim at authoring
+- NEXT_RETEST: pin upstream source version and installed host, actual positive/negative fixtures, stdout/stderr/exit, credible effect/runtime oracle and independent verifier
+- NOVEMBER_OPEN: monthly A2 is an evolving month-to-date relation snapshot, not MONTHLY_FINAL
