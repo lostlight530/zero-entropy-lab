@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-11-19 concurrent compensation owner fence versus protected reversal](records/2026-11-19.md)
+- 最新 Daily: [2026-11-20 Temporal reset cross-run operation identity](records/2026-11-20.md)
 - 当前月度事实源: [2026-11](records/2026-11.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-11-13 至 2026-11-18](audits/2026-11-13--2026-11-18.md)
@@ -827,3 +827,20 @@ One NATIVE [PostgreSQL logical slot replay Daily](records/2026-11-03.md) tests s
 Bounded V8 isolate producer and separately coded trace verifier EXECUTED / PASS_WITH_LIMITS: 40 scenarios, 120 decisions, 509 authored events, 8/8 tampered verifier calls rejected, model-relative weak-path disagreements checkpoint 37/40 and delivery 36/40
 
 November Monthly synchronized, audit NOT_DUE, CASE/METHOD/NOTES/Special 0, native Node CLI, full Python checker, real PostgreSQL/Debezium/external sink and independent semantic authority NOT_EXECUTED
+
+## Ballast current-state advance — 2026-11-20
+
+2026-11-20 adds one bounded synthetic NATIVE Daily on Temporal Workflow reset Run ID drift versus old-run business-operation effect proof
+
+```text
+NEW_WORKFLOW_RUN != NEW_BUSINESS_EFFECT
+NEW_RUN_RECEIPT_MISS != OLD_RUN_EFFECT_ABSENCE
+STABLE_OPERATION_KEY != PROVEN_EFFECT_OR_CURRENT_COMPLETION
+MODEL_RETRY_GATED != SINK_AUTHORIZED_RETRY
+```
+
+[Daily source and 30 case ledger](records/2026-11-20.md) preserve actual isolated V8 execution, shared-contract verifier is LIMITED, live Temporal and external sink NOT_EXECUTED
+November rolling coverage is 20 dated NATIVE Dailies, point-in-time history and the original-source limitation on 2026-11-12 are retained
+Latest complete non-overlapping derived audit is 2026-11-13..18, covering current checker cutoff 2026-11-14
+Reviewer correction adds exact receipt task/workflow/activity identity and member-scoped MISS, separates historical receipt from prospective owner, five same-day synthetic probes, no extra Daily credit
+CASE, METHOD, NOTES, Special, Audit and durable findings all +0
