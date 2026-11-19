@@ -7,7 +7,7 @@ const BASE={
  receipt:{run:"R1",op:"OP20",target:"U1",members:["E1"],issuer:true,effectTimeAuth:true,orderOk:true},
  prior:"HIT",negative:null,permission:true,owner:5,worker:5,
  revision:11,commitRevision:11,sinkFence:true,keyBoundOp:"OP20",
- completionProtected:true,historyActivityCompleted:false,
+ completionProtected:true,historyActivityCompleted:true,
  weakCurrentRunReceipt:false,weakStoredKeyMatch:false
 };
 const copy=()=>JSON.parse(JSON.stringify(BASE));
