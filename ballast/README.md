@@ -839,7 +839,8 @@ STABLE_OPERATION_KEY != PROVEN_EFFECT_OR_CURRENT_COMPLETION
 MODEL_RETRY_GATED != SINK_AUTHORIZED_RETRY
 ```
 
-[Daily source and 25 case ledger](records/2026-11-20.md) preserve actual isolated V8 execution, shared-contract verifier is LIMITED, live Temporal and external sink NOT_EXECUTED
+[Daily source and 30 case ledger](records/2026-11-20.md) preserve actual isolated V8 execution, shared-contract verifier is LIMITED, live Temporal and external sink NOT_EXECUTED
 November rolling coverage is 20 dated NATIVE Dailies, point-in-time history and the original-source limitation on 2026-11-12 are retained
 Latest complete non-overlapping derived audit is 2026-11-13..18, covering current checker cutoff 2026-11-14
+Reviewer correction adds exact receipt task/workflow/activity identity and member-scoped MISS, separates historical receipt from prospective owner, five same-day synthetic probes, no extra Daily credit
 CASE, METHOD, NOTES, Special, Audit and durable findings all +0

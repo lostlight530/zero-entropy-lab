@@ -22,6 +22,9 @@
           "E1"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP20",
           "target": "U1",
@@ -64,6 +67,9 @@
           "E1"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP20",
           "target": "U1",
@@ -106,6 +112,9 @@
           "E1"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP20",
           "target": "U1",
@@ -119,6 +128,141 @@
         "prior": "HIT",
         "negative": null,
         "permission": false,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": true,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "old_run_positive_current_owner_drift",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 4,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": true,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "receipt_other_task_same_operation",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "task": "T_OTHER",
+          "workflow": "W20",
+          "activity": "A1",
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": true,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "receipt_other_activity_same_run",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A_OTHER",
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
         "owner": 5,
         "worker": 5,
         "revision": 11,
@@ -148,6 +292,9 @@
           "E1"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP20",
           "target": "U1",
@@ -190,6 +337,9 @@
           "E1"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP_OTHER",
           "target": "U1",
@@ -232,6 +382,9 @@
           "E1"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP20",
           "target": "U1",
@@ -274,6 +427,9 @@
           "E1"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "op": "OP20",
           "target": "U1",
           "members": [
@@ -315,6 +471,9 @@
           "E1"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP20",
           "target": "U1",
@@ -360,6 +519,9 @@
           "E2"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP20",
           "target": "U1",
@@ -404,6 +566,9 @@
           "E3"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP20",
           "target": "U1",
@@ -447,6 +612,9 @@
           "E1"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP20",
           "target": "U1",
@@ -460,8 +628,14 @@
         "prior": "HIT",
         "negative": {
           "outcome": "MISS",
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "op": "OP20",
           "target": "U1",
+          "members": [
+            "E1"
+          ],
           "coveredRuns": [
             "R1",
             "R2"
@@ -501,6 +675,9 @@
           "E1"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP20",
           "target": "U1",
@@ -543,6 +720,9 @@
           "E1"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP20",
           "target": "U1",
@@ -620,8 +800,14 @@
         "prior": "MISS",
         "negative": {
           "outcome": "MISS",
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "op": "OP20",
           "target": "U1",
+          "members": [
+            "E1"
+          ],
           "coveredRuns": [
             "R2"
           ],
@@ -663,8 +849,14 @@
         "prior": "MISS",
         "negative": {
           "outcome": "MISS",
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "op": "OP20",
           "target": "U1",
+          "members": [
+            "E1"
+          ],
           "coveredRuns": [
             "R1",
             "R2"
@@ -707,8 +899,14 @@
         "prior": "MISS",
         "negative": {
           "outcome": "MISS",
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "op": "OP20",
           "target": "U1",
+          "members": [
+            "E1"
+          ],
           "coveredRuns": [
             "R1",
             "R2"
@@ -716,6 +914,108 @@
           "watermark": 20,
           "cutoff": 19,
           "retention": false,
+          "issuer": true
+        },
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": true,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "miss_missing_effect_set_member",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1",
+          "E2"
+        ],
+        "observed": [
+          "E1",
+          "E2"
+        ],
+        "receipt": null,
+        "prior": "MISS",
+        "negative": {
+          "outcome": "MISS",
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "coveredRuns": [
+            "R1",
+            "R2"
+          ],
+          "watermark": 20,
+          "cutoff": 19,
+          "retention": true,
+          "issuer": true
+        },
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": true,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "miss_other_workflow",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": null,
+        "prior": "MISS",
+        "negative": {
+          "outcome": "MISS",
+          "task": "T20",
+          "workflow": "W_OTHER",
+          "activity": "A1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "coveredRuns": [
+            "R1",
+            "R2"
+          ],
+          "watermark": 20,
+          "cutoff": 19,
+          "retention": true,
           "issuer": true
         },
         "permission": true,
@@ -751,8 +1051,14 @@
         "prior": "MISS",
         "negative": {
           "outcome": "MISS",
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "op": "OP20",
           "target": "U1",
+          "members": [
+            "E1"
+          ],
           "coveredRuns": [
             "R1",
             "R2"
@@ -795,8 +1101,14 @@
         "prior": "MISS",
         "negative": {
           "outcome": "MISS",
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "op": "OP20",
           "target": "U1",
+          "members": [
+            "E1"
+          ],
           "coveredRuns": [
             "R1",
             "R2"
@@ -839,8 +1151,14 @@
         "prior": "MISS",
         "negative": {
           "outcome": "MISS",
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "op": "OP20",
           "target": "U1",
+          "members": [
+            "E1"
+          ],
           "coveredRuns": [
             "R1",
             "R2"
@@ -883,8 +1201,14 @@
         "prior": "MISS",
         "negative": {
           "outcome": "MISS",
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "op": "OP20",
           "target": "U1",
+          "members": [
+            "E1"
+          ],
           "coveredRuns": [
             "R1",
             "R2"
@@ -927,8 +1251,14 @@
         "prior": "MISS",
         "negative": {
           "outcome": "MISS",
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "op": "OP20",
           "target": "U1",
+          "members": [
+            "E1"
+          ],
           "coveredRuns": [
             "R1",
             "R2"
@@ -968,6 +1298,9 @@
           "E1"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP20",
           "target": "U1",
@@ -1010,6 +1343,9 @@
           "E1"
         ],
         "receipt": {
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "run": "R1",
           "op": "OP20",
           "target": "U1",
@@ -1055,8 +1391,14 @@
         "prior": "MISS",
         "negative": {
           "outcome": "MISS",
+          "task": "T20",
+          "workflow": "W20",
+          "activity": "A1",
           "op": "OP20",
           "target": "U1",
+          "members": [
+            "E1"
+          ],
           "coveredRuns": [
             "R1",
             "R2"
@@ -1098,6 +1440,24 @@
       "weak": "NO_PERMISSION",
       "reference": "MODEL_ALREADY_DONE",
       "verifier": "MODEL_ALREADY_DONE"
+    },
+    {
+      "id": "old_run_positive_current_owner_drift",
+      "weak": "RETRY",
+      "reference": "MODEL_ALREADY_DONE",
+      "verifier": "MODEL_ALREADY_DONE"
+    },
+    {
+      "id": "receipt_other_task_same_operation",
+      "weak": "RETRY",
+      "reference": "RECEIPT_IDENTITY_CONFLICT",
+      "verifier": "RECEIPT_IDENTITY_CONFLICT"
+    },
+    {
+      "id": "receipt_other_activity_same_run",
+      "weak": "RETRY",
+      "reference": "RECEIPT_IDENTITY_CONFLICT",
+      "verifier": "RECEIPT_IDENTITY_CONFLICT"
     },
     {
       "id": "old_run_receipt_historical_grant_invalid",
@@ -1184,6 +1544,18 @@
       "verifier": "PRIOR_UNKNOWN_STOP"
     },
     {
+      "id": "miss_missing_effect_set_member",
+      "weak": "RETRY",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP"
+    },
+    {
+      "id": "miss_other_workflow",
+      "weak": "RETRY",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP"
+    },
+    {
       "id": "scoped_miss_with_prospective_sink_fence",
       "weak": "RETRY",
       "reference": "MODEL_RETRY_GATED",
@@ -1233,13 +1605,13 @@
     }
   ],
   "summary": {
-    "scenarios": 25,
-    "weakRetry": 22,
+    "scenarios": 30,
+    "weakRetry": 27,
     "weakSkipByKey": 1,
-    "modelAlreadyDone": 4,
+    "modelAlreadyDone": 5,
     "modelRetryGated": 2,
-    "weakReferenceDivergences": 25,
-    "sharedContractVerifierAgreements": 25,
+    "weakReferenceDivergences": 30,
+    "sharedContractVerifierAgreements": 30,
     "failures": 0,
     "actualSinkCalls": 0,
     "realTemporalServerCalls": 0,
