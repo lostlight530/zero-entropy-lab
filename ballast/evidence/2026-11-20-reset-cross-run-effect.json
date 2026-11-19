@@ -1,0 +1,1253 @@
+{
+  "schema": "ballast-reset-cross-run-effect-2026-11-20",
+  "sourcePublisherEvidence": [
+    "Temporal reset and Activity docs",
+    "AWS Step Functions redrive comparison"
+  ],
+  "fixtures": [
+    {
+      "id": "baseline_reset_after_effect",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "workflow_history_omits_completed_activity",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "old_run_positive_current_permission_revoked",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": false,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "old_run_receipt_historical_grant_invalid",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": false,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "old_run_receipt_wrong_operation",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP_OTHER",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "old_run_receipt_wrong_incarnation",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U2",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "receipt_missing_run_identity",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "receipt_duplicate_members",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1",
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "aggregate_count_two_receipt_one",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1",
+          "E2"
+        ],
+        "observed": [
+          "E1",
+          "E2"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "equal_count_wrong_member",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1",
+          "E2"
+        ],
+        "observed": [
+          "E1",
+          "E3"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1",
+            "E3"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "authoritative_miss_conflicts_with_hit",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": {
+          "outcome": "MISS",
+          "op": "OP20",
+          "target": "U1",
+          "coveredRuns": [
+            "R1",
+            "R2"
+          ],
+          "watermark": 20,
+          "cutoff": 19,
+          "retention": true,
+          "issuer": true
+        },
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "unauthenticated_receipt",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": false,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "receipt_temporal_order_unverified",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": false
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "unknown_prior_after_reset",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": null,
+        "prior": "UNKNOWN",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "miss_new_run_only_scope",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": null,
+        "prior": "MISS",
+        "negative": {
+          "outcome": "MISS",
+          "op": "OP20",
+          "target": "U1",
+          "coveredRuns": [
+            "R2"
+          ],
+          "watermark": 20,
+          "cutoff": 19,
+          "retention": true,
+          "issuer": true
+        },
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "miss_before_old_attempt_watermark",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": null,
+        "prior": "MISS",
+        "negative": {
+          "outcome": "MISS",
+          "op": "OP20",
+          "target": "U1",
+          "coveredRuns": [
+            "R1",
+            "R2"
+          ],
+          "watermark": 18,
+          "cutoff": 19,
+          "retention": true,
+          "issuer": true
+        },
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "miss_after_retention_expiry",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": null,
+        "prior": "MISS",
+        "negative": {
+          "outcome": "MISS",
+          "op": "OP20",
+          "target": "U1",
+          "coveredRuns": [
+            "R1",
+            "R2"
+          ],
+          "watermark": 20,
+          "cutoff": 19,
+          "retention": false,
+          "issuer": true
+        },
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "scoped_miss_with_prospective_sink_fence",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": null,
+        "prior": "MISS",
+        "negative": {
+          "outcome": "MISS",
+          "op": "OP20",
+          "target": "U1",
+          "coveredRuns": [
+            "R1",
+            "R2"
+          ],
+          "watermark": 20,
+          "cutoff": 19,
+          "retention": true,
+          "issuer": true
+        },
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "scoped_miss_without_sink_fence",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": null,
+        "prior": "MISS",
+        "negative": {
+          "outcome": "MISS",
+          "op": "OP20",
+          "target": "U1",
+          "coveredRuns": [
+            "R1",
+            "R2"
+          ],
+          "watermark": 20,
+          "cutoff": 19,
+          "retention": true,
+          "issuer": true
+        },
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": false,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "scoped_miss_owner_generation_drift",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": null,
+        "prior": "MISS",
+        "negative": {
+          "outcome": "MISS",
+          "op": "OP20",
+          "target": "U1",
+          "coveredRuns": [
+            "R1",
+            "R2"
+          ],
+          "watermark": 20,
+          "cutoff": 19,
+          "retention": true,
+          "issuer": true
+        },
+        "permission": true,
+        "owner": 5,
+        "worker": 4,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "scoped_miss_commit_revision_drift",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": null,
+        "prior": "MISS",
+        "negative": {
+          "outcome": "MISS",
+          "op": "OP20",
+          "target": "U1",
+          "coveredRuns": [
+            "R1",
+            "R2"
+          ],
+          "watermark": 20,
+          "cutoff": 19,
+          "retention": true,
+          "issuer": true
+        },
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 12,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "scoped_miss_permission_revoked",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": null,
+        "prior": "MISS",
+        "negative": {
+          "outcome": "MISS",
+          "op": "OP20",
+          "target": "U1",
+          "coveredRuns": [
+            "R1",
+            "R2"
+          ],
+          "watermark": 20,
+          "cutoff": 19,
+          "retention": true,
+          "issuer": true
+        },
+        "permission": false,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "stable_key_reused_for_new_business_intent",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP21",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": true
+      }
+    },
+    {
+      "id": "self_attack_authored_issuer_not_cryptographic",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": {
+          "run": "R1",
+          "op": "OP20",
+          "target": "U1",
+          "members": [
+            "E1"
+          ],
+          "issuer": true,
+          "effectTimeAuth": true,
+          "orderOk": true
+        },
+        "prior": "HIT",
+        "negative": null,
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    },
+    {
+      "id": "self_attack_authored_fence_not_atomic",
+      "facts": {
+        "task": "T20",
+        "workflow": "W20",
+        "fromRun": "R1",
+        "toRun": "R2",
+        "activity": "A1",
+        "op": "OP20",
+        "target": "U1",
+        "required": [
+          "E1"
+        ],
+        "observed": [
+          "E1"
+        ],
+        "receipt": null,
+        "prior": "MISS",
+        "negative": {
+          "outcome": "MISS",
+          "op": "OP20",
+          "target": "U1",
+          "coveredRuns": [
+            "R1",
+            "R2"
+          ],
+          "watermark": 20,
+          "cutoff": 19,
+          "retention": true,
+          "issuer": true
+        },
+        "permission": true,
+        "owner": 5,
+        "worker": 5,
+        "revision": 11,
+        "commitRevision": 11,
+        "sinkFence": true,
+        "keyBoundOp": "OP20",
+        "completionProtected": true,
+        "historyActivityCompleted": false,
+        "weakCurrentRunReceipt": false,
+        "weakStoredKeyMatch": false
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "baseline_reset_after_effect",
+      "weak": "RETRY",
+      "reference": "MODEL_ALREADY_DONE",
+      "verifier": "MODEL_ALREADY_DONE"
+    },
+    {
+      "id": "workflow_history_omits_completed_activity",
+      "weak": "RETRY",
+      "reference": "MODEL_ALREADY_DONE",
+      "verifier": "MODEL_ALREADY_DONE"
+    },
+    {
+      "id": "old_run_positive_current_permission_revoked",
+      "weak": "NO_PERMISSION",
+      "reference": "MODEL_ALREADY_DONE",
+      "verifier": "MODEL_ALREADY_DONE"
+    },
+    {
+      "id": "old_run_receipt_historical_grant_invalid",
+      "weak": "RETRY",
+      "reference": "HISTORICAL_AUTH_INVALID",
+      "verifier": "HISTORICAL_AUTH_INVALID"
+    },
+    {
+      "id": "old_run_receipt_wrong_operation",
+      "weak": "RETRY",
+      "reference": "RECEIPT_IDENTITY_CONFLICT",
+      "verifier": "RECEIPT_IDENTITY_CONFLICT"
+    },
+    {
+      "id": "old_run_receipt_wrong_incarnation",
+      "weak": "RETRY",
+      "reference": "RECEIPT_IDENTITY_CONFLICT",
+      "verifier": "RECEIPT_IDENTITY_CONFLICT"
+    },
+    {
+      "id": "receipt_missing_run_identity",
+      "weak": "RETRY",
+      "reference": "RECEIPT_IDENTITY_UNKNOWN",
+      "verifier": "RECEIPT_IDENTITY_UNKNOWN"
+    },
+    {
+      "id": "receipt_duplicate_members",
+      "weak": "RETRY",
+      "reference": "MEMBER_RECEIPT_GAP",
+      "verifier": "MEMBER_RECEIPT_GAP"
+    },
+    {
+      "id": "aggregate_count_two_receipt_one",
+      "weak": "RETRY",
+      "reference": "MEMBER_RECEIPT_GAP",
+      "verifier": "MEMBER_RECEIPT_GAP"
+    },
+    {
+      "id": "equal_count_wrong_member",
+      "weak": "RETRY",
+      "reference": "EFFECT_SET_CONFLICT",
+      "verifier": "EFFECT_SET_CONFLICT"
+    },
+    {
+      "id": "authoritative_miss_conflicts_with_hit",
+      "weak": "RETRY",
+      "reference": "EVIDENCE_CONFLICT",
+      "verifier": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "unauthenticated_receipt",
+      "weak": "RETRY",
+      "reference": "ISSUER_UNKNOWN",
+      "verifier": "ISSUER_UNKNOWN"
+    },
+    {
+      "id": "receipt_temporal_order_unverified",
+      "weak": "RETRY",
+      "reference": "TEMPORAL_UNKNOWN",
+      "verifier": "TEMPORAL_UNKNOWN"
+    },
+    {
+      "id": "unknown_prior_after_reset",
+      "weak": "RETRY",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP"
+    },
+    {
+      "id": "miss_new_run_only_scope",
+      "weak": "RETRY",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP"
+    },
+    {
+      "id": "miss_before_old_attempt_watermark",
+      "weak": "RETRY",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP"
+    },
+    {
+      "id": "miss_after_retention_expiry",
+      "weak": "RETRY",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP"
+    },
+    {
+      "id": "scoped_miss_with_prospective_sink_fence",
+      "weak": "RETRY",
+      "reference": "MODEL_RETRY_GATED",
+      "verifier": "MODEL_RETRY_GATED"
+    },
+    {
+      "id": "scoped_miss_without_sink_fence",
+      "weak": "RETRY",
+      "reference": "TOCTOU_STOP",
+      "verifier": "TOCTOU_STOP"
+    },
+    {
+      "id": "scoped_miss_owner_generation_drift",
+      "weak": "RETRY",
+      "reference": "OWNER_STALE",
+      "verifier": "OWNER_STALE"
+    },
+    {
+      "id": "scoped_miss_commit_revision_drift",
+      "weak": "RETRY",
+      "reference": "TOCTOU_STOP",
+      "verifier": "TOCTOU_STOP"
+    },
+    {
+      "id": "scoped_miss_permission_revoked",
+      "weak": "NO_PERMISSION",
+      "reference": "NO_CURRENT_PERMISSION",
+      "verifier": "NO_CURRENT_PERMISSION"
+    },
+    {
+      "id": "stable_key_reused_for_new_business_intent",
+      "weak": "SKIP_KEY",
+      "reference": "INTENT_CONFLICT",
+      "verifier": "INTENT_CONFLICT"
+    },
+    {
+      "id": "self_attack_authored_issuer_not_cryptographic",
+      "weak": "RETRY",
+      "reference": "MODEL_ALREADY_DONE",
+      "verifier": "MODEL_ALREADY_DONE"
+    },
+    {
+      "id": "self_attack_authored_fence_not_atomic",
+      "weak": "RETRY",
+      "reference": "MODEL_RETRY_GATED",
+      "verifier": "MODEL_RETRY_GATED"
+    }
+  ],
+  "summary": {
+    "scenarios": 25,
+    "weakRetry": 22,
+    "weakSkipByKey": 1,
+    "modelAlreadyDone": 4,
+    "modelRetryGated": 2,
+    "weakReferenceDivergences": 25,
+    "sharedContractVerifierAgreements": 25,
+    "failures": 0,
+    "actualSinkCalls": 0,
+    "realTemporalServerCalls": 0,
+    "realAuthorityQueries": 0
+  },
+  "selfAttack": {
+    "authoredIssuer": "issuer=true without cryptographic signature and authoritative log does not prove real occurrence",
+    "authoredSinkFence": "sinkFence=true without actual compare-and-effect does not eliminate reset-time concurrent duplicate",
+    "limit": "MODEL_ALREADY_DONE and MODEL_RETRY_GATED are synthetic classifications, not performed external effects"
+  }
+}
