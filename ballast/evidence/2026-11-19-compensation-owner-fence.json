@@ -1,0 +1,488 @@
+{
+  "schema": "ballast-synthetic-2026-11-19-v1",
+  "cases": [
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "HIT",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "baseline",
+      "seq": 1
+    },
+    {
+      "owner": 4,
+      "worker": 3,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "HIT",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "stale_owner",
+      "seq": 2
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "HIT",
+      "grant": 1,
+      "permission": 0,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "revoked_permission",
+      "seq": 3
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 10,
+      "receipt": "HIT",
+      "original": "HIT",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "concurrent_commit",
+      "seq": 4
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "HIT",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "UNKNOWN",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "receipt_without_sink",
+      "seq": 5
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "HIT",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E0",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "wrong_reversed_effect",
+      "seq": 6
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "HIT",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U0",
+      "authIssuer": 1,
+      "id": "wrong_target_incarnation",
+      "seq": 7
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "UNKNOWN",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "unknown_original",
+      "seq": 8
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "HIT",
+      "grant": 0,
+      "permission": 1,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "invalid_historical_grant",
+      "seq": 9
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "HIT",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1",
+        "E2"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "extra_member",
+      "seq": 10
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "HIT",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 0,
+      "id": "forged_issuer",
+      "seq": 11
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "MISS",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "negative_original_conflict",
+      "seq": 12
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "UNKNOWN",
+      "original": "HIT",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "unknown_receipt",
+      "seq": 13
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "HIT",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1",
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "duplicate_member",
+      "seq": 14
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "HIT",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": null,
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "missing_effect_identity",
+      "seq": 15
+    },
+    {
+      "owner": 4,
+      "worker": 4,
+      "rev": 9,
+      "commitRev": 9,
+      "receipt": "HIT",
+      "original": "HIT",
+      "grant": 1,
+      "permission": 1,
+      "member": [
+        "E1"
+      ],
+      "required": [
+        "E1"
+      ],
+      "sink": "REVERSED",
+      "sinkEffect": "E1",
+      "target": "U1",
+      "sinkTarget": "U1",
+      "authIssuer": 1,
+      "id": "unmodeled_atomicity",
+      "seq": 16
+    }
+  ],
+  "rows": [
+    {
+      "id": "baseline",
+      "weak": "COMPENSATED",
+      "reference": "MODEL_BOUND",
+      "verifier": "MODEL_BOUND"
+    },
+    {
+      "id": "stale_owner",
+      "weak": "COMPENSATED",
+      "reference": "OWNER_STALE",
+      "verifier": "OWNER_STALE"
+    },
+    {
+      "id": "revoked_permission",
+      "weak": "COMPENSATED",
+      "reference": "NO_NEW_EFFECT",
+      "verifier": "NO_NEW_EFFECT"
+    },
+    {
+      "id": "concurrent_commit",
+      "weak": "COMPENSATED",
+      "reference": "REVISION_DRIFT",
+      "verifier": "REVISION_DRIFT"
+    },
+    {
+      "id": "receipt_without_sink",
+      "weak": "COMPENSATED",
+      "reference": "SINK_UNKNOWN",
+      "verifier": "SINK_UNKNOWN"
+    },
+    {
+      "id": "wrong_reversed_effect",
+      "weak": "COMPENSATED",
+      "reference": "SINK_IDENTITY_CONFLICT",
+      "verifier": "SINK_IDENTITY_CONFLICT"
+    },
+    {
+      "id": "wrong_target_incarnation",
+      "weak": "COMPENSATED",
+      "reference": "SINK_IDENTITY_CONFLICT",
+      "verifier": "SINK_IDENTITY_CONFLICT"
+    },
+    {
+      "id": "unknown_original",
+      "weak": "COMPENSATED",
+      "reference": "ORIGINAL_UNKNOWN",
+      "verifier": "ORIGINAL_UNKNOWN"
+    },
+    {
+      "id": "invalid_historical_grant",
+      "weak": "COMPENSATED",
+      "reference": "HISTORICAL_AUTH_INVALID",
+      "verifier": "HISTORICAL_AUTH_INVALID"
+    },
+    {
+      "id": "extra_member",
+      "weak": "COMPENSATED",
+      "reference": "EFFECT_SET_CONFLICT",
+      "verifier": "EFFECT_SET_CONFLICT"
+    },
+    {
+      "id": "forged_issuer",
+      "weak": "COMPENSATED",
+      "reference": "ISSUER_UNKNOWN",
+      "verifier": "ISSUER_UNKNOWN"
+    },
+    {
+      "id": "negative_original_conflict",
+      "weak": "COMPENSATED",
+      "reference": "EVIDENCE_CONFLICT",
+      "verifier": "EVIDENCE_CONFLICT"
+    },
+    {
+      "id": "unknown_receipt",
+      "weak": "RETRY",
+      "reference": "UNKNOWN_STOP",
+      "verifier": "UNKNOWN_STOP"
+    },
+    {
+      "id": "duplicate_member",
+      "weak": "COMPENSATED",
+      "reference": "MEMBERSHIP_INVALID",
+      "verifier": "MEMBERSHIP_INVALID"
+    },
+    {
+      "id": "missing_effect_identity",
+      "weak": "COMPENSATED",
+      "reference": "IDENTITY_UNKNOWN",
+      "verifier": "IDENTITY_UNKNOWN"
+    },
+    {
+      "id": "unmodeled_atomicity",
+      "weak": "COMPENSATED",
+      "reference": "MODEL_BOUND",
+      "verifier": "MODEL_BOUND"
+    }
+  ],
+  "summary": {
+    "scenarios": 16,
+    "weakCompensated": 15,
+    "referenceBound": 2,
+    "divergences": 16,
+    "verifierAgreement": 16,
+    "failures": 0,
+    "externalSinkCalls": 0
+  },
+  "referenceSelfAttack": {
+    "id": "unmodeled_atomicity",
+    "modelDecision": "MODEL_BOUND",
+    "missing": "no real atomic compare-and-reverse, no independently authenticated sink receipt, no proof of no second reversal",
+    "strongerVerdict": "UNKNOWN_STOP"
+  }
+}
