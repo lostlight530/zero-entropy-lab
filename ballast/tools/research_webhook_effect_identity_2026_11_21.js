@@ -17,7 +17,7 @@ const base={
  fence:{protected:true,readRevision:12,commitRevision:12,authorityRead:9,authorityCurrent:9}
 };
 const cases=[];
-function add(id,change){let x=clone(base);change(x);cases.push({id,facts:x})}
+function add(id,change){let x=clone(base);change(x);if(x.receipts.length===0&&id!=="no_receipt_but_completion_claims_full")x.completion.witnessed=[];cases.push({id,facts:x})}
 add("baseline_exact_positive",x=>{});
 add("redelivery_new_transport_id",x=>{x.event.delivery="delivery-2"});
 add("new_event_object_same_business_effect",x=>{x.event.id="evt-21b"});
@@ -42,6 +42,7 @@ add("miss_commit_fence_drift",x=>{x.receipts=[];x.query.state="MISS";x.query.aut
 add("positive_current_target_reincarnated",x=>{x.completion.target="cycle-22"});
 add("positive_current_membership_changed",x=>{x.completion.witnessed=["notify","ledger","surprise"]});
 add("query_other_account_not_authoritative_for_this",x=>{x.receipts=[];x.query.state="MISS";x.query.authoritative=true;x.query.account="acct-other"});
+add("no_receipt_but_completion_claims_full",x=>{x.receipts=[];x.query.state="MISS";x.query.authoritative=true; /* authored contradiction: full completion witness and authoritative effect absence */});
 add("self_attack_authored_issuer_bit_not_signature",x=>{x.event.delivery="delivery-forged"; /* no real signature data exist, all authored issuer bits remain true */});
 add("self_attack_authored_fence_bit_not_sink_atomicity",x=>{x.receipts=[];x.query.state="MISS";x.query.authoritative=true;x.fence.protected=true; /* no actual compare-and-effect is executed */});
 function weakEvent(x){return x.seen.events.includes(x.event.id)?"SKIP_EVENT":"PROCESS_EVENT"}
@@ -50,6 +51,7 @@ function weakCount(x){return x.receipts.length===x.action.required.length?"COMPL
 function uniqueExact(a,b){return a.length===b.length&&new Set(a).size===a.length&&new Set(b).size===b.length&&a.every(x=>b.includes(x))}
 function qualifiedMiss(x){let q=x.query,a=x.action,e=x.event;return q.state==="MISS"&&q.authoritative===true&&q.publisher===e.publisher&&q.account===e.account&&q.task===a.task&&q.operation===a.operation&&q.intent===a.intent&&q.incarnation===a.incarnation&&q.object===a.object&&q.type===a.type&&q.retained===true&&Number.isFinite(q.watermark)&&q.watermark>=a.attemptWatermark&&uniqueExact(q.members,a.required)&&uniqueExact(q.attempts,a.attempts)}
 function currentProof(x){let c=x.completion,a=x.action;return c.protected===true&&c.issuerAttested===true&&c.target===a.incarnation&&c.revision===c.readRevision&&uniqueExact(c.required,a.required)&&uniqueExact(c.witnessed,a.required)}
+function scopeForRetry(x){let c=x.completion,a=x.action;return c.protected===true&&c.issuerAttested===true&&c.target===a.incarnation&&c.revision===c.readRevision&&uniqueExact(c.required,a.required)&&c.witnessed.length===0}
 function permission(x){let p=x.permission;return p.active===true&&p.approval===true&&p.credential===true&&p.ownerExpected===p.ownerCurrent&&p.now<=p.validUntil}
 function reference(x){
  let a=x.action,e=x.event,r=x.receipts;
@@ -68,7 +70,8 @@ function reference(x){
  }
  if(!qualifiedMiss(x))return "PRIOR_UNKNOWN_STOP";
  if(!permission(x))return "PERMISSION_DENIED";
- if(!currentProof(x))return "CURRENT_COMPLETION_UNKNOWN";
+ if(currentProof(x))return "COMPLETION_MISS_CONFLICT";
+ if(!scopeForRetry(x))return "CURRENT_SCOPE_UNKNOWN";
  let f=x.fence;
  return f.protected===true&&f.readRevision===f.commitRevision&&f.authorityRead===f.authorityCurrent?"MODEL_RETRY_GATED":"TOCTOU_STOP";
 }
@@ -102,7 +105,9 @@ function verifier(z){
  if(!miss)return "PRIOR_UNKNOWN_STOP";
  const p=z.permission;
  if(!(p.active===true&&p.approval===true&&p.credential===true&&p.ownerExpected===p.ownerCurrent&&p.now<=p.validUntil))return "PERMISSION_DENIED";
- if(!done)return "CURRENT_COMPLETION_UNKNOWN";
+ if(done)return "COMPLETION_MISS_CONFLICT";
+ const scoped=c.protected===true&&c.issuerAttested===true&&c.target===d.incarnation&&c.readRevision===c.revision&&exact(c.required,d.required)&&c.witnessed.length===0;
+ if(!scoped)return "CURRENT_SCOPE_UNKNOWN";
  const f=z.fence;
  return f.protected===true&&f.readRevision===f.commitRevision&&f.authorityRead===f.authorityCurrent?"MODEL_RETRY_GATED":"TOCTOU_STOP";
 }
@@ -122,7 +127,8 @@ const keyChecks={
  conflictingMissStops:rows.find(x=>x.id==="positive_and_authoritative_miss_conflict").reference==="EVIDENCE_CONFLICT",
  scopedMissCanOnlyGate:rows.find(x=>x.id==="miss_authoritative_all_covered").reference==="MODEL_RETRY_GATED",
  unknownCoverageNeverRetries:["miss_attempt_coverage_incomplete","miss_effect_set_coverage_incomplete","miss_watermark_before_attempt","miss_retention_expired","query_other_account_not_authoritative_for_this"].every(id=>rows.find(x=>x.id===id).reference==="PRIOR_UNKNOWN_STOP"),
- fenceDriftStops:rows.find(x=>x.id==="miss_commit_fence_drift").reference==="TOCTOU_STOP"
+ fenceDriftStops:rows.find(x=>x.id==="miss_commit_fence_drift").reference==="TOCTOU_STOP",
+ completionMissConflictStops:rows.find(x=>x.id==="no_receipt_but_completion_claims_full").reference==="COMPLETION_MISS_CONFLICT"
 };
 for(const [name,ok] of Object.entries(keyChecks))if(!ok)failures.push(name);
 const summary={

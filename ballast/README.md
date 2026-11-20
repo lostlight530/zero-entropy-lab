@@ -853,3 +853,11 @@ One new original synthetic research window, no real effect-sink calls, no real p
 Monthly rolling total now 21 NATIVE Daily records / 21 original bounded reported synthetic windows, retaining the original November 12 source-verification limitation, CASE / METHOD / NOTES / Special / Audit / durable finding +0
 Last complete derived audit [2026-11-13..2026-11-18](audits/2026-11-13--2026-11-18.md) already covers current 2026-11-15 checker cutoff, next non-overlapping audit NOT_DUE
 Native Node CLI, complete Python checker, real Stripe/GitHub, external effect sink and authority-independent verifier NOT_EXECUTED
+
+## Ballast same-date Nov21 model self-correction
+
+The first 26-scenario result is retained at [initial unmerged head](https://github.com/lostlight530/zero-entropy-lab/commit/2043100333dddba2193fe3ffa56b579db5bcf5e8), an executed same-date adversarial revision extends the same [Daily](records/2026-11-21.md) to 27 scenarios / 108 producer decisions / 27 limited reconstructions / 9 assertions with zero failures
+
+New counterexample: an authoritative prior-effect MISS together with a fully witnessed current completion must stop as COMPLETION_MISS_CONFLICT, not authorize a retry, all no-receipt eligible retry fixtures now carry an empty current achieved-member witness
+
+Credit remains 1 NATIVE Daily / 1 original bounded synthetic window for 2026-11-21, CASE/METHOD/NOTES/Special/Audit/durable finding +0, no real sink or independent semantics verified, Node CLI and full Python checker NOT_EXECUTED

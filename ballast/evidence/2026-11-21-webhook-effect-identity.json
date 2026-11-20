@@ -2,18 +2,18 @@
   "study": "webhook-delivery-event-operation-effect-identity",
   "source_provenance": "AUTHORED_SYNTHETIC_FACTS",
   "summary": {
-    "case_count": 26,
-    "unique_case_count": 26,
-    "path_decisions": 104,
-    "reference_verifier_agreement": 26,
+    "case_count": 27,
+    "unique_case_count": 27,
+    "path_decisions": 108,
+    "reference_verifier_agreement": 27,
     "weak_event_process": 3,
-    "weak_event_skip": 23,
+    "weak_event_skip": 24,
     "weak_object_process": 1,
-    "weak_object_skip": 25,
+    "weak_object_skip": 26,
     "weak_count_complete": 13,
     "model_done": 4,
     "model_retry_gated": 2,
-    "fail_closed": 20,
+    "fail_closed": 21,
     "reference_counts": {
       "MODEL_DONE": 4,
       "RECEIPT_SCOPE_CONFLICT": 2,
@@ -28,13 +28,14 @@
       "MODEL_RETRY_GATED": 2,
       "PERMISSION_DENIED": 2,
       "TOCTOU_STOP": 1,
-      "CURRENT_COMPLETION_UNKNOWN": 2
+      "CURRENT_COMPLETION_UNKNOWN": 2,
+      "COMPLETION_MISS_CONFLICT": 1
     },
     "synthetic_effect_calls": 0,
     "live_provider_calls": 0,
     "source_attestation_calls": 0,
     "external_sink_calls": 0,
-    "assertions": 8,
+    "assertions": 9,
     "assertion_failures": 0,
     "failures": []
   },
@@ -1677,10 +1678,7 @@
             "notify",
             "ledger"
           ],
-          "witnessed": [
-            "notify",
-            "ledger"
-          ],
+          "witnessed": [],
           "issuerAttested": true
         },
         "fence": {
@@ -1774,10 +1772,7 @@
             "notify",
             "ledger"
           ],
-          "witnessed": [
-            "notify",
-            "ledger"
-          ],
+          "witnessed": [],
           "issuerAttested": true
         },
         "fence": {
@@ -1872,10 +1867,7 @@
             "notify",
             "ledger"
           ],
-          "witnessed": [
-            "notify",
-            "ledger"
-          ],
+          "witnessed": [],
           "issuerAttested": true
         },
         "fence": {
@@ -1971,10 +1963,7 @@
             "notify",
             "ledger"
           ],
-          "witnessed": [
-            "notify",
-            "ledger"
-          ],
+          "witnessed": [],
           "issuerAttested": true
         },
         "fence": {
@@ -2070,10 +2059,7 @@
             "notify",
             "ledger"
           ],
-          "witnessed": [
-            "notify",
-            "ledger"
-          ],
+          "witnessed": [],
           "issuerAttested": true
         },
         "fence": {
@@ -2165,10 +2151,7 @@
             "notify",
             "ledger"
           ],
-          "witnessed": [
-            "notify",
-            "ledger"
-          ],
+          "witnessed": [],
           "issuerAttested": true
         },
         "fence": {
@@ -2264,10 +2247,7 @@
             "notify",
             "ledger"
           ],
-          "witnessed": [
-            "notify",
-            "ledger"
-          ],
+          "witnessed": [],
           "issuerAttested": true
         },
         "fence": {
@@ -2363,10 +2343,7 @@
             "notify",
             "ledger"
           ],
-          "witnessed": [
-            "notify",
-            "ledger"
-          ],
+          "witnessed": [],
           "issuerAttested": true
         },
         "fence": {
@@ -2462,10 +2439,7 @@
             "notify",
             "ledger"
           ],
-          "witnessed": [
-            "notify",
-            "ledger"
-          ],
+          "witnessed": [],
           "issuerAttested": true
         },
         "fence": {
@@ -2822,6 +2796,102 @@
             "notify",
             "ledger"
           ],
+          "witnessed": [],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "no_receipt_but_completion_claims_full",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
           "witnessed": [
             "notify",
             "ledger"
@@ -2839,8 +2909,8 @@
       "weak_event": "SKIP_EVENT",
       "weak_object_type": "SKIP_OBJECT_TYPE",
       "weak_receipt_count": "RETRY_BY_COUNT",
-      "reference": "PRIOR_UNKNOWN_STOP",
-      "verifier": "PRIOR_UNKNOWN_STOP",
+      "reference": "COMPLETION_MISS_CONFLICT",
+      "verifier": "COMPLETION_MISS_CONFLICT",
       "synthetic_effect_calls": 0
     },
     {
@@ -3051,10 +3121,7 @@
             "notify",
             "ledger"
           ],
-          "witnessed": [
-            "notify",
-            "ledger"
-          ],
+          "witnessed": [],
           "issuerAttested": true
         },
         "fence": {
@@ -3080,6 +3147,9 @@
     "source_access_date": "2026-11-21",
     "execution_entry": "new Function('console', SOURCE) isolated Code Mode V8",
     "native_node_cli": "NOT_EXECUTED",
-    "provider_or_sink": "NOT_EXECUTED"
+    "provider_or_sink": "NOT_EXECUTED",
+    "original_26_case_head_sha": "2043100333dddba2193fe3ffa56b579db5bcf5e8",
+    "same_date_review_utc": "2026-11-20T20:03:34.620Z",
+    "same_date_review_scope": "One added contradiction trial; no-receipt cases now have empty current achieved-member witness except the contradiction control; original 26-case observation preserved in prior unmerged commit"
   }
 }
