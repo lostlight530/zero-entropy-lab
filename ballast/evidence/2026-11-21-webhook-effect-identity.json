@@ -1,0 +1,4251 @@
+{
+  "study": "webhook-delivery-event-operation-effect-identity",
+  "source_provenance": "AUTHORED_SYNTHETIC_FACTS",
+  "summary": {
+    "case_count": 35,
+    "unique_case_count": 35,
+    "path_decisions": 140,
+    "reference_verifier_agreement": 35,
+    "weak_event_process": 3,
+    "weak_event_skip": 32,
+    "weak_object_process": 1,
+    "weak_object_skip": 34,
+    "weak_count_complete": 19,
+    "model_done": 4,
+    "model_retry_gated": 2,
+    "fail_closed": 29,
+    "reference_counts": {
+      "MODEL_DONE": 4,
+      "RECEIPT_SCOPE_CONFLICT": 4,
+      "RECEIPT_DUPLICATE_STOP": 1,
+      "RECEIPT_EXTRA_STOP": 1,
+      "PARTIAL_EFFECT_STOP": 1,
+      "RECEIPT_UNATTESTED_STOP": 1,
+      "HIST_AUTH_INVALID_STOP": 1,
+      "TEMPORAL_UNKNOWN_STOP": 1,
+      "EVIDENCE_CONFLICT": 1,
+      "PRIOR_UNKNOWN_STOP": 7,
+      "MODEL_RETRY_GATED": 2,
+      "PERMISSION_DENIED": 2,
+      "TOCTOU_STOP": 1,
+      "CURRENT_COMPLETION_UNKNOWN": 2,
+      "COMPLETION_MISS_CONFLICT": 1,
+      "RECEIPT_IDENTITY_UNKNOWN": 2,
+      "BAD_REQUIRED_IDENTITY_STOP": 3
+    },
+    "synthetic_effect_calls": 0,
+    "live_provider_calls": 0,
+    "source_attestation_calls": 0,
+    "external_sink_calls": 0,
+    "assertions": 17,
+    "assertion_failures": 0,
+    "failures": []
+  },
+  "rows": [
+    {
+      "id": "baseline_exact_positive",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "MODEL_DONE",
+      "verifier": "MODEL_DONE",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "redelivery_new_transport_id",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-2",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "MODEL_DONE",
+      "verifier": "MODEL_DONE",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "new_event_object_same_business_effect",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21b",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "PROCESS_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "MODEL_DONE",
+      "verifier": "MODEL_DONE",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "event_id_seen_but_new_intent",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-different-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "RECEIPT_SCOPE_CONFLICT",
+      "verifier": "RECEIPT_SCOPE_CONFLICT",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "object_type_key_seen_new_business_operation",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21c",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-new-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "PROCESS_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "RECEIPT_SCOPE_CONFLICT",
+      "verifier": "RECEIPT_SCOPE_CONFLICT",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "duplicate_receipt_same_member",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-other",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "RECEIPT_DUPLICATE_STOP",
+      "verifier": "RECEIPT_DUPLICATE_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "unexpected_receipt_member",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-extra",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "unexpected",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "RECEIPT_EXTRA_STOP",
+      "verifier": "RECEIPT_EXTRA_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "missing_one_required_receipt",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "PARTIAL_EFFECT_STOP",
+      "verifier": "PARTIAL_EFFECT_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "positive_receipt_unattested",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": false,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "RECEIPT_UNATTESTED_STOP",
+      "verifier": "RECEIPT_UNATTESTED_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "positive_receipt_historical_grant_invalid",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": false,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "HIST_AUTH_INVALID_STOP",
+      "verifier": "HIST_AUTH_INVALID_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "positive_receipt_order_unknown",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": false
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "TEMPORAL_UNKNOWN_STOP",
+      "verifier": "TEMPORAL_UNKNOWN_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "positive_and_authoritative_miss_conflict",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "EVIDENCE_CONFLICT",
+      "verifier": "EVIDENCE_CONFLICT",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "no_receipt_query_unknown",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "miss_attempt_coverage_incomplete",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "miss_effect_set_coverage_incomplete",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "miss_watermark_before_attempt",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 39,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "miss_retention_expired",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": false
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "miss_authoritative_all_covered",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [],
+          "objectTypes": []
+        },
+        "receipts": [],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "PROCESS_EVENT",
+      "weak_object_type": "PROCESS_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "MODEL_RETRY_GATED",
+      "verifier": "MODEL_RETRY_GATED",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "miss_current_permission_revoked",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": false,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "PERMISSION_DENIED",
+      "verifier": "PERMISSION_DENIED",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "miss_owner_generation_drift",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 8,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "PERMISSION_DENIED",
+      "verifier": "PERMISSION_DENIED",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "miss_commit_fence_drift",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 13,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "TOCTOU_STOP",
+      "verifier": "TOCTOU_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "positive_current_target_reincarnated",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-22",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "CURRENT_COMPLETION_UNKNOWN",
+      "verifier": "CURRENT_COMPLETION_UNKNOWN",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "positive_current_membership_changed",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger",
+            "surprise"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "CURRENT_COMPLETION_UNKNOWN",
+      "verifier": "CURRENT_COMPLETION_UNKNOWN",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "query_other_account_not_authoritative_for_this",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-other",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "no_receipt_but_completion_claims_full",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "COMPLETION_MISS_CONFLICT",
+      "verifier": "COMPLETION_MISS_CONFLICT",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "receipt_id_missing",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "RECEIPT_IDENTITY_UNKNOWN",
+      "verifier": "RECEIPT_IDENTITY_UNKNOWN",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "receipt_run_missing",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "RECEIPT_IDENTITY_UNKNOWN",
+      "verifier": "RECEIPT_IDENTITY_UNKNOWN",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "receipt_other_run",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R-OTHER",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "RECEIPT_SCOPE_CONFLICT",
+      "verifier": "RECEIPT_SCOPE_CONFLICT",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "receipt_attempt_outside_known_set",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A-OTHER",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "RECEIPT_SCOPE_CONFLICT",
+      "verifier": "RECEIPT_SCOPE_CONFLICT",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "action_attempt_member_null",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            null
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "BAD_REQUIRED_IDENTITY_STOP",
+      "verifier": "BAD_REQUIRED_IDENTITY_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "action_attempt_not_covered",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A-OTHER",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "BAD_REQUIRED_IDENTITY_STOP",
+      "verifier": "BAD_REQUIRED_IDENTITY_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "miss_watermark_string_coercion",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": "50",
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "PRIOR_UNKNOWN_STOP",
+      "verifier": "PRIOR_UNKNOWN_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "required_set_null",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": null
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "BAD_REQUIRED_IDENTITY_STOP",
+      "verifier": "BAD_REQUIRED_IDENTITY_STOP",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "self_attack_authored_issuer_bit_not_signature",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-forged",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [
+          {
+            "id": "r-notify",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "notify",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          },
+          {
+            "id": "r-ledger",
+            "run": "R21",
+            "attempt": "A1",
+            "publisher": "stripe",
+            "account": "acct-A",
+            "task": "T21",
+            "operation": "op-invoice-21",
+            "intent": "activate-access",
+            "incarnation": "cycle-21",
+            "object": "invoice-21",
+            "type": "invoice.paid",
+            "effect": "ledger",
+            "issuerAttested": true,
+            "authorizedAtEffect": true,
+            "orderWitness": true
+          }
+        ],
+        "query": {
+          "state": "UNKNOWN",
+          "authoritative": false,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [
+            "notify",
+            "ledger"
+          ],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "COMPLETE_BY_COUNT",
+      "reference": "MODEL_DONE",
+      "verifier": "MODEL_DONE",
+      "synthetic_effect_calls": 0
+    },
+    {
+      "id": "self_attack_authored_fence_bit_not_sink_atomicity",
+      "primitive": {
+        "event": {
+          "publisher": "stripe",
+          "account": "acct-A",
+          "id": "evt-21a",
+          "delivery": "delivery-1",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "created": 300
+        },
+        "action": {
+          "task": "T21",
+          "run": "R21",
+          "attempt": "A1",
+          "attempts": [
+            "A1"
+          ],
+          "attemptWatermark": 40,
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "required": [
+            "notify",
+            "ledger"
+          ]
+        },
+        "seen": {
+          "events": [
+            "evt-21a"
+          ],
+          "objectTypes": [
+            "acct-A/invoice-21/invoice.paid"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "state": "MISS",
+          "authoritative": true,
+          "publisher": "stripe",
+          "account": "acct-A",
+          "task": "T21",
+          "operation": "op-invoice-21",
+          "intent": "activate-access",
+          "incarnation": "cycle-21",
+          "object": "invoice-21",
+          "type": "invoice.paid",
+          "members": [
+            "notify",
+            "ledger"
+          ],
+          "attempts": [
+            "A1"
+          ],
+          "watermark": 50,
+          "retained": true
+        },
+        "permission": {
+          "active": true,
+          "approval": true,
+          "credential": true,
+          "ownerExpected": 7,
+          "ownerCurrent": 7,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "target": "cycle-21",
+          "revision": 12,
+          "readRevision": 12,
+          "required": [
+            "notify",
+            "ledger"
+          ],
+          "witnessed": [],
+          "issuerAttested": true
+        },
+        "fence": {
+          "protected": true,
+          "readRevision": 12,
+          "commitRevision": 12,
+          "authorityRead": 9,
+          "authorityCurrent": 9
+        }
+      },
+      "weak_event": "SKIP_EVENT",
+      "weak_object_type": "SKIP_OBJECT_TYPE",
+      "weak_receipt_count": "RETRY_BY_COUNT",
+      "reference": "MODEL_RETRY_GATED",
+      "verifier": "MODEL_RETRY_GATED",
+      "synthetic_effect_calls": 0
+    }
+  ],
+  "provenance": {
+    "logical_date": "2026-11-21 Asia/Shanghai",
+    "execution_time_utc": "2026-11-20T20:01:01.477Z",
+    "base_main_sha": "d6e8084db065212f3b4dd1d949541e2d2cd71cdf",
+    "source_access_date": "2026-11-21",
+    "execution_entry": "new Function('console', SOURCE) isolated Code Mode V8",
+    "native_node_cli": "NOT_EXECUTED",
+    "provider_or_sink": "NOT_EXECUTED",
+    "original_26_case_head_sha": "2043100333dddba2193fe3ffa56b579db5bcf5e8",
+    "same_date_review_utc": "2026-11-20T20:03:34.620Z",
+    "same_date_review_scope": "One added contradiction trial; no-receipt cases now have empty current achieved-member witness except the contradiction control; original 26-case observation preserved in prior unmerged commit",
+    "producer_stdout_scope": "Only study/source_provenance/summary/rows are actual producer JSON stdout; provenance field is separate delivery annotation, not produced stdout",
+    "review_previous_head_sha": "94a4491a80aa1d222e3b8e6738730c9d78d5c9f6",
+    "review_execution_utc": "2026-11-20T22:58:19.199Z",
+    "review_evidence_status": "Isolated V8 executing exact candidate source, 35 unique authored scenarios, 17 assertions, 35 agreement; no native Node or real sink",
+    "review_note": "Eight adversarial same-date maintenance probes, still one Daily and one original bounded window; original 26 and 27 case outputs retained in prior commits"
+  }
+}

@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-11-20 Temporal reset cross-run operation identity](records/2026-11-20.md)
+- 最新 Daily: [2026-11-21 Webhook event and downstream effect identity](records/2026-11-21.md)
 - 当前月度事实源: [2026-11](records/2026-11.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-11-13 至 2026-11-18](audits/2026-11-13--2026-11-18.md)
@@ -844,3 +844,28 @@ November rolling coverage is 20 dated NATIVE Dailies, point-in-time history and 
 Latest complete non-overlapping derived audit is 2026-11-13..18, covering current checker cutoff 2026-11-14
 Reviewer correction adds exact receipt task/workflow/activity identity and member-scoped MISS, separates historical receipt from prospective owner, five same-day synthetic probes, no extra Daily credit
 CASE, METHOD, NOTES, Special, Audit and durable findings all +0
+
+## Ballast current-state advance — 2026-11-21
+
+[2026-11-21 Daily](records/2026-11-21.md) adds one NATIVE bounded isolated V8 synthetic research unit on vendor webhook delivery ID / Event ID / object-type dedup versus task-defined downstream effect identity and completion
+[Producer and limited verifier](tools/research_webhook_effect_identity_2026_11_21.js) and [primitive model ledger](evidence/2026-11-21-webhook-effect-identity.json) retain 26 authored scenarios, 104 weak/reference path outputs, 26 shared-contract verifier reconstructions and 8 adversarial assertions with 0 failures
+One new original synthetic research window, no real effect-sink calls, no real provider delivery and no independent authority, RESEARCH PARTIAL / EVIDENCE_INSUFFICIENT, VALIDATION LIMITED
+Monthly rolling total now 21 NATIVE Daily records / 21 original bounded reported synthetic windows, retaining the original November 12 source-verification limitation, CASE / METHOD / NOTES / Special / Audit / durable finding +0
+Last complete derived audit [2026-11-13..2026-11-18](audits/2026-11-13--2026-11-18.md) already covers current 2026-11-15 checker cutoff, next non-overlapping audit NOT_DUE
+Native Node CLI, complete Python checker, real Stripe/GitHub, external effect sink and authority-independent verifier NOT_EXECUTED
+
+## Ballast same-date Nov21 model self-correction
+
+The first 26-scenario result is retained at [initial unmerged head](https://github.com/lostlight530/zero-entropy-lab/commit/2043100333dddba2193fe3ffa56b579db5bcf5e8), an executed same-date adversarial revision extends the same [Daily](records/2026-11-21.md) to 27 scenarios / 108 producer decisions / 27 limited reconstructions / 9 assertions with zero failures
+
+New counterexample: an authoritative prior-effect MISS together with a fully witnessed current completion must stop as COMPLETION_MISS_CONFLICT, not authorize a retry, all no-receipt eligible retry fixtures now carry an empty current achieved-member witness
+
+Credit remains 1 NATIVE Daily / 1 original bounded synthetic window for 2026-11-21, CASE/METHOD/NOTES/Special/Audit/durable finding +0, no real sink or independent semantics verified, Node CLI and full Python checker NOT_EXECUTED
+
+## Ballast 2026-11-21 maintainer adversarial hardening
+
+Eight same-day reviewer adversarial fixtures update the one 2026-11-21 Daily to 35 scenarios / 140 producer path classifications / 35 limited verifier agreements / 17 assertions, real effect calls 0
+
+Receipt identity must include explicit nonempty ID and modeled run/attempt membership, a malformed attempted identity or nonfinite/non-numeric negative-query watermark is no longer a permitted replay/completion proof
+The JSON evidence is raw producer rows plus separately labelled delivery provenance metadata, not a byte-exact producer stdout artifact
+One Daily / one original bounded window, November 21 NATIVE dates, no CASE, METHOD, NOTES, Special, Audit or durable conclusion increment, full Python checker/native Node CLI/real sink remain NOT_EXECUTED
