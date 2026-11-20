@@ -63,3 +63,7 @@ These two retained records are **derived independent governance material**, not 
 | `2026-10/2026-10-28-october-native-weekly-gap-recovery-register.md` | `05-maintenance-and-reconciliation/` | Retrospective native-weekly gap and recovery registration; it is not an original weekly producer run |
 
 **Path-preserving correction:** These files remain at their dated locations instead of being renamed or moved, because historical references may depend on the exact paths and blob identities. The class names above are navigation labels, not claims that new files exist under the class directories. Do not mutate A1/A2 source inventories, D-task records, original PRs, or any file outside `historical-audits/` to implement this navigation note.
+
+## 2026-11-20 source/provenance document-audit correction
+
+- [Aegis/Ballast A1/A2 source-role review](02-document-audits/2026-11-20--a1-a2-source-and-provenance--document-audit.md) — separate independent review; source-row role fixes are in current canonical A1/A2, original history retained
