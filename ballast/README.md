@@ -861,3 +861,11 @@ The first 26-scenario result is retained at [initial unmerged head](https://gith
 New counterexample: an authoritative prior-effect MISS together with a fully witnessed current completion must stop as COMPLETION_MISS_CONFLICT, not authorize a retry, all no-receipt eligible retry fixtures now carry an empty current achieved-member witness
 
 Credit remains 1 NATIVE Daily / 1 original bounded synthetic window for 2026-11-21, CASE/METHOD/NOTES/Special/Audit/durable finding +0, no real sink or independent semantics verified, Node CLI and full Python checker NOT_EXECUTED
+
+## Ballast 2026-11-21 maintainer adversarial hardening
+
+Eight same-day reviewer adversarial fixtures update the one 2026-11-21 Daily to 35 scenarios / 140 producer path classifications / 35 limited verifier agreements / 17 assertions, real effect calls 0
+
+Receipt identity must include explicit nonempty ID and modeled run/attempt membership, a malformed attempted identity or nonfinite/non-numeric negative-query watermark is no longer a permitted replay/completion proof
+The JSON evidence is raw producer rows plus separately labelled delivery provenance metadata, not a byte-exact producer stdout artifact
+One Daily / one original bounded window, November 21 NATIVE dates, no CASE, METHOD, NOTES, Special, Audit or durable conclusion increment, full Python checker/native Node CLI/real sink remain NOT_EXECUTED

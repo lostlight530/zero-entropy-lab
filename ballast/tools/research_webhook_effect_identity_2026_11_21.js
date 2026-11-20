@@ -8,8 +8,8 @@ const base={
  action:{task:"T21",run:"R21",attempt:"A1",attempts:["A1"],attemptWatermark:40,operation:"op-invoice-21",intent:"activate-access",incarnation:"cycle-21",object:"invoice-21",type:"invoice.paid",required:["notify","ledger"]},
  seen:{events:["evt-21a"],objectTypes:["acct-A/invoice-21/invoice.paid"]},
  receipts:[
-  {id:"r-notify",publisher:"stripe",account:"acct-A",task:"T21",operation:"op-invoice-21",intent:"activate-access",incarnation:"cycle-21",object:"invoice-21",type:"invoice.paid",effect:"notify",issuerAttested:true,authorizedAtEffect:true,orderWitness:true},
-  {id:"r-ledger",publisher:"stripe",account:"acct-A",task:"T21",operation:"op-invoice-21",intent:"activate-access",incarnation:"cycle-21",object:"invoice-21",type:"invoice.paid",effect:"ledger",issuerAttested:true,authorizedAtEffect:true,orderWitness:true}
+  {id:"r-notify",run:"R21",attempt:"A1",publisher:"stripe",account:"acct-A",task:"T21",operation:"op-invoice-21",intent:"activate-access",incarnation:"cycle-21",object:"invoice-21",type:"invoice.paid",effect:"notify",issuerAttested:true,authorizedAtEffect:true,orderWitness:true},
+  {id:"r-ledger",run:"R21",attempt:"A1",publisher:"stripe",account:"acct-A",task:"T21",operation:"op-invoice-21",intent:"activate-access",incarnation:"cycle-21",object:"invoice-21",type:"invoice.paid",effect:"ledger",issuerAttested:true,authorizedAtEffect:true,orderWitness:true}
  ],
  query:{state:"UNKNOWN",authoritative:false,publisher:"stripe",account:"acct-A",task:"T21",operation:"op-invoice-21",intent:"activate-access",incarnation:"cycle-21",object:"invoice-21",type:"invoice.paid",members:["notify","ledger"],attempts:["A1"],watermark:50,retained:true},
  permission:{active:true,approval:true,credential:true,ownerExpected:7,ownerCurrent:7,now:400,validUntil:500},
@@ -43,22 +43,32 @@ add("positive_current_target_reincarnated",x=>{x.completion.target="cycle-22"});
 add("positive_current_membership_changed",x=>{x.completion.witnessed=["notify","ledger","surprise"]});
 add("query_other_account_not_authoritative_for_this",x=>{x.receipts=[];x.query.state="MISS";x.query.authoritative=true;x.query.account="acct-other"});
 add("no_receipt_but_completion_claims_full",x=>{x.receipts=[];x.query.state="MISS";x.query.authoritative=true; /* authored contradiction: full completion witness and authoritative effect absence */});
+add("receipt_id_missing",x=>{delete x.receipts[0].id});
+add("receipt_run_missing",x=>{delete x.receipts[0].run});
+add("receipt_other_run",x=>{x.receipts[0].run="R-OTHER"});
+add("receipt_attempt_outside_known_set",x=>{x.receipts[0].attempt="A-OTHER"});
+add("action_attempt_member_null",x=>{x.action.attempts=[null]});
+add("action_attempt_not_covered",x=>{x.action.attempt="A-OTHER"});
+add("miss_watermark_string_coercion",x=>{x.receipts=[];x.query.state="MISS";x.query.authoritative=true;x.query.watermark="50"});
+add("required_set_null",x=>{x.action.required=null});
 add("self_attack_authored_issuer_bit_not_signature",x=>{x.event.delivery="delivery-forged"; /* no real signature data exist, all authored issuer bits remain true */});
 add("self_attack_authored_fence_bit_not_sink_atomicity",x=>{x.receipts=[];x.query.state="MISS";x.query.authoritative=true;x.fence.protected=true; /* no actual compare-and-effect is executed */});
 function weakEvent(x){return x.seen.events.includes(x.event.id)?"SKIP_EVENT":"PROCESS_EVENT"}
 function weakObject(x){return x.seen.objectTypes.includes(x.event.account+"/"+x.event.object+"/"+x.event.type)?"SKIP_OBJECT_TYPE":"PROCESS_OBJECT_TYPE"}
-function weakCount(x){return x.receipts.length===x.action.required.length?"COMPLETE_BY_COUNT":"RETRY_BY_COUNT"}
-function uniqueExact(a,b){return a.length===b.length&&new Set(a).size===a.length&&new Set(b).size===b.length&&a.every(x=>b.includes(x))}
-function qualifiedMiss(x){let q=x.query,a=x.action,e=x.event;return q.state==="MISS"&&q.authoritative===true&&q.publisher===e.publisher&&q.account===e.account&&q.task===a.task&&q.operation===a.operation&&q.intent===a.intent&&q.incarnation===a.incarnation&&q.object===a.object&&q.type===a.type&&q.retained===true&&Number.isFinite(q.watermark)&&q.watermark>=a.attemptWatermark&&uniqueExact(q.members,a.required)&&uniqueExact(q.attempts,a.attempts)}
+function weakCount(x){return Array.isArray(x.receipts)&&Array.isArray(x.action.required)&&x.receipts.length===x.action.required.length?"COMPLETE_BY_COUNT":"RETRY_BY_COUNT"}
+const goodIds=a=>Array.isArray(a)&&a.length>0&&a.every(v=>typeof v==="string"&&v.length>0)&&new Set(a).size===a.length;
+function uniqueExact(a,b){return Array.isArray(a)&&Array.isArray(b)&&a.length===b.length&&new Set(a).size===a.length&&new Set(b).size===b.length&&a.every(v=>typeof v==="string"&&v.length>0&&b.includes(v))&&b.every(v=>typeof v==="string"&&v.length>0)}
+function qualifiedMiss(x){let q=x.query,a=x.action,e=x.event;return q.state==="MISS"&&q.authoritative===true&&Number.isFinite(q.watermark)&&q.publisher===e.publisher&&q.account===e.account&&q.task===a.task&&q.operation===a.operation&&q.intent===a.intent&&q.incarnation===a.incarnation&&q.object===a.object&&q.type===a.type&&q.retained===true&&Number.isFinite(q.watermark)&&q.watermark>=a.attemptWatermark&&uniqueExact(q.members,a.required)&&uniqueExact(q.attempts,a.attempts)}
 function currentProof(x){let c=x.completion,a=x.action;return c.protected===true&&c.issuerAttested===true&&c.target===a.incarnation&&c.revision===c.readRevision&&uniqueExact(c.required,a.required)&&uniqueExact(c.witnessed,a.required)}
-function scopeForRetry(x){let c=x.completion,a=x.action;return c.protected===true&&c.issuerAttested===true&&c.target===a.incarnation&&c.revision===c.readRevision&&uniqueExact(c.required,a.required)&&c.witnessed.length===0}
+function scopeForRetry(x){let c=x.completion,a=x.action;return c.protected===true&&c.issuerAttested===true&&c.target===a.incarnation&&c.revision===c.readRevision&&uniqueExact(c.required,a.required)&&Array.isArray(c.witnessed)&&c.witnessed.length===0}
 function permission(x){let p=x.permission;return p.active===true&&p.approval===true&&p.credential===true&&p.ownerExpected===p.ownerCurrent&&p.now<=p.validUntil}
 function reference(x){
  let a=x.action,e=x.event,r=x.receipts;
- if(!a.required.length||!uniqueExact(a.required,[...new Set(a.required)])||!a.attempts.length||!uniqueExact(a.attempts,[...new Set(a.attempts)]))return "BAD_REQUIRED_IDENTITY_STOP";
+ if(!goodIds(a.required)||!goodIds(a.attempts)||typeof a.task!=="string"||!a.task||typeof a.run!=="string"||!a.run||typeof a.attempt!=="string"||!a.attempt||!a.attempts.includes(a.attempt))return "BAD_REQUIRED_IDENTITY_STOP";
+  if(!Array.isArray(r)||r.some(z=>!z||typeof z.id!=="string"||!z.id||typeof z.run!=="string"||!z.run||typeof z.attempt!=="string"||!z.attempt))return "RECEIPT_IDENTITY_UNKNOWN";
  if(e.object!==a.object||e.type!==a.type)return "EVENT_BINDING_CONFLICT";
  if(new Set(r.map(z=>z.id)).size!==r.length||new Set(r.map(z=>z.effect)).size!==r.length)return "RECEIPT_DUPLICATE_STOP";
- if(r.some(z=>z.publisher!==e.publisher||z.account!==e.account||z.task!==a.task||z.operation!==a.operation||z.intent!==a.intent||z.incarnation!==a.incarnation||z.object!==a.object||z.type!==a.type))return "RECEIPT_SCOPE_CONFLICT";
+ if(r.some(z=>z.run!==a.run||!a.attempts.includes(z.attempt)||z.publisher!==e.publisher||z.account!==e.account||z.task!==a.task||z.operation!==a.operation||z.intent!==a.intent||z.incarnation!==a.incarnation||z.object!==a.object||z.type!==a.type))return "RECEIPT_SCOPE_CONFLICT";
  if(r.some(z=>!a.required.includes(z.effect)))return "RECEIPT_EXTRA_STOP";
  if(r.some(z=>z.issuerAttested!==true))return "RECEIPT_UNATTESTED_STOP";
  if(r.some(z=>z.authorizedAtEffect!==true))return "HIST_AUTH_INVALID_STOP";
@@ -79,13 +89,14 @@ function reference(x){
 // Implementation independence PARTIAL; same authored facts and semantic contract are explicitly shared
 function verifier(z){
  const d=z.action,e=z.event,rr=z.receipts;
- const exact=(v,w)=>v.length===w.length&&(new Set(v)).size===v.length&&(new Set(w)).size===w.length&&v.slice().sort().join("|")===w.slice().sort().join("|");
- if(!d.required.length||!exact(d.required,Array.from(new Set(d.required)))||!d.attempts.length||!exact(d.attempts,Array.from(new Set(d.attempts))))return "BAD_REQUIRED_IDENTITY_STOP";
+ const exact=(v,w)=>Array.isArray(v)&&Array.isArray(w)&&v.length===w.length&&v.every(k=>typeof k==="string"&&k.length>0)&&w.every(k=>typeof k==="string"&&k.length>0)&&(new Set(v)).size===v.length&&(new Set(w)).size===w.length&&v.slice().sort().join("|")===w.slice().sort().join("|");
+ if(!Array.isArray(d.required)||!d.required.length||!exact(d.required,Array.from(new Set(d.required)))||!Array.isArray(d.attempts)||!d.attempts.length||!exact(d.attempts,Array.from(new Set(d.attempts)))||typeof d.task!=="string"||!d.task||typeof d.run!=="string"||!d.run||typeof d.attempt!=="string"||!d.attempt||!d.attempts.includes(d.attempt))return "BAD_REQUIRED_IDENTITY_STOP";
+  if(!Array.isArray(rr)||rr.some(q=>!q||typeof q.id!=="string"||!q.id||typeof q.run!=="string"||!q.run||typeof q.attempt!=="string"||!q.attempt))return "RECEIPT_IDENTITY_UNKNOWN";
  if(d.object!==e.object||d.type!==e.type)return "EVENT_BINDING_CONFLICT";
  const receiptIds=rr.map(q=>q.id),receiptEffects=rr.map(q=>q.effect);
  if(new Set(receiptIds).size!==receiptIds.length||new Set(receiptEffects).size!==receiptEffects.length)return "RECEIPT_DUPLICATE_STOP";
  for(const q of rr){
-  if([q.publisher,q.account,q.task,q.operation,q.intent,q.incarnation,q.object,q.type].join("|")!==[e.publisher,e.account,d.task,d.operation,d.intent,d.incarnation,d.object,d.type].join("|"))return "RECEIPT_SCOPE_CONFLICT";
+  if(q.run!==d.run||!d.attempts.includes(q.attempt)||[q.publisher,q.account,q.task,q.operation,q.intent,q.incarnation,q.object,q.type].join("|")!==[e.publisher,e.account,d.task,d.operation,d.intent,d.incarnation,d.object,d.type].join("|"))return "RECEIPT_SCOPE_CONFLICT";
  }
  for(const q of rr)if(!d.required.some(item=>item===q.effect))return "RECEIPT_EXTRA_STOP";
  for(const q of rr)if(q.issuerAttested!==true)return "RECEIPT_UNATTESTED_STOP";
@@ -94,7 +105,7 @@ function verifier(z){
  const q=z.query;
  const qIdentity=[q.publisher,q.account,q.task,q.operation,q.intent,q.incarnation,q.object,q.type].join("|");
  const expectedIdentity=[e.publisher,e.account,d.task,d.operation,d.intent,d.incarnation,d.object,d.type].join("|");
- const miss=q.state==="MISS"&&q.authoritative===true&&q.retained===true&&qIdentity===expectedIdentity&&q.watermark>=d.attemptWatermark&&exact(q.members,d.required)&&exact(q.attempts,d.attempts);
+ const miss=q.state==="MISS"&&q.authoritative===true&&q.retained===true&&qIdentity===expectedIdentity&&Number.isFinite(q.watermark)&&q.watermark>=d.attemptWatermark&&exact(q.members,d.required)&&exact(q.attempts,d.attempts);
  if(rr.length&&miss)return "EVIDENCE_CONFLICT";
  const c=z.completion;
  const done=c.protected===true&&c.issuerAttested===true&&c.target===d.incarnation&&c.readRevision===c.revision&&exact(c.required,d.required)&&exact(c.witnessed,d.required);
@@ -106,7 +117,7 @@ function verifier(z){
  const p=z.permission;
  if(!(p.active===true&&p.approval===true&&p.credential===true&&p.ownerExpected===p.ownerCurrent&&p.now<=p.validUntil))return "PERMISSION_DENIED";
  if(done)return "COMPLETION_MISS_CONFLICT";
- const scoped=c.protected===true&&c.issuerAttested===true&&c.target===d.incarnation&&c.readRevision===c.revision&&exact(c.required,d.required)&&c.witnessed.length===0;
+ const scoped=c.protected===true&&c.issuerAttested===true&&c.target===d.incarnation&&c.readRevision===c.revision&&exact(c.required,d.required)&&Array.isArray(c.witnessed)&&c.witnessed.length===0;
  if(!scoped)return "CURRENT_SCOPE_UNKNOWN";
  const f=z.fence;
  return f.protected===true&&f.readRevision===f.commitRevision&&f.authorityRead===f.authorityCurrent?"MODEL_RETRY_GATED":"TOCTOU_STOP";
@@ -128,7 +139,15 @@ const keyChecks={
  scopedMissCanOnlyGate:rows.find(x=>x.id==="miss_authoritative_all_covered").reference==="MODEL_RETRY_GATED",
  unknownCoverageNeverRetries:["miss_attempt_coverage_incomplete","miss_effect_set_coverage_incomplete","miss_watermark_before_attempt","miss_retention_expired","query_other_account_not_authoritative_for_this"].every(id=>rows.find(x=>x.id===id).reference==="PRIOR_UNKNOWN_STOP"),
  fenceDriftStops:rows.find(x=>x.id==="miss_commit_fence_drift").reference==="TOCTOU_STOP",
- completionMissConflictStops:rows.find(x=>x.id==="no_receipt_but_completion_claims_full").reference==="COMPLETION_MISS_CONFLICT"
+ completionMissConflictStops:rows.find(x=>x.id==="no_receipt_but_completion_claims_full").reference==="COMPLETION_MISS_CONFLICT",
+  receiptIdRequired:rows.find(x=>x.id==="receipt_id_missing").reference==="RECEIPT_IDENTITY_UNKNOWN",
+  receiptRunRequired:rows.find(x=>x.id==="receipt_run_missing").reference==="RECEIPT_IDENTITY_UNKNOWN",
+  receiptRunBound:rows.find(x=>x.id==="receipt_other_run").reference==="RECEIPT_SCOPE_CONFLICT",
+  receiptAttemptBound:rows.find(x=>x.id==="receipt_attempt_outside_known_set").reference==="RECEIPT_SCOPE_CONFLICT",
+  attemptMemberTyped:rows.find(x=>x.id==="action_attempt_member_null").reference==="BAD_REQUIRED_IDENTITY_STOP",
+  currentAttemptCovered:rows.find(x=>x.id==="action_attempt_not_covered").reference==="BAD_REQUIRED_IDENTITY_STOP",
+  queryWatermarkMustBeNumeric:rows.find(x=>x.id==="miss_watermark_string_coercion").reference==="PRIOR_UNKNOWN_STOP",
+  missingRequiredSetStops:rows.find(x=>x.id==="required_set_null").reference==="BAD_REQUIRED_IDENTITY_STOP"
 };
 for(const [name,ok] of Object.entries(keyChecks))if(!ok)failures.push(name);
 const summary={
