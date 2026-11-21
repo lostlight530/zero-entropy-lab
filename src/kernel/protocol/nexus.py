@@ -68,6 +68,38 @@ def require_server_api_key(environ=None) -> str:
     return api_key
 
 
+def cleanup_kernel_intermediates(project_root: Path) -> list[str]:
+    """Clean only NEXUS-owned, disposable Python tooling outputs.
+
+    This is not graph repair, archive rotation or scientific evidence cleanup.
+    Never traverse Aegis, Ballast, data/, AGI or historical-audits. Keep all
+    SQLite files because live usage cannot be determined from their names.
+    """
+    root = Path(project_root)
+    removed = []
+    for relative in ("src/kernel", "tests"):
+        scope = root / relative
+        if scope.is_symlink() or not scope.is_dir():
+            continue
+        for current, directories, filenames in os.walk(scope, topdown=True, followlinks=False):
+            here = Path(current)
+            # os.walk does not follow symlink dirs by default, but explicitly
+            # exclude them from this cleanup's traversal and ownership.
+            directories[:] = [name for name in directories if not (here / name).is_symlink()]
+            for name in tuple(directories):
+                if name in {"__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache"}:
+                    target = here / name
+                    shutil.rmtree(target)
+                    removed.append(target.relative_to(root).as_posix())
+                    directories.remove(name)
+            for name in filenames:
+                target = here / name
+                if name.endswith((".pyc", ".pyo")) and target.is_file() and not target.is_symlink():
+                    target.unlink()
+                    removed.append(target.relative_to(root).as_posix())
+    return sorted(removed)
+
+
 def active_ledger_files(knowledge_dir: Path) -> list[Path]:
     """Return only canonical active ledgers, never sealed archives."""
     root = Path(knowledge_dir)
@@ -679,16 +711,8 @@ def main():
 
         # Existing logic
         c.vacuum()
-        for root, dirs, files in os.walk(c.project_root):
-            for d in dirs:
-                if d in ["__pycache__", ".pytest_cache", ".pytest_cache"]:
-                    shutil.rmtree(Path(root)/d)
-            for f in files:
-                if f.startswith("test_cortex.db") or f.endswith(".pyc"):
-                    try:
-                        os.remove(Path(root)/f)
-                    except:
-                        pass
+        removed = cleanup_kernel_intermediates(c.project_root)
+        logger.info(f"Kernel-owned disposable files removed: {removed}")
         logger.info("✨ Environment purified")
 
     elif args.command == 'ponder':
@@ -765,13 +789,8 @@ def main():
         # External harvesting is an explicit Action stage
         e = Evolver()
         e.run_daily_cycle()
-        for root, dirs, files in os.walk(c.project_root):
-            for d in dirs:
-                if d in ["__pycache__", ".pytest_cache"]:
-                    shutil.rmtree(Path(root)/d)
-            for f in files:
-                if f.startswith("test_cortex.db") or f.endswith(".pyc"):
-                    os.remove(Path(root)/f)
+        removed = cleanup_kernel_intermediates(c.project_root)
+        logger.info(f"Post-cycle kernel-only cache cleanup: {removed}")
 
     elif args.command == 'harvest':
         h = Harvester()

@@ -41,6 +41,16 @@ class LifecycleGuardTests(unittest.TestCase):
             json.dumps(second, sort_keys=True, separators=(",", ":")),
         )
 
+    def test_lifecycle_projection_directory_is_data_memories_not_actions(self):
+        from lifecycle_guard import classify_delta
+        result = classify_delta([
+            "data/memories/20261121-cognitive-report.md",
+            "data/memories/MISSION_ACTIVE.md",
+            ".github/workflows/nexus-life-cycle.yml",
+        ])
+        self.assertEqual(result["projection"], 2)
+        self.assertEqual(result["source_content"], 0)
+
     def test_hash_chain_rewrite_is_not_counted_as_source_delta(self):
         self.assertEqual(
             classify_zero_delta(

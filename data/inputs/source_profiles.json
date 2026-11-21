@@ -1487,6 +1487,7 @@
                     },
                     {
                         "repo":  "volcengine/verl",
+                        "fetch_repo":  "verl-project/verl",
                         "region":  "domestic",
                         "layer":  "memory-context-sandbox",
                         "primary_owner":  "zero",

@@ -335,6 +335,9 @@ class Harvester:
             if not isinstance(key, str) or "/" not in key:
                 raise ValueError(f"invalid source repository: {key}")
             key = key.lower()
+            fetch_repo = profile.get("fetch_repo", profile["repo"])
+            if not isinstance(fetch_repo, str) or not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", fetch_repo):
+                raise ValueError(f"invalid fetch repository: {key}")
             if profile.get("primary_owner") != owner:
                 raise ValueError(f"owner mismatch: {key}")
             if owner == "zero" and not profile.get("promotion_approved"):
@@ -365,11 +368,13 @@ class Harvester:
 
     def _source(self, profile):
         repo = profile["repo"]
-        meta = self._api(f"https://api.github.com/repos/{repo}")
+        # Fetch through the current upstream owner while retaining historical source ID.
+        fetch_repo = profile.get("fetch_repo", repo)
+        meta = self._api(f"https://api.github.com/repos/{fetch_repo}")
         if not isinstance(meta, dict) or not isinstance(meta.get("default_branch"), str):
             raise ValueError(f"invalid repository metadata: {repo}")
         branch = urllib.parse.quote(meta["default_branch"], safe="")
-        commit = self._api(f"https://api.github.com/repos/{repo}/commits/{branch}")
+        commit = self._api(f"https://api.github.com/repos/{fetch_repo}/commits/{branch}")
         try:
             commit_sha = commit["sha"]
             tree_sha = commit["commit"]["tree"]["sha"]
@@ -378,7 +383,7 @@ class Harvester:
         if not all(isinstance(value, str) and value for value in (commit_sha, tree_sha)):
             raise ValueError(f"invalid commit provenance: {repo}")
         tree = self._api(
-            f"https://api.github.com/repos/{repo}/git/trees/{tree_sha}?recursive=1"
+            f"https://api.github.com/repos/{fetch_repo}/git/trees/{tree_sha}?recursive=1"
         )
         if not isinstance(tree, dict) or not isinstance(tree.get("tree"), list):
             raise ValueError(f"invalid repository tree: {repo}@{tree_sha}")
@@ -417,7 +422,7 @@ class Harvester:
             )
             if observed_blob_sha == blob_sha and provenance_complete:
                 continue
-            text = self._blob_text(repo, blob_sha)
+            text = self._blob_text(fetch_repo, blob_sha)
             digest = hashlib.sha256(self._normalized(text).encode()).hexdigest()
             if previous.get("content_hash") == digest and provenance_complete:
                 continue
@@ -437,7 +442,7 @@ class Harvester:
                 / filename
             )
             old = (
-                self._blob_text(repo, previous_blob_sha)
+                self._blob_text(fetch_repo, previous_blob_sha)
                 if previous_blob_sha and previous_blob_sha != blob_sha
                 else ""
             )
@@ -627,6 +632,10 @@ class Harvester:
         for profile in self.profiles.get("sources", []):
             try:
                 changed.extend(self._source(profile))
+            except urllib.error.HTTPError as exc:
+                # Keep the failing GitHub endpoint visible without exposing auth headers.
+                endpoint = urllib.parse.urlsplit(exc.url).path
+                failures.append(f"{profile.get('repo')}: HTTP {exc.code} at {endpoint}")
             except (urllib.error.URLError, KeyError, ValueError) as exc:
                 failures.append(f"{profile.get('repo')}: {exc}")
         if failures:
