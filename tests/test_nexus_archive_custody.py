@@ -19,7 +19,7 @@ from harvester import Harvester
 class NexusArchiveCustodyTests(unittest.TestCase):
     def test_current_snapshots_match_registered_source_state(self):
         inputs = SYSTEM / "inputs"
-        profiles = json.loads((SYSTEM / "source_profiles.json").read_text(encoding="utf-8"))
+        profiles = json.loads((inputs / "source_profiles.json").read_text(encoding="utf-8"))
         state = json.loads((inputs / ".harvester_state.json").read_text(encoding="utf-8"))
         approved = {profile["repo"] for profile in profiles["sources"]}
         self.assertEqual(len(approved), len(profiles["sources"]))
