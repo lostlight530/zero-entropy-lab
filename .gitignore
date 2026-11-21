@@ -47,3 +47,14 @@ out/
 .env
 data/cortex.db
 data/inputs/.raw_cache/
+
+# Non-evidence local tooling output (never tracked)
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+*.db-wal
+*.db-shm
+*.sqlite-wal
+*.sqlite-shm
+*.tmp
