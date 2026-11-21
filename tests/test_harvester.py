@@ -469,6 +469,34 @@ class HarvesterContracts(unittest.TestCase):
 
         harvester._source.assert_called_once_with(profile)
 
+    def test_canonical_fetch_alias_preserves_historical_repository_identity(self):
+        harvester = Harvester.__new__(Harvester)
+        harvester.state = {"repositories": {}}
+        harvester.dry = True
+        profile = {
+            "repo": "volcengine/verl",
+            "fetch_repo": "verl-project/verl",
+            "documents": ["README.md"],
+            "ignore_patterns": [],
+            "layer": "test",
+            "primary_owner": "zero",
+        }
+        commit_sha, tree_sha = "a" * 40, "b" * 40
+        harvester._api = Mock(side_effect=[
+            {"default_branch": "main"},
+            {"sha": commit_sha, "commit": {"tree": {"sha": tree_sha}}},
+            {"tree": [], "truncated": False},
+        ])
+
+        self.assertEqual(harvester._source(profile), [])
+        self.assertIn("volcengine/verl", harvester.state["repositories"])
+        self.assertNotIn("verl-project/verl", harvester.state["repositories"])
+        self.assertEqual(harvester._api.call_args_list, [
+            call("https://api.github.com/repos/verl-project/verl"),
+            call("https://api.github.com/repos/verl-project/verl/commits/main"),
+            call(f"https://api.github.com/repos/verl-project/verl/git/trees/{tree_sha}?recursive=1"),
+        ])
+
     def test_api_retries_transient_network_failures_with_backoff(self):
         harvester = Harvester.__new__(Harvester)
         harvester.token = ""
