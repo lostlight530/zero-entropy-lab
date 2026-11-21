@@ -79,3 +79,12 @@ Profile 不合法、GitHub Tree 截断、Blob 编码异常、来源网络失败�
 - Cache cleanup is limited to unreferenced raw-cache files and empty cache directories.
 - The active database is a rebuildable index and is never the sole source of truth.
 - aegis-cortex and ballast remain outside this lifecycle.
+
+## NEXUS GitHub Actions 产物目录与清理边界 (2026-11-21 correction)
+
+- `data/memories/` 是 lifecycle 真实允许回写 Git 的 projection / report 目录, 不在 `.github/workflows/`. 当前 `evolve` 会生成 Cognitive Report 和 `MISSION_ACTIVE.md`; `nexus.py clean` 另有 Graph Validation 报告, 不能据此推断计划任务每日执行了 `clean`.
+- `data/knowledge/` 是规范化事实与哈希链的持久层; `data/inputs/current/` 和 `archive/` 分别是活动外部来源与历史封存. 这些不是 disposable cache, 不能因目录体积或文件数量大而批量清理.
+- `__pycache__/`, `.pytest_cache/`, 不再被引用的 `.raw_cache/` 孤立对象, `*.tmp`, `*.db-wal` 和可重建 SQLite 索引属于清理候选, 但必须先确认 Git 跟踪与当前运行使用情况, 禁止清除含活跃写入的数据库旁路文件.
+- `$RUNNER_TEMP/lifecycle-manifest.json` 是 Runner 中的临时清单; 上传 Artifact、`$GITHUB_STEP_SUMMARY` 和 GitHub Actions Job Logs 存在独立托管存储面, 不在 Git Tree 的 `data/memories/` 内.
+- 原始历史报告、PR、哈希链与 `AGI/workflows/revisions/` 的版本快照保留, 真实纠错以前向 correction/reconciliation 表达, 不能把旧失败或日期状态静默删改.
+- 本生命周期不接管 Aegis / Ballast 的原生科研证据, 也不得把这些研究目录当作可清理的生成日志.
