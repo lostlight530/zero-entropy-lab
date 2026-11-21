@@ -88,3 +88,10 @@ Profile 不合法、GitHub Tree 截断、Blob 编码异常、来源网络失败�
 - `$RUNNER_TEMP/lifecycle-manifest.json` 是 Runner 中的临时清单; 上传 Artifact、`$GITHUB_STEP_SUMMARY` 和 GitHub Actions Job Logs 存在独立托管存储面, 不在 Git Tree 的 `data/memories/` 内.
 - 原始历史报告、PR、哈希链与 `AGI/workflows/revisions/` 的版本快照保留, 真实纠错以前向 correction/reconciliation 表达, 不能把旧失败或日期状态静默删改.
 - 本生命周期不接管 Aegis / Ballast 的原生科研证据, 也不得把这些研究目录当作可清理的生成日志.
+
+## 本仓可执行物理清理验收 (2026-11-21)
+
+- 旧版 `nexus.py clean/evolve` 对整个 `c.project_root` 扫描并删除 Python 缓存, 可能触及 `aegis-cortex/`, `ballast/`, `AGI/` 等独立研究 owner. 本次修复改为正向白名单, 仅清理 `src/kernel/` 与 `tests/` 内的 Python bytecode 和标准工具缓存目录.
+- `test_cortex.db`, `data/cortex.db` 和 SQLite sidecar **不因文件名匹配就自动删除**, 避免进程仍在使用或来源责任不明时发生数据破坏. 现有的图校验与 canonical ledger 处理仍由独立逻辑负责, 不能把 `nexus.py clean` 描述成纯缓存删除或科学验收.
+- 清理器不得跟随 symlink, 不扫描 `data/`, `aegis-cortex/`, `ballast/`, `AGI/` 或 `historical-audits/`. `tests/test_kernel_cache_cleanup.py` 在独立临时树中断言 protected 字节不变、目录越界不可达和幂等性.
+- 历史 archive、已跟踪报告、哈希链与科研原生产物继续按来源治理保留. 若后续需要物理收缩, 必须另行附确切对象、完整校验、引用审计和人类审批, 不继承本次代码维护权限.
