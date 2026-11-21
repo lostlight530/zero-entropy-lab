@@ -451,6 +451,24 @@ class HarvesterContracts(unittest.TestCase):
     def test_unlisted_external_link_is_not_selected(self):
         self.assertFalse(Harvester._selected("external/repo.md", ["docs/**"], []))
 
+    def test_upstream_repository_404_reports_endpoint_and_stops_harvest(self):
+        harvester = Harvester.__new__(Harvester)
+        profile = {"repo": "microsoft/agent-framework"}
+        harvester.profiles = {"sources": [profile]}
+        harvester.validate_profiles = Mock(return_value=True)
+        endpoint = "https://api.github.com/repos/microsoft/agent-framework"
+        harvester._source = Mock(
+            side_effect=urllib.error.HTTPError(endpoint, 404, "Not Found", None, None)
+        )
+
+        with self.assertRaisesRegex(
+            RuntimeError,
+            r"microsoft/agent-framework: HTTP 404 at /repos/microsoft/agent-framework",
+        ):
+            harvester.fetch_github_data()
+
+        harvester._source.assert_called_once_with(profile)
+
     def test_api_retries_transient_network_failures_with_backoff(self):
         harvester = Harvester.__new__(Harvester)
         harvester.token = ""
