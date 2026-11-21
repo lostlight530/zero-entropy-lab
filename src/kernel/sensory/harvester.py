@@ -627,6 +627,10 @@ class Harvester:
         for profile in self.profiles.get("sources", []):
             try:
                 changed.extend(self._source(profile))
+            except urllib.error.HTTPError as exc:
+                # Keep the failing GitHub endpoint visible without exposing auth headers.
+                endpoint = urllib.parse.urlsplit(exc.url).path
+                failures.append(f"{profile.get('repo')}: HTTP {exc.code} at {endpoint}")
             except (urllib.error.URLError, KeyError, ValueError) as exc:
                 failures.append(f"{profile.get('repo')}: {exc}")
         if failures:
