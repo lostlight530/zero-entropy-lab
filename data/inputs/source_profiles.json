@@ -317,6 +317,7 @@
                     },
                     {
                         "repo":  "microsoft/agent-framework",
+                        "availability_policy":  "retain_verified_on_repo_404",
                         "region":  "global",
                         "layer":  "agent-runtime",
                         "primary_owner":  "zero",
