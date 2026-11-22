@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-11-21 Webhook event and downstream effect identity](records/2026-11-21.md)
+- 最新 Daily: [2026-11-22 GitHub Actions rerun identity versus external effects](records/2026-11-22.md)
 - 当前月度事实源: [2026-11](records/2026-11.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-11-13 至 2026-11-18](audits/2026-11-13--2026-11-18.md)
@@ -869,3 +869,13 @@ Eight same-day reviewer adversarial fixtures update the one 2026-11-21 Daily to 
 Receipt identity must include explicit nonempty ID and modeled run/attempt membership, a malformed attempted identity or nonfinite/non-numeric negative-query watermark is no longer a permitted replay/completion proof
 The JSON evidence is raw producer rows plus separately labelled delivery provenance metadata, not a byte-exact producer stdout artifact
 One Daily / one original bounded window, November 21 NATIVE dates, no CASE, METHOD, NOTES, Special, Audit or durable conclusion increment, full Python checker/native Node CLI/real sink remain NOT_EXECUTED
+
+## Ballast current research — 2026-11-22
+
+[Single 2026-11-22 Daily](records/2026-11-22.md) investigates GitHub Actions unchanged run ID, increased attempt number and rerun actor privilege separation against exact external business-effect and current completion proof
+
+[Producer](tools/research_actions_rerun_effect_identity_2026_11_22.js) and [original synthetic execution JSON](evidence/2026-11-22-actions-rerun-effect.json): 43 unique authored trials, 129 weak classifications, 43 reference decisions, 43 limited shared-contract agreements, 19 adversarial assertions
+
+Model-only authority bits, not actual GitHub rerun or AWS S3 conditional write; no real sink call, native Node CLI/full Python checker/independent semantic verifier NOT_EXECUTED
+
+November 22 NATIVE Daily / 22 bounded research windows; existing non-overlapping audit through 2026-11-18 covers current cutoff, CASE/METHOD/NOTES/Special/Audit/durable findings +0
