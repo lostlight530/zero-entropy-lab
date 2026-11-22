@@ -248,3 +248,6 @@
 - NEXT_RETEST_CONDITION: check final original PR additions and semantics, maintainer-approved merge, fresh main readback before Nov01–22 A2
 - Original PR numeric decision cannot be repaired by successor additions, correction or cleanup
 - No old producer records, implementation, private controls or scheduler instructions altered
+
+- MAIN_RETENTION: original A1 is a branch proposal until an approved merge; verify the exact blob from fresh main after delivery, rather than inferring retention from the GitHub Draft.
+- EXECUTION_VALIDATION: GitHub ref/tree and prior source record reads were executed for source custody; a Native runtime PASS, full local checker, upstream SDK regression, and real effect-sink run were NOT_EXECUTED or NOT_OBSERVED in this Independent A1.
