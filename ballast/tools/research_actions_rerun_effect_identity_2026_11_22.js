@@ -12,7 +12,7 @@ const BASE={
     {id:"rc-notify",runId:"RUN22",attempt:1,task:"T22",operation:"OP22",intent:"publish-release",target:"release-generation-A",member:"notify",issuerAttested:true,effectTimeAuthorized:true,orderWitness:true}
   ],
   query:{status:"UNKNOWN",authoritative:false,runId:"RUN22",task:"T22",operation:"OP22",intent:"publish-release",target:"release-generation-A",members:["publish","notify"],attempts:[1,2],appliedThrough:75,retained:true,issuerAttested:true},
-  permission:{active:true,credentialValid:true,approvalValid:true,originalActorAllowed:true,rerunnerActorAllowed:false,ownerExpected:5,ownerCurrent:5,now:400,validUntil:500},
+  permission:{active:true,credentialValid:true,approvalValid:true,originalActorAllowed:true,rerunnerActorAllowed:false,authorizedActor:"alice",ownerExpected:5,ownerCurrent:5,now:400,validUntil:500},
   completion:{protected:true,issuerAttested:true,target:"release-generation-A",required:["publish","notify"],witnessed:["publish","notify"],readVersion:9,commitVersion:9},
   fence:{atomic:true,authorityRead:9,authorityCommit:9,sinkOperation:"OP22"}
 };
@@ -60,6 +60,14 @@ add("qualified_miss_all_known_attempts",x=>{miss(x)});
 add("qualified_miss_current_completion_contradiction",x=>{miss(x);x.completion.witnessed=["publish","notify"]});
 add("missing_current_run_attempt",x=>{delete x.run.attempt});
 add("invalid_known_attempt_identity",x=>{x.run.knownAttempts=[1,null]});
+add("miss_original_actor_swapped_without_new_authority",x=>{miss(x);x.run.originalActor="mallory"});
+add("miss_authorized_actor_missing",x=>{miss(x);delete x.permission.authorizedActor});
+add("miss_authorized_actor_mismatch",x=>{miss(x);x.permission.authorizedActor="mallory"});
+add("miss_owner_generation_null_pair",x=>{miss(x);x.permission.ownerExpected=null;x.permission.ownerCurrent=null});
+add("miss_owner_generation_missing_pair",x=>{miss(x);delete x.permission.ownerExpected;delete x.permission.ownerCurrent});
+add("miss_owner_generation_negative_pair",x=>{miss(x);x.permission.ownerExpected=-1;x.permission.ownerCurrent=-1});
+add("miss_completion_revision_drift",x=>{miss(x);x.completion.commitVersion=10});
+add("miss_fence_authority_generation_zero",x=>{miss(x);x.fence.authorityRead=0;x.fence.authorityCommit=0});
 add("self_attack_issuer_flag_not_signature",x=>{x.run.triggeringActor="simulated-forger"});
 add("self_attack_fence_flag_not_real_sink",x=>{miss(x);x.fence.atomic=true});
 const goodString=v=>typeof v==="string"&&v.length>0;
@@ -91,10 +99,10 @@ function reference(x){
  if(!safeMiss(x))return "PRIOR_UNKNOWN_STOP";
  if(currentDone(x))return "COMPLETION_MISS_CONFLICT";
  const k=x.permission;
- if(!(k.active===true&&k.originalActorAllowed===true&&k.credentialValid===true&&k.approvalValid===true&&k.ownerExpected===k.ownerCurrent&&Number.isSafeInteger(k.now)&&Number.isSafeInteger(k.validUntil)&&k.now<=k.validUntil))return "NO_CURRENT_PERMISSION";
- if(!(c.protected===true&&c.issuerAttested===true&&c.target===a.target&&setEqual(c.required,a.required)&&Array.isArray(c.witnessed)&&c.witnessed.length===0))return "CURRENT_SCOPE_UNKNOWN";
+ if(!(k.active===true&&k.originalActorAllowed===true&&goodString(k.authorizedActor)&&k.authorizedActor===r.originalActor&&k.credentialValid===true&&k.approvalValid===true&&Number.isSafeInteger(k.ownerExpected)&&k.ownerExpected>0&&Number.isSafeInteger(k.ownerCurrent)&&k.ownerExpected===k.ownerCurrent&&Number.isSafeInteger(k.now)&&Number.isSafeInteger(k.validUntil)&&k.now<=k.validUntil))return "NO_CURRENT_PERMISSION";
+ if(!(c.protected===true&&c.issuerAttested===true&&c.target===a.target&&setEqual(c.required,a.required)&&Array.isArray(c.witnessed)&&c.witnessed.length===0&&Number.isSafeInteger(c.readVersion)&&c.readVersion>=0&&c.readVersion===c.commitVersion))return "CURRENT_SCOPE_UNKNOWN";
  const f=x.fence;
- return f.atomic===true&&f.sinkOperation===a.operation&&Number.isSafeInteger(f.authorityRead)&&f.authorityRead===f.authorityCommit?"MODEL_RETRY_GATED":"TOCTOU_STOP";
+ return f.atomic===true&&f.sinkOperation===a.operation&&Number.isSafeInteger(f.authorityRead)&&f.authorityRead>0&&f.authorityRead===f.authorityCommit?"MODEL_RETRY_GATED":"TOCTOU_STOP";
 }
 // Independently coded primitive projection, no call to reference or shared proof helpers
 // Both paths share authored facts, field vocabulary, semantics, and V8 runtime
@@ -123,10 +131,10 @@ function verify(z){
  if(!miss)return "PRIOR_UNKNOWN_STOP";
  if(current)return "COMPLETION_MISS_CONFLICT";
  const k=z.permission;
- if(k.active!==true||k.originalActorAllowed!==true||k.credentialValid!==true||k.approvalValid!==true||k.ownerExpected!==k.ownerCurrent||!Number.isSafeInteger(k.now)||!Number.isSafeInteger(k.validUntil)||k.now>k.validUntil)return "NO_CURRENT_PERMISSION";
- if(c.protected!==true||c.issuerAttested!==true||c.target!==t.target||!same(c.required,t.required,"text")||!Array.isArray(c.witnessed)||c.witnessed.length!==0)return "CURRENT_SCOPE_UNKNOWN";
+ if(k.active!==true||k.originalActorAllowed!==true||!str(k.authorizedActor)||k.authorizedActor!==r.originalActor||k.credentialValid!==true||k.approvalValid!==true||!Number.isSafeInteger(k.ownerExpected)||k.ownerExpected<=0||!Number.isSafeInteger(k.ownerCurrent)||k.ownerExpected!==k.ownerCurrent||!Number.isSafeInteger(k.now)||!Number.isSafeInteger(k.validUntil)||k.now>k.validUntil)return "NO_CURRENT_PERMISSION";
+ if(c.protected!==true||c.issuerAttested!==true||c.target!==t.target||!same(c.required,t.required,"text")||!Array.isArray(c.witnessed)||c.witnessed.length!==0||!Number.isSafeInteger(c.readVersion)||c.readVersion<0||c.readVersion!==c.commitVersion)return "CURRENT_SCOPE_UNKNOWN";
  const f=z.fence;
- return f.atomic===true&&f.sinkOperation===t.operation&&Number.isSafeInteger(f.authorityRead)&&f.authorityRead===f.authorityCommit?"MODEL_RETRY_GATED":"TOCTOU_STOP";
+ return f.atomic===true&&f.sinkOperation===t.operation&&Number.isSafeInteger(f.authorityRead)&&f.authorityRead>0&&f.authorityRead===f.authorityCommit?"MODEL_RETRY_GATED":"TOCTOU_STOP";
 }
 const rows=scenarios.map(({id,primitive})=>({id,primitive,weak_run:weakRun(primitive),weak_attempt:weakAttempt(primitive),weak_job:weakJob(primitive),reference:reference(primitive),verifier:verify(primitive)}));
 const failures=[];
@@ -152,7 +160,15 @@ const probes={
  noAtomicFence:requireDecision("miss_sink_fence_not_atomic","TOCTOU_STOP"),
  completionMissConflict:requireDecision("qualified_miss_current_completion_contradiction","COMPLETION_MISS_CONFLICT"),
  malformedAttempt:requireDecision("invalid_known_attempt_identity","BAD_IDENTITY_STOP"),
- nonNumericWatermark:requireDecision("miss_non_numeric_watermark","PRIOR_UNKNOWN_STOP")
+ nonNumericWatermark:requireDecision("miss_non_numeric_watermark","PRIOR_UNKNOWN_STOP"),
+ originalActorChangeRequiresNewBoundAuthority:requireDecision("miss_original_actor_swapped_without_new_authority","NO_CURRENT_PERMISSION"),
+ originalActorAuthorityMissingFailsClosed:requireDecision("miss_authorized_actor_missing","NO_CURRENT_PERMISSION"),
+ originalActorAuthorityMismatchFailsClosed:requireDecision("miss_authorized_actor_mismatch","NO_CURRENT_PERMISSION"),
+ nullOwnerGenerationPairNotAllowed:requireDecision("miss_owner_generation_null_pair","NO_CURRENT_PERMISSION"),
+ missingOwnerGenerationPairNotAllowed:requireDecision("miss_owner_generation_missing_pair","NO_CURRENT_PERMISSION"),
+ negativeOwnerGenerationPairNotAllowed:requireDecision("miss_owner_generation_negative_pair","NO_CURRENT_PERMISSION"),
+ currentScopeRevisionDriftNotAllowed:requireDecision("miss_completion_revision_drift","CURRENT_SCOPE_UNKNOWN"),
+ invalidAuthorityGenerationNotAllowed:requireDecision("miss_fence_authority_generation_zero","TOCTOU_STOP")
 };
 for(const [k,v] of Object.entries(probes))if(!v)failures.push("assertion "+k);
 if(failures.length)throw Error("Ballast producer verification FAIL: "+failures.join(", "));

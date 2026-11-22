@@ -879,3 +879,11 @@ One Daily / one original bounded window, November 21 NATIVE dates, no CASE, METH
 Model-only authority bits, not actual GitHub rerun or AWS S3 conditional write; no real sink call, native Node CLI/full Python checker/independent semantic verifier NOT_EXECUTED
 
 November 22 NATIVE Daily / 22 bounded research windows; existing non-overlapping audit through 2026-11-18 covers current cutoff, CASE/METHOD/NOTES/Special/Audit/durable findings +0
+
+## Ballast 2026-11-22 independent maintainer self-attack
+
+[The existing one Daily](records/2026-11-22.md) is strengthened with eight same-day counterexamples that previously yielded false modeled retries under original-actor drift, null/missing/negative owner generations, completion revision mismatch and invalid authority-fence generation
+
+[Current synthetic source](tools/research_actions_rerun_effect_identity_2026_11_22.js) and [exact stdout ledger](evidence/2026-11-22-actions-rerun-effect.json) now contain 51 authored trials, 51/51 shared-contract verifier agreements and 27/27 adversarial assertions, zero real effects
+
+Historical first-43-case source and evidence are retained in original Git commit `f608ab03a8ae5eedb045b246c5c6850c066caf26`, no additional Daily/research-window credit, November remains 22 NATIVE dates, CASE/METHOD/NOTES/Special/Audit/durable finding +0, full Python checker/native Node/real sink NOT_EXECUTED

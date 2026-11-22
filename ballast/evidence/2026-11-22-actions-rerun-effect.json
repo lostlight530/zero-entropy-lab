@@ -2,18 +2,18 @@
   "schema": "ballast-actions-rerun-effect-identity-2026-11-22",
   "evidence_origin": "AUTHORED_SYNTHETIC_FACTS",
   "summary": {
-    "trials": 43,
-    "unique_trials": 43,
-    "weak_path_decisions": 129,
-    "reference_decisions": 43,
-    "limited_verifier_decisions": 43,
-    "reference_verifier_agreement": 43,
-    "weak_run_skip": 43,
-    "weak_attempt_retry": 43,
-    "weak_job_done": 43,
+    "trials": 51,
+    "unique_trials": 51,
+    "weak_path_decisions": 153,
+    "reference_decisions": 51,
+    "limited_verifier_decisions": 51,
+    "reference_verifier_agreement": 51,
+    "weak_run_skip": 51,
+    "weak_attempt_retry": 51,
+    "weak_job_done": 51,
     "model_done": 4,
     "model_retry_gated": 3,
-    "model_stops": 36,
+    "model_stops": 44,
     "reference_counts": {
       "MODEL_DONE": 4,
       "RECEIPT_SCOPE_CONFLICT": 5,
@@ -28,13 +28,14 @@
       "EVIDENCE_CONFLICT": 1,
       "CURRENT_COMPLETION_UNKNOWN": 2,
       "PRIOR_UNKNOWN_STOP": 10,
-      "NO_CURRENT_PERMISSION": 4,
+      "NO_CURRENT_PERMISSION": 10,
       "MODEL_RETRY_GATED": 3,
-      "TOCTOU_STOP": 2,
+      "TOCTOU_STOP": 3,
       "COMPLETION_MISS_CONFLICT": 1,
-      "BAD_IDENTITY_STOP": 2
+      "BAD_IDENTITY_STOP": 2,
+      "CURRENT_SCOPE_UNKNOWN": 1
     },
-    "assertions": 19,
+    "assertions": 27,
     "assertion_failures": 0,
     "real_github_rerun_calls": 0,
     "real_s3_put_calls": 0,
@@ -60,7 +61,15 @@
     "noAtomicFence": true,
     "completionMissConflict": true,
     "malformedAttempt": true,
-    "nonNumericWatermark": true
+    "nonNumericWatermark": true,
+    "originalActorChangeRequiresNewBoundAuthority": true,
+    "originalActorAuthorityMissingFailsClosed": true,
+    "originalActorAuthorityMismatchFailsClosed": true,
+    "nullOwnerGenerationPairNotAllowed": true,
+    "missingOwnerGenerationPairNotAllowed": true,
+    "negativeOwnerGenerationPairNotAllowed": true,
+    "currentScopeRevisionDriftNotAllowed": true,
+    "invalidAuthorityGenerationNotAllowed": true
   },
   "rows": [
     {
@@ -156,6 +165,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -282,6 +292,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -408,6 +419,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -534,6 +546,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -660,6 +673,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -786,6 +800,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -912,6 +927,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -1037,6 +1053,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -1163,6 +1180,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -1289,6 +1307,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -1428,6 +1447,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -1541,6 +1561,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -1667,6 +1688,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -1793,6 +1815,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -1919,6 +1942,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -2045,6 +2069,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -2171,6 +2196,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -2297,6 +2323,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -2423,6 +2450,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -2549,6 +2577,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -2648,6 +2677,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -2744,6 +2774,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -2839,6 +2870,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -2934,6 +2966,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -3030,6 +3063,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -3126,6 +3160,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -3222,6 +3257,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -3318,6 +3354,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -3414,6 +3451,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -3510,6 +3548,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -3606,6 +3645,7 @@
           "approvalValid": true,
           "originalActorAllowed": false,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -3702,6 +3742,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -3798,6 +3839,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -3894,6 +3936,7 @@
           "approvalValid": false,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -3990,6 +4033,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 6,
           "now": 400,
@@ -4086,6 +4130,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -4182,6 +4227,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -4278,6 +4324,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -4374,6 +4421,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -4499,6 +4547,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -4625,6 +4674,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -4657,6 +4707,779 @@
       "weak_job": "DONE_JOB",
       "reference": "BAD_IDENTITY_STOP",
       "verifier": "BAD_IDENTITY_STOP"
+    },
+    {
+      "id": "miss_original_actor_swapped_without_new_authority",
+      "primitive": {
+        "run": {
+          "id": "RUN22",
+          "attempt": 2,
+          "knownAttempts": [
+            1,
+            2
+          ],
+          "latestPotentialEffectSeq": 70,
+          "originalActor": "mallory",
+          "triggeringActor": "bob",
+          "eventSha": "sha-original",
+          "eventRef": "refs/heads/main",
+          "jobState": "success"
+        },
+        "task": {
+          "id": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "currentMembers": [
+            "publish",
+            "notify"
+          ]
+        },
+        "seen": {
+          "runIds": [
+            "RUN22"
+          ],
+          "runAttempts": [
+            "RUN22/1"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "status": "MISS",
+          "authoritative": true,
+          "runId": "RUN22",
+          "task": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "members": [
+            "publish",
+            "notify"
+          ],
+          "attempts": [
+            1,
+            2
+          ],
+          "appliedThrough": 75,
+          "retained": true,
+          "issuerAttested": true
+        },
+        "permission": {
+          "active": true,
+          "credentialValid": true,
+          "approvalValid": true,
+          "originalActorAllowed": true,
+          "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
+          "ownerExpected": 5,
+          "ownerCurrent": 5,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "issuerAttested": true,
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "witnessed": [],
+          "readVersion": 9,
+          "commitVersion": 9
+        },
+        "fence": {
+          "atomic": true,
+          "authorityRead": 9,
+          "authorityCommit": 9,
+          "sinkOperation": "OP22"
+        }
+      },
+      "weak_run": "SKIP_RUN",
+      "weak_attempt": "RETRY_ATTEMPT",
+      "weak_job": "DONE_JOB",
+      "reference": "NO_CURRENT_PERMISSION",
+      "verifier": "NO_CURRENT_PERMISSION"
+    },
+    {
+      "id": "miss_authorized_actor_missing",
+      "primitive": {
+        "run": {
+          "id": "RUN22",
+          "attempt": 2,
+          "knownAttempts": [
+            1,
+            2
+          ],
+          "latestPotentialEffectSeq": 70,
+          "originalActor": "alice",
+          "triggeringActor": "bob",
+          "eventSha": "sha-original",
+          "eventRef": "refs/heads/main",
+          "jobState": "success"
+        },
+        "task": {
+          "id": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "currentMembers": [
+            "publish",
+            "notify"
+          ]
+        },
+        "seen": {
+          "runIds": [
+            "RUN22"
+          ],
+          "runAttempts": [
+            "RUN22/1"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "status": "MISS",
+          "authoritative": true,
+          "runId": "RUN22",
+          "task": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "members": [
+            "publish",
+            "notify"
+          ],
+          "attempts": [
+            1,
+            2
+          ],
+          "appliedThrough": 75,
+          "retained": true,
+          "issuerAttested": true
+        },
+        "permission": {
+          "active": true,
+          "credentialValid": true,
+          "approvalValid": true,
+          "originalActorAllowed": true,
+          "rerunnerActorAllowed": false,
+          "ownerExpected": 5,
+          "ownerCurrent": 5,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "issuerAttested": true,
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "witnessed": [],
+          "readVersion": 9,
+          "commitVersion": 9
+        },
+        "fence": {
+          "atomic": true,
+          "authorityRead": 9,
+          "authorityCommit": 9,
+          "sinkOperation": "OP22"
+        }
+      },
+      "weak_run": "SKIP_RUN",
+      "weak_attempt": "RETRY_ATTEMPT",
+      "weak_job": "DONE_JOB",
+      "reference": "NO_CURRENT_PERMISSION",
+      "verifier": "NO_CURRENT_PERMISSION"
+    },
+    {
+      "id": "miss_authorized_actor_mismatch",
+      "primitive": {
+        "run": {
+          "id": "RUN22",
+          "attempt": 2,
+          "knownAttempts": [
+            1,
+            2
+          ],
+          "latestPotentialEffectSeq": 70,
+          "originalActor": "alice",
+          "triggeringActor": "bob",
+          "eventSha": "sha-original",
+          "eventRef": "refs/heads/main",
+          "jobState": "success"
+        },
+        "task": {
+          "id": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "currentMembers": [
+            "publish",
+            "notify"
+          ]
+        },
+        "seen": {
+          "runIds": [
+            "RUN22"
+          ],
+          "runAttempts": [
+            "RUN22/1"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "status": "MISS",
+          "authoritative": true,
+          "runId": "RUN22",
+          "task": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "members": [
+            "publish",
+            "notify"
+          ],
+          "attempts": [
+            1,
+            2
+          ],
+          "appliedThrough": 75,
+          "retained": true,
+          "issuerAttested": true
+        },
+        "permission": {
+          "active": true,
+          "credentialValid": true,
+          "approvalValid": true,
+          "originalActorAllowed": true,
+          "rerunnerActorAllowed": false,
+          "authorizedActor": "mallory",
+          "ownerExpected": 5,
+          "ownerCurrent": 5,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "issuerAttested": true,
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "witnessed": [],
+          "readVersion": 9,
+          "commitVersion": 9
+        },
+        "fence": {
+          "atomic": true,
+          "authorityRead": 9,
+          "authorityCommit": 9,
+          "sinkOperation": "OP22"
+        }
+      },
+      "weak_run": "SKIP_RUN",
+      "weak_attempt": "RETRY_ATTEMPT",
+      "weak_job": "DONE_JOB",
+      "reference": "NO_CURRENT_PERMISSION",
+      "verifier": "NO_CURRENT_PERMISSION"
+    },
+    {
+      "id": "miss_owner_generation_null_pair",
+      "primitive": {
+        "run": {
+          "id": "RUN22",
+          "attempt": 2,
+          "knownAttempts": [
+            1,
+            2
+          ],
+          "latestPotentialEffectSeq": 70,
+          "originalActor": "alice",
+          "triggeringActor": "bob",
+          "eventSha": "sha-original",
+          "eventRef": "refs/heads/main",
+          "jobState": "success"
+        },
+        "task": {
+          "id": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "currentMembers": [
+            "publish",
+            "notify"
+          ]
+        },
+        "seen": {
+          "runIds": [
+            "RUN22"
+          ],
+          "runAttempts": [
+            "RUN22/1"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "status": "MISS",
+          "authoritative": true,
+          "runId": "RUN22",
+          "task": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "members": [
+            "publish",
+            "notify"
+          ],
+          "attempts": [
+            1,
+            2
+          ],
+          "appliedThrough": 75,
+          "retained": true,
+          "issuerAttested": true
+        },
+        "permission": {
+          "active": true,
+          "credentialValid": true,
+          "approvalValid": true,
+          "originalActorAllowed": true,
+          "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
+          "ownerExpected": null,
+          "ownerCurrent": null,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "issuerAttested": true,
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "witnessed": [],
+          "readVersion": 9,
+          "commitVersion": 9
+        },
+        "fence": {
+          "atomic": true,
+          "authorityRead": 9,
+          "authorityCommit": 9,
+          "sinkOperation": "OP22"
+        }
+      },
+      "weak_run": "SKIP_RUN",
+      "weak_attempt": "RETRY_ATTEMPT",
+      "weak_job": "DONE_JOB",
+      "reference": "NO_CURRENT_PERMISSION",
+      "verifier": "NO_CURRENT_PERMISSION"
+    },
+    {
+      "id": "miss_owner_generation_missing_pair",
+      "primitive": {
+        "run": {
+          "id": "RUN22",
+          "attempt": 2,
+          "knownAttempts": [
+            1,
+            2
+          ],
+          "latestPotentialEffectSeq": 70,
+          "originalActor": "alice",
+          "triggeringActor": "bob",
+          "eventSha": "sha-original",
+          "eventRef": "refs/heads/main",
+          "jobState": "success"
+        },
+        "task": {
+          "id": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "currentMembers": [
+            "publish",
+            "notify"
+          ]
+        },
+        "seen": {
+          "runIds": [
+            "RUN22"
+          ],
+          "runAttempts": [
+            "RUN22/1"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "status": "MISS",
+          "authoritative": true,
+          "runId": "RUN22",
+          "task": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "members": [
+            "publish",
+            "notify"
+          ],
+          "attempts": [
+            1,
+            2
+          ],
+          "appliedThrough": 75,
+          "retained": true,
+          "issuerAttested": true
+        },
+        "permission": {
+          "active": true,
+          "credentialValid": true,
+          "approvalValid": true,
+          "originalActorAllowed": true,
+          "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "issuerAttested": true,
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "witnessed": [],
+          "readVersion": 9,
+          "commitVersion": 9
+        },
+        "fence": {
+          "atomic": true,
+          "authorityRead": 9,
+          "authorityCommit": 9,
+          "sinkOperation": "OP22"
+        }
+      },
+      "weak_run": "SKIP_RUN",
+      "weak_attempt": "RETRY_ATTEMPT",
+      "weak_job": "DONE_JOB",
+      "reference": "NO_CURRENT_PERMISSION",
+      "verifier": "NO_CURRENT_PERMISSION"
+    },
+    {
+      "id": "miss_owner_generation_negative_pair",
+      "primitive": {
+        "run": {
+          "id": "RUN22",
+          "attempt": 2,
+          "knownAttempts": [
+            1,
+            2
+          ],
+          "latestPotentialEffectSeq": 70,
+          "originalActor": "alice",
+          "triggeringActor": "bob",
+          "eventSha": "sha-original",
+          "eventRef": "refs/heads/main",
+          "jobState": "success"
+        },
+        "task": {
+          "id": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "currentMembers": [
+            "publish",
+            "notify"
+          ]
+        },
+        "seen": {
+          "runIds": [
+            "RUN22"
+          ],
+          "runAttempts": [
+            "RUN22/1"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "status": "MISS",
+          "authoritative": true,
+          "runId": "RUN22",
+          "task": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "members": [
+            "publish",
+            "notify"
+          ],
+          "attempts": [
+            1,
+            2
+          ],
+          "appliedThrough": 75,
+          "retained": true,
+          "issuerAttested": true
+        },
+        "permission": {
+          "active": true,
+          "credentialValid": true,
+          "approvalValid": true,
+          "originalActorAllowed": true,
+          "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
+          "ownerExpected": -1,
+          "ownerCurrent": -1,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "issuerAttested": true,
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "witnessed": [],
+          "readVersion": 9,
+          "commitVersion": 9
+        },
+        "fence": {
+          "atomic": true,
+          "authorityRead": 9,
+          "authorityCommit": 9,
+          "sinkOperation": "OP22"
+        }
+      },
+      "weak_run": "SKIP_RUN",
+      "weak_attempt": "RETRY_ATTEMPT",
+      "weak_job": "DONE_JOB",
+      "reference": "NO_CURRENT_PERMISSION",
+      "verifier": "NO_CURRENT_PERMISSION"
+    },
+    {
+      "id": "miss_completion_revision_drift",
+      "primitive": {
+        "run": {
+          "id": "RUN22",
+          "attempt": 2,
+          "knownAttempts": [
+            1,
+            2
+          ],
+          "latestPotentialEffectSeq": 70,
+          "originalActor": "alice",
+          "triggeringActor": "bob",
+          "eventSha": "sha-original",
+          "eventRef": "refs/heads/main",
+          "jobState": "success"
+        },
+        "task": {
+          "id": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "currentMembers": [
+            "publish",
+            "notify"
+          ]
+        },
+        "seen": {
+          "runIds": [
+            "RUN22"
+          ],
+          "runAttempts": [
+            "RUN22/1"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "status": "MISS",
+          "authoritative": true,
+          "runId": "RUN22",
+          "task": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "members": [
+            "publish",
+            "notify"
+          ],
+          "attempts": [
+            1,
+            2
+          ],
+          "appliedThrough": 75,
+          "retained": true,
+          "issuerAttested": true
+        },
+        "permission": {
+          "active": true,
+          "credentialValid": true,
+          "approvalValid": true,
+          "originalActorAllowed": true,
+          "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
+          "ownerExpected": 5,
+          "ownerCurrent": 5,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "issuerAttested": true,
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "witnessed": [],
+          "readVersion": 9,
+          "commitVersion": 10
+        },
+        "fence": {
+          "atomic": true,
+          "authorityRead": 9,
+          "authorityCommit": 9,
+          "sinkOperation": "OP22"
+        }
+      },
+      "weak_run": "SKIP_RUN",
+      "weak_attempt": "RETRY_ATTEMPT",
+      "weak_job": "DONE_JOB",
+      "reference": "CURRENT_SCOPE_UNKNOWN",
+      "verifier": "CURRENT_SCOPE_UNKNOWN"
+    },
+    {
+      "id": "miss_fence_authority_generation_zero",
+      "primitive": {
+        "run": {
+          "id": "RUN22",
+          "attempt": 2,
+          "knownAttempts": [
+            1,
+            2
+          ],
+          "latestPotentialEffectSeq": 70,
+          "originalActor": "alice",
+          "triggeringActor": "bob",
+          "eventSha": "sha-original",
+          "eventRef": "refs/heads/main",
+          "jobState": "success"
+        },
+        "task": {
+          "id": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "currentMembers": [
+            "publish",
+            "notify"
+          ]
+        },
+        "seen": {
+          "runIds": [
+            "RUN22"
+          ],
+          "runAttempts": [
+            "RUN22/1"
+          ]
+        },
+        "receipts": [],
+        "query": {
+          "status": "MISS",
+          "authoritative": true,
+          "runId": "RUN22",
+          "task": "T22",
+          "operation": "OP22",
+          "intent": "publish-release",
+          "target": "release-generation-A",
+          "members": [
+            "publish",
+            "notify"
+          ],
+          "attempts": [
+            1,
+            2
+          ],
+          "appliedThrough": 75,
+          "retained": true,
+          "issuerAttested": true
+        },
+        "permission": {
+          "active": true,
+          "credentialValid": true,
+          "approvalValid": true,
+          "originalActorAllowed": true,
+          "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
+          "ownerExpected": 5,
+          "ownerCurrent": 5,
+          "now": 400,
+          "validUntil": 500
+        },
+        "completion": {
+          "protected": true,
+          "issuerAttested": true,
+          "target": "release-generation-A",
+          "required": [
+            "publish",
+            "notify"
+          ],
+          "witnessed": [],
+          "readVersion": 9,
+          "commitVersion": 9
+        },
+        "fence": {
+          "atomic": true,
+          "authorityRead": 0,
+          "authorityCommit": 0,
+          "sinkOperation": "OP22"
+        }
+      },
+      "weak_run": "SKIP_RUN",
+      "weak_attempt": "RETRY_ATTEMPT",
+      "weak_job": "DONE_JOB",
+      "reference": "TOCTOU_STOP",
+      "verifier": "TOCTOU_STOP"
     },
     {
       "id": "self_attack_issuer_flag_not_signature",
@@ -4751,6 +5574,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
@@ -4850,6 +5674,7 @@
           "approvalValid": true,
           "originalActorAllowed": true,
           "rerunnerActorAllowed": false,
+          "authorizedActor": "alice",
           "ownerExpected": 5,
           "ownerCurrent": 5,
           "now": 400,
