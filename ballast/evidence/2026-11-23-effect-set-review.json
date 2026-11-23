@@ -1,0 +1,429 @@
+{
+  "kind": "REVIEW_REPRODUCTION_NOT_ORIGINAL_STDOUT",
+  "review_execution_utc": "2026-11-23T02:47:33.016Z",
+  "logical_date_asia_shanghai": "2026-11-23",
+  "runtime": "isolated JavaScript V8 function execution",
+  "native_node_cli": "NOT_EXECUTED",
+  "original_python_source_and_stdout": "NOT_RETAINED",
+  "independence": {
+    "implementation": "PARTIAL, separate reviewer implementation",
+    "data_source": "NONE, authored same-case primitives",
+    "semantic_contract": "SHARED",
+    "authority": "NONE"
+  },
+  "rows": [
+    {
+      "scenario": "baseline",
+      "facts": {
+        "required": [
+          "A",
+          "B"
+        ],
+        "receipts": [
+          {
+            "effect": "A",
+            "receiptId": "rA",
+            "target": "g1"
+          },
+          {
+            "effect": "B",
+            "receiptId": "rB",
+            "target": "g1"
+          }
+        ],
+        "membership": [
+          "A",
+          "B"
+        ],
+        "target": "g1",
+        "prior": "hit",
+        "historicalAuthorization": true,
+        "currentPermission": true,
+        "observedRevision": 4,
+        "currentRevision": 4,
+        "protectedCompletion": true,
+        "evidenceConflict": false
+      },
+      "weak": "COMPLETE",
+      "reference": "MODEL_COMPLETE"
+    },
+    {
+      "scenario": "duplicate_receipt",
+      "facts": {
+        "required": [
+          "A",
+          "B"
+        ],
+        "receipts": [
+          {
+            "effect": "A",
+            "receiptId": "rA",
+            "target": "g1"
+          },
+          {
+            "effect": "A",
+            "receiptId": "rA2",
+            "target": "g1"
+          }
+        ],
+        "membership": [
+          "A",
+          "B"
+        ],
+        "target": "g1",
+        "prior": "hit",
+        "historicalAuthorization": true,
+        "currentPermission": true,
+        "observedRevision": 4,
+        "currentRevision": 4,
+        "protectedCompletion": true,
+        "evidenceConflict": false
+      },
+      "weak": "COMPLETE",
+      "reference": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "scenario": "extra_receipt",
+      "facts": {
+        "required": [
+          "A",
+          "B"
+        ],
+        "receipts": [
+          {
+            "effect": "A",
+            "receiptId": "rA",
+            "target": "g1"
+          },
+          {
+            "effect": "B",
+            "receiptId": "rB",
+            "target": "g1"
+          },
+          {
+            "effect": "C",
+            "receiptId": "rC",
+            "target": "g1"
+          }
+        ],
+        "membership": [
+          "A",
+          "B"
+        ],
+        "target": "g1",
+        "prior": "hit",
+        "historicalAuthorization": true,
+        "currentPermission": true,
+        "observedRevision": 4,
+        "currentRevision": 4,
+        "protectedCompletion": true,
+        "evidenceConflict": false
+      },
+      "weak": "INCOMPLETE",
+      "reference": "EFFECT_SET_MISMATCH"
+    },
+    {
+      "scenario": "membership_swap",
+      "facts": {
+        "required": [
+          "A",
+          "B"
+        ],
+        "receipts": [
+          {
+            "effect": "A",
+            "receiptId": "rA",
+            "target": "g1"
+          },
+          {
+            "effect": "B",
+            "receiptId": "rB",
+            "target": "g1"
+          }
+        ],
+        "membership": [
+          "A",
+          "C"
+        ],
+        "target": "g1",
+        "prior": "hit",
+        "historicalAuthorization": true,
+        "currentPermission": true,
+        "observedRevision": 4,
+        "currentRevision": 4,
+        "protectedCompletion": true,
+        "evidenceConflict": false
+      },
+      "weak": "COMPLETE",
+      "reference": "MEMBERSHIP_MISMATCH"
+    },
+    {
+      "scenario": "stale_incarnation",
+      "facts": {
+        "required": [
+          "A",
+          "B"
+        ],
+        "receipts": [
+          {
+            "effect": "A",
+            "receiptId": "rA",
+            "target": "g0"
+          },
+          {
+            "effect": "B",
+            "receiptId": "rB",
+            "target": "g1"
+          }
+        ],
+        "membership": [
+          "A",
+          "B"
+        ],
+        "target": "g1",
+        "prior": "hit",
+        "historicalAuthorization": true,
+        "currentPermission": true,
+        "observedRevision": 4,
+        "currentRevision": 4,
+        "protectedCompletion": true,
+        "evidenceConflict": false
+      },
+      "weak": "COMPLETE",
+      "reference": "TARGET_MISMATCH"
+    },
+    {
+      "scenario": "revision_toctou",
+      "facts": {
+        "required": [
+          "A",
+          "B"
+        ],
+        "receipts": [
+          {
+            "effect": "A",
+            "receiptId": "rA",
+            "target": "g1"
+          },
+          {
+            "effect": "B",
+            "receiptId": "rB",
+            "target": "g1"
+          }
+        ],
+        "membership": [
+          "A",
+          "B"
+        ],
+        "target": "g1",
+        "prior": "hit",
+        "historicalAuthorization": true,
+        "currentPermission": true,
+        "observedRevision": 4,
+        "currentRevision": 5,
+        "protectedCompletion": true,
+        "evidenceConflict": false
+      },
+      "weak": "COMPLETE",
+      "reference": "COMPLETION_UNPROVEN"
+    },
+    {
+      "scenario": "conflicting_miss",
+      "facts": {
+        "required": [
+          "A",
+          "B"
+        ],
+        "receipts": [
+          {
+            "effect": "A",
+            "receiptId": "rA",
+            "target": "g1"
+          },
+          {
+            "effect": "B",
+            "receiptId": "rB",
+            "target": "g1"
+          }
+        ],
+        "membership": [
+          "A",
+          "B"
+        ],
+        "target": "g1",
+        "prior": "authoritative miss",
+        "historicalAuthorization": true,
+        "currentPermission": true,
+        "observedRevision": 4,
+        "currentRevision": 4,
+        "protectedCompletion": true,
+        "evidenceConflict": false
+      },
+      "weak": "COMPLETE",
+      "reference": "EVIDENCE_CONFLICT"
+    },
+    {
+      "scenario": "permission_revoked",
+      "facts": {
+        "required": [
+          "A",
+          "B"
+        ],
+        "receipts": [
+          {
+            "effect": "A",
+            "receiptId": "rA",
+            "target": "g1"
+          },
+          {
+            "effect": "B",
+            "receiptId": "rB",
+            "target": "g1"
+          }
+        ],
+        "membership": [
+          "A",
+          "B"
+        ],
+        "target": "g1",
+        "prior": "hit",
+        "historicalAuthorization": true,
+        "currentPermission": false,
+        "observedRevision": 4,
+        "currentRevision": 4,
+        "protectedCompletion": true,
+        "evidenceConflict": false
+      },
+      "weak": "COMPLETE",
+      "reference": "MODEL_COMPLETE"
+    },
+    {
+      "scenario": "non_atomic_guard",
+      "facts": {
+        "required": [
+          "A",
+          "B"
+        ],
+        "receipts": [
+          {
+            "effect": "A",
+            "receiptId": "rA",
+            "target": "g1"
+          },
+          {
+            "effect": "B",
+            "receiptId": "rB",
+            "target": "g1"
+          }
+        ],
+        "membership": [
+          "A",
+          "B"
+        ],
+        "target": "g1",
+        "prior": "hit",
+        "historicalAuthorization": true,
+        "currentPermission": true,
+        "observedRevision": 4,
+        "currentRevision": 4,
+        "protectedCompletion": false,
+        "evidenceConflict": false
+      },
+      "weak": "COMPLETE",
+      "reference": "COMPLETION_UNPROVEN"
+    },
+    {
+      "scenario": "unknown_prior",
+      "facts": {
+        "required": [
+          "A",
+          "B"
+        ],
+        "receipts": [],
+        "membership": [
+          "A",
+          "B"
+        ],
+        "target": "g1",
+        "prior": "unknown",
+        "historicalAuthorization": true,
+        "currentPermission": true,
+        "observedRevision": 4,
+        "currentRevision": 4,
+        "protectedCompletion": true,
+        "evidenceConflict": false
+      },
+      "weak": "INCOMPLETE",
+      "reference": "STOP_UNKNOWN"
+    }
+  ],
+  "verification": {
+    "pass": true,
+    "errors": [],
+    "summary": {
+      "rows": 10,
+      "weakComplete": 8,
+      "referenceComplete": 2,
+      "modelRelativeFalseComplete": 6
+    }
+  },
+  "tamper": [
+    {
+      "name": "forged_label",
+      "detected": true,
+      "errors": [
+        "baseline:REFERENCE_DECISION:MODEL_COMPLETE",
+        "HISTOGRAM_DRIFT"
+      ]
+    },
+    {
+      "name": "duplicate_scenario",
+      "detected": true,
+      "errors": [
+        "SCENARIO_IDENTITY"
+      ]
+    },
+    {
+      "name": "missing_scenario",
+      "detected": true,
+      "errors": [
+        "ROW_COUNT_OR_TYPE"
+      ]
+    },
+    {
+      "name": "duplicate_receipt_id",
+      "detected": true,
+      "errors": [
+        "baseline:REFERENCE_DECISION:EFFECT_SET_MISMATCH"
+      ]
+    },
+    {
+      "name": "unproven_completion",
+      "detected": true,
+      "errors": [
+        "baseline:REFERENCE_DECISION:COMPLETION_UNPROVEN"
+      ]
+    },
+    {
+      "name": "contradictory_miss",
+      "detected": true,
+      "errors": [
+        "baseline:REFERENCE_DECISION:EVIDENCE_CONFLICT"
+      ]
+    },
+    {
+      "name": "revision_race",
+      "detected": true,
+      "errors": [
+        "baseline:REFERENCE_DECISION:COMPLETION_UNPROVEN"
+      ]
+    },
+    {
+      "name": "membership_swap",
+      "detected": true,
+      "errors": [
+        "baseline:REFERENCE_DECISION:MEMBERSHIP_MISMATCH"
+      ]
+    }
+  ]
+}
