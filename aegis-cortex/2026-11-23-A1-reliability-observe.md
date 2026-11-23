@@ -50,6 +50,7 @@ Pinned tests: https://github.com/openai/openai-agents-python/blob/2ff3036a13d192
 Source Access: connected GitHub metadata and 7 changed files, including redaction, run, run_config, turn_resolution, run_loop and authored regressions.
 Source Authority: FIRST_PARTY_FOR_PROPOSED_PATCH / NOT_GENERAL_CONFIDENTIALITY_ATTESTATION
 Evidence Tier: OPEN_PR_IMPLEMENTATION_AND_TEST_SOURCE / NO_REPRODUCTION
+External Evidence: SOURCE_PATCH_INSPECTED_FOR_CONDITIONAL_FINAL_OUTPUT_GAP / AUTHOR_TESTS_NOT_REPRODUCED / HOST_INCIDENT_NOT_ESTABLISHED
 Confidence: HIGH_FOR_NEW_CONTROL_FLOW / UNKNOWN_FOR_RELEASE_AND_MEASURED_REDUCTION_IN_HOST
 Uncertainty: merge/release, default configuration, exact runtime versions, independent results, downstream exporters, actual Zero exposure and attacker/control assumptions.
 
