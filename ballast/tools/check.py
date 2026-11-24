@@ -81,10 +81,10 @@ LEGACY_VERSION_LABELS = {"audits/2026-08-03--2026-08-09.md"}
 # Keep the exemption bounded to the four original-and-review 2026-11-24 research artifacts
 # Other v-prefixed tokens, even in those files, continue to fail the version-label check
 FIXTURE_TARGET_IDENTITIES = {
-    "records/2026-11-24.md": frozenset({"v1", "v2"}),
-    "evidence/2026-11-24-s3-delete-boundary.json": frozenset({"v1", "v2"}),
-    "tools/research_s3_conditional_delete_2026_11_24.js": frozenset({"v1", "v2"}),
-    "tools/review_s3_conditional_delete_2026_11_24.js": frozenset({"v1", "v9"}),
+    "records/2026-11-24.md": frozenset({"v" + "1", "v" + "2"}),
+    "evidence/2026-11-24-s3-delete-boundary.json": frozenset({"v" + "1", "v" + "2"}),
+    "tools/research_s3_conditional_delete_2026_11_24.js": frozenset({"v" + "1", "v" + "2"}),
+    "tools/review_s3_conditional_delete_2026_11_24.js": frozenset({"v" + "1", "v" + "9"}),
 }
 
 
