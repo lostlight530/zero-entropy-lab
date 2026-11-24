@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-11-23 Exact effect-set completion versus equal-count receipt projection](records/2026-11-23.md)
+- 最新 Daily: [2026-11-24 S3 conditional delete marker versus historical exact-effect proof](records/2026-11-24.md)
 - 当前月度事实源: [2026-11](records/2026-11.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-11-13 至 2026-11-18](audits/2026-11-13--2026-11-18.md)

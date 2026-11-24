@@ -1,0 +1,85 @@
+{
+  "recordType": "CAPTURED_MAINTAINER_REVIEW_SUMMARY_FROM_NATIVE_NODE_STDOUT",
+  "executionUtc": "2026-11-24T06:27:20.328Z",
+  "logicalDate": "2026-11-24 Asia/Shanghai",
+  "originalSourceGitBlobSha": "316b441cffb458e11c790111e00fe84becea34cb",
+  "originalSourceSha256": "e6aeb2567abd909513472e89f1544f7b3f51535ba312a976323a8a6fe60cb48e",
+  "reviewerSourceGitBlobSha": "45e3a2633abae743efba693f30c746c1d4d107c0",
+  "command": "node ballast/tools/review_s3_conditional_delete_2026_11_24.js",
+  "nativeNodeVersion": "22.16.0",
+  "exitCode": 0,
+  "originalReplay": {
+    "rows": 16,
+    "weakComplete": 16,
+    "modelComplete": 2,
+    "differences": 14,
+    "originalTamperDetections": 9,
+    "originalTamperTrials": 9
+  },
+  "reviewReconstruction": {
+    "pass": true,
+    "rows": 16,
+    "weakComplete": 16,
+    "modelComplete": 2,
+    "differences": 14
+  },
+  "reviewTamper": {
+    "passed": 18,
+    "total": 18,
+    "detectedNames": [
+      "drop_row",
+      "extra_row",
+      "duplicate_scenario",
+      "unknown_scenario",
+      "forged_reference",
+      "forged_weak",
+      "wrong_attempt",
+      "extra_receipt",
+      "conflicting_miss",
+      "changed_target_version",
+      "revision_toctou",
+      "non_boolean_atomic",
+      "historical_authorization_denied",
+      "changed_task",
+      "changed_run",
+      "changed_bucket_key",
+      "unqualified_negative",
+      "unknown_prior"
+    ]
+  },
+  "legacyVerifierBlindSpots": {
+    "omitted_row": "INCORRECT_PASS",
+    "foreign_task": "INCORRECT_PASS",
+    "foreign_target": "INCORRECT_PASS"
+  },
+  "unsupportedCompletes": [
+    "baseline_prior_hit",
+    "revoked_new_permission"
+  ],
+  "incompleteProofFields": [
+    "receipt.task",
+    "receipt.run",
+    "receipt.target",
+    "receipt.requestId",
+    "historical authorization issuer evidence",
+    "protected completion authority"
+  ],
+  "limitations": {
+    "implementationIndependence": "PARTIAL",
+    "dataSourceIndependence": "NONE",
+    "semanticContractIndependence": "SHARED",
+    "authorityIndependence": "NONE",
+    "realS3Calls": 0,
+    "fullIntegrityProofs": 0
+  },
+  "credit": {
+    "additionalDaily": 0,
+    "additionalIndependentResearchWindows": 0,
+    "CASE": 0,
+    "METHOD": 0,
+    "NOTES": 0,
+    "Audit": 0,
+    "Special": 0
+  },
+  "note": "The original source and raw 16 authored rows remain in original PR evidence, this is separately executed reviewer output summary rather than byte-identical original raw stdout"
+}

@@ -1,0 +1,616 @@
+{
+  "execution_utc": "2026-11-23T19:58:00.304Z",
+  "logical_date": "2026-11-24",
+  "runtime": "isolated V8",
+  "source_access_utc": "2026-11-23T19:58:00.304Z",
+  "source_revision": "9be6ddb667d4ae4b26ea27c49be57a154991525e",
+  "independence": {
+    "implementation": "PARTIAL",
+    "data_source": "NONE",
+    "semantic_contract": "SHARED",
+    "authority": "NONE"
+  },
+  "rows": [
+    {
+      "scenario": "baseline_prior_hit",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "hit",
+        "receipt": {
+          "effect": "DELETE-OBJ-24",
+          "version": "v1",
+          "attempt": 1
+        },
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": true,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "MODEL_COMPLETE"
+    },
+    {
+      "scenario": "response_204_only",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "unknown",
+        "receipt": null,
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": false,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "same_etag_reincarnation",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v2",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "hit",
+        "receipt": {
+          "effect": "DELETE-OBJ-24",
+          "version": "v1",
+          "attempt": 1
+        },
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": true,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "INCARNATION_DRIFT"
+    },
+    {
+      "scenario": "delete_marker_absence",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "unknown",
+        "receipt": null,
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": true,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "unscoped_miss",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "miss",
+        "receipt": null,
+        "missScope": "prefix",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": false,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "stale_miss",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "miss",
+        "receipt": null,
+        "missScope": "exact",
+        "missWatermark": 9,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": false,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "retention_expired",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "miss",
+        "receipt": null,
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": false,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": false,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "STOP_UNKNOWN"
+    },
+    {
+      "scenario": "qualified_miss",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "miss",
+        "receipt": null,
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": false,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "MODEL_RETRY_CANDIDATE"
+    },
+    {
+      "scenario": "positive_negative_conflict",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "miss",
+        "receipt": {
+          "effect": "DELETE-OBJ-24",
+          "version": "v1",
+          "attempt": 1
+        },
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": false,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "EVIDENCE_CONFLICT"
+    },
+    {
+      "scenario": "duplicate_receipt",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "hit",
+        "receipt": [
+          {
+            "effect": "DELETE-OBJ-24",
+            "version": "v1",
+            "attempt": 1
+          },
+          {
+            "effect": "DELETE-OBJ-24",
+            "version": "v1",
+            "attempt": 1
+          }
+        ],
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": true,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "IDENTITY_MISMATCH"
+    },
+    {
+      "scenario": "extra_effect_receipt",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "hit",
+        "receipt": [
+          {
+            "effect": "DELETE-OBJ-24",
+            "version": "v1",
+            "attempt": 1
+          },
+          {
+            "effect": "OTHER",
+            "version": "v1",
+            "attempt": 1
+          }
+        ],
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": true,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "IDENTITY_MISMATCH"
+    },
+    {
+      "scenario": "revoked_new_permission",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "hit",
+        "receipt": {
+          "effect": "DELETE-OBJ-24",
+          "version": "v1",
+          "attempt": 1
+        },
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": false,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": true,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "MODEL_COMPLETE"
+    },
+    {
+      "scenario": "unauthorized_history",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "hit",
+        "receipt": {
+          "effect": "DELETE-OBJ-24",
+          "version": "v1",
+          "attempt": 1
+        },
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": false,
+        "deleteResponse": 204,
+        "deleteMarker": true,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "HIST_AUTH_UNKNOWN"
+    },
+    {
+      "scenario": "completion_toctou",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "hit",
+        "receipt": {
+          "effect": "DELETE-OBJ-24",
+          "version": "v1",
+          "attempt": 1
+        },
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": true,
+        "completionRevision": 5,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "COMPLETION_UNPROVEN"
+    },
+    {
+      "scenario": "forged_atomic_flag",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "hit",
+        "receipt": {
+          "effect": "DELETE-OBJ-24",
+          "version": "v1",
+          "attempt": 1
+        },
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": true,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": "true"
+      },
+      "weak": "COMPLETE",
+      "reference": "COMPLETION_UNPROVEN"
+    },
+    {
+      "scenario": "wrong_attempt",
+      "facts": {
+        "task": "T24",
+        "run": "RUN24",
+        "attempt": 1,
+        "effect": "DELETE-OBJ-24",
+        "target": "bucket/key",
+        "targetVersion": "v1",
+        "currentVersion": "v1",
+        "etag": "E1",
+        "currentEtag": "E1",
+        "prior": "hit",
+        "receipt": {
+          "effect": "DELETE-OBJ-24",
+          "version": "v1",
+          "attempt": 2
+        },
+        "missScope": "exact",
+        "missWatermark": 12,
+        "effectSequence": 10,
+        "retention": true,
+        "currentPermission": true,
+        "historicalAuthorization": true,
+        "deleteResponse": 204,
+        "deleteMarker": true,
+        "completionRevision": 4,
+        "observedRevision": 4,
+        "atomicCompletion": true
+      },
+      "weak": "COMPLETE",
+      "reference": "IDENTITY_MISMATCH"
+    }
+  ],
+  "check": {
+    "pass": true,
+    "errors": [],
+    "count": 16,
+    "unique": 16,
+    "histogram": {
+      "MODEL_COMPLETE": 2,
+      "STOP_UNKNOWN": 5,
+      "INCARNATION_DRIFT": 1,
+      "MODEL_RETRY_CANDIDATE": 1,
+      "EVIDENCE_CONFLICT": 1,
+      "IDENTITY_MISMATCH": 3,
+      "HIST_AUTH_UNKNOWN": 1,
+      "COMPLETION_UNPROVEN": 2
+    },
+    "weakComplete": 16,
+    "modelRelativeWeakComplete": 14
+  },
+  "attacks": [
+    {
+      "name": "forged_reference",
+      "detected": true,
+      "errors": [
+        "reference:baseline_prior_hit:MODEL_COMPLETE"
+      ]
+    },
+    {
+      "name": "duplicate_scenario",
+      "detected": true,
+      "errors": [
+        "duplicate_scenario:baseline_prior_hit"
+      ]
+    },
+    {
+      "name": "extra_receipt",
+      "detected": true,
+      "errors": [
+        "reference:baseline_prior_hit:IDENTITY_MISMATCH"
+      ]
+    },
+    {
+      "name": "conflicting_miss",
+      "detected": true,
+      "errors": [
+        "reference:baseline_prior_hit:EVIDENCE_CONFLICT"
+      ]
+    },
+    {
+      "name": "changed_incarnation",
+      "detected": true,
+      "errors": [
+        "reference:baseline_prior_hit:INCARNATION_DRIFT"
+      ]
+    },
+    {
+      "name": "toctou",
+      "detected": true,
+      "errors": [
+        "reference:baseline_prior_hit:COMPLETION_UNPROVEN"
+      ]
+    },
+    {
+      "name": "forged_atomic",
+      "detected": true,
+      "errors": [
+        "reference:baseline_prior_hit:COMPLETION_UNPROVEN"
+      ]
+    },
+    {
+      "name": "revoked_historical",
+      "detected": true,
+      "errors": [
+        "reference:baseline_prior_hit:HIST_AUTH_UNKNOWN"
+      ]
+    },
+    {
+      "name": "missing_receipt",
+      "detected": true,
+      "errors": [
+        "reference:baseline_prior_hit:IDENTITY_MISMATCH"
+      ]
+    }
+  ]
+}
