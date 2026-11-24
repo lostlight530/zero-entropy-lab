@@ -67,3 +67,16 @@ These two retained records are **derived independent governance material**, not 
 ## 2026-11-20 source/provenance document-audit correction
 
 - [Aegis/Ballast A1/A2 source-role review](02-document-audits/2026-11-20--a1-a2-source-and-provenance--document-audit.md) — separate independent review; source-row role fixes are in current canonical A1/A2, original history retained
+
+## 2026-11-24 retained archive navigation additions
+
+These existing records were not explicitly linked by path in the preceding index. This is a navigation supplement, not a new audit, a new producer run, or a reclassification. The directory column reports the retained physical location; original record content and provenance govern interpretation. Path-sensitive references and legacy locations remain intact. Existing same-blob aliases are not additional evidence.
+
+| Retained record | Existing directory | Blob at inspected main |
+| --- | --- | --- |
+| [2026-10-01--external-review-source-scope--correction.md](01-corrections-and-errata/2026-10-01--external-review-source-scope--correction.md) | `01-corrections-and-errata/` | `c6fe47d250b572209162234c27f7705893cb7144` |
+| [2026-10-28-a1-a2-tree-oid-erratum.md](01-corrections-and-errata/2026-10-28-a1-a2-tree-oid-erratum.md) | `01-corrections-and-errata/` | `3c9b3b6bf4ca6b2953f8c52da8cb88a919f13042` |
+| [2026-10-28-aegis-oct27-dependency-gap-followon.md](01-corrections-and-errata/2026-10-28-aegis-oct27-dependency-gap-followon.md) | `01-corrections-and-errata/` | `59168f2fc7c326cae72743e84824891f31231f5c` |
+| [2026-10-31--aegis-a2-typed-risk-fields--post-merge-erratum.md](01-corrections-and-errata/2026-10-31--aegis-a2-typed-risk-fields--post-merge-erratum.md) | `01-corrections-and-errata/` | `c703c03e0087d4ab3781418eb91a5d190b427f8b` |
+| [2026-11-01--a2-successor-retention-and-acceptance--reconciliation.md](01-corrections-and-errata/2026-11-01--a2-successor-retention-and-acceptance--reconciliation.md) | `01-corrections-and-errata/` | `50a5a0291afe50065595e852ac33e88f74bdf984` |
+| [2026-07-31--july--archive-manifest.md](04-evidence-and-closure-ledgers/2026-07-31--july--archive-manifest.md) | `04-evidence-and-closure-ledgers/` | `e351632145da2569d11c6938b28f8a79c472bf4f` |
