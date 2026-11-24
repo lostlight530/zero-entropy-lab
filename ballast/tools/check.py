@@ -77,6 +77,17 @@ MARKDOWN_LINK = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 DAILY_REQUIRED_FROM = date(2026, 7, 21)
 LEGACY_VERSION_LABELS = {"audits/2026-08-03--2026-08-09.md"}
 
+# These exact tokens are synthetic target incarnation identities, not release/version claims
+# Keep the exemption bounded to the four original-and-review 2026-11-24 research artifacts
+# Other v-prefixed tokens, even in those files, continue to fail the version-label check
+FIXTURE_TARGET_IDENTITIES = {
+    "records/2026-11-24.md": frozenset({"v1", "v2"}),
+    "evidence/2026-11-24-s3-delete-boundary.json": frozenset({"v1", "v2"}),
+    "tools/research_s3_conditional_delete_2026_11_24.js": frozenset({"v1", "v2"}),
+    "tools/review_s3_conditional_delete_2026_11_24.js": frozenset({"v1", "v9"}),
+}
+
+
 
 def metadata(text: str, label: str) -> list[str]:
     return re.findall(rf"^- {re.escape(label)}:[ \t]*([^\r\n]*)$", text, re.MULTILINE)
@@ -154,6 +165,13 @@ def validate() -> list[str]:
                 if not linked.exists():
                     errors.append(f"broken local link: {relative} -> {target}")
         version_scan_text = re.sub(r"\bV8\b(?!\.)", "JS_ENGINE", visible_text)  # V8 engine is not a version label
+        if relative in FIXTURE_TARGET_IDENTITIES:
+            admitted = FIXTURE_TARGET_IDENTITIES[relative]
+            version_scan_text = re.sub(
+                r"\bv\d+(?:\.\d+)*\b",
+                lambda match: "FIXTURE_TARGET_ID" if match.group() in admitted else match.group(),
+                version_scan_text,
+            )
         if re.search(r"\bv\d+(?:\.\d+)*\b", version_scan_text, re.IGNORECASE) and relative not in LEGACY_VERSION_LABELS:
             errors.append(f"version label: {relative}")
     for relative, headings in TEMPLATE_HEADINGS.items():

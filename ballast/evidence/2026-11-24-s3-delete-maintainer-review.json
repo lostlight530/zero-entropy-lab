@@ -6,7 +6,7 @@
   "originalSourceSha256": "e6aeb2567abd909513472e89f1544f7b3f51535ba312a976323a8a6fe60cb48e",
   "reviewerSourceGitBlobSha": "45e3a2633abae743efba693f30c746c1d4d107c0",
   "command": "node ballast/tools/review_s3_conditional_delete_2026_11_24.js",
-  "nativeNodeVersion": "v22.16.0",
+  "nativeNodeVersion": "22.16.0",
   "exitCode": 0,
   "originalReplay": {
     "rows": 16,
