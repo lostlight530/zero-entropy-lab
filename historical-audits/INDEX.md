@@ -80,3 +80,20 @@ These existing records were not explicitly linked by path in the preceding index
 | [2026-10-31--aegis-a2-typed-risk-fields--post-merge-erratum.md](01-corrections-and-errata/2026-10-31--aegis-a2-typed-risk-fields--post-merge-erratum.md) | `01-corrections-and-errata/` | `c703c03e0087d4ab3781418eb91a5d190b427f8b` |
 | [2026-11-01--a2-successor-retention-and-acceptance--reconciliation.md](01-corrections-and-errata/2026-11-01--a2-successor-retention-and-acceptance--reconciliation.md) | `01-corrections-and-errata/` | `50a5a0291afe50065595e852ac33e88f74bdf984` |
 | [2026-07-31--july--archive-manifest.md](04-evidence-and-closure-ledgers/2026-07-31--july--archive-manifest.md) | `04-evidence-and-closure-ledgers/` | `e351632145da2569d11c6938b28f8a79c472bf4f` |
+
+## 2026-11-25 cloud acceptance navigation
+
+Dated documentary review at [inspected main](https://github.com/lostlight530/zero-entropy-lab/commit/86520092461ab2006ede3fb43deadce55d3df402); navigation only, not a new original A1/A2, Native, or D-task submission. The historical archive classes above remain unchanged. Original task owners are linked, not relocated or reclassified.
+
+| Identity | Original GitHub delivery | Cloud evidence / disposition |
+| --- | --- | --- |
+| Independent A1 (Nov 1–24) | [#939](https://github.com/lostlight530/zero-entropy-lab/pull/939), 236 additions, merged | [canonical file](https://github.com/lostlight530/zero-entropy-lab/blob/86520092461ab2006ede3fb43deadce55d3df402/historical-audits/2026-11/2026-11-25-a1-source-content-review.md) retained; numeric gate met; 212/213 listed source SHA rows match the later inspected main (cutoff/shared-owner changes are not automatically errors) |
+| Independent A2 (Nov 1–25) | [#940](https://github.com/lostlight530/zero-entropy-lab/pull/940), 274 additions, merged | [canonical file](https://github.com/lostlight530/zero-entropy-lab/blob/86520092461ab2006ede3fb43deadce55d3df402/historical-audits/2026-11/2026-11-25-a2-month-relations.md) retained; numeric gate met; 222/222 listed first source SHA rows match inspected main; PR base is the original A1 merge and creation follows that merge |
+| Oct 31 original A2 | [#766](https://github.com/lostlight530/zero-entropy-lab/pull/766), 86 additions, merged | Original numeric gate NOT_MET; delivery and numeric acceptance remain separate |
+| Oct 31 successor | [#768](https://github.com/lostlight530/zero-entropy-lab/pull/768), 250 additions, merged | Successor numeric gate MET; no retroactive credit to original A2 |
+| Oct 31 cleanup | [#770](https://github.com/lostlight530/zero-entropy-lab/pull/770), merged | Separate cleanup, not original task or successor credit |
+| Nov 1 forward reconciliation | [#776](https://github.com/lostlight530/zero-entropy-lab/pull/776), merged | [Retained correction](01-corrections-and-errata/2026-11-01--a2-successor-retention-and-acceptance--reconciliation.md); correction class, not a new original A2 |
+
+Native evidence: Aegis Native A1/A2 [#937](https://github.com/lostlight530/zero-entropy-lab/pull/937)/[#938](https://github.com/lostlight530/zero-entropy-lab/pull/938); Ballast [#934](https://github.com/lostlight530/zero-entropy-lab/pull/934)/[#935](https://github.com/lostlight530/zero-entropy-lab/pull/935). The original independent A1 #939 already corrected the Nov 5 probe count (15/15, distinct from Nov 25); its 236 additions include that one-line correction. Synthetic execution does not establish external effect authority.
+
+D7/D10/D14 retain their separate original identities; D14 is an as-of partial observation, not a full-day closure. D30 is not due at this observation. November remains open. Cloud delivery, numeric acceptance, dependency and retention are confirmed at the inspected revision; source-row custody does not by itself establish full semantic validity or a new runtime execution. Existing archive aliases are navigation only, not additional evidence or task credit.
