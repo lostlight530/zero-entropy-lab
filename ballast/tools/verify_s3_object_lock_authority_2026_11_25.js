@@ -8,12 +8,16 @@ const input = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
 function expand(row) {
   const value = JSON.parse(JSON.stringify(input.rawInputs[row.baseId]));
   function apply(target, patch) {
+    const unsafeKeys = new Set(['__proto__', 'constructor', 'prototype']);
     for (const [key, item] of Object.entries(patch || {})) {
+      if (unsafeKeys.has(key)) throw new Error('Rejected unsafe patch key: ' + key);
       if (item && typeof item === 'object' && !Array.isArray(item) &&
           target[key] && typeof target[key] === 'object' && !Array.isArray(target[key])) {
         apply(target[key], item);
       } else {
-        target[key] = item;
+        Object.defineProperty(target, key, {
+          value: item, enumerable: true, writable: true, configurable: true
+        });
       }
     }
   }
@@ -107,6 +111,13 @@ m = clone(hit); m.primitive.receipts = []; probe('remove-positive-receipt', m, '
 m = clone(hit); m.primitive.receipts[0].versionId = 'version-foreign'; probe('retarget-positive-receipt', m, 'IDENTITY_MISMATCH');
 m = clone(hit); m.primitive.historicalAuthorization.valid = false; probe('revoke-historical-grant-in-fixture', m, 'UNAUTHORIZED_HISTORICAL_EFFECT');
 m = clone(hit); m.primitive.completion.commitRevision += 1; probe('change-completion-revision', m, 'COMPLETION_UNPROVEN');
+for (const unsafeKey of ['__proto__', 'constructor', 'prototype']) {
+  const attack = { baseId: 'retry', delta: JSON.parse('{' + JSON.stringify(unsafeKey) + ':{"polluted":true}}') };
+  let actual = 'ACCEPTED';
+  try { expand(attack); } catch { actual = 'REJECTED'; }
+  probes.push({ name: 'reject-' + unsafeKey + '-patch-key', expected: 'REJECTED', actual,
+    pass: actual === 'REJECTED' && !Object.prototype.hasOwnProperty.call(Object.prototype, 'polluted') });
+}
 
 const selfAttacks = input.scenarios.filter((x) => x.selfAttack).map((x) => ({
   id: x.id,
