@@ -255,6 +255,9 @@
 | `historical-audits/2026-11/2026-11-24-a2-month-relations.md` | `62d6db6d31af34f5c0717f128ff75ce7ab8fe857` | NOT_IN_PRIOR_A2 | APPEND_RELATION / APPEND_RELATION: merged prior whole-month maintenance, not Native |
 | `historical-audits/2026-11/2026-11-25-a1-source-content-review.md` | `77c615bba2ab7f971c48a8a2313f8f8c774b5748` | NOT_IN_PRIOR_A2 | STRENGTHENED / Original A1 actual merge/readback and bounded correction |
 | `historical-audits/INDEX.md` | `2e1d04ea3ce9b5a8f9e2394d3fd7e4d8fe920e28` | NOT_IN_PRIOR_A2 | APPEND_RELATION / APPEND_RELATION: #933 navigation only |
+| `ballast/README.md` | `14a82c84e0dcfce5de3654b721bfb686909e059a` | NOT_IN_PRIOR_A2 | APPEND_RELATION / #934 latest Daily and six-date audit pointers; derived navigation, not new research execution |
+| `ballast/tools/research_s3_object_lock_authority_2026_11_25.js` | `6592e2e643cd5d3e3180d85e0999ca391b67243b` | NOT_IN_PRIOR_A2 | NEW / exact synthetic producer source; authored identity, retention, permission, prior query and receipt fixtures; no provider API calls or real effects |
+| `ballast/tools/verify_s3_object_lock_authority_2026_11_25.js` | `929b8c3d4c153b2d24c3774c2cd31ba6f1242b9c` | NOT_IN_PRIOR_A2 | NEW / separate decision implementation with explicit allowed patch keys; matches retained 16-probe receipt; same semantic fixture contract, not independent issuer authority or atomic completion proof |
 
 ## Evidence delta, corrections and counterevidence
 - Nov25 Aegis #937/#938: retry-count semantic mismatch, adapter mapping and layered attempt budgets. First-attempt success hides mapping difference; None options and nested layers alter interpretation; a configured retry count is not actual transport attempts, effects or receipt count. Native A2 ran a bounded standalone model; no installed SDK/network/host run or local incident established.
@@ -267,5 +270,5 @@
 - W48 weekly and November final NOT_DUE; D7/D10/D14/D30 separate. Full checker, actual provider operations, independent external claim validation and local checkout NOT_EXECUTED here.
 
 ## Acceptance
-- TASK_COMPLETENESS: 25 logical windows, 219 source relations; evidence verification PARTIAL. Original A1 numeric gate verified, A2 final merged additions gate >=100 pending.
+- TASK_COMPLETENESS: 25 logical windows, 222 source relations; evidence verification PARTIAL. Original A1 numeric gate verified, A2 final merged additions gate >=100 pending.
 - DELIVERY Draft, separate merge approval needed. Main retention pending. No history, Native owner or host kernel change.
