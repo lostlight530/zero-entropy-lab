@@ -5,23 +5,54 @@ const path = require('node:path');
 const inputPath = path.join(__dirname, '2026-11-25-s3-object-lock-authority.json');
 const input = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
 
+function assertAllowedKeys(value, allowed, label) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Invalid patch object: ' + label);
+  for (const key of Object.keys(value)) {
+    if (!allowed.includes(key)) throw new Error('Rejected unsafe or unknown patch key: ' + label + '.' + key);
+  }
+}
+
 function expand(row) {
   const value = JSON.parse(JSON.stringify(input.rawInputs[row.baseId]));
-  function apply(target, patch) {
-    const unsafeKeys = new Set(['__proto__', 'constructor', 'prototype']);
-    for (const [key, item] of Object.entries(patch || {})) {
-      if (unsafeKeys.has(key)) throw new Error('Rejected unsafe patch key: ' + key);
-      if (item && typeof item === 'object' && !Array.isArray(item) &&
-          target[key] && typeof target[key] === 'object' && !Array.isArray(target[key])) {
-        apply(target[key], item);
-      } else {
-        Object.defineProperty(target, key, {
-          value: item, enumerable: true, writable: true, configurable: true
-        });
-      }
-    }
+  const delta = row.delta || {};
+  assertAllowedKeys(delta, ['request', 'caller', 'lock', 'response', 'prior', 'receipts', 'historicalAuthorization', 'completion'], 'root');
+  if (Object.hasOwn(delta, 'request')) {
+    assertAllowedKeys(delta.request, ['bypassHeader', 'action', 'versionId'], 'request');
+    if (Object.hasOwn(delta.request, 'bypassHeader')) value.request.bypassHeader = delta.request.bypassHeader;
+    if (Object.hasOwn(delta.request, 'action')) value.request.action = delta.request.action;
+    if (Object.hasOwn(delta.request, 'versionId')) value.request.versionId = delta.request.versionId;
   }
-  apply(value, row.delta);
+  if (Object.hasOwn(delta, 'caller')) {
+    assertAllowedKeys(delta.caller, ['bypassGovernanceRetention', 'deleteObjectVersion', 'taskPermission'], 'caller');
+    if (Object.hasOwn(delta.caller, 'bypassGovernanceRetention')) value.caller.bypassGovernanceRetention = delta.caller.bypassGovernanceRetention;
+    if (Object.hasOwn(delta.caller, 'deleteObjectVersion')) value.caller.deleteObjectVersion = delta.caller.deleteObjectVersion;
+    if (Object.hasOwn(delta.caller, 'taskPermission')) value.caller.taskPermission = delta.caller.taskPermission;
+  }
+  if (Object.hasOwn(delta, 'lock')) {
+    assertAllowedKeys(delta.lock, ['legalHold', 'mode', 'retainUntil', 'revision'], 'lock');
+    if (Object.hasOwn(delta.lock, 'legalHold')) value.lock.legalHold = delta.lock.legalHold;
+    if (Object.hasOwn(delta.lock, 'mode')) value.lock.mode = delta.lock.mode;
+    if (Object.hasOwn(delta.lock, 'retainUntil')) value.lock.retainUntil = delta.lock.retainUntil;
+    if (Object.hasOwn(delta.lock, 'revision')) value.lock.revision = delta.lock.revision;
+  }
+  if (Object.hasOwn(delta, 'response')) value.response = delta.response;
+  if (Object.hasOwn(delta, 'prior')) {
+    assertAllowedKeys(delta.prior, ['status', 'authoritative', 'appliedThrough', 'exact', 'versionId'], 'prior');
+    if (Object.hasOwn(delta.prior, 'status')) value.prior.status = delta.prior.status;
+    if (Object.hasOwn(delta.prior, 'authoritative')) value.prior.authoritative = delta.prior.authoritative;
+    if (Object.hasOwn(delta.prior, 'appliedThrough')) value.prior.appliedThrough = delta.prior.appliedThrough;
+    if (Object.hasOwn(delta.prior, 'exact')) value.prior.exact = delta.prior.exact;
+    if (Object.hasOwn(delta.prior, 'versionId')) value.prior.versionId = delta.prior.versionId;
+  }
+  if (Object.hasOwn(delta, 'receipts')) value.receipts = delta.receipts;
+  if (Object.hasOwn(delta, 'historicalAuthorization')) {
+    assertAllowedKeys(delta.historicalAuthorization, ['valid'], 'historicalAuthorization');
+    if (Object.hasOwn(delta.historicalAuthorization, 'valid')) value.historicalAuthorization.valid = delta.historicalAuthorization.valid;
+  }
+  if (Object.hasOwn(delta, 'completion')) {
+    assertAllowedKeys(delta.completion, ['commitRevision'], 'completion');
+    if (Object.hasOwn(delta.completion, 'commitRevision')) value.completion.commitRevision = delta.completion.commitRevision;
+  }
   return value;
 }
 
@@ -118,6 +149,11 @@ for (const unsafeKey of ['__proto__', 'constructor', 'prototype']) {
   probes.push({ name: 'reject-' + unsafeKey + '-patch-key', expected: 'REJECTED', actual,
     pass: actual === 'REJECTED' && !Object.prototype.hasOwnProperty.call(Object.prototype, 'polluted') });
 }
+const nestedAttack = { baseId: 'retry', delta: { request: JSON.parse('{"__proto__":{"polluted":true}}') } };
+let nestedActual = 'ACCEPTED';
+try { expand(nestedAttack); } catch { nestedActual = 'REJECTED'; }
+probes.push({ name: 'reject-nested-prototype-patch-key', expected: 'REJECTED', actual: nestedActual,
+  pass: nestedActual === 'REJECTED' && !Object.prototype.hasOwnProperty.call(Object.prototype, 'polluted') });
 
 const selfAttacks = input.scenarios.filter((x) => x.selfAttack).map((x) => ({
   id: x.id,
