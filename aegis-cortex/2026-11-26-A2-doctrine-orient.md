@@ -70,6 +70,9 @@ same_dump True same_fields_set False
 - The final case is a counterexample to inferring explicit user choice from materialized output alone. Model metadata distinguishes the two, but plain dump is equal. The two modeled versions differ only on omitted default; no ADK import, network, Zero runtime or effect execution.
 - Candidate design obligation: retain original input presence and default provenance where relevant to approval, schema revision and authorization; independently check effect receipts. Do not infer actual ADK vulnerability from this local fixture.
 
+- Local Applicability: UNKNOWN; installed SDK revision, configuration, persisted input/field presence and local runtime behavior not verified. No local incident or host promotion.
+- Remaining Uncertainty: actual SDK integration, schema drift, independent permission/effect oracle and real workflow rehydration remain unverified; standalone Pydantic control does not establish them.
+
 ## NO_DECISION_SECTION
 NO_DECISION / NO_HOST_PROMOTION. Same source lineage, one new standalone control; local incident NOT_ESTABLISHED, existing defense UNKNOWN, measured effectiveness NOT_COMPUTED.
 
