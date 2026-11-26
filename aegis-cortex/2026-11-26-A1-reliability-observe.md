@@ -42,6 +42,7 @@ Source Publication Time: 2026-11-26T04:25:38Z
 Source Revision: head d14c1f1d7a2a5fc5d4c3820d2a2fcc3957076de6; base 03725e8c67ca27b2c07569797a0c18e867e0b217; OPEN / UNMERGED
 Evidence Tier: PRIMARY_SOURCE_PATCH_AND_AUTHOR_FIXTURES
 Confidence: bounded adapter mechanism; upstream acceptance and real workflow behavior unknown
+Uncertainty: upstream acceptance, explicit-null/nested/default-factory and schema-version behavior, actual resumed workflow and Zero applicability remain unverified; author-reported tests are not independent execution.
 Inspected Surface: src/google/adk/workflow/utils/_rehydration_utils.py and tests/unittests/workflow/utils/test_rehydration_utils.py patches
 External Evidence: related #8359 cited by author, not independently inspected.
 
