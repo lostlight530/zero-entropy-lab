@@ -31,7 +31,9 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 - 最新 Daily: [2026-11-27 Prepared transaction disappearance and GID reuse versus exact two-phase commit outcome and coordinator authority](records/2026-11-27.md)
 - 当前月度事实源: [2026-11](records/2026-11.md)
-- 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
+- 最新特殊专题: [2026-11-25 Git LFS 对象上传重试与 digest 验证](special/2026-11-25-github-lfs-retry-object.md)
+- 当前 Special inventory: 30 (original 9 + 21 retrospective mappings verified 2026-11-27; no new controlled experiment or independent window)
+- 2026 H2 elapsed event-month Special inventory: July 7 / August 7 / September 7 / October 5 / November 4. December NOT_DUE; no future events populated.
 - 最新完整周期审计: [2026-11-19 至 2026-11-24](audits/2026-11-19--2026-11-24.md)
 - 最新合并后修正对账: [2026-11-05 handoff query coverage-end](corrections/2026-11-05-handoff-query-coverage-postmerge.md)
 - 前期 handoff 证据绑定修正: [2026-11-05 case-to-trace](corrections/2026-11-05-handoff-case-trace-binding-postmerge.md)
