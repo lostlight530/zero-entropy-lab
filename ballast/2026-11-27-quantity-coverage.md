@@ -154,3 +154,7 @@ All 58 original Daily bodies retrieved and checked for checker-required fields/h
 | [November 19](records/2026-11-19.md) | `e294fbb8026a384c82a22c1d17c8cfba71528eff` | `3ad1ab9b3b206f100361d65d8fa9595a7f48c08a` | Normalize prior-effect enum to unknown; preserve original qualifier in correction note |
 
 Original baseline window-field coverage 57/58; corrected proposed coverage 58/58. Original baseline SHA ledger above remains immutable as a point-in-time account; proposed current revisions are explicitly separated. No new research credit, execution or finding. Full native checker and historical runtime/semantic revalidation NOT_EXECUTED.
+
+## 2026-11-27 Special production successor
+
+The zero-Special row above is a pinned pre-supplement observation. Five retrospective source mappings are now present on this proposal: October 3 and November 2, all actually verified 2026-11-27. Global Special inventory 9 -> 14. Both canonical monthly indices and four intersecting audit bodies carry forward event-date links; original audit cut preserved. Daily 58/58, independent original research windows, Audit quantity, CASE/NOTES and controlled experiments unchanged. No historical event-day execution or full checker PASS claimed.
