@@ -6,9 +6,9 @@
 - Observation date: 2026-11-27 Asia/Shanghai; inspected main `c57df1c68b14899fbb3c5a926c3279699d3a0e2f`
 - Assigned-date scope: 2026-10-01 through 2026-11-27 inclusive, 58 elapsed logical dates, November 28–30 NOT_DUE
 - Owning [METHOD](METHOD.md) blob `453a2fb365548b7fb7ff1107f50f4a6d63e8fee2`, [checker source](tools/check.py) blob `94714c0e30a0fa6e2a74fbd1a9a10effcfd99b43`, [README](README.md) blob `75672cdb25e7e9012f0dcc71c9c4162ea93085d3`
-- Original monthly owners: [October](records/2026-10.md) blob `53991d5821169e11105120fef4458ba7b5d05323`, [November](records/2026-11.md) blob `4ccb93531fab7fa5b93b7607517280f49fd049a3`
+- Pinned pre-correction monthly owners: [October](records/2026-10.md) blob `53991d5821169e11105120fef4458ba7b5d05323`, [November](records/2026-11.md) blob `4ccb93531fab7fa5b93b7607517280f49fd049a3`
 - All 58 exact Daily source bodies reread at the pinned revision, with original provenance, assigned date, actual date, command status, window declaration or body evidence and effective completion status inspected
-- The historical owners remain byte-for-byte unchanged; zero extra Daily, experiment, independent window, Special, Audit, CASE or NOTES credits arise from this supplement
+- At the initial quantity-only proposal the historic owners were byte-for-byte unchanged; the subsequent authorized canonical reconciliation below updates two Daily headers and both monthly owners while preserving the baseline blobs and original evidence. Zero extra Daily, experiment, independent window, Special, Audit, CASE or NOTES credits arise from this supplement
 - NATIVE is the source's original declaration, not an independently recovered scheduler invocation receipt or a new execution
 
 ## Quantity contract
@@ -142,4 +142,15 @@ The September 26–October 01 audit contributes only October 01 to this interval
 - EXECUTED: targeted six-day cutoff arithmetic, retained audit-path union, in-scope Special path enumeration, November original environment partition and October 12 original body evidence review
 - NOT_EXECUTED: complete working-tree Python checker, historical producer/verifier reruns, independent semantic/runtime validation or historical scheduler event-log recovery; local Git remote acquisition returned DNS resolution failure
 - Quantity coverage of retained original research declarations: 58/58; due audit-path coverage through current cutoff: 52/52; independent historical runtime validation: PARTIAL
-- No original source modification, evidence promotion or new research credit
+- At the initial proposal no original source was modified; the forward corrections below are metadata/index-only, with no evidence promotion or new research credit
+
+## 2026-11-27 in-place canonical reconciliation (successor to initial quantity-only proposal)
+
+All 58 original Daily bodies retrieved and checked for checker-required fields/headings, dates, type and prior-effect enum; one checker enum violation was found on November 19 and corrected in the existing Daily. The October 12 template window omission was restored from its own original body, not an inferred timestamp or new run. The other 56 Daily files remain unchanged. All ten intersecting cycle Audit bodies were checked for required headings, exact six-day link windows, type and zero-credit metadata; no missing/out-of-window links or mandatory audit gaps found. No audit backfill was warranted. Both canonical monthly owners now include forward coverage reconciliation; November environment subtotal corrected from 26 to 27. October is calendar-closed, November remains OPEN; full scientific/maintenance seal is not claimed.
+
+| Corrected original Daily | Pinned pre-correction blob | Corrected proposal blob | Correction |
+| --- | --- | --- | --- |
+| [October 12](records/2026-10-12.md) | `02fe0896ac9c41ae336cda04e69f133460e0a742` | `4ce330a80e7317a7f825c3e0865bf8d86f340e8d` | Restore body-supported single bounded window; exact timestamp NOT_CAPTURED |
+| [November 19](records/2026-11-19.md) | `e294fbb8026a384c82a22c1d17c8cfba71528eff` | `3ad1ab9b3b206f100361d65d8fa9595a7f48c08a` | Normalize prior-effect enum to unknown; preserve original qualifier in correction note |
+
+Original baseline window-field coverage 57/58; corrected proposed coverage 58/58. Original baseline SHA ledger above remains immutable as a point-in-time account; proposed current revisions are explicitly separated. No new research credit, execution or finding. Full native checker and historical runtime/semantic revalidation NOT_EXECUTED.
