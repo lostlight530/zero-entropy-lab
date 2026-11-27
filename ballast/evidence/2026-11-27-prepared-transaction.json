@@ -1,0 +1,4393 @@
+{
+  "base": "fb765bdef1882d5937cdcbed4f36c5512b440b31",
+  "logicalDate": "2026-11-27",
+  "start": "2026-11-27T01:39:49.549Z",
+  "end": "2026-11-27T01:39:49.561Z",
+  "runtime": "cloud JavaScript isolate, not Node CLI",
+  "rows": [
+    {
+      "input": {
+        "id": "complete",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "MODEL_COMPLETE"
+      }
+    },
+    {
+      "input": {
+        "id": "revoked-after-commit",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": false,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "MODEL_COMPLETE"
+      }
+    },
+    {
+      "input": {
+        "id": "exact-prepared",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "CONDITIONAL_COMMIT_PREPARED"
+      }
+    },
+    {
+      "input": {
+        "id": "absent-unknown",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [],
+        "prior": "unknown",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "absent-after-rollback",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "ROLLBACK"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "ROLLBACK"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "absent-after-commit-unobserved",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [],
+        "prior": "unknown",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "gid-reused",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-201",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "cluster-epoch-drift",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-4",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "foreign-db",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-C",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "only-one-prepared",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "STOP",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "duplicate-prepared",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "STOP",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "extra-prepared",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          },
+          {
+            "member": "C",
+            "db": "db-A",
+            "gid": "g-C",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-C"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "global-rollback-decision",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "ROLLBACK",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "foreign-coordinator-task",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-28",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "incomplete-decision-members",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "decision-in-future",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 70,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "revoked-task",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": false,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "db-role-denied",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": false,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "STOP",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "prepared-but-prior-unknown",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "unknown",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "stale-miss",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 20,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "retention-expired",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 55,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "foreign-query",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": false,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "untrusted-query",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": false,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "commit-race",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "receipts": [],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 8,
+        "protected": true,
+        "current": [],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "gidOnly": "CONDITIONAL_COMMIT_PREPARED",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "receipt-conflict",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "miss",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "duplicate-receipt",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "extra-receipt",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "C",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-C",
+            "id": "receipt-C",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "foreign-attempt",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-2",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "late-grant",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 35,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "wrong-actor",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-B",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "commit-before-decision",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 15,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "current-incarnation-drift",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-4",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "completion-race",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 8,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "missing-identity",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "missing-task",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "duplicate-expected",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "missing-fence",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "stale-current-read",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 25
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "STOP"
+      }
+    },
+    {
+      "input": {
+        "id": "authenticity-not-proved",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "MODEL_COMPLETE"
+      }
+    },
+    {
+      "input": {
+        "id": "atomicity-not-proved",
+        "task": "task-27",
+        "run": "run-27",
+        "attempt": "attempt-1",
+        "decision": "decision-9",
+        "expected": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "prepared": [],
+        "receipts": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A",
+            "id": "receipt-A",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 30,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B",
+            "id": "receipt-B",
+            "task": "task-27",
+            "run": "run-27",
+            "attempt": "attempt-1",
+            "decision": "decision-9",
+            "actor": "owner-A",
+            "grantActor": "owner-A",
+            "at": 31,
+            "from": 10,
+            "until": 40,
+            "outcome": "COMMIT"
+          }
+        ],
+        "prior": "hit",
+        "permission": true,
+        "dbPermission": true,
+        "decisionKind": "COMMIT",
+        "decisionTask": "task-27",
+        "decisionRun": "run-27",
+        "decisionAttempt": "attempt-1",
+        "decisionMembers": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "decisionAt": 20,
+        "queryAuthority": true,
+        "queryExact": true,
+        "watermark": 45,
+        "attemptEnd": 40,
+        "queryAt": 50,
+        "now": 60,
+        "retention": 80,
+        "active": true,
+        "readRev": 7,
+        "commitRev": 7,
+        "protected": true,
+        "current": [
+          {
+            "member": "A",
+            "db": "db-A",
+            "gid": "g-A",
+            "xid": "x-101",
+            "epoch": "epoch-3",
+            "effect": "effect-A"
+          },
+          {
+            "member": "B",
+            "db": "db-B",
+            "gid": "g-B",
+            "xid": "x-102",
+            "epoch": "epoch-3",
+            "effect": "effect-B"
+          }
+        ],
+        "observedAt": 55
+      },
+      "output": {
+        "absenceOnly": "MODEL_COMPLETE",
+        "gidOnly": "MODEL_COMPLETE",
+        "reference": "MODEL_COMPLETE"
+      }
+    }
+  ],
+  "summary": {
+    "scenarios": 40,
+    "decisions": 120,
+    "counts": {
+      "MODEL_COMPLETE": 4,
+      "CONDITIONAL_COMMIT_PREPARED": 1,
+      "STOP": 35
+    },
+    "absenceDisagreements": 35,
+    "gidDisagreements": 32,
+    "agreements": 40,
+    "clean": true,
+    "tamperRejected": 16,
+    "tamperTotal": 16,
+    "liveCalls": 0
+  },
+  "tests": [
+    {
+      "name": "omitted",
+      "rejected": true
+    },
+    {
+      "name": "duplicate-scenario",
+      "rejected": true
+    },
+    {
+      "name": "missing-task",
+      "rejected": true
+    },
+    {
+      "name": "foreign-run",
+      "rejected": true
+    },
+    {
+      "name": "extra-effect",
+      "rejected": true
+    },
+    {
+      "name": "duplicate-receipt",
+      "rejected": true
+    },
+    {
+      "name": "conflicting-negative",
+      "rejected": true
+    },
+    {
+      "name": "completion-race",
+      "rejected": true
+    },
+    {
+      "name": "foreign-xid",
+      "rejected": true
+    },
+    {
+      "name": "stale-query",
+      "rejected": true
+    },
+    {
+      "name": "forged-output",
+      "rejected": true
+    },
+    {
+      "name": "wrong-weak-output",
+      "rejected": true
+    },
+    {
+      "name": "global-rollback",
+      "rejected": true
+    },
+    {
+      "name": "missing-grant",
+      "rejected": true
+    },
+    {
+      "name": "extra-member",
+      "rejected": true
+    },
+    {
+      "name": "unknown-retry",
+      "rejected": true
+    }
+  ],
+  "limitations": [
+    "authenticity-not-proved and atomicity-not-proved are deliberately identical primitive inputs to complete; no independent issuer or real protected boundary",
+    "absence-after-commit-unobserved and absent-unknown are observationally identical; label is not decision input"
+  ]
+}
