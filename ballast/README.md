@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-11-26 GCS resumable upload session capability and persisted offset versus exact authorized object publication](records/2026-11-26.md)
+- 最新 Daily: [2026-11-27 Prepared transaction disappearance and GID reuse versus exact two-phase commit outcome and coordinator authority](records/2026-11-27.md)
 - 当前月度事实源: [2026-11](records/2026-11.md)
 - 最新特殊专题: [2026-09-18 Agent API overbilling / refund remediation](special/2026-09-18-openai-agent-api-overbilling-refunds.md)
 - 最新完整周期审计: [2026-11-19 至 2026-11-24](audits/2026-11-19--2026-11-24.md)
