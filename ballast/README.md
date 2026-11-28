@@ -29,7 +29,7 @@ Ballast 不把命令成功, transport success, terminal state 或 success string
 
 ## 当前入口
 
-- 最新 Daily: [2026-11-27 Prepared transaction disappearance and GID reuse versus exact two-phase commit outcome and coordinator authority](records/2026-11-27.md)
+- 最新 Daily: [2026-11-28 Kafka transaction finalization timeout and producer fencing versus exact external effect and LSO visibility](records/2026-11-28.md)
 - 当前月度事实源: [2026-11](records/2026-11.md)
 - 最新特殊专题: [2026-11-25 Git LFS 对象上传重试与 digest 验证](special/2026-11-25-github-lfs-retry-object.md)
 - 当前 Special inventory: 30 (original 9 + 21 retrospective mappings verified 2026-11-27; no new controlled experiment or independent window)
